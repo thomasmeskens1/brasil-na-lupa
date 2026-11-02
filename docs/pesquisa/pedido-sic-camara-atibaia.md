@@ -58,6 +58,12 @@ Atibaia, ____ de __________ de 20__.
 
 ---
 
+### Envio
+- **Protocolo:** 2026.01315.0000011474.00029228
+- **Enviado em:** 02/11/2026, pelo portal da Câmara Municipal de Atibaia (Entidade: Câmara Municipal de Atibaia)
+- **Prazo de resposta (art. 11 da LAI):** até 22/11/2026, prorrogável por mais 10 dias com justificativa (até 02/12/2026)
+- **Situação:** aguardando resposta
+
 ### Notas para quem envia (não fazem parte do pedido)
 - Guarde o número de protocolo e a data do envio; o prazo do art. 11 conta a partir do recebimento.
 - Sem resposta no prazo, ou com resposta insatisfatória, cabe recurso em 10 dias à autoridade hierarquicamente superior (art. 15 da LAI) e, depois, às instâncias previstas na regulamentação municipal da LAI.
