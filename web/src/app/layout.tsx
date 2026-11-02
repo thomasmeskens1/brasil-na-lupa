@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import Link from "next/link";
 import { NavPrincipal } from "@/components/NavPrincipal";
+import { BotaoConta } from "@/features/conta/BotaoConta";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               Placar do Poder
             </Link>
             <NavPrincipal />
+            <BotaoConta />
           </div>
         </header>
         <main id="conteudo" className="mx-auto w-full max-w-6xl flex-1 px-4 py-6">
