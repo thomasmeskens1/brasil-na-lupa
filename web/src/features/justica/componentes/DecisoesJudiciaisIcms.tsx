@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { CartaoDecisao } from "@/components/decisao";
 import { Secao } from "@/components/Secao";
+import { cartaoTemaStf, cartaoTemaStj } from "../cartoes";
 import { getIndiceStf, getTemaStf, temasPorColecaoStj } from "../dados";
 import { COLECOES } from "../rotulos";
 import type { TemaStf } from "../tipos";
-import { CartaoTema } from "./CartaoTema";
 import { ListaJulgamentosStf } from "./ListaJulgamentosStf";
 
 /** Seção "O que a Justiça decidiu sobre o ICMS": temas das coleções do ICMS no STJ e, se houver, no STF. */
@@ -26,21 +27,10 @@ export function DecisoesJudiciaisIcms() {
             <h3 id={`justica-${colecao}`} className="text-lg font-semibold text-gray-900">
               STJ — {COLECOES[colecao]?.titulo ?? colecao}
             </h3>
-            {COLECOES[colecao] ? <p className="mt-1 max-w-3xl text-sm text-gray-800">{COLECOES[colecao].explicacao}</p> : null}
-            <ul className="mt-3 grid grid-cols-1 gap-4 md:grid-cols-2">
+            {COLECOES[colecao] ? <p className="mt-1 max-w-3xl text-gray-800">{COLECOES[colecao].explicacao}</p> : null}
+            <ul className="mt-3 grid grid-cols-1 gap-3 lg:grid-cols-2">
               {temas.map((t) => (
-                <li key={t.numero}>
-                  <CartaoTema
-                    href={`/justica/stj/temas/${t.numero}`}
-                    tribunal="STJ"
-                    rotulo={`${t.tipo_precedente ?? "Tema"} ${t.numero}`}
-                    situacao={t.situacao}
-                    orgao={t.orgao}
-                    questao={t.questao}
-                    tese={t.tese}
-                    nivel={4}
-                  />
-                </li>
+                <CartaoDecisao key={t.numero} as="li" nivelTitulo={4} {...cartaoTemaStj(t)} />
               ))}
             </ul>
           </section>
@@ -50,19 +40,9 @@ export function DecisoesJudiciaisIcms() {
             <h3 id="justica-stf" className="text-lg font-semibold text-gray-900">
               STF — temas de repercussão geral
             </h3>
-            <ul className="mt-3 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <ul className="mt-3 grid grid-cols-1 gap-3 lg:grid-cols-2">
               {stf.map((t) => (
-                <li key={String(t.numero)}>
-                  <CartaoTema
-                    href={`/justica/stf/temas/${t.numero}`}
-                    tribunal="STF"
-                    rotulo={`Tema ${t.numero} de repercussão geral`}
-                    situacao={t.situacao?.andamento ?? t.situacao?.repercussao_geral ?? null}
-                    questao={t.descricao ?? t.titulo ?? null}
-                    tese={t.tese ?? null}
-                    nivel={4}
-                  />
-                </li>
+                <CartaoDecisao key={String(t.numero)} as="li" nivelTitulo={4} {...cartaoTemaStf(t)} />
               ))}
             </ul>
           </section>
@@ -72,7 +52,7 @@ export function DecisoesJudiciaisIcms() {
             <h3 id="justica-stf-julg" className="text-lg font-semibold text-gray-900">
               STF — julgamentos sobre o ICMS
             </h3>
-            <p className="mt-1 max-w-3xl text-sm text-gray-800">
+            <p className="mt-1 max-w-3xl text-gray-800">
               Julgamentos do STF reunidos na coleção do ICMS acompanhada pelo site, com o resultado escrito na certidão de julgamento.
             </p>
             <div className="mt-3">
@@ -81,8 +61,8 @@ export function DecisoesJudiciaisIcms() {
           </section>
         ) : null}
         {!stf.length && !julgStf.length ? <p className="meta">Os julgamentos do STF sobre o ICMS ainda estão sendo coletados.</p> : null}
-        <p className="text-sm">
-          <Link href="/justica" className="lk">
+        <p>
+          <Link href="/justica" className="lk inline-flex min-h-11 items-center">
             Ver a seção Justiça
           </Link>
         </p>

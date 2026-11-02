@@ -1,26 +1,34 @@
 "use client";
 
-import Link from "next/link";
-import { useEffect, useId, useMemo, useState } from "react";
-import { FonteLink } from "@/components/FonteLink";
-import { formatarData, normalizar } from "@/features/congresso/rotulos";
+import { useEffect, useMemo, useState } from "react";
+import { CartaoDecisao, type DadoChave } from "@/components/decisao";
+import { FiltrosCompactos, normalizarBusca } from "@/components/tabela";
 import type { LinhaNorma } from "../tipos";
+import { encurtar } from "../apresentacao";
 
 interface Arquivo {
   tipos: string[];
   n: LinhaNorma[];
 }
 
-const CAMPO = "mt-1 block w-full rounded border border-[#7b8794] bg-white px-2 py-1.5 text-sm text-gray-900";
-const POR_PAGINA = 30;
+type Linha = LinhaNorma & { _t: string; _b: string };
+
+const POR_PAGINA = 20;
+
+/** Dado-chave da norma: o caminho (decreto = ato individual) ou a publicação no Diário Oficial. */
+function dadoNorma(l: Linha): DadoChave {
+  const dou = l[7].length ? l[7].join("; ") : null;
+  if (l._t === "Decreto") return { tipo: "sem-votacao", caminho: "ato individual do Presidente da República", detalhe: dou ? `Diário Oficial da União: ${dou}` : null };
+  return { tipo: "texto", rotulo: "Publicação no Diário Oficial da União", texto: dou ?? "Informação não disponível em fonte oficial" };
+}
 
 /**
  * Leis, leis complementares e decretos: índice estático (public/executivo/normas.json) baixado
- * pelo navegador; busca e filtros rodam localmente.
+ * pelo navegador; busca e filtros rodam localmente. Cada norma vira um Cartão de Decisão que
+ * leva ao texto oficial no Planalto (não há página de detalhe).
  */
-export function BuscaNormas() {
-  const base = useId();
-  const [dados, setDados] = useState<{ tipos: string[]; linhas: (LinhaNorma & { _t: string; _b: string })[] } | null>(null);
+export function BuscaNormas({ coletadoEm }: { coletadoEm: string | null }) {
+  const [dados, setDados] = useState<{ tipos: string[]; linhas: Linha[] } | null>(null);
   const [erro, setErro] = useState(false);
   const [texto, setTexto] = useState("");
   const [tipo, setTipo] = useState("");
@@ -35,7 +43,10 @@ export function BuscaNormas() {
         if (!ativo) return;
         const linhas = j.n.map((l) => {
           const t = typeof l[1] === "number" ? (j.tipos[l[1]] ?? "") : String(l[1]);
-          return Object.assign([...l] as LinhaNorma, { _t: t, _b: normalizar(`${l[2] ?? ""} ${l[4]} ${l[5] ?? ""} ${l[8].join(" ")}`) });
+          return Object.assign([...l] as LinhaNorma, {
+            _t: t,
+            _b: normalizarBusca(`${l[2] ?? ""} ${l[4]} ${l[5] ?? ""} ${l[8].join(" ")} ${l[11] ?? ""}`),
+          });
         });
         setDados({ tipos: j.tipos, linhas });
       })
@@ -46,112 +57,99 @@ export function BuscaNormas() {
   }, []);
 
   const anos = useMemo(() => (dados ? [...new Set(dados.linhas.map((l) => l[3].slice(0, 4)).filter(Boolean))].sort().reverse() : []), [dados]);
-  const termos = normalizar(texto).split(/\s+/).filter(Boolean);
+  const termos = normalizarBusca(texto).split(/\s+/).filter(Boolean);
   const filtradas = dados
     ? dados.linhas.filter((l) => (!tipo || l._t === tipo) && (!ano || l[3].startsWith(ano)) && termos.every((t) => l._b.includes(t)))
     : [];
+  const resto = filtradas.length - Math.min(limite, filtradas.length);
 
-  function mudar(set: (v: string) => void) {
-    return (e: { target: { value: string } }) => {
+  function com(set: (v: string) => void) {
+    return (v: string) => {
       setLimite(POR_PAGINA);
-      set(e.target.value);
+      set(v);
     };
   }
 
   return (
-    <div>
-      <form role="search" aria-label="Buscar leis e decretos" onSubmit={(e) => e.preventDefault()}>
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-[2fr_1fr_1fr]">
-          <label htmlFor={`${base}-t`} className="text-sm font-medium text-gray-900">
-            Buscar na ementa, no número ou no projeto de origem
-            <input id={`${base}-t`} type="search" value={texto} onChange={mudar(setTexto)} placeholder="Ex.: ICMS, 15.164, PL 3819" className={CAMPO} />
-          </label>
-          <label htmlFor={`${base}-y`} className="text-sm font-medium text-gray-900">
-            Tipo
-            <select id={`${base}-y`} value={tipo} onChange={mudar(setTipo)} className={CAMPO}>
-              <option value="">Todos</option>
-              {(dados?.tipos ?? []).map((t) => (
-                <option key={t}>{t}</option>
-              ))}
-            </select>
-          </label>
-          <label htmlFor={`${base}-a`} className="text-sm font-medium text-gray-900">
-            Ano de assinatura
-            <select id={`${base}-a`} value={ano} onChange={mudar(setAno)} className={CAMPO}>
-              <option value="">Todos</option>
-              {anos.map((a) => (
-                <option key={a}>{a}</option>
-              ))}
-            </select>
-          </label>
-        </div>
-      </form>
+    <div className="space-y-4">
+      <FiltrosCompactos
+        busca={{ valor: texto, aoMudar: com(setTexto), rotulo: "Buscar na ementa, no número ou no projeto de origem", dica: "Ex.: ICMS, 15.164, PL 3819" }}
+        filtros={[
+          { id: "tipo", rotulo: "Tipo", valor: tipo, aoMudar: com(setTipo), opcoes: dados?.tipos ?? [] },
+          { id: "ano", rotulo: "Ano de assinatura", valor: ano, aoMudar: com(setAno), opcoes: anos },
+        ]}
+        contagem={
+          erro
+            ? null
+            : !dados
+              ? "Carregando a lista de leis e decretos…"
+              : `Mostrando ${Math.min(limite, filtradas.length).toLocaleString("pt-BR")} de ${filtradas.length.toLocaleString("pt-BR")} ${
+                  filtradas.length === 1 ? "norma" : "normas"
+                }, da mais recente para a mais antiga`
+        }
+        aoLimpar={() => {
+          setTexto("");
+          setTipo("");
+          setAno("");
+          setLimite(POR_PAGINA);
+        }}
+      />
+      {erro ? <p className="lacuna text-sm">Não foi possível carregar a lista. Tente recarregar a página.</p> : null}
 
-      <div aria-live="polite" className="mt-3">
-        {erro ? (
-          <p className="lacuna text-sm">Não foi possível carregar a lista. Tente recarregar a página.</p>
-        ) : !dados ? (
-          <p className="meta">Carregando a lista de leis e decretos…</p>
-        ) : (
-          <p className="meta">
-            {filtradas.length === 1 ? "1 norma encontrada" : `${filtradas.length} normas encontradas`}, da mais recente para a mais antiga.
-          </p>
-        )}
-      </div>
-
-      <ul className="mt-3 space-y-3">
-        {filtradas.slice(0, limite).map((l) => (
-          <li key={l[0]} className="cartao">
-            <p className="meta flex flex-wrap items-center gap-x-2 gap-y-1">
-              <span className="font-semibold text-gray-900">Assinada em {formatarData(l[3])}</span>
-              <span className="selo">{l._t}</span>
-              <span>{l._t === "Decreto" ? "Ato individual do Presidente da República" : "Aprovada pelo Congresso Nacional"}</span>
-            </p>
-            <h3 className="mt-2 text-base font-semibold text-gray-900">{l[2] ?? "Nome oficial não informado"}</h3>
-            {l[5] ? <p className="meta mt-1">Nome dado pelo Senado: {l[5]}</p> : null}
-            <p className="mt-1 text-sm leading-relaxed text-gray-800">{l[4] || "Ementa não disponível em fonte oficial"}</p>
-            <dl className="mt-2 space-y-1 text-sm text-gray-800">
-              <div>
-                <dt className="inline font-medium text-gray-900">Publicação no Diário Oficial da União: </dt>
-                <dd className="inline">{l[7].length ? l[7].join("; ") : "Informação não disponível em fonte oficial"}</dd>
-              </div>
-              {l[8].length ? (
-                <div>
-                  <dt className="inline font-medium text-gray-900">Projeto de origem: </dt>
-                  <dd className="inline">{l[8].join("; ")}</dd>
+      <ul className="space-y-3">
+        {filtradas.slice(0, limite).map((l) => {
+          const decreto = l._t === "Decreto";
+          const href = l[6] ?? (l[9] ? `/executivo/vetos/${l[9]}` : (l[10] ?? "/executivo/leis-e-decretos"));
+          const links = [
+            ...(l[10] ? [{ href: l[10], rotulo: "Ficha no Senado Federal", externo: true }] : []),
+            ...(l[9] ? [{ href: `/executivo/vetos/${l[9]}`, rotulo: "Veto desta lei", externo: false }] : []),
+          ];
+          return (
+            <CartaoDecisao
+              key={l[0]}
+              as="li"
+              href={href}
+              tituloOficial={l[11] ?? encurtar(l[4]) ?? l[2] ?? "Ementa não disponível em fonte oficial"}
+              subtituloOficial={[l[2] ?? `${l._t} (nome oficial não informado)`, l[5] ? `nome dado pelo Senado: ${l[5]}` : null].filter(Boolean).join(" · ")}
+              caminho="presidencia"
+              data={l[3] || null}
+              rotuloData="assinada em"
+              forma={decreto ? "ato-individual" : null}
+              dado={dadoNorma(l)}
+              quemDecidiu={decreto ? "Presidente da República" : "Congresso Nacional (aprovação) e Presidente da República (sanção)"}
+              fonte={l[6] ? { url: l[6], titulo: "Texto no Planalto", orgao: "Presidência da República (Planalto)", acessado_em: coletadoEm } : null}
+            >
+              {l[8].length || links.length ? (
+                <div className="space-y-1">
+                  {l[8].length ? <p className="text-[var(--cor-secundaria)]">Projeto de origem: {l[8].join("; ")}</p> : null}
+                  {links.length ? (
+                    <p className="cartao-decisao__acima flex flex-wrap gap-x-4">
+                      {links.map((x) => (
+                        <a
+                          key={x.href}
+                          href={x.href}
+                          className="lk inline-flex min-h-11 items-center"
+                          {...(x.externo ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                        >
+                          {x.rotulo}
+                          {x.externo ? <span className="sr-only"> (abre em nova aba)</span> : null}
+                        </a>
+                      ))}
+                    </p>
+                  ) : null}
                 </div>
               ) : null}
-            </dl>
-            <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
-              {l[6] ? (
-                <FonteLink href={l[6]} tipo="oficial">
-                  Texto no Planalto
-                </FonteLink>
-              ) : (
-                <span className="lacuna text-sm">Link do Planalto não disponível</span>
-              )}
-              {l[10] ? (
-                <FonteLink href={l[10]} tipo="oficial">
-                  Ficha no Senado Federal
-                </FonteLink>
-              ) : null}
-              {l[9] ? (
-                <Link href={`/executivo/vetos/${l[9]}`} prefetch={false} className="lk text-sm">
-                  Veto desta lei
-                </Link>
-              ) : null}
-            </p>
-          </li>
-        ))}
+            </CartaoDecisao>
+          );
+        })}
       </ul>
-      {filtradas.length > limite ? (
-        <button
-          type="button"
-          onClick={() => setLimite((n) => n + POR_PAGINA)}
-          className="mt-4 rounded border border-[#7b8794] bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-superficie"
-        >
-          Mostrar mais {Math.min(POR_PAGINA, filtradas.length - limite)} de {filtradas.length - limite} restantes
-        </button>
+      {resto > 0 ? (
+        <div className="flex flex-wrap gap-2">
+          <button type="button" className="botao" onClick={() => setLimite((n) => n + POR_PAGINA)}>
+            Mostrar mais {Math.min(POR_PAGINA, resto).toLocaleString("pt-BR")}
+          </button>
+          <span className="self-center text-sm text-[var(--cor-secundaria)]">faltam {resto.toLocaleString("pt-BR")} normas</span>
+        </div>
       ) : null}
     </div>
   );

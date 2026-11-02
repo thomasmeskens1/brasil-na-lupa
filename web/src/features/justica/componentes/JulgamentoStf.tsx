@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FonteLink } from "@/components/FonteLink";
 import { lacunasLegiveis, tituloFonteLegivel } from "@/features/comum/texto";
 import { ListaFontes } from "@/features/congresso/componentes/Basicos";
+import { TabelaResponsiva } from "@/components/tabela";
 import { formatarData } from "@/features/congresso/rotulos";
 import { Citacao } from "@/features/executivo/componentes/Dispositivo";
 import type { JulgamentoStf, VotacaoStf } from "../tipos";
@@ -24,7 +25,7 @@ function nomes(l: VotacaoStf["ausentes"]): string[] {
     .sort((a, b) => a.localeCompare(b, "pt-BR"));
 }
 
-/** Parte da certidão: resultado e nomes escritos no texto oficial. */
+/** Parte da certidão: resultado e nomes escritos no texto oficial (um nome por linha). */
 function ParteCertidao({ v }: { v: VotacaoStf }) {
   const grupos: [string, string[]][] = [
     ["Vencidos", nomes(v.vencidos)],
@@ -32,39 +33,44 @@ function ParteCertidao({ v }: { v: VotacaoStf }) {
     ["Não votaram", nomes(v.ausentes)],
   ];
   return (
-    <div className="rounded border border-borda p-3">
-      <p className="text-sm font-semibold text-gray-900">
+    <div className="rounded-md border border-borda p-3">
+      <p className="font-semibold text-foreground">
         {rotuloEtapa(v.parte ?? null)}
         {rotuloResultadoJulgamento(v.resultado) ? ` · ${rotuloResultadoJulgamento(v.resultado)}` : ""}
       </p>
-      <dl className="mt-2 space-y-1 text-sm">
+      {v.trecho ? <p className="mt-1 italic">“{v.trecho}”</p> : null}
+      <div className="mt-2 space-y-2">
         {grupos
           .filter(([, l]) => l.length)
           .map(([r, l]) => (
             <div key={r}>
-              <dt className="font-semibold text-gray-900">
+              <h6 className="font-semibold text-foreground">
                 {r} ({l.length})
-              </dt>
-              <dd className="text-gray-800">{l.join("; ")}</dd>
+              </h6>
+              <ul className="mt-0.5 list-disc pl-5">
+                {l.map((n) => (
+                  <li key={n}>{n}</li>
+                ))}
+              </ul>
             </div>
           ))}
         {(v.vencidos_trechos ?? []).length ? (
           <div>
-            <dt className="font-semibold text-gray-900">Como o texto oficial registra os vencidos</dt>
+            <h6 className="font-semibold text-foreground">Como o texto oficial registra os vencidos</h6>
             {v.vencidos_trechos!.map((t) => (
-              <dd key={t} className="italic text-gray-800">
+              <p key={t} className="italic">
                 “{t}”
-              </dd>
+              </p>
             ))}
           </div>
         ) : null}
         {v.presidente ? (
-          <div>
-            <dt className="font-semibold text-gray-900">Presidente da sessão (não contado como voto)</dt>
-            <dd className="text-gray-800">{v.presidente}</dd>
-          </div>
+          <p>
+            <span className="font-semibold text-foreground">Presidente da sessão (não contado como voto): </span>
+            {v.presidente}
+          </p>
         ) : null}
-      </dl>
+      </div>
     </div>
   );
 }
@@ -73,58 +79,55 @@ function ParteCertidao({ v }: { v: VotacaoStf }) {
 function VotosPlenarioVirtual({ v }: { v: VotacaoStf }) {
   const votos = [...(v.votos ?? [])].sort((a, b) => a.ministro.localeCompare(b.ministro, "pt-BR"));
   return (
-    <div className="rounded border border-borda p-3">
-      <p className="text-sm font-semibold text-gray-900">{v.descricao ?? "Votos registrados no Plenário Virtual"}</p>
+    <div className="rounded-md border border-borda p-3">
+      <p className="font-semibold text-foreground">{v.descricao ?? "Votos registrados no Plenário Virtual"}</p>
       {v.relator?.ministro ? <p className="meta mt-1">Relator: {v.relator.ministro}</p> : null}
       <p className="mt-1 flex flex-wrap gap-x-4 gap-y-1">
         {v.relatorio_url ? (
-          <FonteLink href={v.relatorio_url} tipo="oficial" className="text-xs">
+          <FonteLink href={v.relatorio_url} tipo="oficial" className="inline-flex min-h-11 items-center">
             Relatório
           </FonteLink>
         ) : null}
         {v.voto_relator_url ? (
-          <FonteLink href={v.voto_relator_url} tipo="oficial" className="text-xs">
+          <FonteLink href={v.voto_relator_url} tipo="oficial" className="inline-flex min-h-11 items-center">
             Voto do relator
           </FonteLink>
         ) : null}
         {v.url ? (
-          <FonteLink href={v.url} tipo="oficial" className="text-xs">
+          <FonteLink href={v.url} tipo="oficial" className="inline-flex min-h-11 items-center">
             Votação no Plenário Virtual
           </FonteLink>
         ) : null}
       </p>
       {votos.length ? (
-        <div className="mt-3 overflow-x-auto rounded border border-borda" role="region" tabIndex={0} aria-label="Votos registrados no Plenário Virtual">
-          <table className="tabela">
-            <caption className="sr-only">Votos registrados no Plenário Virtual</caption>
-            <thead>
-              <tr>
-                <th scope="col">Ministro</th>
-                <th scope="col">Voto registrado</th>
-                <th scope="col">Data</th>
-              </tr>
-            </thead>
-            <tbody>
-              {votos.map((x) => (
-                <tr key={x.ministro}>
-                  <td>{x.nome_na_composicao_atual ?? x.ministro}</td>
-                  <td>
-                    {x.tipo_voto ?? "Não informado"}
-                    {x.acompanha ? <span className="meta block">Acompanha: {x.acompanha}</span> : null}
-                    {(x.textos ?? []).map((t) => (
-                      <span key={t.url} className="block">
-                        <FonteLink href={t.url} tipo="oficial" className="text-xs">
-                          {t.titulo ?? "Texto do voto"}
-                        </FonteLink>
-                      </span>
-                    ))}
-                  </td>
-                  <td className="whitespace-nowrap">{formatarData(x.data)}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <TabelaResponsiva
+          className="mt-3"
+          legenda="Votos registrados no Plenário Virtual (ordem alfabética)"
+          legendaOculta
+          linhas={votos}
+          chaveLinha={(x) => x.ministro}
+          colunas={[
+            { chave: "ministro", rotulo: "Ministro", principal: true, celula: (x) => x.nome_na_composicao_atual ?? x.ministro },
+            {
+              chave: "voto",
+              rotulo: "Voto registrado",
+              celula: (x) => (
+                <>
+                  {x.tipo_voto ?? "Não informado"}
+                  {x.acompanha ? <span className="meta block">Acompanha: {x.acompanha}</span> : null}
+                  {(x.textos ?? []).map((t) => (
+                    <span key={t.url} className="block">
+                      <FonteLink href={t.url} tipo="oficial">
+                        {t.titulo ?? "Texto do voto"}
+                      </FonteLink>
+                    </span>
+                  ))}
+                </>
+              ),
+            },
+            { chave: "data", rotulo: "Data", celula: (x) => formatarData(x.data) },
+          ]}
+        />
       ) : (
         <p className="lacuna mt-2 text-sm">Nenhum voto registrado na lista do Plenário Virtual.</p>
       )}
@@ -136,7 +139,7 @@ function VotosPlenarioVirtual({ v }: { v: VotacaoStf }) {
  * Julgamento do STF: certidão literal sempre; vencidos e demais nomes da certidão; votos do
  * Plenário Virtual só em sessão virtual e com dados estruturados. Sessão presencial: só a certidão.
  */
-export function JulgamentoStfBloco({ j, link = false }: { j: JulgamentoStf; link?: boolean }) {
+export function JulgamentoStfBloco({ j, link = false, semCertidao = false }: { j: JulgamentoStf; link?: boolean; semCertidao?: boolean }) {
   const exibivel = EXIBIVEIS.has(j.situacao_conferencia ?? "");
   const ambiente = ambienteStf(j);
   const certidao = (j.votacoes ?? []).filter((v) => v.origem !== "plenario-virtual");
@@ -163,12 +166,12 @@ export function JulgamentoStfBloco({ j, link = false }: { j: JulgamentoStf; link
           titulo
         )}
       </h4>
-      <p className="mt-1 text-sm text-gray-800">
+      <p className="mt-1">
         Relator: {j.relator ?? "não informado"}
         {j.redator_acordao ? ` · Redator do acórdão: ${j.redator_acordao}` : ""}
       </p>
       {typeof j.sessao === "object" && j.sessao?.trecho_oficial ? <p className="meta mt-1">Sessão, no texto oficial: “{j.sessao.trecho_oficial}”</p> : null}
-      <Citacao rotulo="Resultado, como escrito no texto oficial (certidão)" texto={j.certidao_literal} />
+      {semCertidao ? null : <Citacao rotulo="Resultado, como escrito no texto oficial (certidão)" texto={j.certidao_literal} />}
       {exibivel ? (
         <div className="mt-3 space-y-3">
           {certidao.map((v, i) => (

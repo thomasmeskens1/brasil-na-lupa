@@ -1,6 +1,7 @@
 "use client";
 
 import type { LinhaTemaStf, LinhaTemaStj } from "../tipos";
+import { rotuloOrgao } from "../rotulos";
 import { BuscaTemas, type TemaBusca } from "./BuscaTemas";
 
 interface ArquivoStj {
@@ -9,13 +10,14 @@ interface ArquivoStj {
 }
 
 function decodificarStj(j: ArquivoStj): TemaBusca[] {
-  return j.t.map(([numero, tipo, situacao, orgao, relator, questao, tese, colecoes, comPagina, data, url]) => ({
+  return j.t.map(([numero, tipo, situacao, orgao, relator, questao, tese, colecoes, comPagina, data, url, titulo]) => ({
     numero,
     tipo,
     situacao,
-    orgao,
+    orgao: orgao ? rotuloOrgao(orgao) : null,
     relator,
     titulo: null,
+    tituloSimples: titulo ?? null,
     questao,
     tese,
     colecoes,
@@ -26,7 +28,7 @@ function decodificarStj(j: ArquivoStj): TemaBusca[] {
 }
 
 function decodificarStf(j: { t: LinhaTemaStf[] }): TemaBusca[] {
-  return j.t.map(([numero, titulo, situacao, andamento, relator, leadingCase, tese, colecoes, comPagina, url, descricao]) => ({
+  return j.t.map(([numero, titulo, situacao, andamento, relator, leadingCase, tese, colecoes, comPagina, url, descricao, simples]) => ({
     numero,
     tipo: "Tema de repercussão geral",
     situacao: andamento ?? situacao,
@@ -34,6 +36,7 @@ function decodificarStf(j: { t: LinhaTemaStf[] }): TemaBusca[] {
     extra: leadingCase ? `Processo paradigma: ${leadingCase}` : null,
     relator,
     titulo,
+    tituloSimples: simples ?? null,
     questao: descricao,
     tese,
     colecoes,
@@ -43,26 +46,28 @@ function decodificarStf(j: { t: LinhaTemaStf[] }): TemaBusca[] {
   }));
 }
 
-export function BuscaTemasStj({ colecoes }: { colecoes: Record<string, string> }) {
+export function BuscaTemasStj({ colecoes, coletadoEm }: { colecoes: Record<string, string>; coletadoEm?: string | null }) {
   return (
     <BuscaTemas<ArquivoStj>
       arquivo="/justica/stj-temas.json"
       decodificar={decodificarStj}
-      rotuloTribunal="Superior Tribunal de Justiça"
-      rotuloQuestao="Questão submetida a julgamento"
+      caminho="stj"
+      nomeTribunal="Superior Tribunal de Justiça"
       colecoes={colecoes}
+      coletadoEm={coletadoEm}
     />
   );
 }
 
-export function BuscaTemasStf({ colecoes }: { colecoes: Record<string, string> }) {
+export function BuscaTemasStf({ colecoes, coletadoEm }: { colecoes: Record<string, string>; coletadoEm?: string | null }) {
   return (
     <BuscaTemas<{ t: LinhaTemaStf[] }>
       arquivo="/justica/stf-temas.json"
       decodificar={decodificarStf}
-      rotuloTribunal="Supremo Tribunal Federal"
-      rotuloQuestao="Descrição oficial"
+      caminho="stf"
+      nomeTribunal="Supremo Tribunal Federal"
       colecoes={colecoes}
+      coletadoEm={coletadoEm}
     />
   );
 }
