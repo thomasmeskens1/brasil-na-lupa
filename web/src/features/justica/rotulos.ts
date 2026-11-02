@@ -51,6 +51,14 @@ export function rotuloOrgao(o: string | null | undefined): string {
 }
 
 export const TERMOS_JUSTICA = {
+  stj: {
+    termo: "Superior Tribunal de Justiça (STJ)",
+    explicacao: "Tribunal que uniformiza a interpretação das leis federais em todo o país.",
+  },
+  stf: {
+    termo: "Supremo Tribunal Federal (STF)",
+    explicacao: "Tribunal que tem a função de guardar a Constituição Federal (artigo 102 da Constituição).",
+  },
   repetitivo: {
     termo: "Recurso repetitivo (tema repetitivo)",
     explicacao:

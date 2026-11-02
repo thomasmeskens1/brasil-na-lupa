@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CartaoDecisao } from "@/components/decisao";
 import { Secao } from "@/components/Secao";
 import { ListaFontes, TermosExplicados } from "@/features/congresso/componentes/Basicos";
 import { formatarData } from "@/features/congresso/rotulos";
 import { getIndiceExecutivo } from "@/features/executivo/dados";
-import { TERMOS_EXECUTIVO, explicarSigla, rotuloSituacaoMpv, rotuloTipoVeto } from "@/features/executivo/rotulos";
+import { montarCartao } from "@/features/executivo/apresentacao";
+import { cartaoMpv, cartaoVeto, padraoMpv, padraoVeto } from "@/features/executivo/listas";
+import { TERMOS_EXECUTIVO } from "@/features/executivo/rotulos";
 
 export const metadata: Metadata = {
   title: "Executivo federal",
@@ -56,9 +59,9 @@ export default function ExecutivoPage() {
 
       <nav aria-label="Atos do Executivo" className="grid grid-cols-1 gap-4 md:grid-cols-3">
         {cartoes.map((c) => (
-          <Link key={c.href} href={c.href} className="cartao block hover:bg-superficie">
+          <Link key={c.href} href={c.href} className="cartao block min-h-11 hover:bg-superficie">
             <span className="block text-base font-semibold text-[#234a73] underline underline-offset-2">{c.titulo}</span>
-            <span className="mt-1 block text-sm text-gray-800">{c.texto}</span>
+            <span className="mt-1 block text-gray-800">{c.texto}</span>
           </Link>
         ))}
       </nav>
@@ -67,37 +70,14 @@ export default function ExecutivoPage() {
         <Secao id="mpvs-recentes" titulo="Medidas provisórias mais recentes">
           <ul className="space-y-3">
             {ind.mpvs.slice(0, 5).map((m) => (
-              <li key={m.id} className="cartao">
-                <p className="meta flex flex-wrap gap-x-2">
-                  <span className="font-semibold text-gray-900">{formatarData(m.data)}</span>
-                  <span className="selo">{rotuloSituacaoMpv(m.situacao)}</span>
-                </p>
-                <h3 className="mt-2 text-base font-semibold">
-                  <Link href={`/executivo/medidas-provisorias/${m.id}`} className="lk">
-                    Medida Provisória {m.numero}/{m.ano}
-                  </Link>
-                </h3>
-                <p className="mt-1 text-sm text-gray-800">{m.ementa ?? "Ementa não disponível em fonte oficial"}</p>
-              </li>
+              <CartaoDecisao key={m.id} as="li" {...montarCartao(padraoMpv(ind), cartaoMpv(m).cartao)} />
             ))}
           </ul>
         </Secao>
         <Secao id="vetos-recentes" titulo="Vetos mais recentes">
           <ul className="space-y-3">
             {ind.vetos.slice(0, 5).map((v) => (
-              <li key={v.id} className="cartao">
-                <p className="meta flex flex-wrap gap-x-2">
-                  <span className="font-semibold text-gray-900">{formatarData(v.data_publicacao)}</span>
-                  <span className="selo">{rotuloTipoVeto(v.tipo)}</span>
-                </p>
-                <h3 className="mt-2 text-base font-semibold">
-                  <Link href={`/executivo/vetos/${v.id}`} className="lk">
-                    Veto {v.numero}/{v.ano}
-                    {v.materia_vetada ? ` ao ${explicarSigla(v.materia_vetada)}` : ""}
-                  </Link>
-                </h3>
-                <p className="mt-1 text-sm text-gray-800">{v.ementa ?? "Ementa não disponível em fonte oficial"}</p>
-              </li>
+              <CartaoDecisao key={v.id} as="li" {...montarCartao(padraoVeto(ind), cartaoVeto(v).cartao)} />
             ))}
           </ul>
         </Secao>

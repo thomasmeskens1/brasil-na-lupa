@@ -55,6 +55,37 @@ function limparPublico(rel) {
 
 const resumo = [];
 
+// ---------------------------------------------------------------- Títulos em linguagem simples
+// dados/titulos/<secao>.json (contrato "titulo_simples"). Pode não existir: as páginas usam o
+// título oficial. Só vão para o site os itens que as páginas usam.
+const dirTitulos = path.resolve(webDir, "..", "dados", "titulos");
+const titulosExecutivo = lerJson(path.join(dirTitulos, "executivo.json"))?.itens ?? {};
+const titulosStj = lerJson(path.join(dirTitulos, "stj.json"))?.itens ?? {};
+const titulosStf = lerJson(path.join(dirTitulos, "stf.json"))?.itens ?? {};
+
+/** Mesmas regras de components/decisao/rotulos.ts → tituloAprovado. */
+function aprovado(s) {
+  if (!s || typeof s.titulo !== "string" || !s.titulo.trim()) return false;
+  const v = s.verificacao;
+  if (!v) return true;
+  if (v.numeros_e_datas_conferidos === false || v.verbo_permitido === false) return false;
+  if (Array.isArray(v.palavras_proibidas) && v.palavras_proibidas.length > 0) return false;
+  return v.veto_vies === null || v.veto_vies === undefined || v.veto_vies === false;
+}
+
+/** Título para os índices de busca: só o aprovado que reformula o texto (o "oficial" é o próprio texto). */
+function tituloUtil(itens, id) {
+  const s = itens[id];
+  return aprovado(s) && s.origem !== "oficial" ? s.titulo.trim() : null;
+}
+
+function gravarTitulos(secao, ids) {
+  const fonte = { executivo: titulosExecutivo, stj: titulosStj, stf: titulosStf }[secao];
+  const itens = {};
+  for (const id of ids) if (fonte[id]) itens[id] = fonte[id];
+  gravar(path.join(saidaServidor, `titulos-${secao}.json`), { itens });
+}
+
 // ---------------------------------------------------------------- Executivo
 function gerarExecutivo() {
   const base = path.join(content, "executivo");
@@ -75,6 +106,26 @@ function gerarExecutivo() {
   const vetos = idxVet.flatMap((i) => i.itens ?? []);
   vetos.sort((a, b) => (b.data_publicacao ?? "").localeCompare(a.data_publicacao ?? "") || b.numero - a.numero);
   const vetoPorNorma = new Map(vetos.filter((v) => v.norma).map((v) => [v.norma, v.id]));
+
+  // Detalhe de cada veto: assunto do Congresso para o título da lista e, por dispositivo, o
+  // texto vetado e as razões em arquivo próprio (baixado só quando o leitor abre o trecho).
+  let nDispositivos = 0;
+  for (const v of vetos) {
+    const d = lerJson(path.join(base, "vetos", `${v.id}.json`));
+    if (!d) continue;
+    v.assunto_congresso = d.assunto_congresso ?? null;
+    for (const x of d.dispositivos ?? []) {
+      if (!/^[0-9A-Za-z.-]+$/.test(String(x.codigo))) continue;
+      gravar(path.join(pub, "executivo", "vetos", "dispositivos", `${x.codigo}.json`), {
+        texto_vetado: x.texto_vetado ?? null,
+        razao_veto: x.razao_veto ?? null,
+        origem: x.origem ?? null,
+        votacao: x.votacao ?? null,
+        tipo_votacao: x.tipo_votacao ?? null,
+      });
+      nDispositivos += 1;
+    }
+  }
 
   // Votos por dispositivo: arquivo compacto por código, baixado só quando o leitor abre a tabela.
   const dirVotos = path.join(base, "vetos", "votos");
@@ -114,6 +165,7 @@ function gerarExecutivo() {
     (x.projeto_origem ?? []).map((p) => p.identificacao).filter(Boolean),
     vetoPorNorma.get(x.nome_oficial) ?? null,
     x.links?.senado_norma ?? null,
+    tituloUtil(titulosExecutivo, x.id),
   ]);
   const kbNormas = gravar(path.join(pub, "executivo", "normas.json"), {
     gerado_em: new Date().toISOString(),
@@ -140,7 +192,10 @@ function gerarExecutivo() {
     vetos,
     normas: { total: normas.length, anos: [...new Set(normas.map((x) => x.ano))].sort().reverse(), por_ano_tipo: contagemNormas },
   });
-  resumo.push(`executivo: ${mpvs.length} MPs, ${vetos.length} vetos, ${nVotos} arquivos de votos, normas.json ${kbNormas} KB`);
+  gravarTitulos("executivo", [...mpvs.map((m) => m.id), ...vetos.map((v) => v.id)]);
+  resumo.push(
+    `executivo: ${mpvs.length} MPs, ${vetos.length} vetos (${nDispositivos} dispositivos), ${nVotos} arquivos de votos, normas.json ${kbNormas} KB`,
+  );
 }
 
 // ---------------------------------------------------------------- STJ
@@ -175,6 +230,7 @@ function gerarStj() {
       setPagina.has(String(t.numero)) ? 1 : 0,
       t.datas?.julgamento ?? t.datas?.afetacao ?? null,
       url === modelo.replaceAll("{n}", String(t.numero)) ? 1 : url,
+      tituloUtil(titulosStj, `stj-tema-${t.numero}`),
     ]);
   }
   linhas.sort((a, b) => Number(b[0]) - Number(a[0]));
@@ -200,6 +256,7 @@ function gerarStj() {
     orgaos: [...new Set(indice.itens.map((t) => t.orgao).filter(Boolean))].sort(),
     tipos: [...new Set(indice.itens.map((t) => t.tipo_precedente).filter(Boolean))].sort(),
   });
+  gravarTitulos("stj", comPagina.map((n) => `stj-tema-${n}`));
   resumo.push(`stj: ${indice.itens.length} temas, ${comPagina.length} com página, stj-temas.json ${kb} KB`);
 }
 
@@ -241,11 +298,32 @@ function gerarStf() {
         setPagina.has(String(t.numero)) ? 1 : 0,
         d?.url ?? null,
         d?.descricao ?? null,
+        tituloUtil(titulosStf, `stf-tema-${t.numero}`),
       ];
     });
     linhas.sort((a, b) => Number(b[0]) - Number(a[0]));
     gravar(path.join(pub, "justica", "stf-temas.json"), { gerado_em: new Date().toISOString(), t: linhas });
   }
+  // Lista dos julgamentos (todos têm página de detalhe: são poucos e vêm das coleções acompanhadas),
+  // com o trecho literal do resultado do mérito na certidão, para o cartão da lista.
+  const porArquivo = new Map(julgamentos.map((j) => [j.arquivo, j.d]));
+  const listaJulgamentos = (lerJson(path.join(base, "julgamentos", "indice.json"))?.itens ?? julgamentos.map((j) => ({ id: j.arquivo })))
+    .filter((j) => j && /^[A-Za-z0-9._-]{1,80}$/.test(String(j.id)) && porArquivo.has(j.id))
+    .map((j) => {
+      const d = porArquivo.get(j.id);
+      const cert = (d.votacoes ?? []).filter((v) => v.origem !== "plenario-virtual" && v.trecho);
+      const merito = cert.find((v) => /m[ée]rito/i.test(String(v.parte ?? ""))) ?? cert[cert.length - 1];
+      return {
+        ...j,
+        resultado_trecho: merito?.trecho ?? null,
+        certidao_inicio: d.certidao_literal ? String(d.certidao_literal).slice(0, 400) : null,
+        ementa_inicio: d.ementa ? String(d.ementa).slice(0, 400) : null,
+        orgao: d.orgao ?? null,
+        acessado_em: d.atualizado_em ?? null,
+        url: d.certidao_fonte?.url ?? d.processo?.url ?? null,
+      };
+    });
+  gravarTitulos("stf", [...comPagina.map((n) => `stf-tema-${n}`), ...listaJulgamentos.map((j) => j.id)]);
   gravar(path.join(saidaServidor, "justica-stf.json"), {
     atualizado_em: indice?.atualizado_em ?? null,
     fonte: indice?.fonte ?? null,
@@ -255,8 +333,7 @@ function gerarStf() {
     julgamentos_por_tema: julgPorTema,
     julgamentos_total: julgamentos.length,
     // Lista dos julgamentos (todos têm página de detalhe: são poucos e vêm das coleções acompanhadas).
-    julgamentos: (lerJson(path.join(base, "julgamentos", "indice.json"))?.itens ?? julgamentos.map((j) => ({ id: j.arquivo })))
-      .filter((j) => j && /^[A-Za-z0-9._-]{1,80}$/.test(String(j.id)) && julgamentos.some((x) => x.arquivo === j.id)),
+    julgamentos: listaJulgamentos,
     fontes: (lerJson(path.join(base, "meta.json"))?.fontes ?? []).filter((f) => f?.url && !String(f.url).includes("{")),
   });
   resumo.push(`stf: ${itens.length} temas, ${julgamentos.length} julgamentos, ${comPagina.length} com página`);

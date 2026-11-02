@@ -26,6 +26,8 @@ export interface ResumoVeto {
   norma: string | null;
   data_publicacao: string | null;
   ementa: string | null;
+  /** Assunto registrado pelo Congresso Nacional (copiado do detalhe pelo gerador). */
+  assunto_congresso?: string | null;
   dispositivos: number;
   situacao_dispositivos: Record<string, number>;
   situacao_oficial: string | null;
@@ -182,7 +184,32 @@ export type LinhaNorma = [
   projetos: string[],
   veto: string | null,
   senado: string | null,
+  /** Título em linguagem simples aprovado (dados/titulos/executivo.json), quando reformula a ementa. */
+  tituloSimples?: string | null,
 ];
+
+/** Resumo de um dispositivo de veto enviado à lista recolhível (o texto vem sob demanda). */
+export interface ResumoDispositivo {
+  codigo: string;
+  ordem: number;
+  identificador: string | null;
+  dispositivo: string | null;
+  assunto: string | null;
+  /** Chave padronizada ("derrubado", "mantido", "não apreciado", "prejudicado"). */
+  situacao: string | null;
+  situacaoRotulo: string;
+  dataSessao: string | null;
+  temVotos: boolean;
+}
+
+/** public/executivo/vetos/dispositivos/<codigo>.json (scripts/gerar-executivo-justica.mjs). */
+export interface DetalheDispositivoArquivo {
+  texto_vetado: string | null;
+  razao_veto: string | null;
+  origem: string | null;
+  tipo_votacao: string | null;
+  votacao: DispositivoVeto["votacao"];
+}
 
 /** public/executivo/vetos/votos/<codigo>.json: [casa (0 Câmara, 1 Senado), nome, partido na fonte, UF, voto, id]. */
 export interface VotosDispositivoArquivo {

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Secao } from "@/components/Secao";
 import { ListaFontes, TermosExplicados } from "@/features/congresso/componentes/Basicos";
 import { formatarData } from "@/features/congresso/rotulos";
 import { BuscaTemasStf } from "@/features/justica/componentes/BuscasTribunais";
-import { CartaoTema } from "@/features/justica/componentes/CartaoTema";
+import { CartaoDecisao } from "@/components/decisao";
+import { Migalhas } from "@/features/executivo/componentes/Migalhas";
+import { cartaoTemaStf } from "@/features/justica/cartoes";
 import { ListaJulgamentosStf } from "@/features/justica/componentes/ListaJulgamentosStf";
 import { getIndiceStf, getSumulasVinculantes, getTemaStf } from "@/features/justica/dados";
 import { COLECOES, TERMOS_JUSTICA } from "@/features/justica/rotulos";
@@ -28,12 +29,8 @@ export default function StfPage() {
   return (
     <div className="space-y-10">
       <header className="max-w-3xl">
-        <nav aria-label="Você está em" className="meta">
-          <Link href="/justica" className="lk">
-            Justiça
-          </Link>
-        </nav>
-        <h1 className="mt-2 text-2xl font-bold text-gray-900 md:text-3xl">Supremo Tribunal Federal (STF)</h1>
+        <Migalhas itens={[{ href: "/justica", rotulo: "Justiça" }]} />
+        <h1 className="mt-1 text-2xl font-bold text-gray-900 md:text-3xl">Supremo Tribunal Federal (STF)</h1>
         <p className="mt-3 leading-relaxed text-gray-800">
           O STF é o guardião da Constituição. Nos temas de repercussão geral, julga uma questão constitucional que se repete
           em muitos processos e fixa uma tese que vale para casos iguais. Nos julgamentos do Plenário Virtual, o tribunal
@@ -54,20 +51,11 @@ export default function StfPage() {
 
       {colecoes.map((c) => (
         <Secao key={c} id={`colecao-${c}`} titulo={`Destaque: ${COLECOES[c]?.titulo ?? c}`} descricao={COLECOES[c]?.explicacao}>
-          <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <ul className="grid grid-cols-1 gap-3 lg:grid-cols-2">
             {destaques
               .filter((t) => (t.colecoes ?? []).includes(c))
               .map((t) => (
-                <li key={String(t.numero)}>
-                  <CartaoTema
-                    href={`/justica/stf/temas/${t.numero}`}
-                    tribunal="STF"
-                    rotulo={`Tema ${t.numero} de repercussão geral${t.titulo ? `: ${t.titulo}` : ""}`}
-                    situacao={t.situacao?.andamento ?? t.situacao?.repercussao_geral ?? null}
-                    questao={t.descricao ?? null}
-                    tese={t.tese ?? null}
-                  />
-                </li>
+                <CartaoDecisao key={String(t.numero)} as="li" {...cartaoTemaStf(t)} />
               ))}
           </ul>
         </Secao>
@@ -85,19 +73,19 @@ export default function StfPage() {
 
       {ind.total ? (
         <Secao id="buscar" titulo="Buscar temas de repercussão geral" descricao="A busca roda no seu navegador: o que você digita não é enviado a nenhum servidor.">
-          <BuscaTemasStf colecoes={Object.fromEntries(colecoes.map((c) => [c, COLECOES[c]?.titulo ?? c]))} />
+          <BuscaTemasStf colecoes={Object.fromEntries(colecoes.map((c) => [c, COLECOES[c]?.titulo ?? c]))} coletadoEm={ind.atualizado_em} />
         </Secao>
       ) : null}
 
       {sumulas.itens.length ? (
         <Secao id="sumulas" titulo="Súmulas vinculantes" descricao={TERMOS_JUSTICA.sumulaVinculante.explicacao}>
           <details className="cartao">
-            <summary className="text-sm">Mostrar as {sumulas.itens.length} súmulas vinculantes (texto oficial)</summary>
+            <summary>Mostrar as {sumulas.itens.length} súmulas vinculantes (texto oficial)</summary>
             <ol className="mt-3 space-y-3">
               {[...sumulas.itens]
                 .sort((x, y) => Number(y.numero ?? 0) - Number(x.numero ?? 0))
                 .map((s, i) => (
-                  <li key={String(s.numero ?? i)} className="border-t border-borda pt-2 text-sm">
+                  <li key={String(s.numero ?? i)} className="border-t border-borda pt-2">
                     <p className="font-semibold text-gray-900">
                       Súmula Vinculante {s.numero ?? "sem número informado"}
                       {s.situacao ? <span className="meta ml-2 font-normal">{s.situacao}</span> : null}

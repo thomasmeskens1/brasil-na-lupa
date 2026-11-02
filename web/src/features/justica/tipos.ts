@@ -138,6 +138,7 @@ export type LinhaTemaStj = [
   comPagina: 0 | 1,
   data: string | null,
   url: 1 | string | null,
+  titulo?: string | null,
 ];
 
 // ---------------------------------------------------------------- STF (contrato "julgamento")
@@ -204,6 +205,13 @@ export interface ResumoJulgamentoStf {
   relator?: string | null;
   resultados?: { parte?: string | null; resultado?: string | null; vencidos?: string[] }[];
   colecoes?: string[];
+  /** Acrescentados pelo gerador: trecho literal do resultado do mérito na certidão, inícios dos textos, fonte. */
+  resultado_trecho?: string | null;
+  certidao_inicio?: string | null;
+  ementa_inicio?: string | null;
+  orgao?: string | null;
+  acessado_em?: string | null;
+  url?: string | null;
 }
 
 export interface TemaStf {
@@ -249,4 +257,5 @@ export type LinhaTemaStf = [
   comPagina: 0 | 1,
   url: string | null,
   descricao: string | null,
+  tituloSimples?: string | null,
 ];
