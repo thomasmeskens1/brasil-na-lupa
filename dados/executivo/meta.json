@@ -1,0 +1,294 @@
+{
+  "atualizado_em": "2026-11-02T15:36:44.805Z",
+  "ultima_execucao": {
+    "inicio": "2026-11-02T15:36:15.624Z",
+    "fim": "2026-11-02T15:36:44.805Z",
+    "modo": "incremental",
+    "desde": "2026-10-26",
+    "anos": [
+      2025,
+      2026
+    ],
+    "partes": [
+      "mps",
+      "vetos",
+      "normas"
+    ],
+    "requisicoes": 185,
+    "retentativas": 0,
+    "falhas": [],
+    "erros": []
+  },
+  "periodo": {
+    "inicio": "2025-01-01",
+    "fim": "2026-11-02",
+    "observacao": "Atos de 2025 e 2026 (ano de edição da MP, ano do veto, ano de assinatura da norma)"
+  },
+  "contagens": {
+    "medidas_provisorias": {
+      "total": 112,
+      "detalhes_atualizados": 34,
+      "com_exposicao": 110,
+      "exposicao_sem_texto": 2,
+      "sem_exposicao": 0,
+      "com_votacao_local": 37,
+      "por_situacao": {
+        "perdeu eficácia": 57,
+        "convertida em lei": 26,
+        "revogada": 3,
+        "em tramitação": 24,
+        "aprovada pelo Congresso, enviada à sanção": 2
+      }
+    },
+    "normas": {
+      "total": 1265,
+      "por_tipo": {
+        "Lei": 443,
+        "Lei Complementar": 27,
+        "Decreto": 795
+      },
+      "detalhes_consultados": 0,
+      "com_planalto": 1265,
+      "sem_planalto": 0,
+      "com_projeto_origem": 470,
+      "com_veto": 85
+    },
+    "vetos": {
+      "total": 106,
+      "detalhes_atualizados": 96,
+      "dispositivos": 904,
+      "dispositivos_com_votos": 150,
+      "arquivos_de_votos": 150,
+      "votos_sem_id_parlamentar": 5077,
+      "votos_total": 65187,
+      "por_situacao_dispositivo": {
+        "Prejudicado": 25,
+        "Rejeitado": 81,
+        "Mantido": 72,
+        "Não Apreciado": 726
+      },
+      "sem_resultado": 0
+    }
+  },
+  "fontes": [
+    {
+      "titulo": "Senado Federal / Congresso Nacional: processos (MPV, VET) e prazos",
+      "url": "https://legis.senado.leg.br/dadosabertos/processo",
+      "orgao": "Senado Federal / Congresso Nacional",
+      "acessado_em": "2026-11-02"
+    },
+    {
+      "titulo": "Congresso Nacional: lista anual de vetos e resultado por dispositivo",
+      "url": "https://legis.senado.leg.br/dadosabertos/materia/vetos/{ano}.json",
+      "orgao": "Congresso Nacional",
+      "acessado_em": "2026-11-02"
+    },
+    {
+      "titulo": "Senado Federal: legislação federal (lista e detalhe de normas)",
+      "url": "https://legis.senado.leg.br/dadosabertos/legislacao/lista",
+      "orgao": "Senado Federal",
+      "acessado_em": "2026-11-02"
+    },
+    {
+      "titulo": "Câmara dos Deputados: proposições do tipo MPV",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/proposicoes?siglaTipo=MPV",
+      "orgao": "Câmara dos Deputados",
+      "acessado_em": "2026-11-02"
+    },
+    {
+      "titulo": "Presidência da República: Portal da Legislação (ccivil_03) — medidas provisórias, exposições de motivos, leis e decretos",
+      "url": "https://www.planalto.gov.br/ccivil_03/",
+      "orgao": "Presidência da República",
+      "acessado_em": "2026-11-02"
+    }
+  ],
+  "observacoes": [
+    "Nada é deduzido: o que a fonte não traz fica null e é registrado em \"lacunas\" de cada item.",
+    "Situação das medidas provisórias: rótulo padronizado só quando o tipo de deliberação oficial é inequívoco (perda de eficácia, rejeição, revogação, aprovação com norma gerada); o texto oficial fica em \"situacao_oficial\".",
+    "Exposição de motivos: PDF oficial do Planalto, localizado pelo link \"Exposição de motivos\" da página da MP; guardamos URL, hash SHA-256 e trechos literais (parágrafo 2 e o parágrafo sobre relevância e urgência), nunca resumo. PDF sem texto legível fica como lacuna.",
+    "Vetos: razão do veto por dispositivo é o texto oficial do campo RazaoVeto do Congresso Nacional. Situação por dispositivo: Rejeitado = veto derrubado; Mantido = veto mantido (rótulos da própria fonte). Os campos \"Comentario\" e \"Justificativa\" da fonte (resumos da equipe do Congresso) não são incorporados.",
+    "Votos em vetos: a fonte traz nome, UF e partido abreviado, sem código do parlamentar. O id do parlamentar só é preenchido quando nome + UF coincidem com um único parlamentar do cadastro atual da Casa; caso contrário fica null. O significado de \"Sim\"/\"Não\" na cédula não é interpretado pelo coletor.",
+    "Votações das MPs: referência pelo id oficial às votações já coletadas em dados/camara e dados/senado (Câmara: proposição \"MPV n/ano\"; Senado: processo da MPV). O serviço do Senado só lista votações nominais e secretas.",
+    "Normas: decretos não numerados não estão incluídos. Link do Planalto só é gravado depois de confirmado por requisição ao endereço padrão. O link direto para a página do DOU não é gravado (a fonte estruturada traz só veículo, data, página e coluna)."
+  ],
+  "esquema": {
+    "_descricao": "Tipos do Executivo federal, no estilo de \"decisao\", \"votacao\" e \"fonte\" de dados/esquema.json. Campos sem dado oficial ficam null e entram em \"lacunas\".",
+    "medida_provisoria": {
+      "_arquivos": "índice: dados/executivo/medidas-provisorias/indice-<ano>.json → { atualizado_em, ano, fonte, itens: resumo[] }; detalhe: dados/executivo/medidas-provisorias/mpv-<numero>-<ano>.json",
+      "id": "mpv-<numero>-<ano>",
+      "caminho": "presidencia",
+      "instrumento": "Medida Provisória",
+      "forma": "ato individual (medida provisória)",
+      "numero": 0,
+      "ano": 0,
+      "identificacao": "MPV n/ano",
+      "ementa": "ementa oficial",
+      "apelido_senado": "apelido dado pelo Senado (texto oficial)",
+      "mensagem": "MSG n/ano (mensagem presidencial)",
+      "datas": {
+        "edicao": "AAAA-MM-DD",
+        "publicacao": "AAAA-MM-DD",
+        "situacao": "AAAA-MM-DD"
+      },
+      "situacao": "em tramitação | convertida em lei | aprovada pelo Congresso, enviada à sanção | perdeu eficácia | rejeitada | revogada | null",
+      "situacao_oficial": "texto literal do Congresso (ex.: \"TRANSFORMADA EM NORMA JURÍDICA COM VETO PARCIAL\")",
+      "deliberacao": {
+        "data": "AAAA-MM-DD",
+        "tipo": "texto oficial",
+        "destino": "texto oficial"
+      },
+      "norma_gerada": {
+        "id": "lei-<n>-<ano> (liga a dados/executivo/normas)",
+        "descricao": "Lei nº …",
+        "numero": 0,
+        "data_assinatura": "…",
+        "data_publicacao": "…",
+        "publicacao": "veículo, página, coluna"
+      },
+      "prazos": [
+        {"tipo":"texto oficial","inicio":"…","fim":"…","fundamento_legal":"…","prorrogado":"Sim|Não","fase":"Encerrado|…","colegiado":"…"}
+      ],
+      "exposicao_motivos": {
+        "documento": "ex.: EM nº 00025/2025 MME",
+        "data_texto": "literal",
+        "url": "PDF oficial",
+        "sha256": "…",
+        "paragrafos_total": 0,
+        "trechos": [
+          {
+            "paragrafo": 0,
+            "texto": "citação literal",
+            "truncado": false
+          }
+        ]
+      },
+      "justificativa": "decisao.justificativa: { texto (citação literal), documento, url }",
+      "votacoes": [
+        {"casa":"camara | senado","votacao_ref":"id do arquivo em dados/<casa>/votacoes/<id>.json","data":"…","descricao":"…","tipo":"nominal | simbolica | secreta","resultado":"…","placar":"placar | null"}
+      ],
+      "ids_oficiais": {
+        "senado_processo": "…",
+        "senado_materia": "…",
+        "camara_proposicao": "…"
+      },
+      "links": {
+        "planalto": "…",
+        "planalto_lei": "…",
+        "senado": "…",
+        "camara": "…",
+        "texto_original_senado": "…"
+      },
+      "fontes": [
+        "fonte"
+      ],
+      "lacunas": [
+        "…"
+      ]
+    },
+    "veto": {
+      "_arquivos": "índice: dados/executivo/vetos/indice-<ano>.json; detalhe: dados/executivo/vetos/vet-<numero>-<ano>.json; votos por dispositivo: dados/executivo/vetos/votos/<codigo-dispositivo>.json",
+      "id": "vet-<numero>-<ano>",
+      "caminho": "presidencia",
+      "instrumento": "Veto",
+      "tipo": "total | parcial",
+      "materia_vetada": {
+        "identificacao": "PL n/ano",
+        "ementa": "…"
+      },
+      "norma": {
+        "id": "lei-<n>-<ano>",
+        "descricao": "…"
+      },
+      "mensagem": {
+        "identificacao": "MSG n/ano",
+        "url_planalto": "…"
+      },
+      "datas": {
+        "publicacao": "…",
+        "recebimento_congresso": "…",
+        "sobrestamento_pauta": "…"
+      },
+      "situacao_oficial": "situação do processo VET no Congresso (texto oficial)",
+      "situacao_dispositivos": {
+        "Rejeitado|Mantido|Prejudicado|Não Apreciado": 0
+      },
+      "dispositivos": [
+        {
+          "codigo": "id oficial do dispositivo",
+          "identificador": "ex.: 29.25.001",
+          "dispositivo": "ex.: inciso XXXV do caput do art. 3º",
+          "texto_vetado": "texto oficial do dispositivo",
+          "origem": "quem incluiu o dispositivo, segundo a fonte",
+          "razao_veto": "texto oficial (justificativa do Executivo)",
+          "situacao": "derrubado | mantido | prejudicado | não apreciado",
+          "situacao_oficial": "literal",
+          "tipo_votacao": "Painel | Cédula",
+          "data_sessao": "…",
+          "votacao": {
+            "sessao": "…",
+            "tipo": "nominal",
+            "placar": {
+              "camara": "placar + detalhe literal",
+              "senado": "…"
+            },
+            "placar_origem": "contagem-dos-votos",
+            "votos_ref": "vetos/votos/<codigo>.json",
+            "url": "…"
+          }
+        }
+      ],
+      "resultado_pdfs": [
+        {
+          "descricao": "…",
+          "url": "PDF oficial do resultado"
+        }
+      ]
+    },
+    "voto_veto": {
+      "_arquivo": "dados/executivo/vetos/votos/<codigo>.json",
+      "votos": [
+        {"casa":"camara | senado","nome":"como na fonte","partido_na_fonte":"abreviado pela fonte","uf":"…","voto":"literal","parlamentar_id":"id oficial ou null"}
+      ]
+    },
+    "norma": {
+      "_arquivo": "dados/executivo/normas/indice-<ano>.json → { atualizado_em, ano, abrangencia, fontes, itens: norma[] }",
+      "id": "lei-<n>-<ano> | lcp-<n>-<ano> | dec-<n>-<ano>",
+      "tipo": "Lei | Lei Complementar | Decreto",
+      "numero": 0,
+      "ano": 0,
+      "nome_oficial": "Lei nº 15.321 de 31/12/2025",
+      "data_assinatura": "AAAA-MM-DD",
+      "ementa": "…",
+      "apelido_senado": "…",
+      "caminho": "congresso | presidencia",
+      "forma": "…",
+      "publicacao_dou": [
+        {
+          "veiculo": "Diário Oficial da União …",
+          "data": "AAAA-MM-DD",
+          "pagina": "…",
+          "coluna": "…"
+        }
+      ],
+      "projeto_origem": [
+        {
+          "identificacao": "PL n/ano",
+          "autoria": "…",
+          "senado_processo": "…",
+          "senado_materia": "…"
+        }
+      ],
+      "vetos": [
+        "Mensagem de Veto … (texto oficial)"
+      ],
+      "links": {
+        "planalto": "confirmado por requisição",
+        "lexml": "URN LexML",
+        "senado_norma": "…"
+      },
+      "lacunas": [
+        "…"
+      ]
+    }
+  }
+}
