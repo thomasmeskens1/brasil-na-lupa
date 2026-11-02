@@ -510,13 +510,17 @@
       "numeros_e_datas_conferidos": true,
       "verbo_permitido": true,
       "palavras_proibidas": [],
-      "veto_vies": null
+      "veto_vies": null,
+      "texto_oficial_literal": "texto oficial usado quando origem = oficial"
     },
     "_regras": [
       "Prioridade: apelido/explicação oficial → manchete da Agência Câmara/Senado (identificada como tal) → modelo (quem decidiu + verbo de lista fechada + trecho literal da ementa + números/datas oficiais) → título oficial sem alteração.",
       "Nenhum número, data ou nome que não esteja no dado oficial; nunca paráfrase livre nem resumo gerado.",
       "Palavras proibidas: vitória, derrota, vencedor, perdedor, goleada, virada, polêmico, absurdo, histórico e similares; 'placar' só em votação nominal.",
-      "Qualquer dos três analistas de viés pode vetar um título; vetado → título oficial."
-    ]
+      "Qualquer dos três analistas de viés pode vetar um título; vetado → título oficial.",
+      "Revisão de viés: dados/titulos/revisao/<vies>.json (esquerda, centro, direita) com vetos por id; o gerador aplica os vetos (título vetado → oficial)."
+    ],
+    "fonte_data": "data da notícia (só manchetes de agência)",
+    "credito": "identificação exibida: 'Manchete da Agência Câmara/Senado (órgão de comunicação da Casa), dd/mm/aaaa'"
   }
 }

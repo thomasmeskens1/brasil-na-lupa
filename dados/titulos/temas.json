@@ -1,0 +1,261 @@
+{
+  "atualizado_em": "2026-11-02",
+  "descricao": "Correspondência entre a classificação oficial de cada órgão e os temas do dia a dia usados no Placar do Poder. A primeira regra que casar, na ordem abaixo, define o tema. Quando a fonte não classifica o item, vale o tipo do ato (fórmula inicial da ementa: crédito orçamentário, denominação, homenagem, indicação de autoridade) ou o tipo de decisão (ICMS, contas públicas). Sem correspondência: \"Outros\".",
+  "temas": [
+    "Impostos e preços",
+    "Trabalho e renda",
+    "Saúde",
+    "Educação",
+    "Segurança",
+    "Meio ambiente",
+    "Transporte e cidades",
+    "Previdência e assistência",
+    "Economia e empresas",
+    "Direitos e cidadania",
+    "Governo e instituições",
+    "Outros"
+  ],
+  "fontes_de_classificacao": {
+    "camara-tema": "Câmara dos Deputados — temas oficiais da proposição (Dados Abertos, /proposicoes/{id}/temas)",
+    "camara-palavra-chave": "Câmara dos Deputados — palavras-chave da indexação oficial (campo keywords da proposição)",
+    "senado-classificacao": "Senado Federal — classificações temáticas do processo (Dados Abertos, /processo/{id}, campo classificacoes)",
+    "assunto-judicial": "STJ e STF — assuntos da Tabela Processual Unificada do CNJ registrados no tema",
+    "tipo": "Tipo do ato ou da decisão, quando a fonte não traz classificação temática"
+  },
+  "regras": [
+    {
+      "ordem": 1,
+      "fonte": "camara-palavra-chave",
+      "padrao": "\\b(imposto|tributo|tributári[ao]|tributação|ICMS|IPI|IOF|IPVA|IPTU|ISS|IBS|CBS|Cofins|PIS/Pasep|alíquota|imposto de renda|Imposto Seletivo|substituição tributária)\\b",
+      "tema": "Impostos e preços"
+    },
+    {
+      "ordem": 2,
+      "fonte": "senado-classificacao",
+      "padrao": "\\bTribut",
+      "tema": "Impostos e preços"
+    },
+    {
+      "ordem": 3,
+      "fonte": "assunto-judicial",
+      "padrao": "DIREITO TRIBUTÁRIO",
+      "tema": "Impostos e preços"
+    },
+    {
+      "ordem": 4,
+      "fonte": "tipo",
+      "padrao": "^icms$",
+      "tema": "Impostos e preços"
+    },
+    {
+      "ordem": 5,
+      "fonte": "camara-tema",
+      "padrao": "^Saúde$",
+      "tema": "Saúde"
+    },
+    {
+      "ordem": 6,
+      "fonte": "senado-classificacao",
+      "padrao": "(^|/ )Saúde\\b",
+      "tema": "Saúde"
+    },
+    {
+      "ordem": 7,
+      "fonte": "assunto-judicial",
+      "padrao": "DIREITO DA SAÚDE|Sistema Único de Saúde|Planos de Saúde|Saúde Suplementar",
+      "tema": "Saúde"
+    },
+    {
+      "ordem": 8,
+      "fonte": "camara-tema",
+      "padrao": "^Educação$",
+      "tema": "Educação"
+    },
+    {
+      "ordem": 9,
+      "fonte": "senado-classificacao",
+      "padrao": "(^|/ )Educação\\b",
+      "tema": "Educação"
+    },
+    {
+      "ordem": 10,
+      "fonte": "assunto-judicial",
+      "padrao": "Ensino|Educação|DIREITO EDUCACIONAL",
+      "tema": "Educação"
+    },
+    {
+      "ordem": 11,
+      "fonte": "camara-tema",
+      "padrao": "^(Defesa e Segurança|Direito Penal e Processual Penal)$",
+      "tema": "Segurança"
+    },
+    {
+      "ordem": 12,
+      "fonte": "senado-classificacao",
+      "padrao": "Segurança Pública|Direito Penal|Defesa Nacional|Crimes?\\b",
+      "tema": "Segurança"
+    },
+    {
+      "ordem": 13,
+      "fonte": "assunto-judicial",
+      "padrao": "DIREITO PENAL|DIREITO PROCESSUAL PENAL|Execução Penal",
+      "tema": "Segurança"
+    },
+    {
+      "ordem": 14,
+      "fonte": "camara-tema",
+      "padrao": "^Previdência e Assistência Social$",
+      "tema": "Previdência e assistência"
+    },
+    {
+      "ordem": 15,
+      "fonte": "senado-classificacao",
+      "padrao": "Previdência|Assistência Social",
+      "tema": "Previdência e assistência"
+    },
+    {
+      "ordem": 16,
+      "fonte": "assunto-judicial",
+      "padrao": "DIREITO PREVIDENCIÁRIO|DIREITO ASSISTENCIAL|Previdência Privada",
+      "tema": "Previdência e assistência"
+    },
+    {
+      "ordem": 17,
+      "fonte": "camara-tema",
+      "padrao": "^Trabalho e Emprego$",
+      "tema": "Trabalho e renda"
+    },
+    {
+      "ordem": 18,
+      "fonte": "senado-classificacao",
+      "padrao": "Trabalho e Emprego|Trabalho\\b|Emprego",
+      "tema": "Trabalho e renda"
+    },
+    {
+      "ordem": 19,
+      "fonte": "assunto-judicial",
+      "padrao": "DIREITO DO TRABALHO|Servidor Público Civil|Remuneração|FGTS",
+      "tema": "Trabalho e renda"
+    },
+    {
+      "ordem": 20,
+      "fonte": "camara-tema",
+      "padrao": "^(Meio Ambiente e Desenvolvimento Sustentável|Energia, Recursos Hídricos e Minerais|Estrutura Fundiária)$",
+      "tema": "Meio ambiente"
+    },
+    {
+      "ordem": 21,
+      "fonte": "senado-classificacao",
+      "padrao": "Meio Ambiente|Recursos Hídricos|Mudanças Climáticas",
+      "tema": "Meio ambiente"
+    },
+    {
+      "ordem": 22,
+      "fonte": "assunto-judicial",
+      "padrao": "DIREITO AMBIENTAL|Meio Ambiente|Dano Ambiental",
+      "tema": "Meio ambiente"
+    },
+    {
+      "ordem": 23,
+      "fonte": "camara-tema",
+      "padrao": "^(Viação, Transporte e Mobilidade|Cidades e Desenvolvimento Urbano)$",
+      "tema": "Transporte e cidades"
+    },
+    {
+      "ordem": 24,
+      "fonte": "senado-classificacao",
+      "padrao": "Transporte|Trânsito|Desenvolvimento Urbano|Habitação|Saneamento",
+      "tema": "Transporte e cidades"
+    },
+    {
+      "ordem": 25,
+      "fonte": "assunto-judicial",
+      "padrao": "Trânsito|Transporte|Desapropriação|Urban",
+      "tema": "Transporte e cidades"
+    },
+    {
+      "ordem": 26,
+      "fonte": "tipo",
+      "padrao": "^denominacao$",
+      "tema": "Transporte e cidades"
+    },
+    {
+      "ordem": 27,
+      "fonte": "camara-tema",
+      "padrao": "^(Economia|Indústria, Comércio e Serviços|Agricultura, Pecuária, Pesca e Extrativismo|Relações Internacionais e Comércio Exterior|Turismo|Ciência, Tecnologia e Inovação|Comunicações|Direito e Defesa do Consumidor)$",
+      "tema": "Economia e empresas"
+    },
+    {
+      "ordem": 28,
+      "fonte": "senado-classificacao",
+      "padrao": "Economia|Indústria|Comércio|Agricultura|Agropecuária|Energia|Minas|Sistema Financeiro|Consumidor|Comunicações|Ciência|Tecnologia|Turismo",
+      "tema": "Economia e empresas"
+    },
+    {
+      "ordem": 29,
+      "fonte": "assunto-judicial",
+      "padrao": "DIREITO DO CONSUMIDOR|DIREITO EMPRESARIAL|DIREITO COMERCIAL|Contratos Bancários|Sistema Financeiro|DIREITO MARÍTIMO|Propriedade Industrial|Recuperação Judicial|Falência",
+      "tema": "Economia e empresas"
+    },
+    {
+      "ordem": 30,
+      "fonte": "camara-tema",
+      "padrao": "^(Direitos Humanos e Minorias|Direito Civil e Processual Civil|Direito e Justiça|Arte, Cultura e Religião|Esporte e Lazer)$",
+      "tema": "Direitos e cidadania"
+    },
+    {
+      "ordem": 31,
+      "fonte": "senado-classificacao",
+      "padrao": "Direitos Humanos|Cidadania|Minorias|Família|Criança|Idoso|Pessoa com Deficiência|Mulher|Cultura|Desporto|Esporte|Jurídico|Direito Civil",
+      "tema": "Direitos e cidadania"
+    },
+    {
+      "ordem": 32,
+      "fonte": "assunto-judicial",
+      "padrao": "DIREITO CIVIL|DIREITO PROCESSUAL CIVIL|DIREITO DA CRIANÇA|Família|Sucessões|Responsabilidade Civil|DIREITO CONSTITUCIONAL",
+      "tema": "Direitos e cidadania"
+    },
+    {
+      "ordem": 33,
+      "fonte": "camara-tema",
+      "padrao": "^(Administração Pública|Finanças Públicas e Orçamento|Processo Legislativo e Atuação Parlamentar|Política, Partidos e Eleições|Direito Constitucional)$",
+      "tema": "Governo e instituições"
+    },
+    {
+      "ordem": 34,
+      "fonte": "senado-classificacao",
+      "padrao": "Administração Pública|Orçamento|Organização do Estado|Política|Processo Legislativo|Eleitoral|Poder|Servidor",
+      "tema": "Governo e instituições"
+    },
+    {
+      "ordem": 35,
+      "fonte": "assunto-judicial",
+      "padrao": "DIREITO ADMINISTRATIVO|DIREITO ELEITORAL|DIREITO FINANCEIRO|Improbidade",
+      "tema": "Governo e instituições"
+    },
+    {
+      "ordem": 36,
+      "fonte": "tipo",
+      "padrao": "^(credito-orcamentario|indicacao-autoridade|contas-publicas|veto-orcamento|organizacao-poder)$",
+      "tema": "Governo e instituições"
+    },
+    {
+      "ordem": 37,
+      "fonte": "camara-tema",
+      "padrao": "^(Homenagens e Datas Comemorativas|Ciências Exatas e da Terra|Ciências Sociais e Humanas)$",
+      "tema": "Outros"
+    },
+    {
+      "ordem": 38,
+      "fonte": "senado-classificacao",
+      "padrao": "Honorífico|Homenage",
+      "tema": "Outros"
+    },
+    {
+      "ordem": 39,
+      "fonte": "tipo",
+      "padrao": "^(homenagem|outro)$",
+      "tema": "Outros"
+    }
+  ]
+}
