@@ -3,6 +3,7 @@
 //   [quem decidiu] [verbo da lista fechada] [etapa] [o que foi votado] [trecho literal da ementa] [(N Sim, M Não) só se nominal]
 import { limpar, nomeCurto, nomeOficial, art, trechoDaEmenta, trechoIndicacao, NOME_EXTENSO } from './texto.mjs';
 import { LIMITE_DURO } from './regras.mjs';
+import { quorum } from './conteudo.mjs';
 import { dataBR } from './lib.mjs';
 
 const norm = (s) => limpar(s).toLocaleLowerCase('pt-BR');
@@ -140,6 +141,28 @@ export function sufixoPlacar(v) {
   return ` (${sim} Sim, ${nao} Não)`;
 }
 
+/** Quórum qualificado que vale para a votação (lei complementar e emenda à Constituição), ou null. */
+export function quorumAplicavel(v) {
+  return quorum(v.casa, v.proposicao?.sigla);
+}
+
+/**
+ * Placar oficial (só votação nominal) + nota de quórum: rejeição com mais Sim que Não só sai com o mínimo
+ * exigido pela espécie ("eram necessários 257 Sim"); sem quórum conhecido, devolve null.
+ */
+export function sufixoResultado(v) {
+  const base = sufixoPlacar(v);
+  if (!base) return '';
+  const { sim, nao } = v.placar;
+  if (v.resultado === 'aprovada' && sim < nao) return null;
+  if (v.resultado === 'rejeitada' && sim > nao) {
+    const q = quorumAplicavel(v);
+    if (!q || sim >= q) return null;
+    return ` (${sim} Sim, ${nao} Não; eram necessários ${q} Sim)`;
+  }
+  return base;
+}
+
 /**
  * Título-modelo de uma votação. extra: { apelido?, explicacao?, fonteApelido? }.
  * Retorna { titulo, origem, fonte } ou { erro }.
@@ -153,10 +176,10 @@ export function modeloVotacao(v, extra = {}) {
   if (k.tipo === 'outro') return { erro: 'tipo de votação não reconhecido na descrição oficial' };
   const verbo = verboDoResultado(v, k);
   if (!verbo) return { erro: 'resultado oficial não informado' };
-  const placar = sufixoPlacar(v);
-  if (placar && v.resultado === 'aprovada' && v.placar.sim < v.placar.nao) {
-    return { erro: 'placar registrado diverge do resultado oficial' };
-  }
+  const res = sufixoResultado(v);
+  if (res === null) return { erro: 'placar oficial diverge do resultado sem quórum qualificado que o explique' };
+  // etapa seguinte informada pela tramitação oficial (ex.: "segue para o Senado"), antes do placar
+  const placar = `${extra.etapa ? `; ${extra.etapa}` : ''}${res}`;
   const etapa = k.turno ? ` em ${k.turno} turno` : '';
   const P = nomeCurto(p.sigla, v.casa);
 
@@ -215,6 +238,7 @@ export function oficialVotacao(v) {
 export function perfilParaManchete(v) {
   const k = tipoDaVotacao(v);
   const verbo = verboDoResultado(v, k);
-  const principal = ['principal', 'texto'].includes(k.tipo) && ['aprova', 'rejeita'].includes(verbo);
-  return { principal, verbo, turno: k.turno, data: v.data, plenario: /Plenário/.test(quemDecidiu(v) || '') || !/Comissão/.test(quemDecidiu(v) || '') };
+  // manchete só para a votação da proposição em si (não de substitutivo, subemenda, destaque ou emenda)
+  const principal = k.tipo === 'principal' && !k.textoPrincipal && ['aprova', 'rejeita'].includes(verbo);
+  return { principal, tipo: k.tipo, verbo, turno: k.turno, data: v.data, plenario: /Plenário/.test(quemDecidiu(v) || '') || !/Comissão/.test(quemDecidiu(v) || '') };
 }

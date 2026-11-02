@@ -133,25 +133,42 @@ export function trechoDaEmenta(ementa, max) {
   const e = semFormulaFinal(ementa);
   if (!e || !RE_VERBO_INICIAL.test(e)) return null;
   const inteiro = minuscula(e);
-  if (inteiro.length <= max) return { texto: inteiro, completo: true };
   const m = VERBOS_ALTERACAO.exec(e);
   if (m) {
-    const idx = e.search(/,?\s+para\s+(?!o\s+exercício)/iu);
-    if (idx > 0) {
-      const ref = e.slice(0, idx);
-      const alvo = /Constitui[çc][ãa]o/iu.test(ref) ? 'a Constituição'
-        : /\bLeis\b|Leis n|e a Lei|, a Lei/iu.test(ref) ? 'leis'
-          : /\bLei\b|Decreto-Lei|C[óo]digo/iu.test(ref) ? 'lei' : null;
-      if (alvo) {
-        const verbo = minuscula(m[1]);
-        const para = e.slice(idx).replace(/^,?\s+/, '');
-        const corpo = cortarEmOracao(para, max - verbo.length - alvo.length - 2, { minimo: 8 });
-        if (corpo) return { texto: `${verbo} ${alvo} ${corpo}`, completo: corpo === limpar(para), substituicao: true };
-      }
-    }
+    // Regra da revisão de viés: nunca "altera a Lei nº X" sozinho — só com a oração de finalidade.
+    const idx = e.search(/,?\s+(para|a fim de)\s+(?!o\s+exercício)/iu);
+    if (idx < 0) return null;
+    if (inteiro.length <= max) return { texto: inteiro, completo: true };
+    const ref = e.slice(0, idx);
+    const alvo = /Constitui[çc][ãa]o/iu.test(ref) ? 'a Constituição'
+      : /\bLeis\b|Leis n|e a Lei|, a Lei/iu.test(ref) ? 'leis'
+        : /\bLei\b|Decreto-Lei|C[óo]digo/iu.test(ref) ? 'lei'
+          : /\bDecreto\b/iu.test(ref) ? 'decreto' : /Regimento/iu.test(ref) ? 'o Regimento Interno' : null;
+    if (!alvo) return null;
+    const verbo = minuscula(m[1]);
+    const para = e.slice(idx).replace(/^,?\s+/, '');
+    const corpo = cortarEmOracao(para, max - verbo.length - alvo.length - 2, { minimo: 8 });
+    return corpo ? { texto: `${verbo} ${alvo} ${corpo}`, completo: corpo === limpar(para), substituicao: true } : null;
   }
+  if (inteiro.length <= max) return { texto: inteiro, completo: true };
   const cortado = cortarEmOracao(inteiro, max);
   return cortado ? { texto: cortado, completo: false } : null;
+}
+
+/**
+ * Crédito orçamentário (regra da revisão de viés): verbo "abre" + valor oficial + destinatário.
+ * Só recompõe peças literais da ementa ("crédito extraordinário", "R$ …", "em favor do …").
+ */
+export function trechoCredito(ementa, max) {
+  const e = semFormulaFinal(ementa);
+  const t = /^(?:abre|dispõe sobre a abertura de)\s+(?:um\s+|aos?\s+[^,]{0,60}?\s+)?(crédito\s+(?:adicional\s+)?(?:extraordinário|suplementar|especial))/iu.exec(e);
+  if (!t) return null;
+  const valor = /R\$\s?[\d.]+,\d{2}/u.exec(e);
+  if (!valor) return null;
+  const base = `abre ${t[1].toLocaleLowerCase('pt-BR')} de ${valor[0].replace(/R\$\s?/, 'R$ ')}`;
+  const favor = /\b(em favor d[oae]s?\s[^,;(]+?|ao Orçamento [^,;(]+?)(?=,|;|\(|\s+no valor|\s+para|$)/iu.exec(e);
+  if (favor && base.length + favor[1].length + 1 <= max) return `${base} ${favor[1]}`;
+  return base.length <= max ? base : null;
 }
 
 /** "para exercer o cargo…" / "para compor…" das mensagens de indicação de autoridade (sem o nome). */

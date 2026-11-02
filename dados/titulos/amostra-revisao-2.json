@@ -1,0 +1,1009 @@
+{
+  "atualizado_em": "2026-11-02",
+  "rodada": 2,
+  "descricao": "Amostra estratificada de títulos simples para revisão de viés. Cada analista (esquerda, centro, direita) compara o título com o texto oficial e só pode vetar, com motivo; não reescreve. Um único veto fundamentado devolve o item ao título oficial (campo verificacao.veto_vies na seção correspondente).",
+  "criterio": "2ª rodada, sem itens da 1ª amostra e com sobre-representação de manchetes de agência e de modelos de votação (contados em dobro no rodízio). Cotas por seção (Câmara 13, Senado 8, ALESP 8, Executivo 10, STJ 4, STF 4, Governo de SP 3, Atibaia 3, ICMS 3, Tribunais de Contas 4); dentro da seção, rodízio entre estratos de origem do título, resultado da votação e partido do autor (quando a fonte informa), com sorteio determinístico pelo identificador. Títulos de origem \"oficial\" ficam fora porque são o texto do órgão sem alteração.",
+  "instrucoes_revisao": "Preencher revisao.<vies> com { \"veto\": true|false, \"motivo\": \"…\", \"data\": \"AAAA-MM-DD\" }. Vetar quando o título: (1) diz algo que o texto oficial não diz; (2) omite ressalva que muda o sentido; (3) usa palavra que favorece ou desfavorece partido, governo ou grupo; (4) trataria de forma diferente o mesmo tipo de decisão de outro partido ou governo.",
+  "distribuicao": {
+    "total": 60,
+    "por_origem": {
+      "agencia-senado": 3,
+      "apelido-oficial": 9,
+      "modelo": 43,
+      "agencia-camara": 5
+    },
+    "partidos_dos_autores_alesp": {
+      "CIDADANIA": 2,
+      "MDB": 2,
+      "PL": 2
+    }
+  },
+  "itens": [
+    {
+      "secao": "senado",
+      "id": "7094",
+      "titulo": "Senado aprova destinação de recursos do Funpen à capacitação de servidores penais; vai à sanção (54 Sim, 0 Não)",
+      "subtitulo": "Projeto de Lei Complementar 128/2022 · Plenário do Senado Federal · votação nominal · 10/06/2026",
+      "origem": "agencia-senado",
+      "fonte": "https://www12.senado.leg.br/noticias/materias/2026/06/10/senado-aprova-destinacao-de-recursos-do-funpen-a-capacitacao-de-servidores-penais-1",
+      "credito": "Manchete da Agência Senado (órgão de comunicação do Senado Federal), 10/06/2026",
+      "tema": "Segurança",
+      "texto_oficial": "Altera a Lei Complementar nº 79, de 7 de janeiro de 1994, para destinar recursos do Fundo Penitenciário Nacional (Funpen) à formação, ao aperfeiçoamento, à especialização e à capacitação continuada dos servidores do sistema penitenciário nacional e dos policiais penais.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "senado",
+      "id": "7039",
+      "titulo": "PEC da polícia científica: Senado aprova em 1º turno proposta (65 Sim, 0 Não)",
+      "subtitulo": "Proposta de Emenda à Constituição 76/2019 · Plenário do Senado Federal · votação nominal · 16/12/2025",
+      "origem": "apelido-oficial",
+      "fonte": "https://legis.senado.leg.br/dadosabertos/processo/7753208",
+      "tema": "Segurança",
+      "texto_oficial": "Altera a Constituição Federal, para incluir as polícias científicas no rol dos órgãos de segurança pública.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "senado",
+      "id": "6902",
+      "titulo": "Regulamentação da reforma tributária: Senado rejeita emenda ao projeto (37 Sim, 24 Não; eram necessários 41 Sim)",
+      "subtitulo": "Projeto de Lei Complementar 68/2024 · Plenário do Senado Federal · votação nominal · 12/12/2024",
+      "origem": "apelido-oficial",
+      "fonte": "https://legis.senado.leg.br/dadosabertos/processo/8701679",
+      "tema": "Impostos e preços",
+      "texto_oficial": "Institui o Imposto sobre Bens e Serviços (IBS), a Contribuição Social sobre Bens e Serviços (CBS) e o Imposto Seletivo (IS); e dá outras providências.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "senado",
+      "id": "6982",
+      "titulo": "Senado aprova indicação para compor o Conselho Nacional do Ministério Público - CNMP",
+      "subtitulo": "Ofício 5/2025 · Plenário do Senado Federal · votação secreta · 19/08/2025",
+      "origem": "modelo",
+      "fonte": "https://www25.senado.leg.br/web/atividade/materias/-/materia/169572",
+      "tema": "Outros",
+      "texto_oficial": "Submete à apreciação do Senado Federal, nos termos do art. 130-A, inciso III, da Constituição Federal, a indicação do Senhor FERNANDO DA SILVA COMIN, para compor o Conselho Nacional do Ministério Público - CNMP, na vaga destinada ao Ministério Público dos Estados.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "senado",
+      "id": "7089",
+      "titulo": "Senado aprova indicação para exercer o cargo de Presidente da Comissão de Valores Mobiliários – CVM",
+      "subtitulo": "Mensagem 1/2026 · Plenário do Senado Federal · votação secreta · 20/05/2026",
+      "origem": "modelo",
+      "fonte": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172400",
+      "tema": "Outros",
+      "texto_oficial": "Submete à apreciação do Senado Federal, nos termos do art. 52, inciso III, alínea \"f\", da Constituição Federal, combinado com o art. 6º da Lei nº 6.385, de 7 de dezembro de 1976, com a redação dada pelo art. 1º da Lei nº 10.411, de 26 de fevereiro de 2002, o nome do Senhor OTTO EDUARDO FONSECA DE ALBUQUERQUE LOBO, para exercer o cargo de Presidente da Comissão de Valores Mobiliários – CVM, na vaga decorrente da renúncia de João Pedro Barroso do Nascimento.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "senado",
+      "id": "7046",
+      "titulo": "Senado rejeita requerimento que requer urgência para o Projeto de Lei nº 2234/2022 (28 Sim, 36 Não)",
+      "subtitulo": "Requerimento 857/2024 · Plenário do Senado Federal · votação nominal · 17/12/2025",
+      "origem": "modelo",
+      "fonte": "https://www25.senado.leg.br/web/atividade/materias/-/materia/166370",
+      "tema": "Outros",
+      "texto_oficial": "Requer urgência para o Projeto de Lei nº 2234/2022, nos termos dos arts. 336, III, e 338, III, do Regimento Interno do Senado Federal.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "senado",
+      "id": "7081",
+      "titulo": "Senado rejeita indicação para exercer o cargo de Ministro do Supremo Tribunal Federal",
+      "subtitulo": "Mensagem 7/2026 · Plenário do Senado Federal · votação secreta · 29/04/2026",
+      "origem": "modelo",
+      "fonte": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173452",
+      "tema": "Outros",
+      "texto_oficial": "Submete à apreciação do Senado Federal, nos termos do art. 52, inciso III, alínea “a”, e o art. 101, parágrafo único, da Constituição, o nome do Senhor JORGE RODRIGO ARAÚJO MESSIAS, para exercer o cargo de Ministro do Supremo Tribunal Federal, na vaga decorrente da aposentadoria do Ministro Luís Roberto Barroso.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "senado",
+      "id": "7102",
+      "titulo": "PLP dos Combustíveis: Senado aprova texto principal do projeto; vai à sanção (61 Sim, 2 Não)",
+      "subtitulo": "Projeto de Lei Complementar 114/2026 · Plenário do Senado Federal · votação nominal · 12/08/2026",
+      "origem": "apelido-oficial",
+      "fonte": "https://legis.senado.leg.br/dadosabertos/processo/9095355",
+      "tema": "Segurança",
+      "texto_oficial": "Dispõe sobre regras para renúncias de receita com o objetivo de mitigar os impactos econômicos causados pelo choque no mercado internacional de energia decorrente do conflito no Oriente Médio e excepcionaliza os benefícios tributários destinados à Política Nacional de Minerais Críticos e Estratégicos, ao Programa de Desenvolvimento da Indústria de Fertilizantes e à realização da Copa do Mundo Feminina, e dá outras providências.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "alesp",
+      "id": "50000198458",
+      "titulo": "Comissão da Assembleia de SP aprova parecer sobre o projeto que institui o Conselho de Prevenção e Segurança Escolar",
+      "subtitulo": "Projeto de Lei 425/2023 · Comissão de Constituição, Justiça e Redação · votação nominal · 05/11/2025",
+      "origem": "modelo",
+      "fonte": "https://www.al.sp.gov.br/propositura/1000485879",
+      "tema": "Outros",
+      "texto_oficial": "Institui o Conselho de Prevenção e Segurança Escolar.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "alesp",
+      "id": "50000196007",
+      "titulo": "Comissão da Assembleia de SP aprova parecer favorável ao projeto que institui o \"Dia da Merendeira\"",
+      "subtitulo": "Projeto de Lei 631/2024 · Comissão de Constituição, Justiça e Redação · votação nominal · 12/02/2025",
+      "origem": "modelo",
+      "fonte": "https://www.al.sp.gov.br/propositura/1000558948",
+      "tema": "Outros",
+      "texto_oficial": "Institui o \"Dia da Merendeira\".",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "alesp",
+      "id": "50000197595",
+      "titulo": "Comissão da Assembleia de SP aprova parecer favorável ao projeto que institui o Programa Lei Lucas em Ação",
+      "subtitulo": "Projeto de Lei 483/2025 · Comissão de Constituição, Justiça e Redação · votação nominal · 27/08/2025",
+      "origem": "modelo",
+      "fonte": "https://www.al.sp.gov.br/propositura/1000608255",
+      "tema": "Outros",
+      "texto_oficial": "Institui o Programa Lei Lucas em Ação.",
+      "autoria_na_fonte": {
+        "autor": "RAFA ZIMBALDI",
+        "partido": "CIDADANIA"
+      },
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "alesp",
+      "id": "50000198509",
+      "titulo": "Comissão da Assembleia de SP aprova parecer favorável ao projeto que institui a \"Semana Estadual de Educação Cidadã\"",
+      "subtitulo": "Projeto de Lei 959/2025 · Comissão de Constituição, Justiça e Redação · votação nominal · 05/11/2025",
+      "origem": "modelo",
+      "fonte": "https://www.al.sp.gov.br/propositura/1000629252",
+      "tema": "Outros",
+      "texto_oficial": "Institui a \"Semana Estadual de Educação Cidadã\".",
+      "autoria_na_fonte": {
+        "autor": "ANA CAROLINA SERRA",
+        "partido": "CIDADANIA"
+      },
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "alesp",
+      "id": "50000199181",
+      "titulo": "Comissão da Assembleia de SP aprova em caráter conclusivo o projeto que declara de utilidade pública o Instituto Soar",
+      "subtitulo": "Projeto de Lei 73/2026 · Comissão de Constituição, Justiça e Redação · votação nominal · 15/04/2026",
+      "origem": "modelo",
+      "fonte": "https://www.al.sp.gov.br/propositura/1000677645",
+      "tema": "Outros",
+      "texto_oficial": "Declara de utilidade pública o Instituto Soar, com sede em São José do Rio Preto.",
+      "autoria_na_fonte": {
+        "autor": "ITAMAR BORGES",
+        "partido": "MDB"
+      },
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "alesp",
+      "id": "50000199524",
+      "titulo": "Comissão da Assembleia de SP aprova parecer favorável ao projeto que institui o Passaporte Equestre, no Estado",
+      "subtitulo": "Projeto de Lei 280/2026 · Comissão de Constituição, Justiça e Redação · votação nominal · 20/05/2026",
+      "origem": "modelo",
+      "fonte": "https://www.al.sp.gov.br/propositura/1000684143",
+      "tema": "Outros",
+      "texto_oficial": "Institui o Passaporte Equestre, no Estado.",
+      "autoria_na_fonte": {
+        "autor": "DR. EDUARDO NÓBREGA",
+        "partido": "MDB"
+      },
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "alesp",
+      "id": "50000199376",
+      "titulo": "Comissão da Assembleia de SP aprova parecer favorável ao projeto que institui o Programa Muralha Rural",
+      "subtitulo": "Projeto de Lei 1127/2025 · Comissão de Constituição, Justiça e Redação · votação nominal · 08/04/2026",
+      "origem": "modelo",
+      "fonte": "https://www.al.sp.gov.br/propositura/1000636855",
+      "tema": "Outros",
+      "texto_oficial": "Institui o Programa Muralha Rural.",
+      "autoria_na_fonte": {
+        "autor": "LETÍCIA AGUIAR",
+        "partido": "PL"
+      },
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "alesp",
+      "id": "50000197163",
+      "titulo": "Comissão da Assembleia de SP aprova parecer favorável ao projeto que institui o \"Ano Novo Chinês\"",
+      "subtitulo": "Projeto de Lei 113/2025 · Comissão de Constituição, Justiça e Redação · votação nominal · 06/08/2025",
+      "origem": "modelo",
+      "fonte": "https://www.al.sp.gov.br/propositura/1000598743",
+      "tema": "Outros",
+      "texto_oficial": "Institui o \"Ano Novo Chinês\".",
+      "autoria_na_fonte": {
+        "autor": "RODRIGO MORAES",
+        "partido": "PL"
+      },
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "executivo",
+      "id": "lei-15095-2025",
+      "titulo": "Sancionada lei que cria cargos em comissão no Conselho do Ministério Público",
+      "subtitulo": "Lei nº 15.095 de 09/01/2025 · lei aprovada pelo Congresso Nacional · 09/01/2025",
+      "origem": "agencia-camara",
+      "fonte": "https://www.camara.leg.br/noticias/1126347-sancionada-lei-que-cria-cargos-em-comissao-no-conselho-do-ministerio-publico",
+      "credito": "Manchete da Agência Câmara de Notícias (órgão de comunicação da Câmara dos Deputados), 13/01/2025",
+      "tema": "Trabalho e renda",
+      "texto_oficial": "Dispõe sobre a criação de cargos em comissão e a transformação de cargos de Técnico e de Analista em cargos em comissão, no âmbito do Conselho Nacional do Ministério Público.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "executivo",
+      "id": "lei-15221-2025",
+      "titulo": "Nova lei institui a Semana de Cuidados com Gestantes e Mães",
+      "subtitulo": "Lei nº 15.221 de 29/09/2025 · lei aprovada pelo Congresso Nacional · 29/09/2025",
+      "origem": "agencia-camara",
+      "fonte": "https://www.camara.leg.br/noticias/1206032-nova-lei-institui-a-semana-de-cuidados-com-gestantes-e-maes",
+      "credito": "Manchete da Agência Câmara de Notícias (órgão de comunicação da Câmara dos Deputados), 30/09/2025",
+      "tema": "Saúde",
+      "texto_oficial": "Institui a Semana Nacional de Conscientização sobre os Cuidados com as Gestantes e as Mães.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "executivo",
+      "id": "lei-15520-2026",
+      "titulo": "Lei cria a Universidade Federal da Fronteira do Norte",
+      "subtitulo": "Lei nº 15.520 de 24/09/2026 · lei aprovada pelo Congresso Nacional · 24/09/2026",
+      "origem": "agencia-senado",
+      "fonte": "https://www12.senado.leg.br/noticias/materias/2026/09/25/lei-cria-a-universidade-federal-da-fronteira-do-norte",
+      "credito": "Manchete da Agência Senado (órgão de comunicação do Senado Federal), 25/09/2026",
+      "tema": "Educação",
+      "texto_oficial": "Cria a Universidade Federal da Fronteira Norte.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "executivo",
+      "id": "lei-15416-2026",
+      "titulo": "Sancionada lei que cria Rota Turística da Serra da Capivara, no Piauí",
+      "subtitulo": "Lei nº 15.416 de 25/05/2026 · lei aprovada pelo Congresso Nacional · 25/05/2026",
+      "origem": "agencia-senado",
+      "fonte": "https://www12.senado.leg.br/noticias/materias/2026/05/26/sancionada-lei-que-cria-rota-turistica-da-serra-da-capivara-no-piaui",
+      "credito": "Manchete da Agência Senado (órgão de comunicação do Senado Federal), 26/05/2026",
+      "tema": "Economia e empresas",
+      "texto_oficial": "Cria a Rota Turística da Serra da Capivara, no Estado do Piauí.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "executivo",
+      "id": "mpv-1393-2026",
+      "titulo": "Presidência edita medida provisória: Desenrola Brasil 3.0",
+      "subtitulo": "Medida Provisória 1.393/2026 · ato individual · em tramitação · 25/09/2026",
+      "origem": "apelido-oficial",
+      "fonte": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175870",
+      "tema": "Economia e empresas",
+      "texto_oficial": "Altera a Lei nº 14.690, de 3 de outubro de 2023, para instituir a Modalidade Emergencial de Renegociação de Dívidas de Pessoas Físicas Inadimplentes - Desenrola Brasil 3.0 e prever a adoção de medidas de promoção do crédito responsável, altera a Medida Provisória nº 1.373, de 29 de junho de 2026, para estabelecer novo prazo para o Programa Extraordinário de Reequilíbrio Financeiro de Tomadores de Crédito Adimplentes - Desenrola Adimplentes, e dá outras providências.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "executivo",
+      "id": "lei-15432-2026",
+      "titulo": "Lei federal publicada: Marco Legal do Transporte Público Coletivo Urbano",
+      "subtitulo": "Lei nº 15.432 de 13/06/2026 · lei aprovada pelo Congresso Nacional · 13/06/2026",
+      "origem": "apelido-oficial",
+      "fonte": "https://legis.senado.leg.br/norma/43403974",
+      "tema": "Transporte e cidades",
+      "texto_oficial": "Institui o marco legal do transporte público coletivo urbano; e altera a Lei nº 10.257, de 10 de julho de 2001 (Estatuto da Cidade), a Lei nº 10.336, de 19 de dezembro de 2001, a Lei nº 10.636, de 30 de dezembro de 2002, e a Lei nº 12.587, de 3 de janeiro de 2012 (Lei de Mobilidade Urbana).",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "executivo",
+      "id": "mpv-1362-2026",
+      "titulo": "Medida provisória abre crédito extraordinário de R$ 30.000.000.000,00 em favor de Operações Oficiais de Crédito",
+      "subtitulo": "Medida Provisória 1.362/2026 · ato individual · perdeu eficácia · 26/05/2026",
+      "origem": "modelo",
+      "fonte": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/mpv/mpv1362.htm",
+      "tema": "Trabalho e renda",
+      "texto_oficial": "Abre crédito extraordinário, em favor de Operações Oficiais de Crédito, no valor de R$ 30.000.000.000,00, para o fim que especifica.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "executivo",
+      "id": "dec-12635-2025",
+      "titulo": "Decreto federal renova a concessão outorgada à Televisão Morena Ltda.",
+      "subtitulo": "Decreto nº 12.635 de 25/09/2025 · ato individual (decreto) · 25/09/2025",
+      "origem": "modelo",
+      "fonte": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12635.htm",
+      "tema": "Outros",
+      "texto_oficial": "Renova a concessão outorgada à Televisão Morena Ltda., para executar, sem direito de exclusividade, serviço de radiodifusão de sons e imagens em tecnologia digital, no Município de Campo Grande, Estado de Mato Grosso do Sul.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "executivo",
+      "id": "vet-20-2026",
+      "titulo": "Aumento da pena para roubo qualificado: Presidência veta 1 trecho; veto aguarda decisão do Congresso",
+      "subtitulo": "Veto parcial 20/2026 · PL 3780/2023 · Lei nº 15.397 de 30/04/2026 · ato individual; apreciação pelo Congresso Nacional",
+      "origem": "modelo",
+      "fonte": "https://www.congressonacional.leg.br/dados/plenario/resultado/veto/materia/173834",
+      "tema": "Segurança",
+      "texto_oficial": "Veto parcial aposto ao Projeto de Lei nº 3.780, de 2023, que \"Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), a fim de majorar as penas previstas para os crimes de furto, roubo, estelionato, receptação, receptação de animal e interrupção ou perturbação de serviço telegráfico, telefônico, informático, telemático ou de informação de utilidade pública, bem como para tipificar os crimes de receptação de animal doméstico e de fraude bancária\".",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "executivo",
+      "id": "lei-15110-2025",
+      "titulo": "Lei institui Dia Nacional de Segurança da Vida nas Áreas de Barragens",
+      "subtitulo": "Lei nº 15.110 de 17/03/2025 · lei aprovada pelo Congresso Nacional · 17/03/2025",
+      "origem": "agencia-camara",
+      "fonte": "https://www.camara.leg.br/noticias/1140909-lei-institui-dia-nacional-de-seguranca-da-vida-nas-areas-de-barragens",
+      "credito": "Manchete da Agência Câmara de Notícias (órgão de comunicação da Câmara dos Deputados), 18/03/2025",
+      "tema": "Segurança",
+      "texto_oficial": "Institui o Dia Nacional de Segurança da Vida nas Áreas de Barragens.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "stj",
+      "id": "stj-tema-669",
+      "titulo": "STJ fixa tese sobre a questão: Discussão: possibilidade de cumulação de dividendos e juros sobre capital próprio",
+      "subtitulo": "Tema Repetitivo 669 · Segunda Seção do Superior Tribunal de Justiça · Trânsito em Julgado",
+      "origem": "modelo",
+      "fonte": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=669&cod_tema_final=669",
+      "tema": "Direitos e cidadania",
+      "texto_oficial": "Cabimento da cumulação de dividendos e juros sobre capital próprio nas demandas por complementação de ações de empresas de telefonia.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "stj",
+      "id": "stj-tema-45",
+      "titulo": "STJ fixa tese sobre a questão: Incidência da prescrição nos contratos de participação financeira",
+      "subtitulo": "Tema Repetitivo 45 · Segunda Seção do Superior Tribunal de Justiça · Trânsito em Julgado",
+      "origem": "modelo",
+      "fonte": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=45&cod_tema_final=45",
+      "tema": "Direitos e cidadania",
+      "texto_oficial": "Quanto aos dividendos, só prescreveria o direito a partir do reconhecimento do direito à diferença das ações.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "stj",
+      "id": "stj-tema-1331",
+      "titulo": "STJ analisa a questão: Definir a possibilidade de aplicação retroativa de jurisprudência mais benéfica ao acusado",
+      "subtitulo": "Tema Repetitivo 1331 · Terceira Seção do Superior Tribunal de Justiça · Afetado",
+      "origem": "modelo",
+      "fonte": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1331&cod_tema_final=1331",
+      "tema": "Outros",
+      "texto_oficial": "Definir a possibilidade de aplicação retroativa de jurisprudência mais benéfica ao acusado.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "stj",
+      "id": "stj-tema-1241",
+      "titulo": "STJ fixa tese: *Aguardando a publicação do acórdão do julgamento de mérito",
+      "subtitulo": "Tema Repetitivo 1241 · Terceira Seção do Superior Tribunal de Justiça · Mérito Julgado",
+      "origem": "modelo",
+      "fonte": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1241&cod_tema_final=1241",
+      "tema": "Outros",
+      "texto_oficial": "*Aguardando a publicação do acórdão do julgamento de mérito.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "stf",
+      "id": "stf-adi-7379",
+      "titulo": "STF, por unanimidade, julgou improcedente o pedido formulado na presente ação direta de inconstitucionalidade",
+      "subtitulo": "ADI 7379 · Tribunal Pleno do Supremo Tribunal Federal · 22/09/2025",
+      "origem": "modelo",
+      "fonte": "https://portal.stf.jus.br/jurisprudencia/obterInteiroTeor.asp?idDocumento=791086293",
+      "tema": "Impostos e preços",
+      "texto_oficial": "O Tribunal, por unanimidade, julgou improcedente o pedido formulado na presente ação direta de inconstitucionalidade, para declarar a constitucionalidade do artigo 1º, § 7º, da Lei Estadual nº 17.649/2018, do Estado de Santa Catarina, por não configurar vício formal de iniciativa, tampouco ofensa material à Constituição Federal, nos termos do voto do Relator, Ministro Gilmar Mendes. Falou, pela requerente, a Dra. Camila Birchal Ramos. Plenário, Sessão Virtual de 12.9.2025 a 19.9.2025.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "stf",
+      "id": "stf-tema-791",
+      "titulo": "STF fixa tese sobre o tema: Isenção da Taxa de Coleta de Lixo de imóveis do Programa de Arrendamento Residencial (PAR)",
+      "subtitulo": "Tema 791 de repercussão geral · processo paradigma RE 855026 · Supremo Tribunal Federal · Trânsito em Julgado",
+      "origem": "modelo",
+      "fonte": "https://portal.stf.jus.br/jurisprudenciaRepercussao/detalharProcesso.asp?numeroTema=791",
+      "tema": "Impostos e preços",
+      "texto_oficial": "A questão da isenção de pagamento da Taxa de Coleta de Lixo de imóveis do Programa de Arrendamento Residencial (PAR) tem natureza infraconstitucional, e a ela se atribuem os efeitos da ausência de repercussão geral, nos termos do precedente fixado no RE 584.608, rel. a Ministra Ellen Gracie, DJe 13/03/2009.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "stf",
+      "id": "stf-re-1490708-rg-ed",
+      "titulo": "STF, por maioria, acolheu os embargos de declaração, com efeitos infringentes",
+      "subtitulo": "RE 1490708 RG-ED · Tribunal Pleno do Supremo Tribunal Federal · 25/08/2025",
+      "origem": "modelo",
+      "fonte": "https://portal.stf.jus.br/jurisprudencia/obterInteiroTeor.asp?idDocumento=790273346",
+      "tema": "Impostos e preços",
+      "texto_oficial": "O Tribunal, por maioria, acolheu os embargos de declaração, com efeitos infringentes, e negou provimento ao recurso extraordinário interposto pelo Estado de São Paulo, com a fixação da seguinte tese de julgamento: “A modulação dos efeitos estabelecida no julgamento da ADC nº 49/RN-ED não autoriza a cobrança do ICMS lá debatido quanto a fatos geradores ocorridos antes de 2024 em relação aos quais não tenha havido o pagamento do tributo”. Tudo nos termos do voto do Ministro Dias Toffoli (Redator para o acórdão), vencidos os Ministros Luís Roberto Barroso (Presidente e Relator), Alexandre de Moraes e Cármen Lúcia. Plenário, Sessão Virtual de 15.8.2025 a 22.8.2025.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "stf",
+      "id": "stf-tema-333",
+      "titulo": "STF fixa tese sobre o tema: Responsabilização do empregador no caso de sucessão de empresa",
+      "subtitulo": "Tema 333 de repercussão geral · processo paradigma RE 629057 · Supremo Tribunal Federal · Trânsito em Julgado",
+      "origem": "modelo",
+      "fonte": "https://portal.stf.jus.br/jurisprudenciaRepercussao/detalharProcesso.asp?numeroTema=333",
+      "tema": "Trabalho e renda",
+      "texto_oficial": "A questão da responsabilidade solidária do empregador pelos créditos trabalhistas, no caso de cisão parcial ou sucessão de empresas, tem natureza infraconstitucional e a ela são atribuídos os efeitos da ausência de repercussão geral, nos termos do precedente fixado no RE n. 584.608, rel. a Ministra Ellen Gracie, DJe 13/03/2009.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "governo-sp",
+      "id": "c5d7dbe8-222c-4956-eefc-08df132e44ff",
+      "titulo": "Decreto estadual dispõe sobre abertura de crédito suplementar ao Orçamento Fiscal na Procuradoria Geral do Estado",
+      "subtitulo": "Decreto estadual nº 70.898 · Governo do Estado de São Paulo · ato individual · 18/09/2026",
+      "origem": "modelo",
+      "fonte": "https://doe.sp.gov.br/executivo/decretos/decreto-n-70898-de-18-de-setembro-de-2026-202609181182012140202",
+      "tema": "Governo e instituições",
+      "texto_oficial": "Dispõe sobre abertura de crédito suplementar ao Orçamento Fiscal na Procuradoria Geral do Estado, visando ao atendimento de Despesas Correntes.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "governo-sp",
+      "id": "1b501162-4d5f-4c96-642b-08ded05f0511",
+      "titulo": "Decreto estadual autoriza a outorga de uso do imóvel que especifica ao Município de Piraju",
+      "subtitulo": "Decreto estadual nº 70.737 · Governo do Estado de São Paulo · ato individual · 30/06/2026",
+      "origem": "modelo",
+      "fonte": "https://doe.sp.gov.br/executivo/decretos/decreto-n-70737-de-30-de-junho-de-2026-202606301182021955842",
+      "tema": "Outros",
+      "texto_oficial": "Autoriza a outorga de uso do imóvel que especifica ao Município de Piraju e dá providências correlatas.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "governo-sp",
+      "id": "be699a9b-b8eb-48d3-1b96-08dd4ce9690e",
+      "titulo": "Decreto estadual homologa, por 180 (cento e oitenta) dias, o decreto do Prefeito do Município de Getulina",
+      "subtitulo": "Decreto estadual nº 69.353 · Governo do Estado de São Paulo · ato individual · 14/02/2025",
+      "origem": "modelo",
+      "fonte": "https://doe.sp.gov.br/executivo/decretos/decreto-n-69353-de-14-de-fevereiro-de-2025-20250214118202889582",
+      "tema": "Outros",
+      "texto_oficial": "Homologa, por 180 (cento e oitenta) dias, o decreto do Prefeito do Município de Getulina, que declarou Situação de Emergência em áreas do Município.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "atibaia",
+      "id": "atibaia-decreto-11637-2026",
+      "titulo": "Decreto de Atibaia dispõe sobre autorização de uso, a título precário, do Box nº 15 do Mercado Municipal",
+      "subtitulo": "Decreto municipal nº 11.637 · Município de Atibaia · 06/04/2026",
+      "origem": "modelo",
+      "fonte": "https://prefeitura.atibaia.sp.gov.br/imprensa/pdf/2026/2957_d11a68cbb57764e54230414707430603.pdf#page=14",
+      "tema": "Outros",
+      "texto_oficial": "Dispõe sobre autorização de uso, a título precário, do Box nº 15 do Mercado Municipal.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "atibaia",
+      "id": "atibaia-decreto-11390-2025",
+      "titulo": "Decreto de Atibaia dispõe sobre ato de substituição temporária do Prefeito da Estância de Atibaia",
+      "subtitulo": "Decreto municipal nº 11.390 · Município de Atibaia · 18/07/2025",
+      "origem": "modelo",
+      "fonte": "https://prefeitura.atibaia.sp.gov.br/imprensa/pdf/2025/2835_8d945d18024a74d9856ba8c0943e4ba7.pdf#page=40",
+      "tema": "Outros",
+      "texto_oficial": "Dispõe sobre ato de substituição temporária do Prefeito da Estância de Atibaia, nos termos do artigo 70, inciso III da Lei Orgânica do Município.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "atibaia",
+      "id": "atibaia-decreto-11306-2025",
+      "titulo": "Decreto de Atibaia dispõe sobre a abertura de um crédito adicional suplementar no Orçamento de 2025",
+      "subtitulo": "Decreto municipal nº 11.306 · Município de Atibaia · 29/04/2025",
+      "origem": "modelo",
+      "fonte": "https://prefeitura.atibaia.sp.gov.br/imprensa/pdf/2025/2800_c0adfaed6e7985923823d46c0d98c0da.pdf#page=17",
+      "tema": "Governo e instituições",
+      "texto_oficial": "Dispõe sobre a abertura de um crédito adicional suplementar no Orçamento de 2025",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "tribunais-contas",
+      "id": "tce-sp-contas-prefeito-atibaia-2012",
+      "titulo": "Tribunal de Contas emite parecer desfavorável às contas de 2012 do Prefeito; ressalvas não informadas na fonte",
+      "subtitulo": "Parecer prévio — contas do Prefeito de Atibaia, exercício 2012 · Tribunal de Contas do Estado de São Paulo · processo 1854/026/12 · 26/10/2015",
+      "origem": "modelo",
+      "fonte": "https://transparencia.tce.sp.gov.br/sites/default/files/conjunto-dados/pareceres/pareceres.zip",
+      "tema": "Governo e instituições",
+      "texto_oficial": "Parecer prévio do Tribunal de Contas do Estado de São Paulo sobre as contas do Prefeito de Atibaia — exercício 2012",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "tribunais-contas",
+      "id": "tce-sp-contas-prefeito-atibaia-2010",
+      "titulo": "Tribunal de Contas emite parecer favorável às contas de 2010 do Prefeito; ressalvas não informadas na fonte",
+      "subtitulo": "Parecer prévio — contas do Prefeito de Atibaia, exercício 2010 · Tribunal de Contas do Estado de São Paulo · processo 2793/026/10 · 17/06/2013",
+      "origem": "modelo",
+      "fonte": "https://transparencia.tce.sp.gov.br/sites/default/files/conjunto-dados/pareceres/pareceres.zip",
+      "tema": "Governo e instituições",
+      "texto_oficial": "Parecer prévio do Tribunal de Contas do Estado de São Paulo sobre as contas do Prefeito de Atibaia — exercício 2010",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "tribunais-contas",
+      "id": "tce-sp-contas-prefeito-atibaia-2008",
+      "titulo": "Tribunal de Contas emite parecer favorável às contas de 2008 do Prefeito; ressalvas não informadas na fonte",
+      "subtitulo": "Parecer prévio — contas do Prefeito de Atibaia, exercício 2008 · Tribunal de Contas do Estado de São Paulo · processo 1930/026/08 · 27/02/2012",
+      "origem": "modelo",
+      "fonte": "https://transparencia.tce.sp.gov.br/sites/default/files/conjunto-dados/pareceres/pareceres.zip",
+      "tema": "Governo e instituições",
+      "texto_oficial": "Parecer prévio do Tribunal de Contas do Estado de São Paulo sobre as contas do Prefeito de Atibaia — exercício 2008",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "tribunais-contas",
+      "id": "tce-sp-contas-prefeito-atibaia-2009",
+      "titulo": "Tribunal de Contas emite parecer desfavorável às contas de 2009 do Prefeito; ressalvas não informadas na fonte",
+      "subtitulo": "Parecer prévio — contas do Prefeito de Atibaia, exercício 2009 · Tribunal de Contas do Estado de São Paulo · processo 395/026/09 · 11/01/2013",
+      "origem": "modelo",
+      "fonte": "https://transparencia.tce.sp.gov.br/sites/default/files/conjunto-dados/pareceres/pareceres.zip",
+      "tema": "Governo e instituições",
+      "texto_oficial": "Parecer prévio do Tribunal de Contas do Estado de São Paulo sobre as contas do Prefeito de Atibaia — exercício 2009",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "camara",
+      "id": "2436938-28",
+      "titulo": "Câmara dos Deputados aprova dois acordos com a Eslovênia; textos vão ao Senado",
+      "subtitulo": "Projeto de Decreto Legislativo 293/2024 · Plenário da Câmara dos Deputados · votação simbólica · 18/09/2025",
+      "origem": "agencia-camara",
+      "fonte": "https://www.camara.leg.br/noticias/1201592-camara-dos-deputados-aprova-dois-acordos-com-a-eslovenia-textos-vao-ao-senado",
+      "credito": "Manchete da Agência Câmara de Notícias (órgão de comunicação da Câmara dos Deputados), 18/09/2025",
+      "tema": "Segurança",
+      "texto_oficial": "Aprova o texto do Acordo entre o Governo da República Federativa do Brasil e o Governo da República da Eslovênia sobre Cooperação no Campo de Defesa, assinado no Rio de Janeiro, em 11 de abril de 2023.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "camara",
+      "id": "2503832-46",
+      "titulo": "Câmara aprova projeto que cria a carteira nacional de docente",
+      "subtitulo": "Projeto de Lei 41/2025 · Plenário da Câmara dos Deputados · votação simbólica · 19/08/2025",
+      "origem": "agencia-camara",
+      "fonte": "https://www.camara.leg.br/noticias/1190676-camara-aprova-projeto-que-cria-a-carteira-nacional-de-docente",
+      "credito": "Manchete da Agência Câmara de Notícias (órgão de comunicação da Câmara dos Deputados), 19/08/2025",
+      "tema": "Educação",
+      "texto_oficial": "Autoriza a criação da Carteira Nacional de Docente no Brasil (CNDB).",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "camara",
+      "id": "2579832-149",
+      "titulo": "Lei Raul Jungmann; Marco Legal do Combate ao Crime Organizado no Brasil: Câmara aprova trecho do projeto",
+      "subtitulo": "Projeto de Lei 5582/2025 · Plenário da Câmara dos Deputados · votação simbólica · 24/02/2026",
+      "origem": "apelido-oficial",
+      "fonte": "https://legis.senado.leg.br/norma/42931693",
+      "tema": "Segurança",
+      "texto_oficial": "Altera a Lei nº 12.850, de 2 de agosto de 2013, o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 – Código Penal, o Decreto-Lei nº 3.689, de 3 de outubro de 1941 – Código de Processo Penal, a Lei nº 8.072, de 25 de julho de 1990, a Lei nº 7.960, de 21 de dezembro de 1989, e a Lei nº 7.210, de 11 de julho de 1984, para dispor sobre o combate às organizações criminosas no País.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "camara",
+      "id": "2519886-40",
+      "titulo": "Programa Agora Tem Especialistas - SUS: Câmara mantém trecho da medida provisória",
+      "subtitulo": "Medida Provisória 1301/2025 · Plenário da Câmara dos Deputados · votação simbólica · 24/09/2025",
+      "origem": "apelido-oficial",
+      "fonte": "https://www25.senado.leg.br/web/atividade/materias/-/materia/168901",
+      "tema": "Impostos e preços",
+      "texto_oficial": "Institui o Programa Agora Tem Especialistas, dispõe sobre o Grupo Hospitalar Conceição S.A., altera a Lei nº 8.080, de 19 de setembro de 1990, a Lei nº 8.958, de 20 de dezembro de 1994, a Lei nº 9.656, de 3 de junho de 1998, a Lei nº 12.732, de 22 de novembro de 2012, a Lei nº 12.871, de 22 de outubro de 2013, e a Lei nº 13.958, de 18 de dezembro de 2019.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "camara",
+      "id": "2559194-44",
+      "titulo": "Código de Defesa do Contribuinte: Câmara rejeita emendas ao projeto (8 Sim, 382 Não)",
+      "subtitulo": "Projeto de Lei Complementar 125/2022 · Plenário da Câmara dos Deputados · votação nominal · 09/12/2025",
+      "origem": "apelido-oficial",
+      "fonte": "https://legis.senado.leg.br/norma/41964432",
+      "tema": "Impostos e preços",
+      "texto_oficial": "Institui o Código de Defesa do Contribuinte.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "camara",
+      "id": "2541991-32",
+      "titulo": "Instituição da Licença Ambiental Especial – LAE: Câmara retira trecho da medida provisória",
+      "subtitulo": "Medida Provisória 1308/2025 · Plenário da Câmara dos Deputados · votação simbólica · 02/12/2025",
+      "origem": "apelido-oficial",
+      "fonte": "https://www25.senado.leg.br/web/atividade/materias/-/materia/169777",
+      "tema": "Meio ambiente",
+      "texto_oficial": "Dispõe sobre o licenciamento ambiental especial, visando à consecução eficiente e eficaz de atividades e empreendimentos estratégicos, nos termos que especifica.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "camara",
+      "id": "2516050-7",
+      "titulo": "Câmara aprova urgência para o projeto que institui a indenização de serviço voluntário em folga remunerada",
+      "subtitulo": "Projeto de Lei 3179/2024 · Plenário da Câmara dos Deputados · votação simbólica · 26/05/2025",
+      "origem": "modelo",
+      "fonte": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2453219",
+      "tema": "Trabalho e renda",
+      "texto_oficial": "Institui a indenização de serviço voluntário em folga remunerada, bem como o adicional de serviço em regime de inspeção permanente aos integrantes da carreira de Auditor-Fiscal Federal Agropecuário e aos servidores integrantes do Plano de Carreira dos Cargos de Atividades Técnicas e Auxiliares de Fiscalização Federal Agropecuária (PCTAF) em exercício nos estabelecimentos de produtos de origem animal sob o regime da inspeção permanente, e cria a Taxa de Fiscalização Extraordinária (TFE-MAPA).",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "camara",
+      "id": "2498724-5",
+      "titulo": "Câmara aprova requerimento que requer Moção de Pesar pelo falecimento de Jorge Mario Bergoglio, o Papa Francisco",
+      "subtitulo": "Requerimento 1512/2025 · Plenário da Câmara dos Deputados · votação simbólica · 22/04/2025",
+      "origem": "modelo",
+      "fonte": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2498724",
+      "tema": "Outros",
+      "texto_oficial": "Requer Moção de Pesar pelo falecimento de Jorge Mario Bergoglio, o Papa Francisco.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "camara",
+      "id": "2181415-164",
+      "titulo": "Câmara mantém trecho do projeto que dispõe sobre a utilização da palavra \"leite\" nas embalagens e rótulos de alimentos",
+      "subtitulo": "Projeto de Lei 10556/2018 · Plenário da Câmara dos Deputados · votação simbólica · 02/03/2026",
+      "origem": "modelo",
+      "fonte": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2181415",
+      "tema": "Economia e empresas",
+      "texto_oficial": "Dispõe sobre a utilização da palavra \"leite\" nas embalagens e rótulos de alimentos.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "camara",
+      "id": "2318217-86",
+      "titulo": "Câmara mantém trecho do projeto que institui o Sistema Nacional de Educação (311 Sim, 35 Não)",
+      "subtitulo": "Projeto de Lei Complementar 235/2019 · Plenário da Câmara dos Deputados · votação nominal · 03/09/2025",
+      "origem": "modelo",
+      "fonte": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2318217",
+      "tema": "Educação",
+      "texto_oficial": "Institui o Sistema Nacional de Educação, nos termos do art. 23, parágrafo único, do art. 211 e do art. 214 da Constituição Federal.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "camara",
+      "id": "2254065-140",
+      "titulo": "Câmara muda regime de tramitação do projeto que altera lei para dispor sobre o Turismo Colaborativo",
+      "subtitulo": "Projeto de Lei 2994/2020 · Plenário da Câmara dos Deputados · votação simbólica · 16/06/2026",
+      "origem": "modelo",
+      "fonte": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2254065",
+      "tema": "Trabalho e renda",
+      "texto_oficial": "Altera a Lei nº 11.771, de 17 de setembro de 2008, para dispor sobre o Turismo Colaborativo.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "camara",
+      "id": "2485142-36",
+      "titulo": "Câmara muda regime de tramitação do projeto que institui o “Selo Compromisso com a Primeiríssima Infância”",
+      "subtitulo": "Projeto de Lei 625/2025 · Plenário da Câmara dos Deputados · votação simbólica · 09/10/2025",
+      "origem": "modelo",
+      "fonte": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2485142",
+      "tema": "Educação",
+      "texto_oficial": "Institui o “Selo Compromisso com a Primeiríssima Infância”.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "camara",
+      "id": "2419128-88",
+      "titulo": "Câmara rejeita requerimento sobre o projeto que institui a Política Nacional “Mais Cultura nas Escolas”",
+      "subtitulo": "Projeto de Lei 533/2024 · Plenário da Câmara dos Deputados · votação simbólica · 22/04/2026",
+      "origem": "modelo",
+      "fonte": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2419128",
+      "tema": "Educação",
+      "texto_oficial": "Institui a Política Nacional “Mais Cultura nas Escolas” e dá outras providências.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "camara",
+      "id": "2519695-29",
+      "titulo": "Câmara rejeita requerimento sobre o projeto que altera lei para aprimorar a destinação de recursos do Fundo",
+      "subtitulo": "Projeto de Lei 847/2025 · Plenário da Câmara dos Deputados · votação simbólica · 14/07/2025",
+      "origem": "modelo",
+      "fonte": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2519695",
+      "tema": "Economia e empresas",
+      "texto_oficial": "Altera a Lei nº 11.540, de 12 de novembro de 2007, que dispõe sobre o Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), para aprimorar a destinação de recursos do Fundo.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "camara",
+      "id": "2168236-67",
+      "titulo": "Câmara retira trecho do projeto que dispõe sobre a proteção à imagem de vítima de crime ou acidente",
+      "subtitulo": "Projeto de Lei 1242/2026 · Plenário da Câmara dos Deputados · votação simbólica · 10/03/2026",
+      "origem": "modelo",
+      "fonte": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2168236",
+      "tema": "Direitos e cidadania",
+      "texto_oficial": "Dispõe sobre a proteção à imagem de vítima de crime ou acidente.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    },
+    {
+      "secao": "camara",
+      "id": "545304-138",
+      "titulo": "Câmara retira trecho do projeto que institui a Política Nacional de Estímulo à Produção e ao Consumo Sustentáveis",
+      "subtitulo": "Projeto de Lei 3899/2012 · Plenário da Câmara dos Deputados · votação simbólica · 29/10/2025",
+      "origem": "modelo",
+      "fonte": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=545304",
+      "tema": "Impostos e preços",
+      "texto_oficial": "Institui a Política Nacional de Estímulo à Produção e ao Consumo Sustentáveis.",
+      "autoria_na_fonte": null,
+      "revisao": {
+        "esquerda": null,
+        "centro": null,
+        "direita": null
+      }
+    }
+  ]
+}

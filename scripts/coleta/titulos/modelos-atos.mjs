@@ -1,6 +1,6 @@
 // Modelos de título para atos: medidas provisórias, vetos, leis e decretos (federais, de SP e de
 // Atibaia), decisões de ICMS e pareceres de contas. Mesmo molde para qualquer governo.
-import { limpar, trechoDaEmenta, cortarEmOracao, semFormulaFinal } from './texto.mjs';
+import { limpar, trechoDaEmenta, trechoCredito, cortarEmOracao, semFormulaFinal } from './texto.mjs';
 import { LIMITE_DURO } from './regras.mjs';
 import { dataBR } from './lib.mjs';
 
@@ -14,6 +14,9 @@ export function modeloMp(mp, extra = {}) {
     const t = `${base}: ${tirarPonto(mp.apelido_senado)}`;
     if (t.length <= LIMITE_DURO) return { titulo: t, origem: 'apelido-oficial', fonte: mp.links?.senado || mp.fontes?.[0]?.url };
   }
+  // crédito do Executivo: "abre" + valor oficial, antes de qualquer manchete (revisão de viés)
+  const cr = trechoCredito(mp.ementa, LIMITE_DURO - 'Medida provisória '.length);
+  if (cr) return { titulo: `Medida provisória ${cr}`, origem: 'modelo', fonte: mp.links?.planalto || mp.fontes?.[0]?.url };
   if (extra.manchete) return extra.manchete;
   const tr = trechoDaEmenta(mp.ementa, LIMITE_DURO - base.length - 5);
   if (!tr) return { erro: 'ementa sem verbo inicial ou longa demais para corte em fronteira de oração' };
@@ -82,6 +85,8 @@ export function modeloNorma(n, esfera, extra = {}) {
     const t = `${sujeito} ${/^Decreto/.test(sujeito) ? 'publicado' : 'publicada'}: ${tirarPonto(n.apelido)}`;
     if (t.length <= LIMITE_DURO) return { titulo: t, origem: 'apelido-oficial', fonte: n.fonteApelido || n.fonte };
   }
+  const cr = trechoCredito(n.ementa, LIMITE_DURO - sujeito.length - 1);
+  if (cr) return { titulo: `${sujeito} ${cr}`, origem: 'modelo', fonte: n.fonte };
   if (extra.manchete) return extra.manchete;
   const tr = trechoDaEmenta(n.ementa, LIMITE_DURO - sujeito.length - 1);
   if (!tr) return { erro: 'ementa sem verbo inicial ou longa demais para corte em fronteira de oração' };
@@ -97,6 +102,9 @@ export function modeloIcms(d) {
   const ms = (d.mudancas || []).filter((m) => m.antes && m.depois);
   if (ms.length !== 1 || (d.mudancas || []).length !== 1) return { erro: 'decisão sem uma única mudança com valor antes e depois' };
   const m = ms[0];
+  // números da exposição de motivos ou da justificativa do autor não entram como fato (revisão de viés)
+  const doc = (d.fontes || []).find((f) => f.url === m.fonte);
+  if (doc && /exposi[çc][ãa]o de motivos|justificativa|mensagem/iu.test(doc.titulo || '')) return { erro: 'valores da mudança vêm de documento do autor, não do texto da norma' };
   const u = UNIDADE(m.unidade);
   const quando = m.vigencia ? ` a partir de ${dataBR(m.vigencia)}` : '';
   let titulo;
@@ -115,14 +123,15 @@ export function modeloContasTce(c, contas) {
   const p = c.parecer || {};
   const concl = String(p.conclusao || '').toLocaleLowerCase('pt-BR');
   if (!['favorável', 'desfavorável'].includes(concl)) return { erro: 'conclusão do parecer não informada na fonte' };
-  const ress = p.com_ressalvas === true ? ', com ressalvas,' : '';
-  const titulo = `Tribunal de Contas do Estado emite parecer ${concl}${ress} às contas de ${p.exercicio} do ${contas}`;
+  // mesmo molde para governador e prefeito; lacuna da fonte sobre ressalvas é dita, não omitida
+  const ress = p.com_ressalvas === true ? ', com ressalvas' : p.com_ressalvas === false ? ', sem ressalvas' : '; ressalvas não informadas na fonte';
+  const titulo = `Tribunal de Contas emite parecer ${concl} às contas de ${p.exercicio} do ${contas}${ress}`;
   if (titulo.length > LIMITE_DURO) return { erro: 'título do modelo longo demais' };
   return { titulo, origem: 'modelo', fonte: p.documento?.url || c.fontes?.[0]?.url || c.processo?.url };
 }
 export function modeloContasTcu(ex) {
   const lit = limpar(ex.conclusao_parecer || '');
-  const m = /(estão em condições de\b[^.]*)/iu.exec(lit);
+  const m = /estão (em condições de\b[^.]*)/iu.exec(lit);
   if (!m) return { erro: 'conclusão do parecer não informada na fonte' };
   const trecho = tirarPonto(m[1]);
   const titulo = `TCU emite parecer: contas de ${ex.exercicio} do Presidente "${trecho}"`;

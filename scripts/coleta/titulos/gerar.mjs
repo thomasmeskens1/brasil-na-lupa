@@ -9,12 +9,14 @@
 //        [--max-paginas-senado 150]
 import path from 'node:path';
 import fs from 'node:fs';
-import { SAIDA, CACHE, lerJson, gravarSeMudou, hojeISO, dataBR, estatisticas, contagemGravacao } from './lib.mjs';
+import { SAIDA, CACHE, lerJson, gravarSeMudou, hojeISO, dataBR, diasEntre, estatisticas, contagemGravacao } from './lib.mjs';
 import { SECOES, carregarSecao } from './itens.mjs';
 import { verificarTitulo, verificacaoOficial } from './regras.mjs';
 import { classificar, tabelaPublica } from './temas.mjs';
 import { camaraProposicao, camaraIdPorIdentificacao, noticiasAgenciaCamara, senadoProcesso, noticiasAgenciaSenado } from './fontes.mjs';
 import { mancheteVotacao, mancheteMp, mancheteNorma } from './manchetes.mjs';
+import { sufixoResultado } from './modelos-votacoes.mjs';
+import { carregarVetos } from './conteudo.mjs';
 import { escolherAmostra } from './amostra.mjs';
 import { verificarTudo, contextoVerificacao } from './verificar.mjs';
 
@@ -97,42 +99,107 @@ function rotulosExternos(it, fx) {
   return r;
 }
 
-function candidatos(it, fx, mpsPorCamara, mpsPorSenado, anterior) {
+const ETAPAS_VOTO = new Set(['principal', 'texto', 'redacao']);
+/** Etapa seguinte informada pela tramitação oficial, só na última votação aprovada do texto daquela proposição. */
+function etapaDe(it, fx, ultimas) {
+  if (it.tipo !== 'votacao' || !it.perfil || it.perfil.verbo !== 'aprova' || !ETAPAS_VOTO.has(it.perfil.tipo) || it.perfil.turno === '1º') return null;
+  const chaveProp = it.consultas.camaraId || it.consultas.senadoProcesso;
+  if (!chaveProp || ultimas.get(String(chaveProp)) !== it.id) return null;
+  if (it.secao === 'camara') {
+    const sit = fx.cam.get(String(it.consultas.camaraId))?.situacao || '';
+    if (/^Aguardando (Apreciação pelo|Envio ao) Senado Federal/.test(sit)) return 'segue para o Senado';
+    if (/^Aguardando Sanção/.test(sit)) return 'vai à sanção';
+    return null;
+  }
+  if (it.secao === 'senado') {
+    for (const s of fx.sen.get(String(it.consultas.senadoProcesso))?.situacoes || []) {
+      if (!s.inicio) continue;
+      const d = diasEntre(it.perfil.data, s.inicio);
+      if (d < 0 || d > 30) continue;
+      if (/^REMETIDA À CÂMARA/.test(s.descricao)) return 'segue para a Câmara';
+      if (/^REMETIDA À SANÇÃO/.test(s.descricao)) return 'vai à sanção';
+      if (/^REMETIDA À PROMULGAÇÃO/.test(s.descricao)) return 'vai à promulgação';
+    }
+  }
+  return null;
+}
+function ultimasVotacoes(itens) {
+  const m = new Map();
+  for (const it of [...itens].sort((a, b) => String(a.data || '').localeCompare(String(b.data || '')) || String(a.raw?.hora || '').localeCompare(String(b.raw?.hora || '')))) {
+    if (it.tipo !== 'votacao' || !it.perfil?.plenario || it.raw?.resultado !== 'aprovada' || !ETAPAS_VOTO.has(it.perfil?.tipo)) continue;
+    const k = it.consultas.camaraId || it.consultas.senadoProcesso;
+    if (k) m.set(String(k), it.id);
+  }
+  return m;
+}
+
+/** Manchete: termos de conteúdo, alertas e escopo conferidos com o texto oficial; votação ganha etapa e placar. */
+function prepararManchete(it, man, origem, extra) {
+  const c = { titulo: man.titulo, origem, fonte: man.noticia.url, fonte_data: man.noticia.data };
+  if (it.tipo === 'votacao') {
+    const res = sufixoResultado(it.raw);
+    if (res === null) return { erro: 'placar oficial diverge do resultado sem quórum que o explique', origem };
+    const temEtapa = /\b(segue|seguem|vai|vão|volta) (para|à|ao)\b/iu.test(man.titulo);
+    c.titulo = `${man.titulo}${extra.etapa && !temEtapa ? `; ${extra.etapa}` : ''}${res}`;
+  }
+  return c;
+}
+
+function candidatos(it, fx, mpsPorCamara, mpsPorSenado, anterior, apelidos, ultimas) {
   const lista = [];
   const extra = {};
   const s = fx.sen.get(String(it.consultas.senadoProcesso));
+  const etapa = etapaDe(it, fx, ultimas);
+  if (etapa) extra.etapa = etapa;
+  // consistência entre seções: a mesma proposição usa o mesmo apelido oficial (MP, lei gerada ou processo do Senado)
+  const comum = it.chave ? apelidos.get(it.chave) : null;
   if (it.tipo === 'votacao') {
     const mp = mpsPorCamara.get(String(it.consultas.mpCamara)) || mpsPorSenado.get(String(it.consultas.mpSenado));
     if (mp?.apelido_senado) { extra.apelido = mp.apelido_senado; extra.fonteApelido = mp.links?.senado; }
+    else if (comum) { extra.apelido = comum.apelido; extra.fonteApelido = comum.fonte; }
     else if (s?.apelido) { extra.apelido = s.apelido; extra.fonteApelido = s.url; }
     else if (s?.explicacao) { extra.explicacao = s.explicacao; extra.fonteApelido = s.url; }
     if (extra.apelido || extra.explicacao) { const a = it.construir(it.raw, extra); lista.push({ ...a, origem: a.origem || (extra.apelido ? 'apelido-oficial' : 'explicacao-oficial'), _extra: extra }); }
   } else if (it.tipo === 'mp' || it.tipo === 'norma') {
     const m = it.construir(it.raw, {});
     if (m.origem === 'apelido-oficial') lista.push({ ...m, _extra: {} });
+    // crédito/programa do Executivo: o modelo "abre crédito … de R$ …" vem antes de qualquer manchete
+    if (m.origem === 'modelo' && / abre crédito /.test(m.titulo || '')) lista.push({ ...m, _extra: {} });
   }
-  // manchetes
-  const camN = fx.camNot.get(String(it.consultas.camaraId))?.noticias || [];
-  const mat = it.consultas.senadoMateria || s?.codigoMateria;
-  const senR = mat ? fx.senNot.get(String(mat)) : undefined;
-  const senN = senR?.noticias || [];
-  const escolher = (ns) => it.tipo === 'votacao' ? mancheteVotacao(it.perfil, it.secao, ns)
-    : it.tipo === 'mp' ? mancheteMp(it.perfil.data, ns) : it.tipo === 'norma' ? mancheteNorma(it.perfil.data, ns) : null;
-  const agencias = [];
-  const mc = it.secao !== 'senado' ? escolher(camN) : null;
-  if (mc) agencias.push({ titulo: mc.titulo, origem: 'agencia-camara', fonte: mc.noticia.url, fonte_data: mc.noticia.data });
-  const ms = it.secao !== 'camara' ? escolher(senN) : null;
-  if (ms) agencias.push({ titulo: ms.titulo, origem: 'agencia-senado', fonte: ms.noticia.url, fonte_data: ms.noticia.data });
-  agencias.sort((a, b) => b.fonte_data.localeCompare(a.fonte_data)); // a mais recente primeiro
-  lista.push(...agencias);
-  // memória: manchete escolhida numa execução anterior, quando a página da agência não foi consultada agora
-  if (!agencias.length && senR === null && anterior && /^agencia-/.test(anterior.origem)) {
-    lista.push({ titulo: anterior.titulo, origem: anterior.origem, fonte: anterior.fonte, fonte_data: anterior.fonte_data });
+  const modelo = it.construir(it.raw, extra.etapa ? { etapa: extra.etapa } : {});
+  // manchetes (nunca quando já existe apelido oficial para a proposição: mesma base em todas as seções)
+  if (!extra.apelido && !comum && !(it.tipo !== 'votacao' && / abre crédito /.test(modelo.titulo || ''))) {
+    const camN = fx.camNot.get(String(it.consultas.camaraId))?.noticias || [];
+    const mat = it.consultas.senadoMateria || s?.codigoMateria;
+    const senR = mat ? fx.senNot.get(String(mat)) : undefined;
+    const senN = senR?.noticias || [];
+    const escolher = (ns) => it.tipo === 'votacao' ? mancheteVotacao(it.perfil, it.secao, ns)
+      : it.tipo === 'mp' ? mancheteMp(it.perfil.data, ns) : it.tipo === 'norma' ? mancheteNorma(it.perfil.data, ns) : null;
+    const agencias = [];
+    const mc = it.secao !== 'senado' ? escolher(camN) : null;
+    if (mc) agencias.push(prepararManchete(it, mc, 'agencia-camara', extra));
+    const ms = it.secao !== 'camara' ? escolher(senN) : null;
+    if (ms) agencias.push(prepararManchete(it, ms, 'agencia-senado', extra));
+    agencias.sort((a, b) => String(b.fonte_data || '').localeCompare(String(a.fonte_data || ''))); // a mais recente primeiro
+    lista.push(...agencias);
+    // memória: manchete escolhida numa execução anterior, quando a página da agência não foi consultada agora
+    if (!agencias.length && senR === null && anterior && /^agencia-/.test(anterior.origem)) {
+      lista.push({ titulo: anterior.titulo, origem: anterior.origem, fonte: anterior.fonte, fonte_data: anterior.fonte_data });
+    }
   }
-  const modelo = it.construir(it.raw, {});
-  if (modelo.titulo && modelo.origem === 'modelo') lista.push({ ...modelo, _extra: {} });
+  if (modelo.titulo && modelo.origem === 'modelo') lista.push({ ...modelo, _extra: extra.etapa ? { etapa: extra.etapa } : {} });
   else if (modelo.erro) lista.push({ erro: modelo.erro, origem: 'modelo' });
   return lista;
+}
+
+/** Apelidos oficiais por proposição ("PLP 125/2022"), vindos das MPs e das leis geradas. */
+function indiceApelidos() {
+  const m = new Map();
+  for (const it of carregarSecao('executivo')) {
+    if (it.tipo === 'mp' && it.raw.apelido_senado && it.chave) m.set(it.chave, { apelido: it.raw.apelido_senado, fonte: it.raw.links?.senado });
+    if (it.tipo === 'norma' && it.raw.apelido_senado && it.chave) m.set(it.chave, { apelido: it.raw.apelido_senado, fonte: it.raw.links?.senado_norma });
+  }
+  return m;
 }
 
 async function main() {
@@ -143,6 +210,9 @@ async function main() {
   const mps = carregarSecao('executivo').filter((i) => i.tipo === 'mp').map((i) => i.raw);
   const mpsPorCamara = new Map(mps.filter((m) => m.ids_oficiais?.camara_proposicao).map((m) => [String(m.ids_oficiais.camara_proposicao), m]));
   const mpsPorSenado = new Map(mps.filter((m) => m.ids_oficiais?.senado_processo).map((m) => [String(m.ids_oficiais.senado_processo), m]));
+  const apelidos = indiceApelidos();
+  const vetos = carregarVetos();
+  relatorio.vetos_aplicados = 0;
 
   for (const secao of secoes) {
     const t1 = Date.now();
@@ -153,16 +223,19 @@ async function main() {
     const anteriores = lerJson(arq)?.itens || {};
     const saida = {};
     const cobertura = {};
+    const ultimas = ultimasVotacoes(itens);
     for (const it of itens) {
       let escolhido = null;
-      for (const c of candidatos(it, fx, mpsPorCamara, mpsPorSenado, anteriores[it.id])) {
+      for (const c of candidatos(it, fx, mpsPorCamara, mpsPorSenado, anteriores[it.id], apelidos, ultimas)) {
         if (c.erro) { relatorio.reprovacoes.push({ secao, id: it.id, origem: c.origem, motivos: [c.erro], tipo: 'sem-modelo' }); continue; }
         const v = verificarTitulo(c.titulo, c.origem, contextoVerificacao(it, c));
         if (v.aprovado) { escolhido = { ...c, verificacao: v.verificacao }; break; }
         relatorio.reprovacoes.push({ secao, id: it.id, origem: c.origem, titulo: c.titulo, motivos: v.motivos, tipo: 'verificador' });
       }
-      if (!escolhido) {
-        escolhido = { titulo: it.oficial.titulo, origem: 'oficial', fonte: it.oficial.fonte, verificacao: verificacaoOficial() };
+      const vetado = vetos.get(`${secao}|${it.id}`);
+      if (vetado) { relatorio.vetos_aplicados++; relatorio.reprovacoes.push({ secao, id: it.id, origem: escolhido?.origem, titulo: escolhido?.titulo, motivos: [`vetado pelos analistas: ${vetado.join(', ')}`], tipo: 'veto' }); }
+      if (!escolhido || vetado) {
+        escolhido = { titulo: it.oficial.titulo, origem: 'oficial', fonte: it.oficial.fonte, verificacao: { ...verificacaoOficial(), veto_vies: vetado || null } };
       }
       const { tema } = classificar([...it.rotulos, ...rotulosExternos(it, fx)]);
       const reg = {
@@ -182,7 +255,13 @@ async function main() {
 
   gravarSeMudou(path.join(SAIDA, 'temas.json'), { atualizado_em: hojeISO(), ...tabelaPublica() });
   if (secoes.length === SECOES.length) {
-    gravarSeMudou(path.join(SAIDA, 'amostra-revisao.json'), { atualizado_em: hojeISO(), ...escolherAmostra(todos) });
+    // amostras são fixadas depois de criadas (a 1ª já foi revisada pelos analistas); a 2ª exclui os itens da 1ª
+    const a1 = path.join(SAIDA, 'amostra-revisao.json'), a2 = path.join(SAIDA, 'amostra-revisao-2.json');
+    if (!fs.existsSync(a1)) gravarSeMudou(a1, { atualizado_em: hojeISO(), ...escolherAmostra(todos) });
+    if (!fs.existsSync(a2)) {
+      const excluir = new Set((lerJson(a1)?.itens || []).map((i) => `${i.secao}|${i.id}`));
+      gravarSeMudou(a2, { atualizado_em: hojeISO(), ...escolherAmostra(todos, { excluir, rodada: 2 }) });
+    }
   }
   const ver = verificarTudo({ secoes, corrigir: true, silencioso: true });
   relatorio.verificacao_final = ver.resumo;

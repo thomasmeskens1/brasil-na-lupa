@@ -22,6 +22,8 @@ export async function camaraProposicao(id, opts) {
   return {
     keywords: det?.corpo?.dados?.keywords || null,
     temas: (tem?.corpo?.dados || []).map((t) => t.tema).filter(Boolean),
+    situacao: det?.corpo?.dados?.statusProposicao?.descricaoSituacao || null,
+    situacao_data: det?.corpo?.dados?.statusProposicao?.dataHora || null,
     url: `${API_CAMARA}/proposicoes/${id}`,
   };
 }
@@ -62,6 +64,8 @@ export async function senadoProcesso(idProcesso, opts) {
     explicacao: p.conteudo?.explicacaoEmenta ? decodificar(p.conteudo.explicacaoEmenta) : null,
     classificacoes: (p.classificacoes || []).map((c) => c.descricaoHierarquia || c.descricao).filter(Boolean),
     ementa: p.conteudo?.ementa || null,
+    // situações da tramitação com data (ex.: "REMETIDA À CÂMARA DOS DEPUTADOS"), para a etapa seguinte
+    situacoes: (p.autuacoes || []).flatMap((a) => a.situacoes || []).map((x) => ({ descricao: x.descricao, inicio: x.inicio })),
   };
 }
 

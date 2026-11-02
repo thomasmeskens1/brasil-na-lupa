@@ -5,7 +5,7 @@ import path from 'node:path';
 import { DADOS, jsonsDe, lerJson, dataBR } from './lib.mjs';
 import { universoNumerico, limpar } from './texto.mjs';
 import { tipoDoAto } from './temas.mjs';
-import { modeloVotacao, subtituloVotacao, oficialVotacao, perfilParaManchete, tipoDaVotacao } from './modelos-votacoes.mjs';
+import { modeloVotacao, subtituloVotacao, oficialVotacao, perfilParaManchete, tipoDaVotacao, quorumAplicavel } from './modelos-votacoes.mjs';
 import { modeloMp, subtituloMp, modeloVeto, subtituloVeto, modeloNorma, modeloIcms, modeloContasTce, modeloContasTcu, contagemVeto } from './modelos-atos.mjs';
 import { modeloTemaStj, modeloTemaStf, modeloSumulaVinculante, modeloJulgamentoStf } from './modelos-justica.mjs';
 
@@ -59,6 +59,16 @@ export function perturbar(raw) {
   return visitar(raw);
 }
 
+/** Identificação comum da proposição ("PLP 125/2022"), para ligar votações, MPs e normas (consistência). */
+export function chaveDe(sigla, numero, ano) {
+  return sigla && numero && ano ? `${sigla} ${Number(String(numero).replace(/\./g, ''))}/${ano}` : null;
+}
+function comQuorum(u, v) {
+  const q = quorumAplicavel(v);
+  if (q && v.resultado === 'rejeitada' && v.placar?.sim > v.placar?.nao) u.add(String(q));
+  return u;
+}
+
 function item(base) {
   return { nomes: nomesDoItem(base.raw), rotulos: [], consultas: {}, nominal: false, perfil: null, ...base };
 }
@@ -71,7 +81,9 @@ function votacoes(casa, dir, filtro, extraConsultas) {
       secao: casa, id: String(v.id), tipo: 'votacao', raw: v,
       construir: (r, extra) => modeloVotacao(r, extra),
       oficial: oficialVotacao(v), subtitulo: subtituloVotacao(v),
-      universo: universoNumerico(sem(v, PESADOS_VOTO)),
+      universo: comQuorum(universoNumerico(sem(v, PESADOS_VOTO)), v),
+      textos: [v.proposicao?.ementa, v.descricao, v.materia_votada].filter(Boolean),
+      chave: chaveDe(v.proposicao?.sigla, v.proposicao?.numero, v.proposicao?.ano),
       nominal: v.tipo === 'nominal', perfil: { ...perfilParaManchete(v), textoPrincipal: Boolean(k.textoPrincipal) },
       consultas: extraConsultas(v),
       rotulos: casa === 'alesp' ? [{ fonte: 'tipo', valor: tipoDoAto(v.proposicao?.ementa) || 'outro' }] : [],
@@ -128,6 +140,8 @@ function normaItem(secao, bruto, esfera, n, nomeOficial, ocultar = []) {
     universo: universoNumerico(sem(raw, ['fonte', 'edicao', 'publicacao_dou', 'links', 'ids_oficiais'])),
     rotulos: [{ fonte: 'tipo', valor: tipoDoAto(n.ementa) || 'outro' }],
     consultas: esfera === 'federal' && raw.projeto_origem?.[0] ? normaConsultas(raw.projeto_origem[0]) : {},
+    textos: [n.ementa, n2.apelido].filter(Boolean),
+    chave: esfera === 'federal' && raw.projeto_origem?.[0]?.identificacao ? chaveDe(...raw.projeto_origem[0].identificacao.split(/[\s/]/)) : null,
     perfil: { norma: true, data: n.data },
     data: n.data,
   });
@@ -149,6 +163,7 @@ function executivo() {
       oficial: { titulo: limpar(mp.ementa), fonte: mp.links?.planalto || mp.fontes?.[0]?.url }, subtitulo: subtituloMp(mp),
       universo: universoNumerico(sem(mp, ['exposicao_motivos', 'justificativa', 'votacoes', 'fontes', 'prazos', 'links', 'ids_oficiais'])),
       consultas: { senadoProcesso: mp.ids_oficiais?.senado_processo, senadoMateria: mp.ids_oficiais?.senado_materia, camaraId: mp.ids_oficiais?.camara_proposicao, mpCongresso: true },
+      textos: [mp.ementa, mp.apelido_senado].filter(Boolean), chave: chaveDe('MPV', mp.numero, mp.ano),
       perfil: { mp: true, data: mp.datas?.edicao }, data: mp.datas?.edicao,
     }));
   }
@@ -218,7 +233,7 @@ function contas() {
     out.push(contaItem(c, 'Governador do Estado de São Paulo', 'Governador'));
   }
   for (const c of lerJson(P('tribunais-contas/tce-sp/contas-prefeitos/atibaia.json'))?.itens || []) {
-    out.push(contaItem(c, 'Prefeito de Atibaia', 'Prefeito de Atibaia'));
+    out.push(contaItem(c, 'Prefeito de Atibaia', 'Prefeito'));
   }
   const tcu = lerJson(P('tribunais-contas/tcu/contas-do-presidente.json'));
   for (const ex of tcu?.exercicios || []) {

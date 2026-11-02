@@ -2,6 +2,7 @@
 // encurtamento permitido é o corte em fronteira de oração, sem descartar ressalvas e exceções.
 import { limpar, cortarEmOracao, SUBORDINADA_INICIAL } from './texto.mjs';
 import { LIMITE_DURO } from './regras.mjs';
+import { siglasSemExtenso } from './conteudo.mjs';
 
 const tirarPonto = (s) => limpar(s).replace(/[.;]\s*$/, '');
 
@@ -14,9 +15,12 @@ function literal(texto, max) {
   return cortarEmOracao(t, max, { estrito: true, minimo: 25 });
 }
 
+// Artefatos de numeração de tópicos ("… do MCI 1", "1. Reconhecimento…") saem; sigla sem extenso reprova.
+const semNumeracao = (s) => s && limpar(s).replace(/^(\d+|[IVX]+)[.)–-]\s+/u, '').replace(/\s+(\d+|[IVX]+)[.)]?$/u, '').trim();
 function comPrefixo(prefixo, texto) {
-  const corpo = literal(texto, LIMITE_DURO - prefixo.length);
-  return corpo ? `${prefixo}${corpo}` : null;
+  const corpo = semNumeracao(literal(semNumeracao(texto), LIMITE_DURO - prefixo.length));
+  if (!corpo || siglasSemExtenso(corpo).length) return null;
+  return `${prefixo}${corpo}`;
 }
 
 export function modeloTemaStj(t) {
@@ -70,5 +74,8 @@ export function modeloJulgamentoStf(j) {
   const resto = tirarPonto(cert.replace(m[1], '').replace(/^[,\s]+/, ''));
   const corpo = resto.length <= LIMITE_DURO - 5 ? resto : cortarEmOracao(resto, LIMITE_DURO - 5, { minimo: 25 });
   if (!corpo) return { erro: 'certidão longa demais para corte em fronteira de oração' };
+  // "julgou procedente o pedido" sozinho esconde o conteúdo: exige o que foi declarado/decidido
+  if (!/(inconstitucional|constitucional|interpreta|tese|declar|suspen|modula)/iu.test(corpo)) return { erro: 'parte dispositiva sem o conteúdo da decisão' };
+  if (siglasSemExtenso(corpo).length) return { erro: 'sigla sem nome por extenso' };
   return { titulo: `STF ${corpo}`.replace(/^STF por /, 'STF, por '), origem: 'modelo', fonte };
 }

@@ -1,5 +1,6 @@
 // Regras do verificador de títulos (lista versionada no repositório).
 import { numerosDe } from './texto.mjs';
+import { termosAusentes, alertasNaoLiterais, escopoPerdido, siglasSemExtenso } from './conteudo.mjs';
 
 /** Verbos de decisão (lista fechada) — usados pelos modelos e aceitos nas manchetes. */
 export const VERBOS_DECISAO = [
@@ -101,6 +102,22 @@ export function verificarTitulo(titulo, origem, ctx) {
     if (/\p{Lu}{3,}\s+(D[EAO]S?\s+)?\p{Lu}{3,}/u.test(t.replace(/\b(ICMS|CONFAZ|ALESP|CADÚNICO|COFINS)\b/g, ''))) motivos.push('possível nome em caixa alta');
   }
   if (/[_`{}<>]|\bnull\b|\bundefined\b/.test(t)) motivos.push('identificador técnico no título');
+
+  // 5b. manchetes (revisão de viés): todo termo de conteúdo existe no texto oficial; sem comparativo ou
+  // promessa de efeito que não seja literal; sem ampliar/estreitar o escopo da ementa
+  if (/^agencia-/.test(origem) && ctx.textos) {
+    const base = t.replace(/(; (segue para|vai à)[^()]*)?( \(\d[^()]*\))?$/u, '');
+    const ausentes = termosAusentes(base, ctx.textos);
+    if (ausentes.length) motivos.push(`termo ausente do texto oficial: ${ausentes.join(', ')}`);
+    const alertas = alertasNaoLiterais(base, ctx.textos);
+    if (alertas.length) motivos.push(`comparativo ou promessa de efeito não literal: ${alertas.join(', ')}`);
+    const escopo = ctx.ementa ? escopoPerdido(base, ctx.ementa) : [];
+    if (escopo.length) motivos.push(`escopo da ementa perdido: ${escopo.join(', ')}`);
+  }
+  // 5d. placar oficial em toda votação nominal
+  if (origem !== 'oficial' && ctx.placarObrigatorio && !/\(\d[\d.]* Sim, \d[\d.]* Não/.test(t)) motivos.push('votação nominal sem placar');
+  // 5c. siglas sem nome por extenso em teses e decisões judiciais
+  if (ctx.exigirSiglaExtensa && siglasSemExtenso(t).length) motivos.push(`sigla sem nome por extenso: ${siglasSemExtenso(t).join(', ')}`);
 
   // 6. simetria: mesmo modelo, com partido/autor/governo trocados, dá a mesma frase
   let veto = null;

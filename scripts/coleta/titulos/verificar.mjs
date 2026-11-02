@@ -13,6 +13,8 @@ import { SECOES, carregarSecao, nomesGlobais, perturbar } from './itens.mjs';
 import { verificarTitulo, verificacaoOficial } from './regras.mjs';
 import { VERBOS_EMENTA } from './texto.mjs';
 import { TEMAS } from './temas.mjs';
+import { carregarVetos } from './conteudo.mjs';
+import { sufixoPlacar } from './modelos-votacoes.mjs';
 
 const ORIGENS = new Set(['apelido-oficial', 'explicacao-oficial', 'agencia-camara', 'agencia-senado', 'modelo', 'oficial']);
 
@@ -21,6 +23,10 @@ export function contextoVerificacao(it, c) {
   const ctx = {
     universo: it.universo, nominal: it.nominal, nomes: [...it.nomes, ...nomesGlobais()],
     verbosExtras: ['mp', 'norma'].includes(it.tipo) || /^agencia-/.test(c.origem) ? VERBOS_EMENTA : [],
+    textos: [...(it.textos || []), ...(c._extra?.apelido ? [c._extra.apelido] : [])],
+    ementa: it.textos?.[0] || '',
+    placarObrigatorio: it.tipo === 'votacao' && sufixoPlacar(it.raw) !== '',
+    exigirSiglaExtensa: ['tese', 'julgamento'].includes(it.tipo),
   };
   if (c._extra && ['modelo', 'apelido-oficial', 'explicacao-oficial'].includes(c.origem)) {
     const p = it.construir(perturbar(it.raw), c._extra);
@@ -32,6 +38,7 @@ export function contextoVerificacao(it, c) {
 export function verificarTudo({ secoes = SECOES, corrigir = false, silencioso = false } = {}) {
   const resumo = { verificados: 0, reprovados: 0, corrigidos: 0, sem_dado_de_origem: 0 };
   const reprovados = [];
+  const vetos = carregarVetos();
   for (const secao of secoes) {
     const arq = path.join(SAIDA, `${secao}.json`);
     const doc = lerJson(arq);
@@ -48,8 +55,12 @@ export function verificarTudo({ secoes = SECOES, corrigir = false, silencioso = 
       if (!t.fonte) motivos.push('sem fonte');
       if (t.origem === 'oficial' && t.titulo !== it.oficial.titulo) motivos.push('título "oficial" diferente do texto oficial');
       if (/^agencia-/.test(t.origem) && !t.fonte_data) motivos.push('manchete sem data da notícia');
+      const vetado = vetos.get(`${secao}|${id}`);
+      if (vetado && t.origem !== 'oficial') motivos.push(`vetado pelos analistas: ${vetado.join(', ')}`);
+      if (vetado && t.origem === 'oficial' && !Array.isArray(t.verificacao?.veto_vies)) motivos.push('veto dos analistas não registrado em verificacao.veto_vies');
       // para a simetria, só os modelos que dependem apenas de dados/ podem ser refeitos sem rede
-      const c = { titulo: t.titulo, origem: t.origem, ...(t.origem === 'modelo' || (t.origem === 'apelido-oficial' && ['mp', 'norma'].includes(it.tipo)) ? { _extra: {} } : {}) };
+      const etapa = (/; (segue para (o Senado|a Câmara)|vai à (sanção|promulgação))(?= \(|$)/u.exec(t.titulo) || [])[1];
+      const c = { titulo: t.titulo, origem: t.origem, ...(t.origem === 'modelo' || (t.origem === 'apelido-oficial' && ['mp', 'norma'].includes(it.tipo)) ? { _extra: etapa ? { etapa } : {} } : {}) };
       const v = t.origem === 'oficial'
         ? { motivos: [] }
         : verificarTitulo(t.titulo, t.origem, contextoVerificacao(it, c));
@@ -57,8 +68,8 @@ export function verificarTudo({ secoes = SECOES, corrigir = false, silencioso = 
       if (!motivos.length) continue;
       resumo.reprovados++;
       reprovados.push({ secao, id, titulo: t.titulo, origem: t.origem, motivos });
-      if (corrigir && t.origem !== 'oficial') {
-        doc.itens[id] = { ...t, titulo: it.oficial.titulo, origem: 'oficial', fonte: it.oficial.fonte || t.fonte, verificacao: { ...verificacaoOficial(), reprovado_na_verificacao: motivos } };
+      if (corrigir) {
+        doc.itens[id] = { ...t, titulo: it.oficial.titulo, origem: 'oficial', fonte: it.oficial.fonte || t.fonte, verificacao: { ...verificacaoOficial(), veto_vies: vetado || null, reprovado_na_verificacao: motivos } };
         delete doc.itens[id].fonte_data; delete doc.itens[id].credito;
         resumo.corrigidos++; mudou = true;
       }
