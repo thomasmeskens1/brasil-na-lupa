@@ -3,6 +3,7 @@
 // gravação atômica que não reescreve arquivo sem mudança de conteúdo.
 import fs from 'node:fs';
 import path from 'node:path';
+import { mascararObjeto } from './privacidade.mjs';
 
 // Identificação do coletor. Observação: o firewall de jurisprudencia.stf.jus.br recusa (HTTP 403) alguns
 // User-Agents (ex.: com a palavra "Node.js"); este, com link do repositório, é aceito. Não é contorno:
@@ -201,6 +202,8 @@ export const contagemGravacao = { gravados: 0, inalterados: 0 };
 /** Grava atomicamente (temporário + rename); não reescreve se só mudaram campos voláteis. */
 export function gravarSeMudou(arquivo, obj) {
   const antigo = lerJson(arquivo);
+  // Diretriz 12: todo texto gravado passa pelo mascaramento de nomes de particulares e documentos.
+  mascararObjeto(obj, antigo);
   if (antigo && semVolateis(antigo) === semVolateis(obj)) { contagemGravacao.inalterados++; return false; }
   fs.mkdirSync(path.dirname(arquivo), { recursive: true });
   const tmp = `${arquivo}.${process.pid}.tmp`;

@@ -3,6 +3,7 @@
 // leitura de CSV, leitura de ZIP (sem dependências), gravação atômica que não reescreve sem mudança.
 import fs from 'node:fs';
 import path from 'node:path';
+import { mascararObjeto } from './privacidade.mjs';
 import zlib from 'node:zlib';
 
 export const USER_AGENT =
@@ -194,6 +195,8 @@ export const contagemGravacao = { gravados: 0, inalterados: 0 };
 /** Grava atomicamente (temporário + rename); não reescreve se só mudaram campos voláteis. */
 export function gravarSeMudou(arquivo, obj) {
   const antigo = lerJson(arquivo);
+  // Diretriz 12: todo texto gravado passa pelo mascaramento de nomes de particulares e documentos.
+  mascararObjeto(obj, antigo);
   if (antigo && semVolateis(antigo) === semVolateis(obj)) { contagemGravacao.inalterados++; return false; }
   fs.mkdirSync(path.dirname(arquivo), { recursive: true });
   const tmp = `${arquivo}.${process.pid}.tmp`;

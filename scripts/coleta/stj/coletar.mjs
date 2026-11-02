@@ -33,7 +33,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { obterRecurso, lerCsv, lerJson, gravarSeMudou, hojeISO, somarDias, dataISO, estatisticas, contagemGravacao } from './lib.mjs';
+import { reprocessarPasta, registrarAutoridades } from './privacidade.mjs';
+import { formatar, obterRecurso, lerCsv, lerJson, gravarSeMudou, hojeISO, somarDias, dataISO, estatisticas, contagemGravacao } from './lib.mjs';
 import { pacote, urlPacote, ESPELHOS_POR_ORGAO, PACOTE_TEMAS, PACOTE_INTEGRAS, PACOTE_PAUTAS, PAGINA_MINISTROS,
   indexarEspelhos, diasDeIntegras, buscarIntegras, lerPautas, lerMinistros } from './fontes.mjs';
 import { agruparTemas, agruparProcessos, montarTema, datasDoTema, chave } from './temas.mjs';
@@ -235,6 +236,8 @@ async function main() {
   }
 
   // 8. Gravação dos temas e do índice.
+  // Relatores de todos os temas (inclui ministros aposentados): citados como "Sr. Fulano" no texto, ficam em claro.
+  registrarAutoridades(temas.flatMap((t) => [...(Array.isArray(t.relator) ? t.relator : [t.relator]), ...(t.processos ?? []).flatMap((p) => [p.relator, p.ministro_proposta_afetacao])]));
   for (const t of temas) gravarSeMudou(path.join(DIR_TEMAS, `${t.numero}.json`), { atualizado_em: hoje, ...t });
   const ordenados = [...temas].sort((a, b) => Number(a.numero) - Number(b.numero));
   const resumoMerito = (t) => {
@@ -280,7 +283,10 @@ async function main() {
     console.error(`[stj] ministros: ${e.message} (arquivo anterior mantido)`);
   }
 
-  // 10. Meta.
+  // 10. Privacidade (diretriz 12): reaplica o mascaramento a tudo que já está gravado em dados/stj (inclui curadoria/votos.json).
+  const privacidade = reprocessarPasta(DIR, formatar);
+
+  // 11. Meta.
   const lacunasFonte = temas.flatMap((t) => t.lacunas.filter((l) => /diverge|linhas com|Tipo de precedente vazio|não no Processos|não na página|difere entre/.test(l)).map((l) => `Tema ${t.numero}: ${l}`));
   const cand = temas.filter((t) => !t.colecoes.length && (t.criterios_icms.assunto_cnj_icms || t.criterios_icms.questao_ou_tese_menciona_icms) && datasDoTema(t).some((d) => d >= INICIO_PROJETO));
   const votosPendentes = temas.reduce((n, t) => n + (t.julgamento?.sessoes ?? []).filter((s) => s.votos_pre_extracao?.situacao_conferencia === 'pendente').length, 0);
@@ -316,6 +322,7 @@ async function main() {
     ],
     arquivos_fonte: { temas_csv_modificado: recTemas.last_modified, processos_csv_modificado: recProc.last_modified, ultimo_dia_integras: ultimoDiaIntegras, pautas: pautas.arquivo?.name ?? null },
     correspondencia_orgaos: ORGAOS,
+    privacidade,
     candidatos_icms_para_curadoria: cand.map((t) => ({ numero: t.numero, situacao: t.situacao, ...t.criterios_icms })),
     divergencias_da_fonte: lacunasFonte,
     observacoes: [
