@@ -1,63 +1,53 @@
 import type { ItemLiteral, RegistroRelator } from "../tipos";
 import { FonteLink } from "@/components/FonteLink";
-import { Recolhivel } from "./Basicos";
+import { ListaRecolhivel } from "@/components/lista/ListaRecolhivel";
 
 /**
- * Lista literal (ressalvas, alertas, recomendações, determinações) com contador no resumo e
- * recolhida por padrão. Os grupos e números são os do documento oficial, na ordem publicada.
+ * Lista literal (ressalvas, alertas, recomendações, determinações) com contador e "Mostrar mais"
+ * (ListaRecolhivel): os primeiros itens aparecem, os demais a um toque. Os grupos e números são
+ * os do documento oficial, na ordem publicada; o título do grupo aparece no primeiro item dele.
  */
 export function ListaLiteral({
   itens,
   um,
   varios,
   explicacao,
-  aberto = false,
+  inicial = 5,
 }: {
   itens: (ItemLiteral | string)[];
   um: string;
   varios: string;
   explicacao?: string;
-  aberto?: boolean;
+  inicial?: number;
 }) {
   if (!itens.length) return null;
   const lista: ItemLiteral[] = itens.map((i) => (typeof i === "string" ? { texto: i } : i));
-  const grupos: { grupo: string | null; itens: ItemLiteral[] }[] = [];
-  for (const i of lista) {
-    const g = i.grupo ?? null;
-    const ultimo = grupos[grupos.length - 1];
-    if (ultimo && ultimo.grupo === g) ultimo.itens.push(i);
-    else grupos.push({ grupo: g, itens: [i] });
-  }
   return (
-    <Recolhivel
-      aberto={aberto}
-      resumo={
-        <span>
-          <strong className="font-semibold">{lista.length === 1 ? `1 ${um}` : `${lista.length} ${varios}`}</strong>
-          <span className="text-[#3e4c59]"> — texto oficial</span>
-        </span>
-      }
-    >
-      {explicacao ? <p className="mb-3 text-base text-[#3e4c59]">{explicacao}</p> : null}
-      <div className="space-y-4">
-        {grupos.map((g, k) => (
-          <div key={k}>
-            {g.grupo ? <h4 className="text-base font-semibold text-gray-900">{g.grupo}</h4> : null}
-            <ol className="mt-2 space-y-2">
-              {g.itens.map((i, n) => {
-                const nivel = i.numero ? Math.min(i.numero.split(".").length - 1, 3) : 0;
-                return (
-                  <li key={n} className="flex gap-2 text-base leading-relaxed text-gray-900" style={nivel ? { paddingLeft: `${nivel * 0.75}rem` } : undefined}>
-                    {i.numero ? <span className="shrink-0 font-semibold tabular-nums text-[#3e4c59]">{i.numero}</span> : null}
-                    <span className="min-w-0">{i.texto}</span>
-                  </li>
-                );
-              })}
-            </ol>
-          </div>
-        ))}
-      </div>
-    </Recolhivel>
+    <section className="space-y-2">
+      <h4 className="text-base font-semibold text-gray-900">
+        {lista.length === 1 ? `1 ${um}` : `${lista.length} ${varios}`}
+        <span className="font-normal text-[#3e4c59]"> — texto oficial</span>
+      </h4>
+      {explicacao ? <p className="text-base text-[#3e4c59]">{explicacao}</p> : null}
+      <ListaRecolhivel
+        rotulo={{ singular: um, plural: varios }}
+        inicial={inicial}
+        className="space-y-2"
+        itens={lista.map((i, n) => {
+          const nivel = i.numero ? Math.min(i.numero.split(".").length - 1, 3) : 0;
+          const novoGrupo = i.grupo && i.grupo !== lista[n - 1]?.grupo;
+          return (
+            <div key={n}>
+              {novoGrupo ? <p className="mb-1 mt-3 text-base font-semibold text-gray-900">{i.grupo}</p> : null}
+              <p className="flex gap-2 text-base leading-relaxed text-gray-900" style={nivel ? { paddingLeft: `${nivel * 0.75}rem` } : undefined}>
+                {i.numero ? <span className="shrink-0 font-semibold tabular-nums text-[#3e4c59]">{i.numero}</span> : null}
+                <span className="min-w-0">{i.texto}</span>
+              </p>
+            </div>
+          );
+        })}
+      />
+    </section>
   );
 }
 

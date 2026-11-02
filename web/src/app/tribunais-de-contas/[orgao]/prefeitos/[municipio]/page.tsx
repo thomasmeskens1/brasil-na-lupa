@@ -89,7 +89,7 @@ export default async function ContasPrefeitoPage({ params }: PageProps<"/tribuna
 
       <ol className="space-y-10" aria-label={`Linha do tempo das contas do Prefeito de ${nome}`}>
         {d.itens.map((p) => (
-          <ExercicioPrefeitoItem key={p.id} p={p} municipio={nome} />
+          <ExercicioPrefeitoItem key={p.id} p={p} o={o} municipio={nome} />
         ))}
       </ol>
 

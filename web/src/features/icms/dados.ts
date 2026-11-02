@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { DECISOES_EXEMPLO } from "./fixture";
 import { GLOSSARIO_BASE } from "./glossario-base";
+import type { ArquivoTitulos } from "@/components/decisao/tipos";
 import type { ArquivoDecisoes, Decisao, TermoGlossario } from "./tipos";
 
 /**
@@ -25,6 +26,35 @@ export function getDecisoes(): ArquivoDecisoes {
   const itens = [...base.itens].sort((a, b) => chave(b).localeCompare(chave(a)) || a.id.localeCompare(b.id));
   cacheDecisoes = { ...base, itens };
   return cacheDecisoes;
+}
+
+const cacheTitulos = new Map<string, ArquivoTitulos | null>();
+
+function lerTitulos(arquivo: string, alternativo: string): ArquivoTitulos | null {
+  try {
+    const lido = lerOpcional<ArquivoTitulos>(arquivo) ?? lerOpcional<ArquivoTitulos>(alternativo);
+    return lido && lido.itens && typeof lido.itens === "object" ? lido : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Títulos em linguagem simples (dados/titulos/<secao>.json, contrato em dados/esquema.json →
+ * titulo_simples). Procura em content/titulos e, no build local, em ../dados/titulos. Sem o
+ * arquivo, os cartões usam o título oficial. Caminhos fixos por seção (rastreamento do Next).
+ */
+export function getTitulos(secao: "icms" | "stj" | "stf"): ArquivoTitulos | null {
+  if (cacheTitulos.has(secao)) return cacheTitulos.get(secao) ?? null;
+  const cwd = process.cwd();
+  const t =
+    secao === "icms"
+      ? lerTitulos(path.join(cwd, "content", "titulos", "icms.json"), path.join(cwd, "..", "dados", "titulos", "icms.json"))
+      : secao === "stj"
+        ? lerTitulos(path.join(cwd, "content", "titulos", "stj.json"), path.join(cwd, "..", "dados", "titulos", "stj.json"))
+        : lerTitulos(path.join(cwd, "content", "titulos", "stf.json"), path.join(cwd, "..", "dados", "titulos", "stf.json"));
+  cacheTitulos.set(secao, t);
+  return t;
 }
 
 export function getDecisao(id: string): Decisao | null {

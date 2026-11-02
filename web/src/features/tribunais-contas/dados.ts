@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import type { ArquivoTitulos, TituloSimples } from "@/components/decisao/tipos";
 import type {
   AcordaoTcu,
   ContasPrefeitos,
@@ -194,4 +195,27 @@ export interface ResumoAcordaos {
 export function getResumoAcordaos(orgao: string): ResumoAcordaos | null {
   if (!ID.test(orgao)) return null;
   return lerOpcional<ResumoAcordaos>(path.join(process.cwd(), "content", "_gerado", `tc-${orgao}-acordaos.json`));
+}
+
+let cacheTitulos: ArquivoTitulos | null | undefined;
+
+/**
+ * Títulos em linguagem simples da seção (dados/titulos/tribunais-contas.json; contrato em
+ * dados/esquema.json → titulo_simples). Procura em content/titulos e, no build local, em
+ * ../dados/titulos. Sem o arquivo, vale o título oficial.
+ */
+export function getTitulosTc(): ArquivoTitulos | null {
+  if (cacheTitulos !== undefined) return cacheTitulos;
+  const lido =
+    lerOpcional<ArquivoTitulos>(path.join(process.cwd(), "content", "titulos", "tribunais-contas.json")) ??
+    lerOpcional<ArquivoTitulos>(path.join(process.cwd(), "..", "dados", "titulos", "tribunais-contas.json"));
+  cacheTitulos = lido?.itens && typeof lido.itens === "object" ? lido : null;
+  return cacheTitulos;
+}
+
+/** Título simples do primeiro identificador encontrado (ex.: KEY do acórdão, id do parecer). */
+export function tituloSimplesTc(...ids: (string | null | undefined)[]): TituloSimples | null {
+  const t = getTitulosTc();
+  for (const id of ids) if (id && t?.itens[id]) return t.itens[id];
+  return null;
 }

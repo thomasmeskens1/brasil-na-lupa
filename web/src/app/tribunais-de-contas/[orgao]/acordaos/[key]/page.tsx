@@ -3,9 +3,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FonteLink } from "@/components/FonteLink";
 import { Secao } from "@/components/Secao";
+import { metadadosCompartilhamento } from "@/components/compartilhar/metadados";
+import { CabecalhoDecisao } from "@/components/decisao/CabecalhoDecisao";
+import { resolverTitulo } from "@/components/decisao/rotulos";
+import type { DadoChave, FonteResumo } from "@/components/decisao/tipos";
 import { Ficha, Fontes, Lacunas, Literal, Termos, Trilha } from "@/features/tribunais-contas/componentes/Basicos";
 import { JulgamentoCongressoBloco } from "@/features/tribunais-contas/componentes/JulgamentoPolitico";
-import { colecoesAcordaos, getAcordao, getOrgao, getOrgaos, keysComPagina, ouMarcador, temAcordaos } from "@/features/tribunais-contas/dados";
+import { colecoesAcordaos, getAcordao, getOrgao, getOrgaos, keysComPagina, ouMarcador, temAcordaos, tituloSimplesTc } from "@/features/tribunais-contas/dados";
 import { BASE_TC, NAO_DISPONIVEL, TERMOS_TC, formatarDataTc, nomeProprio, resumoParecerTcu } from "@/features/tribunais-contas/rotulos";
 import type { AcordaoTcu } from "@/features/tribunais-contas/tipos";
 
@@ -24,12 +28,34 @@ function titulo(a: AcordaoTcu, sigla: string): string {
   return `Acórdão ${a.numero} do ${a.orgao ?? "colegiado"} do ${sigla}`;
 }
 
+/** Cabeçalho "resposta primeiro": título, conclusão (parecer) ou sumário literal, quem decidiu e fonte. */
+function resumo(a: AcordaoTcu, sigla: string) {
+  const parecer = a.natureza === "parecer-previo" ? a.parecer : null;
+  const tituloOficial = parecer?.exercicio
+    ? `Contas do ${parecer.contas_de ?? "Presidente da República"} de ${parecer.exercicio}: ${resumoParecerTcu(parecer.conclusao) ?? "parecer prévio"}`
+    : titulo(a, sigla);
+  const t = resolverTitulo({ tituloOficial, simples: tituloSimplesTc(a.id), subtituloOficial: parecer ? titulo(a, sigla) : null });
+  const dado: DadoChave | null = parecer?.conclusao
+    ? { tipo: "texto", rotulo: "Conclusão do parecer (texto oficial)", texto: parecer.conclusao }
+    : a.sumario
+      ? { tipo: "texto", rotulo: "Sumário (texto oficial)", texto: a.sumario.length > 320 ? `${a.sumario.slice(0, 319).trimEnd()}…` : a.sumario }
+      : null;
+  const f = a.fontes[0];
+  const fonte: FonteResumo | null = f?.url ? { url: f.url, titulo: f.titulo, orgao: f.orgao ?? "Tribunal de Contas da União", acessado_em: f.acessado_em ?? null } : null;
+  return { t, tituloOficial, dado, fonte, quem: `${a.orgao ?? "Colegiado"} do ${sigla} · relator: ${nomeProprio(a.relator)}` };
+}
+
 export async function generateMetadata({ params }: PageProps<"/tribunais-de-contas/[orgao]/acordaos/[key]">): Promise<Metadata> {
   const { orgao, key } = await params;
   const o = getOrgao(orgao);
   const a = o ? getAcordao(orgao, key) : null;
   if (!o || !a) return { title: "Acórdão não encontrado" };
-  return { title: titulo(a, o.id.toUpperCase()), description: a.sumario?.slice(0, 200) ?? undefined };
+  const r = resumo(a, o.id.toUpperCase());
+  return metadadosCompartilhamento({
+    titulo: r.t.titulo,
+    descricao: [r.t.subtitulo, `Fonte: ${r.fonte?.orgao ?? o.nome}`, r.fonte?.acessado_em ? `coletado em ${formatarDataTc(r.fonte.acessado_em)}` : null],
+    caminho: `${BASE_TC}/${o.id}/acordaos/${a.id}`,
+  });
 }
 
 export default async function AcordaoPage({ params }: PageProps<"/tribunais-de-contas/[orgao]/acordaos/[key]">) {
@@ -38,6 +64,7 @@ export default async function AcordaoPage({ params }: PageProps<"/tribunais-de-c
   const a = o ? getAcordao(orgao, key) : null;
   if (!o || !a) notFound();
   const sigla = o.id.toUpperCase();
+  const r = resumo(a, sigla);
   const parecer = a.natureza === "parecer-previo" ? a.parecer : null;
   const colecoes = colecoesAcordaos(orgao).filter((c) => c.itens.some((i) => i.id === a.id));
   const termos = [
@@ -50,19 +77,32 @@ export default async function AcordaoPage({ params }: PageProps<"/tribunais-de-c
 
   return (
     <div className="space-y-10">
-      <header className="max-w-3xl">
+      <div className="max-w-3xl">
         <Trilha
           itens={[
             { href: `${BASE_TC}/${o.id}`, rotulo: sigla },
             { href: `${BASE_TC}/${o.id}/acordaos`, rotulo: "Acórdãos" },
           ]}
         />
-        <h1 className="mt-2 text-2xl font-bold text-gray-900 md:text-3xl">{titulo(a, sigla)}</h1>
-        <p className="mt-2 text-base text-[#3e4c59]">
-          {parecer ? `Parecer prévio sobre as contas do ${parecer.contas_de ?? "Presidente da República"} de ${parecer.exercicio ?? "exercício não informado"}` : "Decisão colegiada"}
-          {colecoes.length ? ` · ${colecoes.map((c) => COLECAO[c.id] ?? c.titulo).join(" · ")}` : ""}
-        </p>
-      </header>
+        <CabecalhoDecisao
+          className="mt-2"
+          tituloOficial={r.tituloOficial}
+          simples={tituloSimplesTc(a.id)}
+          subtituloOficial={parecer ? titulo(a, sigla) : colecoes.map((c) => COLECAO[c.id] ?? c.titulo).join(" · ") || null}
+          caminho={o.id}
+          data={a.data_julgamento}
+          forma="colegiado"
+          dado={r.dado}
+          quemDecidiu={r.quem}
+          fontePrincipal={r.fonte}
+          url={`${BASE_TC}/${o.id}/acordaos/${a.id}`}
+          atalhos={[
+            ...(a.sumario ? [{ href: "#sumario", rotulo: "Sumário" }] : []),
+            ...(parecer && a.julgamento_politico ? [{ href: "#julgamento-politico", rotulo: "Julgamento no Congresso" }] : []),
+            { href: "#fontes", rotulo: "Fontes" },
+          ]}
+        />
+      </div>
 
       {a.sumario ? (
         <Secao id="sumario" titulo="Sumário (texto oficial)">

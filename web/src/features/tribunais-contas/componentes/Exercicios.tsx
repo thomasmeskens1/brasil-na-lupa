@@ -1,48 +1,67 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { FonteLink } from "@/components/FonteLink";
+import { CartaoDecisao } from "@/components/decisao/CartaoDecisao";
+import {
+  cartaoJulgamentoAlesp,
+  cartaoJulgamentoCongresso,
+  cartaoParecerPresidente,
+  cartaoParecerTce,
+  tituloGovernador,
+  tituloPrefeito,
+  tituloPresidente,
+  type DadosCartaoTc,
+} from "../cartoes";
 import type { ExercicioPresidente, OrgaoTc, ParecerPrevioTce } from "../tipos";
-import { BASE_TC, NAO_DISPONIVEL, deUf, formatarDataTc, nomeProprio, plural, resumoParecerTce, resumoParecerTcu } from "../rotulos";
+import { BASE_TC, NAO_DISPONIVEL, deUf, formatarDataTc, nomeProprio, plural } from "../rotulos";
 import { Fontes, Ficha, Lacunas, Literal, Recolhivel } from "./Basicos";
 import { JulgamentoAlespBloco, JulgamentoCongressoBloco } from "./JulgamentoPolitico";
 import { ListaLiteral, RegistrosRelator } from "./Literais";
+import { tituloSimplesTc } from "../dados";
 
-export function tituloPresidente(e: ExercicioPresidente): string {
-  const r = resumoParecerTcu(e.curadoria?.conclusao ?? e.conclusao_parecer);
-  return `Contas do Presidente de ${e.exercicio}: ${r ?? "parecer prévio não disponível nos dados coletados"}`;
-}
+export { tituloGovernador, tituloPrefeito, tituloPresidente };
 
-export function tituloGovernador(p: ParecerPrevioTce, o: Pick<OrgaoTc, "uf">): string {
-  const r = resumoParecerTce(p.parecer);
-  return `Contas do Governador ${deUf(o.uf)} de ${p.parecer.exercicio}: ${r ?? (p.data_julgamento ? "parecer prévio emitido" : "parecer prévio não publicado até a coleta")}`.replace(/\s+/g, " ");
-}
-
-export function tituloPrefeito(p: ParecerPrevioTce, municipio: string): string {
-  const r = resumoParecerTce(p.parecer);
-  return `Contas do Prefeito de ${municipio} de ${p.parecer.exercicio}: ${r ?? "parecer não disponível em fonte aberta"}`;
-}
-
-/** Item da linha do tempo (um exercício), com âncora própria. */
-function ItemLinha({ id, titulo, children }: { id: string; titulo: string; children: ReactNode }) {
+/** Item da linha do tempo (um exercício), com âncora própria e os cartões no topo. */
+function ItemLinha({ id, titulo, cartoes, children }: { id: string; titulo: string; cartoes: DadosCartaoTc[]; children: ReactNode }) {
   return (
     <li id={id} className="relative scroll-mt-20 border-l-4 border-[#9aa5b1] pb-2 pl-4 md:pl-6">
       <span aria-hidden="true" className="absolute -left-[0.6rem] top-1.5 h-4 w-4 rounded-full border-4 border-white bg-acento" />
-      <article aria-labelledby={`${id}-t`} className="space-y-5">
+      <article aria-labelledby={`${id}-t`} className="space-y-4">
         <h2 id={`${id}-t`} className="text-xl font-bold text-gray-900">
           {titulo}
         </h2>
+        <div className="grid grid-cols-1 gap-3 lg:grid-cols-2">
+          {cartoes.map((c) => (
+            <CartaoDecisao
+              key={c.chave}
+              href={c.href}
+              tituloOficial={c.tituloOficial}
+              simples={c.simples}
+              subtituloOficial={c.subtitulo}
+              caminho={c.caminho}
+              rotuloCaminho={c.rotuloCaminho}
+              data={c.data}
+              forma={c.forma}
+              dado={c.dado}
+              quemDecidiu={c.quem}
+              fonte={c.fonte}
+              nivelTitulo={3}
+            />
+          ))}
+        </div>
         {children}
       </article>
     </li>
   );
 }
 
-function Sub({ titulo, children }: { titulo: string; children: ReactNode }) {
+/** Detalhe recolhido (nível 2), com âncora: o link do cartão abre o bloco. */
+function Sub({ id, titulo, children, aberto = false }: { id?: string; titulo: string; children: ReactNode; aberto?: boolean }) {
   return (
-    <section className="space-y-3">
-      <h3 className="text-lg font-semibold text-gray-900">{titulo}</h3>
-      {children}
-    </section>
+    <details id={id} className="scroll-mt-20 rounded-md border border-borda bg-white" open={aberto || undefined}>
+      <summary className="pr-3">{titulo}</summary>
+      <div className="space-y-3 border-t border-borda px-3 pb-3 pt-3">{children}</div>
+    </details>
   );
 }
 
@@ -51,10 +70,13 @@ function Sub({ titulo, children }: { titulo: string; children: ReactNode }) {
 export function ExercicioPresidenteItem({ e, orgao }: { e: ExercicioPresidente; orgao: string }) {
   const c = e.curadoria;
   const a = e.acordao;
-  const conclusao = c?.conclusao ?? e.conclusao_parecer;
   return (
-    <ItemLinha id={`exercicio-${e.exercicio}`} titulo={tituloPresidente(e)}>
-      <Sub titulo="Parecer prévio do Tribunal de Contas da União (TCU)">
+    <ItemLinha
+      id={`exercicio-${e.exercicio}`}
+      titulo={`Exercício de ${e.exercicio}`}
+      cartoes={[{ ...cartaoParecerPresidente(e, orgao, tituloPresidente(e)), simples: tituloSimplesTc(e.acordao?.id, `${orgao}-contas-presidente-${e.exercicio}`) }, cartaoJulgamentoCongresso(e.exercicio, e.julgamento_politico)]}
+    >
+      <Sub id={`exercicio-${e.exercicio}-parecer`} titulo="Detalhes do parecer prévio do TCU: ressalvas, alertas e relator">
         {a ? (
           <>
             <Ficha
@@ -71,10 +93,14 @@ export function ExercicioPresidenteItem({ e, orgao }: { e: ExercicioPresidente; 
                 ["Resultado (unanimidade ou maioria)", NAO_DISPONIVEL],
               ]}
             />
-            {conclusao ? <Literal fonte="Conclusão do parecer (texto oficial)">{conclusao}</Literal> : null}
             {c ? (
               <div className="space-y-3">
-                <ListaLiteral itens={c.ressalvas} um="ressalva" varios="ressalvas" explicacao="Problemas apontados que não impediram a conclusão do parecer, com os grupos e números do documento." />
+                <ListaLiteral
+                  itens={c.ressalvas}
+                  um="ressalva"
+                  varios="ressalvas"
+                  explicacao="Problemas apontados que não impediram a conclusão do parecer, com os grupos e números do documento."
+                />
                 <ListaLiteral itens={c.alertas} um="alerta" varios="alertas" explicacao="Avisos formais do tribunal ao Poder Executivo federal." />
                 <ListaLiteral itens={c.recomendacoes ?? []} um="recomendação" varios="recomendações" />
                 <ListaLiteral itens={c.determinacoes ?? []} um="determinação" varios="determinações" />
@@ -98,7 +124,7 @@ export function ExercicioPresidenteItem({ e, orgao }: { e: ExercicioPresidente; 
           <p className="lacuna text-base">Acórdão do TCU sobre este exercício: {NAO_DISPONIVEL.toLowerCase()} nos dados coletados.</p>
         )}
       </Sub>
-      <Sub titulo="Julgamento político: Congresso Nacional">
+      <Sub id={`exercicio-${e.exercicio}-julgamento`} titulo="Detalhes do julgamento político no Congresso Nacional">
         <JulgamentoCongressoBloco jp={e.julgamento_politico} />
       </Sub>
       <Sub titulo="O que a fonte oficial não informa">
@@ -109,7 +135,14 @@ export function ExercicioPresidenteItem({ e, orgao }: { e: ExercicioPresidente; 
           fontes={[
             e.julgamento_politico?.fonte,
             c?.documento ? { ...c.documento, orgao: "Tribunal de Contas da União" } : null,
-            a ? { titulo: `Acórdão ${a.numero} — pesquisa de jurisprudência do TCU`, url: a.url, orgao: "Tribunal de Contas da União", acessado_em: e.julgamento_politico?.fonte?.acessado_em } : null,
+            a
+              ? {
+                  titulo: `Acórdão ${a.numero} — pesquisa de jurisprudência do TCU`,
+                  url: a.url,
+                  orgao: "Tribunal de Contas da União",
+                  acessado_em: e.julgamento_politico?.fonte?.acessado_em,
+                }
+              : null,
           ]}
         />
       </Recolhivel>
@@ -129,18 +162,26 @@ export function ExercicioGovernadorItem({ p, o }: { p: ParecerPrevioTce; o: Orga
   const votacao = p.votacoes?.[0];
   const docs = p.documentos ?? [];
   const casa = o.uf === "SP" ? "Assembleia Legislativa do Estado de São Paulo (ALESP)" : "Assembleia Legislativa";
+  const contasDe = `do Governador${o.uf ? ` ${deUf(o.uf)}` : ""}`;
+  const cartoes = [
+    { ...cartaoParecerTce(p, o, tituloGovernador(p, o), contasDe), simples: tituloSimplesTc(p.id) },
+    cartaoJulgamentoAlesp(par.exercicio, p.julgamento_politico, casa, o.uf === "SP" ? "ALESP" : "Assembleia"),
+  ];
   if (!p.data_julgamento && !par.conclusao) {
     // Parecer ainda não publicado: só o que a fonte registra, sem ficha vazia.
     return (
-      <ItemLinha id={`exercicio-${par.exercicio}`} titulo={tituloGovernador(p, o)}>
+      <ItemLinha id={`exercicio-${par.exercicio}`} titulo={`Exercício de ${par.exercicio}`} cartoes={cartoes.slice(0, 1)}>
         <Lacunas lacunas={[p.lacunas, p.julgamento_politico?.lacunas]} />
         <Fontes fontes={[...p.fontes, p.julgamento_politico?.fonte]} />
       </ItemLinha>
     );
   }
   return (
-    <ItemLinha id={`exercicio-${par.exercicio}`} titulo={tituloGovernador(p, o)}>
-      <Sub titulo={`Parecer prévio do ${o.nome} (${o.id.toUpperCase()})`}>
+    <ItemLinha id={`exercicio-${par.exercicio}`} titulo={`Exercício de ${par.exercicio}`} cartoes={cartoes}>
+      <Sub
+        id={`exercicio-${par.exercicio}-parecer`}
+        titulo={`Detalhes do parecer prévio do ${o.id.toUpperCase()}: ressalvas, determinações e relator`}
+      >
         <Ficha
           itens={[
             ["Data do julgamento", formatarDataTc(p.data_julgamento)],
@@ -153,7 +194,6 @@ export function ExercicioGovernadorItem({ p, o }: { p: ParecerPrevioTce; o: Orga
             ["Publicação do parecer", formatarDataTc(p.data_publicacao)],
           ]}
         />
-        {par.conclusao_literal ? <Literal fonte="Conclusão da decisão do Tribunal Pleno (texto oficial)">{par.conclusao_literal}</Literal> : null}
         <ListaLiteral
           itens={par.ressalvas}
           um="ressalva"
@@ -169,9 +209,7 @@ export function ExercicioGovernadorItem({ p, o }: { p: ParecerPrevioTce; o: Orga
             explicacao={`Lista numerada do documento “${det.documento}”, na ordem publicada (títulos de grupo incluídos).`}
           />
         ) : null}
-        {votacao?.votantes_literal ? (
-          <Literal fonte="Quem votou, segundo a decisão (texto oficial)">{votacao.votantes_literal}</Literal>
-        ) : null}
+        {votacao?.votantes_literal ? <Literal fonte="Quem votou, segundo a decisão (texto oficial)">{votacao.votantes_literal}</Literal> : null}
         {p.relator_registros?.length ? (
           <div>
             <h4 className="text-base font-semibold text-gray-900">Relator segundo cada documento oficial</h4>
@@ -198,7 +236,10 @@ export function ExercicioGovernadorItem({ p, o }: { p: ParecerPrevioTce; o: Orga
           </Recolhivel>
         ) : null}
       </Sub>
-      <Sub titulo={`Julgamento político: ${casa}`}>
+      <Sub
+        id={`exercicio-${par.exercicio}-julgamento`}
+        titulo={`Detalhes do julgamento político na ${o.uf === "SP" ? "ALESP" : "Assembleia Legislativa"}`}
+      >
         <JulgamentoAlespBloco jp={p.julgamento_politico} />
       </Sub>
       <Sub titulo="O que a fonte oficial não informa">
@@ -213,7 +254,7 @@ export function ExercicioGovernadorItem({ p, o }: { p: ParecerPrevioTce; o: Orga
 
 /* ---------- Parecer sobre as contas do Prefeito ---------- */
 
-export function ExercicioPrefeitoItem({ p, municipio }: { p: ParecerPrevioTce; municipio: string }) {
+export function ExercicioPrefeitoItem({ p, o, municipio }: { p: ParecerPrevioTce; o: OrgaoTc; municipio: string }) {
   const par = p.parecer;
   const nLac = new Set(p.lacunas).size;
   const lacunasEFontes = (
@@ -228,33 +269,43 @@ export function ExercicioPrefeitoItem({ p, municipio }: { p: ParecerPrevioTce; m
     // Sem parecer em fonte aberta: a primeira lacuna explica o motivo; o resto fica recolhido.
     const motivo = p.lacunas.find((l): l is string => typeof l === "string");
     return (
-      <ItemLinha id={`exercicio-${par.exercicio}`} titulo={tituloPrefeito(p, municipio)}>
+      <ItemLinha
+        id={`exercicio-${par.exercicio}`}
+        titulo={`Exercício de ${par.exercicio}`}
+        cartoes={[cartaoParecerTce(p, o, tituloPrefeito(p, municipio), `do Prefeito de ${municipio}`)]}
+      >
         {motivo ? <p className="lacuna text-base">{motivo}</p> : null}
         {lacunasEFontes}
       </ItemLinha>
     );
   }
   return (
-    <ItemLinha id={`exercicio-${par.exercicio}`} titulo={tituloPrefeito(p, municipio)}>
-      <Ficha
-        itens={[
-          ["Parecer (texto do conjunto de dados oficial)", par.conclusao],
-          ["Processo", p.processo?.numero ?? NAO_DISPONIVEL],
-          ["Data do julgamento", formatarDataTc(p.data_julgamento)],
-          ["Trânsito em julgado", formatarDataTc(p.data_transito_em_julgado)],
-          ["Relator", p.relator ?? NAO_DISPONIVEL],
-          ["Julgamento pela Câmara Municipal", p.julgamento_politico ? "Registrado nos dados coletados" : "Não localizado nos dados coletados"],
-        ]}
-      />
-      <ListaLiteral itens={par.ressalvas} um="ressalva" varios="ressalvas" />
-      {p.link_voto_na_fonte ? (
-        <p className="text-base text-[#3e4c59]">
-          Link do voto informado pelo conjunto de dados oficial:{" "}
-          <FonteLink href={p.link_voto_na_fonte} tipo="pdf" className="text-base!">
-            voto do relator
-          </FonteLink>
-        </p>
-      ) : null}
+    <ItemLinha
+      id={`exercicio-${par.exercicio}`}
+      titulo={`Exercício de ${par.exercicio}`}
+      cartoes={[cartaoParecerTce(p, o, tituloPrefeito(p, municipio), `do Prefeito de ${municipio}`)]}
+    >
+      <Sub id={`exercicio-${par.exercicio}-parecer`} titulo="Detalhes do parecer: processo, relator e ressalvas">
+        <Ficha
+          itens={[
+            ["Parecer (texto do conjunto de dados oficial)", par.conclusao],
+            ["Processo", p.processo?.numero ?? NAO_DISPONIVEL],
+            ["Data do julgamento", formatarDataTc(p.data_julgamento)],
+            ["Trânsito em julgado", formatarDataTc(p.data_transito_em_julgado)],
+            ["Relator", p.relator ?? NAO_DISPONIVEL],
+            ["Julgamento pela Câmara Municipal", p.julgamento_politico ? "Registrado nos dados coletados" : "Não localizado nos dados coletados"],
+          ]}
+        />
+        <ListaLiteral itens={par.ressalvas} um="ressalva" varios="ressalvas" />
+        {p.link_voto_na_fonte ? (
+          <p className="text-base text-[#3e4c59]">
+            Link do voto informado pelo conjunto de dados oficial:{" "}
+            <FonteLink href={p.link_voto_na_fonte} tipo="pdf" className="text-base!">
+              voto do relator
+            </FonteLink>
+          </p>
+        ) : null}
+      </Sub>
       {lacunasEFontes}
     </ItemLinha>
   );

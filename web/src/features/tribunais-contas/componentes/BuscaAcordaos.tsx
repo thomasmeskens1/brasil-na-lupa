@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useId, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { FonteLink } from "@/components/FonteLink";
+import { FiltrosCompactos } from "@/components/tabela/FiltrosCompactos";
 import { normalizar } from "@/features/congresso/rotulos";
 
 type Linha = [key: number | string, numero: string, colegiado: number, tipo: number, data: string, relator: number, situacao: number, sumario: string | null, aviso: 0 | 1];
@@ -18,8 +19,7 @@ interface Arquivo {
   n: Linha[];
 }
 
-const CAMPO = "mt-1 block min-h-11 w-full rounded border border-[#7b8794] bg-white px-2 py-2 text-base text-gray-900";
-const POR_PAGINA = 30;
+const POR_PAGINA = 10;
 
 function data(v: string): string {
   const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(v);
@@ -46,8 +46,8 @@ function tipoLegivel(t: string | undefined): string {
  * Só os acórdãos das coleções têm página própria; os demais levam ao registro oficial.
  */
 export function BuscaAcordaos({ orgao, anos, comPagina }: { orgao: string; anos: number[]; comPagina: string[] }) {
-  const base = useId();
-  const [ano, setAno] = useState(anos[0] ? String(anos[0]) : "");
+  const padrao = anos[0] ? String(anos[0]) : "";
+  const [ano, setAno] = useState(padrao);
   const [arq, setArq] = useState<(Arquivo & { busca: string[] }) | null>(null);
   const [erro, setErro] = useState(false);
   const [texto, setTexto] = useState("");
@@ -87,9 +87,9 @@ export function BuscaAcordaos({ orgao, anos, comPagina }: { orgao: string; anos:
     : [];
 
   function mudar(set: (v: string) => void) {
-    return (e: { target: { value: string } }) => {
+    return (v: string) => {
       setLimite(POR_PAGINA);
-      set(e.target.value);
+      set(v);
     };
   }
 
@@ -102,51 +102,30 @@ export function BuscaAcordaos({ orgao, anos, comPagina }: { orgao: string; anos:
   return (
     <div>
       <form role="search" aria-label="Buscar acórdãos" onSubmit={(e) => e.preventDefault()}>
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr_1.5fr]">
-          <label htmlFor={`${base}-t`} className="text-base font-medium text-gray-900 sm:col-span-2 lg:col-span-1">
-            Buscar no sumário, número ou relator
-            <input id={`${base}-t`} type="search" value={texto} onChange={mudar(setTexto)} placeholder="Ex.: renúncia de receita" className={CAMPO} />
-          </label>
-          <label htmlFor={`${base}-a`} className="text-base font-medium text-gray-900">
-            Ano
-            <select id={`${base}-a`} value={ano} onChange={mudar(setAno)} className={CAMPO}>
-              {anos.map((a) => (
-                <option key={a}>{a}</option>
-              ))}
-            </select>
-          </label>
-          <label htmlFor={`${base}-c`} className="text-base font-medium text-gray-900">
-            Colegiado
-            <select id={`${base}-c`} value={colegiado} onChange={mudar(setColegiado)} className={CAMPO}>
-              <option value="">Todos</option>
-              {(arq?.c ?? []).map((c) => (
-                <option key={c}>{c}</option>
-              ))}
-            </select>
-          </label>
-          <label htmlFor={`${base}-y`} className="text-base font-medium text-gray-900">
-            Tipo
-            <select id={`${base}-y`} value={tipo} onChange={mudar(setTipo)} className={CAMPO}>
-              <option value="">Todos</option>
-              {(arq?.t ?? []).map((t) => (
-                <option key={t} value={t}>
-                  {tipoLegivel(t)}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label htmlFor={`${base}-r`} className="text-base font-medium text-gray-900">
-            Relator
-            <select id={`${base}-r`} value={relator} onChange={mudar(setRelator)} className={CAMPO}>
-              <option value="">Todos</option>
-              {relatores.map((r) => (
-                <option key={r} value={r}>
-                  {nome(r)}
-                </option>
-              ))}
-            </select>
-          </label>
-        </div>
+        <FiltrosCompactos
+          busca={{ valor: texto, aoMudar: mudar(setTexto), rotulo: "Buscar no sumário, número ou relator", dica: "Ex.: renúncia de receita" }}
+          filtros={[
+            {
+              id: "ano",
+              rotulo: "Ano",
+              valor: ano === padrao ? "" : ano,
+              aoMudar: (v) => mudar(setAno)(v || padrao),
+              opcoes: anos.slice(1).map(String),
+              todos: padrao ? `${padrao} (mais recente)` : "Mais recente",
+            },
+            { id: "colegiado", rotulo: "Colegiado", valor: colegiado, aoMudar: mudar(setColegiado), opcoes: arq?.c ?? [] },
+            { id: "tipo", rotulo: "Tipo", valor: tipo, aoMudar: mudar(setTipo), opcoes: (arq?.t ?? []).map((t) => ({ valor: t, rotulo: tipoLegivel(t) })) },
+            { id: "relator", rotulo: "Relator", valor: relator, aoMudar: mudar(setRelator), opcoes: relatores.map((r) => ({ valor: r, rotulo: nome(r) })) },
+          ]}
+          aoLimpar={() => {
+            setLimite(POR_PAGINA);
+            setTexto("");
+            setAno(padrao);
+            setColegiado("");
+            setTipo("");
+            setRelator("");
+          }}
+        />
       </form>
 
       <div aria-live="polite" className="mt-3 text-base text-[#3e4c59]">
@@ -202,7 +181,7 @@ export function BuscaAcordaos({ orgao, anos, comPagina }: { orgao: string; anos:
                 )}
                 {oficial ? (
                   <p className="mt-2 inline-flex min-h-11 items-center">
-                    <FonteLink href={oficial} tipo="oficial" className="text-base!">
+                    <FonteLink href={oficial} tipo="oficial" className="inline-flex min-h-11 items-center text-base!">
                       Acórdão no site do tribunal
                     </FonteLink>
                   </p>
@@ -213,11 +192,7 @@ export function BuscaAcordaos({ orgao, anos, comPagina }: { orgao: string; anos:
         </ul>
       ) : null}
       {!carregando && filtradas.length > limite ? (
-        <button
-          type="button"
-          onClick={() => setLimite((n) => n + POR_PAGINA)}
-          className="mt-4 min-h-11 rounded border border-[#7b8794] bg-white px-4 py-2 text-base font-medium text-gray-900 hover:bg-superficie"
-        >
+        <button type="button" onClick={() => setLimite((n) => n + POR_PAGINA)} className="botao mt-4">
           Mostrar mais {Math.min(POR_PAGINA, filtradas.length - limite)} de {(filtradas.length - limite).toLocaleString("pt-BR")} restantes
         </button>
       ) : null}
