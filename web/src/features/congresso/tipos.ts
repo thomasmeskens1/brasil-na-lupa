@@ -118,6 +118,10 @@ export interface ResumoVotacao {
   proposicao: { id: string | null; titulo: string | null; sigla: string | null; ementa: string | null } | null;
   descricao: string | null;
   placar: PlacarCongresso | null;
+  /** Critério "Só o que muda leis" (scripts/gerar-congresso.mjs; texto em lista.ts). */
+  muda_lei?: boolean;
+  /** Endereço da fonte oficial principal da votação. */
+  fonte_url?: string | null;
 }
 
 export interface IndiceCasa {
