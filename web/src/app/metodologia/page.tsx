@@ -213,7 +213,34 @@ export default function MetodologiaPage() {
         </p>
       </Bloco>
 
-      <Bloco id="coleta" titulo="11. Coleta automática e regras de acesso">
+      <Bloco id="tribunais-de-contas" titulo="11. Tribunais de contas">
+        <p>
+          O parecer prévio de um tribunal de contas é uma opinião técnica; o julgamento das contas do Presidente, do
+          Governador e do Prefeito é feito pelo Poder Legislativo. Por isso, o site mostra as duas etapas separadas: a
+          conclusão do parecer, as ressalvas, os alertas, as determinações e as recomendações copiadas literalmente do
+          documento oficial, e a situação do julgamento político registrada pelo Congresso Nacional, pela ALESP ou pela
+          Câmara Municipal. Os títulos em linguagem simples (por exemplo, “parecer favorável com ressalvas”) são formados só a
+          partir das palavras do texto oficial.
+        </p>
+        <p>
+          Quando documentos oficiais registram o relator de formas diferentes, todos os registros aparecem lado a lado, sem
+          correção. O resultado (unanimidade ou maioria) e o voto de cada ministro ou conselheiro só aparecem quando estão
+          escritos no documento; a fonte de dados abertos do TCU não traz esses dados.
+        </p>
+        <p>
+          Do TCU, a coleta usa somente a API de dados abertos e o inteiro teor indicado por ela; o endereço sites.tcu.gov.br não
+          é acessado, porque suas regras de acesso automático proíbem robôs de inteligência artificial. Do TCE-SP, a pesquisa
+          de pareceres municipais (www10.tce.sp.gov.br) não é acessada, pelo mesmo motivo; as contas das prefeituras sem
+          publicação em formato aberto foram pedidas pela Lei de Acesso à Informação. As listas de responsáveis por contas
+          julgadas irregulares não são publicadas no site, porque trazem CPF e nomes de cidadãos comuns.
+        </p>
+        <p>
+          Os demais tribunais de contas do país aparecem com ficha e situação “em breve” até que a coleta de cada um seja
+          implantada no mesmo formato.
+        </p>
+      </Bloco>
+
+      <Bloco id="coleta" titulo="12. Coleta automática e regras de acesso">
         <p>
           A coleta respeita as regras que cada órgão publica para acesso automático (o arquivo robots.txt do site): páginas
           que essas regras não permitem acessar não são coletadas, e o site guarda apenas o link público. Quando uma página
@@ -222,7 +249,7 @@ export default function MetodologiaPage() {
         </p>
       </Bloco>
 
-      <Bloco id="correcoes" titulo="12. Correções">
+      <Bloco id="correcoes" titulo="13. Correções">
         <p>
           Erros encontrados são corrigidos, e a correção é registrada e informada na própria página
           afetada, com a data. Para apontar um erro, escreva para{" "}
@@ -233,7 +260,7 @@ export default function MetodologiaPage() {
         </p>
       </Bloco>
 
-      <Bloco id="dados-pessoais" titulo="13. Dados pessoais">
+      <Bloco id="dados-pessoais" titulo="14. Dados pessoais">
         <p>
           Dados de agentes públicos são exibidos somente no que se refere ao exercício da função
           pública. Nomes de cidadãos comuns citados em atos oficiais, como permissionários e

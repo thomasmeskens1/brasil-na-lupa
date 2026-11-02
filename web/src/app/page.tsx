@@ -17,6 +17,11 @@ const PRONTAS = [
     texto: "Temas repetitivos do Superior Tribunal de Justiça (STJ) e temas de repercussão geral e julgamentos do Supremo Tribunal Federal (STF), com a tese, o resultado e os votos dos ministros quando conferidos ou publicados pelo tribunal.",
   },
   {
+    href: "/tribunais-de-contas",
+    titulo: "Tribunais de Contas",
+    texto: "O parecer prévio do Tribunal de Contas da União (TCU) sobre as contas do Presidente e do Tribunal de Contas do Estado de São Paulo (TCE-SP) sobre as do Governador e do prefeito de Atibaia, com o julgamento político no Legislativo, e a busca nos acórdãos do TCU.",
+  },
+  {
     href: "/sao-paulo",
     titulo: "Estado de São Paulo",
     texto: "Votações da Assembleia Legislativa (ALESP) com o voto de cada deputado estadual, projetos apresentados e as leis, decretos e vetos do governador, com as razões dos vetos.",
