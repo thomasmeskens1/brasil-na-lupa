@@ -15,6 +15,9 @@ const nextConfig: NextConfig = {
       "./content/executivo/**/*",
       "./content/stj/**/*",
       "./content/stf/**/*",
+      "./content/alesp/**/*",
+      "./content/governo-sp/**/*",
+      "./content/atibaia/**/*",
       "./content/_gerado/**/*",
     ],
     // Executivo e Justiça: páginas geradas no build; índices de busca em public/ (arquivos estáticos).
@@ -22,6 +25,11 @@ const nextConfig: NextConfig = {
     "/executivo/**": ["./content/**/*", "./public/**/*"],
     "/justica": ["./content/**/*", "./public/**/*"],
     "/justica/**": ["./content/**/*", "./public/**/*"],
+    // São Paulo e Atibaia: páginas geradas no build; índices de busca em public/ (arquivos estáticos).
+    "/sao-paulo": ["./content/**/*", "./public/**/*"],
+    "/sao-paulo/**": ["./content/**/*", "./public/**/*"],
+    "/atibaia": ["./content/**/*", "./public/**/*"],
+    "/atibaia/**": ["./content/**/*", "./public/**/*"],
   },
   turbopack: {
     rules: {

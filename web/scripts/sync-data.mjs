@@ -2,8 +2,9 @@
 /**
  * Sincroniza os dados do projeto para dentro de web/ antes de `dev` e `build`.
  *
- * - ../dados/{icms,camara,senado,executivo,stj,stf}/** -> web/content/<mesma pasta>/**
- *   (stf pode ainda não existir: pastas ausentes são ignoradas)
+ * - ../dados/{icms,camara,senado,executivo,stj,stf,alesp,governo-sp,atibaia}/** -> web/content/<mesma pasta>/**
+ *   (pastas ausentes são ignoradas). De Atibaia não se copiam a pasta de curadoria (revisao/)
+ *   nem o texto bruto das edições (normas/edicoes-*.json): o site só usa os índices publicados.
  * - ../dados/glossario.json          -> web/content/glossario.json
  *
  * Pastas ou arquivos ausentes são ignorados. A cópia é feita numa pasta temporária,
@@ -19,7 +20,9 @@ const webDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const dadosDir = path.join(webDir, "..", "dados");
 const contentFinal = path.join(webDir, "content");
 
-const PASTAS = ["icms", "camara", "senado", "executivo", "stj", "stf"];
+const PASTAS = ["icms", "camara", "senado", "executivo", "stj", "stf", "alesp", "governo-sp", "atibaia"];
+/** Caminhos relativos a ../dados que não entram em content/ (material de curadoria). */
+const EXCLUIR = [/^atibaia\/revisao(\/|$)/, /^atibaia\/normas\/edicoes-[^/]*$/];
 const ARQUIVOS = ["glossario.json"];
 
 function copiarArvore(origem, destino) {
@@ -28,6 +31,8 @@ function copiarArvore(origem, destino) {
   for (const entrada of fs.readdirSync(origem, { withFileTypes: true })) {
     const o = path.join(origem, entrada.name);
     const d = path.join(destino, entrada.name);
+    const rel = path.relative(dadosDir, o).split(path.sep).join("/");
+    if (EXCLUIR.some((re) => re.test(rel))) continue;
     if (entrada.isDirectory()) n += copiarArvore(o, d);
     else if (entrada.isFile()) {
       fs.copyFileSync(o, d);
@@ -52,7 +57,16 @@ function trocarContent(tmp) {
       limpar(contentFinal);
     }
   }
-  fs.renameSync(tmp, contentFinal);
+  // Antivírus ou indexador do Windows podem segurar a pasta recém-copiada por instantes: tenta de novo.
+  for (let tentativa = 1; ; tentativa++) {
+    try {
+      fs.renameSync(tmp, contentFinal);
+      break;
+    } catch (e) {
+      if (tentativa >= 10 || e?.code !== "EPERM") throw e;
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 300 * tentativa);
+    }
+  }
   limpar(antigo);
 }
 

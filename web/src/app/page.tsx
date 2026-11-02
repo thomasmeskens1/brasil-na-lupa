@@ -16,20 +16,18 @@ const PRONTAS = [
     titulo: "Justiça",
     texto: "Temas repetitivos do Superior Tribunal de Justiça (STJ) e temas de repercussão geral e julgamentos do Supremo Tribunal Federal (STF), com a tese, o resultado e os votos dos ministros quando conferidos ou publicados pelo tribunal.",
   },
-];
-
-const EM_CONSTRUCAO = [
   {
     href: "/sao-paulo",
-    titulo: "São Paulo",
-    texto: "Leis da Assembleia Legislativa e atos do governador do Estado de São Paulo.",
+    titulo: "Estado de São Paulo",
+    texto: "Votações da Assembleia Legislativa (ALESP) com o voto de cada deputado estadual, projetos apresentados e as leis, decretos e vetos do governador, com as razões dos vetos.",
   },
   {
     href: "/atibaia",
     titulo: "Atibaia",
-    texto: "Decisões da Câmara Municipal e da Prefeitura de Atibaia.",
+    texto: "Leis e decretos publicados na Imprensa Oficial do município, a composição da Câmara Municipal e as receitas e despesas informadas ao Tribunal de Contas do Estado (TCE-SP).",
   },
 ];
+
 
 function ListaSecoes({ itens, pronta }: { itens: { href: string; titulo: string; texto: string; obs?: string }[]; pronta: boolean }) {
   return (
@@ -93,19 +91,13 @@ export default function Home() {
         <ListaSecoes itens={PRONTAS} pronta />
       </section>
 
-      <section aria-labelledby="titulo-proximas">
-        <h2 id="titulo-proximas" className="text-xl font-bold text-gray-900">
-          Em construção
-        </h2>
-        <ListaSecoes itens={EM_CONSTRUCAO} pronta={false} />
-        <p className="mt-4 text-sm text-gray-800">
-          Como as informações são reunidas:{" "}
-          <Link href="/metodologia" className="lk">
-            Metodologia
-          </Link>
-          .
-        </p>
-      </section>
+      <p className="text-sm text-gray-800">
+        Como as informações são reunidas:{" "}
+        <Link href="/metodologia" className="lk">
+          Metodologia
+        </Link>
+        .
+      </p>
 
     </div>
   );

@@ -6,8 +6,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Voto em Quem — acompanhamento político com fontes oficiais",
-    template: "%s · Voto em Quem",
+    default: "Placar do Poder — acompanhamento político com fontes oficiais",
+    template: "%s · Placar do Poder",
   },
   description:
     "O que é votado e decidido pelos políticos do Brasil: quem decidiu, como cada um votou e a justificativa oficial, sempre com link para o documento de origem.",
@@ -26,7 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <header className="sticky top-0 z-40 border-b border-borda bg-superficie/95 backdrop-blur supports-[backdrop-filter]:bg-superficie/85">
           <div className="relative mx-auto flex max-w-6xl flex-col gap-2 px-4 py-3 md:flex-row md:items-center md:justify-between">
             <Link href="/" className="self-start py-1 text-lg font-bold text-foreground">
-              Voto em Quem
+              Placar do Poder
             </Link>
             <NavPrincipal />
           </div>

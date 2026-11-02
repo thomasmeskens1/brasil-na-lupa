@@ -14,9 +14,12 @@ const FONTES: [string, string][] = [
   ["Estados", "Conselho Nacional de Política Fazendária (CONFAZ)."],
   [
     "Estado de São Paulo",
-    "Secretaria da Fazenda e Planejamento, Assembleia Legislativa do Estado de São Paulo (ALESP) e Diário Oficial do Estado.",
+    "Secretaria da Fazenda e Planejamento; Assembleia Legislativa do Estado de São Paulo (ALESP): Portal Legislativo (deputados, proposições e votações em comissões) e Relatórios de Verificação de Votação do Plenário (PDF); Diário Oficial do Estado (leis, decretos e vetos do governador).",
   ],
-  ["Atibaia", "Câmara Municipal, Prefeitura e Diário Oficial do Município."],
+  [
+    "Atibaia",
+    "Imprensa Oficial Eletrônica da Prefeitura (leis, decretos e atas da Câmara Municipal), Câmara Municipal e Portal da Transparência Municipal do TCE-SP (receitas e despesas).",
+  ],
   [
     "Tribunais superiores",
     "Superior Tribunal de Justiça (STJ): dados abertos e página pública de cada tema; Supremo Tribunal Federal (STF): repercussão geral, Plenário Virtual e súmulas vinculantes.",
@@ -186,7 +189,31 @@ export default function MetodologiaPage() {
         </p>
       </Bloco>
 
-      <Bloco id="coleta" titulo="10. Coleta automática e regras de acesso">
+      <Bloco id="sao-paulo-atibaia" titulo="10. Estado de São Paulo e Atibaia">
+        <p>
+          No Plenário da ALESP, o voto de cada deputado só existe quando há verificação de votação, e o registro oficial é um
+          documento em PDF, o Relatório de Verificação de Votação. O site lê esse documento e só publica os votos individuais
+          quando a contagem confere com os totais impressos no rodapé (votos Sim, votos Não, abstenção, em branco, presidente
+          e total) e cada nome tem a mesma cor de impressão do seu voto. Se a conferência falha, a página mostra só o placar
+          oficial, explica a lacuna e traz o link para o documento.
+        </p>
+        <p>
+          Nomes são reproduzidos como impressos. Um voto só é ligado ao perfil de um deputado quando o nome impresso é idêntico
+          ao da lista oficial; nomes abreviados ficam sem link. Símbolos impressos sem legenda no documento (como “---” no
+          lugar do voto e letras antes de alguns nomes) são reproduzidos e identificados como “sem legenda no documento”, sem
+          interpretação. Nas comissões, o voto é o texto oficial registrado pela ALESP (por exemplo, “Favorável ao voto do
+          relator”), sem conversão para sim ou não.
+        </p>
+        <p>
+          Em Atibaia, leis e decretos são lidos das edições da Imprensa Oficial Eletrônica: só entram atos com número, data e
+          ementa identificados sem dúvida ou conferidos pela curadoria. Os votos dos vereadores ainda não são publicados em
+          formato aberto; por isso, a seção mostra a composição da Câmara lida da ata oficial e não atribui votos. As finanças
+          vêm do Tribunal de Contas do Estado de São Paulo (TCE-SP), que publica os dados enviados pelo município com atraso de
+          alguns meses.
+        </p>
+      </Bloco>
+
+      <Bloco id="coleta" titulo="11. Coleta automática e regras de acesso">
         <p>
           A coleta respeita as regras que cada órgão publica para acesso automático (o arquivo robots.txt do site): páginas
           que essas regras não permitem acessar não são coletadas, e o site guarda apenas o link público. Quando uma página
@@ -195,7 +222,7 @@ export default function MetodologiaPage() {
         </p>
       </Bloco>
 
-      <Bloco id="correcoes" titulo="11. Correções">
+      <Bloco id="correcoes" titulo="12. Correções">
         <p>
           Erros encontrados são corrigidos, e a correção é registrada e informada na própria página
           afetada, com a data. Para apontar um erro, escreva para{" "}
@@ -206,10 +233,12 @@ export default function MetodologiaPage() {
         </p>
       </Bloco>
 
-      <Bloco id="dados-pessoais" titulo="12. Dados pessoais">
+      <Bloco id="dados-pessoais" titulo="13. Dados pessoais">
         <p>
           Dados de agentes públicos são exibidos somente no que se refere ao exercício da função
-          pública. Sobre os visitantes, o site faz apenas medição de audiência sem identificação; veja
+          pública. Nomes de cidadãos comuns citados em atos oficiais, como permissionários e
+          beneficiários, aparecem como &quot;[nome de particular omitido]&quot;, com link para o documento
+          oficial completo; CPF, RG e outros documentos pessoais nunca são exibidos. Sobre os visitantes, o site faz apenas medição de audiência sem identificação; veja
           a{" "}
           <Link href="/privacidade" className="lk">
             Política de Privacidade

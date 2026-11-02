@@ -14,6 +14,7 @@ import {
   TermosExplicados,
 } from "@/features/icms/componentes/DetalheDecisao";
 import { Votacoes } from "@/features/icms/componentes/Votacoes";
+import { LigacoesIcmsSp } from "@/features/sao-paulo/componentes/LigacoesIcms";
 import { CAMINHO_CURTO, formatarData, nomeDoAto } from "@/features/icms/rotulos";
 import type { Decisao } from "@/features/icms/tipos";
 
@@ -79,6 +80,7 @@ export default async function DecisaoPage({ params }: PageProps<"/impostos/icms/
       <Secao id="votacoes" titulo="Votações">
         <Votacoes votacoes={d.votacoes ?? []} />
       </Secao>
+      {d.caminho === "alesp" || d.caminho === "governador-sp" ? <LigacoesIcmsSp decisaoId={d.id} /> : null}
       <Secao id="justificativa" titulo="Justificativa oficial">
         <Justificativas decisao={d} />
       </Secao>
