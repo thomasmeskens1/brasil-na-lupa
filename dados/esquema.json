@@ -4,7 +4,9 @@
     "dados/icms/": "Piloto ICMS — curadoria a partir de docs/pesquisa/icms-sp.json (dono: curadoria-icms)",
     "dados/camara/": "Câmara dos Deputados — coleta automática (dono: scripts/coleta/camara)",
     "dados/senado/": "Senado Federal — coleta automática (dono: scripts/coleta/senado)",
-    "dados/glossario.json": "Termos técnicos e siglas com explicação breve e neutra (dono: orquestrador)"
+    "dados/glossario.json": "Termos técnicos e siglas com explicação breve e neutra (dono: orquestrador)",
+    "dados/stj/": "STJ — coleta automática (dono: scripts/coleta/stj); votos de ministros conferidos em dados/stj/curadoria/votos.json",
+    "dados/stf/": "STF — coleta automática (dono: scripts/coleta/stf); votos conferidos em dados/stf/curadoria/"
   },
   "fonte": {
     "titulo": "Nome legível do documento oficial",
@@ -17,7 +19,7 @@
     "id": "kebab-case estável, ex.: confaz-convenio-127-2026",
     "titulo": "Título neutro e curto, ex.: 'Novo valor do ICMS da gasolina a partir de 01/02/2027'",
     "resumo": "Até 50 palavras, neutro, só fatos do documento",
-    "caminho": "confaz | alesp | governador-sp | congresso | presidencia",
+    "caminho": "confaz | alesp | governador-sp | congresso | presidencia | stf | stj",
     "instrumento": "Convênio ICMS | Ato Declaratório | Lei | Lei Complementar | Decreto | Emenda Constitucional | Decreto Legislativo | Medida Provisória",
     "numero": "Ex.: 127/2026",
     "orgao": "Órgão que decidiu",
@@ -49,8 +51,8 @@
     ],
     "votacoes": [
       {
-        "casa": "camara | senado | alesp | confaz | congresso",
-        "tipo": "nominal | simbolica | unanimidade-registrada | sem-votacao",
+        "casa": "camara | senado | alesp | confaz | congresso | stf | stj",
+        "tipo": "nominal | simbolica | secreta | unanimidade-registrada | maioria-registrada | sem-votacao",
         "data": "AAAA-MM-DD",
         "descricao": "Ex.: Votação em 2º turno do PLP 108/2024",
         "placar": {
@@ -164,7 +166,8 @@
     "Nunca guardar CPF nem dado pessoal que não seja do exercício da função pública.",
     "Votação simbólica: 'votos' vazio e placar null; nunca atribuir voto individual.",
     "Texto exibido ao público sem '_' nem identificadores técnicos; siglas com nome completo no glossário.",
-    "Registros da fonte que divergem de outra página oficial (ex.: 'Presente – Não registrou voto' × 'Não Compareceu') são guardados como a API traz e anotados em lacunas/meta, sem correção manual."
+    "Registros da fonte que divergem de outra página oficial (ex.: 'Presente – Não registrou voto' × 'Não Compareceu') são guardados como a API traz e anotados em lacunas/meta, sem correção manual.",
+    "Respeitar robots.txt e bloqueios anti-robô das fontes: o que estiver bloqueado entra só por curadoria humana, nunca por contorno."
   ],
   "meta_coleta": {
     "_arquivo": "dados/<casa>/meta.json",
@@ -186,5 +189,54 @@
     "atualizado_em": "AAAA-MM-DD",
     "fonte_pesquisa": "arquivo de pesquisa de origem",
     "itens": "decisao[]"
+  },
+  "julgamento": {
+    "_arquivos": "dados/<tribunal>/… (índice + um arquivo por tema/processo)",
+    "tribunal": "stf | stj",
+    "processo": {
+      "classe": "RE | ADI | REsp | …",
+      "numero": "…",
+      "incidente_ou_registro": "id oficial",
+      "url": "página oficial"
+    },
+    "precedente": {
+      "tipo": "repercussao-geral | repetitivo | relevancia | controle-concentrado | sumula | outro",
+      "numero": "nº do tema/súmula",
+      "tese": "texto literal",
+      "questao": "texto literal"
+    },
+    "orgao": "Plenário | Seção | Turma | Corte Especial",
+    "sessao": "virtual | presencial | null",
+    "relator": "nome oficial",
+    "redator_acordao": "nome oficial | null",
+    "data_julgamento": "AAAA-MM-DD",
+    "data_publicacao": "AAAA-MM-DD|null",
+    "certidao_literal": "texto oficial do resultado (certidão de julgamento / campo decisão do acórdão)",
+    "votacoes": [
+      {
+        "parte": "preliminar | mérito | tese | modulação | embargos",
+        "resultado": "unanimidade | maioria (só se literal no texto oficial)",
+        "vencidos": [
+          "nomes copiados do texto oficial"
+        ],
+        "impedidos": [],
+        "ausentes": [],
+        "presidente": "…",
+        "votos": "[{ ministro, tipo_voto (texto oficial, ex.: 'Acompanho o relator', 'Divirjo'), acompanha, data, url_voto }] — só de fonte estruturada (ex.: Plenário Virtual do STF) ou após conferência humana; senão vazio + lacuna"
+      }
+    ],
+    "situacao_conferencia": "automatico-estruturado | conferido | pendente (pendente nunca é exibido)",
+    "fontes": [
+      "fonte"
+    ],
+    "lacunas": []
+  },
+  "ministro": {
+    "tribunal": "stf | stj",
+    "id": "código oficial",
+    "nome": "grafia oficial",
+    "cargo": "…",
+    "orgao": "… | null",
+    "fonte": "fonte"
   }
 }
