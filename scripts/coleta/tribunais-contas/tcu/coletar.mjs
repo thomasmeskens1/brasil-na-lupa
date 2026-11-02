@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Coletor automático do Tribunal de Contas da União (TCU) — Placar do Poder.
+ * Coletor automático do Tribunal de Contas da União (TCU) — Brasil Transparente.
  *
  * USO (Node 20+, sem dependências; de qualquer pasta):
  *   node scripts/coleta/tribunais-contas/tcu/coletar.mjs              # rotina diária (incremental)

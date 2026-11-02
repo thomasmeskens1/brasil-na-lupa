@@ -27,13 +27,13 @@ async function enviarLink({ identifier: email, url }: { identifier: string; url:
   }
   await limparExpirados(sql);
 
-  const assunto = "Seu link para entrar no Placar do Poder";
+  const assunto = "Seu link para entrar no Brasil Transparente";
   const texto =
-    `Use o link abaixo para entrar no Placar do Poder. Ele vale por 1 hora e só pode ser usado uma vez.\n\n${url}\n\n` +
+    `Use o link abaixo para entrar no Brasil Transparente. Ele vale por 1 hora e só pode ser usado uma vez.\n\n${url}\n\n` +
     "Se você não pediu este link, ignore esta mensagem: nenhuma conta é criada sem o clique.";
   const html =
-    `<p>Use o botão abaixo para entrar no Placar do Poder. O link vale por 1 hora e só pode ser usado uma vez.</p>` +
-    `<p><a href="${escapar(url)}" style="display:inline-block;padding:10px 16px;background:#1f2933;color:#ffffff;text-decoration:none;border-radius:4px">Entrar no Placar do Poder</a></p>` +
+    `<p>Use o botão abaixo para entrar no Brasil Transparente. O link vale por 1 hora e só pode ser usado uma vez.</p>` +
+    `<p><a href="${escapar(url)}" style="display:inline-block;padding:10px 16px;background:#1f2933;color:#ffffff;text-decoration:none;border-radius:4px">Entrar no Brasil Transparente</a></p>` +
     `<p>Se você não pediu este link, ignore esta mensagem: nenhuma conta é criada sem o clique.</p>`;
 
   const resposta = await fetch("https://api.resend.com/emails", {

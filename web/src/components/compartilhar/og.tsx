@@ -1,6 +1,6 @@
 /**
  * Imagem Open Graph (prévia do link no WhatsApp e redes) no estilo neutro do Cartão de Decisão:
- * marca "Placar do Poder", caminho + forma + data, título, nome oficial, dado-chave (placar
+ * marca "Brasil Transparente", caminho + forma + data, título, nome oficial, dado-chave (placar
  * completo, antes → depois ou o caminho da decisão), fonte e data de coleta DENTRO da imagem
  * (engajamento, seções 5.1, 5.2 e 5.6). Sem foto, sem cor de partido, mesma cor para Sim e Não.
  *
@@ -18,7 +18,7 @@
  *       titulo: t.titulo, subtitulo: t.subtitulo, caminho: "camara", forma: "votacao-nominal",
  *       data: v.data, dado: { tipo: "placar", itens: placarOficial(v.placar), resultado: v.resultado },
  *       fonte: { orgao: "Câmara dos Deputados", acessado_em: v.fonte.acessado_em },
- *       endereco: `placardopoder…/congresso/votacoes/${casa}/${id}`,   // opcional, impresso no rodapé
+ *       endereco: `brasiltransparente…/congresso/votacoes/${casa}/${id}`,   // opcional, impresso no rodapé
  *     });
  *   }
  *   // Se a rota tiver generateStaticParams, exporte o mesmo generateStaticParams aqui

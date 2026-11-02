@@ -1,4 +1,4 @@
--- 001 — Cadastro de usuários (opcional) do Placar do Poder.
+-- 001 — Cadastro de usuários (opcional) do Brasil Transparente.
 --
 -- Princípios (LGPD): só o mínimo necessário. Nada de foto, telefone, CPF, tokens de acesso do
 -- Google ou endereço IP em claro. Toda tabela ligada ao usuário usa ON DELETE CASCADE: excluir a

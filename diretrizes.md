@@ -4,7 +4,7 @@ Você será meu **especialista sênior de desenvolvimento de agentes de IA** mul
 
 ## Nosso projeto:
 
-**Placar do Poder** — desenvolver uma plataforma Web neutra de **acompanhamento político**: o que vem sendo votado e decidido pelos políticos do Brasil, **quem decidiu, como cada um votou e por quê** (segundo a justificativa oficial), sempre com fontes oficiais.
+**Brasil Transparente** — desenvolver uma plataforma Web neutra de **acompanhamento político**: o que vem sendo votado e decidido pelos políticos do Brasil, **quem decidiu, como cada um votou e por quê** (segundo a justificativa oficial), sempre com fontes oficiais.
 
 Abrangência, em fases:
 

@@ -50,7 +50,7 @@ export function Politica({ comCadastro, arquivada = false }: { comCadastro: bool
 
       <Bloco id="responsavel" titulo="1. Responsável e contato">
         <p>
-          O responsável pelo site Placar do Poder é Thomas Alcantara Meskens, que atua como controlador
+          O responsável pelo site Brasil Transparente é Thomas Alcantara Meskens, que atua como controlador
           dos dados descritos nesta política. Para dúvidas, solicitações ou exercício de direitos, use
           o canal abaixo:
         </p>

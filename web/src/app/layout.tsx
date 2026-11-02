@@ -7,15 +7,15 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Placar do Poder — acompanhamento político com fontes oficiais",
-    template: "%s · Placar do Poder",
+    default: "Brasil Transparente — acompanhamento político com fontes oficiais",
+    template: "%s · Brasil Transparente",
   },
   description:
     "O que é votado e decidido pelos políticos do Brasil: quem decidiu, como cada um votou e a justificativa oficial, sempre com link para o documento de origem.",
   // Padrão do site; páginas de detalhe completam com metadadosCompartilhamento()
   // (@/components/compartilhar), que repete estes campos porque o Next.js substitui o objeto inteiro.
   openGraph: {
-    siteName: "Placar do Poder",
+    siteName: "Brasil Transparente",
     locale: "pt_BR",
     type: "website",
   },
@@ -34,7 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <header className="sticky top-0 z-40 border-b border-borda bg-superficie/95 backdrop-blur supports-[backdrop-filter]:bg-superficie/85">
           <div className="relative mx-auto flex max-w-6xl flex-col gap-2 px-4 py-3 md:flex-row md:items-center md:justify-between">
             <Link href="/" className="inline-flex min-h-11 items-center self-start text-lg font-bold text-foreground">
-              Placar do Poder
+              Brasil Transparente
             </Link>
             <NavPrincipal />
             <BotaoConta />
