@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Secao } from "@/components/Secao";
+import { metadadosCompartilhamento } from "@/components/compartilhar/metadados";
 import { textoLegivel } from "@/features/comum/texto";
 import { Fontes, Termos, Trilha } from "@/features/tribunais-contas/componentes/Basicos";
 import { ExercicioGovernadorItem, tituloGovernador } from "@/features/tribunais-contas/componentes/Exercicios";
@@ -21,10 +22,12 @@ export async function generateMetadata({ params }: PageProps<"/tribunais-de-cont
   const { orgao } = await params;
   const o = getOrgao(orgao);
   if (!o || !temContasGovernador(orgao)) return { title: "Página não encontrada" };
-  return {
-    title: `Contas do Governador${o.uf ? ` de ${o.uf}` : ""}`,
-    description: `Parecer prévio do ${o.nome} sobre as contas do Governador, com ressalvas, determinações, relator e o julgamento pela Assembleia Legislativa.`,
-  };
+  const p = getContasGovernador(orgao).find((x) => x.parecer.conclusao);
+  return metadadosCompartilhamento({
+    titulo: p ? tituloGovernador(p, o) : `Contas do Governador${o.uf ? ` de ${o.uf}` : ""}`,
+    descricao: [`Parecer prévio do ${o.nome} e julgamento pela Assembleia Legislativa`, p?.coletado_em ? `coletado em ${formatarDataTc(p.coletado_em)}` : null],
+    caminho: `${BASE_TC}/${orgao}/contas-do-governador`,
+  });
 }
 
 export default async function ContasGovernadorPage({ params }: PageProps<"/tribunais-de-contas/[orgao]/contas-do-governador">) {
@@ -52,32 +55,37 @@ export default async function ContasGovernadorPage({ params }: PageProps<"/tribu
       <header className="max-w-3xl">
         <Trilha itens={[{ href: `${BASE_TC}/${o.id}`, rotulo: o.id.toUpperCase() }]} />
         <h1 className="mt-2 text-2xl font-bold text-gray-900 md:text-3xl">Contas do Governador{o.uf ? ` de ${o.uf}` : ""}</h1>
-        <p className="mt-3 text-base leading-relaxed text-gray-800">
-          O {o.nome} ({o.id.toUpperCase()}) analisa todo ano as contas do Governador e emite um parecer prévio, votado pelo
-          Tribunal Pleno. O julgamento político é feito depois pela {sp ? "Assembleia Legislativa do Estado de São Paulo (ALESP)" : "Assembleia Legislativa"}, que vota
-          um Projeto de Decreto Legislativo (PDL) sobre as contas
-          {sp ? (
-            <>
-              ; as votações aparecem também na seção{" "}
-              <Link href="/sao-paulo/votacoes" className="lk">
-                votações da ALESP
-              </Link>
-            </>
-          ) : null}
-          .
+        <p className="mt-2 text-base leading-relaxed text-gray-800">
+          O parecer prévio do {o.nome} ({o.id.toUpperCase()}) e o julgamento pela {sp ? "Assembleia Legislativa do Estado de São Paulo (ALESP)" : "Assembleia Legislativa"}, exercício por exercício.
         </p>
-        <p className="mt-3 text-base text-[#3e4c59]">
-          Dados coletados em {formatarDataTc(meta?.atualizado_em ?? lista[0].coletado_em)}. Exercícios do mais recente para o mais antigo.
+        <p className="mt-2 text-base text-[#3e4c59]">
+          Dados coletados em {formatarDataTc(meta?.atualizado_em ?? lista[0].coletado_em)}. Do mais recente para o mais antigo.
         </p>
+        <details className="mt-3 rounded-md border border-borda bg-white">
+          <summary className="pr-3">Como as contas do Governador são julgadas</summary>
+          <p className="border-t border-borda px-3 pb-3 pt-2 text-base leading-relaxed text-gray-800">
+            O {o.nome} ({o.id.toUpperCase()}) analisa todo ano as contas do Governador e emite um parecer prévio, votado pelo
+            Tribunal Pleno. O julgamento político é feito depois pela {sp ? "ALESP" : "Assembleia Legislativa"}, que vota um Projeto de
+            Decreto Legislativo (PDL) sobre as contas
+            {sp ? (
+              <>
+                ; as votações aparecem também na seção{" "}
+                <Link href="/sao-paulo/votacoes" className="lk">
+                  votações da ALESP
+                </Link>
+              </>
+            ) : null}
+            .
+          </p>
+        </details>
       </header>
 
       <nav aria-label="Exercícios" className="max-w-3xl">
-        <h2 className="text-lg font-semibold text-gray-900">Resumo por exercício</h2>
-        <ul className="mt-2 space-y-1">
+        <ul className="flex flex-wrap gap-2">
           {lista.map((p) => (
             <li key={p.id}>
-              <Link href={`#exercicio-${p.parecer.exercicio}`} className="lk inline-flex min-h-11 items-center text-base">
-                {tituloGovernador(p, o)}
+              <Link href={`#exercicio-${p.parecer.exercicio}`} className="botao">
+                {p.parecer.exercicio}
               </Link>
             </li>
           ))}

@@ -1,63 +1,54 @@
 import type { Metadata } from "next";
-import { Secao } from "@/components/Secao";
-import { getDecisoes } from "@/features/icms/dados";
+import Link from "next/link";
+import { tituloSimplesDe } from "@/components/decisao/rotulos";
+import { metadadosCompartilhamento } from "@/components/compartilhar/metadados";
+import { getDecisoes, getTitulos } from "@/features/icms/dados";
+import { itemDaLista } from "@/features/icms/cartao";
 import { AvisoProvisorio } from "@/features/icms/componentes/DetalheDecisao";
-import { LinhaDoTempo, type ItemLinha } from "@/features/icms/componentes/LinhaDoTempo";
+import { JusticaIcms } from "@/features/icms/componentes/JusticaIcms";
+import { ListaIcms } from "@/features/icms/componentes/ListaIcms";
 import { QuemPodeMudar } from "@/features/icms/componentes/QuemPodeMudar";
-import { formatarData, houveVotoDeParlamentares, nomeDoAto } from "@/features/icms/rotulos";
-import { DecisoesJudiciaisIcms } from "@/features/justica/componentes/DecisoesJudiciaisIcms";
+import { formatarData } from "@/features/icms/rotulos";
 
-export const metadata: Metadata = {
-  title: "ICMS: quem decidiu e por quê",
-  description:
+export const metadata: Metadata = metadadosCompartilhamento({
+  titulo: "ICMS: quem decidiu e por quê",
+  descricao:
     "As decisões que mudaram o Imposto sobre Circulação de Mercadorias e Serviços (ICMS) em São Paulo: o que mudou, quem decidiu, como votou e a justificativa oficial.",
-};
+  caminho: "/impostos/icms",
+});
 
 export default function IcmsPage() {
   const dados = getDecisoes();
-  const itens: ItemLinha[] = dados.itens.map((d) => ({
-    id: d.id,
-    titulo: d.titulo,
-    resumo: d.resumo ?? null,
-    caminho: d.caminho,
-    ato: nomeDoAto(d),
-    data: d.datas?.decisao ?? d.datas?.publicacao ?? null,
-    semVotoDeParlamentares: !houveVotoDeParlamentares(d),
-  }));
+  const titulos = getTitulos("icms");
+  const itens = dados.itens.map((d) => itemDaLista(d, tituloSimplesDe(titulos, d.id)));
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-8">
       <header className="max-w-3xl">
-        <p className="meta">Impostos</p>
-        <h1 className="mt-1 text-2xl font-bold text-gray-900 md:text-3xl">ICMS: quem decidiu e por quê</h1>
-        <p className="mt-3 leading-relaxed text-gray-800">
-          O Imposto sobre Circulação de Mercadorias e Serviços (ICMS) é cobrado pelos estados e pelo
-          Distrito Federal sobre a venda de mercadorias, como combustíveis e alimentos, e sobre alguns
-          serviços, como energia e comunicação. Esta página reúne as decisões que mudaram o ICMS em
-          São Paulo, com o que mudou, quem decidiu e a justificativa registrada em documento oficial.
+        <nav aria-label="Você está em" className="text-base">
+          <Link href="/impostos" className="lk inline-flex min-h-11 items-center">
+            Impostos
+          </Link>
+        </nav>
+        <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">ICMS: quem decidiu e por quê</h1>
+        <p className="mt-2 leading-relaxed text-gray-800">
+          O Imposto sobre Circulação de Mercadorias e Serviços (ICMS) é cobrado pelos estados sobre mercadorias, como
+          combustíveis, e serviços, como energia. Veja o que mudou em São Paulo, quem decidiu e a fonte oficial.
         </p>
-        <p className="meta mt-3">Dados atualizados em {formatarData(dados.atualizado_em)}.</p>
+        <p className="meta mt-2">Dados atualizados em {formatarData(dados.atualizado_em)}.</p>
       </header>
 
       {dados.provisorio ? <AvisoProvisorio /> : null}
 
-      <Secao
-        id="quem-pode-mudar"
-        titulo="Quem pode mudar o ICMS"
-        descricao="Há quatro caminhos. Nos convênios do CONFAZ e nos decretos do governador, não há votação de deputados nem de senadores."
-      >
+      <section id="decisoes" aria-labelledby="decisoes-titulo" className="scroll-mt-20 space-y-4">
+        <h2 id="decisoes-titulo" className="text-xl font-bold text-gray-900">
+          Decisões sobre o ICMS
+        </h2>
         <QuemPodeMudar />
-      </Secao>
+        <ListaIcms itens={itens} />
+      </section>
 
-      <Secao
-        id="decisoes"
-        titulo="Linha do tempo das decisões"
-        descricao="Escolha um caminho para ver só as decisões tomadas por ele."
-      >
-        <LinhaDoTempo itens={itens} />
-      </Secao>
-
-      <DecisoesJudiciaisIcms />
+      <JusticaIcms />
     </div>
   );
 }

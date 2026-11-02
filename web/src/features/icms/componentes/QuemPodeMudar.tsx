@@ -51,41 +51,56 @@ const CAMINHOS: Caminho[] = [
   },
 ];
 
-/** Explicação em linguagem simples dos quatro caminhos pelos quais o ICMS pode mudar. */
+/**
+ * Explicação dos quatro caminhos pelos quais o ICMS pode mudar, recolhida num bloco curto
+ * (a lista de decisões vem primeiro na página; auditoria mobile, item 4).
+ */
 export function QuemPodeMudar() {
   return (
-    <ol className="grid grid-cols-1 gap-4 md:grid-cols-2">
-      {CAMINHOS.map((c) => (
-        <li key={c.n} className="cartao">
-          <h3 className="text-base font-semibold text-gray-900">
-            <span className="mr-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-acento text-sm text-white" aria-hidden="true">
-              {c.n}
-            </span>
-            {c.titulo}
-          </h3>
-          <dl className="mt-3 space-y-2 text-sm leading-relaxed text-gray-800">
-            <div>
-              <dt className="font-semibold text-gray-900">Quem decide</dt>
-              <dd>{c.quem}</dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-gray-900">O que pode fazer</dt>
-              <dd>{c.como}</dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-gray-900">Votação</dt>
-              <dd>{c.votacao}</dd>
-            </div>
-          </dl>
-          <p className="mt-3 flex flex-wrap gap-x-3 gap-y-1">
-            {c.fontes.map((f) => (
-              <FonteLink key={f.titulo} href={f.url} tipo="oficial" className="text-xs">
-                {f.titulo}
-              </FonteLink>
-            ))}
-          </p>
-        </li>
-      ))}
-    </ol>
+    <details id="quem-pode-mudar" className="scroll-mt-20 rounded-md border border-borda bg-white">
+      <summary className="pr-3">
+        Quem pode mudar o ICMS <span className="font-normal text-[var(--cor-secundaria)]">(4 caminhos)</span>
+      </summary>
+      <div className="border-t border-borda px-3 pb-3 pt-2">
+        <p className="leading-relaxed text-gray-800">
+          Nos convênios do CONFAZ e nos decretos do governador não há votação de deputados nem de senadores.
+        </p>
+        <ol className="mt-3 grid grid-cols-1 gap-3 md:grid-cols-2">
+          {CAMINHOS.map((c) => (
+            <li key={c.n} className="rounded-md border border-borda bg-superficie px-3 py-3">
+              <h3 className="text-base font-semibold text-gray-900">
+                <span className="mr-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-acento text-sm text-white" aria-hidden="true">
+                  {c.n}
+                </span>
+                {c.titulo}
+              </h3>
+              <dl className="mt-2 space-y-2 leading-relaxed text-gray-800">
+                <div>
+                  <dt className="font-semibold text-gray-900">Quem decide</dt>
+                  <dd>{c.quem}</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-gray-900">O que pode fazer</dt>
+                  <dd>{c.como}</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-gray-900">Votação</dt>
+                  <dd>{c.votacao}</dd>
+                </div>
+              </dl>
+              <ul className="mt-2 flex flex-wrap gap-x-3">
+                {c.fontes.map((f) => (
+                  <li key={f.titulo} className="inline-flex min-h-11 items-center">
+                    <FonteLink href={f.url} tipo="oficial" className="inline-flex min-h-11 items-center text-base!">
+                      {f.titulo}
+                    </FonteLink>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </details>
   );
 }

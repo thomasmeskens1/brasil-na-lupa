@@ -23,7 +23,7 @@ export default function ImpostosPage() {
               ICMS: quem decidiu e por quê
             </Link>
           </h2>
-          <p className="mt-1 text-sm leading-relaxed text-gray-800">
+          <p className="mt-1 leading-relaxed text-gray-800">
             O Imposto sobre Circulação de Mercadorias e Serviços (ICMS) é cobrado pelos estados. Veja
             as decisões que mudaram o ICMS em São Paulo pelos quatro caminhos possíveis: o Conselho
             Nacional de Política Fazendária (CONFAZ), a Assembleia Legislativa, o governador e o

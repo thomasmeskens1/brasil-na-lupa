@@ -135,7 +135,7 @@ function VotacaoAlesp({ v }: { v: VotacaoAlespLigada }) {
         ) : null}
         {v.url ? (
           <li className="inline-flex min-h-11 items-center">
-            <FonteLink href={v.url} tipo={/\.pdf($|\?)/i.test(v.url) ? "pdf" : "oficial"} className="text-base!">
+            <FonteLink href={v.url} tipo={/\.pdf($|\?)/i.test(v.url) ? "pdf" : "oficial"} className="inline-flex min-h-11 items-center text-base!">
               Registro oficial da votação
             </FonteLink>
           </li>

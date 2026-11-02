@@ -1,45 +1,38 @@
 import Link from "next/link";
 import { FonteLink } from "@/components/FonteLink";
+import { BalaoTermo } from "@/components/glossario/BalaoTermo";
+import { ListaRecolhivel } from "@/components/lista/ListaRecolhivel";
+import { TabelaResponsiva } from "@/components/tabela/TabelaResponsiva";
 import { CAMINHO_POR_ID, NAO_DISPONIVEL, formatarData, houveVotoDeParlamentares, rotuloPapel } from "../rotulos";
-import type { Decisao, Fonte, TermoGlossario } from "../tipos";
+import type { Decisao, Fonte, Mudanca, TermoGlossario } from "../tipos";
 
 const SEM_VALOR = "Não informado no documento";
 
-/** Tabela "antes → depois" com os números exatos do documento. */
+/**
+ * "O que mudou": antes → depois com os números exatos do documento. Abaixo de 640 px cada linha
+ * vira um item (sem a coluna "Depois" fora da tela; auditoria mobile, item 3).
+ */
 export function TabelaMudancas({ decisao }: { decisao: Decisao }) {
   const m = decisao.mudancas ?? [];
-  if (!m.length) return <p className="lacuna text-sm">{NAO_DISPONIVEL}</p>;
+  if (!m.length) return <p className="lacuna">{NAO_DISPONIVEL}</p>;
   return (
-    <div className="overflow-x-auto rounded border border-borda" tabIndex={0} role="region" aria-label="O que mudou">
-      <table className="tabela">
-        <caption className="sr-only">Valores antes e depois da decisão</caption>
-        <thead>
-          <tr>
-            <th scope="col">Item</th>
-            <th scope="col">Antes</th>
-            <th scope="col">Depois</th>
-            <th scope="col">Unidade</th>
-            <th scope="col">A partir de</th>
-          </tr>
-        </thead>
-        <tbody>
-          {m.map((x, i) => (
-            <tr key={i}>
-              <th scope="row" className="min-w-[10rem] font-medium">
-                {x.item}
-              </th>
-              <td className="whitespace-nowrap tabular-nums">{x.antes ?? SEM_VALOR}</td>
-              <td className="whitespace-nowrap font-semibold tabular-nums">
-                <span aria-hidden="true">→ </span>
-                {x.depois ?? SEM_VALOR}
-              </td>
-              <td>{x.unidade ?? SEM_VALOR}</td>
-              <td className="whitespace-nowrap">{formatarData(x.vigencia ?? decisao.datas?.vigencia)}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+    <TabelaResponsiva<Mudanca>
+      legenda="Valores antes e depois da decisão"
+      legendaOculta
+      linhas={m}
+      chaveLinha={(x, i) => `${x.item}-${i}`}
+      colunas={[
+        { chave: "item", rotulo: "Item", principal: true, celula: (x) => x.item },
+        { chave: "antes", rotulo: "Antes", celula: (x) => <span className="tabular-nums">{x.antes ?? SEM_VALOR}</span> },
+        {
+          chave: "depois",
+          rotulo: "Depois",
+          celula: (x) => <strong className="tabular-nums">{x.depois ?? SEM_VALOR}</strong>,
+        },
+        { chave: "unidade", rotulo: "Unidade", celula: (x) => x.unidade ?? SEM_VALOR },
+        { chave: "vigencia", rotulo: "A partir de", celula: (x) => formatarData(x.vigencia ?? decisao.datas?.vigencia) },
+      ]}
+    />
   );
 }
 
@@ -50,7 +43,7 @@ export function QuemDecidiu({ decisao }: { decisao: Decisao }) {
   const resp = decisao.responsaveis ?? [];
   return (
     <div className="space-y-4">
-      <dl className="grid grid-cols-1 gap-x-4 gap-y-2 text-sm sm:grid-cols-[max-content_1fr]">
+      <dl className="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-[max-content_1fr]">
         <dt className="font-semibold text-gray-900">Caminho</dt>
         <dd className="text-gray-800">{caminho?.rotulo ?? NAO_DISPONIVEL}</dd>
         <dt className="font-semibold text-gray-900">Órgão que decidiu</dt>
@@ -63,7 +56,7 @@ export function QuemDecidiu({ decisao }: { decisao: Decisao }) {
         ) : null}
       </dl>
       {semParlamentares ? (
-        <p className="aviso text-sm text-gray-900">
+        <p className="aviso text-gray-900">
           <strong>Não houve votação de deputados nem de senadores.</strong> Esta decisão foi tomada{" "}
           {decisao.caminho === "confaz"
             ? "pelos representantes dos estados e do Distrito Federal no CONFAZ."
@@ -73,22 +66,27 @@ export function QuemDecidiu({ decisao }: { decisao: Decisao }) {
         </p>
       ) : null}
       <div>
-        <h3 className="text-base font-semibold text-gray-900">Pessoas citadas no documento</h3>
+        <h3 className="text-lg font-semibold text-gray-900">Pessoas citadas no documento</h3>
         {resp.length ? (
-          <ul className="mt-2 space-y-2">
-            {resp.map((r, i) => (
-              <li key={i} className="rounded border border-borda px-3 py-2 text-sm">
-                <span className="font-semibold text-gray-900">{r.nome}</span>
-                <span className="text-gray-800"> — {rotuloPapel(r.papel)}</span>
-                <span className="meta block">
-                  {r.cargo ?? "Cargo não informado no documento"}
-                  {r.ente ? ` · ${r.ente}` : ""}
-                </span>
-              </li>
-            ))}
-          </ul>
+          <div className="mt-2">
+            <ListaRecolhivel
+              rotulo={{ singular: "pessoa citada", plural: "pessoas citadas" }}
+              inicial={5}
+              className="grid grid-cols-1 gap-2 md:grid-cols-2"
+              itens={resp.map((r, i) => (
+                <div key={i} className="h-full rounded border border-borda px-3 py-2">
+                  <span className="font-semibold text-gray-900">{r.nome}</span>
+                  <span className="text-gray-800"> — {rotuloPapel(r.papel)}</span>
+                  <span className="block text-[var(--cor-secundaria)]">
+                    {r.cargo ?? "Cargo não informado no documento"}
+                    {r.ente ? ` · ${r.ente}` : ""}
+                  </span>
+                </div>
+              ))}
+            />
+          </div>
         ) : (
-          <p className="lacuna mt-2 text-sm">{NAO_DISPONIVEL}</p>
+          <p className="lacuna mt-2">{NAO_DISPONIVEL}</p>
         )}
       </div>
     </div>
@@ -103,13 +101,13 @@ export function Justificativas({ decisao }: { decisao: Decisao }) {
     <div className="space-y-4">
       {j?.texto ? (
         <figure className="rounded border-l-4 border-acento bg-superficie px-4 py-3">
-          <blockquote className="text-sm italic leading-relaxed text-gray-900">“{j.texto}”</blockquote>
-          <figcaption className="meta mt-2">
+          <blockquote className="italic leading-relaxed text-gray-900">“{j.texto}”</blockquote>
+          <figcaption className="mt-2 text-[var(--cor-secundaria)]">
             {j.documento ?? "Documento oficial"}
             {j.url ? (
               <>
                 {" · "}
-                <FonteLink href={j.url} tipo="oficial" className="text-xs">
+                <FonteLink href={j.url} tipo="oficial" className="inline-flex min-h-11 items-center text-base!">
                   ver documento
                 </FonteLink>
               </>
@@ -117,22 +115,22 @@ export function Justificativas({ decisao }: { decisao: Decisao }) {
           </figcaption>
         </figure>
       ) : (
-        <p className="lacuna text-sm">Justificativa não disponível em fonte oficial.</p>
+        <p className="lacuna">Justificativa não disponível em fonte oficial.</p>
       )}
       {contrarias.length ? (
         <div>
-          <h3 className="text-base font-semibold text-gray-900">Justificativas contrárias registradas</h3>
+          <h3 className="text-lg font-semibold text-gray-900">Justificativas contrárias registradas</h3>
           <ul className="mt-2 space-y-3">
             {contrarias.map((c, i) => (
               <li key={i}>
                 <figure className="rounded border border-borda px-4 py-3">
-                  <blockquote className="text-sm italic leading-relaxed text-gray-900">“{c.texto}”</blockquote>
-                  <figcaption className="meta mt-2">
+                  <blockquote className="italic leading-relaxed text-gray-900">“{c.texto}”</blockquote>
+                  <figcaption className="mt-2 text-[var(--cor-secundaria)]">
                     {c.autor ?? "Autor não informado no documento"}
                     {c.url ? (
                       <>
                         {" · "}
-                        <FonteLink href={c.url} tipo="oficial" className="text-xs">
+                        <FonteLink href={c.url} tipo="oficial" className="inline-flex min-h-11 items-center text-base!">
                           ver documento
                         </FonteLink>
                       </>
@@ -148,26 +146,29 @@ export function Justificativas({ decisao }: { decisao: Decisao }) {
   );
 }
 
+/** Termos da decisão em balões (toque abre a explicação; diretriz 9). */
 export function TermosExplicados({ termos }: { termos: TermoGlossario[] }) {
   if (!termos.length) return null;
   return (
-    <dl className="grid grid-cols-1 gap-3 md:grid-cols-2">
-      {termos.map((t) => (
-        <div key={t.termo} className="rounded border border-borda px-3 py-2">
-          <dt className="text-sm font-semibold text-gray-900">{t.termo}</dt>
-          <dd className="mt-1 text-sm leading-relaxed text-gray-800">{t.explicacao}</dd>
-        </div>
-      ))}
-    </dl>
+    <div>
+      <p className="text-[var(--cor-secundaria)]">Toque num termo para ver a explicação.</p>
+      <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 [&_.termo-botao]:inline-flex [&_.termo-botao]:min-h-11 [&_.termo-botao]:items-center">
+        {termos.map((t) => (
+          <li key={t.termo} className="inline-flex min-h-11 items-center">
+            <BalaoTermo texto={t.termo} titulo={t.termo} definicao={t.explicacao} />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
 export function Lacunas({ lacunas }: { lacunas: string[] }) {
-  if (!lacunas.length) return <p className="text-sm text-gray-800">Nenhuma lacuna registrada.</p>;
+  if (!lacunas.length) return <p className="text-gray-800">Nenhuma lacuna registrada.</p>;
   return (
     <ul className="space-y-2">
       {lacunas.map((l, i) => (
-        <li key={i} className="lacuna text-sm">
+        <li key={i} className="lacuna">
           {l}
         </li>
       ))}
@@ -175,32 +176,37 @@ export function Lacunas({ lacunas }: { lacunas: string[] }) {
   );
 }
 
+/** Fontes com data de coleta; listas longas (decretos agrupados) ficam recolhidas. */
 export function Fontes({ fontes }: { fontes: Fonte[] }) {
-  if (!fontes.length) return <p className="lacuna text-sm">{NAO_DISPONIVEL}</p>;
+  if (!fontes.length) return <p className="lacuna">{NAO_DISPONIVEL}</p>;
   return (
-    <ol className="list-decimal space-y-2 pl-5 text-sm">
-      {fontes.map((f, i) => (
-        <li key={i}>
-          <FonteLink href={f.url} tipo="oficial">
+    <ListaRecolhivel
+      rotulo={{ singular: "fonte oficial", plural: "fontes oficiais" }}
+      inicial={5}
+      ordenada
+      className="list-decimal space-y-2 pl-5"
+      itens={fontes.map((f, i) => (
+        <div key={i}>
+          <FonteLink href={f.url} tipo={/\.pdf($|\?)/i.test(f.url) ? "pdf" : "oficial"} className="inline-flex min-h-11 items-center text-base!">
             {f.titulo}
           </FonteLink>
-          <span className="meta block">
+          <span className="block text-[var(--cor-secundaria)]">
             {f.orgao ? `${f.orgao} · ` : ""}
-            Acessado em {formatarData(f.acessado_em)}
+            coletado em {formatarData(f.acessado_em)}
           </span>
-        </li>
+        </div>
       ))}
-    </ol>
+    />
   );
 }
 
 export function Relacionadas({ itens }: { itens: Pick<Decisao, "id" | "titulo">[] }) {
   if (!itens.length) return null;
   return (
-    <ul className="list-disc space-y-1 pl-5 text-sm">
+    <ul className="space-y-1">
       {itens.map((d) => (
         <li key={d.id}>
-          <Link href={`/impostos/icms/${d.id}`} className="lk">
+          <Link href={`/impostos/icms/${d.id}`} className="lk inline-flex min-h-11 items-center">
             {d.titulo}
           </Link>
         </li>
@@ -211,7 +217,7 @@ export function Relacionadas({ itens }: { itens: Pick<Decisao, "id" | "titulo">[
 
 export function AvisoProvisorio() {
   return (
-    <p className="aviso text-sm text-gray-900">
+    <p className="aviso text-gray-900">
       <strong>Dados provisórios de exemplo.</strong> Esta página mostra, por enquanto, duas decisões
       reais transcritas das fontes oficiais citadas, enquanto o levantamento completo das decisões
       sobre o ICMS em São Paulo é concluído.
