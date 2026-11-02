@@ -1,12 +1,24 @@
 import Link from "next/link";
 
-const SECOES = [
+const PRONTAS = [
   {
     href: "/congresso",
     titulo: "Congresso Nacional",
-    texto: "Votações da Câmara dos Deputados e do Senado Federal e o voto de cada parlamentar.",
-    pronta: true,
+    texto: "Votações da Câmara dos Deputados e do Senado Federal, o voto de cada parlamentar e, dos deputados, a presença em Plenário e os gastos da cota parlamentar.",
   },
+  {
+    href: "/executivo",
+    titulo: "Executivo federal",
+    texto: "Medidas provisórias com a exposição de motivos, vetos com as razões oficiais e o que o Congresso decidiu, e leis e decretos.",
+  },
+  {
+    href: "/justica",
+    titulo: "Justiça",
+    texto: "Temas repetitivos do Superior Tribunal de Justiça (STJ) e temas de repercussão geral e julgamentos do Supremo Tribunal Federal (STF), com a tese, o resultado e os votos dos ministros quando conferidos ou publicados pelo tribunal.",
+  },
+];
+
+const EM_CONSTRUCAO = [
   {
     href: "/sao-paulo",
     titulo: "São Paulo",
@@ -18,6 +30,25 @@ const SECOES = [
     texto: "Decisões da Câmara Municipal e da Prefeitura de Atibaia.",
   },
 ];
+
+function ListaSecoes({ itens, pronta }: { itens: { href: string; titulo: string; texto: string; obs?: string }[]; pronta: boolean }) {
+  return (
+    <ul className="mt-3 grid grid-cols-1 gap-4 md:grid-cols-3">
+      {itens.map((s) => (
+        <li key={s.href} className="cartao">
+          <h3 className="text-base font-semibold">
+            <Link href={s.href} className="lk">
+              {s.titulo}
+            </Link>
+          </h3>
+          <p className="mt-1 text-sm text-gray-800">{s.texto}</p>
+          {s.obs ? <p className="meta mt-2">{s.obs}</p> : null}
+          {pronta ? null : <p className="selo mt-2">Em construção</p>}
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 export default function Home() {
   return (
@@ -55,23 +86,18 @@ export default function Home() {
         </Link>
       </section>
 
+      <section aria-labelledby="titulo-prontas">
+        <h2 id="titulo-prontas" className="text-xl font-bold text-gray-900">
+          Seções disponíveis
+        </h2>
+        <ListaSecoes itens={PRONTAS} pronta />
+      </section>
+
       <section aria-labelledby="titulo-proximas">
         <h2 id="titulo-proximas" className="text-xl font-bold text-gray-900">
-          Outras seções
+          Em construção
         </h2>
-        <ul className="mt-3 grid grid-cols-1 gap-4 md:grid-cols-3">
-          {SECOES.map((s) => (
-            <li key={s.href} className="cartao">
-              <h3 className="text-base font-semibold">
-                <Link href={s.href} className="lk">
-                  {s.titulo}
-                </Link>
-              </h3>
-              <p className="mt-1 text-sm text-gray-800">{s.texto}</p>
-              {"pronta" in s ? null : <p className="meta mt-2">Em construção</p>}
-            </li>
-          ))}
-        </ul>
+        <ListaSecoes itens={EM_CONSTRUCAO} pronta={false} />
         <p className="mt-4 text-sm text-gray-800">
           Como as informações são reunidas:{" "}
           <Link href="/metodologia" className="lk">
@@ -80,6 +106,7 @@ export default function Home() {
           .
         </p>
       </section>
+
     </div>
   );
 }

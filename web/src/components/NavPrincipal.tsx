@@ -13,6 +13,8 @@ export const ITENS_NAV: ItemNav[] = [
   { href: "/", rotulo: "Início" },
   { href: "/impostos", rotulo: "Impostos" },
   { href: "/congresso", rotulo: "Congresso" },
+  { href: "/executivo", rotulo: "Executivo" },
+  { href: "/justica", rotulo: "Justiça" },
   { href: "/sao-paulo", rotulo: "São Paulo" },
   { href: "/atibaia", rotulo: "Atibaia" },
   { href: "/metodologia", rotulo: "Metodologia" },

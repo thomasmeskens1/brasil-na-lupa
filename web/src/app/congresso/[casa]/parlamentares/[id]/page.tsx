@@ -5,7 +5,10 @@ import { FonteLink } from "@/components/FonteLink";
 import { Secao } from "@/components/Secao";
 import { getIndice, getParlamentar, votosDoParlamentar } from "@/features/congresso/dados";
 import { ListaFontes, TermosExplicados } from "@/features/congresso/componentes/Basicos";
+import { GastosCota } from "@/features/congresso/componentes/GastosCota";
+import { PresencaDeputado } from "@/features/congresso/componentes/PresencaDeputado";
 import { VotosDoParlamentar, type LinhaVotoParlamentar } from "@/features/congresso/componentes/VotosDoParlamentar";
+import { cotaDoDeputado, presencaDoDeputado } from "@/features/congresso/dados-camara";
 import {
   CASAS,
   CASA_MEMBROS,
@@ -76,7 +79,14 @@ export default async function ParlamentarPage({ params }: PageProps<"/congresso/
   if (p.participacao) ficha.push(["Mandato", p.participacao]);
   if (p.email) ficha.push(["E-mail institucional", p.email]);
 
-  const termos = [TERMOS.abstencao, TERMOS.obstrucao, casa === "camara" ? TERMOS.artigo17 : TERMOS.artigo51];
+  const termos = [
+    TERMOS.abstencao,
+    TERMOS.obstrucao,
+    casa === "camara" ? TERMOS.artigo17 : TERMOS.artigo51,
+    ...(casa === "camara" ? [TERMOS.sessaoDeliberativa, TERMOS.ceap] : []),
+  ];
+  const presenca = casa === "camara" ? presencaDoDeputado(p.id) : [];
+  const cota = casa === "camara" ? cotaDoDeputado(p.id) : [];
 
   return (
     <div className="space-y-10">
@@ -179,6 +189,26 @@ export default async function ParlamentarPage({ params }: PageProps<"/congresso/
           <p className="lacuna text-sm">Nenhum voto registrado nas votações nominais coletadas.</p>
         )}
       </Secao>
+
+      {casa === "camara" ? (
+        <>
+          <Secao
+            id="presenca"
+            titulo="Presença em Plenário"
+            descricao="Frequência nas sessões deliberativas do Plenário da Câmara dos Deputados, como registrada pela própria Câmara."
+          >
+            <PresencaDeputado registros={presenca} urlOficial={p.url_oficial} />
+          </Secao>
+
+          <Secao
+            id="cota"
+            titulo="Gastos da cota parlamentar"
+            descricao={TERMOS.ceap.explicacao}
+          >
+            <GastosCota id={p.id} anos={cota} />
+          </Secao>
+        </>
+      ) : null}
 
       <Secao id="termos" titulo="Termos explicados">
         <TermosExplicados termos={termos} />

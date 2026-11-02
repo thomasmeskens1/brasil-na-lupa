@@ -2,7 +2,8 @@
 /**
  * Sincroniza os dados do projeto para dentro de web/ antes de `dev` e `build`.
  *
- * - ../dados/{icms,camara,senado}/** -> web/content/{icms,camara,senado}/**
+ * - ../dados/{icms,camara,senado,executivo,stj,stf}/** -> web/content/<mesma pasta>/**
+ *   (stf pode ainda não existir: pastas ausentes são ignoradas)
  * - ../dados/glossario.json          -> web/content/glossario.json
  *
  * Pastas ou arquivos ausentes são ignorados. A cópia é feita numa pasta temporária,
@@ -18,7 +19,7 @@ const webDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const dadosDir = path.join(webDir, "..", "dados");
 const contentFinal = path.join(webDir, "content");
 
-const PASTAS = ["icms", "camara", "senado"];
+const PASTAS = ["icms", "camara", "senado", "executivo", "stj", "stf"];
 const ARQUIVOS = ["glossario.json"];
 
 function copiarArvore(origem, destino) {

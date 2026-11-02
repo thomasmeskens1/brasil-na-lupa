@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "sync": "node scripts/sync-data.mjs && node scripts/gerar-congresso.mjs",
-    "predev": "node scripts/sync-data.mjs && node scripts/gerar-congresso.mjs",
+    "sync": "node scripts/sync-data.mjs && node scripts/gerar-congresso.mjs && node scripts/gerar-executivo-justica.mjs",
+    "predev": "node scripts/sync-data.mjs && node scripts/gerar-congresso.mjs && node scripts/gerar-executivo-justica.mjs",
     "dev": "next dev",
-    "prebuild": "node scripts/sync-data.mjs && node scripts/gerar-congresso.mjs",
+    "prebuild": "node scripts/sync-data.mjs && node scripts/gerar-congresso.mjs && node scripts/gerar-executivo-justica.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

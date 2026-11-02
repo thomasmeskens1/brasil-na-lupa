@@ -162,6 +162,16 @@ export const TERMOS = {
     termo: "Ementa",
     explicacao: "Resumo oficial do assunto de uma proposição, escrito no início do texto.",
   },
+  sessaoDeliberativa: {
+    termo: "Sessão deliberativa",
+    explicacao:
+      "Sessão do Plenário em que há votação de propostas (Ordem do Dia). É a base do registro oficial de presença dos deputados.",
+  },
+  ceap: {
+    termo: "Cota para o Exercício da Atividade Parlamentar (CEAP)",
+    explicacao:
+      "Valor que cada deputado pode usar para despesas ligadas ao mandato, como passagens, aluguel de escritório no estado, combustível e divulgação da atividade parlamentar. A Câmara reembolsa ou paga mediante comprovante e publica cada documento.",
+  },
   bloco: {
     termo: "Bloco parlamentar e federação",
     explicacao:

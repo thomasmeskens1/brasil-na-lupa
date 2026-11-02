@@ -18,6 +18,10 @@ const FONTES: [string, string][] = [
   ],
   ["Atibaia", "Câmara Municipal, Prefeitura e Diário Oficial do Município."],
   [
+    "Tribunais superiores",
+    "Superior Tribunal de Justiça (STJ): dados abertos e página pública de cada tema; Supremo Tribunal Federal (STF): repercussão geral, Plenário Virtual e súmulas vinculantes.",
+  ],
+  [
     "Controle e Justiça",
     "Tribunais, Tribunal de Contas da União (TCU), Tribunal de Contas do Estado de São Paulo (TCE-SP), Controladoria-Geral da União (CGU) e Ministérios Públicos.",
   ],
@@ -152,7 +156,46 @@ export default function MetodologiaPage() {
         </p>
       </Bloco>
 
-      <Bloco id="correcoes" titulo="8. Correções">
+      <Bloco id="executivo" titulo="8. Executivo federal">
+        <p>
+          Medidas provisórias, vetos, leis e decretos vêm da Presidência da República (Portal da Legislação do Planalto) e
+          dos dados abertos do Congresso Nacional, do Senado Federal e da Câmara dos Deputados. A justificativa de cada
+          medida provisória é a exposição de motivos publicada pelo Planalto: o site mostra trechos copiados literalmente,
+          com o número do parágrafo, e o link para o documento completo, sem resumo.
+        </p>
+        <p>
+          Nos vetos, cada trecho vetado aparece com a razão oficial do veto e a situação registrada pelo Congresso
+          (mantido, derrubado, não apreciado ou prejudicado). Os votos dos parlamentares na sessão conjunta aparecem como
+          registrados pelo Congresso Nacional; o site não interpreta o que significa votar &quot;Sim&quot; ou &quot;Não&quot;
+          em cada dispositivo quando a fonte oficial não o informa.
+        </p>
+      </Bloco>
+
+      <Bloco id="tribunais" titulo="9. Tribunais: STJ e STF">
+        <p>
+          De cada tema, o site mostra a questão julgada e a tese em texto oficial, o relator, o órgão julgador, as datas e
+          o resultado de cada julgamento como escrito na decisão (unanimidade ou maioria, só quando a expressão está no
+          texto).
+        </p>
+        <p>
+          O voto de um ministro só é exibido quando foi conferido nome a nome contra o texto oficial da decisão ou quando o
+          próprio tribunal publica os votos de forma estruturada, como no Plenário Virtual do STF. Registros extraídos
+          automaticamente e ainda não conferidos nunca são exibidos como voto. Quando o texto oficial deixa dúvida, o site
+          mostra só o resultado literal e explica a dúvida. Quem presidia a sessão aparece em separado e não é contado como
+          voto. Divergências entre arquivos oficiais do mesmo tribunal são mostradas como foram encontradas.
+        </p>
+      </Bloco>
+
+      <Bloco id="coleta" titulo="10. Coleta automática e regras de acesso">
+        <p>
+          A coleta respeita as regras que cada órgão publica para acesso automático (o arquivo robots.txt do site): páginas
+          que essas regras não permitem acessar não são coletadas, e o site guarda apenas o link público. Quando uma página
+          oficial recusa o acesso automático, a informação fica registrada como lacuna, sem outra tentativa de contornar a
+          recusa.
+        </p>
+      </Bloco>
+
+      <Bloco id="correcoes" titulo="11. Correções">
         <p>
           Erros encontrados são corrigidos, e a correção é registrada e informada na própria página
           afetada, com a data. Para apontar um erro, escreva para{" "}
@@ -163,7 +206,7 @@ export default function MetodologiaPage() {
         </p>
       </Bloco>
 
-      <Bloco id="dados-pessoais" titulo="9. Dados pessoais">
+      <Bloco id="dados-pessoais" titulo="12. Dados pessoais">
         <p>
           Dados de agentes públicos são exibidos somente no que se refere ao exercício da função
           pública. Sobre os visitantes, o site faz apenas medição de audiência sem identificação; veja

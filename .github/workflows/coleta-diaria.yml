@@ -43,6 +43,8 @@ jobs:
           restore-keys: stj-
       - name: Superior Tribunal de Justiça
         run: node scripts/coleta/stj/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
+      - name: Supremo Tribunal Federal
+        run: node scripts/coleta/stf/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
       # Votos nominais do plenário da ALESP só existem em PDF: leitura por coordenadas (pdfplumber).
       - uses: actions/setup-python@v5
         with:
@@ -62,7 +64,7 @@ jobs:
         run: |
           git config user.name "coleta-diaria"
           git config user.email "coleta-diaria@users.noreply.github.com"
-          git add dados/camara dados/senado dados/stj dados/executivo dados/alesp dados/governo-sp dados/atibaia
+          git add dados/camara dados/senado dados/stj dados/stf dados/executivo dados/alesp dados/governo-sp dados/atibaia
           # meta.json muda a cada execução; só publica se algum dado de fato mudou.
           if git diff --cached --name-only | grep -qv '/meta\.json$'; then
             git commit -m "Coleta diária: dados oficiais ($(date -u +%F))"

@@ -5,6 +5,7 @@ import { AvisoProvisorio } from "@/features/icms/componentes/DetalheDecisao";
 import { LinhaDoTempo, type ItemLinha } from "@/features/icms/componentes/LinhaDoTempo";
 import { QuemPodeMudar } from "@/features/icms/componentes/QuemPodeMudar";
 import { formatarData, houveVotoDeParlamentares, nomeDoAto } from "@/features/icms/rotulos";
+import { DecisoesJudiciaisIcms } from "@/features/justica/componentes/DecisoesJudiciaisIcms";
 
 export const metadata: Metadata = {
   title: "ICMS: quem decidiu e por quê",
@@ -55,6 +56,8 @@ export default function IcmsPage() {
       >
         <LinhaDoTempo itens={itens} />
       </Secao>
+
+      <DecisoesJudiciaisIcms />
     </div>
   );
 }
