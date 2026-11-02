@@ -1,4 +1,4 @@
-# Coleta diária das fontes oficiais (diretriz 13): Câmara dos Deputados e Senado Federal.
+# Coleta diária das fontes oficiais (diretriz 13): Câmara dos Deputados, Senado Federal e STJ.
 # Roda às 08:37 de Brasília (11:37 UTC; o Senado pede para evitar horários redondos).
 # Só faz commit quando algum dado mudou; o push dispara a publicação na Vercel.
 name: Coleta diária
@@ -33,14 +33,22 @@ jobs:
         run: node scripts/coleta/camara/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
       - name: Senado Federal
         run: node scripts/coleta/senado/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
+      # O portal de dados abertos do STJ é lento: reaproveita os arquivos já baixados entre execuções.
+      - uses: actions/cache@v4
+        with:
+          path: scripts/coleta/stj/.cache
+          key: stj-${{ github.run_id }}
+          restore-keys: stj-
+      - name: Superior Tribunal de Justiça
+        run: node scripts/coleta/stj/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
       - name: Registrar mudanças
         run: |
           git config user.name "coleta-diaria"
           git config user.email "coleta-diaria@users.noreply.github.com"
-          git add dados/camara dados/senado
+          git add dados/camara dados/senado dados/stj
           # meta.json muda a cada execução; só publica se algum dado de fato mudou.
           if git diff --cached --name-only | grep -qv '/meta\.json$'; then
-            git commit -m "Coleta diária: dados da Câmara e do Senado ($(date -u +%F))"
+            git commit -m "Coleta diária: dados oficiais ($(date -u +%F))"
             git push
           else
             echo "Nenhum dado novo."
