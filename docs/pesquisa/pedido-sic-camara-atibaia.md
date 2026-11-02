@@ -3,7 +3,7 @@
 **Canal:** Serviço de Informação ao Cidadão (SIC) da Câmara Municipal da Estância de Atibaia (formulário eletrônico do portal https://www.camaraatibaia.sp.gov.br/ ou protocolo presencial na sede da Câmara). O portal exige navegador com JavaScript ativado.
 **Base legal:** Lei Federal n.º 12.527, de 18 de novembro de 2011 (Lei de Acesso à Informação — LAI).
 
-> Antes de enviar: preencha **[NOME]** e **[CPF/e-mail]**. A LAI (art. 10, § 3º) proíbe exigir os motivos do pedido; o texto abaixo os traz apenas como contexto e pode ser enviado sem eles.
+> O CPF não fica neste arquivo (o repositório é público): ele é informado só no formulário do SIC. A LAI (art. 10, § 3º) proíbe exigir os motivos do pedido; o texto abaixo os traz apenas como contexto e pode ser enviado sem eles.
 
 ---
 
@@ -12,7 +12,7 @@ Serviço de Informação ao Cidadão (SIC)
 
 **Assunto:** Pedido de acesso à informação — exportação das proposituras de 2025 e 2026 com tramitação, registro das votações nominais por vereador em formato aberto e publicação permanente desses dados
 
-Eu, **[NOME]**, identificação **[CPF/e-mail]**, com base no art. 5º, inciso XXXIII, da Constituição Federal e nos arts. 8º, 10 e 11 da Lei n.º 12.527/2011, peço respeitosamente as seguintes informações:
+Eu, **Thomas Alcantara Meskens**, e-mail thomas.meskense@gmail.com, com base no art. 5º, inciso XXXIII, da Constituição Federal e nos arts. 8º, 10 e 11 da Lei n.º 12.527/2011, peço respeitosamente as seguintes informações:
 
 **1. Proposituras de 2025 e 2026, com tramitação**
 Exportação completa, em formato aberto e legível por máquina (CSV ou JSON; XLSX também serve), de todas as proposituras apresentadas de 1º de janeiro de 2025 até a data da resposta, de todos os tipos (projetos de lei, projetos de lei complementar, projetos de resolução, projetos de decreto legislativo, propostas de emenda à Lei Orgânica, vetos, requerimentos, indicações, moções e pareceres), com, para cada uma:
@@ -52,8 +52,8 @@ Agradeço desde já pela atenção.
 
 Atenciosamente,
 
-**[NOME]**
-**[CPF/e-mail]**
+**Thomas Alcantara Meskens**
+thomas.meskense@gmail.com
 Atibaia, ____ de __________ de 20__.
 
 ---
