@@ -2,6 +2,16 @@
 // revisão humana), fila de curadoria e composição da Câmara a partir das atas publicadas.
 import { atosDaPagina, presencaDaPagina, lerCabecalhoEdicao, chaveEmenta, NOMES_TIPO, VERSAO_LEITOR } from './atos.mjs';
 import { semAcento } from './lib.mjs';
+import { ementaPublica, semDocumentos, temDocumentoPessoal, DOC_OMITIDO } from './privacidade.mjs';
+
+/** Diretriz 12: números de CPF/RG e afins nunca são gravados, nem no registro bruto das edições. */
+export function semDocumentosNoAto(a) {
+  if (a.ementa) a.ementa = semDocumentos(a.ementa);
+  if (a.cabecalho) a.cabecalho = semDocumentos(a.cabecalho);
+  if (a.clausula) a.clausula = semDocumentos(a.clausula);
+  if (Array.isArray(a.trecho)) a.trecho = a.trecho.map(semDocumentos);
+  return a;
+}
 
 /** Monta o registro de uma edição a partir da extração do PDF. */
 export function registroDaEdicao(ed, extr, processadoEm) {
@@ -21,7 +31,7 @@ export function registroDaEdicao(ed, extr, processadoEm) {
     for (const a of atosDaPagina(pg, { numero: ed.edicao, data: ed.data })) {
       if (avisos.length) { a.motivos.push(...avisos); a.confianca = 'revisar'; }
       if (a.confianca === 'alta') delete a.trecho; // o trecho só é útil para a curadoria
-      atos.push(a);
+      atos.push(semDocumentosNoAto(a));
     }
     const pr = presencaDaPagina(pg);
     if (pr) presencas.push(pr);
@@ -45,17 +55,26 @@ export function registroDaEdicao(ed, extr, processadoEm) {
   };
 }
 
-const DOC_PESSOAL = /\b(CPF|RG|R\.G\.|C\.P\.F\.)\b/;
+const docsOmitidos = (t) => String(t ?? '').split(DOC_OMITIDO).length - 1;
 const FAIXA_NUMERO ={ decreto: 1000, lei: 300, 'lei-complementar': 100 };
 const urlPagina = (url, p) => `${url}#page=${p}`;
 
 function itemPublicado(a, ed, acessadoEm, extra = {}) {
+  const pub = extra.privacidade;
   return {
     id: a.id,
     tipo: a.tipo_nome,
     numero: a.numero,
     data: a.data,
-    ementa: a.ementa,
+    // Diretriz 12: o site exibe só "ementa_publica"; "ementa" fica para auditoria (literal,
+    // exceto números de documentos pessoais, que nunca são gravados no índice).
+    ementa: semDocumentos(a.ementa),
+    ementa_publica: pub.ementa_publica,
+    ...(pub.mascaras.length || docsOmitidos(pub.ementa_publica) ? { mascaramento: {
+      nomes_omitidos_automatico: pub.mascaras.filter((m) => m.origem === 'automatico').length,
+      nomes_omitidos_lista: pub.mascaras.filter((m) => m.origem === 'lista').length,
+      documentos_omitidos: docsOmitidos(pub.ementa_publica),
+    } } : {}),
     autoria_na_ementa: a.autoria_na_ementa ?? null,
     edicao: { numero: ed.edicao, data: ed.data, url: ed.url },
     pagina: a.pagina,
@@ -79,26 +98,28 @@ function itemPendente(a, ed, motivosExtra = []) {
     tipo: a.tipo_nome ?? null,
     numero: a.numero ?? null,
     data: a.data ?? null,
-    ementa_lida: a.ementa ?? null,
+    ementa_lida: semDocumentos(a.ementa ?? null),
     motivos: [...a.motivos, ...motivosExtra],
     edicao: { numero: ed.edicao, data: ed.data, url: ed.url },
     pagina: a.pagina,
     coluna: a.coluna,
     url: urlPagina(ed.url, a.pagina),
-    trecho: a.trecho || null,
+    trecho: a.trecho ? a.trecho.map(semDocumentos) : null,
   };
 }
 
 /**
- * registros: [{ edicoes: [...] }] (todos os anos); curadoria: { decisoes: [] }.
- * Devolve { indices: { ano: itens[] }, pendentes: [], descartados: n, estatisticas }.
+ * registros: [{ edicoes: [...] }] (todos os anos); curadoria: { decisoes: [] };
+ * mascaras: { ato_id: [{ trecho, substituir_por }] } (revisao/mascaras.json).
+ * Devolve { indices: { ano: itens[] }, pendentes: [], mascarasPendentes: [], estatisticas }.
  */
-export function consolidar(registros, curadoria, acessadoEm) {
+export function consolidar(registros, curadoria, acessadoEm, mascaras = {}) {
   const decisoes = new Map((curadoria?.decisoes || []).map((d) => [d.id_candidato, d]));
   const candidatos = [];
   for (const reg of registros) for (const ed of reg.edicoes || []) for (const a of ed.atos || []) candidatos.push({ a, ed });
 
-  const est = { candidatos: candidatos.length, alta: 0, revisar: 0, revisados_incluidos: 0, descartados: 0, rebaixados: 0 };
+  const est = { candidatos: candidatos.length, alta: 0, revisar: 0, revisados_incluidos: 0, descartados: 0, rebaixados: 0,
+    mascarados_automatico: 0, mascarados_lista: 0, com_documento_omitido: 0, aguardando_mascara: 0 };
   const pendentes = [];
   const altas = [];
   for (const c of candidatos) {
@@ -112,12 +133,6 @@ export function consolidar(registros, curadoria, acessadoEm) {
       if (!a.id || !a.data || !a.ementa) { pendentes.push(itemPendente(c.a, c.ed, ['decisão de inclusão sem tipo, número, data ou ementa completos'])); continue; }
       altas.push({ a, ed: c.ed, revisao: { revisor: d.revisor || null, revisado_em: d.revisado_em || null, observacao: d.observacao || null } });
       est.revisados_incluidos++;
-      continue;
-    }
-    if (c.a.confianca === 'alta' && DOC_PESSOAL.test(c.a.ementa || '')) {
-      // Diretriz 12 / LGPD: ementa que cita documento de pessoa física passa por curadoria.
-      pendentes.push(itemPendente(c.a, c.ed, ['ementa cita documento de pessoa física (CPF/RG); conferir antes de publicar (LGPD)']));
-      est.revisar++;
       continue;
     }
     if (c.a.confianca === 'alta') { altas.push(c); est.alta++; } else { pendentes.push(itemPendente(c.a, c.ed)); est.revisar++; }
@@ -136,7 +151,8 @@ export function consolidar(registros, curadoria, acessadoEm) {
       est.rebaixados += g.length;
       continue;
     }
-    const principal = g.find((x) => x.revisao) || g[0];
+    // Mesma ementa: a primeira publicação é a principal; ementas diferentes: a conferida pela curadoria.
+    const principal = chaves.size === 1 ? g[0] : g.find((x) => x.revisao);
     const outras = g.filter((x) => x !== principal).map((x) => ({ edicao: x.ed.edicao, data: x.ed.data, pagina: x.a.pagina, url: urlPagina(x.ed.url, x.a.pagina) }));
     publicados.push({ ...principal, outras });
   }
@@ -151,6 +167,7 @@ export function consolidar(registros, curadoria, acessadoEm) {
     const s = [...l].sort((a, b) => a - b); return [k, { n: s.length, med: s[Math.floor(s.length / 2)] }];
   }));
   const indices = {};
+  const mascarasPendentes = [];
   for (const x of publicados) {
     const ano = x.a.data.slice(0, 4);
     const md = medianas.get(`${x.a.tipo}-${ano}`);
@@ -159,8 +176,22 @@ export function consolidar(registros, curadoria, acessadoEm) {
       est.rebaixados++;
       continue;
     }
+    // Diretriz 12: nome com dúvida (pessoa física?) segura a publicação até a decisão da curadoria.
+    const privacidade = ementaPublica(x.a.ementa, mascaras?.[x.a.id]);
+    if (privacidade.duvidas.length || temDocumentoPessoal(privacidade.ementa_publica)) {
+      mascarasPendentes.push({
+        ato_id: x.a.id, id_candidato: x.a.id_candidato ?? null, tipo: x.a.tipo_nome, numero: x.a.numero, data: x.a.data,
+        url: urlPagina(x.ed.url, x.a.pagina), ementa: semDocumentos(x.a.ementa),
+        duvidas: privacidade.duvidas.length ? privacidade.duvidas : [{ trecho: '(documento)', motivo: 'padrão de documento pessoal na ementa pública' }],
+      });
+      est.aguardando_mascara++;
+      continue;
+    }
+    if (privacidade.mascaras.some((m) => m.origem === 'automatico')) est.mascarados_automatico++;
+    if (privacidade.mascaras.some((m) => m.origem === 'lista')) est.mascarados_lista++;
+    if (docsOmitidos(privacidade.ementa_publica)) est.com_documento_omitido++;
     (indices[ano] ||= []).push(itemPublicado(x.a, x.ed, acessadoEm, {
-      confianca: x.revisao ? 'revisada' : 'alta', revisao: x.revisao, outras_publicacoes: x.outras,
+      confianca: x.revisao ? 'revisada' : 'alta', revisao: x.revisao, outras_publicacoes: x.outras, privacidade,
     }));
   }
   const ordemTipo = { Decreto: 0, Lei: 1, 'Lei Complementar': 2 };
@@ -169,7 +200,8 @@ export function consolidar(registros, curadoria, acessadoEm) {
       || Number(p.numero.replace(/\./g, '')) - Number(q.numero.replace(/\./g, '')));
   }
   pendentes.sort((p, q) => q.edicao.data.localeCompare(p.edicao.data) || p.pagina - q.pagina || p.id_candidato.localeCompare(q.id_candidato));
-  return { indices, pendentes, estatisticas: est };
+  mascarasPendentes.sort((p, q) => q.data.localeCompare(p.data) || p.ato_id.localeCompare(q.ato_id));
+  return { indices, pendentes, mascarasPendentes, estatisticas: est };
 }
 
 const slug = (s) => semAcento(s).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
