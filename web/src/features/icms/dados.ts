@@ -4,6 +4,7 @@ import { DECISOES_EXEMPLO } from "./fixture";
 import { GLOSSARIO_BASE } from "./glossario-base";
 import type { ArquivoTitulos } from "@/components/decisao/tipos";
 import type { ArquivoDecisoes, Decisao, TermoGlossario } from "./tipos";
+import { TITULOS_SIMPLES_ATIVOS } from "@/components/decisao/rotulos";
 
 /**
  * Leitura dos dados do ICMS em web/content (copiados de ../dados por
@@ -45,6 +46,7 @@ function lerTitulos(arquivo: string, alternativo: string): ArquivoTitulos | null
  * arquivo, os cartões usam o título oficial. Caminhos fixos por seção (rastreamento do Next).
  */
 export function getTitulos(secao: "icms" | "stj" | "stf"): ArquivoTitulos | null {
+  if (!TITULOS_SIMPLES_ATIVOS) return null;
   if (cacheTitulos.has(secao)) return cacheTitulos.get(secao) ?? null;
   const cwd = process.cwd();
   const t =

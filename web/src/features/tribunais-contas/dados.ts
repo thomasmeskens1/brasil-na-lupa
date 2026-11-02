@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import type { ArquivoTitulos, TituloSimples } from "@/components/decisao/tipos";
+import { TITULOS_SIMPLES_ATIVOS } from "@/components/decisao/rotulos";
 import type {
   AcordaoTcu,
   ContasPrefeitos,
@@ -205,6 +206,7 @@ let cacheTitulos: ArquivoTitulos | null | undefined;
  * ../dados/titulos. Sem o arquivo, vale o título oficial.
  */
 export function getTitulosTc(): ArquivoTitulos | null {
+  if (!TITULOS_SIMPLES_ATIVOS) return null;
   if (cacheTitulos !== undefined) return cacheTitulos;
   const lido =
     lerOpcional<ArquivoTitulos>(path.join(process.cwd(), "content", "titulos", "tribunais-contas.json")) ??

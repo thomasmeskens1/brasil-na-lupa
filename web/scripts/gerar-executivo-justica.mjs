@@ -74,7 +74,11 @@ function aprovado(s) {
 }
 
 /** Título para os índices de busca: só o aprovado que reformula o texto (o "oficial" é o próprio texto). */
+// Mesma chave de web/src/components/decisao/rotulos.ts (TITULOS_SIMPLES_ATIVOS).
+const TITULOS_SIMPLES_ATIVOS = false;
+
 function tituloUtil(itens, id) {
+  if (!TITULOS_SIMPLES_ATIVOS) return null;
   const s = itens[id];
   return aprovado(s) && s.origem !== "oficial" ? s.titulo.trim() : null;
 }
@@ -82,7 +86,7 @@ function tituloUtil(itens, id) {
 function gravarTitulos(secao, ids) {
   const fonte = { executivo: titulosExecutivo, stj: titulosStj, stf: titulosStf }[secao];
   const itens = {};
-  for (const id of ids) if (fonte[id]) itens[id] = fonte[id];
+  if (TITULOS_SIMPLES_ATIVOS) for (const id of ids) if (fonte[id]) itens[id] = fonte[id];
   gravar(path.join(saidaServidor, `titulos-${secao}.json`), { itens });
 }
 

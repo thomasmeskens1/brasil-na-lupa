@@ -119,11 +119,18 @@ export function resolverTitulo(p: {
   };
 }
 
+/**
+ * Chave geral dos títulos em linguagem simples. Desligada enquanto a revisão de precisão não
+ * for aprovada: todas as seções mostram o título oficial.
+ */
+export const TITULOS_SIMPLES_ATIVOS = false;
+
 /** Busca o título simples de um item num arquivo dados/titulos/<secao>.json. */
 export function tituloSimplesDe(
   arquivo: { itens?: Record<string, TituloSimples> } | null | undefined,
   id: string,
 ): TituloSimples | null {
+  if (!TITULOS_SIMPLES_ATIVOS) return null;
   return arquivo?.itens?.[id] ?? null;
 }
 
