@@ -1,0 +1,135 @@
+{
+  "atualizado_em": "2026-11-02T22:01:49.246Z",
+  "verificado_em": "2026-11-02T22:01:49.246Z",
+  "periodo": {
+    "inicio": "2026-09-03",
+    "fim": "2026-12-02",
+    "referencia": "2026-11-02",
+    "regra": "últimos 60 dias e próximos 30 dias"
+  },
+  "tempo_real": false,
+  "aviso": "Não é tempo real: a agenda, a pauta e o resultado vêm dos serviços de dados abertos das casas, que se atualizam com atraso de minutos; a coleta é diária.",
+  "contagens": {
+    "por_casa": {
+      "senado": {
+        "sessoes": 51,
+        "por_situacao": {
+          "encerrada": 18,
+          "não realizada": 3,
+          "cancelada": 1,
+          "agendada": 29
+        },
+        "por_tipo": {
+          "deliberativa ordinária": 17,
+          "não deliberativa": 33,
+          "deliberativa extraordinária": 1
+        }
+      },
+      "camara": {
+        "sessoes": 20,
+        "por_situacao": {
+          "encerrada": 8,
+          "agendada": 12
+        },
+        "por_tipo": {
+          "deliberativa extraordinária": 6,
+          "não deliberativa": 14
+        }
+      },
+      "congresso": {
+        "sessoes": 5,
+        "por_situacao": {
+          "encerrada": 2,
+          "agendada": 3
+        },
+        "por_tipo": {
+          "sessão do Congresso Nacional": 5
+        }
+      }
+    },
+    "sessoes": 76,
+    "arquivos_de_pauta": 59,
+    "itens_de_pauta": 110,
+    "itens_por_desfecho": {
+      "aprovado": 56,
+      "não votado": 35,
+      "não informado": 14,
+      "adiado": 1,
+      "retirado": 4
+    }
+  },
+  "regras": {
+    "situacao": "Categoria tirada do texto oficial da situação: \"Encerrada\" → encerrada; \"Agendada\"/\"Convocada\" → agendada; \"Em Andamento\" → em andamento; \"Cancelada\" → cancelada; \"Sessão não realizada\" → não realizada; outro texto → não informado. O texto oficial fica em \"situacao_oficial\".",
+    "tipo": "Categoria tirada do tipo oficial (Câmara: \"descricaoTipo\" e \"descricao\"; Senado: \"TipoSessao\" e o indicador \"deliberativo\" do encontro). Sessões solenes e especiais são não deliberativas; sessões com Casa \"CN\" são sessões do Congresso Nacional. O texto oficial fica em \"tipo_oficial\".",
+    "desfecho": {
+      "camara": [
+        "Fonte: campo \"situacaoItem\" da pauta do evento (API de Dados Abertos da Câmara), texto oficial guardado em \"desfecho_texto_oficial\".",
+        "O texto é dividido em frases; vale a última frase que começa com uma destas expressões:",
+        "\"Matéria não apreciada\" → não votado; \"Retirado(a) de pauta\" ou \"Retirado(a) de ofício\" → retirado;",
+        "\"Adiado(a)\" → adiado; \"Aprovado(a)\" → aprovado; \"Rejeitado(a)\" seguido de \"o Projeto\", \"a Proposta\", \"a Medida Provisória\", \"a Matéria\" ou \"o Projeto de Lei de Conversão\" → rejeitado.",
+        "Frases sobre destaques, emendas avulsas, pareceres preliminares e requerimentos acessórios não contam; quando o próprio item da pauta é um requerimento, as frases sobre o requerimento contam.",
+        "Sem frase desse tipo, ou sessão ainda não realizada: \"não informado\"."
+      ],
+      "senado": [
+        "Fonte: \"descricaoDeliberacao\" e \"textoResultado\" do resultado do mês das sessões plenárias (Dados Abertos do Senado) e os indicadores \"retirado\"/\"adiado\" da pauta do encontro.",
+        "\"Retirado\" → retirado; \"Não apreciado\" → não votado;",
+        "nos demais casos, a primeira frase depois de \"Resultado da matéria:\" que começa com \"Aprovado(a)\" → aprovado, \"Rejeitado(a)\" → rejeitado, \"Retirado(a)\" → retirado, \"Adiado(a)\" → adiado.",
+        "Item ausente do resultado do mês: vale a decisão registrada na pauta do encontro (\"txtDecisao\"), com a mesma regra de palavras (ex.: \"Requerimento aprovado.\" → aprovado), ignorando decisões sobre requerimentos quando o item não é um requerimento.",
+        "Resultado só de requerimento acessório (ex.: urgência) não é desfecho da matéria: fica \"não informado\", com o texto oficial.",
+        "Sem resultado na fonte, ou sessão ainda não realizada: \"não informado\"."
+      ]
+    },
+    "votacoes_no_dia": "Número de arquivos em dados/camara/votacoes (só Plenário) e dados/senado/votacoes com a mesma data da sessão. A Câmara inclui votações simbólicas e nominais; o Senado inclui só votações nominais e secretas, que são as que a fonte de votações publica."
+  },
+  "fontes": [
+    {
+      "titulo": "Câmara dos Deputados: eventos do Plenário (órgão 180)",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/eventos?idOrgao=180",
+      "orgao": "Câmara dos Deputados",
+      "acessado_em": "2026-11-02"
+    },
+    {
+      "titulo": "Câmara dos Deputados: pauta do evento",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/eventos/{id}/pauta",
+      "orgao": "Câmara dos Deputados",
+      "acessado_em": "2026-11-02"
+    },
+    {
+      "titulo": "Câmara dos Deputados: votações do evento",
+      "url": "https://dadosabertos.camara.leg.br/api/v2/eventos/{id}/votacoes",
+      "orgao": "Câmara dos Deputados",
+      "acessado_em": "2026-11-02"
+    },
+    {
+      "titulo": "Senado Federal: agenda do mês nos Plenários do Senado e do Congresso",
+      "url": "https://legis.senado.leg.br/dadosabertos/plenario/agenda/mes/{AAAAMMDD}",
+      "orgao": "Senado Federal",
+      "acessado_em": "2026-11-02"
+    },
+    {
+      "titulo": "Senado Federal: detalhes e pauta do encontro do Plenário",
+      "url": "https://legis.senado.leg.br/dadosabertos/plenario/encontro/{codigo}/pauta",
+      "orgao": "Senado Federal",
+      "acessado_em": "2026-11-02"
+    },
+    {
+      "titulo": "Senado Federal: resultado do mês das sessões plenárias",
+      "url": "https://legis.senado.leg.br/dadosabertos/plenario/resultado/mes/{AAAAMMDD}",
+      "orgao": "Senado Federal",
+      "acessado_em": "2026-11-02"
+    }
+  ],
+  "observacoes": [
+    "Sessões do Congresso Nacional vêm da agenda publicada pelo Senado Federal (Casa \"CN\") e ficam com casa \"congresso\".",
+    "O link oficial da sessão é a página da casa (Câmara: evento legislativo; Senado: pauta da sessão plenária). O vídeo é o link informado pela própria fonte (Câmara: \"urlRegistro\"; Senado: \"linkVideo\" do encontro).",
+    "Relator: Câmara, campo \"relator\" da pauta; Senado, nome citado no texto do parecer que acompanha o item (\"Relator: Senador …\"). Sem isso, \"Informação não disponível em fonte oficial\".",
+    "Arquivos de pauta de dias que saíram da janela não são apagados; sessoes.json lista só a janela atual.",
+    "Câmara: a hora vem de \"dataHoraInicio\" da lista de eventos do Plenário. O detalhe do evento (/eventos/{id}) às vezes traz outro horário (ex.: evento 83066: 15:12 na lista, 10:00 no detalhe); a fonte não explica a diferença e o coletor não escolhe entre os dois além de usar a lista.",
+    "Senado: a página oficial da sessão mostra no resultado só os itens apreciados; itens \"Não apreciado\" constam da pauta dos dados abertos, mas podem não aparecer na página."
+  ],
+  "falhas": [],
+  "execucao": {
+    "requisicoes": 110,
+    "retentativas": 1
+  }
+}
