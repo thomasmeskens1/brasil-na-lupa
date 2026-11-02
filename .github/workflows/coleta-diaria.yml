@@ -56,6 +56,10 @@ jobs:
           node scripts/coleta/alesp/teste-referencia.mjs
       - name: Assembleia Legislativa e governo de SP
         run: node scripts/coleta/alesp/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
+      - name: Tribunal de Contas do Estado de São Paulo
+        env:
+          TCESP_PYTHON: scripts/coleta/alesp/.venv/bin/python
+        run: node scripts/coleta/tribunais-contas/tce-sp/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
       - name: Preparar leitor de PDF de Atibaia
         run: python -m pip install --quiet --user pdfplumber==0.11.10
       - name: Atibaia (Imprensa Oficial, Câmara e finanças pelo TCE-SP)
@@ -64,7 +68,7 @@ jobs:
         run: |
           git config user.name "coleta-diaria"
           git config user.email "coleta-diaria@users.noreply.github.com"
-          git add dados/camara dados/senado dados/stj dados/stf dados/executivo dados/alesp dados/governo-sp dados/atibaia
+          git add dados/camara dados/senado dados/stj dados/stf dados/executivo dados/alesp dados/governo-sp dados/atibaia dados/tribunais-contas
           # meta.json muda a cada execução; só publica se algum dado de fato mudou.
           if git diff --cached --name-only | grep -qv '/meta\.json$'; then
             git commit -m "Coleta diária: dados oficiais ($(date -u +%F))"

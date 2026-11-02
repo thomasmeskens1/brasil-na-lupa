@@ -7,7 +7,8 @@
     "dados/glossario.json": "Termos técnicos e siglas com explicação breve e neutra (dono: orquestrador)",
     "dados/stj/": "STJ — coleta automática (dono: scripts/coleta/stj); votos de ministros conferidos em dados/stj/curadoria/votos.json",
     "dados/stf/": "STF — coleta automática (dono: scripts/coleta/stf); votos conferidos em dados/stf/curadoria/",
-    "dados/executivo/": "Executivo federal — medidas provisórias, vetos (com votos por dispositivo) e normas (dono: scripts/coleta/executivo)"
+    "dados/executivo/": "Executivo federal — medidas provisórias, vetos (com votos por dispositivo) e normas (dono: scripts/coleta/executivo)",
+    "dados/tribunais-contas/<orgao>/": "Tribunais de Contas, um coletor e uma pasta por órgão (tcu, tce-sp; futuros: tce-rj, tce-mg… e tcm-sp/tcm-rj), todos no mesmo formato; registro dos órgãos em dados/tribunais-contas/orgaos.json"
   },
   "fonte": {
     "titulo": "Nome legível do documento oficial",
@@ -168,7 +169,9 @@
     "Votação simbólica: 'votos' vazio e placar null; nunca atribuir voto individual.",
     "Texto exibido ao público sem '_' nem identificadores técnicos; siglas com nome completo no glossário.",
     "Registros da fonte que divergem de outra página oficial (ex.: 'Presente – Não registrou voto' × 'Não Compareceu') são guardados como a API traz e anotados em lacunas/meta, sem correção manual.",
-    "Respeitar robots.txt e bloqueios anti-robô das fontes: o que estiver bloqueado entra só por curadoria humana, nunca por contorno."
+    "Respeitar robots.txt e bloqueios anti-robô das fontes: o que estiver bloqueado entra só por curadoria humana, nunca por contorno.",
+    "Listas oficiais de responsáveis com contas irregulares não são republicadas (trazem CPF); agentes públicos aparecem só pelo nome e cargo em decisões específicas.",
+    "TCU: usar somente a API de dados abertos (dados-abertos.apps.tcu.gov.br); o host sites.tcu.gov.br bloqueia robôs de IA e não é acessado."
   ],
   "meta_coleta": {
     "_arquivo": "dados/<casa>/meta.json",
@@ -193,7 +196,7 @@
   },
   "julgamento": {
     "_arquivos": "dados/<tribunal>/… (índice + um arquivo por tema/processo)",
-    "tribunal": "stf | stj",
+    "tribunal": "stf | stj | tcu | tce-<uf> | tcm-<municipio>",
     "processo": {
       "classe": "RE | ADI | REsp | …",
       "numero": "…",
@@ -230,7 +233,49 @@
     "fontes": [
       "fonte"
     ],
-    "lacunas": []
+    "lacunas": [],
+    "natureza": "acordao | parecer-previo | decisao (tribunais de contas)",
+    "parecer": {
+      "conclusao": "texto literal (ex.: 'favorável com ressalvas')",
+      "ressalvas": [
+        "texto literal"
+      ],
+      "alertas": [
+        "texto literal"
+      ],
+      "contas_de": "Presidente da República | Governador de <UF> | Prefeito de <município>",
+      "exercicio": "AAAA",
+      "com_ressalvas": "true | false",
+      "conclusao_literal": "texto literal",
+      "ressalvas_fonte": "documento de onde vieram as ressalvas"
+    },
+    "julgamento_politico": {
+      "casa": "congresso | alesp | camara-<municipio>",
+      "decisao_id": "id de 'decisao' ou null",
+      "proposicao": "ex.: PDL 46/2025",
+      "votacoes": [
+        "ids em dados/<casa>/votacoes"
+      ],
+      "fonte": "fonte",
+      "_lacuna": "null + lacuna quando ainda não julgado ou não localizado"
+    },
+    "quorum": {
+      "presentes": [
+        "nomes literais"
+      ],
+      "vencidos": [
+        "nomes literais"
+      ],
+      "voto_desempate": "nome ou null",
+      "declaracoes_de_voto": [
+        "nomes"
+      ]
+    },
+    "relator_registros": "quando fontes oficiais divergem sobre o relator: [{ texto, fonte }] + lacuna",
+    "determinacoes_e_recomendacoes": "lista literal numerada, quando o documento traz",
+    "outras_decisoes": "decisões intermediárias (ex.: conversão em diligência)",
+    "documentos": "[{ titulo, url, sha256 }]",
+    "data_transito_em_julgado": "AAAA-MM-DD|null"
   },
   "ministro": {
     "tribunal": "stf | stj",
@@ -439,5 +484,18 @@
     "lacunas": [
       "…"
     ]
+  },
+  "tribunal_contas_orgao": {
+    "_arquivo": "dados/tribunais-contas/orgaos.json → { itens: [...] }",
+    "id": "tcu | tce-<uf> | tcm-<municipio>",
+    "nome": "nome oficial",
+    "esfera": "federal | estadual | distrital | municipal",
+    "uf": "UF ou null",
+    "jurisdiciona": "União | Estado de X e seus municípios | Município de Y",
+    "fontes": [
+      "fonte"
+    ],
+    "situacao_coleta": "ativa | planejada",
+    "robots_e_restricoes": "o que é permitido/bloqueado e decisões tomadas"
   }
 }

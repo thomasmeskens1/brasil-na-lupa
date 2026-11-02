@@ -1,0 +1,98 @@
+{
+  "atualizado_em": "2026-11-02T17:50:53.151Z",
+  "ultima_execucao": "2026-11-02T17:50:53.151Z",
+  "tribunal": "tce-sp",
+  "modo": "incremental",
+  "periodo": {
+    "contas_governador": {
+      "inicio": 2023,
+      "fim": 2025
+    },
+    "contas_prefeitos": "exercícios de 2008 até o ano anterior ao atual"
+  },
+  "contagens": {
+    "exercicios_governador_publicados_na_pagina": 18,
+    "exercicios_governador_processados": 3,
+    "exercicios_governador_com_erro": 0,
+    "linhas_conjunto_pareceres": 6440,
+    "municipios": [
+      {
+        "municipio": "atibaia",
+        "exercicios": 18,
+        "com_parecer_em_fonte_aberta": 10,
+        "sem_fonte_aberta": 8
+      }
+    ]
+  },
+  "contas_governador": [
+    {
+      "exercicio": 2023,
+      "publicado": true,
+      "data_julgamento": "2024-06-26",
+      "conclusao": "favorável",
+      "com_ressalvas": true,
+      "relator": "Valdenir Antonio Polizeli",
+      "julgamento_politico": null,
+      "situacao_conferencia": "automatico-estruturado",
+      "lacunas": 8
+    },
+    {
+      "exercicio": 2024,
+      "publicado": true,
+      "data_julgamento": "2025-06-25",
+      "conclusao": "favorável",
+      "com_ressalvas": true,
+      "relator": "Dimas Ramalho",
+      "julgamento_politico": "PDL 46/2025",
+      "situacao_conferencia": "automatico-estruturado",
+      "lacunas": 5
+    },
+    {
+      "exercicio": 2025,
+      "publicado": false,
+      "data_julgamento": null,
+      "conclusao": null,
+      "com_ressalvas": null,
+      "relator": null,
+      "julgamento_politico": null,
+      "situacao_conferencia": "automatico-estruturado",
+      "lacunas": 2
+    }
+  ],
+  "fontes": [
+    {
+      "titulo": "Contas Anuais (página oficial)",
+      "url": "https://www.tce.sp.gov.br/contas-anuais",
+      "orgao": "Tribunal de Contas do Estado de São Paulo (TCE-SP)",
+      "acessado_em": "2026-11-02"
+    },
+    {
+      "titulo": "Conjunto de dados \"Pareceres\" (Contas de Prefeituras 2008 a 2017)",
+      "url": "https://transparencia.tce.sp.gov.br/sites/default/files/conjunto-dados/pareceres/pareceres.zip",
+      "orgao": "Tribunal de Contas do Estado de São Paulo (TCE-SP)",
+      "acessado_em": "2026-11-02",
+      "pagina": "https://transparencia.tce.sp.gov.br/conjunto-de-dados",
+      "sha256": "3e1b1d31645641b3cc2c5b5cafb8ab1ecfcac8ecc1c5e58930783d3b6a1d70b7",
+      "atualizado_na_fonte": "Wed, 14 Oct 2020 20:30:41 GMT"
+    }
+  ],
+  "robots_e_restricoes": [
+    "Acessados: www.tce.sp.gov.br (página Contas Anuais e PDFs em /sites/default/files/portal/) e transparencia.tce.sp.gov.br (conjuntos de dados); robots.txt Drupal padrão, que não bloqueia esses caminhos.",
+    "Não acessados: www10.tce.sp.gov.br (robots.txt \"Disallow: /\"; pesquisa de pareceres municipais e de processos), doe.tce.sp.gov.br (robots.txt \"Disallow: /pdf/\") e www2.tce.sp.gov.br (HTTP 403). O bloqueio está no código do coletor.",
+    "Listas de responsáveis por contas julgadas irregulares não são republicadas (podem trazer particulares)."
+  ],
+  "observacoes": [
+    "Contas do Governador: relator e número do processo vêm da página Contas Anuais; data e tipo da sessão, lista \"Pelo voto de…\", presidente, conclusão, ressalvas e determinações vêm do texto literal do PDF \"Decisão\"/\"Nota de Decisão\" do Tribunal Pleno.",
+    "Os PDFs de \"Parecer\" assinado de 2023 e 2024 usam fontes sem mapeamento de texto (ilegíveis por máquina, sem OCR); o coletor registra isso em cada exercício.",
+    "Julgamento político: ligado ao Projeto de Decreto Legislativo da ALESP sobre as contas do exercício, quando existir nos dados já coletados em dados/alesp (votações por id).",
+    "Contas dos Prefeitos de 2018 em diante: \"Não disponível em fonte aberta; pedido via Lei de Acesso à Informação enviado ao TCE-SP\".",
+    "Conferência: os campos extraídos de 2023 e 2024 foram conferidos por amostragem contra os PDFs oficiais em 02/11/2026."
+  ],
+  "estatisticas_http": {
+    "requisicoes": 8,
+    "retentativas": 0,
+    "bytes": 2245320,
+    "falhas": []
+  },
+  "duracao_s": 24
+}

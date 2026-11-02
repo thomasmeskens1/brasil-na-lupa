@@ -1,0 +1,696 @@
+{
+  "atualizado_em": "2026-11-02",
+  "descricao": "Registro dos tribunais de contas acompanhados ou planejados. Cada órgão ativo tem um coletor em scripts/coleta/tribunais-contas/<id>/ e uma pasta em dados/tribunais-contas/<id>/, no mesmo formato.",
+  "contagens": {
+    "total": 33,
+    "ativa": 2,
+    "planejada": 31
+  },
+  "itens": [
+    {
+      "id": "tcu",
+      "nome": "Tribunal de Contas da União",
+      "esfera": "federal",
+      "uf": null,
+      "jurisdiciona": "União",
+      "site_oficial": "https://portal.tcu.gov.br/",
+      "fontes": [
+        {
+          "titulo": "API de dados abertos do TCU — acórdãos (recupera-acordaos)",
+          "url": "https://dados-abertos.apps.tcu.gov.br/api/acordao/recupera-acordaos",
+          "orgao": "Tribunal de Contas da União (TCU)",
+          "acessado_em": "2026-11-02"
+        },
+        {
+          "titulo": "Dados Abertos do Senado Federal — tramitação das mensagens (MCN) das contas do Presidente da República",
+          "url": "https://legis.senado.leg.br/dadosabertos/",
+          "orgao": "Senado Federal",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "ativa",
+      "coletor": "scripts/coleta/tribunais-contas/tcu/coletar.mjs",
+      "dados": "dados/tribunais-contas/tcu/",
+      "robots_e_restricoes": "Coleta somente pela API de dados abertos (dados-abertos.apps.tcu.gov.br; o robots.txt só bloqueia MJ12bot). sites.tcu.gov.br não é acessado: o robots.txt proíbe robôs de inteligência artificial pelo nome (ali ficam os CSV anuais de acórdãos com quórum e os hotsites das Contas do Presidente). pesquisa.apps.tcu.gov.br bloqueia robôs por firewall de aplicação (não contornar). contas.tcu.gov.br pede Crawl-delay de 10 s. As listas de responsáveis por contas irregulares (certidoes.apps.tcu.gov.br) trazem CPF e não são republicadas.",
+      "lacunas": [
+        "Voto de cada ministro além do quórum do acórdão não publicado em fonte estruturada"
+      ]
+    },
+    {
+      "id": "tce-sp",
+      "nome": "Tribunal de Contas do Estado de São Paulo",
+      "esfera": "estadual",
+      "uf": "SP",
+      "jurisdiciona": "Estado de São Paulo e municípios paulistas (o Município de São Paulo tem tribunal próprio, o TCM-SP)",
+      "site_oficial": "https://www.tce.sp.gov.br/",
+      "fontes": [
+        {
+          "titulo": "Contas Anuais (contas do Governador: relator, decisão do Tribunal Pleno e parecer)",
+          "url": "https://www.tce.sp.gov.br/contas-anuais",
+          "orgao": "Tribunal de Contas do Estado de São Paulo (TCE-SP)",
+          "acessado_em": "2026-11-02"
+        },
+        {
+          "titulo": "Conjunto de dados \"Pareceres\" — Contas de Prefeituras 2008 a 2017",
+          "url": "https://transparencia.tce.sp.gov.br/sites/default/files/conjunto-dados/pareceres/pareceres.zip",
+          "orgao": "Tribunal de Contas do Estado de São Paulo (TCE-SP)",
+          "acessado_em": "2026-11-02"
+        },
+        {
+          "titulo": "Conjuntos de dados do Portal da Transparência (Audesp)",
+          "url": "https://transparencia.tce.sp.gov.br/conjunto-de-dados",
+          "orgao": "Tribunal de Contas do Estado de São Paulo (TCE-SP)",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "ativa",
+      "coletor": "scripts/coleta/tribunais-contas/tce-sp/coletar.mjs",
+      "dados": "dados/tribunais-contas/tce-sp/",
+      "robots_e_restricoes": "Acessados: www.tce.sp.gov.br (página Contas Anuais e PDFs em /sites/default/files/portal/) e transparencia.tce.sp.gov.br (conjuntos de dados), ambos com robots.txt Drupal padrão. Não acessados: www10.tce.sp.gov.br (robots.txt \"Disallow: /\"; é onde fica a pesquisa de pareceres municipais e de processos), doe.tce.sp.gov.br (Diário Oficial do TCE-SP; robots.txt \"Disallow: /pdf/\") e www2.tce.sp.gov.br (HTTP 403). Os pareceres das contas de prefeitos de 2018 em diante não estão em fonte aberta: pedido via Lei de Acesso à Informação enviado ao TCE-SP. Listas de responsáveis por contas julgadas irregulares não são republicadas.",
+      "lacunas": [
+        "PDFs do parecer assinado das contas do Governador de 2023 e 2024 sem texto legível por máquina (ressalvas detalhadas exigem leitura humana)",
+        "Pareceres sobre as contas de prefeitos a partir do exercício de 2018: não disponíveis em fonte aberta"
+      ]
+    },
+    {
+      "id": "tce-ac",
+      "nome": "Tribunal de Contas do Estado do Acre",
+      "esfera": "estadual",
+      "uf": "AC",
+      "jurisdiciona": null,
+      "site_oficial": "https://tceac.tc.br/site/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado do Acre",
+          "url": "https://tceac.tc.br/site/",
+          "orgao": "Tribunal de Contas do Estado do Acre",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tce-al",
+      "nome": "Tribunal de Contas do Estado de Alagoas",
+      "esfera": "estadual",
+      "uf": "AL",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tceal.tc.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado de Alagoas",
+          "url": "https://www.tceal.tc.br/",
+          "orgao": "Tribunal de Contas do Estado de Alagoas",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tce-ap",
+      "nome": "Tribunal de Contas do Estado do Amapá",
+      "esfera": "estadual",
+      "uf": "AP",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tce.ap.gov.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado do Amapá",
+          "url": "https://www.tce.ap.gov.br/",
+          "orgao": "Tribunal de Contas do Estado do Amapá",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tce-am",
+      "nome": "Tribunal de Contas do Estado do Amazonas",
+      "esfera": "estadual",
+      "uf": "AM",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tceam.tc.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado do Amazonas",
+          "url": "https://www.tceam.tc.br/",
+          "orgao": "Tribunal de Contas do Estado do Amazonas",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tce-ba",
+      "nome": "Tribunal de Contas do Estado da Bahia",
+      "esfera": "estadual",
+      "uf": "BA",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tce.ba.gov.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado da Bahia",
+          "url": "https://www.tce.ba.gov.br/",
+          "orgao": "Tribunal de Contas do Estado da Bahia",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tce-ce",
+      "nome": "Tribunal de Contas do Estado do Ceará",
+      "esfera": "estadual",
+      "uf": "CE",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tce.ce.gov.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado do Ceará",
+          "url": "https://www.tce.ce.gov.br/",
+          "orgao": "Tribunal de Contas do Estado do Ceará",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tc-df",
+      "nome": "Tribunal de Contas do Distrito Federal",
+      "esfera": "distrital",
+      "uf": "DF",
+      "jurisdiciona": null,
+      "site_oficial": "https://www2.tc.df.gov.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Distrito Federal",
+          "url": "https://www2.tc.df.gov.br/",
+          "orgao": "Tribunal de Contas do Distrito Federal",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tce-es",
+      "nome": "Tribunal de Contas do Estado do Espírito Santo",
+      "esfera": "estadual",
+      "uf": "ES",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tcees.tc.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado do Espírito Santo",
+          "url": "https://www.tcees.tc.br/",
+          "orgao": "Tribunal de Contas do Estado do Espírito Santo",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tce-go",
+      "nome": "Tribunal de Contas do Estado de Goiás",
+      "esfera": "estadual",
+      "uf": "GO",
+      "jurisdiciona": null,
+      "site_oficial": "https://portal.tce.go.gov.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado de Goiás",
+          "url": "https://portal.tce.go.gov.br/",
+          "orgao": "Tribunal de Contas do Estado de Goiás",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tce-ma",
+      "nome": "Tribunal de Contas do Estado do Maranhão",
+      "esfera": "estadual",
+      "uf": "MA",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tcema.tc.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado do Maranhão",
+          "url": "https://www.tcema.tc.br/",
+          "orgao": "Tribunal de Contas do Estado do Maranhão",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tce-mt",
+      "nome": "Tribunal de Contas do Estado de Mato Grosso",
+      "esfera": "estadual",
+      "uf": "MT",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tce.mt.gov.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado de Mato Grosso",
+          "url": "https://www.tce.mt.gov.br/",
+          "orgao": "Tribunal de Contas do Estado de Mato Grosso",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos no texto da página inicial. Observação: uma das requisições de teste recebeu a página \"Request Rejected\" (proteção anti-robô do site); outra, com cliente diferente, recebeu a página normal.",
+      "lacunas": []
+    },
+    {
+      "id": "tce-ms",
+      "nome": "Tribunal de Contas do Estado de Mato Grosso do Sul",
+      "esfera": "estadual",
+      "uf": "MS",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tce.ms.gov.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado de Mato Grosso do Sul",
+          "url": "https://www.tce.ms.gov.br/",
+          "orgao": "Tribunal de Contas do Estado de Mato Grosso do Sul",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tce-mg",
+      "nome": "Tribunal de Contas do Estado de Minas Gerais",
+      "esfera": "estadual",
+      "uf": "MG",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tce.mg.gov.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado de Minas Gerais",
+          "url": "https://www.tce.mg.gov.br/",
+          "orgao": "Tribunal de Contas do Estado de Minas Gerais",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na descrição da página inicial (\"TCEMG - Tribunal de Contas do Estado de Minas Gerais\"). Observação: uma das requisições de teste recebeu HTTP 403 \"Request Rejected\" (proteção anti-robô do site).",
+      "lacunas": []
+    },
+    {
+      "id": "tce-pa",
+      "nome": "Tribunal de Contas do Estado do Pará",
+      "esfera": "estadual",
+      "uf": "PA",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tcepa.tc.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado do Pará",
+          "url": "https://www.tcepa.tc.br/",
+          "orgao": "Tribunal de Contas do Estado do Pará",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tce-pb",
+      "nome": "Tribunal de Contas do Estado da Paraíba",
+      "esfera": "estadual",
+      "uf": "PB",
+      "jurisdiciona": null,
+      "site_oficial": "https://tce.pb.gov.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado da Paraíba",
+          "url": "https://tce.pb.gov.br/",
+          "orgao": "Tribunal de Contas do Estado da Paraíba",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tce-pr",
+      "nome": "Tribunal de Contas do Estado do Paraná",
+      "esfera": "estadual",
+      "uf": "PR",
+      "jurisdiciona": null,
+      "site_oficial": "https://www1.tce.pr.gov.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado do Paraná",
+          "url": "https://www1.tce.pr.gov.br/",
+          "orgao": "Tribunal de Contas do Estado do Paraná",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tce-pe",
+      "nome": "Tribunal de Contas do Estado de Pernambuco",
+      "esfera": "estadual",
+      "uf": "PE",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tce.pe.gov.br/internet/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado de Pernambuco",
+          "url": "https://www.tce.pe.gov.br/internet/",
+          "orgao": "Tribunal de Contas do Estado de Pernambuco",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tce-pi",
+      "nome": "Tribunal de Contas do Estado do Piauí",
+      "esfera": "estadual",
+      "uf": "PI",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tcepi.tc.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado do Piauí",
+          "url": "https://www.tcepi.tc.br/",
+          "orgao": "Tribunal de Contas do Estado do Piauí",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tce-rj",
+      "nome": "Tribunal de Contas do Estado do Rio de Janeiro",
+      "esfera": "estadual",
+      "uf": "RJ",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tcerj.tc.br/portalnovo/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado do Rio de Janeiro",
+          "url": "https://www.tcerj.tc.br/portalnovo/",
+          "orgao": "Tribunal de Contas do Estado do Rio de Janeiro",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Endereço conferido pelo título da página (\"Portal TCE-RJ\"). O nome por extenso não aparece no texto da página inicial (montada por JavaScript); aparece apenas no endereço de um link da página para a Lei Orgânica do tribunal.",
+      "lacunas": []
+    },
+    {
+      "id": "tce-rn",
+      "nome": "Tribunal de Contas do Estado do Rio Grande do Norte",
+      "esfera": "estadual",
+      "uf": "RN",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tce.rn.gov.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado do Rio Grande do Norte",
+          "url": "https://www.tce.rn.gov.br/",
+          "orgao": "Tribunal de Contas do Estado do Rio Grande do Norte",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tce-rs",
+      "nome": "Tribunal de Contas do Estado do Rio Grande do Sul",
+      "esfera": "estadual",
+      "uf": "RS",
+      "jurisdiciona": null,
+      "site_oficial": "https://tcers.tc.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado do Rio Grande do Sul",
+          "url": "https://tcers.tc.br/",
+          "orgao": "Tribunal de Contas do Estado do Rio Grande do Sul",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome conferido no texto da página inicial (grafado em maiúsculas). Observação: uma das requisições de teste recebeu a página de verificação anti-robô do serviço de proteção do site; ela não foi contornada.",
+      "lacunas": []
+    },
+    {
+      "id": "tce-ro",
+      "nome": "Tribunal de Contas do Estado de Rondônia",
+      "esfera": "estadual",
+      "uf": "RO",
+      "jurisdiciona": null,
+      "site_oficial": "https://tcero.tc.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado de Rondônia",
+          "url": "https://tcero.tc.br/",
+          "orgao": "Tribunal de Contas do Estado de Rondônia",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tce-rr",
+      "nome": "Tribunal de Contas do Estado de Roraima",
+      "esfera": "estadual",
+      "uf": "RR",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tcerr.tc.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado de Roraima",
+          "url": "https://www.tcerr.tc.br/",
+          "orgao": "Tribunal de Contas do Estado de Roraima",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tce-sc",
+      "nome": "Tribunal de Contas de Santa Catarina",
+      "esfera": "estadual",
+      "uf": "SC",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tcesc.tc.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas de Santa Catarina",
+          "url": "https://www.tcesc.tc.br/",
+          "orgao": "Tribunal de Contas de Santa Catarina",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome conforme grafado na página inicial do site oficial (inscrição do logotipo: \"Tribunal de Contas de Santa Catarina\").",
+      "lacunas": []
+    },
+    {
+      "id": "tce-se",
+      "nome": "Tribunal de Contas do Estado de Sergipe",
+      "esfera": "estadual",
+      "uf": "SE",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tce.se.gov.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado de Sergipe",
+          "url": "https://www.tce.se.gov.br/",
+          "orgao": "Tribunal de Contas do Estado de Sergipe",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tce-to",
+      "nome": "Tribunal de Contas do Estado do Tocantins",
+      "esfera": "estadual",
+      "uf": "TO",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tceto.tc.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Estado do Tocantins",
+          "url": "https://www.tceto.tc.br/",
+          "orgao": "Tribunal de Contas do Estado do Tocantins",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tcm-sp",
+      "nome": "Tribunal de Contas do Município de São Paulo",
+      "esfera": "municipal",
+      "uf": "SP",
+      "jurisdiciona": null,
+      "site_oficial": "https://portal.tcm.sp.gov.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Município de São Paulo",
+          "url": "https://portal.tcm.sp.gov.br/",
+          "orgao": "Tribunal de Contas do Município de São Paulo",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tcm-rj",
+      "nome": "Tribunal de Contas do Município do Rio de Janeiro",
+      "esfera": "municipal",
+      "uf": "RJ",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tcmrio.tc.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas do Município do Rio de Janeiro",
+          "url": "https://www.tcmrio.tc.br/",
+          "orgao": "Tribunal de Contas do Município do Rio de Janeiro",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tcm-ba",
+      "nome": "Tribunal de Contas dos Municípios do Estado da Bahia",
+      "esfera": "estadual",
+      "uf": "BA",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tcm.ba.gov.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas dos Municípios do Estado da Bahia",
+          "url": "https://www.tcm.ba.gov.br/",
+          "orgao": "Tribunal de Contas dos Municípios do Estado da Bahia",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tcm-go",
+      "nome": "Tribunal de Contas dos Municípios do Estado de Goiás",
+      "esfera": "estadual",
+      "uf": "GO",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tcmgo.tc.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas dos Municípios do Estado de Goiás",
+          "url": "https://www.tcmgo.tc.br/",
+          "orgao": "Tribunal de Contas dos Municípios do Estado de Goiás",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    },
+    {
+      "id": "tcm-pa",
+      "nome": "Tribunal de Contas dos Municípios do Estado do Pará",
+      "esfera": "estadual",
+      "uf": "PA",
+      "jurisdiciona": null,
+      "site_oficial": "https://www.tcmpa.tc.br/",
+      "fontes": [
+        {
+          "titulo": "Página inicial — Tribunal de Contas dos Municípios do Estado do Pará",
+          "url": "https://www.tcmpa.tc.br/",
+          "orgao": "Tribunal de Contas dos Municípios do Estado do Pará",
+          "acessado_em": "2026-11-02"
+        }
+      ],
+      "situacao_coleta": "planejada",
+      "robots_e_restricoes": null,
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": []
+    }
+  ]
+}
