@@ -1,0 +1,55 @@
+{
+  "atualizado_em": "2026-11-02T15:44:08.403Z",
+  "ultima_execucao": "2026-11-02T15:44:08.403Z",
+  "periodo": {
+    "inicio": "2026-10-26",
+    "fim": "2026-11-02"
+  },
+  "modo": "incremental",
+  "contagens": {
+    "por_ano": {
+      "2025": {
+        "total": 1547,
+        "por_sigla": {
+          "PDL": 49,
+          "PEC": 5,
+          "PL": 1406,
+          "PLC": 57,
+          "PR": 30
+        },
+        "situacao_atualizada_nesta_execucao": 15
+      },
+      "2026": {
+        "total": 956,
+        "por_sigla": {
+          "PDL": 24,
+          "PEC": 2,
+          "PL": 901,
+          "PLC": 16,
+          "PR": 13
+        },
+        "situacao_atualizada_nesta_execucao": 71
+      }
+    },
+    "processos_com_tramitacao_no_periodo": 97
+  },
+  "fontes": [
+    {
+      "titulo": "Proposições — Portal Legislativo da ALESP",
+      "url": "https://legis-api-portal-prd.al.sp.gov.br/processo",
+      "orgao": "Assembleia Legislativa do Estado de São Paulo (ALESP)",
+      "acessado_em": "2026-11-02"
+    },
+    {
+      "titulo": "Tramitações publicadas por dia",
+      "url": "https://legis-api-portal-prd.al.sp.gov.br/notificacao/tramitacoes/{data}",
+      "orgao": "Assembleia Legislativa do Estado de São Paulo (ALESP)",
+      "acessado_em": "2026-11-02"
+    }
+  ],
+  "observacoes": [
+    "Tipos: PL (Projeto de Lei), PLC (Projeto de Lei Complementar), PEC (Proposta de Emenda à Constituição), PDL (Projeto de Decreto Legislativo), PR (Projeto de Resolução). Ano = ano de apresentação.",
+    "Situação: etapa e regime informados pela ALESP e a última tramitação (texto oficial). O campo situacao_coletada_em indica quando a situação foi consultada.",
+    "O arquivo legado proposituras.xml da ALESP parou em 2026-07-28; por isso a fonte é a API do portal."
+  ]
+}

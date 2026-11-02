@@ -1,0 +1,42 @@
+{
+  "atualizado_em": "2026-11-02T15:44:08.403Z",
+  "ultima_execucao": "2026-11-02T15:44:08.403Z",
+  "periodo": {
+    "inicio": "2026-10-26",
+    "fim": "2026-11-02"
+  },
+  "modo": "incremental",
+  "contagens": {
+    "por_ano": {
+      "2026": {
+        "total": 769,
+        "por_tipo": {
+          "Decreto": 621,
+          "Lei": 113,
+          "Lei (retificação)": 3,
+          "Decreto (retificação)": 17,
+          "Lei Complementar": 7,
+          "Veto Parcial": 3,
+          "Veto Total": 5
+        },
+        "sem_ementa": 0
+      }
+    }
+  },
+  "fontes": [
+    {
+      "titulo": "Diário Oficial do Estado de São Paulo — busca por seção",
+      "url": "https://do-api-web-search.doe.sp.gov.br/v2/advanced-search/publications",
+      "orgao": "Diário Oficial do Estado de São Paulo (Imprensa Oficial / Governo do Estado)",
+      "acessado_em": "2026-11-02"
+    }
+  ],
+  "observacoes": [
+    "Seções do caderno Executivo > Atos Normativos: Leis Complementares, Leis, Decretos, Veto Total a Projeto de Lei, Veto Parcial a Projeto de Lei. Ano do índice = ano de publicação no DOE.",
+    "Ementa: trecho literal entre o título e \"O GOVERNADOR DO ESTADO...\"; quando não identificada, fica null com lacuna.",
+    "Vetos: razoes_veto traz o texto integral da mensagem publicada; o projeto vetado é ligado à ALESP pelo número (rota id-por-tipo-numero-ano).",
+    "Retificações aparecem como itens próprios (retificacao: true), com o texto publicado.",
+    "Leis: projeto_origem_texto reproduz a linha literal \"(Projeto de lei n.º …, de …, do(s) Deputado(s) …)\" publicada no DOE; projeto_origem traz sigla, número e ano lidos dessa linha.",
+    "A API do DOE não tem documentação pública e pode mudar sem aviso."
+  ]
+}

@@ -23,7 +23,7 @@ concurrency:
 jobs:
   coletar:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -43,11 +43,22 @@ jobs:
           restore-keys: stj-
       - name: Superior Tribunal de Justiça
         run: node scripts/coleta/stj/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
+      # Votos nominais do plenário da ALESP só existem em PDF: leitura por coordenadas (pdfplumber).
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Preparar leitor de PDF da ALESP
+        run: |
+          python -m venv scripts/coleta/alesp/.venv
+          scripts/coleta/alesp/.venv/bin/pip install --quiet -r scripts/coleta/alesp/requirements.txt
+          node scripts/coleta/alesp/teste-referencia.mjs
+      - name: Assembleia Legislativa e governo de SP
+        run: node scripts/coleta/alesp/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
       - name: Registrar mudanças
         run: |
           git config user.name "coleta-diaria"
           git config user.email "coleta-diaria@users.noreply.github.com"
-          git add dados/camara dados/senado dados/stj dados/executivo
+          git add dados/camara dados/senado dados/stj dados/executivo dados/alesp dados/governo-sp
           # meta.json muda a cada execução; só publica se algum dado de fato mudou.
           if git diff --cached --name-only | grep -qv '/meta\.json$'; then
             git commit -m "Coleta diária: dados oficiais ($(date -u +%F))"

@@ -1,0 +1,65 @@
+{
+  "atualizado_em": "2026-11-02T15:44:08.403Z",
+  "ultima_execucao": "2026-11-02T15:44:08.403Z",
+  "periodo": {
+    "inicio": "2026-10-26",
+    "fim": "2026-11-02"
+  },
+  "modo": "incremental",
+  "contagens": {
+    "por_ano": {
+      "2025": {
+        "votacoes": 1561,
+        "plenario": 39,
+        "plenario_com_votos_individuais": 38,
+        "plenario_sem_votos_individuais": 1,
+        "comissoes": 1522,
+        "votos": 16238
+      },
+      "2026": {
+        "votacoes": 733,
+        "plenario": 12,
+        "plenario_com_votos_individuais": 12,
+        "plenario_sem_votos_individuais": 0,
+        "comissoes": 721,
+        "votos": 7047
+      }
+    },
+    "plenario": {
+      "votacoes": 51,
+      "com_votos": 50,
+      "sem_votos": 1,
+      "votos": 4700
+    },
+    "comissoes_nesta_execucao": {
+      "processos_consultados": 32,
+      "votacoes_gravadas": 41,
+      "fora_do_periodo": 7,
+      "sem_data": 0
+    }
+  },
+  "fontes": [
+    {
+      "titulo": "Votações nominais em Plenário — lista anual",
+      "url": "https://legis-api-portal-prd.al.sp.gov.br/votacao/{ano}",
+      "orgao": "Assembleia Legislativa do Estado de São Paulo (ALESP)",
+      "acessado_em": "2026-11-02"
+    },
+    {
+      "titulo": "Votações nominais em comissões",
+      "url": "https://legis-api-portal-prd.al.sp.gov.br/processo/votacaoComissao/{idProcesso}",
+      "orgao": "Assembleia Legislativa do Estado de São Paulo (ALESP)",
+      "acessado_em": "2026-11-02"
+    }
+  ],
+  "observacoes": [
+    "Plenário: só há voto individual quando houve verificação de votação; o registro oficial é o PDF \"Relatório de Verificação de Votação\". Votações simbólicas não têm voto individual e não aparecem aqui.",
+    "Plenário: leitura do PDF por coordenadas (o voto fica cerca de 0,75 ponto abaixo da linha do nome; partidos longos invadem a coluna do voto). Votos individuais só são publicados quando a contagem confere com o rodapé (Votos Sim, Votos Não, Abstenção, Em Branco, Presidente, Total) e cada nome tem a mesma cor de impressão do seu voto; caso contrário, placar oficial + lacuna + link.",
+    "Plenário: \"---\" é reproduzido como consta do relatório (sem legenda oficial). O campo marcador_relatorio reproduz a letra impressa antes do nome (ex.: L, P, G), cuja legenda não consta do relatório; \"P\" coincide com o campo \"Presidente\" do rodapé.",
+    "Plenário: placar.obstrucao é a contagem dos registros \"Obstrução\" lidos do relatório (o rodapé não traz esse total); placar.outros = \"Em Branco\".",
+    "Plenário: o relatório da eleição da Mesa (formato de votos por candidato) não é lido automaticamente.",
+    "Comissões: o voto é o texto oficial (ex.: \"Favorável ao voto do relator\", \"Com o Voto em Separado\", \"Não registrou voto\"), sem conversão para sim/não; placar null.",
+    "Comissões: id = idReuniaoItemDeliberacao da ALESP; período a partir de 2025-01-01. Partido na data do voto não informado pela fonte.",
+    "Ligação nome → parlamentar_id só por nome idêntico (sem acento/maiúsculas) na lista oficial; caso contrário null."
+  ]
+}
