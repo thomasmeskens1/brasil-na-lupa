@@ -16,6 +16,20 @@
   --cor-acento-fundo: #eef2f6;
   --cor-borda: #cbd2d9;
   --cor-superficie: #f5f7fa;
+  /* Texto de apoio (metadados, rótulos): 6,5:1 sobre branco. */
+  --cor-texto-apoio: #52606d;
+  /*
+   * Placar e contagens (diretriz 4): todas as opções na MESMA família de cinza, em ordem fixa
+   * (Sim · Não · Abstenção · Obstrução · Outros). Nada de verde = bom / vermelho = ruim. A cor
+   * nunca é a única pista: cada parte tem rótulo e número em texto.
+   */
+  --cor-placar-1: #3e4c59;
+  --cor-placar-2: #7b8794;
+  --cor-placar-3: #b8c2cc;
+  --cor-placar-4: #dde2e7;
+  --cor-placar-5: #eef1f4;
+  /* Alvo de toque mínimo (WCAG 2.5.5 / Apple HIG). */
+  --alvo-toque: 2.75rem;
 }
 
 @theme inline {
@@ -29,6 +43,22 @@
     sans-serif;
 }
 
+/*
+ * Tipografia (auditoria mobile, itens 8 e 9): corpo em 16 px com linha 1,5 e metadados com no
+ * mínimo 14 px. "text-xs" passa a 14 px; "text-sm" a 15 px no computador e 16 px no celular.
+ */
+@theme {
+  --text-xs: 0.875rem;
+  --text-xs--line-height: 1.25rem;
+  --text-sm: 0.9375rem;
+  --text-sm--line-height: 1.5;
+}
+@media (max-width: 639.98px) {
+  :root {
+    --text-sm: 1rem;
+  }
+}
+
 html {
   color-scheme: light;
   /* Âncoras não ficam escondidas sob o cabeçalho fixo */
@@ -39,6 +69,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.5;
   /* URLs longas quebram em vez de causar rolagem horizontal */
   overflow-wrap: break-word;
 }
@@ -54,7 +86,11 @@ details > summary {
   display: block;
   list-style: none;
   cursor: pointer;
-  padding-left: 1.25rem;
+  /* Alvo de toque de 44 px (o texto continua quebrando depois da seta). */
+  min-height: var(--alvo-toque);
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  padding-left: 1.5rem;
   color: var(--foreground);
   font-weight: 500;
 }
@@ -67,9 +103,9 @@ details > summary::marker {
 details > summary::before {
   content: "";
   position: absolute;
-  left: 0.25rem;
-  top: 0.7em;
-  top: 0.5lh;
+  left: 0.375rem;
+  top: calc(0.625rem + 0.75em);
+  top: calc(0.625rem + 0.5lh);
   width: 0;
   height: 0;
   border-top: 0.3rem solid transparent;
@@ -85,12 +121,28 @@ details > summary:hover {
   background-color: var(--cor-superficie);
 }
 
+/* Controles com alvo de toque de 44 px. Em @layer base: utilitários (h-8 etc.) ainda vencem. */
+@layer base {
+  button,
+  select,
+  textarea,
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]) {
+    min-height: var(--alvo-toque);
+  }
+}
+
 @layer components {
+  /*
+   * Links: quebram só entre palavras (break-word, herdado do body), nunca no meio de um nome
+   * ("Favach / o"). Para link cujo texto é uma URL longa, use .lk-url.
+   */
   .lk {
     color: var(--cor-link);
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 2px;
+  }
+  .lk-url {
     overflow-wrap: anywhere;
   }
   .lk:hover {
@@ -100,11 +152,10 @@ details > summary:hover {
     display: inline-block;
     border-radius: 0.25rem;
     background: #e4e7eb;
-    padding: 0 0.25rem;
-    font-size: 0.7rem;
+    padding: 0 0.3125rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.025em;
     color: #1f2933;
     text-decoration: none;
   }
@@ -116,8 +167,8 @@ details > summary:hover {
     min-width: 0;
   }
   .meta {
-    font-size: 0.75rem;
-    line-height: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     color: var(--cor-secundaria);
   }
   .selo {
@@ -128,8 +179,8 @@ details > summary:hover {
     border-radius: 0.25rem;
     background: #fff;
     padding: 0.125rem 0.5rem;
-    font-size: 0.75rem;
-    line-height: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     font-weight: 600;
     color: #1f2933;
   }
@@ -158,7 +209,8 @@ details > summary:hover {
   .tabela {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.875rem;
+    font-size: var(--text-sm);
+    line-height: 1.5;
   }
   .tabela th,
   .tabela td {
@@ -179,7 +231,7 @@ details > summary:hover {
     border: 1px solid;
     border-radius: 0.25rem;
     padding: 0.125rem 0.375rem;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 600;
   }
   .vt-esquerda {
@@ -196,5 +248,217 @@ details > summary:hover {
     color: #0f2a50;
     background: #9cc3ec;
     border-color: #2f6db3;
+  }
+}
+
+/*
+ * Base visual do redesenho mobile (Onda 1): Cartão de Decisão, placar, tabela que vira lista,
+ * balão de glossário e botões. Componentes em src/components/decisao, compartilhar, tabela,
+ * glossario e lista.
+ */
+@layer components {
+  /* Botões neutros com alvo de 44 px. */
+  .botao {
+    display: inline-flex;
+    min-height: var(--alvo-toque);
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 1px solid #7b8794;
+    border-radius: 0.375rem;
+    background: #fff;
+    padding: 0.5rem 0.875rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    color: var(--foreground);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .botao:hover {
+    background: var(--cor-superficie);
+  }
+  .botao-escuro {
+    border-color: var(--cor-acento);
+    background: var(--cor-acento);
+    color: #fff;
+  }
+  .botao-escuro:hover {
+    background: #22374a;
+  }
+
+  /*
+   * Cartão de Decisão: o título leva o link e o ::after cobre o cartão inteiro (área toda
+   * clicável, um único link para leitor de tela). Fonte e Compartilhar ficam acima (z-index).
+   */
+  .cartao-decisao {
+    position: relative;
+    border: 1px solid var(--cor-borda);
+    border-radius: 0.5rem;
+    background: #fff;
+    padding: 1rem;
+    min-width: 0;
+  }
+  .cartao-decisao:hover {
+    border-color: #7b8794;
+  }
+  .cartao-decisao:focus-within {
+    border-color: var(--cor-acento);
+  }
+  .cartao-decisao__link {
+    color: var(--foreground);
+    text-decoration: none;
+  }
+  .cartao-decisao__link:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .cartao-decisao__link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.5rem;
+  }
+  .cartao-decisao__link:focus-visible {
+    outline: none;
+  }
+  .cartao-decisao__link:focus-visible::after {
+    outline: 3px solid #1d4ed8;
+    outline-offset: 2px;
+  }
+  .cartao-decisao__acima {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Barra do placar (só votação nominal). Separadores brancos entre as partes. */
+  .placar-barra {
+    display: flex;
+    height: 0.75rem;
+    overflow: hidden;
+    border-radius: 0.25rem;
+    background: var(--cor-placar-5);
+    gap: 2px;
+  }
+  .placar-barra > span {
+    display: block;
+    min-width: 2px;
+  }
+  .placar-amostra {
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    flex: none;
+    border: 1px solid #7b8794;
+    border-radius: 0.125rem;
+  }
+
+  /*
+   * Tabela que vira lista de itens abaixo de 640 px (sem rolagem dentro de rolagem). Os papéis
+   * ARIA ficam explícitos no HTML porque display:block apaga a semântica de tabela em alguns
+   * navegadores.
+   */
+  .tabela-resp-caixa {
+    min-width: 0;
+  }
+  @media (min-width: 640px) {
+    .tabela-resp-caixa {
+      overflow-x: auto;
+    }
+  }
+  @media (max-width: 639.98px) {
+    .tabela-resp thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+    .tabela-resp,
+    .tabela-resp tbody,
+    .tabela-resp tr,
+    .tabela-resp td,
+    .tabela-resp th {
+      display: block;
+      width: 100%;
+    }
+    .tabela-resp caption {
+      display: block;
+      text-align: left;
+    }
+    .tabela-resp tbody tr {
+      margin-top: 0.5rem;
+      border: 1px solid var(--cor-borda);
+      border-radius: 0.5rem;
+      background: #fff;
+      padding: 0.5rem 0.75rem;
+    }
+    .tabela-resp.tabela th,
+    .tabela-resp.tabela td {
+      border-bottom: 0;
+      padding: 0.25rem 0;
+    }
+    .tabela-resp td[data-rotulo] {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: space-between;
+      text-align: right;
+    }
+    .tabela-resp td[data-rotulo]::before {
+      content: attr(data-rotulo);
+      flex: 0 0 auto;
+      max-width: 45%;
+      text-align: left;
+      font-weight: 600;
+      color: var(--cor-secundaria);
+    }
+    .tabela-resp .tabela-resp__principal {
+      font-size: 1.0625rem;
+      font-weight: 600;
+      text-align: left;
+    }
+  }
+
+  /* Glossário em balão: termo com sublinhado pontilhado; o balão abre como folha inferior. */
+  .termo-botao {
+    display: inline;
+    min-height: 0;
+    border: 0;
+    background: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    text-align: inherit;
+    text-decoration: underline dotted;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    cursor: help;
+  }
+  .termo-botao:hover {
+    color: var(--cor-link-hover);
+  }
+  .termo-balao {
+    position: fixed;
+    inset: auto 0.75rem 0.75rem 0.75rem;
+    width: auto;
+    max-width: 34rem;
+    max-height: 70vh;
+    margin: 0 auto;
+    overflow: auto;
+    border: 1px solid #7b8794;
+    border-radius: 0.5rem;
+    background: #fff;
+    padding: 1rem;
+    color: var(--foreground);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: left;
+    box-shadow: 0 8px 28px rgb(31 41 51 / 0.25);
+  }
+  .termo-balao::backdrop {
+    background: rgb(31 41 51 / 0.15);
   }
 }

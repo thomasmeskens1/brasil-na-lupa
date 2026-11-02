@@ -46,14 +46,14 @@ export function NavPrincipal() {
         aria-expanded={aberto}
         aria-controls="menu-principal"
         onClick={() => setAberto((v) => !v)}
-        className="absolute right-4 top-2 inline-flex min-h-11 items-center gap-2 rounded border border-[#7b8794] bg-white px-3 py-1.5 text-sm font-medium text-foreground md:hidden"
+        className="absolute right-4 top-3 inline-flex min-h-11 items-center gap-2 rounded border border-[#7b8794] bg-white px-3 py-1.5 text-sm font-medium text-foreground md:hidden"
       >
         <span aria-hidden="true" className="flex flex-col gap-0.5">
           <span className="block h-0.5 w-4 bg-foreground" />
           <span className="block h-0.5 w-4 bg-foreground" />
           <span className="block h-0.5 w-4 bg-foreground" />
         </span>
-        Menu
+        {aberto ? "Fechar" : "Menu"}
       </button>
       <ul
         id="menu-principal"
