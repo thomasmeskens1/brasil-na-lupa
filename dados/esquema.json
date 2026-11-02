@@ -8,7 +8,8 @@
     "dados/stj/": "STJ — coleta automática (dono: scripts/coleta/stj); votos de ministros conferidos em dados/stj/curadoria/votos.json",
     "dados/stf/": "STF — coleta automática (dono: scripts/coleta/stf); votos conferidos em dados/stf/curadoria/",
     "dados/executivo/": "Executivo federal — medidas provisórias, vetos (com votos por dispositivo) e normas (dono: scripts/coleta/executivo)",
-    "dados/tribunais-contas/<orgao>/": "Tribunais de Contas, um coletor e uma pasta por órgão (tcu, tce-sp; futuros: tce-rj, tce-mg… e tcm-sp/tcm-rj), todos no mesmo formato; registro dos órgãos em dados/tribunais-contas/orgaos.json"
+    "dados/tribunais-contas/<orgao>/": "Tribunais de Contas, um coletor e uma pasta por órgão (tcu, tce-sp; futuros: tce-rj, tce-mg… e tcm-sp/tcm-rj), todos no mesmo formato; registro dos órgãos em dados/tribunais-contas/orgaos.json",
+    "dados/titulos/": "Títulos em linguagem simples e temas, gerados e verificados (dono: scripts/coleta/titulos)"
   },
   "fonte": {
     "titulo": "Nome legível do documento oficial",
@@ -497,5 +498,25 @@
     ],
     "situacao_coleta": "ativa | planejada",
     "robots_e_restricoes": "o que é permitido/bloqueado e decisões tomadas"
+  },
+  "titulo_simples": {
+    "_arquivo": "dados/titulos/<secao>.json → { atualizado_em, itens: { <id do item>: titulo_simples } } — seções: camara, senado, executivo, stj, stf, alesp, governo-sp, atibaia, icms, tribunais-contas",
+    "titulo": "frase curta em linguagem simples (até ~90 caracteres) — o que muda / o que foi decidido",
+    "subtitulo": "nome oficial por extenso (ex.: 'Projeto de Lei Complementar 108/2024') e etapa",
+    "origem": "apelido-oficial | explicacao-oficial | agencia-camara | agencia-senado | modelo | oficial (ementa/título oficial sem alteração)",
+    "fonte": "fonte do texto usado (link da notícia da agência ou do campo oficial)",
+    "tema": "tema do dia a dia mapeado da classificação oficial (ex.: 'Impostos e preços', 'Saúde') — tabela de correspondência publicada",
+    "verificacao": {
+      "numeros_e_datas_conferidos": true,
+      "verbo_permitido": true,
+      "palavras_proibidas": [],
+      "veto_vies": null
+    },
+    "_regras": [
+      "Prioridade: apelido/explicação oficial → manchete da Agência Câmara/Senado (identificada como tal) → modelo (quem decidiu + verbo de lista fechada + trecho literal da ementa + números/datas oficiais) → título oficial sem alteração.",
+      "Nenhum número, data ou nome que não esteja no dado oficial; nunca paráfrase livre nem resumo gerado.",
+      "Palavras proibidas: vitória, derrota, vencedor, perdedor, goleada, virada, polêmico, absurdo, histórico e similares; 'placar' só em votação nominal.",
+      "Qualquer dos três analistas de viés pode vetar um título; vetado → título oficial."
+    ]
   }
 }
