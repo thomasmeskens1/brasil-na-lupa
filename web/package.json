@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "sync": "node scripts/sync-data.mjs && node scripts/gerar-congresso.mjs && node scripts/gerar-executivo-justica.mjs && node scripts/gerar-sao-paulo.mjs && node scripts/gerar-atibaia.mjs && node scripts/gerar-tribunais-contas.mjs",
-    "predev": "node scripts/sync-data.mjs && node scripts/gerar-congresso.mjs && node scripts/gerar-executivo-justica.mjs && node scripts/gerar-sao-paulo.mjs && node scripts/gerar-atibaia.mjs && node scripts/gerar-tribunais-contas.mjs",
+    "sync": "node scripts/sync-data.mjs && node scripts/gerar-congresso.mjs && node scripts/gerar-executivo-justica.mjs && node scripts/gerar-sao-paulo.mjs && node scripts/gerar-atibaia.mjs && node scripts/gerar-tribunais-contas.mjs && node scripts/gerar-inicio.mjs",
+    "predev": "node scripts/sync-data.mjs && node scripts/gerar-congresso.mjs && node scripts/gerar-executivo-justica.mjs && node scripts/gerar-sao-paulo.mjs && node scripts/gerar-atibaia.mjs && node scripts/gerar-tribunais-contas.mjs && node scripts/gerar-inicio.mjs",
     "dev": "next dev",
-    "prebuild": "node scripts/sync-data.mjs && node scripts/gerar-congresso.mjs && node scripts/gerar-executivo-justica.mjs && node scripts/gerar-sao-paulo.mjs && node scripts/gerar-atibaia.mjs && node scripts/gerar-tribunais-contas.mjs",
+    "prebuild": "node scripts/sync-data.mjs && node scripts/gerar-congresso.mjs && node scripts/gerar-executivo-justica.mjs && node scripts/gerar-sao-paulo.mjs && node scripts/gerar-atibaia.mjs && node scripts/gerar-tribunais-contas.mjs && node scripts/gerar-inicio.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
