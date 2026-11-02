@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import type { Casa, IndiceCasa, Parlamentar, ResumoVotacao, VotacaoDetalhe } from "./tipos";
+import { decodificar, type IndiceBusca, type LinhaVotacao } from "./lista";
 
 /**
  * Leitura dos dados do Congresso em web/content (somente servidor / build).
@@ -84,4 +85,45 @@ export interface VotoDoParlamentar {
 export function votosDoParlamentar(casa: Casa, id: string): VotoDoParlamentar[] {
   const ind = getIndice(casa);
   return (ind.votos_por_parlamentar[id] ?? []).map(([i, voto]) => ({ votacao: ind.votacoes[i], voto }));
+}
+
+let cacheBusca: IndiceBusca | null = null;
+
+/** Índice compacto da lista (public/congresso/busca.json, gerado no prebuild), lido no build. */
+export function getIndiceBusca(): IndiceBusca {
+  cacheBusca ??= lerOpcional<IndiceBusca>(path.join(process.cwd(), "public", "congresso", "busca.json")) ?? {
+    casas: {},
+    temas: [],
+    p: [],
+    v: [],
+  };
+  return cacheBusca;
+}
+
+let cacheLinhas: Map<string, LinhaVotacao> | null = null;
+function linhas(): Map<string, LinhaVotacao> {
+  cacheLinhas ??= new Map(decodificar(getIndiceBusca()).map((l) => [`${l.casa}/${l.id}`, l]));
+  return cacheLinhas;
+}
+
+/** Primeiros dias completos no filtro padrão ("Só o que muda leis"), com pelo menos `n` votações. */
+export function votacoesIniciais(n: number): LinhaVotacao[] {
+  const out: LinhaVotacao[] = [];
+  for (const l of linhas().values()) {
+    if (!l.mudaLei) continue;
+    if (out.length >= n && out[out.length - 1].data !== l.data) break;
+    out.push(l);
+  }
+  return out;
+}
+
+export function linhaVotacao(casa: Casa, id: string): LinhaVotacao | null {
+  return linhas().get(`${casa}/${id}`) ?? null;
+}
+
+/** Temas (dos títulos simples) e anos presentes no índice, para os filtros. */
+export function opcoesFiltro(): { temas: string[]; anos: string[] } {
+  const ind = getIndiceBusca();
+  const anos = [...new Set(ind.v.map((l) => l[2].slice(0, 4)).filter(Boolean))].sort().reverse();
+  return { temas: [...ind.temas].sort((a, b) => a.localeCompare(b, "pt-BR")), anos };
 }
