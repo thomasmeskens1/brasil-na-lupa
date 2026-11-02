@@ -56,6 +56,8 @@ jobs:
           node scripts/coleta/alesp/teste-referencia.mjs
       - name: Assembleia Legislativa e governo de SP
         run: node scripts/coleta/alesp/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
+      - name: Tribunal de Contas da União
+        run: node scripts/coleta/tribunais-contas/tcu/coletar.mjs
       - name: Tribunal de Contas do Estado de São Paulo
         env:
           TCESP_PYTHON: scripts/coleta/alesp/.venv/bin/python

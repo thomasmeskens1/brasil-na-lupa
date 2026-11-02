@@ -1,0 +1,52 @@
+{
+  "descricao": "Conferência amostral dos campos da API de dados abertos do TCU contra o inteiro teor oficial (PDF em contas.tcu.gov.br, endereço do campo urlArquivoPdf da própria API; robots.txt do host: 'User-Agent: * / Allow: /ords / Crawl-delay: 10', respeitado com intervalo de 11 s entre downloads). Feita uma vez, manualmente; não faz parte da coleta diária.",
+  "conferido_em": "2026-11-02",
+  "metodo": "Texto extraído do PDF com pdftotext; comparação sem diferença de maiúsculas/minúsculas e de espaços: cabeçalho 'ACÓRDÃO Nº n/ano – TCU – colegiado', item 10 (ata), item 11 (data da sessão), item 5 (relator) e texto após 'SUMÁRIO:' contra o campo sumario.",
+  "amostra": [
+    {
+      "id": "ACORDAO-COMPLETO-2767896",
+      "acordao": "1442/2026 – Plenário (Contas do Presidente, exercício 2025)",
+      "documento": "https://contas.tcu.gov.br/sagas/SvlVisualizarRelVotoAc?codFiltro=SAGAS-SESSAO-ENCERRADA&seOcultaPagina=S&item0=911066",
+      "sha256": "cade016acaa28c024ac1067b6992c640d5b39eb0383977f6e0571244a1e441a3",
+      "numero_colegiado": "confere",
+      "ata": "confere (21/2026)",
+      "data_sessao": "confere (10/06/2026)",
+      "relator": "confere (Benjamin Zymler; a API grava em maiúsculas)",
+      "sumario": "confere",
+      "observacoes": [
+        "O texto do acórdão não traz 'por unanimidade' nem 'por maioria' (lacuna confirmada).",
+        "O inteiro teor também contém o parecer prévio; a conclusão, as ressalvas e os alertas foram copiados literalmente para dados/tribunais-contas/tcu/curadoria/contas-presidente-2025.json."
+      ]
+    },
+    {
+      "id": "ACORDAO-COMPLETO-2784300",
+      "acordao": "2933/2026 – Plenário (alíquota de referência da CBS para 2027)",
+      "documento": "https://contas.tcu.gov.br/sagas/SvlVisualizarRelVotoAc?codFiltro=SAGAS-SESSAO-ENCERRADA&seOcultaPagina=S&item0=920740",
+      "sha256": "f111d9395e6db4cca58e19d75091e4bcd3bf7bf83c39d11ae2f4d9d6e4341344",
+      "numero_colegiado": "confere",
+      "ata": "confere (42/2026)",
+      "data_sessao": "confere (28/10/2026; o PDF acrescenta '– Extraordinária', informação que a API não traz)",
+      "relator": "confere (Vital do Rêgo)",
+      "sumario": "confere",
+      "observacoes": [
+        "O item 9 do acórdão traz 'por unanimidade', mas a expressão não está nos campos da API; pela regra do coletor, o arquivo 'julgamento' mantém a lacuna (resultado null).",
+        "Na extração do PDF, o nome 'Nardes,' do quórum sai deslocado de linha (problema já descrito em docs/pesquisa/fontes-tcu-tce.md); o quórum não é publicado a partir do PDF."
+      ]
+    },
+    {
+      "id": "ACORDAO-COMPLETO-2754222",
+      "acordao": "858/2026 – Plenário (governança e transparência dos benefícios tributários)",
+      "documento": "https://contas.tcu.gov.br/sagas/SvlVisualizarRelVotoAc?codFiltro=SAGAS-SESSAO-ENCERRADA&seOcultaPagina=S&item0=907113",
+      "sha256": "20f7aad9c46eac2ea19934577f6b0d56fc2895e6944c781f72363c06d1103445",
+      "numero_colegiado": "confere",
+      "ata": "confere (11/2026)",
+      "data_sessao": "confere (08/04/2026)",
+      "relator": "confere (Benjamin Zymler)",
+      "sumario": "confere",
+      "observacoes": [
+        "O item 9 do acórdão traz 'por unanimidade', ausente nos campos da API (lacuna mantida no arquivo 'julgamento')."
+      ]
+    }
+  ],
+  "resultado": "3 de 3 acórdãos conferem em número, colegiado, ata, data da sessão, relator e sumário. Nenhuma divergência."
+}
