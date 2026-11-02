@@ -9,11 +9,13 @@
 //   - Homenagem pública em denominação de logradouro ou próprio público (rua, praça, escola,
 //     unidade de saúde…) fica; nomes de empresas e entidades ficam.
 //
-// Detecção: a lista de curadoria (revisao/mascaras.json, { ato_id: [{ trecho, substituir_por }] })
-// é aplicada primeiro e tem prioridade; depois, padrões automáticos. Todo nome com cara de
-// pessoa física sem contexto que o explique vira "dúvida": o ato não é publicado até que a
-// curadoria registre a decisão em mascaras.json (substituir_por igual ao trecho = manter).
-// Função pura, sem rede nem arquivo.
+// Detecção: a lista de curadoria (revisao/mascaras.json, { ato_id: [{ trecho_sha256, substituir_por }] })
+// é aplicada primeiro e tem prioridade (comparação por hash: o repositório é público e o nome de
+// particular nunca é gravado em claro); depois, padrões automáticos. Todo nome com cara de
+// pessoa física sem contexto que o explique vira "dúvida" (marcador com hash no texto gravado):
+// o ato não é publicado até a decisão em mascaras.json. Funções puras, sem rede nem arquivo.
+
+import crypto from 'node:crypto';
 
 export const NOME_OMITIDO = '[nome de particular omitido]';
 export const DOC_OMITIDO = '[documento omitido]';
@@ -139,6 +141,9 @@ function formaDeNome(seq) {
 /** Corta tratamento/conector no início e pontuação no fim da sequência. */
 const PREFIXO_ENTIDADE = /(?:^|\s)(?:Associa[çc][ãa]o|Instituto|Funda[çc][ãa]o|Escola|Col[ée]gio|Creche|Centro|Hospital|Igreja|Par[óo]quia|Clube|Sindicato|Cooperativa|Empresa|Sociedade|Irmandade|Organiza[çc][ãa]o|Federa[çc][ãa]o|Liga|Gr[êe]mio|Corpora[çc][ãa]o|Banco|Companhia|Cons[óo]rcio|Condom[íi]nio|Loteamento|Residencial|Jardim|Parque|Vila|Ch[áa]caras?|Bairro|Fazenda|S[íi]tio|Rua|Avenida|Av|Estrada|Alameda|Pra[çc]a|Travessa|Rodovia|Viela|Largo|Ponte|Viaduto|Unidade|UBS|USF|EMEF|EMEI|EE|Gin[áa]sio|Est[áa]dio|Teatro|Museu|Biblioteca|Cemit[ée]rio|Mercado|Terminal|Galeria|S[ãa]o|Sant[oa]|Senhora|Beat[oa]|Papa)(?![A-Za-zÀ-ÿ])/i;
 
+const POS_VERBO_PESSOAL = new RegExp(String.raw`^\s*` + ATO_PESSOAL.source.slice(1).replace(/\\b$/, '') +
+  String.raw`\s+(?:(?:a|à|ao|aos|às|[oa]s?)\s+)?(?:(?:servidor(?:a|es|as)?|funcion[áa]ri[oa]s?|empregad[oa]s?)\s+(?:(?:municipal|p[úu]blic[oa]|efetiv[oa])\s+)*)?(?:(?:sr|sra)\.?\s+)?$`, 'i');
+
 function limparSeq(seq) {
   return seq.replace(/^(?:(?:Sr|Sra|Srª|Dr|Dra|Prof|Profa)\.?\s+)+/, '').replace(/[.,;:]+$/, '');
 }
@@ -193,7 +198,9 @@ export function analisarNomes(ementa) {
     else if (CTX_PARTICULAR.test(esq)) { acao = 'mascarar'; motivo = 'nome após indicação de particular (Sr./Sra., munícipe, permissionário, em favor de…)'; }
     else if (CTX_AGENTE.test(esq) || listaDeAgentes(ementa.slice(Math.max(0, ini - 400), ini))) { acao = 'manter'; motivo = 'agente público citado pela função'; }
     else if (CTX_LOGRADOURO.test(esq) || CTX_DENOMINACAO.test(esq) || listaDeAgentes(esq, GATILHO_LOGRADOUROS)) { acao = 'manter'; motivo = 'homenagem em denominação de logradouro ou próprio público'; }
-    else if (pessoal && ini < 140 && prefixoSoVerbo) {
+    // Ato de pessoal: só o nome logo após o verbo ("Exonera FULANO", "Nomeia o servidor Fulano"),
+    // não o cargo ou a unidade que vêm depois ("do cargo de Assessor Técnico…").
+    else if (pessoal && ini < 140 && prefixoSoVerbo && POS_VERBO_PESSOAL.test(ementa.slice(0, ini))) {
       const resto = ementa.slice(ini + seq.length, ini + seq.length + 160);
       if (CARGO_DO_ATO.test(resto)) { acao = 'manter'; motivo = 'agente político (secretário, procurador-geral…) em ato sobre a função pública'; }
       else if (prenomeConhecido || emCaixaAlta) { acao = 'mascarar'; motivo = 'ato de pessoal de servidor (nome omitido, cargo mantido)'; }
@@ -207,51 +214,95 @@ export function analisarNomes(ementa) {
   return res;
 }
 
+// ---------------------------------------------------------------- hash e marcadores
+// O repositório é público: nome de particular não é gravado em texto claro em nenhum arquivo
+// de dados. A curadoria se refere a um trecho pelo hash (SHA-256 do texto, espaços normalizados);
+// trecho em dúvida fica no texto gravado como "[trecho em dúvida <16 primeiros hex do hash>]".
+export const hashTexto = (s) => crypto.createHash('sha256').update(normalizarEspacos(s), 'utf8').digest('hex');
+const normalizarEspacos = (s) => String(s ?? '').normalize('NFC').replace(/\s+/g, ' ').trim();
+export const marcadorDuvida = (h) => `[trecho em dúvida ${h.slice(0, 16)}]`;
+const RE_MARCADOR = /\[trecho em dúvida ([0-9a-f]{16})\]/g;
+
+/** Procura no texto o trecho (sequência de palavras inteiras) cujo hash é h. */
+function acharPorHash(texto, h) {
+  const palavras = [...texto.matchAll(/\S+/g)];
+  for (let i = 0; i < palavras.length; i++) {
+    for (let j = i; j < Math.min(palavras.length, i + 12); j++) {
+      const ini = palavras[i].index;
+      let fim = palavras[j].index + palavras[j][0].length;
+      let trecho = texto.slice(ini, fim);
+      // Pontuação colada no fim da palavra não faz parte do nome.
+      for (const t of [trecho, trecho.replace(/[.,;:)”"]+$/, '')]) {
+        if (t && hashTexto(t) === h) return { ini, fim: ini + t.length };
+      }
+    }
+  }
+  return null;
+}
+
+const regraValida = (r) => r && /^[0-9a-f]{64}$/.test(r.trecho_sha256 || '') && typeof r.substituir_por === 'string' && r.substituir_por
+  // manter = texto claro do próprio trecho (só para quem não é particular); omitir = marcador.
+  && (r.substituir_por === NOME_OMITIDO || hashTexto(r.substituir_por) === r.trecho_sha256);
+
 /**
- * Monta a ementa pública.
- * regras: entradas da curadoria para este ato ([{ trecho, substituir_por }]); substituir_por igual
- * ao trecho registra a decisão de manter. Devolve
- * { ementa_publica, mascaras: [{ trecho, origem: 'lista'|'automatico', motivo }], documentos, duvidas: [{ trecho, motivo }] }.
+ * Monta a ementa pública (e o texto que pode ser gravado nos arquivos de dados).
+ * regras: [{ trecho_sha256, substituir_por }] de revisao/mascaras.json, com prioridade:
+ *   substituir_por = "[nome de particular omitido]" → omite; = o próprio trecho (hash confere) → mantém.
+ * Nomes de particulares → NOME_OMITIDO; documentos → DOC_OMITIDO; dúvidas → marcador com hash.
+ * Funciona sobre texto literal ou já tratado (idempotente).
+ * Devolve { ementa_publica, mascaras: [{ trecho_sha256, origem, motivo }], documentos, duvidas: [{ trecho_sha256, motivo }] }.
  */
 export function ementaPublica(ementa, regras = []) {
   if (!ementa) return { ementa_publica: ementa ?? null, mascaras: [], documentos: 0, duvidas: [] };
-  let texto = ementa;
+  let texto = String(ementa);
   const mascaras = [];
-  const decididos = new Set();
-  // 1) Lista de curadoria (prioridade). Trecho ausente na ementa é dúvida (lista desatualizada).
   const duvidas = [];
+  const mantidos = [];
+  // 1) Lista de curadoria (prioridade), por hash: no texto literal ou num marcador de dúvida já gravado.
   for (const r of regras || []) {
-    if (!r || typeof r.trecho !== 'string' || !r.trecho || typeof r.substituir_por !== 'string') {
-      duvidas.push({ trecho: String(r?.trecho ?? ''), motivo: 'entrada inválida em mascaras.json' });
-      continue;
+    if (!regraValida(r)) { duvidas.push({ trecho_sha256: String(r?.trecho_sha256 ?? ''), motivo: 'entrada inválida em mascaras.json' }); continue; }
+    const omitir = r.substituir_por === NOME_OMITIDO;
+    const marcador = marcadorDuvida(r.trecho_sha256);
+    let achou = false;
+    if (texto.includes(marcador)) { texto = texto.split(marcador).join(r.substituir_por); achou = true; }
+    for (let pos; (pos = acharPorHash(texto, r.trecho_sha256));) {
+      achou = true;
+      if (!omitir) { mantidos.push(sa(r.substituir_por)); break; }
+      texto = texto.slice(0, pos.ini) + NOME_OMITIDO + texto.slice(pos.fim);
     }
-    decididos.add(sa(r.trecho));
-    if (!texto.includes(r.trecho)) {
-      if (!ementa.includes(r.trecho)) duvidas.push({ trecho: r.trecho, motivo: 'trecho de mascaras.json não encontrado na ementa' });
-      continue;
-    }
-    if (r.substituir_por !== r.trecho) {
-      texto = texto.split(r.trecho).join(r.substituir_por);
-      mascaras.push({ trecho: r.trecho, origem: 'lista', motivo: r.motivo || 'lista de curadoria' });
-    }
+    if (!omitir && achou) mantidos.push(sa(r.substituir_por));
+    if (achou && omitir) mascaras.push({ trecho_sha256: r.trecho_sha256, origem: 'lista', motivo: r.motivo || 'lista de curadoria' });
+    if (!achou && !texto.includes(r.substituir_por)) duvidas.push({ trecho_sha256: r.trecho_sha256, motivo: 'trecho de mascaras.json não encontrado na ementa' });
   }
   // 2) Documentos pessoais.
   const d = mascararDocumentos(texto);
   texto = d.texto;
-  // 3) Nomes (sobre o texto já tratado; trechos decididos pela curadoria não voltam a ser avaliados).
-  const achados = analisarNomes(texto).filter((a) => ![...decididos].some((k) => sa(a.trecho).includes(k) || k.includes(sa(a.trecho))));
-  const aMascarar = achados.filter((a) => a.acao === 'mascarar').sort((a, b) => b.inicio - a.inicio);
-  for (const a of aMascarar) {
-    texto = texto.slice(0, a.inicio) + NOME_OMITIDO + texto.slice(a.inicio + a.trecho.length);
-    mascaras.push({ trecho: a.trecho, origem: 'automatico', motivo: a.motivo });
+  // 3) Nomes (trechos mantidos pela curadoria não voltam a ser avaliados).
+  const achados = analisarNomes(texto).filter((a) => !mantidos.some((k) => sa(a.trecho).includes(k) || k.includes(sa(a.trecho))));
+  for (const a of achados.filter((x) => x.acao !== 'manter').sort((p, q) => q.inicio - p.inicio)) {
+    const h = hashTexto(a.trecho);
+    const subst = a.acao === 'mascarar' ? NOME_OMITIDO : marcadorDuvida(h);
+    texto = texto.slice(0, a.inicio) + subst + texto.slice(a.inicio + a.trecho.length);
+    if (a.acao === 'mascarar') mascaras.push({ trecho_sha256: h, origem: 'automatico', motivo: a.motivo });
   }
   // CNPJ ligado a nome omitido (microempreendedor individual) identifica a pessoa: também sai.
   let cnpjs = 0;
   texto = texto.replace(CNPJ_APOS_NOME, (m, pre) => { cnpjs++; return pre + DOC_OMITIDO; });
-  for (const a of achados.filter((x) => x.acao === 'duvida')) duvidas.push({ trecho: a.trecho, motivo: a.motivo });
-  // 4) Rede de segurança: nada com cara de CPF/RG pode sobrar.
-  if (temDocumentoPessoal(texto)) duvidas.push({ trecho: '(documento)', motivo: 'padrão de documento pessoal restou após o mascaramento' });
+  // 4) Todo marcador de dúvida que restou (novo ou já gravado) segura a publicação.
+  for (const m of texto.matchAll(RE_MARCADOR)) {
+    const a = achados.find((x) => x.acao === 'duvida' && hashTexto(x.trecho).startsWith(m[1]));
+    duvidas.push({ trecho_sha256: a ? hashTexto(a.trecho) : m[1], motivo: a ? a.motivo : 'trecho em dúvida aguardando decisão da curadoria' });
+  }
+  // 5) Rede de segurança: nada com cara de CPF/RG pode sobrar.
+  if (temDocumentoPessoal(texto)) duvidas.push({ trecho_sha256: '(documento)', motivo: 'padrão de documento pessoal restou após o mascaramento' });
   return { ementa_publica: texto, mascaras, documentos: d.n + cnpjs, duvidas };
+}
+
+/** Texto para gravar em arquivo de dados (sem particular nem documento em claro) + hash do original, se mudou. */
+export function textoGravavel(texto, regras = []) {
+  if (texto == null) return { texto, original_sha256: null };
+  const r = ementaPublica(texto, regras);
+  return { texto: r.ementa_publica, original_sha256: r.ementa_publica === texto ? null : hashTexto(texto) };
 }
 
 /** Busca de segurança por CPF/RG em texto já publicado. */

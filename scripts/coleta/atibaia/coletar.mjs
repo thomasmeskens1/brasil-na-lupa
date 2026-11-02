@@ -27,7 +27,7 @@ import {
   obter, emLotes, gravarSeMudou, lerJson, hojeISO, estatisticas, contagemGravacao,
 } from './lib.mjs';
 import { listarEdicoes, baixarEExtrair, limparTemp, BASE_IOE, VERSAO_EXTRATOR } from './imprensa.mjs';
-import { registroDaEdicao, consolidar, vereadoresDasAtas, semDocumentosNoAto } from './normas.mjs';
+import { registroDaEdicao, consolidar, vereadoresDasAtas, sanearAto } from './normas.mjs';
 import { VERSAO_LEITOR } from './atos.mjs';
 import { coletarExercicio, avisoOficial, datasConjuntos, URL_DOC_API } from './financas.mjs';
 
@@ -71,6 +71,7 @@ function argumentos(argv) {
 const log = (...x) => console.log(new Date().toISOString().slice(11, 19), ...x);
 
 async function coletarNormas(opc, hoje) {
+  const mascaras = lerMascaras();
   const registros = [];
   const resumo = { edicoes_no_calendario: 0, processadas_agora: 0, falhas: [] };
   for (const ano of opc.anos) {
@@ -99,7 +100,7 @@ async function coletarNormas(opc, hoje) {
     await emLotes(fila, 2, async (ed) => {
       try {
         const extr = await baixarEExtrair(ed);
-        porEd.set(ed.edicao, registroDaEdicao(ed, extr, new Date().toISOString()));
+        porEd.set(ed.edicao, registroDaEdicao(ed, extr, new Date().toISOString(), mascaras));
         resumo.processadas_agora++;
       } catch (e) {
         resumo.falhas.push(`${ed.edicao}: ${e.message}`);
@@ -114,17 +115,22 @@ async function coletarNormas(opc, hoje) {
   return { registros, resumo };
 }
 
-/** Lista de curadoria de máscaras: { ato_id: [{ trecho, substituir_por }] }; campos com "_" no início são comentários. */
+/** Lista de curadoria de máscaras: { ato_id: [{ trecho_sha256, substituir_por }] }; chaves com "_" no início são comentários. */
 function lerMascaras() {
   const m = lerJson(ARQ.mascaras);
   if (!m) return {};
   const regras = m.regras ?? m;
   for (const [k, v] of Object.entries(regras)) {
     if (k.startsWith('_')) continue;
-    if (!Array.isArray(v)) throw new Error(`mascaras.json: "${k}" deve ser uma lista de { trecho, substituir_por }`);
+    if (!Array.isArray(v)) throw new Error(`mascaras.json: "${k}" deve ser uma lista de { trecho_sha256, substituir_por }`);
+    // Repositório público: o trecho não é gravado em claro, só o hash.
+    if (v.some((r) => 'trecho' in r)) throw new Error(`mascaras.json: "${k}" usa "trecho" em texto claro; use "trecho_sha256"`);
   }
   return Object.fromEntries(Object.entries(regras).filter(([k]) => !k.startsWith('_')));
 }
+
+export const INSTRUCOES_MASCARAS = 'Lista de curadoria da diretriz 12, com prioridade sobre o detector automático. O repositório é público: nenhum nome de particular é gravado em claro, só o hash. Chave: id do ato (ex.: atibaia-decreto-11468-2025). Valor: lista de { "trecho_sha256": SHA-256 do trecho exato (espaços normalizados; o mesmo hash do marcador "[trecho em dúvida …]" em mascaras-pendentes.json), "substituir_por": "[nome de particular omitido]" para omitir, ou o próprio trecho em claro para manter (só quando não é particular: agente público no exercício da função, entidade, logradouro, homenagem pública), "motivo": opcional }.';
+const INSTRUCOES_MASCARAS_PENDENTES = 'Atos retidos (não publicados no índice) porque a ementa tem nome que pode ser de pessoa física sem contexto que o explique. O trecho aparece como "[trecho em dúvida <hash>]" (o texto está no documento oficial, link da edição e página). Para cada um, abrir o link, decidir e registrar em dados/atibaia/revisao/mascaras.json: { "<ato_id>": [{ "trecho_sha256": "<hash completo de duvidas[].trecho_sha256>", "substituir_por": "[nome de particular omitido]" }] } para omitir, ou "substituir_por" com o próprio trecho para manter. Depois, rodar o coletor com --reindexar.';
 
 function gravarIndices(registros, hoje, opc) {
   const curadoria = lerJson(ARQ.curadoria);
@@ -140,26 +146,26 @@ function gravarIndices(registros, hoje, opc) {
       fonte: { titulo: 'Imprensa Oficial Eletrônica da Estância de Atibaia', url: BASE_IOE, orgao: 'Prefeitura da Estância de Atibaia', acessado_em: hoje },
       cobertura: { ...cobertura, observacao: 'Índice montado a partir das edições lidas nesse intervalo; atos do ano publicados fora dele não aparecem.' },
       criterio: 'Leis, leis complementares e decretos lidos na Imprensa Oficial. Só entram atos com número, data e ementa identificados de forma inequívoca no mesmo bloco de texto (confianca "alta") ou conferidos por curadoria humana (confianca "revisada"). A ementa é transcrita literalmente; os demais candidatos ficam em dados/atibaia/revisao/pendentes.json.',
-      privacidade: 'Diretriz 12: exibir somente "ementa_publica", em que nomes de particulares (pessoas físicas que não são agentes públicos no exercício da função) aparecem como "[nome de particular omitido]" e CPF, RG e outros documentos pessoais como "[documento omitido]". O campo "ementa" é o texto literal, guardado para auditoria, sem números de documentos pessoais. Atos com dúvida sobre nome de pessoa física não entram no índice até a decisão da curadoria (dados/atibaia/revisao/mascaras-pendentes.json).',
+      privacidade: 'Diretriz 12: exibir somente "ementa_publica", em que nomes de particulares (pessoas físicas que não são agentes públicos no exercício da função) aparecem como "[nome de particular omitido]" e CPF, RG e outros documentos pessoais como "[documento omitido]". O repositório é público: nos atos com omissão, "ementa" é igual a "ementa_publica" e "ementa_original_sha256" guarda o hash do texto literal, que está no documento oficial (link da edição e página); nos demais, "ementa" é o texto literal. Atos com dúvida sobre nome de pessoa física não entram no índice até a decisão da curadoria (dados/atibaia/revisao/mascaras-pendentes.json).',
       total: itens.length,
       itens,
     });
   }
   gravarSeMudou(ARQ.pendentes, {
     atualizado_em: new Date().toISOString(),
-    instrucoes: 'Fila de curadoria humana. Para cada item, abrir o link (página da edição), conferir o ato e registrar a decisão em dados/atibaia/revisao/curadoria.json: { "id_candidato": "...", "decisao": "incluir" | "descartar", "correcao": { "tipo": "lei|lei-complementar|decreto", "numero": "...", "data": "AAAA-MM-DD", "ementa": "texto literal" }, "revisor": "...", "revisado_em": "AAAA-MM-DD", "observacao": "..." }. Nada desta lista é publicado sem essa decisão.',
+    instrucoes: 'Fila de curadoria humana. Para cada item, abrir o link (página da edição), conferir o ato e registrar a decisão em dados/atibaia/revisao/curadoria.json: { "id_candidato": "...", "decisao": "incluir" | "descartar", "correcao": { "tipo": "lei|lei-complementar|decreto", "numero": "...", "data": "AAAA-MM-DD", "ementa": "texto literal, exceto nome de particular (\"[nome de particular omitido]\") e documento pessoal (\"[documento omitido]\")", "ementa_original_sha256": "SHA-256 do texto literal, se houve omissão" }, "revisor": "...", "revisado_em": "AAAA-MM-DD", "observacao": "..." }. Nada desta lista é publicado sem essa decisão.',
     total: pendentes.length,
     itens: pendentes,
   });
   gravarSeMudou(ARQ.mascarasPendentes, {
     atualizado_em: new Date().toISOString(),
-    instrucoes: 'Atos retidos (não publicados no índice) porque a ementa tem nome que pode ser de pessoa física sem contexto que o explique. Para cada um, abrir o link, decidir e registrar em dados/atibaia/revisao/mascaras.json: { "<ato_id>": [{ "trecho": "texto exato da ementa", "substituir_por": "[nome de particular omitido]" }] } para omitir, ou "substituir_por" igual ao "trecho" para manter (agente público no exercício da função, entidade, logradouro, homenagem pública). Depois, rodar o coletor com --reindexar.',
+    instrucoes: INSTRUCOES_MASCARAS_PENDENTES,
     total: mascarasPendentes.length,
     itens: mascarasPendentes,
   });
   if (!fs.existsSync(ARQ.mascaras)) {
     gravarSeMudou(ARQ.mascaras, {
-      instrucoes: 'Lista de curadoria da diretriz 12, com prioridade sobre o detector automático. Chave: id do ato (ex.: atibaia-decreto-11468-2025). Valor: lista de { "trecho": texto exato da ementa, "substituir_por": "[nome de particular omitido]" | igual ao trecho para manter, "motivo": opcional }.',
+      instrucoes: INSTRUCOES_MASCARAS,
       regras: {},
     });
   }
@@ -195,11 +201,12 @@ async function main() {
   let registros = null;
   if (opc.reindexar) {
     // Sem rede: só reconsolida as edições já lidas (ex.: depois de editar a curadoria ou as máscaras).
+    const mascaras = lerMascaras();
     for (const ano of opc.anos) {
       const reg = lerJson(ARQ.edicoes(ano));
       if (!reg) continue;
-      // Registros lidos antes da regra de documentos pessoais são saneados aqui (diretriz 12).
-      for (const ed of reg.edicoes || []) for (const a of ed.atos || []) semDocumentosNoAto(a);
+      // Diretriz 12 (repositório público): registros gravados antes da regra são saneados aqui.
+      for (const ed of reg.edicoes || []) for (const a of ed.atos || []) sanearAto(a, mascaras[a.id]);
       gravarSeMudou(ARQ.edicoes(ano), reg);
     }
     registros = opc.anos.map((a) => lerJson(ARQ.edicoes(a))).filter(Boolean);

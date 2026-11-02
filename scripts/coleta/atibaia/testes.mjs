@@ -4,8 +4,11 @@ import assert from 'node:assert/strict';
 import { atosDaPagina, presencaDaPagina, lerCabecalhoEdicao, lerData } from './atos.mjs';
 import { lerCalendario } from './imprensa.mjs';
 import { centavos, resumirDespesas } from './financas.mjs';
-import { consolidar } from './normas.mjs';
-import { ementaPublica, temDocumentoPessoal, semDocumentos, NOME_OMITIDO, DOC_OMITIDO } from './privacidade.mjs';
+import { consolidar, sanearAto } from './normas.mjs';
+import { ementaPublica, temDocumentoPessoal, semDocumentos, analisarNomes, hashTexto, marcadorDuvida, NOME_OMITIDO, DOC_OMITIDO } from './privacidade.mjs';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const ED = { numero: '3051', data: '2026-10-31', url: 'https://x/pdf/2026/3051_a.pdf' };
 
@@ -194,45 +197,103 @@ test('privacidade: ato de pessoal de servidor comum mascara o nome e mantém o c
   assert.equal(r2.ementa_publica, `Concede aposentadoria a ${N}, Agente de Serviços.`);
 });
 
-test('privacidade: dúvida (nome sem contexto, honraria) segura o ato; mascaras.json decide', () => {
+
+test('privacidade: dúvida vira marcador com hash; mascaras.json decide por hash (sem trecho em claro)', () => {
   const e = 'Institui a Semana Ana Fictícia Lopes de conscientização.';
+  const h = hashTexto('Ana Fictícia Lopes');
   const r = ementaPublica(e);
   assert.equal(r.duvidas.length, 1);
-  assert.equal(r.duvidas[0].trecho, 'Ana Fictícia Lopes');
+  assert.equal(r.duvidas[0].trecho_sha256, h);
+  assert.equal(r.ementa_publica, `Institui a Semana ${marcadorDuvida(h)} de conscientização.`);
+  assert.ok(!JSON.stringify(r).includes('Fictícia'));
   assert.equal(ementaPublica('Concede Título de Cidadão Atibaiense a Carlos Fictício Prado.').duvidas.length, 1);
-  // Lista de curadoria: manter (substituir_por igual ao trecho) ou omitir.
-  const manter = ementaPublica(e, [{ trecho: 'Ana Fictícia Lopes', substituir_por: 'Ana Fictícia Lopes' }]);
-  assert.equal(manter.duvidas.length, 0);
-  assert.equal(manter.ementa_publica, e);
-  const omitir = ementaPublica(e, [{ trecho: 'Ana Fictícia Lopes', substituir_por: N }]);
-  assert.equal(omitir.ementa_publica, `Institui a Semana ${N} de conscientização.`);
-  assert.deepEqual(omitir.mascaras.map((m) => m.origem), ['lista']);
-  // Trecho da lista que não existe na ementa (lista desatualizada) volta a ser dúvida.
-  assert.equal(ementaPublica('Outra ementa.', [{ trecho: 'Nome Inexistente', substituir_por: N }]).duvidas.length, 1);
+  // Omitir: só o hash. Vale sobre o texto literal e sobre o texto já gravado com o marcador.
+  for (const txt of [e, r.ementa_publica]) {
+    const omitir = ementaPublica(txt, [{ trecho_sha256: h, substituir_por: N }]);
+    assert.equal(omitir.ementa_publica, `Institui a Semana ${N} de conscientização.`);
+    assert.equal(omitir.duvidas.length, 0);
+    assert.deepEqual(omitir.mascaras.map((m) => m.origem), ['lista']);
+    // Manter: o próprio trecho (o hash tem de conferir).
+    const manter = ementaPublica(txt, [{ trecho_sha256: h, substituir_por: 'Ana Fictícia Lopes' }]);
+    assert.equal(manter.ementa_publica, e);
+    assert.equal(manter.duvidas.length, 0);
+  }
+  // Regra inválida (texto que não corresponde ao hash) ou desatualizada vira dúvida.
+  assert.equal(ementaPublica(e, [{ trecho_sha256: h, substituir_por: 'Outro Nome' }]).duvidas.length >= 1, true);
+  assert.equal(ementaPublica('Outra ementa.', [{ trecho_sha256: hashTexto('Nome Inexistente'), substituir_por: N }]).duvidas.length, 1);
 });
 
-test('consolidação: ementa_publica em todos os itens; dúvida vai para mascaras-pendentes até a decisão', () => {
+test('privacidade: registro saneado não guarda nome mascarado nem documento, só o hash do original', () => {
+  const literal = 'Dispõe sobre autorização de uso ao Sr. Zacarias Fictício Pimenta, inscrito no CPF nº 123.456.789-01, de banca.';
+  const a = sanearAto({ id: 'atibaia-decreto-1-2026', ementa: literal, cabecalho: 'DECRETO Nº 1',
+    trecho: ['DECRETO Nº 1', 'Dispõe sobre autorização de uso ao Sr. Zacarias', 'Fictício Pimenta, inscrito no CPF nº 123.456.789-01, de banca.'] });
+  const json = JSON.stringify(a);
+  for (const proibido of ['Zacarias', 'Pimenta', '123.456.789']) assert.ok(!json.includes(proibido), proibido);
+  assert.equal(a.ementa_original_sha256, hashTexto(literal));
+  assert.equal(a.mascaramento.nomes_omitidos_automatico, 1);
+  // Idempotente: sanear de novo não muda o hash nem a contagem.
+  const b = sanearAto(JSON.parse(json));
+  assert.deepEqual(b, JSON.parse(json));
+});
+
+test('consolidação: "ementa" igual a "ementa_publica" com hash do original; dúvida retida até a decisão', () => {
   const ato = (n, ementa) => ({ id_candidato: `3051-p1-b0-l${n}`, id: `atibaia-decreto-${n}-2026`, tipo: 'decreto', tipo_nome: 'Decreto',
     numero: n.toLocaleString('pt-BR'), numero_int: n, data: '2026-10-28', ementa, pagina: 1, confianca: 'alta', motivos: [] });
+  const literal = 'Dispõe sobre autorização de uso ao Sr. Fulano Fictício, inscrito no CPF nº 123.456.789-01, de banca.';
   const reg = { edicoes: [{ edicao: '3051', data: '2026-10-31', url: 'u1', atos: [
-    ato(11900, 'Dispõe sobre autorização de uso ao Sr. Fulano Fictício, inscrito no CPF nº 123.456.789-01, de banca.'),
-    ato(11901, 'Institui a Semana Ana Fictícia Lopes.'),
-    ato(11902, 'Regulamenta a Lei nº 5.100.')] }] };
+    ato(11900, literal), ato(11901, 'Institui a Semana Ana Fictícia Lopes.'), ato(11902, 'Regulamenta a Lei nº 5.100.')] }] };
   const r = consolidar([reg], { decisoes: [] }, '2026-11-02');
   const itens = r.indices['2026'];
   assert.equal(itens.length, 2);
-  assert.ok(itens.every((i) => typeof i.ementa_publica === 'string'));
-  assert.ok(itens.every((i) => !temDocumentoPessoal(i.ementa) && !temDocumentoPessoal(i.ementa_publica)));
   const banca = itens.find((i) => i.numero === '11.900');
   assert.equal(banca.ementa_publica, `Dispõe sobre autorização de uso ao Sr. ${N}, inscrito no ${D}, de banca.`);
+  assert.equal(banca.ementa, banca.ementa_publica);
+  assert.equal(banca.ementa_original_sha256, hashTexto(literal));
   assert.equal(banca.mascaramento.nomes_omitidos_automatico, 1);
+  const simples = itens.find((i) => i.numero === '11.902');
+  assert.equal(simples.ementa, 'Regulamenta a Lei nº 5.100.');
+  assert.equal(simples.ementa_original_sha256, undefined);
   assert.equal(r.mascarasPendentes.length, 1);
-  assert.equal(r.mascarasPendentes[0].ato_id, 'atibaia-decreto-11901-2026');
+  assert.ok(!JSON.stringify(r).includes('Fictícia') && !JSON.stringify(r).includes('Fulano'));
   const r2 = consolidar([reg], { decisoes: [] }, '2026-11-02',
-    { 'atibaia-decreto-11901-2026': [{ trecho: 'Ana Fictícia Lopes', substituir_por: N }] });
+    { 'atibaia-decreto-11901-2026': [{ trecho_sha256: hashTexto('Ana Fictícia Lopes'), substituir_por: N }] });
   assert.equal(r2.mascarasPendentes.length, 0);
-  const sem = r2.indices['2026'].find((i) => i.numero === '11.901');
-  assert.equal(sem.ementa_publica, `Institui a Semana ${N}.`);
-  assert.equal(sem.mascaramento.nomes_omitidos_lista, 1);
-  assert.equal(r2.estatisticas.mascarados_lista, 1);
+  assert.equal(r2.indices['2026'].find((i) => i.numero === '11.901').mascaramento.nomes_omitidos_lista, 1);
+});
+
+// Varredura dos arquivos reais: nenhum nome que o detector omitiria (ou poria em dúvida) e nenhum
+// documento pessoal pode aparecer em texto claro em dados/atibaia (o repositório é público).
+test('dados/atibaia: nenhum nome mascarado nem documento pessoal em claro em nenhum arquivo', () => {
+  const raiz = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../../dados/atibaia');
+  const arquivos = [];
+  const andar = (d) => { for (const f of fs.readdirSync(d, { withFileTypes: true })) {
+    const p = path.join(d, f.name);
+    if (f.isDirectory()) andar(p); else if (f.name.endsWith('.json')) arquivos.push(p);
+  } };
+  andar(raiz);
+  assert.ok(arquivos.length > 0);
+  const CAMPOS_TEXTO = new Set(['ementa', 'ementa_publica', 'ementa_lida', 'trecho', 'cabecalho', 'clausula', 'observacao', 'motivo', 'substituir_por']);
+  const SEM_DOC = new Set(['instrucoes', 'criterio', 'privacidade', 'nota_ementa']); // textos explicativos citam "CPF"
+  const falhas = [];
+  for (const arq of arquivos) {
+    const bruto = fs.readFileSync(arq, 'utf8');
+    if (/(?<![\d.\/])\d{3}\.\d{3}\.\d{3}\s*-\s*\d{2}(?![\d\/])/.test(bruto)) falhas.push(`${arq}: número com formato de CPF`);
+    const visitar = (v, chave) => {
+      if (Array.isArray(v)) {
+        if (chave === 'trecho' && v.every((x) => typeof x === 'string')) return visitar(v.join('\n'), chave);
+        return v.forEach((x) => visitar(x, chave));
+      }
+      if (v && typeof v === 'object') return Object.entries(v).forEach(([k, x]) => visitar(x, k));
+      if (typeof v !== 'string') return;
+      if (!SEM_DOC.has(chave) && temDocumentoPessoal(v)) falhas.push(`${arq} [${chave}]: documento pessoal`);
+      // "substituir_por" de mascaras.json só pode trazer texto mantido de propósito (não é particular).
+      if (CAMPOS_TEXTO.has(chave) && chave !== 'substituir_por') {
+        for (const a of analisarNomes(v)) {
+          if (a.acao !== 'manter') falhas.push(`${arq} [${chave}]: nome em claro (${a.acao}, ${a.motivo}) hash ${hashTexto(a.trecho).slice(0, 16)}`);
+        }
+      }
+    };
+    visitar(JSON.parse(bruto), null);
+  }
+  assert.deepEqual(falhas, []);
 });

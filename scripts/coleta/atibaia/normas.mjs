@@ -2,19 +2,41 @@
 // revisão humana), fila de curadoria e composição da Câmara a partir das atas publicadas.
 import { atosDaPagina, presencaDaPagina, lerCabecalhoEdicao, chaveEmenta, NOMES_TIPO, VERSAO_LEITOR } from './atos.mjs';
 import { semAcento } from './lib.mjs';
-import { ementaPublica, semDocumentos, temDocumentoPessoal, DOC_OMITIDO } from './privacidade.mjs';
+import { ementaPublica, textoGravavel, hashTexto, temDocumentoPessoal, DOC_OMITIDO } from './privacidade.mjs';
 
-/** Diretriz 12: números de CPF/RG e afins nunca são gravados, nem no registro bruto das edições. */
-export function semDocumentosNoAto(a) {
-  if (a.ementa) a.ementa = semDocumentos(a.ementa);
-  if (a.cabecalho) a.cabecalho = semDocumentos(a.cabecalho);
-  if (a.clausula) a.clausula = semDocumentos(a.clausula);
-  if (Array.isArray(a.trecho)) a.trecho = a.trecho.map(semDocumentos);
+export const NOTA_EMENTA_ORIGINAL = 'Ementa com nome de particular e/ou documento pessoal omitidos (diretriz 12). O texto literal está no documento oficial (link da edição e página); "ementa_original_sha256" é o hash SHA-256 desse texto, para auditoria.';
+
+/** Texto em várias linhas (trecho lido) tratado de uma vez, para pegar nome partido entre linhas. */
+function linhasGravaveis(linhas, regras) {
+  if (!Array.isArray(linhas)) return linhas;
+  return textoGravavel(linhas.join('\n'), regras).texto.split('\n');
+}
+
+/**
+ * Diretriz 12 com repositório público: nenhum nome de particular nem documento pessoal é gravado
+ * em texto claro, nem no registro bruto das edições. A ementa tratada substitui a literal e o hash
+ * da literal fica em "ementa_original_sha256". Idempotente (texto já tratado não muda).
+ */
+export function sanearAto(a, regras = []) {
+  if (a.ementa) {
+    const r = ementaPublica(a.ementa, regras);
+    if (r.ementa_publica !== a.ementa) {
+      a.ementa_original_sha256 ||= hashTexto(a.ementa);
+      const p = a.mascaramento || { nomes_omitidos_automatico: 0, nomes_omitidos_lista: 0 };
+      p.nomes_omitidos_automatico += r.mascaras.filter((m) => m.origem === 'automatico').length;
+      p.nomes_omitidos_lista += r.mascaras.filter((m) => m.origem === 'lista').length;
+      a.mascaramento = p;
+      a.ementa = r.ementa_publica;
+    }
+  }
+  if (a.cabecalho) a.cabecalho = textoGravavel(a.cabecalho, regras).texto;
+  if (a.clausula) a.clausula = textoGravavel(a.clausula, regras).texto;
+  if (Array.isArray(a.trecho)) a.trecho = linhasGravaveis(a.trecho, regras);
   return a;
 }
 
-/** Monta o registro de uma edição a partir da extração do PDF. */
-export function registroDaEdicao(ed, extr, processadoEm) {
+/** Monta o registro de uma edição a partir da extração do PDF. mascaras: { ato_id: regras }. */
+export function registroDaEdicao(ed, extr, processadoEm, mascaras = {}) {
   const p1 = extr.paginas.find((p) => p.pagina === 1);
   const cab = p1 ? lerCabecalhoEdicao(p1.blocos.flatMap((b) => b.linhas)) : null;
   const avisos = [];
@@ -31,7 +53,7 @@ export function registroDaEdicao(ed, extr, processadoEm) {
     for (const a of atosDaPagina(pg, { numero: ed.edicao, data: ed.data })) {
       if (avisos.length) { a.motivos.push(...avisos); a.confianca = 'revisar'; }
       if (a.confianca === 'alta') delete a.trecho; // o trecho só é útil para a curadoria
-      atos.push(semDocumentosNoAto(a));
+      atos.push(sanearAto(a, mascaras?.[a.id]));
     }
     const pr = presencaDaPagina(pg);
     if (pr) presencas.push(pr);
@@ -61,20 +83,22 @@ const urlPagina = (url, p) => `${url}#page=${p}`;
 
 function itemPublicado(a, ed, acessadoEm, extra = {}) {
   const pub = extra.privacidade;
+  // Contagem: o que já foi omitido ao gravar o registro + o que a lista atual omitiu agora.
+  const auto = (a.mascaramento?.nomes_omitidos_automatico || 0) + pub.mascaras.filter((m) => m.origem === 'automatico').length;
+  const lista = (a.mascaramento?.nomes_omitidos_lista || 0) + pub.mascaras.filter((m) => m.origem === 'lista').length;
+  const docs = docsOmitidos(pub.ementa_publica);
+  const original = a.ementa_original_sha256 || (pub.ementa_publica !== a.ementa ? hashTexto(a.ementa) : null);
   return {
     id: a.id,
     tipo: a.tipo_nome,
     numero: a.numero,
     data: a.data,
-    // Diretriz 12: o site exibe só "ementa_publica"; "ementa" fica para auditoria (literal,
-    // exceto números de documentos pessoais, que nunca são gravados no índice).
-    ementa: semDocumentos(a.ementa),
+    // Diretriz 12 (repositório público): quando há omissão, "ementa" é igual a "ementa_publica" e o
+    // texto literal fica só no documento oficial, identificado pelo hash.
+    ementa: pub.ementa_publica,
     ementa_publica: pub.ementa_publica,
-    ...(pub.mascaras.length || docsOmitidos(pub.ementa_publica) ? { mascaramento: {
-      nomes_omitidos_automatico: pub.mascaras.filter((m) => m.origem === 'automatico').length,
-      nomes_omitidos_lista: pub.mascaras.filter((m) => m.origem === 'lista').length,
-      documentos_omitidos: docsOmitidos(pub.ementa_publica),
-    } } : {}),
+    ...(original ? { ementa_original_sha256: original, nota_ementa: NOTA_EMENTA_ORIGINAL } : {}),
+    ...(auto || lista || docs ? { mascaramento: { nomes_omitidos_automatico: auto, nomes_omitidos_lista: lista, documentos_omitidos: docs } } : {}),
     autoria_na_ementa: a.autoria_na_ementa ?? null,
     edicao: { numero: ed.edicao, data: ed.data, url: ed.url },
     pagina: a.pagina,
@@ -98,19 +122,19 @@ function itemPendente(a, ed, motivosExtra = []) {
     tipo: a.tipo_nome ?? null,
     numero: a.numero ?? null,
     data: a.data ?? null,
-    ementa_lida: semDocumentos(a.ementa ?? null),
+    ementa_lida: textoGravavel(a.ementa ?? null).texto,
     motivos: [...a.motivos, ...motivosExtra],
     edicao: { numero: ed.edicao, data: ed.data, url: ed.url },
     pagina: a.pagina,
     coluna: a.coluna,
     url: urlPagina(ed.url, a.pagina),
-    trecho: a.trecho ? a.trecho.map(semDocumentos) : null,
+    trecho: a.trecho ? linhasGravaveis(a.trecho) : null,
   };
 }
 
 /**
  * registros: [{ edicoes: [...] }] (todos os anos); curadoria: { decisoes: [] };
- * mascaras: { ato_id: [{ trecho, substituir_por }] } (revisao/mascaras.json).
+ * mascaras: { ato_id: [{ trecho_sha256, substituir_por }] } (revisao/mascaras.json).
  * Devolve { indices: { ano: itens[] }, pendentes: [], mascarasPendentes: [], estatisticas }.
  */
 export function consolidar(registros, curadoria, acessadoEm, mascaras = {}) {
@@ -127,6 +151,11 @@ export function consolidar(registros, curadoria, acessadoEm, mascaras = {}) {
     if (d?.decisao === 'descartar') { est.descartados++; continue; }
     if (d?.decisao === 'incluir') {
       const a = { ...c.a, ...(d.correcao || {}) };
+      // Ementa corrigida pela curadoria: o hash e a contagem de omissões são os da correção.
+      if (d.correcao?.ementa) {
+        a.ementa_original_sha256 = d.correcao.ementa_original_sha256 ?? null;
+        a.mascaramento = d.correcao.mascaramento ?? null;
+      }
       if (d.correcao?.tipo) a.tipo_nome = NOMES_TIPO[d.correcao.tipo] || d.correcao.tipo;
       if (d.correcao?.numero) a.numero_int = Number(String(d.correcao.numero).replace(/\./g, ''));
       if (a.data && a.tipo && a.numero_int) a.id = `atibaia-${a.tipo}-${a.numero_int}-${a.data.slice(0, 4)}`;
@@ -181,14 +210,14 @@ export function consolidar(registros, curadoria, acessadoEm, mascaras = {}) {
     if (privacidade.duvidas.length || temDocumentoPessoal(privacidade.ementa_publica)) {
       mascarasPendentes.push({
         ato_id: x.a.id, id_candidato: x.a.id_candidato ?? null, tipo: x.a.tipo_nome, numero: x.a.numero, data: x.a.data,
-        url: urlPagina(x.ed.url, x.a.pagina), ementa: semDocumentos(x.a.ementa),
-        duvidas: privacidade.duvidas.length ? privacidade.duvidas : [{ trecho: '(documento)', motivo: 'padrão de documento pessoal na ementa pública' }],
+        url: urlPagina(x.ed.url, x.a.pagina), ementa: privacidade.ementa_publica,
+        duvidas: privacidade.duvidas.length ? privacidade.duvidas : [{ trecho_sha256: '(documento)', motivo: 'padrão de documento pessoal na ementa pública' }],
       });
       est.aguardando_mascara++;
       continue;
     }
-    if (privacidade.mascaras.some((m) => m.origem === 'automatico')) est.mascarados_automatico++;
-    if (privacidade.mascaras.some((m) => m.origem === 'lista')) est.mascarados_lista++;
+    if (x.a.mascaramento?.nomes_omitidos_automatico || privacidade.mascaras.some((m) => m.origem === 'automatico')) est.mascarados_automatico++;
+    if (x.a.mascaramento?.nomes_omitidos_lista || privacidade.mascaras.some((m) => m.origem === 'lista')) est.mascarados_lista++;
     if (docsOmitidos(privacidade.ementa_publica)) est.com_documento_omitido++;
     (indices[ano] ||= []).push(itemPublicado(x.a, x.ed, acessadoEm, {
       confianca: x.revisao ? 'revisada' : 'alta', revisao: x.revisao, outras_publicacoes: x.outras, privacidade,
