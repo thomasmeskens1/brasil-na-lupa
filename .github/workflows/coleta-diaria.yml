@@ -1,0 +1,47 @@
+# Coleta diária das fontes oficiais (diretriz 13): Câmara dos Deputados e Senado Federal.
+# Roda às 08:37 de Brasília (11:37 UTC; o Senado pede para evitar horários redondos).
+# Só faz commit quando algum dado mudou; o push dispara a publicação na Vercel.
+name: Coleta diária
+
+on:
+  schedule:
+    - cron: "37 11 * * *"
+  workflow_dispatch:
+    inputs:
+      completo:
+        description: "Refazer todo o período (reconciliação)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: coleta-diaria
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Câmara dos Deputados
+        run: node scripts/coleta/camara/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
+      - name: Senado Federal
+        run: node scripts/coleta/senado/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
+      - name: Registrar mudanças
+        run: |
+          git config user.name "coleta-diaria"
+          git config user.email "coleta-diaria@users.noreply.github.com"
+          git add dados/camara dados/senado
+          # meta.json muda a cada execução; só publica se algum dado de fato mudou.
+          if git diff --cached --name-only | grep -qv '/meta\.json$'; then
+            git commit -m "Coleta diária: dados da Câmara e do Senado ($(date -u +%F))"
+            git push
+          else
+            echo "Nenhum dado novo."
+          fi

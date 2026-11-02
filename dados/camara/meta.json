@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-02T13:49:42.193Z",
+  "atualizado_em": "2026-11-02T15:16:19.023Z",
   "periodo": {
     "inicio": "2024-05-28",
     "fim": "2026-10-28"
@@ -38,6 +38,37 @@
         "votos": 52660,
         "plenario": 1396,
         "comissoes": 29
+      }
+    },
+    "presenca": {
+      "2026": {
+        "deputados": 567,
+        "sessoes_deliberativas": 77,
+        "dias_com_sessoes_deliberativas": 74,
+        "sessoes_com_lista_de_presenca_no_arquivo": 75,
+        "dias_consultados_no_servico": 73
+      }
+    },
+    "despesas": {
+      "2025": {
+        "deputados": 562,
+        "documentos": 208144,
+        "total_liquido": 239208957.97,
+        "lancamentos_no_arquivo": 209081,
+        "lancamentos_de_liderancas": 937,
+        "cpf_de_fornecedor_descartados": 1848,
+        "documentos_sem_link": 51803,
+        "deputados_com_total_diferente_da_pagina_oficial": 517
+      },
+      "2026": {
+        "deputados": 564,
+        "documentos": 120189,
+        "total_liquido": 144882827.42,
+        "lancamentos_no_arquivo": 120750,
+        "lancamentos_de_liderancas": 561,
+        "cpf_de_fornecedor_descartados": 1284,
+        "documentos_sem_link": 6848,
+        "deputados_com_total_diferente_da_pagina_oficial": 543
       }
     }
   },
@@ -144,19 +175,78 @@
       "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2026.csv",
       "orgao": "Câmara dos Deputados",
       "acessado_em": "2026-11-02"
+    },
+    {
+      "titulo": "Página oficial de consulta da cota parlamentar (conferência)",
+      "url": "https://www.camara.leg.br/cota-parlamentar/sumarizado?nuDeputadoId={id}&dataInicio=1/2025&dataFim=12/2025",
+      "orgao": "Câmara dos Deputados",
+      "acessado_em": "2026-11-02"
+    },
+    {
+      "titulo": "Página oficial de consulta da cota parlamentar (conferência)",
+      "url": "https://www.camara.leg.br/cota-parlamentar/sumarizado?nuDeputadoId={id}&dataInicio=1/2026&dataFim=12/2026",
+      "orgao": "Câmara dos Deputados",
+      "acessado_em": "2026-11-02"
+    },
+    {
+      "titulo": "Cota para o Exercício da Atividade Parlamentar (arquivo anual)",
+      "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+      "orgao": "Câmara dos Deputados",
+      "acessado_em": "2026-11-02"
+    },
+    {
+      "titulo": "Cota para o Exercício da Atividade Parlamentar (arquivo anual)",
+      "url": "https://www.camara.leg.br/cotas/Ano-2026.csv.zip",
+      "orgao": "Câmara dos Deputados",
+      "acessado_em": "2026-11-02"
     }
   ],
+  "observacoes": [
+    "Presença: dias e sessões deliberativas por deputado conforme o serviço oficial de frequência da Câmara; sessões conjuntas do Congresso não entram (ver lacunas em presenca/<ano>.json).",
+    "Despesas (CEAP): arquivo em massa anual, sem CPF; desde ago/2025 o arquivo não traz \"PASSAGEM AÉREA - SIGEPA\", que a página oficial soma (ver total_pagina_oficial em despesas/<ano>/resumo.json)."
+  ],
+  "arquivos_em_massa": {
+    "https://www.camara.leg.br/cotas/Ano-2025.csv.zip": {
+      "etag": "\"6ae86309-694e15\"",
+      "last_modified": "Mon, 02 Nov 2026 10:16:41 GMT",
+      "sha256": "b2cf02e98658953ebe49b641fbecbb2feed2402d974653978b31aea2368ab1da",
+      "baixado_em": "2026-11-02"
+    },
+    "https://www.camara.leg.br/cotas/Ano-2026.csv.zip": {
+      "etag": "\"6ae86307-44f31b\"",
+      "last_modified": "Mon, 02 Nov 2026 10:16:39 GMT",
+      "sha256": "80424998a639fef3f35502eebbc5283284001bd8bd75bdf143fb4e7624a5c68c",
+      "baixado_em": "2026-11-02"
+    },
+    "https://dadosabertos.camara.leg.br/arquivos/eventos/csv/eventos-2026.csv": {
+      "etag": "\"6ae804fe-107e80\"",
+      "last_modified": "Mon, 02 Nov 2026 03:35:26 GMT",
+      "sha256": "f527afefc80cac177d4e815a0b6b0534dce9e2cf8508a18bc52096c8be1c9df9",
+      "baixado_em": "2026-11-02"
+    },
+    "https://dadosabertos.camara.leg.br/arquivos/eventosPresencaDeputados/csv/eventosPresencaDeputados-2026.csv": {
+      "etag": "\"6ae80777-94b346\"",
+      "last_modified": "Mon, 02 Nov 2026 03:45:59 GMT",
+      "sha256": "c413663ceaf7f527c3e7e6f79445b7af68dbd92d22265c8524f8f01984589888",
+      "baixado_em": "2026-11-02"
+    }
+  },
   "ultima_execucao": {
     "modo": "incremental",
     "desde": "2026-10-26",
     "anos_baixados": [
       2026
     ],
-    "duracao_segundos": 8,
-    "requisicoes": 19,
+    "duracao_segundos": 17,
+    "requisicoes": 21,
     "retentativas": 0,
     "votacoes_gravadas": 0,
     "arquivos_gravados": 1,
-    "arquivos_inalterados": 20
+    "arquivos_inalterados": 1148,
+    "presenca": {},
+    "despesas": {
+      "2025": "processado",
+      "2026": "processado"
+    }
   }
 }

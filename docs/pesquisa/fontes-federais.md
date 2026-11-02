@@ -467,3 +467,9 @@ DespesaCota { parlamentar_id; ano; mes; tipo_despesa; fornecedor; cnpj_cpf_forne
 6. **Câmara:** limite de 3 meses em `/votacoes`; `proposicaoObjeto` costuma vir nulo; endpoint de despesas vazio ou com timeout (usar o ZIP); a CEAP traz CPF (descartar).
 7. **Emendas (CGU):** autor sem ID oficial das Casas; latin-1; API com chave (evitável com o ZIP).
 8. **Licenças:** nenhuma das APIs testadas declara licença no próprio metadado. Antes de publicar, confirmar os termos nas páginas institucionais. Até lá, atribuir sempre a fonte com link e data.
+
+## Correções posteriores (02/11/2026, coletor da Câmara)
+
+- O CSV da Cota para o Exercício da Atividade Parlamentar (`Ano-<ano>.csv.zip`) é UTF-8 com BOM, não latin-1.
+- Desde agosto de 2025 o arquivo em massa da cota não traz os lançamentos "PASSAGEM AÉREA - SIGEPA"; o total por deputado fica abaixo do exibido na página oficial (`/cota-parlamentar/sumarizado`), que é coletada à parte e exibida como total oficial.
+- A presença em Plenário não sai só do arquivo em massa (`eventosPresencaDeputados` registra apenas presenças): a frequência diária com ausências e ausências justificadas vem do serviço oficial `SitCamaraWS ListarPresencasDia`.
