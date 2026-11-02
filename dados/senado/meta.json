@@ -1,0 +1,67 @@
+{
+  "atualizado_em": "2026-11-02T13:46:14.552Z",
+  "verificado_em": "2026-11-02T13:46:15.590Z",
+  "periodo": {
+    "inicio": "2025-01-01",
+    "fim": "2026-11-02",
+    "ultima_execucao": {
+      "modo": "completo",
+      "inicio": "2025-01-01",
+      "fim": "2026-11-02"
+    },
+    "adicional": "Votações do PLP 68/2024 e do PLP 108/2024 no Senado, inclusive as de 2024"
+  },
+  "contagens": {
+    "parlamentares_em_exercicio": 81,
+    "votacoes_por_ano": {
+      "2024": 4,
+      "2025": 128,
+      "2026": 62
+    },
+    "votacoes_por_tipo": {
+      "nominal": 82,
+      "secreta": 112
+    },
+    "conferencia_texto_oficial": {
+      "confere": 189,
+      "sem placar no texto": 5
+    },
+    "conferencia_painel": {
+      "confere": 191,
+      "indisponivel": 3
+    },
+    "reforma_tributaria": 6,
+    "arquivos_de_detalhe": 194
+  },
+  "fontes": [
+    {
+      "titulo": "Senado Federal: votações nominais e secretas",
+      "url": "https://legis.senado.leg.br/dadosabertos/votacao",
+      "orgao": "Senado Federal",
+      "acessado_em": "2026-11-02"
+    },
+    {
+      "titulo": "Senado Federal: orientação de bancada",
+      "url": "https://legis.senado.leg.br/dadosabertos/plenario/votacao/orientacaoBancada/{inicio}/{fim}",
+      "orgao": "Senado Federal",
+      "acessado_em": "2026-11-02"
+    },
+    {
+      "titulo": "Senado Federal: tipos de comparecimento em votação",
+      "url": "https://legis.senado.leg.br/dadosabertos/plenario/lista/tiposComparecimento",
+      "orgao": "Senado Federal",
+      "acessado_em": "2026-11-02"
+    },
+    {
+      "titulo": "Senado Federal: senadores em exercício",
+      "url": "https://legis.senado.leg.br/dadosabertos/senador/lista/atual",
+      "orgao": "Senado Federal",
+      "acessado_em": "2026-11-02"
+    }
+  ],
+  "observacoes": [
+    "Votações simbólicas não constam do serviço de votações do Senado (aparecem só no texto da tramitação) e não são coletadas aqui.",
+    "Votação secreta: nenhum voto individual é atribuído; só o registro oficial de comparecimento.",
+    "Os registros de ausência podem diferir entre o serviço de dados abertos e a página da matéria (ex.: \"Presente – Não registrou voto\" na API e \"Não Compareceu\" na página); o coletor guarda o registro da API, sem corrigir."
+  ]
+}

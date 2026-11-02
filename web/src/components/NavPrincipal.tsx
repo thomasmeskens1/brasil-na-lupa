@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRef, useState, type KeyboardEvent } from "react";
-import { SO_APURACAO } from "@/lib/modo";
 
 export interface ItemNav {
   href: string;
@@ -12,20 +11,17 @@ export interface ItemNav {
 
 export const ITENS_NAV: ItemNav[] = [
   { href: "/", rotulo: "Início" },
-  { href: "/comparativo", rotulo: "Comparativo" },
-  { href: "/candidatos", rotulo: "Candidatos" },
-  { href: "/internacional", rotulo: "Internacional" },
-  { href: "/eleicao", rotulo: "Apuração" },
+  { href: "/impostos", rotulo: "Impostos" },
+  { href: "/congresso", rotulo: "Congresso" },
+  { href: "/sao-paulo", rotulo: "São Paulo" },
+  { href: "/atibaia", rotulo: "Atibaia" },
   { href: "/metodologia", rotulo: "Metodologia" },
 ];
-
-/** Botão em destaque, sempre visível (inclusive no celular, fora do menu). */
-export const QUIZ: ItemNav = { href: "/quiz", rotulo: "Quiz Eleitoral" };
 
 /**
  * Navegação principal. No celular, a lista fica atrás do botão "Menu"
  * (aria-expanded/aria-controls; Esc fecha e devolve o foco ao botão).
- * A partir de md, a lista fica sempre visível. O botão do quiz fica sempre à mostra. Marca a seção atual com aria-current.
+ * A partir de md, a lista fica sempre visível. Marca a seção atual com aria-current.
  */
 export function NavPrincipal() {
   const pathname = usePathname() ?? "/";
@@ -39,52 +35,23 @@ export function NavPrincipal() {
     }
   }
 
-  const quizAtivo = pathname.startsWith(QUIZ.href);
-
-  if (SO_APURACAO) {
-    return (
-      <nav aria-label="Navegação principal" className="absolute right-4 top-3 md:static">
-        <Link
-          href="/eleicao"
-          aria-current={pathname.startsWith("/eleicao") ? "page" : undefined}
-          className="block rounded bg-gray-900 px-2.5 py-1.5 text-sm font-medium text-white"
-        >
-          Apuração
-        </Link>
-      </nav>
-    );
-  }
-
   return (
-    <nav aria-label="Navegação principal" onKeyDown={onKeyDown} className="w-full md:flex md:w-auto md:items-center md:gap-2">
-      {/* Celular: o botão do quiz fica no cabeçalho, ao lado do "Menu"; a partir de md, é o último item à direita. */}
-      <div className="absolute right-4 top-3 flex items-center gap-2 md:static md:order-last">
-        <Link
-          href={QUIZ.href}
-          aria-current={quizAtivo ? "page" : undefined}
-          onClick={() => setAberto(false)}
-          className={`inline-flex items-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-destaque-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-destaque ${
-            quizAtivo ? "bg-destaque-hover ring-2 ring-destaque ring-offset-1" : "bg-destaque"
-          }`}
-        >
-          {QUIZ.rotulo}
-        </Link>
-        <button
-          ref={botao}
-          type="button"
-          aria-expanded={aberto}
-          aria-controls="menu-principal"
-          onClick={() => setAberto((v) => !v)}
-          className="inline-flex items-center gap-2 rounded border border-gray-400 bg-white px-3 py-1.5 text-sm font-medium text-gray-900 md:hidden"
-        >
-          <span aria-hidden="true" className="flex flex-col gap-0.5">
-            <span className="block h-0.5 w-4 bg-gray-900" />
-            <span className="block h-0.5 w-4 bg-gray-900" />
-            <span className="block h-0.5 w-4 bg-gray-900" />
-          </span>
-          <span className="max-[379px]:sr-only">Menu</span>
-        </button>
-      </div>
+    <nav aria-label="Navegação principal" onKeyDown={onKeyDown} className="w-full md:w-auto">
+      <button
+        ref={botao}
+        type="button"
+        aria-expanded={aberto}
+        aria-controls="menu-principal"
+        onClick={() => setAberto((v) => !v)}
+        className="absolute right-4 top-3 inline-flex items-center gap-2 rounded border border-[#7b8794] bg-white px-3 py-1.5 text-sm font-medium text-foreground md:hidden"
+      >
+        <span aria-hidden="true" className="flex flex-col gap-0.5">
+          <span className="block h-0.5 w-4 bg-foreground" />
+          <span className="block h-0.5 w-4 bg-foreground" />
+          <span className="block h-0.5 w-4 bg-foreground" />
+        </span>
+        Menu
+      </button>
       <ul
         id="menu-principal"
         className={`${aberto ? "flex" : "hidden"} flex-col gap-1 pt-2 md:flex md:flex-row md:flex-wrap md:pt-0`}
@@ -98,7 +65,7 @@ export function NavPrincipal() {
                 aria-current={ativo ? "page" : undefined}
                 onClick={() => setAberto(false)}
                 className={`block rounded px-2.5 py-2 text-sm font-medium md:py-1.5 ${
-                  ativo ? "bg-gray-900 text-white" : "text-gray-800 hover:bg-gray-200"
+                  ativo ? "bg-acento text-white" : "text-foreground hover:bg-[#e4e7eb]"
                 }`}
               >
                 {i.rotulo}

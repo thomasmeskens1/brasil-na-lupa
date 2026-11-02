@@ -1,33 +1,30 @@
 @import "tailwindcss";
 
+/*
+ * Paleta neutra (diretriz 11): cinzas e azul-acinzentado, sem cores associadas a
+ * partidos. Contrastes sobre branco (WCAG 2): texto #1f2933 14,8:1; secundário
+ * #3e4c59 9,4:1; link #234a73 9,0:1; acento #2f4a63 9,5:1.
+ * O degradê de azul dos vieses (.vt-*) fica reservado às leituras de analistas.
+ */
 :root {
   --background: #ffffff;
-  --foreground: #111827;
-  /* Tokens de candidatos e vieses: ver src/lib/cores.ts */
-  /* Candidatos: escuro (texto/borda), preenchimento pastel (gráficos/mapas), fundo pastel */
-  --cor-lula: #7f1d1d;
-  --cor-lula-preenchimento: #f4a7a1;
-  --cor-lula-fundo: #fdeaea;
-  --cor-flavio: #14532d;
-  --cor-flavio-preenchimento: #93d3a6;
-  --cor-flavio-fundo: #e4f4e9;
-  /* Vieses */
-  /* Vieses: degradê de azul (claro → escuro) */
-  --cor-esquerda: #1e4e8c;
-  --cor-centro: #173f72;
-  --cor-direita: #0f2a50;
-  /* Destaque do quiz: violeta, fora das cores de candidatos e vieses (branco/destaque 9,6:1) */
-  --cor-destaque: #5b21b6;
-  --cor-destaque-hover: #4c1d95;
-  --cor-destaque-fundo: #f3effd;
+  --foreground: #1f2933;
+  --cor-secundaria: #3e4c59;
+  --cor-link: #234a73;
+  --cor-link-hover: #142c45;
+  --cor-acento: #2f4a63;
+  --cor-acento-fundo: #eef2f6;
+  --cor-borda: #cbd2d9;
+  --cor-superficie: #f5f7fa;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-destaque: var(--cor-destaque);
-  --color-destaque-hover: var(--cor-destaque-hover);
-  --color-destaque-fundo: var(--cor-destaque-fundo);
+  --color-acento: var(--cor-acento);
+  --color-acento-fundo: var(--cor-acento-fundo);
+  --color-superficie: var(--cor-superficie);
+  --color-borda: var(--cor-borda);
   --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
     sans-serif;
 }
@@ -42,7 +39,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
-  /* URLs e códigos longos quebram em vez de causar rolagem horizontal */
+  /* URLs longas quebram em vez de causar rolagem horizontal */
   overflow-wrap: break-word;
 }
 
@@ -51,31 +48,7 @@ body {
   outline-offset: 2px;
 }
 
-/* Aviso inicial (<dialog> nativo em src/components/AvisoFontes.tsx) */
-html.modal-aberto {
-  overflow: hidden;
-}
-dialog.aviso {
-  width: min(34rem, calc(100vw - 2rem));
-  max-height: calc(100dvh - 2rem);
-  overflow-y: auto;
-  margin: auto;
-  border: 1px solid #d1d5db;
-  border-radius: 0.5rem;
-  background: #fff;
-  color: var(--foreground);
-  padding: 1.5rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-}
-dialog.aviso::backdrop {
-  background: rgba(17, 24, 39, 0.6);
-}
-
-/*
- * Dropdowns (<details>/<summary>) em todo o site, inclusive na apuração:
- * texto na cor padrão, sem sublinhado, seta alinhada e texto que quebra
- * alinhado após a seta. Regras fora de @layer prevalecem sobre utilitários.
- */
+/* Dropdowns (<details>/<summary>): seta alinhada e texto que quebra após a seta. */
 details > summary {
   position: relative;
   display: block;
@@ -83,7 +56,6 @@ details > summary {
   cursor: pointer;
   padding-left: 1.25rem;
   color: var(--foreground);
-  text-decoration: none;
   font-weight: 500;
 }
 details > summary::-webkit-details-marker {
@@ -110,102 +82,105 @@ details[open] > summary::before {
   transform: translateY(-50%) rotate(90deg);
 }
 details > summary:hover {
-  color: #000;
-  background-color: #f3f4f6;
-}
-details > summary * {
-  color: inherit;
-  text-decoration: none;
+  background-color: var(--cor-superficie);
 }
 
-/* Classes curtas para elementos repetidos centenas de vezes (reduz o HTML). */
 @layer components {
   .lk {
-    color: #1e40af;
+    color: var(--cor-link);
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 2px;
     overflow-wrap: anywhere;
   }
   .lk:hover {
-    color: #172554;
-  }
-  .chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    border: 1px solid #d1d5db;
-    border-radius: 0.25rem;
-    background: #fff;
-    padding: 0.125rem 0.375rem;
-    font-size: 0.75rem;
-    line-height: 1rem;
+    color: var(--cor-link-hover);
   }
   .tag-fonte {
     display: inline-block;
     border-radius: 0.25rem;
-    background: #f3f4f6;
+    background: #e4e7eb;
     padding: 0 0.25rem;
     font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.025em;
-    color: #1f2937;
+    color: #1f2933;
     text-decoration: none;
   }
-  /* Status (mesmos valores de CORES_STATUS em src/lib/cores.ts) */
-  .st {
-    display: inline-block;
-    border: 1px solid;
+  .cartao {
+    border: 1px solid var(--cor-borda);
+    border-radius: 0.5rem;
+    background: #fff;
+    padding: 1rem;
+    min-width: 0;
+  }
+  .meta {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: var(--cor-secundaria);
+  }
+  .selo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    border: 1px solid #7b8794;
     border-radius: 0.25rem;
+    background: #fff;
     padding: 0.125rem 0.5rem;
     font-size: 0.75rem;
     line-height: 1rem;
     font-weight: 600;
+    color: #1f2933;
   }
-  .st-positivo {
-    color: #ffffff;
-    background: #374151;
-    border-color: #374151;
+  .selo-escuro {
+    border-color: var(--cor-acento);
+    background: var(--cor-acento);
+    color: #fff;
   }
-  .st-intermediario {
-    color: #1f2937;
-    background: #e5e7eb;
-    border-color: #6b7280;
+  /* Aviso de destaque neutro (ex.: decisão sem votação de parlamentares). */
+  .aviso {
+    border: 1px solid #9aa5b1;
+    border-left-width: 4px;
+    border-left-color: var(--cor-acento);
+    border-radius: 0.25rem;
+    background: var(--cor-acento-fundo);
+    padding: 0.75rem 1rem;
   }
-  .st-neutro {
-    color: #374151;
-    background: #f3f4f6;
-    border-color: #c3c8d0;
-  }
-  .st-vazio {
-    color: #4b5563;
+  .lacuna {
+    border: 1px dashed #7b8794;
+    border-radius: 0.25rem;
     background: #fff;
-    border-color: #9ca3af;
-    border-style: dashed;
+    padding: 0.5rem 0.75rem;
+    color: #323f4b;
   }
-  /* Tag de viés (mesmos valores de CORES_VIESES) */
+  /* Tabelas de dados: rolagem própria em telas estreitas, nunca a página inteira. */
+  .tabela {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+  .tabela th,
+  .tabela td {
+    border-bottom: 1px solid var(--cor-borda);
+    padding: 0.5rem 0.625rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  .tabela thead th {
+    background: var(--cor-superficie);
+    font-weight: 600;
+    color: #1f2933;
+  }
+  /* Tags de viés das leituras dos analistas (diretriz 11): degradê de azul. */
   .vt {
     display: inline-flex;
     align-items: center;
-    gap: 0.25rem;
     border: 1px solid;
     border-radius: 0.25rem;
     padding: 0.125rem 0.375rem;
     font-size: 0.75rem;
-    line-height: 1rem;
     font-weight: 600;
-  }
-  .vt::before {
-    content: "";
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 9999px;
-    background: currentColor;
-  }
-  .vt-md {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
   }
   .vt-esquerda {
     color: #1e4e8c;
@@ -221,177 +196,5 @@ details > summary * {
     color: #0f2a50;
     background: #9cc3ec;
     border-color: #2f6db3;
-  }
-  .bt-lula {
-    border-top: 4px solid #d9534f;
-  }
-  .bt-flavio {
-    border-top: 4px solid #3d9a5d;
-  }
-  /* Segmentos da barra 100%: texto escuro sobre pastel (Lula 5,20:1; Flávio 5,25:1) */
-  .seg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 3px;
-    padding: 0 0.375rem;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  .seg-link {
-    text-decoration: none;
-    cursor: pointer;
-    transition: filter 150ms ease-out, box-shadow 150ms ease-out;
-  }
-  .seg-link:hover {
-    filter: brightness(0.93) saturate(1.15);
-    box-shadow: inset 0 0 0 2px rgb(17 24 39 / 0.35);
-  }
-  .seg-link:focus-visible {
-    outline: 3px solid #111827;
-    outline-offset: -3px;
-  }
-  .seg-estreito {
-    white-space: normal;
-    text-align: center;
-    font-size: 0.625rem;
-    line-height: 1.15;
-    padding: 0.125rem 0.25rem;
-    overflow-wrap: anywhere;
-  }
-  .seg-lula {
-    color: #7f1d1d;
-    background: #f4a7a1;
-  }
-  .seg-flavio {
-    color: #14532d;
-    background: #93d3a6;
-  }
-  .txt-lula {
-    color: #7f1d1d;
-  }
-  .txt-flavio {
-    color: #14532d;
-  }
-  .bl-esquerda,
-  .caixa.bl-esquerda {
-    background: #e6f1fb;
-    border-color: #9cc3ec;
-    border-left-width: 4px;
-  }
-  .bl-centro,
-  .caixa.bl-centro {
-    background: #c3dcf5;
-    border-color: #5d97d6;
-    border-left-width: 4px;
-  }
-  .bl-direita,
-  .caixa.bl-direita {
-    background: #9cc3ec;
-    border-color: #2f6db3;
-    border-left-width: 4px;
-  }
-  /* Selo neutro (horizonte, confiança) */
-  .selo {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.375rem;
-    border: 1px solid #9ca3af;
-    border-radius: 0.25rem;
-    background: #fff;
-    padding: 0.125rem 0.5rem;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    font-weight: 500;
-    color: #1f2937;
-  }
-  /* Blocos e textos recorrentes (classes curtas) */
-  .cartao {
-    border: 1px solid #d1d5db;
-    border-radius: 0.5rem;
-    background: #fff;
-    padding: 1rem;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    min-width: 0;
-  }
-  .caixa {
-    border: 1px solid #d1d5db;
-    border-radius: 0.25rem;
-    background: #fff;
-    padding: 0.5rem;
-    min-width: 0;
-  }
-  .meta {
-    font-size: 0.75rem;
-    line-height: 1rem;
-    color: #374151;
-  }
-  .rot {
-    font-weight: 500;
-    color: #374151;
-  }
-  .fila {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.375rem;
-  }
-  .sum {
-    cursor: pointer;
-    font-size: 0.875rem;
-    font-weight: 500;
-  }
-  .cb {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.375rem;
-    border: 1px solid;
-    border-radius: 9999px;
-    font-weight: 600;
-  }
-  .cb-n {
-    border-radius: 9999px;
-    padding: 0 0.375rem;
-    font-size: 0.8em;
-    font-weight: 700;
-    color: inherit; /* tom escuro do candidato sobre o preenchimento pastel */
-  }
-  .cb-lula {
-    color: #7f1d1d;
-    background: #fdeaea;
-    border-color: #d9534f;
-  }
-  .cb-lula .cb-n {
-    background: #f4a7a1;
-  }
-  .cb-flavio {
-    color: #14532d;
-    background: #e4f4e9;
-    border-color: #3d9a5d;
-  }
-  .cb-flavio .cb-n {
-    background: #93d3a6;
-  }
-  .fontes {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    column-gap: 0.5rem;
-    row-gap: 0.125rem;
-    margin-top: 0.25rem;
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-  .aviso-rep {
-    display: inline-block;
-    margin-left: 0.25rem;
-    border: 1px dashed #6b7280;
-    border-radius: 0.25rem;
-    background: #fff;
-    padding: 0.125rem 0.375rem;
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: #1f2937;
   }
 }

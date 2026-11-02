@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Como o site trata dados, de acordo com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018).",
 };
 
-const ATUALIZADO_EM = "13 de outubro de 2026";
+const ATUALIZADO_EM = "02/11/2026";
 
 function Bloco({ id, titulo, children }: { id: string; titulo: string; children: ReactNode }) {
   return (
@@ -87,26 +87,17 @@ export default function PrivacidadePage() {
         </p>
       </Bloco>
 
-      <Bloco id="armazenamento-local" titulo="4. Armazenamento no seu navegador">
+      <Bloco id="armazenamento-local" titulo="4. Cookies e armazenamento no seu navegador">
         <p>
-          O aviso exibido na primeira visita grava no armazenamento local do seu navegador
-          (localStorage) apenas a informação de que ele já foi lido, para não reaparecer. Essa
-          informação não contém dado pessoal, não é enviada a nenhum servidor e pode ser apagada a
-          qualquer momento nas configurações do navegador. O site não usa cookies.
+          O site não usa cookies e não grava informações no armazenamento do seu navegador.
         </p>
       </Bloco>
 
-      <Bloco id="ferramentas" titulo="5. Ferramentas interativas e opinião política">
+      <Bloco id="opiniao-politica" titulo="5. Opinião política">
         <p>
-          Opinião política é dado pessoal sensível (art. 5º, II, da LGPD). Por isso, o site não coleta
-          esse tipo de informação.
-        </p>
-        <p>
-          No Quiz Eleitoral, as respostas e o resultado são calculados apenas no seu navegador,
-          enquanto a página estiver aberta: não são enviados, armazenados nem compartilhados com o
-          site ou com terceiros, e somem ao recarregar ou fechar a página. A medição de audiência
-          registra apenas a visita à página do quiz, nunca as respostas. O site não publica
-          resultados agregados de respostas.
+          Opinião política é dado pessoal sensível (art. 5º, II, da LGPD). O site não coleta esse
+          tipo de informação: ele apenas apresenta decisões e votações registradas em documentos
+          oficiais e não pede ao visitante nenhuma resposta ou preferência.
         </p>
       </Bloco>
 

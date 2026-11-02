@@ -3,29 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "sync": "node scripts/sync-data.mjs",
-    "predev": "node scripts/sync-data.mjs",
+    "sync": "node scripts/sync-data.mjs && node scripts/gerar-congresso.mjs",
+    "predev": "node scripts/sync-data.mjs && node scripts/gerar-congresso.mjs",
     "dev": "next dev",
-    "prebuild": "node scripts/sync-data.mjs",
+    "prebuild": "node scripts/sync-data.mjs && node scripts/gerar-congresso.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
-    "d3-geo": "^3.1.1",
     "next": "16.4.0",
     "react": "19.3.0",
-    "react-dom": "19.3.0",
-    "topojson-client": "^3.1.0"
+    "react-dom": "19.3.0"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
-    "@types/d3-geo": "^3.1.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@types/topojson-client": "^3.1.5",
     "eslint": "^9",
     "eslint-config-next": "16.4.0",
     "tailwindcss": "^4",

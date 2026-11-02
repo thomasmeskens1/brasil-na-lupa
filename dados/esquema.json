@@ -1,0 +1,190 @@
+{
+  "_descricao": "Contrato de dados do site de acompanhamento político (diretrizes.md). Cada pasta tem um único dono (agente ou coletor). Toda informação traz fonte oficial e data de coleta; o que a fonte não traz fica null e entra em 'lacunas' — nunca é preenchido por dedução.",
+  "_pastas": {
+    "dados/icms/": "Piloto ICMS — curadoria a partir de docs/pesquisa/icms-sp.json (dono: curadoria-icms)",
+    "dados/camara/": "Câmara dos Deputados — coleta automática (dono: scripts/coleta/camara)",
+    "dados/senado/": "Senado Federal — coleta automática (dono: scripts/coleta/senado)",
+    "dados/glossario.json": "Termos técnicos e siglas com explicação breve e neutra (dono: orquestrador)"
+  },
+  "fonte": {
+    "titulo": "Nome legível do documento oficial",
+    "url": "https://… (domínio de órgão público)",
+    "orgao": "Ex.: CONFAZ, Câmara dos Deputados",
+    "acessado_em": "AAAA-MM-DD"
+  },
+  "decisao": {
+    "_arquivo": "dados/icms/decisoes.json → { atualizado_em, itens: decisao[] }",
+    "id": "kebab-case estável, ex.: confaz-convenio-127-2026",
+    "titulo": "Título neutro e curto, ex.: 'Novo valor do ICMS da gasolina a partir de 01/02/2027'",
+    "resumo": "Até 50 palavras, neutro, só fatos do documento",
+    "caminho": "confaz | alesp | governador-sp | congresso | presidencia",
+    "instrumento": "Convênio ICMS | Ato Declaratório | Lei | Lei Complementar | Decreto | Emenda Constitucional | Decreto Legislativo | Medida Provisória",
+    "numero": "Ex.: 127/2026",
+    "orgao": "Órgão que decidiu",
+    "datas": {
+      "decisao": "AAAA-MM-DD|null",
+      "publicacao": "AAAA-MM-DD|null",
+      "vigencia": "AAAA-MM-DD|null",
+      "vigencia_texto": "texto quando a vigência não é uma data única",
+      "periodo_publicacao": "para itens que agrupam vários atos: { inicio, fim }"
+    },
+    "mudancas": [
+      {
+        "item": "Gasolina e etanol anidro",
+        "antes": "1,57",
+        "depois": "1,64",
+        "unidade": "R$ por litro",
+        "vigencia": "AAAA-MM-DD",
+        "fonte": "url do documento do valor novo",
+        "fonte_antes": "url do documento do valor anterior"
+      }
+    ],
+    "responsaveis": [
+      {
+        "nome": "…",
+        "cargo": "…",
+        "ente": "São Paulo | União | …",
+        "papel": "assinou | autor | relator | sancionou | vetou | presidiu"
+      }
+    ],
+    "votacoes": [
+      {
+        "casa": "camara | senado | alesp | confaz | congresso",
+        "tipo": "nominal | simbolica | unanimidade-registrada | sem-votacao",
+        "data": "AAAA-MM-DD",
+        "descricao": "Ex.: Votação em 2º turno do PLP 108/2024",
+        "placar": {
+          "sim": 0,
+          "nao": 0,
+          "abstencao": 0,
+          "obstrucao": 0,
+          "outros": 0
+        },
+        "votacao_ref": "id do arquivo em dados/<casa>/votacoes/<id>.json, quando houver votação nominal coletada; senão null",
+        "votos_individuais": "lista embutida só quando não houver coletor da casa (ex.: ALESP): [{ nome, partido, voto }]",
+        "url": "link oficial"
+      }
+    ],
+    "justificativa": {
+      "texto": "citação literal curta do documento oficial",
+      "documento": "Ex.: Exposição de motivos",
+      "url": "…"
+    },
+    "justificativas_contrarias": [
+      {
+        "texto": "citação literal (voto em separado, razões de veto…)",
+        "autor": "…",
+        "url": "…"
+      }
+    ],
+    "relacionados": [
+      "ids de outras decisões"
+    ],
+    "termos": [
+      "termos do glossário usados nesta decisão"
+    ],
+    "fontes": [
+      "fonte[]"
+    ],
+    "lacunas": [
+      "Ex.: 'Justificativa não disponível em fonte oficial'"
+    ],
+    "_grupos": "Itens podem agrupar atos de rotina (ex.: decretos de prorrogação de um ano); cada ato agrupado aparece em 'fontes' com número, ementa oficial e link"
+  },
+  "parlamentar": {
+    "_arquivo": "dados/<casa>/parlamentares.json → { atualizado_em, fonte, itens: parlamentar[] }",
+    "id": "id oficial da casa (string)",
+    "nome": "nome parlamentar",
+    "nome_civil": "se a fonte trouxer",
+    "partido": "sigla atual",
+    "uf": "UF",
+    "em_exercicio": true,
+    "foto": "URL oficial ou null",
+    "url_oficial": "página na casa",
+    "email": "institucional ou null"
+  },
+  "votacao": {
+    "_arquivos": "índice: dados/<casa>/votacoes/indice-<ano>.json → { atualizado_em, itens: resumo[] }; detalhe: dados/<casa>/votacoes/<id>.json",
+    "id": "id oficial da votação (string)",
+    "casa": "camara | senado",
+    "data": "AAAA-MM-DD",
+    "hora": "HH:MM|null",
+    "orgao": "Plenário | comissão",
+    "proposicao": {
+      "id": "…",
+      "sigla": "PL|PLP|PEC|MPV…",
+      "numero": 0,
+      "ano": 0,
+      "ementa": "…",
+      "url": "…"
+    },
+    "descricao": "texto oficial do que foi votado",
+    "resultado": "aprovada | rejeitada | null (conforme fonte)",
+    "tipo": "nominal | simbolica | secreta (secreta: placar oficial, 'votos' vazio; nunca atribuir voto individual)",
+    "placar": {
+      "sim": 0,
+      "nao": 0,
+      "abstencao": 0,
+      "obstrucao": 0,
+      "outros": 0
+    },
+    "orientacoes": [
+      {
+        "bancada": "…",
+        "orientacao": "Sim|Não|Liberado|Obstrução|…"
+      }
+    ],
+    "votos": [
+      {
+        "parlamentar_id": "…",
+        "nome": "…",
+        "partido": "…",
+        "uf": "…",
+        "voto": "Sim|Não|Abstenção|Obstrução|Artigo 17|…",
+        "voto_codigo": "código bruto da fonte, quando houver"
+      }
+    ],
+    "fonte": "fonte",
+    "lacunas": [],
+    "placar_origem": "contagem-dos-votos | totais-oficiais",
+    "conferencia_placar": "como o placar foi conferido (ex.: texto oficial da sessão, painel de orientação)",
+    "comparecimento": "só em votação secreta: lista oficial de comparecimento [{ parlamentar_id, nome, situacao }] — não é voto",
+    "orgao_sigla": "sigla do órgão (ex.: PLEN, CCJC)",
+    "orgao_nome": "nome do órgão",
+    "descricao_abertura": "texto oficial de abertura da votação, quando houver",
+    "registrado_em": "data/hora do registro na fonte (ISO)",
+    "url": "página oficial do evento/votação",
+    "proposicoes": "lista de proposições vinculadas, quando mais de uma (a principal fica em 'proposicao')",
+    "_observacao_hora": "hora null quando o registro passa da meia-noite e a fonte não permite separar",
+    "_observacao_resultado": "resultado null quando a fonte não traz o campo; lacuna remete à descrição oficial",
+    "_observacao_orientacao": "orientacao null quando não registrada"
+  },
+  "regras": [
+    "Arquivos JSON UTF-8, datas ISO, números como number (exceto valores monetários de documentos, mantidos como texto exato do documento).",
+    "Nunca guardar CPF nem dado pessoal que não seja do exercício da função pública.",
+    "Votação simbólica: 'votos' vazio e placar null; nunca atribuir voto individual.",
+    "Texto exibido ao público sem '_' nem identificadores técnicos; siglas com nome completo no glossário.",
+    "Registros da fonte que divergem de outra página oficial (ex.: 'Presente – Não registrou voto' × 'Não Compareceu') são guardados como a API traz e anotados em lacunas/meta, sem correção manual."
+  ],
+  "meta_coleta": {
+    "_arquivo": "dados/<casa>/meta.json",
+    "atualizado_em": "ISO",
+    "ultima_execucao": "ISO",
+    "periodo": "…",
+    "contagens": {},
+    "fontes": [
+      "fonte"
+    ],
+    "proposicoes_acompanhadas": [
+      "ids"
+    ],
+    "observacoes": [
+      "…"
+    ]
+  },
+  "_topo_decisoes": {
+    "atualizado_em": "AAAA-MM-DD",
+    "fonte_pesquisa": "arquivo de pesquisa de origem",
+    "itens": "decisao[]"
+  }
+}
