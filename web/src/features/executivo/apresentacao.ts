@@ -29,7 +29,8 @@ export function simplesUtil(s: TituloSimples | null | undefined): TituloSimples 
 export function simplesLista(s: TituloSimples | null | undefined): TituloSimples | null {
   const u = simplesUtil(s);
   if (!u || !tituloAprovado(u)) return null;
-  return { titulo: u.titulo, subtitulo: u.subtitulo ?? null, tema: u.tema ?? null };
+  // Repassa origem, verificação e etiqueta: o cartão reaplica a regra (só "estruturado" verificado).
+  return { ...u, subtitulo: u.subtitulo ?? null, tema: u.tema ?? null };
 }
 
 /** "Medida Provisória 1.300/2025". */
