@@ -74,7 +74,12 @@ html {
 }
 
 body {
-  background: var(--background);
+  /* Quadriculado sutil do motion da marca (40 px, linhas a 3%). */
+  background-color: var(--background);
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
   color: var(--foreground);
   font-family: var(--font-sans);
   font-size: 1rem;
@@ -717,5 +722,108 @@ h1 {
       animation-timeline: view();
       animation-range: entry 0% cover 22%;
     }
+  }
+}
+
+/* ----- Abertura da marca (motion do logotipo) e carregamento ----- */
+.abertura {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+}
+html[data-abertura="ativa"] .abertura,
+html[data-abertura="saindo"] .abertura {
+  display: block;
+}
+/* Rede de segurança: se algo falhar, a abertura some sozinha. */
+html[data-abertura="ativa"] .abertura {
+  animation: abertura-seguranca 0s 7s forwards;
+}
+@keyframes abertura-seguranca {
+  to { visibility: hidden; }
+}
+html[data-abertura="ativa"] body {
+  overflow: hidden;
+}
+html[data-abertura="ativa"] .entrada > *,
+html[data-abertura="ativa"] .destaque-neon,
+html[data-abertura="ativa"] .rabisco path {
+  animation-play-state: paused;
+}
+.abertura-fundo {
+  position: absolute;
+  inset: 0;
+  background-color: var(--background);
+  background-image:
+    radial-gradient(circle at 50% 50%, rgb(204 255 0 / 0.08), transparent 60%),
+    radial-gradient(circle at 75% 30%, rgb(108 92 231 / 0.12), transparent 55%),
+    linear-gradient(to right, rgb(255 255 255 / 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.03) 1px, transparent 1px);
+  background-size: auto, auto, 40px 40px, 40px 40px;
+}
+.abertura.abrindo .abertura-fundo {
+  -webkit-mask: radial-gradient(circle at var(--cx) var(--cy), transparent var(--r), #000 calc(var(--r) + 1px));
+  mask: radial-gradient(circle at var(--cx) var(--cy), transparent var(--r), #000 calc(var(--r) + 1px));
+}
+.abertura-anel {
+  display: none;
+  position: absolute;
+  left: var(--cx);
+  top: var(--cy);
+  width: calc(var(--r) * 2);
+  height: calc(var(--r) * 2);
+  translate: -50% -50%;
+  border-radius: 50%;
+  border: 6px solid var(--cor-acento);
+  box-shadow: 0 0 24px rgb(204 255 0 / 0.55), inset 0 0 24px rgb(204 255 0 / 0.35);
+  pointer-events: none;
+}
+.abertura.abrindo .abertura-anel {
+  display: block;
+}
+.abertura-palco {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.abertura-pular {
+  position: absolute;
+  right: 5%;
+  bottom: 1.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--cor-borda);
+  background: rgb(26 26 29 / 0.8);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: var(--cor-texto-apoio);
+}
+.abertura-pular:hover {
+  color: var(--foreground);
+  border-color: rgb(204 255 0 / 0.5);
+}
+.abertura.abrindo .abertura-pular {
+  display: none;
+}
+
+/* Carregamento entre páginas: a lupa vasculha o logotipo. */
+.carregando #bnl-c-lupa {
+  transform: translate(480px, 72px) scale(1.05);
+}
+.carregando #bnl-c-sublinhado {
+  stroke-dasharray: 1;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .carregando #bnl-c-lupa {
+    animation: vasculhar 1.4s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+  }
+  .carregando #bnl-c-sublinhado {
+    animation: desenhar 1.4s ease-in-out infinite alternate;
+  }
+  @keyframes vasculhar {
+    from { transform: translate(120px, 150px) rotate(-10deg) scale(1.05); }
+    to { transform: translate(480px, 72px) rotate(0deg) scale(1.05); }
   }
 }

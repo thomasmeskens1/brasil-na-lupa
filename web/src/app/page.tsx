@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CartaoDecisao, formatarData, rotuloCaminho, type Caminho } from "@/components/decisao";
 import { ListaRecolhivel } from "@/components/lista";
+import { AberturaMarca, SCRIPT_ABERTURA } from "@/components/marca/AberturaMarca";
 import { ContadorAnimado } from "@/components/marca/ContadorAnimado";
 import { Figurinha, SetaRabisco, Sublinhado } from "@/components/marca/Figurinhas";
 import { getAgenda, proximasSessoes } from "@/features/agenda/dados";
@@ -27,6 +28,8 @@ export default function Home() {
 
   return (
     <div className="space-y-10">
+      <script dangerouslySetInnerHTML={{ __html: SCRIPT_ABERTURA }} />
+      <AberturaMarca />
       <section aria-labelledby="titulo-home" className="heroi entrada">
         <p className="etiqueta-heroi">Política sem complicação, com fonte oficial</p>
         <h1 id="titulo-home" className="manchete mt-3 text-[2rem] leading-[1.05] md:text-6xl">
