@@ -213,7 +213,7 @@ export function Comparador({ dados, coleta }: { dados: Record<Casa, ParlamentarC
                     <div key={r as string}>
                       <dt className="text-sm text-[var(--cor-secundaria)]">{r}</dt>
                       <dd>
-                        {v ? <span className="font-semibold tabular-nums">{v}</span> : <span className="lacuna text-sm">Não disponível nos dados coletados</span>}
+                        {v && !v.startsWith("Informação") ? <span className="font-semibold tabular-nums">{v}</span> : <span className="lacuna text-sm">{v ?? "Não disponível nos dados coletados"}</span>}
                         {v && det ? <span className="block text-sm text-[var(--cor-secundaria)]">{det}</span> : null}
                         {v && u ? (
                           <a href={u as string} className="lk flex min-h-11 w-fit items-center text-sm" target="_blank" rel="noopener noreferrer">

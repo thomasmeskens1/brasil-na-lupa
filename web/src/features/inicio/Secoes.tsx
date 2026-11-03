@@ -13,7 +13,7 @@ export const SECOES = [
     href: "/congresso",
     icone: "congresso" as NomeFigurinha,
     titulo: "Congresso Nacional",
-    texto: "Votações da Câmara dos Deputados e do Senado Federal, o voto de cada parlamentar e, dos deputados, a presença em Plenário e os gastos da cota parlamentar.",
+    texto: "Votações da Câmara dos Deputados e do Senado Federal, o voto de cada parlamentar e os gastos da cota parlamentar; dos deputados, também a presença em Plenário.",
   },
   {
     href: "/agenda",

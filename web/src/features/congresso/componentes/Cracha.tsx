@@ -67,7 +67,7 @@ export function Cracha({ casa, p, nominais, presenca, gastos }: CrachaProps) {
           <div key={r.rotulo} className="rounded-md border border-borda bg-superficie px-3 py-2">
             <dt className="text-sm text-[var(--cor-secundaria)]">{r.rotulo}</dt>
             <dd>
-              {r.valor ? <span className="text-xl font-bold tabular-nums">{r.valor}</span> : <span className="lacuna text-sm">Não disponível nos dados coletados</span>}
+              {r.valor && !r.valor.startsWith("Informação") ? <span className="text-xl font-bold tabular-nums">{r.valor}</span> : <span className="lacuna text-sm">{r.valor ?? "Não disponível nos dados coletados"}</span>}
               {r.detalhe ? <span className="block text-sm text-[var(--cor-secundaria)]">{r.detalhe}</span> : null}
               {r.fonte ? <SeloFonte fonte={r.fonte} compacto /> : null}
             </dd>
