@@ -6,7 +6,7 @@
  * ao focar o campo. Nada do que é digitado sai do navegador; a escolha vai só para a URL.
  */
 import { useRouter } from "next/navigation";
-import { useId, useMemo, useRef, useState, type KeyboardEvent } from "react";
+import { useEffect, useId, useMemo, useRef, useState, type KeyboardEvent } from "react";
 import { UFS } from "./cargos";
 
 type Opcao = { tipo: "uf"; uf: string; nome: string } | { tipo: "m"; uf: string; nome: string; slug: string };
@@ -65,6 +65,11 @@ export function BuscaLocal({ rotulo = "Sua cidade ou estado", compacto = false }
     return [...ufs, ...inicio, ...meio].slice(0, 12);
   }, [q, lista]);
 
+  // A opção ativa (setas) fica sempre visível dentro da lista rolável.
+  useEffect(() => {
+    if (ativo >= 0) document.getElementById(`${id}-op-${ativo}`)?.scrollIntoView({ block: "nearest" });
+  }, [ativo, id]);
+
   function abrir() {
     if (!lista) void carregar().then(setLista);
   }
@@ -84,8 +89,15 @@ export function BuscaLocal({ rotulo = "Sua cidade ou estado", compacto = false }
       e.preventDefault();
       setAtivo((a) => Math.max(0, a - 1));
     } else if (e.key === "Escape") {
+      if (mostra) e.preventDefault();
       setAberto(false);
       setAtivo(-1);
+    } else if (e.key === "Home" && mostra) {
+      e.preventDefault();
+      setAtivo(0);
+    } else if (e.key === "End" && mostra) {
+      e.preventDefault();
+      setAtivo(opcoes.length - 1);
     }
   }
 
@@ -95,6 +107,7 @@ export function BuscaLocal({ rotulo = "Sua cidade ou estado", compacto = false }
   return (
     <form
       role="search"
+      aria-label="Buscar representantes por cidade ou estado"
       className="relative"
       onSubmit={(e) => {
         e.preventDefault();
@@ -132,7 +145,7 @@ export function BuscaLocal({ rotulo = "Sua cidade ou estado", compacto = false }
           className="min-w-0 flex-1 rounded-md border border-[var(--cor-borda-forte)] bg-white px-3 py-2 text-base"
         />
         <button type="submit" className="botao botao-escuro">
-          Ver
+          Ver<span className="sr-only"> os representantes</span>
         </button>
       </div>
       <p id={`${id}-ajuda`} className="meta mt-1">
@@ -155,7 +168,9 @@ export function BuscaLocal({ rotulo = "Sua cidade ou estado", compacto = false }
               e.preventDefault();
               escolher(o);
             }}
-            className={`flex min-h-11 cursor-pointer items-center px-3 py-2 ${i === ativo ? "bg-[var(--cor-acento-fundo)]" : ""}`}
+            className={`flex min-h-11 cursor-pointer items-center px-3 py-2 ${
+              i === ativo ? "bg-[var(--cor-acento-fundo)] outline outline-2 -outline-offset-2 outline-[var(--cor-foco)]" : ""
+            }`}
           >
             {o.tipo === "uf" ? (
               <span>
@@ -170,7 +185,11 @@ export function BuscaLocal({ rotulo = "Sua cidade ou estado", compacto = false }
         ))}
       </ul>
       <p className="sr-only" aria-live="polite">
-        {mostra ? `${opcoes.length} resultados; use as setas para escolher.` : semResultado ? "Nenhuma cidade ou estado encontrado." : ""}
+        {mostra
+          ? `${opcoes.length} ${opcoes.length === 1 ? "resultado" : "resultados"}; use as setas para cima e para baixo e Enter para escolher.`
+          : semResultado
+            ? "Nenhuma cidade ou estado encontrado."
+            : ""}
       </p>
       {semResultado ? <p className="mt-1 text-sm">Nenhuma cidade ou estado encontrado com esse nome.</p> : null}
     </form>

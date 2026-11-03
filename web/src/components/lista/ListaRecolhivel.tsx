@@ -80,16 +80,18 @@ export function ListaRecolhivel({ itens, inicial = 10, passo, rotulo, ordenada =
       {resto > 0 ? (
         <div className="mt-3 flex flex-wrap gap-2">
           <button type="button" className="botao" onClick={() => revelar(limite + p)}>
-            Mostrar mais {Math.min(p, resto).toLocaleString("pt-BR")}
+            Mostrar mais {Math.min(p, resto).toLocaleString("pt-BR")} {Math.min(p, resto) === 1 ? rotulo.singular : rotulo.plural}
           </button>
-          <button type="button" className="botao" onClick={() => revelar(total)}>
-            Mostrar todos ({total.toLocaleString("pt-BR")})
-          </button>
+          {resto > p ? (
+            <button type="button" className="botao" onClick={() => revelar(total)}>
+              Mostrar todos ({total.toLocaleString("pt-BR")})<span className="sr-only"> {rotulo.plural}</span>
+            </button>
+          ) : null}
         </div>
       ) : total > inicial ? (
         <div className="mt-3">
           <button type="button" className="botao" onClick={() => setLimite(Math.min(inicial, total))}>
-            Mostrar menos
+            Mostrar menos<span className="sr-only"> {rotulo.plural}</span>
           </button>
         </div>
       ) : null}

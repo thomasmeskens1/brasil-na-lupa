@@ -11,6 +11,8 @@ import { LARGURA_VB, LogoSvg, RAIO_LUPA, X_VB, Y_VB } from "./LogoSvg";
  * 3. 2,5–3,5 s: "portal": a lente cresce e abre a página inicial através dela, enquanto o
  *    conteúdo da página entra (html[data-abertura] libera as animações de entrada).
  * Sem JavaScript ou com movimento reduzido (acessibilidade), nada aparece; ?abertura força o teste.
+ * A camada é aria-hidden (o leitor de tela encontra o conteúdo da página desde o início) e
+ * qualquer tecla ou foco encerra a abertura na hora (nada fica escondido atrás dela).
  */
 const FIM_VARREDURA = 1900;
 const INICIO_PORTAL = 2500;
@@ -61,6 +63,16 @@ export function AberturaMarca() {
       pularPara = INICIO_PORTAL;
     };
     q<HTMLButtonElement>(".abertura-pular")?.addEventListener("click", pular);
+    // Teclado (Tab, atalhos, leitor de tela): a abertura nunca prende nem esconde o foco; encerra na hora.
+    const encerrar = () => {
+      if (html.dataset.abertura === "vista") return;
+      if (!quadro) {
+        html.dataset.abertura = "vista";
+        setAtiva(false);
+      } else pularPara = FIM;
+    };
+    window.addEventListener("keydown", encerrar, true);
+    document.addEventListener("focusin", encerrar, true);
 
     const quadroDe = (t: number) => {
       // 1. Varredura
@@ -136,6 +148,8 @@ export function AberturaMarca() {
 
     return () => {
       cancelAnimationFrame(quadro);
+      window.removeEventListener("keydown", encerrar, true);
+      document.removeEventListener("focusin", encerrar, true);
     };
   }, []);
 

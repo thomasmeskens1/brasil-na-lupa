@@ -18,6 +18,7 @@ import { useMemo, useState } from "react";
 import { CartaoDecisao, type CartaoDecisaoProps } from "@/components/decisao";
 import { FiltrosCompactos, normalizarBusca } from "@/components/tabela";
 import { montarCartao } from "../apresentacao";
+import { MostrarMais } from "@/components/lista/MostrarMais";
 
 export type DadosCartao = Omit<CartaoDecisaoProps, "as" | "children" | "className" | "quemDecidiu" | "nivelTitulo"> & {
   quemDecidiu?: string;
@@ -91,7 +92,6 @@ export function ListaCartoes({
       partes.every((p) => indice[n].includes(p)),
   );
   const visiveis = filtrados.slice(0, limite);
-  const resto = filtrados.length - visiveis.length;
   const nome = (n: number) => (n === 1 ? rotulo.singular : rotulo.plural);
 
   if (!itens.length) return <p className="lacuna text-sm">{vazio ?? `Nenhum item coletado.`}</p>;
@@ -163,16 +163,14 @@ export function ListaCartoes({
       ) : (
         <p className="lacuna text-sm">Nenhum resultado com esses filtros. Tente limpar a busca ou os filtros.</p>
       )}
-      {resto > 0 ? (
-        <div className="flex flex-wrap gap-2">
-          <button type="button" className="botao" onClick={() => setLimite((n) => n + porPagina)}>
-            Mostrar mais {Math.min(porPagina, resto).toLocaleString("pt-BR")}
-          </button>
-          <span className="self-center text-sm text-[var(--cor-secundaria)]">
-            faltam {resto.toLocaleString("pt-BR")} {nome(resto)}
-          </span>
-        </div>
-      ) : null}
+      <MostrarMais
+        visiveis={visiveis.length}
+        total={filtrados.length}
+        passo={porPagina}
+        itens={rotulo}
+        todos={false}
+        aoMostrar={setLimite}
+      />
     </div>
   );
 }

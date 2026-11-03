@@ -5,6 +5,7 @@ import { CartaoDecisao } from "@/components/decisao/CartaoDecisao";
 import { FiltrosCompactos } from "@/components/tabela/FiltrosCompactos";
 import { normalizar, type ItemListaIcms } from "../cartao";
 import { CAMINHOS, CAMINHO_CURTO } from "../rotulos";
+import { MostrarMais } from "@/components/lista/MostrarMais";
 
 const POR_PAGINA = 10;
 
@@ -97,16 +98,14 @@ export function ListaIcms({ itens }: { itens: ItemListaIcms[] }) {
       ) : (
         <p className="lacuna">Nenhuma decisão com essa busca ou esses filtros. Tente limpar os filtros.</p>
       )}
-      {resto > 0 ? (
-        <div className="flex flex-wrap gap-2">
-          <button type="button" className="botao" onClick={() => setLimite((n) => n + POR_PAGINA)}>
-            Mostrar mais {Math.min(POR_PAGINA, resto)}
-          </button>
-          <button type="button" className="botao" onClick={() => setLimite(filtrados.length)}>
-            Mostrar todas ({filtrados.length})
-          </button>
-        </div>
-      ) : null}
+      <MostrarMais
+        visiveis={filtrados.length - resto}
+        total={filtrados.length}
+        passo={POR_PAGINA}
+        itens={{ singular: "decisão", plural: "decisões" }}
+        genero="f"
+        aoMostrar={setLimite}
+      />
     </div>
   );
 }

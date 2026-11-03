@@ -55,6 +55,7 @@ export function PresencaDeputado({ registros, urlOficial }: { registros: { ano: 
         return (
           <section key={p.ano} aria-labelledby={`presenca-${p.ano}`} className="space-y-3">
             <h3 id={`presenca-${p.ano}`} className="text-lg font-semibold text-gray-900">
+              <span className="sr-only">Presença em </span>
               {p.ano}
             </h3>
             <p className="text-sm text-gray-800">

@@ -7,6 +7,7 @@ import { FiltrosCompactos, normalizarBusca } from "@/components/tabela";
 import { dadoVotacao, formaDecisao } from "../apresentacao";
 import { lerHash, nomeProposicao, rotuloVoto } from "../rotulos";
 import type { FormaVotacao } from "../tipos";
+import { MostrarMais } from "@/components/lista/MostrarMais";
 
 /** Linha de public/estados/<uf>/votacoes.json (ver scripts/gerar-estados.mjs). */
 export type LinhaVotacao = [
@@ -229,16 +230,14 @@ export function BuscaVotacoes({ ctx }: { ctx: ContextoCasa }) {
             })
           : null}
       </ul>
-      {resto > 0 ? (
-        <div className="flex flex-wrap gap-2">
-          <button type="button" className="botao" onClick={() => setLimite((n) => n + POR_PAGINA)}>
-            Mostrar mais {Math.min(POR_PAGINA, resto).toLocaleString("pt-BR")}
-          </button>
-          <button type="button" className="botao" onClick={() => setLimite(filtradas.length)}>
-            Mostrar todas ({filtradas.length.toLocaleString("pt-BR")})
-          </button>
-        </div>
-      ) : null}
+      <MostrarMais
+        visiveis={filtradas.length - resto}
+        total={filtradas.length}
+        passo={POR_PAGINA}
+        itens={{ singular: "votação", plural: "votações" }}
+        genero="f"
+        aoMostrar={setLimite}
+      />
     </div>
   );
 }

@@ -12,6 +12,7 @@ import { useEffect, useMemo, useState } from "react";
 import type { Casa } from "../tipos";
 import { CASA_NOME, formatarData, normalizar, rotaParlamentar, rotaVotacao, rotuloResultadoCurto, rotuloVoto } from "../rotulos";
 import { tituloOficialVotacao } from "../lista";
+import { MostrarMais } from "@/components/lista/MostrarMais";
 
 export interface ParlamentarComparar {
   id: string;
@@ -77,11 +78,16 @@ function Lista({ titulo, itens, casa, escolhidos, rotulos, arq }: {
         ) : (
           <p className="text-sm">Nenhuma votação.</p>
         )}
-        {itens.length > n ? (
-          <button type="button" className="botao mt-3" onClick={() => setN((x) => x + PASSO)}>
-            Mostrar mais {Math.min(PASSO, itens.length - n)}
-          </button>
-        ) : null}
+        <MostrarMais
+          className="mt-3"
+          visiveis={Math.min(n, itens.length)}
+          total={itens.length}
+          passo={PASSO}
+          itens={{ singular: "votação", plural: "votações" }}
+          genero="f"
+          todos={false}
+          aoMostrar={setN}
+        />
       </div>
     </details>
   );

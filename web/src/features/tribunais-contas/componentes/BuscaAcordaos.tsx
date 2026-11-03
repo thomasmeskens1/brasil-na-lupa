@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 import { FonteLink } from "@/components/FonteLink";
 import { FiltrosCompactos } from "@/components/tabela/FiltrosCompactos";
 import { normalizar } from "@/features/congresso/rotulos";
+import { MostrarMais } from "@/components/lista/MostrarMais";
 
 type Linha = [key: number | string, numero: string, colegiado: number, tipo: number, data: string, relator: number, situacao: number, sumario: string | null, aviso: 0 | 1];
 
@@ -191,10 +192,16 @@ export function BuscaAcordaos({ orgao, anos, comPagina }: { orgao: string; anos:
           })}
         </ul>
       ) : null}
-      {!carregando && filtradas.length > limite ? (
-        <button type="button" onClick={() => setLimite((n) => n + POR_PAGINA)} className="botao mt-4">
-          Mostrar mais {Math.min(POR_PAGINA, filtradas.length - limite)} de {(filtradas.length - limite).toLocaleString("pt-BR")} restantes
-        </button>
+      {!carregando ? (
+        <MostrarMais
+          className="mt-4"
+          visiveis={Math.min(limite, filtradas.length)}
+          total={filtradas.length}
+          passo={POR_PAGINA}
+          itens={{ singular: "acórdão", plural: "acórdãos" }}
+          todos={false}
+          aoMostrar={setLimite}
+        />
       ) : null}
     </div>
   );

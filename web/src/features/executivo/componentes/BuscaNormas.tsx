@@ -5,6 +5,7 @@ import { CartaoDecisao, type DadoChave } from "@/components/decisao";
 import { FiltrosCompactos, normalizarBusca } from "@/components/tabela";
 import type { LinhaNorma } from "../tipos";
 import { encurtar } from "../apresentacao";
+import { MostrarMais } from "@/components/lista/MostrarMais";
 
 interface Arquivo {
   tipos: string[];
@@ -143,14 +144,15 @@ export function BuscaNormas({ coletadoEm }: { coletadoEm: string | null }) {
           );
         })}
       </ul>
-      {resto > 0 ? (
-        <div className="flex flex-wrap gap-2">
-          <button type="button" className="botao" onClick={() => setLimite((n) => n + POR_PAGINA)}>
-            Mostrar mais {Math.min(POR_PAGINA, resto).toLocaleString("pt-BR")}
-          </button>
-          <span className="self-center text-sm text-[var(--cor-secundaria)]">faltam {resto.toLocaleString("pt-BR")} normas</span>
-        </div>
-      ) : null}
+      <MostrarMais
+        visiveis={filtradas.length - resto}
+        total={filtradas.length}
+        passo={POR_PAGINA}
+        itens={{ singular: "norma", plural: "normas" }}
+        genero="f"
+        todos={false}
+        aoMostrar={setLimite}
+      />
     </div>
   );
 }

@@ -52,9 +52,10 @@ const DESFECHO: Record<string, string> = {
   "não informado": "Não informado pela fonte",
 };
 
+/** Item da pauta (cartão). Não é <li>: a ListaRecolhivel já põe cada item em um <li>. */
 export function ItemDaPauta({ i }: { i: ItemPauta }) {
   return (
-    <li className="cartao">
+    <div className="cartao">
       <p className="font-semibold">
         {i.url ? (
           <a href={i.url} className="lk" target="_blank" rel="noopener noreferrer">
@@ -86,6 +87,7 @@ export function ItemDaPauta({ i }: { i: ItemPauta }) {
               {k ? ", " : ""}
               <Link href={`/congresso/votacoes/${v.casa}/${v.id}`} className="lk inline-flex min-h-11 items-center">
                 votação {k + 1}
+                <span className="sr-only"> de {i.titulo ?? "este item"}</span>
               </Link>
             </span>
           ))}
@@ -99,6 +101,6 @@ export function ItemDaPauta({ i }: { i: ItemPauta }) {
           {i.fonte.acessado_em ? <span className="meta"> · coletado em {formatarData(i.fonte.acessado_em)}</span> : null}
         </p>
       ) : null}
-    </li>
+    </div>
   );
 }

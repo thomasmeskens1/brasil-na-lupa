@@ -25,7 +25,10 @@ export interface BarraPlacarProps {
   className?: string;
 }
 
-/** Barra horizontal neutra + legenda completa. Decorativa para leitor de tela: a legenda é o dado. */
+/**
+ * Barra horizontal neutra + legenda completa. A barra é decorativa para leitor de tela; a legenda
+ * é o dado e é lida como "Sim: 397, Não: 3, Abstenção: 1" (dois-pontos e vírgulas ocultos).
+ */
 export function BarraPlacar({ itens, legenda = true, tamanho = "cartao", className = "" }: BarraPlacarProps) {
   const total = itens.reduce((s, i) => s + (i.valor > 0 ? i.valor : 0), 0);
   const grande = tamanho === "destaque";
@@ -56,9 +59,13 @@ export function BarraPlacar({ itens, legenda = true, tamanho = "cartao", classNa
                 className="placar-amostra self-center"
                 style={{ background: COR[Math.min(n, COR.length - 1)] }}
               />
-              <dt className="text-[var(--cor-secundaria)]">{i.rotulo}</dt>
+              <dt className="text-[var(--cor-secundaria)]">
+                {i.rotulo}
+                <span className="sr-only">:</span>
+              </dt>
               <dd className={`font-bold tabular-nums text-foreground ${grande ? "text-2xl" : "text-lg"}`}>
                 {formatarNumero(i.valor)}
+                {n < itens.length - 1 ? <span className="sr-only">,</span> : null}
               </dd>
             </div>
           ))}
@@ -85,7 +92,9 @@ export function BlocoDadoChave({ dado, tamanho = "cartao", className = "" }: Blo
           {dado.item ? <p className="text-sm font-semibold text-[var(--cor-secundaria)]">{dado.item}</p> : null}
           <p className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
             <span className="flex items-baseline gap-1.5">
-              <span className="text-sm text-[var(--cor-secundaria)]">Antes</span>
+              <span className="text-sm text-[var(--cor-secundaria)]">
+                Antes<span className="sr-only">:</span>
+              </span>
               <span className={`font-semibold tabular-nums ${dado.antes ? valor : "text-sm"}`}>
                 {dado.antes ?? NAO_DISPONIVEL}
               </span>
@@ -93,8 +102,11 @@ export function BlocoDadoChave({ dado, tamanho = "cartao", className = "" }: Blo
             <span aria-hidden="true" className="text-[var(--cor-secundaria)]">
               →
             </span>
+            <span className="sr-only">;</span>
             <span className="flex items-baseline gap-1.5">
-              <span className="text-sm text-[var(--cor-secundaria)]">Depois</span>
+              <span className="text-sm text-[var(--cor-secundaria)]">
+                Depois<span className="sr-only">:</span>
+              </span>
               <span className={`font-bold tabular-nums ${dado.depois ? valor : "text-sm"}`}>
                 {dado.depois ?? NAO_DISPONIVEL}
               </span>
