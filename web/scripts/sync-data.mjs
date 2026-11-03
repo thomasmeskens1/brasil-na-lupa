@@ -66,7 +66,13 @@ function trocarContent(tmp) {
       fs.renameSync(tmp, contentFinal);
       break;
     } catch (e) {
-      if (tentativa >= 10 || e?.code !== "EPERM") throw e;
+      if (e?.code !== "EPERM") throw e;
+      if (tentativa >= 10) {
+        // Bloqueio persistente (ex.: observador de arquivos do editor): copia em vez de renomear.
+        fs.cpSync(tmp, contentFinal, { recursive: true });
+        limpar(tmp);
+        break;
+      }
       Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 300 * tentativa);
     }
   }
