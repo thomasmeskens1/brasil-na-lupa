@@ -1,9 +1,10 @@
 /**
- * Catálogo e validação das preferências da conta. Sem dependências (testável com node --test).
+ * Catálogo e validação das preferências da conta. Sem dependências externas (testável com node --test).
  */
+import { ehIdPolitico, ehIdProposta } from "./ids";
 
 /** Versão da Política de Privacidade que o consentimento registra. */
-export const VERSAO_POLITICA = "2 (02/11/2026)";
+export const VERSAO_POLITICA = "4 (03/11/2026)";
 
 export const UFS: ReadonlyArray<{ sigla: string; nome: string }> = [
   { sigla: "AC", nome: "Acre" },
@@ -36,23 +37,23 @@ export const UFS: ReadonlyArray<{ sigla: string; nome: string }> = [
 ];
 
 /**
- * Lista PROVISÓRIA de temas, em ordem alfabética. Deve ser trocada pela lista oficial de
- * dados/titulos/temas.json quando esse arquivo existir (mantendo os mesmos identificadores, ou
- * migrando as preferências já gravadas).
+ * Temas do dia a dia: os mesmos de dados/titulos/temas.json (classificação dos títulos simples
+ * de cada decisão), em ordem alfabética. O "nome" é idêntico ao do arquivo, porque o bloco
+ * "Seus favoritos" casa o tema da decisão pelo nome (conferido em tests/conta).
  */
 export const TEMAS: ReadonlyArray<{ id: string; nome: string }> = [
-  { id: "administracao-publica", nome: "Administração pública e contas públicas" },
-  { id: "agricultura", nome: "Agricultura e abastecimento" },
-  { id: "ciencia-tecnologia", nome: "Ciência, tecnologia e comunicações" },
-  { id: "direitos-justica", nome: "Direitos e justiça" },
-  { id: "economia-trabalho", nome: "Economia e trabalho" },
+  { id: "direitos-cidadania", nome: "Direitos e cidadania" },
+  { id: "economia-empresas", nome: "Economia e empresas" },
   { id: "educacao", nome: "Educação" },
-  { id: "impostos", nome: "Impostos e tributos" },
-  { id: "infraestrutura-transporte", nome: "Infraestrutura e transporte" },
+  { id: "governo-instituicoes", nome: "Governo e instituições" },
+  { id: "impostos-precos", nome: "Impostos e preços" },
   { id: "meio-ambiente", nome: "Meio ambiente" },
-  { id: "previdencia-assistencia", nome: "Previdência e assistência social" },
+  { id: "outros", nome: "Outros" },
+  { id: "previdencia-assistencia", nome: "Previdência e assistência" },
   { id: "saude", nome: "Saúde" },
-  { id: "seguranca-publica", nome: "Segurança pública" },
+  { id: "seguranca", nome: "Segurança" },
+  { id: "trabalho-renda", nome: "Trabalho e renda" },
+  { id: "transporte-cidades", nome: "Transporte e cidades" },
 ];
 
 /** Limites de tamanho (evitam abuso do banco). */
@@ -60,11 +61,6 @@ export const LIMITES_PREFERENCIAS = { municipios: 50, politicos: 200, itens: 500
 
 /** Código IBGE de município: 7 dígitos. */
 const RE_MUNICIPIO = /^\d{7}$/;
-/**
- * Identificador de político ou item acompanhado: "<origem>:<id na fonte oficial>",
- * ex.: "camara:204554", "senado:5012", "alesp:PL-123-2025", "stf:ADI-7000".
- */
-const RE_ID_ACOMPANHADO = /^[a-z][a-z0-9-]{1,23}:[A-Za-z0-9._-]{1,80}$/;
 
 export interface Preferencias {
   ufs: string[];
@@ -132,16 +128,16 @@ export function validarPreferencias(form: LeitorFormulario): Resultado<Preferenc
   if (!mun.ok) return mun;
   const pol = lista(
     form.getAll("politicos"),
-    (v) => RE_ID_ACOMPANHADO.test(v),
+    ehIdPolitico,
     LIMITES_PREFERENCIAS.politicos,
-    "políticos acompanhados",
+    "políticos favoritos",
   );
   if (!pol.ok) return pol;
   const itens = lista(
     form.getAll("itens"),
-    (v) => RE_ID_ACOMPANHADO.test(v),
+    ehIdProposta,
     LIMITES_PREFERENCIAS.itens,
-    "itens acompanhados",
+    "propostas favoritas",
   );
   if (!itens.ok) return itens;
 

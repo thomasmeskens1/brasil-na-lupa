@@ -11,7 +11,7 @@ export const LIMITES_ENVIO = {
   ip: { maximo: 10, janelaMinutos: 15 },
 } as const;
 
-export function chaveLimite(tipo: "email" | "ip", valor: string, segredo: string): string {
+export function chaveLimite(tipo: string, valor: string, segredo: string): string {
   return `${tipo}:${createHmac("sha256", segredo).update(valor).digest("hex")}`;
 }
 
@@ -41,6 +41,44 @@ export async function dentroDoLimite(sql: Sql, alvo: Alvo, segredo: string): Pro
     contar(sql, chaveLimite("ip", alvo.ip, segredo), LIMITES_ENVIO.ip.janelaMinutos),
   ]);
   return nEmail < LIMITES_ENVIO.email.maximo && nIp < LIMITES_ENVIO.ip.maximo;
+}
+
+/**
+ * Limites das ações da conta (por usuário e por IP), na mesma tabela e com as mesmas chaves
+ * anônimas (HMAC). "codigo" conta as tentativas de digitar o código de login por IP.
+ */
+export const LIMITES_ACOES = {
+  reacao: { usuario: { maximo: 60, janelaMinutos: 10 }, ip: { maximo: 120, janelaMinutos: 10 } },
+  favorito: { usuario: { maximo: 60, janelaMinutos: 10 }, ip: { maximo: 120, janelaMinutos: 10 } },
+  codigo: { ip: { maximo: 20, janelaMinutos: 15 } },
+} as const;
+
+export interface Cota {
+  tipo: string;
+  valor: string;
+  maximo: number;
+  janelaMinutos: number;
+}
+
+/**
+ * Consome uma unidade de cada cota, se todas ainda tiverem espaço. Devolve false (sem registrar
+ * nada) quando alguma já chegou ao máximo na janela.
+ */
+export async function consumirCotas(sql: Sql, cotas: Cota[], segredo: string): Promise<boolean> {
+  const chaves = cotas.map((c) => chaveLimite(c.tipo, c.valor, segredo));
+  const contagens = await Promise.all(cotas.map((c, i) => contar(sql, chaves[i], c.janelaMinutos)));
+  if (contagens.some((n, i) => n >= cotas[i].maximo)) return false;
+  for (const k of chaves) await sql`INSERT INTO limites_envio (chave) VALUES (${k})`;
+  return true;
+}
+
+/** Cotas de uma ação feita por um usuário com sessão. */
+export function cotasDaAcao(acao: "reacao" | "favorito", usuarioId: string, ip: string): Cota[] {
+  const l = LIMITES_ACOES[acao];
+  return [
+    { tipo: `${acao}-usuario`, valor: usuarioId, ...l.usuario },
+    { tipo: `${acao}-ip`, valor: ip, ...l.ip },
+  ];
 }
 
 /** Consulta e, se permitido, registra o envio. Devolve false quando o limite foi atingido. */
