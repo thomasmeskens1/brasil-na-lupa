@@ -26,9 +26,9 @@ export function ListaLiteral({
     <section className="space-y-2">
       <h4 className="text-base font-semibold text-gray-900">
         {lista.length === 1 ? `1 ${um}` : `${lista.length} ${varios}`}
-        <span className="font-normal text-[#3e4c59]"> — texto oficial</span>
+        <span className="font-normal text-[var(--cor-secundaria)]"> — texto oficial</span>
       </h4>
-      {explicacao ? <p className="text-base text-[#3e4c59]">{explicacao}</p> : null}
+      {explicacao ? <p className="text-base text-[var(--cor-secundaria)]">{explicacao}</p> : null}
       <ListaRecolhivel
         rotulo={{ singular: um, plural: varios }}
         inicial={inicial}
@@ -40,7 +40,7 @@ export function ListaLiteral({
             <div key={n}>
               {novoGrupo ? <p className="mb-1 mt-3 text-base font-semibold text-gray-900">{i.grupo}</p> : null}
               <p className="flex gap-2 text-base leading-relaxed text-gray-900" style={nivel ? { paddingLeft: `${nivel * 0.75}rem` } : undefined}>
-                {i.numero ? <span className="shrink-0 font-semibold tabular-nums text-[#3e4c59]">{i.numero}</span> : null}
+                {i.numero ? <span className="shrink-0 font-semibold tabular-nums text-[var(--cor-secundaria)]">{i.numero}</span> : null}
                 <span className="min-w-0">{i.texto}</span>
               </p>
             </div>
@@ -69,7 +69,7 @@ export function RegistrosRelator({ registros, divergem }: { registros: RegistroR
         {registros.map((r, k) => (
           <li key={k} className="cartao text-base">
             <p className="font-semibold text-gray-900">{r.texto}</p>
-            <p className="mt-1 text-[#3e4c59]">
+            <p className="mt-1 text-[var(--cor-secundaria)]">
               Segundo:{" "}
               {r.url ? (
                 <FonteLink href={r.url} tipo={/\.pdf($|\?)/i.test(r.url) ? "pdf" : "oficial"} className="text-base!">

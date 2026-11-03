@@ -10,7 +10,7 @@ export function Placar({ placar, rotulo = "Placar oficial" }: { placar: PlacarCo
     <dl className="flex flex-wrap gap-2" aria-label={rotulo}>
       {itens.map(([k, r]) => (
         <div key={k} className="min-w-[5.5rem] rounded border border-borda bg-superficie px-3 py-2 text-center">
-          <dt className="text-xs font-medium text-[#3e4c59]">{r}</dt>
+          <dt className="text-xs font-medium text-[var(--cor-secundaria)]">{r}</dt>
           <dd className="text-xl font-bold text-gray-900">{placar[k]}</dd>
         </div>
       ))}

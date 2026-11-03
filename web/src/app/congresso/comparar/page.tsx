@@ -7,6 +7,7 @@ import { Comparador, type ParlamentarComparar } from "@/features/congresso/compo
 import { ANO_RESUMO, resumoGastos, resumoPresenca } from "@/features/congresso/resumo-parlamentar";
 import { CASAS, CASA_NOME, formatarData } from "@/features/congresso/rotulos";
 import type { Casa } from "@/features/congresso/tipos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = metadadosCompartilhamento({
   titulo: "Comparar parlamentares lado a lado",
@@ -43,6 +44,7 @@ export default function CompararPage() {
             Congresso
           </Link>
         </nav>
+        <Figurinha nome="pessoas" className="heroi-figurinha figurinha-flutua" />
         <h1 className="mt-1 text-2xl font-bold text-foreground md:text-3xl">Comparar parlamentares</h1>
         <p className="mt-3 leading-relaxed">
           Escolha de 2 a 5 parlamentares da mesma casa para ver lado a lado os dados oficiais: partido, estado, presença em

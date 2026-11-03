@@ -6,6 +6,7 @@ import { BuscaNormasAtibaia } from "@/features/atibaia/componentes/BuscaNormasAt
 import { getIndiceAtibaia } from "@/features/atibaia/dados";
 import { TERMOS_ATIBAIA } from "@/features/atibaia/termos";
 import { formatarDataSp as data } from "@/features/sao-paulo/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = {
   title: "Leis e decretos de Atibaia",
@@ -23,6 +24,7 @@ export default function LeisEDecretosAtibaiaPage() {
             Atibaia
           </Link>
         </nav>
+        <Figurinha nome="cidade" className="heroi-figurinha figurinha-flutua" />
         <h1 className="mt-2 text-2xl font-bold text-gray-900 md:text-3xl">Leis e decretos de Atibaia</h1>
         <p className="mt-3 leading-relaxed text-gray-800">
           Leis e leis complementares aprovadas pela Câmara Municipal e decretos do prefeito, lidos nas edições da Imprensa

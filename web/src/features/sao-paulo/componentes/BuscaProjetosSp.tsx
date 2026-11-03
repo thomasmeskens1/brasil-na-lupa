@@ -24,7 +24,7 @@ type Linha = [
   coletadoEm: string | null,
 ];
 
-const CAMPO = "mt-1 block w-full rounded border border-[#7b8794] bg-white px-2 py-1.5 text-sm text-gray-900";
+const CAMPO = "mt-1 block w-full rounded border border-[var(--cor-borda-forte)] bg-white px-2 py-1.5 text-sm text-gray-900";
 const POR_PAGINA = 30;
 
 /** Proposições da ALESP (PL, PLC, PEC, PDL, PR): índice estático baixado pelo navegador. */
@@ -176,7 +176,7 @@ export function BuscaProjetosSp() {
         <button
           type="button"
           onClick={() => setLimite((n) => n + POR_PAGINA)}
-          className="mt-4 rounded border border-[#7b8794] bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-superficie"
+          className="mt-4 rounded border border-[var(--cor-borda-forte)] bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-superficie"
         >
           Mostrar mais {Math.min(POR_PAGINA, filtradas.length - limite)} de {filtradas.length - limite} restantes
         </button>

@@ -6,6 +6,7 @@ import { Fontes, Lacunas, Termos, Trilha } from "@/features/tribunais-contas/com
 import { BuscaAcordaos } from "@/features/tribunais-contas/componentes/BuscaAcordaos";
 import { anosAcordaos, colecoesAcordaos, getMetaTcu, getOrgao, getOrgaos, getResumoAcordaos, keysComPagina, ouMarcador, temAcordaos } from "@/features/tribunais-contas/dados";
 import { BASE_TC, TERMOS_TC, formatarDataTc, nomeProprio } from "@/features/tribunais-contas/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export function generateStaticParams() {
   return ouMarcador(
@@ -43,6 +44,7 @@ export default async function AcordaosPage({ params }: PageProps<"/tribunais-de-
     <div className="space-y-10">
       <header className="max-w-3xl">
         <Trilha itens={[{ href: `${BASE_TC}/${o.id}`, rotulo: o.id.toUpperCase() }]} />
+        <Figurinha nome="lupa" className="heroi-figurinha figurinha-flutua" />
         <h1 className="mt-2 text-2xl font-bold text-gray-900 md:text-3xl">Acórdãos do {o.id.toUpperCase()}</h1>
         <p className="mt-3 text-base leading-relaxed text-gray-800">
           Acórdão é a decisão tomada por um colegiado do {o.nome}: o Plenário ou uma das Câmaras. Aqui estão todos os acórdãos
@@ -63,7 +65,7 @@ export default async function AcordaosPage({ params }: PageProps<"/tribunais-de-
               </li>
             ))}
         </ul>
-        <p className="mt-3 text-base text-[#3e4c59]">Dados coletados em {formatarDataTc(meta?.atualizado_em)}.</p>
+        <p className="mt-3 text-base text-[var(--cor-secundaria)]">Dados coletados em {formatarDataTc(meta?.atualizado_em)}.</p>
       </header>
 
       {colecoes.map((c) => (
@@ -72,7 +74,7 @@ export default async function AcordaosPage({ params }: PageProps<"/tribunais-de-
             {c.itens.map((i) => (
               <li key={i.id}>
                 <Link href={`${BASE_TC}/${o.id}/acordaos/${i.id}`} className="cartao block min-h-11 hover:bg-superficie">
-                  <span className="block text-base font-semibold text-[#234a73] underline underline-offset-2">
+                  <span className="block text-base font-semibold text-[var(--cor-link)] underline underline-offset-2">
                     Acórdão {i.numero} — {i.orgao}
                   </span>
                   <span className="mt-1 block text-base text-gray-800">

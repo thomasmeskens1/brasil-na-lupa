@@ -8,6 +8,7 @@ import { getIndiceExecutivo } from "@/features/executivo/dados";
 import { montarCartao } from "@/features/executivo/apresentacao";
 import { cartaoMpv, cartaoVeto, padraoMpv, padraoVeto } from "@/features/executivo/listas";
 import { TERMOS_EXECUTIVO } from "@/features/executivo/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = {
   title: "Executivo federal",
@@ -40,6 +41,7 @@ export default function ExecutivoPage() {
   return (
     <div className="space-y-10">
       <header className="max-w-3xl">
+        <Figurinha nome="caneta" className="heroi-figurinha figurinha-flutua" />
         <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">Executivo federal</h1>
         <p className="mt-3 leading-relaxed text-gray-800">
           O Presidente da República decide por atos individuais, sem votação: edita medidas provisórias e decretos e sanciona
@@ -60,7 +62,7 @@ export default function ExecutivoPage() {
       <nav aria-label="Atos do Executivo" className="grid grid-cols-1 gap-4 md:grid-cols-3">
         {cartoes.map((c) => (
           <Link key={c.href} href={c.href} className="cartao block min-h-11 hover:bg-superficie">
-            <span className="block text-base font-semibold text-[#234a73] underline underline-offset-2">{c.titulo}</span>
+            <span className="block text-base font-semibold text-[var(--cor-link)] underline underline-offset-2">{c.titulo}</span>
             <span className="mt-1 block text-gray-800">{c.texto}</span>
           </Link>
         ))}

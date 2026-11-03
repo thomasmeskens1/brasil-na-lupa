@@ -8,7 +8,7 @@ quatro variáveis obrigatórias existem** no ambiente da Vercel:
 | `DATABASE_URL` | sim | Endereço do banco Neon Postgres (a integração da Vercel cria) |
 | `AUTH_SECRET` | sim | Segredo do Auth.js (assina e protege cookies e tokens) |
 | `AUTH_RESEND_KEY` | sim | Chave de API do Resend (envio do e-mail com o link) |
-| `EMAIL_FROM` | sim | Remetente, ex.: `Placar do Poder <no-reply@placardopoder.com.br>` |
+| `EMAIL_FROM` | sim | Remetente, ex.: `Brasil na Lupa <no-reply@brasilnalupa.com.br>` |
 | `AUTH_GOOGLE_ID` | não | ID do cliente OAuth do Google |
 | `AUTH_GOOGLE_SECRET` | não | Segredo do cliente OAuth do Google |
 
@@ -43,10 +43,10 @@ Nunca coloque valores reais no repositório. O arquivo `web/.env.example` traz s
 
 ## 2. E-mail (Resend) e verificação do domínio
 
-Pré-requisito: o domínio `placardopoder.com.br` registrado (Registro.br) e com acesso ao DNS.
+Pré-requisito: o domínio `brasilnalupa.com.br` registrado (Registro.br) e com acesso ao DNS.
 
 1. Crie a conta em <https://resend.com> (use o e-mail do responsável).
-2. **Domains → Add Domain** → digite `placardopoder.com.br`. Se o Resend oferecer escolha de
+2. **Domains → Add Domain** → digite `brasilnalupa.com.br`. Se o Resend oferecer escolha de
    região, prefira **São Paulo (sa-east-1)**.
 3. O Resend mostra os registros DNS a criar. Normalmente são:
    - **MX** em `send` → `feedback-smtp.<região>.amazonses.com` (prioridade 10);
@@ -57,34 +57,34 @@ Pré-requisito: o domínio `placardopoder.com.br` registrado (Registro.br) e com
    registros. Recomendado também: **TXT** em `_dmarc` → `v=DMARC1; p=none;`.
 5. Volte ao Resend e clique **Verify DNS Records**. Pode levar de minutos a algumas horas.
 6. **API Keys → Create API Key**: nome `placar-producao`, permissão **Sending access**, domínio
-   `placardopoder.com.br`. Copie a chave (ela só aparece uma vez).
+   `brasilnalupa.com.br`. Copie a chave (ela só aparece uma vez).
 7. Na Vercel (Settings → Environment Variables, ambiente Production), crie:
    - `AUTH_RESEND_KEY` = a chave copiada (marque como *Sensitive*);
-   - `EMAIL_FROM` = `Placar do Poder <no-reply@placardopoder.com.br>`.
+   - `EMAIL_FROM` = `Brasil na Lupa <no-reply@brasilnalupa.com.br>`.
 
 Antes de o domínio estar verificado, dá para testar com `EMAIL_FROM=onboarding@resend.dev`: nesse
 modo o Resend só entrega para o e-mail da própria conta Resend.
 
 ## 3. "Entrar com Google" (opcional)
 
-1. Acesse <https://console.cloud.google.com> → crie um projeto (ex.: `placar-do-poder`).
+1. Acesse <https://console.cloud.google.com> → crie um projeto (ex.: `brasil-na-lupa`).
 2. **APIs e serviços → Tela de consentimento OAuth** (ou **Google Auth Platform → Branding**):
-   - Nome do app: `Placar do Poder`; e-mail de suporte: o do responsável;
-   - Domínio autorizado: `placardopoder.com.br`;
-   - Página inicial: `https://placardopoder.com.br`;
-   - Política de privacidade: `https://placardopoder.com.br/privacidade`;
+   - Nome do app: `Brasil na Lupa`; e-mail de suporte: o do responsável;
+   - Domínio autorizado: `brasilnalupa.com.br`;
+   - Página inicial: `https://brasilnalupa.com.br`;
+   - Política de privacidade: `https://brasilnalupa.com.br/privacidade`;
    - Público: **Externo**. Escopos: só `openid`, `email` e `profile` (não exigem verificação
      especial do Google).
    - Publique o app (**Em produção**); em modo "Teste" só os e-mails cadastrados como testadores
      conseguem entrar.
 3. **Credenciais → Criar credenciais → ID do cliente OAuth** → tipo **Aplicativo da Web**:
    - **Origens JavaScript autorizadas**:
-     `https://placardopoder.com.br` e `http://localhost:3000`
-     (acrescente `https://www.placardopoder.com.br` se o site também responder em `www`);
+     `https://brasilnalupa.com.br` e `http://localhost:3000`
+     (acrescente `https://www.brasilnalupa.com.br` se o site também responder em `www`);
    - **URIs de redirecionamento autorizados**:
-     `https://placardopoder.com.br/api/auth/callback/google` e
+     `https://brasilnalupa.com.br/api/auth/callback/google` e
      `http://localhost:3000/api/auth/callback/google`
-     (e `https://www.placardopoder.com.br/api/auth/callback/google`, se usar `www`).
+     (e `https://www.brasilnalupa.com.br/api/auth/callback/google`, se usar `www`).
 4. Copie o **ID do cliente** e a **Chave secreta** e crie na Vercel (Production):
    `AUTH_GOOGLE_ID` e `AUTH_GOOGLE_SECRET` (marque como *Sensitive*).
 

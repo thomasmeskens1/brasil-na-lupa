@@ -91,7 +91,7 @@ export function TelaConsentimento({ versao, revogado }: { versao: string; revoga
             aria-describedby="consentimento-t"
           />
           <label htmlFor="aceito" className="text-sm font-medium text-gray-900">
-            Li as informações acima e concordo que o Placar do Poder guarde as minhas preferências, inclusive as que
+            Li as informações acima e concordo que o Brasil na Lupa guarde as minhas preferências, inclusive as que
             podem revelar opinião política, somente para as finalidades descritas.
           </label>
         </div>

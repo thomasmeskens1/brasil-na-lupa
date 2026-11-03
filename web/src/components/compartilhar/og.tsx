@@ -1,6 +1,6 @@
 /**
  * Imagem Open Graph (prévia do link no WhatsApp e redes) no estilo neutro do Cartão de Decisão:
- * marca "Placar do Poder", caminho + forma + data, título, nome oficial, dado-chave (placar
+ * marca "Brasil na Lupa", caminho + forma + data, título, nome oficial, dado-chave (placar
  * completo, antes → depois ou o caminho da decisão), fonte e data de coleta DENTRO da imagem
  * (engajamento, seções 5.1, 5.2 e 5.6). Sem foto, sem cor de partido, mesma cor para Sim e Não.
  *
@@ -18,7 +18,7 @@
  *       titulo: t.titulo, subtitulo: t.subtitulo, caminho: "camara", forma: "votacao-nominal",
  *       data: v.data, dado: { tipo: "placar", itens: placarOficial(v.placar), resultado: v.resultado },
  *       fonte: { orgao: "Câmara dos Deputados", acessado_em: v.fonte.acessado_em },
- *       endereco: `placardopoder…/congresso/votacoes/${casa}/${id}`,   // opcional, impresso no rodapé
+ *       endereco: `brasilnalupa…/congresso/votacoes/${casa}/${id}`,   // opcional, impresso no rodapé
  *     });
  *   }
  *   // Se a rota tiver generateStaticParams, exporte o mesmo generateStaticParams aqui
@@ -36,13 +36,13 @@ export const TAMANHO_OG = { width: 1200, height: 630 };
 export const TIPO_OG = "image/png";
 
 const COR = {
-  fundo: "#ffffff",
-  faixa: "#2f4a63",
-  texto: "#1f2933",
-  apoio: "#3e4c59",
-  borda: "#cbd2d9",
-  superficie: "#f5f7fa",
-  placar: ["#3e4c59", "#7b8794", "#b8c2cc", "#dde2e7", "#eef1f4"],
+  fundo: "#121214",
+  faixa: "#ccff00",
+  texto: "#ffffff",
+  apoio: "#a0a0a5",
+  borda: "#2e2e33",
+  superficie: "#1a1a1d",
+  placar: ["#f0f0f2", "#b4b4ba", "#7a7a82", "#4a4a50", "#2a2a2e"],
 };
 
 const FORMA: Record<FormaDecisao, string> = {
@@ -182,7 +182,7 @@ export function CartaoOG(d: DadosImagemOG) {
           alignItems: "center",
           padding: "20px 56px",
           background: COR.faixa,
-          color: "#ffffff",
+          color: "#121214",
           fontSize: 28,
         }}
       >

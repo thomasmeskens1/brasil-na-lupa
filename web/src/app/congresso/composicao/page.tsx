@@ -6,6 +6,7 @@ import { Secao } from "@/components/Secao";
 import { getIndice } from "@/features/congresso/dados";
 import { Composicao } from "@/features/congresso/componentes/Composicao";
 import { CASAS, CASA_NOME, formatarData } from "@/features/congresso/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = metadadosCompartilhamento({
   titulo: "Composição da Câmara e do Senado por partido e por estado",
@@ -27,6 +28,7 @@ export default function ComposicaoPage() {
             Congresso
           </Link>
         </nav>
+        <Figurinha nome="pessoas" className="heroi-figurinha figurinha-flutua" />
         <h1 className="mt-1 text-2xl font-bold text-foreground md:text-3xl">Composição das casas hoje</h1>
         <p className="mt-3 leading-relaxed">
           Quantos parlamentares em exercício cada partido e cada estado têm, segundo a lista oficial de cada casa na data da

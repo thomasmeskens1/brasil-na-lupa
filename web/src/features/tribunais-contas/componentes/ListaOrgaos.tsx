@@ -22,7 +22,7 @@ export function ListaOrgaos({ orgaos }: { orgaos: OrgaoTc[] }) {
       {grupos.map((g) => (
         <section key={g.esfera} aria-labelledby={`esfera-${g.esfera}`}>
           <h3 id={`esfera-${g.esfera}`} className="text-lg font-semibold text-gray-900">
-            {g.titulo} <span className="font-normal text-[#3e4c59]">({g.itens.length})</span>
+            {g.titulo} <span className="font-normal text-[var(--cor-secundaria)]">({g.itens.length})</span>
           </h3>
           <ul className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
             {g.itens.map((o) => {
@@ -36,8 +36,8 @@ export function ListaOrgaos({ orgaos }: { orgaos: OrgaoTc[] }) {
                     }`}
                   >
                     <span className="min-w-0">
-                      <span className="block font-semibold text-[#234a73] underline underline-offset-2">{o.nome}</span>
-                      <span className="block text-[#3e4c59]">
+                      <span className="block font-semibold text-[var(--cor-link)] underline underline-offset-2">{o.nome}</span>
+                      <span className="block text-[var(--cor-secundaria)]">
                         {o.id.toUpperCase()}
                         {o.uf ? ` · ${o.uf}` : ""}
                       </span>

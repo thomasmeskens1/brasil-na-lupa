@@ -161,7 +161,7 @@ export function Comparador({ dados, coleta }: { dados: Record<Casa, ParlamentarC
             disabled={ids.length >= MAX}
             value={busca}
             onChange={(e) => setBusca(e.target.value)}
-            className="mt-1 block w-full rounded border border-[#7b8794] bg-white px-3 text-base"
+            className="mt-1 block w-full rounded border border-[var(--cor-borda-forte)] bg-white px-3 text-base"
             placeholder="Ex.: Silva"
           />
         </label>

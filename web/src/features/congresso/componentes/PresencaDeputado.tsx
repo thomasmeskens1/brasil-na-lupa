@@ -32,7 +32,7 @@ const SESSOES: [keyof PresencaItem, string][] = [
 function Caixa({ rotulo, valor }: { rotulo: string; valor: number | null | undefined }) {
   return (
     <div className="min-w-[7.5rem] flex-1 rounded border border-borda bg-superficie px-3 py-2 text-center sm:flex-none">
-      <dt className="text-xs font-medium text-[#3e4c59]">{rotulo}</dt>
+      <dt className="text-xs font-medium text-[var(--cor-secundaria)]">{rotulo}</dt>
       <dd className="text-xl font-bold text-gray-900">{typeof valor === "number" ? valor : "–"}</dd>
     </div>
   );

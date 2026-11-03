@@ -7,6 +7,7 @@ import { CartaoDecisao } from "@/components/decisao";
 import { cartaoTemaStj } from "@/features/justica/cartoes";
 import { getIndiceStf, getIndiceStj, temasPorColecaoStj } from "@/features/justica/dados";
 import { TERMOS_JUSTICA } from "@/features/justica/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = {
   title: "Justiça: STJ e STF",
@@ -23,6 +24,7 @@ export default function JusticaPage() {
   return (
     <div className="space-y-10">
       <header className="max-w-3xl">
+        <Figurinha nome="balanca" className="heroi-figurinha figurinha-flutua" />
         <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">Justiça: STJ e STF</h1>
         <p className="mt-3 leading-relaxed text-gray-800">
           O Superior Tribunal de Justiça (STJ) uniformiza a interpretação das leis federais, e o Supremo Tribunal Federal
@@ -38,13 +40,13 @@ export default function JusticaPage() {
 
       <nav aria-label="Tribunais" className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <Link href="/justica/stj" className="cartao block hover:bg-superficie">
-          <span className="block text-base font-semibold text-[#234a73] underline underline-offset-2">Superior Tribunal de Justiça (STJ)</span>
+          <span className="block text-base font-semibold text-[var(--cor-link)] underline underline-offset-2">Superior Tribunal de Justiça (STJ)</span>
           <span className="mt-1 block text-gray-800">
             {stj.total ? `${stj.total} temas repetitivos e de relevância; dados coletados em ${formatarData(stj.atualizado_em)}.` : "Dados ainda não coletados."}
           </span>
         </Link>
         <Link href="/justica/stf" className="cartao block hover:bg-superficie">
-          <span className="block text-base font-semibold text-[#234a73] underline underline-offset-2">Supremo Tribunal Federal (STF)</span>
+          <span className="block text-base font-semibold text-[var(--cor-link)] underline underline-offset-2">Supremo Tribunal Federal (STF)</span>
           <span className="mt-1 block text-gray-800">
             {stf.total ? `${stf.total} temas de repercussão geral; dados coletados em ${formatarData(stf.atualizado_em)}.` : "Em construção: dados em coleta."}
           </span>

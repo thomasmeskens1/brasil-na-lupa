@@ -5,7 +5,7 @@ import { useId, useMemo, useState } from "react";
 import { normalizar } from "@/features/congresso/rotulos";
 import type { DeputadoSp } from "../tipos";
 
-const CAMPO = "mt-1 block w-full rounded border border-[#7b8794] bg-white px-2 py-1.5 text-sm text-gray-900";
+const CAMPO = "mt-1 block w-full rounded border border-[var(--cor-borda-forte)] bg-white px-2 py-1.5 text-sm text-gray-900";
 
 /** Deputados estaduais em ordem alfabética, com busca por nome e filtro por partido. */
 export function ListaDeputadosSp({ deputados }: { deputados: DeputadoSp[] }) {

@@ -5,6 +5,7 @@ import { ListaFontes } from "@/features/congresso/componentes/Basicos";
 import { ListaDeputadosSp } from "@/features/sao-paulo/componentes/ListaDeputadosSp";
 import { getIndiceSp, votacoesPlenario } from "@/features/sao-paulo/dados";
 import { formatarDataSp } from "@/features/sao-paulo/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = {
   title: "Deputados estaduais de São Paulo",
@@ -22,6 +23,7 @@ export default function DeputadosSpPage() {
             São Paulo
           </Link>
         </nav>
+        <Figurinha nome="mapa" className="heroi-figurinha figurinha-flutua" />
         <h1 className="mt-2 text-2xl font-bold text-gray-900 md:text-3xl">Deputados estaduais</h1>
         <p className="mt-3 leading-relaxed text-gray-800">
           {ind.deputados.length} deputados em exercício na Assembleia Legislativa do Estado de São Paulo (ALESP), segundo a

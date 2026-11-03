@@ -9,7 +9,7 @@ export function Citacao({ rotulo, texto, children }: { rotulo: ReactNode; texto:
     <figure className="mt-3">
       <figcaption className="text-sm font-semibold text-foreground">{rotulo}</figcaption>
       {texto ? (
-        <blockquote className="mt-1 whitespace-pre-line border-l-4 border-[#9aa5b1] bg-superficie px-3 py-2 leading-relaxed text-foreground [overflow-wrap:break-word]">
+        <blockquote className="mt-1 whitespace-pre-line border-l-4 border-[var(--cor-borda-forte)] bg-superficie px-3 py-2 leading-relaxed text-foreground [overflow-wrap:break-word]">
           {texto.trim()}
         </blockquote>
       ) : (

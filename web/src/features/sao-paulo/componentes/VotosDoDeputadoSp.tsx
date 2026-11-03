@@ -54,7 +54,7 @@ function linhasDeComissao(a: ArquivoVotacoes, pid: string): LinhaVotoDeputadoSp[
   return out;
 }
 
-const CAMPO = "mt-1 block w-full rounded border border-[#7b8794] bg-white px-2 py-1.5 text-sm text-gray-900";
+const CAMPO = "mt-1 block w-full rounded border border-[var(--cor-borda-forte)] bg-white px-2 py-1.5 text-sm text-gray-900";
 const POR_PAGINA = 40;
 
 /** Votos de um deputado estadual nas votações nominais (Plenário e comissões), do mais recente ao mais antigo. */
@@ -180,7 +180,7 @@ export function VotosDoDeputadoSp({ pid, plenario, nComissao }: { pid: string; p
         <button
           type="button"
           onClick={() => setLimite((n) => n + POR_PAGINA)}
-          className="mt-3 rounded border border-[#7b8794] bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-superficie"
+          className="mt-3 rounded border border-[var(--cor-borda-forte)] bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-superficie"
         >
           Mostrar mais {Math.min(POR_PAGINA, filtradas.length - limite)} de {filtradas.length - limite} restantes
         </button>

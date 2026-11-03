@@ -19,7 +19,7 @@ export async function GET(request: Request) {
   return new Response(JSON.stringify(dados, null, 2), {
     headers: {
       "Content-Type": "application/json; charset=utf-8",
-      "Content-Disposition": `attachment; filename="placar-do-poder-meus-dados-${dia}.json"`,
+      "Content-Disposition": `attachment; filename="brasil-na-lupa-meus-dados-${dia}.json"`,
       "Cache-Control": "private, no-store",
       "X-Content-Type-Options": "nosniff",
     },
