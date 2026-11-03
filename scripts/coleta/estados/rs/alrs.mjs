@@ -46,6 +46,8 @@ export function itemDaBusca(p) {
     ementa: em.texto,
     proponente: aut.nome,
     data_protocolo: dataBR(p.dthProtocolo).data,
+    data_apresentacao: dataBR(p.dthProtocolo).data,
+    autores: aut.nome ? [{ nome: aut.nome }] : [],
     situacao: p.descricao || null,
     data_situacao: dataBR(p.dthSituacaoProposicao).data,
     local: p.siglaLocal || null,
@@ -66,13 +68,13 @@ export function montarVotacao(v, prop, { hoje, mapaDeputados }) {
   const quando = dataBR(plen ? reuniao?.dataInicioSessaoPlenaria : reuniao?.dataReuniao);
   const lacunas = [];
   const votos = (v.votos || []).map((x) => ({
-    parlamentar_id: x.idParlamentar || null,
+    parlamentar_id: mapaDeputados?.get(normalizarNome(x.nomeParlamentar)) ?? x.idParlamentar ?? null,
+    parlamentar_id_votacao: x.idParlamentar || null,
     nome: x.nomeParlamentar,
     partido: (x.siglaPartidoParlamentar || '').trim() || null,
     uf: 'RS',
     voto: x.nomeOpcaoVoto,
     voto_codigo: x.idOpcaoVoto || null,
-    deputado_id_portal: mapaDeputados?.get(normalizarNome(x.nomeParlamentar)) ?? null,
   })).sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR'));
   const oficiais = (v.resultados || []).map((r) => ({ opcao: r.nomeOpcaoVoto, votos: r.numeroVotos }));
   // Conferência: contagem dos votos nominais por opção = totais oficiais da própria fonte.
@@ -165,6 +167,7 @@ export async function lerProposicao(item, { hoje, mapaDeputados }) {
     ...item,
     ementa: em.texto,
     proponente: aut.nome,
+    autores: aut.nome ? [{ nome: aut.nome }] : [],
     situacao: d.descricaoSituacao || item.situacao,
     data_situacao: dataBR(d.dataSituacaoProposicao).data || item.data_situacao,
     numero_processo: d.numeroProcesso || null,

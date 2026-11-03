@@ -264,7 +264,8 @@ await etapa('índices de votações', async () => {
     for (const x of v.votos || []) {
       const k = normalizarNome(x.nome);
       if (!idsVotacao.has(k)) idsVotacao.set(k, new Set());
-      if (x.parlamentar_id) idsVotacao.get(k).add(x.parlamentar_id);
+      const idv = x.parlamentar_id_votacao ?? x.parlamentar_id;
+      if (idv) idsVotacao.get(k).add(idv);
     }
     const ano = Number(v.data.slice(0, 4));
     if (!porAno.has(ano)) porAno.set(ano, []);
@@ -339,7 +340,7 @@ gravarSeMudou(path.join(DIR, 'meta.json'), {
     'Plenário: placar = totais oficiais da página (resultados); comissões: placar null e placar_oficial com as opções da fonte.',
     'Conferência: a contagem dos votos individuais é comparada, opção por opção, com os totais oficiais da própria página; divergências ficam em lacunas.',
     'Tipo da votação: "nominal" quando há votos individuais; "simbolica" ou "secreta" só quando a fonte usa esses termos; caso contrário null com lacuna.',
-    'parlamentar_id dos votos é o identificador do sistema de votação da ALRS; deputado_id_portal liga ao id da lista de deputados só por nome idêntico (sem acento/maiúsculas).',
+    'parlamentar_id dos votos = id do deputado na lista do portal (parlamentares.json), ligado só por nome idêntico (sem acento/maiúsculas); sem correspondência, fica o id do sistema de votação. parlamentar_id_votacao guarda sempre o id do sistema de votação da ALRS.',
     'Texto e justificativa dos projetos: links temporários assinados (expiram em minutos); não são guardados. A fonte citada é a página da proposição.',
     'Vetos (VT/VP) têm o número e o ano do projeto vetado e ficam no índice desse ano.',
     'DOE-RS: doe-backend.pro.rs.gov.br/robots.txt responde HTTP 500; pela RFC 9309 é tratado como bloqueio total e o DOE não é acessado. A publicação vem da ficha do LEGIS (edição, data e página), com link para o DOE.',
