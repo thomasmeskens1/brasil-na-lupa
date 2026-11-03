@@ -20,7 +20,7 @@
   --cor-acento-fundo: #262b1c;
   --cor-foco: #ccff00;
   --cor-borda: #2a2a32;
-  --cor-borda-forte: #5c5c68;
+  --cor-borda-forte: #74747f; /* 3:1 sobre fundo, cartão e superfície 2 (WCAG 1.4.11: contorno de campos e botões). */
   --cor-superficie: #1a1a1d;
   --cor-superficie-2: #242429;
   --cor-placar-1: #f0f0f2;
@@ -421,7 +421,9 @@ details > summary:hover {
       text-align: right;
     }
     .tabela-resp td[data-rotulo]::before {
+      /* O rótulo é só visual: o leitor de tela já anuncia o cabeçalho da coluna (texto alternativo vazio). */
       content: attr(data-rotulo);
+      content: attr(data-rotulo) / "";
       flex: 0 0 auto;
       max-width: 45%;
       text-align: left;
@@ -914,4 +916,73 @@ main section:has(> h1):not(.heroi) > p {
 .botao.botao-mini svg {
   height: 0.875rem;
   width: 0.875rem;
+}
+
+/* ----- Acessibilidade (docs/ux/acessibilidade.md) ----- */
+/* Atalhos do eMAG: escondidos até receberem foco; ao focar, aparecem no topo, sobre a abertura. */
+.pular-links a {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.pular-links a:focus {
+  position: fixed;
+  left: 0.5rem;
+  top: 0.5rem;
+  z-index: 110;
+  width: auto;
+  height: auto;
+  clip: auto;
+  border-radius: 0.375rem;
+  background: var(--cor-acento);
+  color: var(--cor-sobre-acento);
+  padding: 0.625rem 1rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+/* Textos de exemplo nos campos com contraste AA sobre o cartão. */
+::placeholder {
+  color: var(--cor-texto-apoio);
+  opacity: 1;
+}
+/* Título de nível 2 sem o estilo de manchete (ex.: grupos de resultados da busca). */
+h2.titulo-simples {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: normal;
+  text-transform: none;
+}
+/* Leitura em voz alta: trecho sendo lido. */
+.ouvir-lendo {
+  outline: 3px solid var(--cor-acento);
+  outline-offset: 3px;
+  border-radius: 0.25rem;
+  background-color: var(--cor-acento-fundo);
+  scroll-margin-top: 6rem;
+  scroll-margin-bottom: 6rem;
+}
+tr.ouvir-lendo {
+  outline-offset: -3px;
+}
+.ouvir-controles select {
+  min-height: 2.25rem;
+  border-radius: 999px;
+  border: 1px solid var(--cor-borda-forte);
+  background: var(--cor-superficie);
+  padding: 0 0.5rem;
+  font-size: 0.875rem;
+  color: var(--foreground);
+}
+/* Item focado depois de "Mostrar mais" (tabindex=-1): contorno visível também por script. */
+[tabindex="-1"]:focus-visible {
+  outline: 3px solid var(--cor-foco);
+  outline-offset: 2px;
+}
+main:focus-visible,
+footer:focus-visible,
+nav:focus-visible {
+  outline: none;
 }

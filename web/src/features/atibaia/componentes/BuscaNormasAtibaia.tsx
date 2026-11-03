@@ -3,6 +3,7 @@
 import { useEffect, useId, useMemo, useState } from "react";
 import { FonteLink } from "@/components/FonteLink";
 import { normalizar } from "@/features/congresso/rotulos";
+import { MostrarMais } from "@/components/lista/MostrarMais";
 
 type Linha = [
   id: string,
@@ -158,15 +159,16 @@ export function BuscaNormasAtibaia() {
           </li>
         ))}
       </ul>
-      {filtradas.length > limite ? (
-        <button
-          type="button"
-          onClick={() => setLimite((n) => n + POR_PAGINA)}
-          className="mt-4 rounded border border-[var(--cor-borda-forte)] bg-white px-4 py-2 text-sm font-medium text-gray-900 hover:bg-superficie"
-        >
-          Mostrar mais {Math.min(POR_PAGINA, filtradas.length - limite)} de {filtradas.length - limite} restantes
-        </button>
-      ) : null}
+      <MostrarMais
+        className="mt-4"
+        visiveis={Math.min(limite, filtradas.length)}
+        total={filtradas.length}
+        passo={POR_PAGINA}
+        itens={{ singular: "norma", plural: "normas" }}
+        genero="f"
+        todos={false}
+        aoMostrar={setLimite}
+      />
     </div>
   );
 }

@@ -7,6 +7,8 @@ import { useRef, useState, type KeyboardEvent } from "react";
 export interface ItemNav {
   href: string;
   rotulo: string;
+  /** Nome por extenso quando o rótulo é sigla (diretriz 9): lido pelo leitor de tela e no title. */
+  extenso?: string;
 }
 
 export const ITENS_NAV: ItemNav[] = [
@@ -16,7 +18,7 @@ export const ITENS_NAV: ItemNav[] = [
   { href: "/congresso", rotulo: "Congresso" },
   { href: "/executivo", rotulo: "Executivo" },
   { href: "/justica", rotulo: "Justiça" },
-  { href: "/tribunais-de-contas", rotulo: "TCU" },
+  { href: "/tribunais-de-contas", rotulo: "TCU", extenso: "Tribunais de Contas" },
   { href: "/estados", rotulo: "Estados" },
   { href: "/atibaia", rotulo: "Atibaia" },
   { href: "/agenda", rotulo: "Agenda" },
@@ -40,7 +42,7 @@ export function NavPrincipal() {
   }
 
   return (
-    <nav aria-label="Navegação principal" onKeyDown={onKeyDown} className="w-full md:w-auto">
+    <nav id="navegacao" tabIndex={-1} aria-label="Navegação principal" onKeyDown={onKeyDown} className="w-full focus:outline-none md:w-auto">
       <button
         ref={botao}
         type="button"
@@ -72,7 +74,16 @@ export function NavPrincipal() {
                   ativo ? "bg-acento text-white" : "text-foreground hover:bg-[var(--cor-superficie-2)]"
                 }`}
               >
-                {i.rotulo}
+                {i.extenso ? (
+                  <>
+                    <abbr title={i.extenso} className="no-underline">
+                      {i.rotulo}
+                    </abbr>
+                    <span className="sr-only"> ({i.extenso})</span>
+                  </>
+                ) : (
+                  i.rotulo
+                )}
               </Link>
             </li>
           );

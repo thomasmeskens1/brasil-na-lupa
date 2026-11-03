@@ -35,31 +35,38 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="flex min-h-full flex-col bg-background text-foreground">
         <script dangerouslySetInnerHTML={{ __html: SCRIPT_ABERTURA }} />
         <AberturaMarca />
-        <a
-          href="#conteudo"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:text-sm focus:shadow"
-        >
-          Pular para o conteúdo
-        </a>
+        {/* Atalhos do eMAG 3.1: Alt+1 conteúdo, Alt+2 menu, Alt+4 rodapé (página /acessibilidade). */}
+        <nav aria-label="Atalhos de acessibilidade" className="pular-links">
+          <a href="#conteudo" accessKey="1">
+            Pular para o conteúdo <span aria-hidden="true">[1]</span>
+          </a>
+          <a href="#navegacao" accessKey="2">
+            Ir para o menu <span aria-hidden="true">[2]</span>
+          </a>
+          <a href="#rodape" accessKey="4">
+            Ir para o rodapé <span aria-hidden="true">[4]</span>
+          </a>
+        </nav>
         <header className="sticky top-0 z-40 border-b border-borda bg-superficie/95 backdrop-blur supports-[backdrop-filter]:bg-superficie/85">
           <div className="relative flex w-full flex-col gap-2 px-[5%] py-3 md:flex-row md:items-center md:justify-between">
             <Link href="/" className="inline-flex min-h-11 items-center self-start text-lg font-bold text-foreground">
               <Logo />
+              <span className="sr-only">, página inicial</span>
             </Link>
             <NavPrincipal />
             <BotaoConta />
           </div>
         </header>
-        <div className="border-b border-borda bg-white">
+        <aside aria-label="Atualização dos dados e leitura em voz alta" className="border-b border-borda bg-white">
           <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-4 gap-y-1 px-4 py-1">
             <FaixaAtualizacao />
             <BotaoOuvir />
           </div>
-        </div>
-        <main id="conteudo" className="mx-auto w-full max-w-6xl flex-1 px-4 py-6">
+        </aside>
+        <main id="conteudo" tabIndex={-1} className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 focus:outline-none">
           {children}
         </main>
-        <footer className="border-t border-borda bg-superficie">
+        <footer id="rodape" tabIndex={-1} className="border-t border-borda bg-superficie focus:outline-none">
           <div className="mx-auto max-w-6xl px-4 py-3 text-sm text-[var(--cor-secundaria)]">
             <p className="flex flex-wrap items-center gap-x-1">
               <span className="py-2.5">Site independente, sem ligação com governos ou partidos. Fontes oficiais citadas em cada informação.</span>
@@ -69,6 +76,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <span aria-hidden="true">·</span>
               <Link href="/privacidade" className="lk inline-flex min-h-11 items-center px-1">
                 Privacidade
+              </Link>
+              <span aria-hidden="true">·</span>
+              <Link href="/acessibilidade" className="lk inline-flex min-h-11 items-center px-1">
+                Acessibilidade
               </Link>
             </p>
           </div>

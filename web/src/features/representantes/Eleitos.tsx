@@ -39,7 +39,7 @@ export function GrupoCargo({
   const H = `h${nivel}` as "h3" | "h4";
   const n = pessoas.length;
   return (
-    <section className="cartao" aria-label={info?.plural ?? cargo}>
+    <section className="cartao" aria-label={`${info?.plural ?? cargo}${aguardandoPosse ? " (aguardando posse)" : ""}`}>
       <H className="text-lg font-semibold">
         {n > 1 ? (info?.plural ?? cargo) : (info?.singular ?? cargo)}
         {n > 1 ? <span className="font-normal text-[var(--cor-secundaria)]"> · {n}</span> : null}

@@ -113,12 +113,23 @@ export function CabecalhoDecisao({
           </p>
         ) : null}
         <h1 className="mt-2 text-2xl font-bold leading-tight text-foreground sm:text-3xl">
-          {titulo.curto}
-          {titulo.cortado ? "…" : null}
+          {titulo.cortado ? (
+            <>
+              {/* Leitor de tela e leitura em voz alta recebem o título inteiro. */}
+              <span aria-hidden="true">{titulo.curto}…</span>
+              <span className="sr-only" data-ler>
+                {t.titulo}
+              </span>
+            </>
+          ) : (
+            titulo.curto
+          )}
         </h1>
         {titulo.cortado ? (
-          <details className="mt-1">
-            <summary className="lk inline-flex min-h-11 cursor-pointer items-center">ler tudo</summary>
+          <details className="mt-1" data-nao-ler>
+            <summary className="lk inline-flex min-h-11 cursor-pointer items-center">
+              ler tudo<span className="sr-only"> (título completo)</span>
+            </summary>
             <p className="mt-1 text-lg leading-relaxed text-foreground">{t.titulo}</p>
           </details>
         ) : null}

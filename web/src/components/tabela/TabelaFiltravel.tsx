@@ -25,6 +25,7 @@
  */
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { MostrarMais } from "../lista/MostrarMais";
 import { FiltrosCompactos } from "./FiltrosCompactos";
 import { TabelaResponsiva, type ColunaTabela } from "./TabelaResponsiva";
 
@@ -100,7 +101,6 @@ export function TabelaFiltravel({
       (!t || (busca?.chaves ?? []).some((k) => normalizarBusca(String(l[k] ?? "")).includes(t))),
   );
   const visiveis = filtradas.slice(0, limite);
-  const resto = filtradas.length - visiveis.length;
 
   function mudar(k: string, v: string) {
     setValores((s) => ({ ...s, [k]: v }));
@@ -171,16 +171,7 @@ export function TabelaFiltravel({
         chaveLinha={(l, i) => String(l[chave] ?? i)}
         vazio={vazio}
       />
-      {resto > 0 ? (
-        <div className="flex flex-wrap gap-2">
-          <button type="button" className="botao" onClick={() => setLimite((n) => n + porPagina)}>
-            Mostrar mais {Math.min(porPagina, resto).toLocaleString("pt-BR")}
-          </button>
-          <button type="button" className="botao" onClick={() => setLimite(filtradas.length)}>
-            Mostrar todos ({filtradas.length.toLocaleString("pt-BR")})
-          </button>
-        </div>
-      ) : null}
+      <MostrarMais visiveis={visiveis.length} total={filtradas.length} passo={porPagina} itens={itens} aoMostrar={setLimite} />
     </div>
   );
 }

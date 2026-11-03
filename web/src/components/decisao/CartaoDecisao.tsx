@@ -121,13 +121,23 @@ export function CartaoDecisao({
       ) : null}
       <H className="mt-2 text-lg font-semibold leading-snug text-foreground">
         <Link href={href} className="cartao-decisao__link">
-          {titulo.curto}
-          {titulo.cortado ? "…" : null}
+          {titulo.cortado ? (
+            <>
+              <span aria-hidden="true">{titulo.curto}…</span>
+              <span className="sr-only" data-ler>
+                {t.titulo}
+              </span>
+            </>
+          ) : (
+            titulo.curto
+          )}
         </Link>
       </H>
       {titulo.cortado ? (
-        <details className="cartao-decisao__acima mt-1 text-sm">
-          <summary className="lk inline-flex min-h-11 cursor-pointer items-center">ler tudo</summary>
+        <details className="cartao-decisao__acima mt-1 text-sm" data-nao-ler>
+          <summary className="lk inline-flex min-h-11 cursor-pointer items-center">
+            ler tudo<span className="sr-only"> (título completo)</span>
+          </summary>
           <p className="mt-1 leading-relaxed text-foreground">{t.titulo}</p>
         </details>
       ) : null}

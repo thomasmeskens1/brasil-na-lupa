@@ -99,12 +99,12 @@ function DetalheMes({ m }: { m: MesFinancas }) {
         <p className="flex flex-wrap gap-x-4 gap-y-1">
           {m.url_receitas ? (
             <FonteLink href={m.url_receitas} tipo="oficial">
-              Receitas do mês (API do TCE-SP)
+              Receitas do mês (dados abertos do TCE-SP)
             </FonteLink>
           ) : null}
           {m.url_despesas ? (
             <FonteLink href={m.url_despesas} tipo="oficial">
-              Despesas do mês (API do TCE-SP)
+              Despesas do mês (dados abertos do TCE-SP)
             </FonteLink>
           ) : null}
         </p>

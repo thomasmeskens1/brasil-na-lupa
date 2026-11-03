@@ -84,6 +84,8 @@ export function SeloFonte({ fonte, compacto = false, className = "" }: SeloFonte
     >
       <span className="tag-fonte">{PREFIXO[tipo]}</span>
       <span>{nome}</span>
+      {/* Compacto: o nome do documento entra no nome do link (vários cartões citam o mesmo órgão). */}
+      {compacto && fonte.titulo && fonte.titulo !== nome ? <span className="sr-only">: {fonte.titulo}</span> : null}
       {externo ? (
         <>
           <span aria-hidden="true">↗</span>

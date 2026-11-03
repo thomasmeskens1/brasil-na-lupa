@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { CartaoDecisao, type Caminho } from "@/components/decisao";
 import { FiltrosCompactos, normalizarBusca } from "@/components/tabela";
 import { encurtar } from "@/features/executivo/apresentacao";
+import { MostrarMais } from "@/components/lista/MostrarMais";
 
 /** Tema já decodificado do índice estático (STJ ou STF). */
 export interface TemaBusca {
@@ -179,11 +180,14 @@ export function BuscaTemas<T>({
           );
         })}
       </ul>
-      {filtrados.length > limite ? (
-        <button type="button" className="botao" onClick={() => setLimite((n) => n + POR_PAGINA)}>
-          Mostrar mais {Math.min(POR_PAGINA, filtrados.length - limite)} de {filtrados.length - limite} restantes
-        </button>
-      ) : null}
+      <MostrarMais
+        visiveis={Math.min(limite, filtrados.length)}
+        total={filtrados.length}
+        passo={POR_PAGINA}
+        itens={{ singular: "tema", plural: "temas" }}
+        todos={false}
+        aoMostrar={setLimite}
+      />
     </div>
   );
 }

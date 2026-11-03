@@ -230,7 +230,7 @@ export default function MetodologiaPage() {
           escritos no documento; a fonte de dados abertos do TCU não traz esses dados.
         </p>
         <p>
-          Do TCU, a coleta usa somente a API de dados abertos e o inteiro teor indicado por ela; o endereço sites.tcu.gov.br não
+          Do TCU, a coleta usa somente a interface de programação (API) de dados abertos e o inteiro teor indicado por ela; o endereço sites.tcu.gov.br não
           é acessado, porque suas regras de acesso automático proíbem robôs de inteligência artificial. Do TCE-SP, a pesquisa
           de pareceres municipais (www10.tce.sp.gov.br) não é acessada, pelo mesmo motivo; as contas das prefeituras sem
           publicação em formato aberto foram pedidas pela Lei de Acesso à Informação. As listas de responsáveis por contas

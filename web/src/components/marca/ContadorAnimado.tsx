@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from "react";
 
 /**
  * Número que conta de 0 até o valor quando entra na tela (0,8 s). O valor final já vem no HTML
- * (sem JavaScript, ou com movimento reduzido, mostra direto o número oficial).
+ * (sem JavaScript, ou com movimento reduzido, mostra direto o número oficial). O leitor de tela
+ * recebe só o número final (texto oculto), nunca os valores intermediários.
  */
 export function ContadorAnimado({ valor, className }: { valor: number; className?: string }) {
   const [mostrado, setMostrado] = useState(valor);
@@ -34,8 +35,12 @@ export function ContadorAnimado({ valor, className }: { valor: number; className
   }, [valor]);
 
   return (
-    <span ref={ref} className={`tabular-nums ${className ?? ""}`} aria-label={String(valor)}>
-      <span aria-hidden="true">{mostrado}</span>
+    <span ref={ref} className={`tabular-nums ${className ?? ""}`}>
+      {/* O leitor de tela lê sempre o número final; a contagem animada fica só na tela. */}
+      <span className="sr-only" data-ler>
+        {valor.toLocaleString("pt-BR")}
+      </span>
+      <span aria-hidden="true">{mostrado.toLocaleString("pt-BR")}</span>
     </span>
   );
 }

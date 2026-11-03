@@ -82,7 +82,7 @@ export function BuscaUnica() {
 
   return (
     <div>
-      <form role="search" onSubmit={(e) => e.preventDefault()}>
+      <form role="search" aria-label="Buscar em todo o site" onSubmit={(e) => e.preventDefault()}>
         <label htmlFor={`${id}-q`} className="block text-lg font-semibold">
           Buscar político, lei, votação ou tema
         </label>
@@ -110,7 +110,10 @@ export function BuscaUnica() {
         {!dados && q.length >= 2 && !falhou ? <p>Carregando o índice…</p> : null}
         {grupos ? (
           total ? (
-            <p className="sr-only">{total} resultados.</p>
+            <p className="sr-only">
+              {total} {total === 1 ? "resultado" : "resultados"}
+              {grupos.length > 1 ? `, em ${grupos.length} grupos` : ""}.
+            </p>
           ) : (
             <p className="lacuna">Nada encontrado para “{q}”.</p>
           )
@@ -123,9 +126,15 @@ export function BuscaUnica() {
             const vis = todos ? l : l.slice(0, POR_GRUPO);
             return (
               <section key={g} aria-labelledby={`${id}-g${g}`}>
-                <h3 id={`${id}-g${g}`} className="text-base font-semibold">
-                  {dados!.idx.t[g]} <span className="font-normal text-[var(--cor-secundaria)]">· {l.length}</span>
-                </h3>
+                {/* h2: a busca fica logo abaixo do h1 da página inicial (sem salto de nível). */}
+                <h2 id={`${id}-g${g}`} className="titulo-simples text-base">
+                  {dados!.idx.t[g]}{" "}
+                  <span className="font-normal text-[var(--cor-secundaria)]">
+                    <span aria-hidden="true">· </span>
+                    {l.length}
+                    <span className="sr-only"> {l.length === 1 ? "resultado" : "resultados"}</span>
+                  </span>
+                </h2>
                 <ul className="mt-1 divide-y divide-[var(--cor-borda)] rounded border border-[var(--cor-borda)]">
                   {vis.map((r) => {
                     const href = resolverHref(r[3], dados!.idx.u);
@@ -173,6 +182,7 @@ export function BuscaUnica() {
                     }
                   >
                     {todos ? "Mostrar menos" : `Mostrar todos (${l.length})`}
+                    <span className="sr-only"> em {dados!.idx.t[g]}</span>
                   </button>
                 ) : null}
               </section>

@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 import { FiltrosCompactos, normalizarBusca } from "@/components/tabela";
 import { compararVotos, formatarData, rotuloVoto } from "../rotulos";
 import type { ArquivoVotacoes } from "./BuscaVotacoes";
+import { MostrarMais } from "@/components/lista/MostrarMais";
 
 export interface LinhaVotoDeputado {
   id: string;
@@ -140,16 +141,14 @@ export function VotosDoDeputado({ uf, base, pid, plenario, nComissao }: { uf: st
         ))}
       </ul>
       {!filtradas.length && (comissoes || erro) ? <p className="lacuna">Nenhuma votação com esses filtros.</p> : null}
-      {resto > 0 ? (
-        <div className="flex flex-wrap gap-2">
-          <button type="button" className="botao" onClick={() => setLimite((n) => n + POR_PAGINA)}>
-            Mostrar mais {Math.min(POR_PAGINA, resto).toLocaleString("pt-BR")}
-          </button>
-          <button type="button" className="botao" onClick={() => setLimite(filtradas.length)}>
-            Mostrar todas ({filtradas.length.toLocaleString("pt-BR")})
-          </button>
-        </div>
-      ) : null}
+      <MostrarMais
+        visiveis={filtradas.length - resto}
+        total={filtradas.length}
+        passo={POR_PAGINA}
+        itens={{ singular: "votação", plural: "votações" }}
+        genero="f"
+        aoMostrar={setLimite}
+      />
     </div>
   );
 }

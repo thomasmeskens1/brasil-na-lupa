@@ -32,6 +32,7 @@ function Ano({ c, pagina, id }: { c: CotaAno; pagina: FontePaginaCota | null; id
   return (
     <section aria-labelledby={`cota-${c.ano}`} className="space-y-4">
       <h3 id={`cota-${c.ano}`} className="text-lg font-semibold text-gray-900">
+        <span className="sr-only">Gastos da cota em </span>
         {c.ano}
       </h3>
       <dl className="grid grid-cols-1 gap-2 sm:grid-cols-2">

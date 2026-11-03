@@ -6,6 +6,7 @@ import { SeloFonte } from "@/components/decisao";
 import { FiltrosCompactos, normalizarBusca } from "@/components/tabela";
 import { NAO_DISPONIVEL, formatarData, lerHash, nomeSigla } from "../rotulos";
 import type { ContextoCasa } from "./BuscaVotacoes";
+import { MostrarMais } from "@/components/lista/MostrarMais";
 
 type Linha = [
   id: string,
@@ -175,16 +176,14 @@ export function BuscaProjetos({ ctx }: { ctx: ContextoCasa }) {
             ))
           : null}
       </ul>
-      {resto > 0 ? (
-        <div className="flex flex-wrap gap-2">
-          <button type="button" className="botao" onClick={() => setLimite((n) => n + POR_PAGINA)}>
-            Mostrar mais {Math.min(POR_PAGINA, resto).toLocaleString("pt-BR")}
-          </button>
-          <button type="button" className="botao" onClick={() => setLimite(filtradas.length)}>
-            Mostrar todos ({filtradas.length.toLocaleString("pt-BR")})
-          </button>
-        </div>
-      ) : null}
+      <MostrarMais
+        visiveis={filtradas.length - resto}
+        total={filtradas.length}
+        passo={POR_PAGINA}
+        itens={{ singular: "projeto", plural: "projetos" }}
+        genero="m"
+        aoMostrar={setLimite}
+      />
     </div>
   );
 }
