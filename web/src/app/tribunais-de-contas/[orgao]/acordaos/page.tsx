@@ -6,6 +6,7 @@ import { Fontes, Lacunas, Termos, Trilha } from "@/features/tribunais-contas/com
 import { BuscaAcordaos } from "@/features/tribunais-contas/componentes/BuscaAcordaos";
 import { anosAcordaos, colecoesAcordaos, getMetaTcu, getOrgao, getOrgaos, getResumoAcordaos, keysComPagina, ouMarcador, temAcordaos } from "@/features/tribunais-contas/dados";
 import { BASE_TC, TERMOS_TC, formatarDataTc, nomeProprio } from "@/features/tribunais-contas/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export function generateStaticParams() {
   return ouMarcador(
@@ -43,6 +44,7 @@ export default async function AcordaosPage({ params }: PageProps<"/tribunais-de-
     <div className="space-y-10">
       <header className="max-w-3xl">
         <Trilha itens={[{ href: `${BASE_TC}/${o.id}`, rotulo: o.id.toUpperCase() }]} />
+        <Figurinha nome="lupa" className="heroi-figurinha figurinha-flutua" />
         <h1 className="mt-2 text-2xl font-bold text-gray-900 md:text-3xl">Acórdãos do {o.id.toUpperCase()}</h1>
         <p className="mt-3 text-base leading-relaxed text-gray-800">
           Acórdão é a decisão tomada por um colegiado do {o.nome}: o Plenário ou uma das Câmaras. Aqui estão todos os acórdãos

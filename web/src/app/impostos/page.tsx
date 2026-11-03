@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = {
   title: "Impostos",
@@ -10,6 +11,7 @@ export default function ImpostosPage() {
   return (
     <div className="max-w-3xl space-y-6">
       <header>
+        <Figurinha nome="dinheiro" className="heroi-figurinha figurinha-flutua" />
         <h1 className="text-2xl font-bold text-gray-900">Impostos</h1>
         <p className="mt-2 text-gray-800">
           Mudanças em impostos que afetam o Estado de São Paulo, com o que mudou, quem decidiu, por

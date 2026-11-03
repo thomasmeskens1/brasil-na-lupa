@@ -8,6 +8,7 @@ import { getIndiceExecutivo } from "@/features/executivo/dados";
 import { montarCartao } from "@/features/executivo/apresentacao";
 import { cartaoMpv, cartaoVeto, padraoMpv, padraoVeto } from "@/features/executivo/listas";
 import { TERMOS_EXECUTIVO } from "@/features/executivo/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = {
   title: "Executivo federal",
@@ -40,6 +41,7 @@ export default function ExecutivoPage() {
   return (
     <div className="space-y-10">
       <header className="max-w-3xl">
+        <Figurinha nome="caneta" className="heroi-figurinha figurinha-flutua" />
         <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">Executivo federal</h1>
         <p className="mt-3 leading-relaxed text-gray-800">
           O Presidente da República decide por atos individuais, sem votação: edita medidas provisórias e decretos e sanciona

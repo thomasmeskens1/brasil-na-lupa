@@ -11,6 +11,7 @@ import { cartaoTemaStj } from "@/features/justica/cartoes";
 import { getIndiceStj, getTemaStj, temasPorColecaoStj } from "@/features/justica/dados";
 import type { TemaStj } from "@/features/justica/tipos";
 import { COLECOES, TERMOS_JUSTICA } from "@/features/justica/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = {
   title: "Superior Tribunal de Justiça (STJ)",
@@ -46,6 +47,7 @@ export default function StjPage() {
     <div className="space-y-10">
       <header className="max-w-3xl">
         <Migalhas itens={[{ href: "/justica", rotulo: "Justiça" }]} />
+        <Figurinha nome="balanca" className="heroi-figurinha figurinha-flutua" />
         <h1 className="mt-1 text-2xl font-bold text-gray-900 md:text-3xl">Superior Tribunal de Justiça (STJ)</h1>
         <p className="mt-3 leading-relaxed text-gray-800">
           O STJ uniformiza a interpretação das leis federais. Nos temas repetitivos, julga uma questão que se repete em muitos

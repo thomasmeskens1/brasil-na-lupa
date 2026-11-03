@@ -7,6 +7,7 @@ import { FinancasAno } from "@/features/atibaia/componentes/Financas";
 import { getIndiceAtibaia } from "@/features/atibaia/dados";
 import { TERMOS_ATIBAIA } from "@/features/atibaia/termos";
 import { formatarDataSp as data } from "@/features/sao-paulo/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = {
   title: "Atibaia (SP)",
@@ -22,6 +23,7 @@ export default function AtibaiaPage() {
   return (
     <div className="space-y-10">
       <header className="max-w-3xl">
+        <Figurinha nome="cidade" className="heroi-figurinha figurinha-flutua" />
         <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">Atibaia (SP)</h1>
         <p className="mt-3 leading-relaxed text-gray-800">
           No município da Estância de Atibaia, as leis são votadas pela Câmara Municipal, formada por {v?.itens.length ?? "—"}{" "}

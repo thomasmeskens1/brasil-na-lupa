@@ -9,6 +9,7 @@ import { JusticaIcms } from "@/features/icms/componentes/JusticaIcms";
 import { ListaIcms } from "@/features/icms/componentes/ListaIcms";
 import { QuemPodeMudar } from "@/features/icms/componentes/QuemPodeMudar";
 import { formatarData } from "@/features/icms/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = metadadosCompartilhamento({
   titulo: "ICMS: quem decidiu e por quê",
@@ -30,6 +31,7 @@ export default function IcmsPage() {
             Impostos
           </Link>
         </nav>
+        <Figurinha nome="dinheiro" className="heroi-figurinha figurinha-flutua" />
         <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">ICMS: quem decidiu e por quê</h1>
         <p className="mt-2 leading-relaxed text-gray-800">
           O Imposto sobre Circulação de Mercadorias e Serviços (ICMS) é cobrado pelos estados sobre mercadorias, como

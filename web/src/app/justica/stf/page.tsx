@@ -10,6 +10,7 @@ import { ListaJulgamentosStf } from "@/features/justica/componentes/ListaJulgame
 import { getIndiceStf, getSumulasVinculantes, getTemaStf } from "@/features/justica/dados";
 import { COLECOES, TERMOS_JUSTICA } from "@/features/justica/rotulos";
 import type { TemaStf } from "@/features/justica/tipos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = {
   title: "Supremo Tribunal Federal (STF)",
@@ -30,6 +31,7 @@ export default function StfPage() {
     <div className="space-y-10">
       <header className="max-w-3xl">
         <Migalhas itens={[{ href: "/justica", rotulo: "Justiça" }]} />
+        <Figurinha nome="balanca" className="heroi-figurinha figurinha-flutua" />
         <h1 className="mt-1 text-2xl font-bold text-gray-900 md:text-3xl">Supremo Tribunal Federal (STF)</h1>
         <p className="mt-3 leading-relaxed text-gray-800">
           O STF é o guardião da Constituição. Nos temas de repercussão geral, julga uma questão constitucional que se repete

@@ -6,6 +6,7 @@ import { NavPrincipal } from "@/components/NavPrincipal";
 import { BotaoOuvir } from "@/components/ouvir";
 import { BotaoConta } from "@/features/conta/BotaoConta";
 import { DM_Sans, Poppins } from "next/font/google";
+import { AberturaMarca, SCRIPT_ABERTURA } from "@/components/marca/AberturaMarca";
 import { Logo } from "@/components/marca/Logo";
 import "./globals.css";
 
@@ -32,6 +33,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="pt-BR" suppressHydrationWarning className={`h-full antialiased ${fonteTitulo.variable} ${fonteTexto.variable}`}>
       <body className="flex min-h-full flex-col bg-background text-foreground">
+        <script dangerouslySetInnerHTML={{ __html: SCRIPT_ABERTURA }} />
+        <AberturaMarca />
         <a
           href="#conteudo"
           className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:text-sm focus:shadow"

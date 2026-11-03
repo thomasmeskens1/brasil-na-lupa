@@ -8,6 +8,7 @@ import { Calendario } from "@/features/agenda/Calendario";
 import { NOME_CASA, ORDEM_CASAS, getAgenda, proximasSessoes } from "@/features/agenda/dados";
 import { ItemDaPauta, ItemSessao } from "@/features/agenda/Sessoes";
 import { dataHoraBrasilia } from "@/features/inicio/dados";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = {
   title: "Agenda do Plenário",
@@ -35,6 +36,7 @@ export default function AgendaPage() {
   if (!a) {
     return (
       <div className="max-w-3xl">
+        <Figurinha nome="calendario" className="heroi-figurinha figurinha-flutua" />
         <h1 className="text-2xl font-bold">Agenda do Plenário</h1>
         <p className="lacuna mt-4">Informação não disponível em fonte oficial: a agenda ainda não foi coletada.</p>
       </div>
@@ -48,6 +50,7 @@ export default function AgendaPage() {
   return (
     <div className="space-y-10">
       <header className="max-w-3xl">
+        <Figurinha nome="calendario" className="heroi-figurinha figurinha-flutua" />
         <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">Agenda do Plenário</h1>
         <p className="mt-3 leading-relaxed text-gray-800">
           Sessões do Plenário da Câmara dos Deputados, do Senado Federal e do Congresso Nacional (sessões conjuntas

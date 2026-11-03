@@ -9,6 +9,7 @@ import { UFS } from "@/features/representantes/cargos";
 import { getMetaEleitos, getUf } from "@/features/representantes/dados";
 import { GrupoCargo, agrupar } from "@/features/representantes/Eleitos";
 import { NaSuaCidade } from "@/features/representantes/NaSuaCidade";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export function generateStaticParams() {
   return UFS.map((u) => ({ uf: u.sigla.toLowerCase() }));
@@ -46,6 +47,7 @@ export default async function UfPage({ params }: PageProps<"/quem-me-representa/
             Quem me representa
           </Link>
         </p>
+        <Figurinha nome="pessoas" className="heroi-figurinha figurinha-flutua" />
         <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">Quem me representa: {d.nome_uf}</h1>
         <p className="mt-3 leading-relaxed text-gray-800">
           Quem foi eleito para representar {deDf ? "o Distrito Federal" : `${d.nome_uf} e seus municípios`}, em camadas: na sua

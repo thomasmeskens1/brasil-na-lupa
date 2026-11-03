@@ -5,6 +5,7 @@ import { AvisoEleito, FontesEleitos, Presidencia } from "@/features/representant
 import { BuscaLocal } from "@/features/representantes/BuscaLocal";
 import { UFS } from "@/features/representantes/cargos";
 import { getMetaEleitos } from "@/features/representantes/dados";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = {
   title: "Quem me representa",
@@ -17,6 +18,7 @@ export default function QuemMeRepresentaPage() {
   return (
     <div className="space-y-10">
       <header className="max-w-3xl">
+        <Figurinha nome="pessoas" className="heroi-figurinha figurinha-flutua" />
         <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">Quem me representa</h1>
         <p className="mt-3 leading-relaxed text-gray-800">
           Busque sua cidade ou seu estado para ver quem foi eleito na sua cidade (prefeito, vice e vereadores), no seu estado

@@ -7,6 +7,7 @@ import { CartaoDecisao } from "@/components/decisao";
 import { cartaoTemaStj } from "@/features/justica/cartoes";
 import { getIndiceStf, getIndiceStj, temasPorColecaoStj } from "@/features/justica/dados";
 import { TERMOS_JUSTICA } from "@/features/justica/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = {
   title: "Justiça: STJ e STF",
@@ -23,6 +24,7 @@ export default function JusticaPage() {
   return (
     <div className="space-y-10">
       <header className="max-w-3xl">
+        <Figurinha nome="balanca" className="heroi-figurinha figurinha-flutua" />
         <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">Justiça: STJ e STF</h1>
         <p className="mt-3 leading-relaxed text-gray-800">
           O Superior Tribunal de Justiça (STJ) uniformiza a interpretação das leis federais, e o Supremo Tribunal Federal

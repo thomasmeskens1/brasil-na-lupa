@@ -4,14 +4,14 @@ import { useEffect, useRef, useState } from "react";
 import { LARGURA_VB, LogoSvg, RAIO_LUPA, X_VB, Y_VB } from "./LogoSvg";
 
 /**
- * Abertura da marca (motion do logotipo) na primeira visita à página inicial em cada sessão.
+ * Abertura da marca (motion do logotipo): primeiro contato em toda entrada no site (carga completa
+ * de qualquer página, inclusive ao recarregar). Navegação interna não repete.
  * 1. 0–1,9 s: a lupa varre o texto e o revela (texto aparece atrás da lente).
  * 2. 1,5–2,3 s: encaixe ao lado de "BRASIL": faíscas, reflexo na lente e sublinhado desenhado.
  * 3. 2,5–3,5 s: "portal": a lente cresce e abre a página inicial através dela, enquanto o
  *    conteúdo da página entra (html[data-abertura] libera as animações de entrada).
- * Sem JavaScript, com movimento reduzido ou já vista na sessão, nada aparece.
+ * Sem JavaScript ou com movimento reduzido (acessibilidade), nada aparece; ?abertura força o teste.
  */
-const CHAVE = "bnl-abertura";
 const FIM_VARREDURA = 1900;
 const INICIO_PORTAL = 2500;
 const FIM = 3500;
@@ -22,7 +22,7 @@ const saida = (p: number) => 1 - Math.pow(1 - p, 3);
 const trecho = (t: number, a: number, b: number) => Math.min(1, Math.max(0, (t - a) / (b - a)));
 
 /** Roda antes da pintura (script no HTML): decide se a abertura aparece, sem piscar. */
-export const SCRIPT_ABERTURA = `try{var d=document.documentElement;d.dataset.abertura=(!/[?&]abertura/.test(location.search)&&(sessionStorage.getItem("${CHAVE}")||matchMedia("(prefers-reduced-motion: reduce)").matches))?"vista":"ativa"}catch(e){document.documentElement.dataset.abertura="vista"}`;
+export const SCRIPT_ABERTURA = `try{document.documentElement.dataset.abertura=(!/[?&]abertura/.test(location.search)&&matchMedia("(prefers-reduced-motion: reduce)").matches)?"vista":"ativa"}catch(e){}`;
 
 export function AberturaMarca() {
   const raiz = useRef<HTMLDivElement>(null);
@@ -30,14 +30,8 @@ export function AberturaMarca() {
 
   useEffect(() => {
     const html = document.documentElement;
-    let vista = true;
-    try {
-      // ?abertura no endereço força a abertura (para testar), mesmo já vista ou com movimento reduzido.
-      vista = !/[?&]abertura/.test(location.search) && (!!sessionStorage.getItem(CHAVE) || matchMedia("(prefers-reduced-motion: reduce)").matches);
-    } catch {
-      /* sem sessionStorage: não mostra */
-    }
-    if (!vista) html.dataset.abertura = "ativa";
+    // Só na carga completa da página (o script do HTML marca "ativa"); navegação interna não repete.
+    const vista = html.dataset.abertura !== "ativa";
     const el = raiz.current;
     if (vista || !el) {
       html.dataset.abertura = "vista";
@@ -112,14 +106,7 @@ export function AberturaMarca() {
     };
 
     const passo = (agora: number) => {
-      if (!inicio) {
-        inicio = agora;
-        try {
-          sessionStorage.setItem(CHAVE, "1");
-        } catch {
-          /* ignora */
-        }
-      }
+      if (!inicio) inicio = agora;
       if (pularPara >= 0) {
         inicio = agora - pularPara;
         pularPara = -1;

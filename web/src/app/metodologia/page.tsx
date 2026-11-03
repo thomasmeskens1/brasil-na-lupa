@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = {
   title: "Metodologia",
@@ -64,6 +65,7 @@ export default function MetodologiaPage() {
   return (
     <article className="max-w-3xl space-y-8">
       <header>
+        <Figurinha nome="lupa" className="heroi-figurinha figurinha-flutua" />
         <h1 className="text-2xl font-bold text-gray-900">Metodologia</h1>
         <p className="mt-2 text-gray-800">
           Como as informações deste site são reunidas, organizadas e atualizadas.

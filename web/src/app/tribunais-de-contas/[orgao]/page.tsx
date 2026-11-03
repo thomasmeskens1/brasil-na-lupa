@@ -18,6 +18,7 @@ import {
   temContasPresidente,
 } from "@/features/tribunais-contas/dados";
 import { BASE_TC, NAO_DISPONIVEL, formatarDataTc, rotuloSituacao } from "@/features/tribunais-contas/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export function generateStaticParams() {
   return ouMarcador(getOrgaos().itens.map((o) => ({ orgao: o.id })), { orgao: "sem-dados" });
@@ -58,6 +59,7 @@ export default async function OrgaoTcPage({ params }: PageProps<"/tribunais-de-c
     <div className="space-y-10">
       <header className="max-w-3xl">
         <Trilha itens={[]} />
+        <Figurinha nome="lupa" className="heroi-figurinha figurinha-flutua" />
         <h1 className="mt-2 text-2xl font-bold text-gray-900 md:text-3xl">{o.nome}</h1>
         <p className="mt-2 flex flex-wrap items-center gap-2 text-base text-[var(--cor-secundaria)]">
           <Selo escuro={ativo}>{rotuloSituacao(o)}</Selo>

@@ -7,6 +7,7 @@ import { Fontes, Termos, Trilha } from "@/features/tribunais-contas/componentes/
 import { ExercicioPrefeitoItem, tituloPrefeito } from "@/features/tribunais-contas/componentes/Exercicios";
 import { getContasPrefeitos, getOrgao, getOrgaos, municipiosComContas, ouMarcador } from "@/features/tribunais-contas/dados";
 import { BASE_TC, TERMOS_TC, formatarDataTc } from "@/features/tribunais-contas/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 /** Municípios com seção própria no site. */
 const SECAO_MUNICIPIO: Record<string, string> = { atibaia: "/atibaia" };
@@ -46,6 +47,7 @@ export default async function ContasPrefeitoPage({ params }: PageProps<"/tribuna
     <div className="space-y-10">
       <header className="max-w-3xl">
         <Trilha itens={[{ href: `${BASE_TC}/${o.id}`, rotulo: o.id.toUpperCase() }]} />
+        <Figurinha nome="lupa" className="heroi-figurinha figurinha-flutua" />
         <h1 className="mt-2 text-2xl font-bold text-gray-900 md:text-3xl">Contas do Prefeito de {nome}</h1>
         <p className="mt-3 text-base leading-relaxed text-gray-800">
           O {o.nome} ({o.id.toUpperCase()}) emite todo ano um parecer prévio sobre as contas do Prefeito de {nome}. O

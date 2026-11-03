@@ -827,3 +827,77 @@ html[data-abertura="ativa"] .rabisco path {
     to { transform: translate(480px, 72px) rotate(0deg) scale(1.05); }
   }
 }
+
+/* ----- Cabeçalho de página no estilo da página inicial (todas as páginas) ----- */
+main header:has(> h1),
+main section:has(> h1):not(.heroi) {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  max-width: none;
+  border-radius: 1.5rem;
+  border: 1px solid var(--cor-borda);
+  background:
+    radial-gradient(60% 90% at 100% 0%, rgb(204 255 0 / 0.12), transparent 60%),
+    radial-gradient(50% 60% at 0% 100%, rgb(108 92 231 / 0.08), transparent 70%),
+    var(--cor-superficie);
+  padding: 1.5rem 1.25rem;
+}
+@media (min-width: 768px) {
+  main header:has(> h1),
+  main section:has(> h1):not(.heroi) {
+    padding: 2.25rem 2.5rem;
+  }
+}
+main header:has(> h1) > h1::after,
+main section:has(> h1):not(.heroi) > h1::after {
+  content: "";
+  display: block;
+  margin-top: 0.5rem;
+  height: 10px;
+  width: min(11rem, 60%);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M3 8 C50 3 120 2 197 6 M30 10 C80 8 130 8 170 9' fill='none' stroke='%23ccff00' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
+}
+main header:has(> h1) > p,
+main section:has(> h1):not(.heroi) > p {
+  max-width: 48rem;
+}
+.heroi-figurinha {
+  display: block;
+  height: 3.5rem;
+  width: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 768px) {
+  .heroi-figurinha {
+    position: absolute;
+    right: 2rem;
+    top: 1.75rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    margin: 0;
+  }
+  main header:has(> .heroi-figurinha),
+  main section:has(> .heroi-figurinha) {
+    padding-right: 8rem;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  main header:has(> h1) > *,
+  main section:has(> h1):not(.heroi) > * {
+    animation: subir 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  main header:has(> h1) > :nth-child(2),
+  main section:has(> h1):not(.heroi) > :nth-child(2) { animation-delay: 0.08s; }
+  main header:has(> h1) > :nth-child(3),
+  main section:has(> h1):not(.heroi) > :nth-child(3) { animation-delay: 0.16s; }
+  main header:has(> h1) > :nth-child(n + 4),
+  main section:has(> h1):not(.heroi) > :nth-child(n + 4) { animation-delay: 0.24s; }
+  html[data-abertura="ativa"] main header:has(> h1) > *,
+  html[data-abertura="ativa"] main section:has(> h1) > * {
+    animation-play-state: paused;
+  }
+  main header:has(> h1) > .heroi-figurinha {
+    animation: subir 0.6s both, flutuar 4s 0.6s ease-in-out infinite;
+  }
+}

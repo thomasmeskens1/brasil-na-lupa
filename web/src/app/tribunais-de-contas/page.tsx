@@ -13,6 +13,7 @@ import {
   getOrgaos,
 } from "@/features/tribunais-contas/dados";
 import { BASE_TC, TERMOS_TC, formatarDataTc, plural } from "@/features/tribunais-contas/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = {
   title: "Tribunais de Contas",
@@ -60,6 +61,7 @@ export default function TribunaisDeContasPage() {
   return (
     <div className="space-y-10">
       <header className="max-w-3xl">
+        <Figurinha nome="lupa" className="heroi-figurinha figurinha-flutua" />
         <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">Tribunais de Contas</h1>
         <p className="mt-3 text-base leading-relaxed text-gray-800 lg:text-lg">
           Os tribunais de contas fiscalizam como o dinheiro público é usado. Eles auxiliam o Poder Legislativo nessa fiscalização e

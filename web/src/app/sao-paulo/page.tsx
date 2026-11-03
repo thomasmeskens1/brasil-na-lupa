@@ -5,6 +5,7 @@ import { Secao } from "@/components/Secao";
 import { ListaFontes, TermosExplicados } from "@/features/congresso/componentes/Basicos";
 import { getIndiceSp, votacoesPlenario } from "@/features/sao-paulo/dados";
 import { TERMOS_SP, formatarDataSp, nomeSiglaSp } from "@/features/sao-paulo/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = {
   title: "Estado de São Paulo",
@@ -44,6 +45,7 @@ export default function SaoPauloPage() {
   return (
     <div className="space-y-10">
       <header className="max-w-3xl">
+        <Figurinha nome="mapa" className="heroi-figurinha figurinha-flutua" />
         <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">Estado de São Paulo</h1>
         <p className="mt-3 leading-relaxed text-gray-800">
           As leis estaduais são votadas pela Assembleia Legislativa do Estado de São Paulo (ALESP), formada por 94 deputados

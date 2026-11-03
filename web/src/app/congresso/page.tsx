@@ -6,6 +6,7 @@ import { getIndice, opcoesFiltro, votacoesIniciais } from "@/features/congresso/
 import { ListaFontes, TermosExplicados } from "@/features/congresso/componentes/Basicos";
 import { ListaVotacoes } from "@/features/congresso/componentes/ListaVotacoes";
 import { CASAS, CASA_MEMBROS, CASA_NOME, TERMOS, TIPO, formatarData } from "@/features/congresso/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = metadadosCompartilhamento({
   titulo: "Congresso Nacional: votações da Câmara e do Senado",
@@ -41,6 +42,7 @@ export default function CongressoPage() {
   return (
     <div className="space-y-10">
       <header className="max-w-3xl">
+        <Figurinha nome="congresso" className="heroi-figurinha figurinha-flutua" />
         <h1 className="text-2xl font-bold text-foreground md:text-3xl">Congresso Nacional</h1>
         <p className="mt-3 leading-relaxed">
           O que a Câmara dos Deputados (513 deputados federais) e o Senado Federal (81 senadores) votaram, dia a dia: o
