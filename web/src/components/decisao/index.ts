@@ -7,9 +7,21 @@ export { CartaoDecisao, type CartaoDecisaoProps } from "./CartaoDecisao";
 export { CabecalhoDecisao, type CabecalhoDecisaoProps } from "./CabecalhoDecisao";
 export { BlocoDadoChave, BarraPlacar, type BlocoDadoChaveProps, type BarraPlacarProps } from "./DadoChave";
 export { FichaTecnica, ItemRecolhivel, type FichaTecnicaProps, type ItemFicha, type ItemRecolhivelProps } from "./FichaTecnica";
-export { SeloCaminho, SeloFonte, type SeloCaminhoProps, type SeloFonteProps } from "./Selos";
+export {
+  EtiquetaDecisao,
+  SeloCaminho,
+  SeloFonte,
+  type EtiquetaDecisaoProps,
+  type SeloCaminhoProps,
+  type SeloFonteProps,
+} from "./Selos";
 export {
   CAMINHOS,
+  LIMITE_ETIQUETA,
+  cortarEmPalavra,
+  destaquesAprovados,
+  etiquetaDe,
+  etiquetaDoDado,
   FORMAS,
   NAO_DISPONIVEL,
   dadoEmTexto,
@@ -24,7 +36,9 @@ export {
   type TituloResolvido,
 } from "./rotulos";
 export type {
+  ArquivoDestaques,
   ArquivoTitulos,
+  Destaque,
   Caminho,
   DadoChave,
   FonteResumo,

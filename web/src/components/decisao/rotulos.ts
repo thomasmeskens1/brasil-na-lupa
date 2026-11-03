@@ -6,7 +6,16 @@
  *   placarOficial({ sim: 330, nao: 104, outros: 1 })  // → [{rotulo:"Sim",valor:330}, …]
  *   formatarData("2025-12-15")                         // → "15/12/2025"
  */
-import type { Caminho, DadoChave, FormaDecisao, ItemPlacar, OrigemTitulo, TituloSimples } from "./tipos";
+import type {
+  ArquivoDestaques,
+  Caminho,
+  DadoChave,
+  Destaque,
+  FormaDecisao,
+  ItemPlacar,
+  OrigemTitulo,
+  TituloSimples,
+} from "./tipos";
 
 export const NAO_DISPONIVEL = "Informação não disponível em fonte oficial";
 
@@ -44,6 +53,7 @@ export const FORMAS: Record<FormaDecisao, string> = {
 
 /** Origem do título simples, em texto (vazio quando é o próprio título oficial). */
 export const ORIGENS: Record<OrigemTitulo, string> = {
+  estruturado: "montado só com campos estruturados do documento oficial, por modelo fixo",
   "apelido-oficial": "apelido oficial da proposição",
   "explicacao-oficial": "explicação oficial da ementa",
   "agencia-camara": "Agência Câmara de Notícias",
@@ -64,17 +74,78 @@ export function formatarNumero(n: number): string {
 }
 
 /**
- * Título simples só é usado quando passou na verificação e não foi vetado por nenhum analista
- * (regras de dados/esquema.json → titulo_simples). Do contrário, vale o título oficial.
+ * Regra dos títulos (substitui a antiga chave geral): só aparece no lugar do oficial o título de
+ * origem "estruturado" (modelo fixo montado de campos estruturados) que o verificador aprovou
+ * (verificacao.aprovado_pelo_verificador === true), com números conferidos, sem palavra proibida e
+ * sem veto de analista. Qualquer outra origem — inclusive as antigas reescritas de ementa e
+ * manchetes — nunca aparece: vale o título oficial.
  */
 export function tituloAprovado(s: TituloSimples | null | undefined): s is TituloSimples {
   if (!s || typeof s.titulo !== "string" || !s.titulo.trim()) return false;
+  if (s.origem !== "estruturado") return false;
   const v = s.verificacao;
-  if (!v) return true;
+  if (!v || v.aprovado_pelo_verificador !== true) return false;
   if (v.numeros_e_datas_conferidos === false || v.verbo_permitido === false) return false;
   if (Array.isArray(v.palavras_proibidas) && v.palavras_proibidas.length > 0) return false;
   if (v.veto_vies !== null && v.veto_vies !== undefined && v.veto_vies !== false) return false;
   return true;
+}
+
+/** Etiqueta curta e segura vinda do arquivo de títulos (montada só de campos estruturados e verificada). */
+export function etiquetaDe(s: TituloSimples | null | undefined): string | null {
+  const e = typeof s?.etiqueta === "string" ? s.etiqueta.trim() : "";
+  if (!e || e.length > LIMITE_ETIQUETA) return null;
+  if (s?.verificacao && s.verificacao.aprovado_pelo_verificador === false) return null;
+  return e;
+}
+
+export const LIMITE_ETIQUETA = 60;
+
+/**
+ * Etiqueta a partir do dado-chave, quando o arquivo de títulos não traz uma: só do que já é campo
+ * estruturado (placar nominal e resultado do órgão, votação simbólica, antes → depois).
+ * Mesmo formato para qualquer desfecho (diretriz 11): "Aprovado 312 × 140" / "Rejeitado 140 × 312".
+ */
+export function etiquetaDoDado(d: DadoChave | null | undefined): string | null {
+  if (!d) return null;
+  const palavra = (r?: string | null) =>
+    !r ? null : /^aprovad/i.test(r.trim()) ? "Aprovado" : /^rejeitad/i.test(r.trim()) ? "Rejeitado" : null;
+  switch (d.tipo) {
+    case "placar": {
+      const p = palavra(d.resultado);
+      if (!p) return null;
+      const sim = d.itens.find((i) => i.rotulo === "Sim")?.valor;
+      const nao = d.itens.find((i) => i.rotulo === "Não")?.valor;
+      if (typeof sim !== "number" || typeof nao !== "number") return p;
+      // placar que contradiz o resultado (ex.: quórum qualificado) fica só com o resultado
+      if ((p === "Aprovado" && sim < nao) || (p === "Rejeitado" && sim > nao)) return p;
+      return `${p} ${formatarNumero(sim)} × ${formatarNumero(nao)}`;
+    }
+    case "simbolica": {
+      const p = palavra(d.resultado);
+      return p ? `${p} em votação simbólica` : null;
+    }
+    case "mudanca": {
+      if (!d.antes || !d.depois) return null;
+      const base = `De ${d.antes} para ${d.depois}${d.unidade ? ` ${d.unidade}` : ""}`;
+      return base.length <= LIMITE_ETIQUETA ? base : null;
+    }
+    default:
+      return null;
+  }
+}
+
+/**
+ * Corta texto longo em fim de palavra (nunca no meio), sem pontuação pendurada no fim.
+ * { curto, cortado } — com cortado = true a interface mostra "…" e "ler tudo".
+ */
+export function cortarEmPalavra(texto: string, limite: number): { curto: string; cortado: boolean } {
+  const t = texto.trim();
+  if (!limite || t.length <= limite) return { curto: t, cortado: false };
+  const corte = t.slice(0, limite + 1);
+  const ultimoEspaco = corte.lastIndexOf(" ");
+  const base = ultimoEspaco > limite * 0.6 ? corte.slice(0, ultimoEspaco) : t.slice(0, limite);
+  return { curto: base.replace(/[\s,;:–—-]+$/u, ""), cortado: true };
 }
 
 export interface TituloResolvido {
@@ -89,6 +160,8 @@ export interface TituloResolvido {
   origem: string;
   /** Link da origem do título simples, quando houver. */
   fonteTitulo: { url: string; titulo?: string | null } | null;
+  /** Etiqueta estruturada do arquivo de títulos (vale também com o título oficial). */
+  etiqueta: string | null;
 }
 
 /** Escolhe o título simples aprovado ou cai no oficial. */
@@ -116,22 +189,40 @@ export function resolverTitulo(p: {
     simples: !!s,
     origem,
     fonteTitulo: fonteTitulo && /^https?:\/\//.test(fonteTitulo.url) ? fonteTitulo : null,
+    etiqueta: etiquetaDe(p.simples),
   };
 }
 
 /**
- * Chave geral dos títulos em linguagem simples. Desligada enquanto a revisão de precisão não
- * for aprovada: todas as seções mostram o título oficial.
+ * Mantida por compatibilidade (módulos de features/ ainda a consultam para carregar os arquivos de
+ * títulos). A decisão de mostrar ou não um título deixou de ser uma chave única: é a regra de
+ * tituloAprovado() — só "estruturado" aprovado pelo verificador; o resto, título oficial.
  */
-export const TITULOS_SIMPLES_ATIVOS = false;
+export const TITULOS_SIMPLES_ATIVOS = true;
 
-/** Busca o título simples de um item num arquivo dados/titulos/<secao>.json. */
+/** Busca o registro de um item num arquivo dados/titulos/<secao>.json (tema, etiqueta e título). */
 export function tituloSimplesDe(
   arquivo: { itens?: Record<string, TituloSimples> } | null | undefined,
   id: string,
 ): TituloSimples | null {
-  if (!TITULOS_SIMPLES_ATIVOS) return null;
   return arquivo?.itens?.[id] ?? null;
+}
+
+/** Destaques da página inicial (dados/titulos/destaques.json): só os aprovados por pessoa, completos. */
+export function destaquesAprovados(arquivo: ArquivoDestaques | null | undefined): Destaque[] {
+  return (arquivo?.itens ?? []).filter(
+    (d) =>
+      d?.status === "aprovado" &&
+      typeof d.titulo === "string" &&
+      d.titulo.trim() !== "" &&
+      typeof d.texto === "string" &&
+      d.texto.trim() !== "" &&
+      typeof d.item_id === "string" &&
+      !!d.fonte &&
+      /^https?:\/\//.test(d.fonte.url) &&
+      Array.isArray(d.apoio) &&
+      d.apoio.length > 0,
+  );
 }
 
 /** Ordem fixa e igual para todos (diretriz 6). */

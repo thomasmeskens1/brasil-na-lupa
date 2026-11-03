@@ -31,8 +31,8 @@ import { BotaoCompartilhar } from "../compartilhar/BotaoCompartilhar";
 import { montarTextoCompartilhar } from "../compartilhar/texto";
 import { BlocoDadoChave } from "./DadoChave";
 import { FichaTecnica, type ItemFicha } from "./FichaTecnica";
-import { SeloCaminho, SeloFonte } from "./Selos";
-import { FORMAS, resolverTitulo, rotuloCaminho } from "./rotulos";
+import { EtiquetaDecisao, SeloCaminho, SeloFonte } from "./Selos";
+import { FORMAS, cortarEmPalavra, etiquetaDoDado, resolverTitulo, rotuloCaminho } from "./rotulos";
 import type { Caminho, DadoChave, FonteResumo, FormaDecisao, TituloSimples } from "./tipos";
 
 export interface CabecalhoDecisaoProps {
@@ -63,6 +63,13 @@ export interface CabecalhoDecisaoProps {
   /** Nível 2 específico da seção (ex.: "O que mudou", lista de mudanças). */
   children?: ReactNode;
   className?: string;
+  /**
+   * Etiqueta à frente do título, montada só de campos estruturados. Sem a prop: a do arquivo de
+   * títulos (simples.etiqueta) ou a derivada do dado-chave. null: sem etiqueta.
+   */
+  etiqueta?: string | null;
+  /** Caracteres do h1 antes do corte em fim de palavra com "ler tudo" (padrão 240; 0 = sem corte). */
+  limiteTitulo?: number;
 }
 
 export function CabecalhoDecisao({
@@ -85,9 +92,13 @@ export function CabecalhoDecisao({
   fontes,
   children,
   className = "",
+  etiqueta,
+  limiteTitulo = 240,
 }: CabecalhoDecisaoProps) {
   const t = resolverTitulo({ tituloOficial, simples, subtituloOficial, tema });
   const quem = quemDecidiu ?? rotuloCaminho(caminho, true);
+  const rotuloEtiqueta = etiqueta === undefined ? (t.etiqueta ?? etiquetaDoDado(dado)) : etiqueta;
+  const titulo = cortarEmPalavra(t.titulo, limiteTitulo);
   return (
     <header className={`space-y-4 ${className}`}>
       {/* Nível 1 — manchete e resposta */}
@@ -96,7 +107,21 @@ export function CabecalhoDecisao({
           <SeloCaminho caminho={caminho} rotulo={rotulo} data={data} rotuloData={rotuloData} />
           {t.tema ? <span className="text-sm text-[var(--cor-secundaria)]">· {t.tema}</span> : null}
         </div>
-        <h1 className="mt-2 text-2xl font-bold leading-tight text-foreground sm:text-3xl">{t.titulo}</h1>
+        {rotuloEtiqueta ? (
+          <p className="mt-3">
+            <EtiquetaDecisao texto={rotuloEtiqueta} className="text-base" />
+          </p>
+        ) : null}
+        <h1 className="mt-2 text-2xl font-bold leading-tight text-foreground sm:text-3xl">
+          {titulo.curto}
+          {titulo.cortado ? "…" : null}
+        </h1>
+        {titulo.cortado ? (
+          <details className="mt-1">
+            <summary className="lk inline-flex min-h-11 cursor-pointer items-center">ler tudo</summary>
+            <p className="mt-1 text-lg leading-relaxed text-foreground">{t.titulo}</p>
+          </details>
+        ) : null}
         {t.subtitulo ? <p className="mt-2 text-lg text-[var(--cor-secundaria)]">{t.subtitulo}</p> : null}
         {t.simples && t.origem ? (
           <p className="meta mt-1">
@@ -153,7 +178,7 @@ export function CabecalhoDecisao({
 
       {/* Nível 2 — detalhe a um toque */}
       {textoOficial ? (
-        <details className="rounded-md border border-borda bg-white">
+        <details className="rounded-md border border-borda bg-superficie">
           <summary className="pr-3">Texto oficial ({textoOficial.rotulo})</summary>
           <blockquote className="border-t border-borda px-3 pb-3 pt-2 leading-relaxed text-foreground">
             {textoOficial.texto}
@@ -165,7 +190,7 @@ export function CabecalhoDecisao({
       {/* Nível 3 — ficha técnica e fontes */}
       {ficha?.length ? <FichaTecnica itens={ficha} /> : null}
       {fontes?.length ? (
-        <details className="rounded-md border border-borda bg-white">
+        <details className="rounded-md border border-borda bg-superficie">
           <summary className="pr-3">
             Fontes oficiais <span className="font-normal text-[var(--cor-secundaria)]">({fontes.length})</span>
           </summary>

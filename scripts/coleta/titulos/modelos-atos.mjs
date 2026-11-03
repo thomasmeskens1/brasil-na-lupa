@@ -15,8 +15,9 @@ const RE_CREDITO = /^(?:abre|dispõe sobre a abertura de)\s+(?:um\s+|aos?\s+[^,]
 const RE_VALOR = /R\$\s?[\d.]+,\d{2}/gu;
 /**
  * "<sujeito> abre crédito extraordinário de R$ 6.605.000.000,00 em favor do Ministério de Minas e Energia".
- * Só com UM valor na ementa (com mais de um, o título perderia parte do objeto); o beneficiário entra só
- * como trecho literal "em favor de …" que termina em vírgula, ponto e vírgula ou fim da ementa.
+ * Só com UM valor na ementa (com mais de um, o título perderia parte do objeto); os beneficiários entram
+ * só como trecho literal e completo "em favor de …" (até ", no valor de", ", para" ou fim) e só se couberem;
+ * senão o título fica sem beneficiário (nunca com parte da lista).
  * Devolve também os trechos literais usados (o verificador confere que estão na ementa).
  */
 export function modeloCredito(ementa, sujeito, fonte) {
@@ -28,7 +29,8 @@ export function modeloCredito(ementa, sujeito, fonte) {
   const tipo = t[1].toLocaleLowerCase('pt-BR');
   const valor = valores[0].replace(/R\$\s?/, 'R$ ');
   const base = `${sujeito} abre ${tipo} de ${valor}`;
-  const favor = /(?:^|,\s*)(em favor d[oae]s?\s[^,;()]+?)(?=,|;|$)/iu.exec(e);
+  // beneficiários completos (lista inteira até ", no valor de" / ", para" / fim): cortar a lista tiraria objeto
+  const favor = /(?:^|,\s*)(em favor d[oae]s?\s[^;()]+?)(?=,\s*no valor de|,\s*para\s|;|$)/iu.exec(e);
   const literais = [t[1], valores[0]];
   if (favor && !/\bno valor\b|R\$/.test(favor[1]) && base.length + favor[1].length + 1 <= LIMITE_DURO) {
     return { titulo: `${base} ${favor[1]}`, modelo: 'credito', fonte, literais: [...literais, favor[1]] };
@@ -63,11 +65,11 @@ export function contagemVeto(vet) {
   }
   return c;
 }
-/** "Veto mantido", "Veto derrubado", "Veto derrubado em 2 de 10 trechos", "Veto aguarda o Congresso". */
+/** "Veto mantido", "Veto derrubado", "Veto derrubado em 2 de 10 trechos", "Veto aguarda decisão do Congresso". */
 export function etiquetaVeto(vet) {
   const c = contagemVeto(vet);
   if (!c.total || (vet.dispositivos || []).length !== c.total) return null;
-  if (c.pendente === c.total) return 'Veto aguarda o Congresso';
+  if (c.pendente === c.total) return 'Veto aguarda decisão do Congresso';
   if (c.mantido === c.total) return 'Veto mantido';
   if (c.derrubado === c.total) return 'Veto derrubado';
   if (c.prejudicado === c.total) return 'Veto prejudicado';

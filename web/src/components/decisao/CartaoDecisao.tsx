@@ -2,7 +2,9 @@
  * Cartão de Decisão — o mesmo cartão em todas as listas (diretriz 6; auditoria mobile, seção 4.3).
  *
  *   ┌ [CONFAZ] · 03/10/2026 · Impostos e preços ┐  selo do caminho + data + tema
- *   │ ICMS da gasolina passa de R$ 1,57 para …  │  h3 = título simples (ou oficial)
+ *   │ [ICMS: de R$ 1,57 para R$ 1,64 por litro] │  etiqueta (só campos estruturados)
+ *   │ Novo valor do ICMS da gasolina a partir … │  h3 = título oficial (ou "estruturado"
+ *   │ ler tudo                                  │       aprovado), cortado em fim de palavra
  *   │ Convênio ICMS 127/2026                    │  subtítulo = nome oficial por extenso
  *   │ [Antes R$ 1,57 → Depois R$ 1,64 por litro]│  dado-chave
  *   │ Quem decidiu: CONFAZ (…) · decisão de …   │
@@ -33,8 +35,8 @@ import type { ReactNode } from "react";
 import { BotaoCompartilhar } from "../compartilhar/BotaoCompartilhar";
 import { montarTextoCompartilhar } from "../compartilhar/texto";
 import { BlocoDadoChave } from "./DadoChave";
-import { SeloCaminho, SeloFonte } from "./Selos";
-import { FORMAS, resolverTitulo, rotuloCaminho } from "./rotulos";
+import { EtiquetaDecisao, SeloCaminho, SeloFonte } from "./Selos";
+import { FORMAS, cortarEmPalavra, etiquetaDoDado, resolverTitulo, rotuloCaminho } from "./rotulos";
 import type { Caminho, DadoChave, FonteResumo, FormaDecisao, TituloSimples } from "./tipos";
 
 export interface CartaoDecisaoProps {
@@ -68,6 +70,14 @@ export interface CartaoDecisaoProps {
   /** Conteúdo extra abaixo do dado-chave (ex.: "Voto deste deputado: Sim", dentro do contexto). */
   children?: ReactNode;
   className?: string;
+  /**
+   * Etiqueta à frente do título, montada só de campos estruturados. Sem a prop: a do arquivo de
+   * títulos (simples.etiqueta) ou, na falta, a derivada do dado-chave (placar/simbólica/antes → depois).
+   * null: sem etiqueta.
+   */
+  etiqueta?: string | null;
+  /** Caracteres do título antes do corte em fim de palavra com "ler tudo" (padrão 160; 0 = sem corte). */
+  limiteTitulo?: number;
 }
 
 export function CartaoDecisao({
@@ -89,22 +99,44 @@ export function CartaoDecisao({
   as: Tag = "article",
   children,
   className = "",
+  etiqueta,
+  limiteTitulo = 160,
 }: CartaoDecisaoProps) {
   const t = resolverTitulo({ tituloOficial, simples, subtituloOficial, tema });
   const H = `h${nivelTitulo}` as "h2" | "h3" | "h4";
   const quem = quemDecidiu ?? rotuloCaminho(caminho, true);
+  const rotuloEtiqueta = etiqueta === undefined ? (t.etiqueta ?? etiquetaDoDado(dado)) : etiqueta;
+  const titulo = cortarEmPalavra(t.titulo, limiteTitulo);
+  const sub = t.subtitulo ? cortarEmPalavra(t.subtitulo, limiteTitulo) : null;
   return (
     <Tag className={`cartao-decisao ${className}`}>
       <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
         <SeloCaminho caminho={caminho} rotulo={rotulo} data={data} rotuloData={rotuloData} />
         {t.tema ? <span className="text-sm text-[var(--cor-secundaria)]">· {t.tema}</span> : null}
       </div>
+      {rotuloEtiqueta ? (
+        <p className="mt-2">
+          <EtiquetaDecisao texto={rotuloEtiqueta} />
+        </p>
+      ) : null}
       <H className="mt-2 text-lg font-semibold leading-snug text-foreground">
         <Link href={href} className="cartao-decisao__link">
-          {t.titulo}
+          {titulo.curto}
+          {titulo.cortado ? "…" : null}
         </Link>
       </H>
-      {t.subtitulo ? <p className="mt-1 text-[var(--cor-secundaria)]">{t.subtitulo}</p> : null}
+      {titulo.cortado ? (
+        <details className="cartao-decisao__acima mt-1 text-sm">
+          <summary className="lk inline-flex min-h-11 cursor-pointer items-center">ler tudo</summary>
+          <p className="mt-1 leading-relaxed text-foreground">{t.titulo}</p>
+        </details>
+      ) : null}
+      {sub ? (
+        <p className="mt-1 text-[var(--cor-secundaria)]" title={sub.cortado ? t.subtitulo ?? undefined : undefined}>
+          {sub.curto}
+          {sub.cortado ? "…" : null}
+        </p>
+      ) : null}
       {dado ? <BlocoDadoChave dado={dado} className="mt-3" /> : null}
       {children ? <div className="mt-3">{children}</div> : null}
       <p className="mt-3 text-sm">
