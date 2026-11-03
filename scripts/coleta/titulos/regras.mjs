@@ -1,6 +1,13 @@
-// Regras do verificador de títulos (lista versionada no repositório).
+// Regras do verificador de títulos (lista versionada no repositório). Só existem duas origens:
+// "estruturado" (modelo fixo por tipo, montado de campos estruturados e verificáveis) e "oficial"
+// (texto do órgão sem alteração). Não há reescrita de ementa nem manchete de agência.
 import { numerosDe } from './texto.mjs';
-import { termosAusentes, alertasNaoLiterais, escopoPerdido, siglasSemExtenso } from './conteudo.mjs';
+import { siglasSemExtenso } from './conteudo.mjs';
+
+export const ORIGENS = ['estruturado', 'oficial'];
+/** Modelos fixos aceitos para origem "estruturado". */
+export const MODELOS = ['credito', 'icms-mudanca', 'contas-tce'];
+export const LIMITE_ETIQUETA = 60;
 
 /** Verbos de decisão (lista fechada) — usados pelos modelos e aceitos nas manchetes. */
 export const VERBOS_DECISAO = [
@@ -103,19 +110,16 @@ export function verificarTitulo(titulo, origem, ctx) {
   }
   if (/[_`{}<>]|\bnull\b|\bundefined\b/.test(t)) motivos.push('identificador técnico no título');
 
-  // 5b. manchetes (revisão de viés): todo termo de conteúdo existe no texto oficial; sem comparativo ou
-  // promessa de efeito que não seja literal; sem ampliar/estreitar o escopo da ementa
-  if (/^agencia-/.test(origem) && ctx.textos) {
-    const base = t.replace(/(; (segue para|vai à)[^()]*)?( \(\d[^()]*\))?$/u, '');
-    const ausentes = termosAusentes(base, ctx.textos);
-    if (ausentes.length) motivos.push(`termo ausente do texto oficial: ${ausentes.join(', ')}`);
-    const alertas = alertasNaoLiterais(base, ctx.textos);
-    if (alertas.length) motivos.push(`comparativo ou promessa de efeito não literal: ${alertas.join(', ')}`);
-    const escopo = ctx.ementa ? escopoPerdido(base, ctx.ementa) : [];
-    if (escopo.length) motivos.push(`escopo da ementa perdido: ${escopo.join(', ')}`);
+  // 5b. estruturado: origem e modelo conhecidos; todo trecho copiado do texto (tipo do crédito, valor,
+  // beneficiário) é literal; o título é exatamente o que o modelo fixo dá a partir dos campos
+  if (origem !== 'oficial') {
+    if (!ORIGENS.includes(origem)) motivos.push(`origem desconhecida: ${origem}`);
+    if (!MODELOS.includes(ctx.modelo)) motivos.push(`modelo desconhecido: ${ctx.modelo}`);
+    const oficial = (ctx.textos || []).join(' \u0000 ');
+    const fora = (ctx.literais || []).filter((x) => !oficial.includes(x));
+    if (fora.length) motivos.push(`trecho não literal: ${fora.join(' | ')}`);
+    if (ctx.titulo_refeito !== undefined && ctx.titulo_refeito !== t) motivos.push('título diferente do que o modelo fixo dá a partir dos campos');
   }
-  // 5d. placar oficial em toda votação nominal
-  if (origem !== 'oficial' && ctx.placarObrigatorio && !/\(\d[\d.]* Sim, \d[\d.]* Não/.test(t)) motivos.push('votação nominal sem placar');
   // 5c. siglas sem nome por extenso em teses e decisões judiciais
   if (ctx.exigirSiglaExtensa && siglasSemExtenso(t).length) motivos.push(`sigla sem nome por extenso: ${siglasSemExtenso(t).join(', ')}`);
 
@@ -137,4 +141,22 @@ export function verificarTitulo(titulo, origem, ctx) {
       ...(veto ? { simetria: false } : {}),
     },
   };
+}
+
+/**
+ * Etiqueta curta (ex.: "Aprovado 312 × 140", "Veto mantido", "ICMS: de 18% para 20,5%"): igual à que o
+ * modelo dá a partir dos campos (ctx.refeita), números no dado oficial, sem palavra proibida, curta.
+ */
+export function verificarEtiqueta(etiqueta, ctx) {
+  const motivos = [];
+  const e = String(etiqueta || '');
+  if (!e) return { aprovado: true, motivos };
+  if (ctx.refeita !== undefined && ctx.refeita !== e) motivos.push('etiqueta diferente da montada pelos campos');
+  const faltando = [...numerosDe(e)].filter((n) => !ctx.universo.has(n));
+  if (faltando.length) motivos.push(`número ausente do dado oficial: ${faltando.join(', ')}`);
+  const proibidas = PALAVRAS_PROIBIDAS.filter((p) => contemPalavra(e, p));
+  if (proibidas.length || /[!?]/.test(e)) motivos.push(`palavras/forma proibidas: ${proibidas.join(', ')}`);
+  if (e.length > LIMITE_ETIQUETA) motivos.push(`etiqueta com mais de ${LIMITE_ETIQUETA} caracteres`);
+  if (/[_`{}<>]|\bnull\b|\bundefined\b/.test(e)) motivos.push('identificador técnico na etiqueta');
+  return { aprovado: motivos.length === 0, motivos };
 }
