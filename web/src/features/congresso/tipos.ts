@@ -46,6 +46,8 @@ export interface ProposicaoCongresso {
   identificacao?: string | null;
   ementa?: string | null;
   url?: string | null;
+  /** Código da matéria no Senado (usado para a consulta pública do e-Cidadania). */
+  codigo_materia?: number | null;
 }
 
 export interface VotoRegistrado {

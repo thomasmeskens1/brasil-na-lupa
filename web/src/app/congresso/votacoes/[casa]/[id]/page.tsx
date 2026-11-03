@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { metadadosCompartilhamento } from "@/components/compartilhar/metadados";
 import { CabecalhoDecisao } from "@/components/decisao/CabecalhoDecisao";
+import { BlocoParticipacao } from "@/features/participacao/BlocoParticipacao";
 import { FichaTecnica } from "@/components/decisao/FichaTecnica";
 import { resolverTitulo } from "@/components/decisao/rotulos";
 import type { FonteResumo } from "@/components/decisao/tipos";
@@ -143,6 +144,8 @@ export default async function VotacaoPage({ params }: PageProps<"/congresso/vota
         {q ? <BlocoQuorum q={q} /> : null}
         <OQueFoiVotado v={v} />
       </CabecalhoDecisao>
+
+      <BlocoParticipacao {...(v.casa === "senado" ? { senado: v.proposicao?.codigo_materia } : { camara: v.proposicao?.id })} />
 
       <Secao id="votos" titulo={v.tipo === "nominal" ? "Votos" : v.tipo === "simbolica" ? "Voto individual" : "Comparecimento"}>
         <VotosDaVotacao v={v} perfis={idsComPerfil(v.casa)} />
