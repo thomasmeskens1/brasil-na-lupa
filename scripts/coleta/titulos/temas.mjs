@@ -96,7 +96,7 @@ export function tipoDoAto(ementa) {
 
 export function tabelaPublica() {
   return {
-    descricao: 'Correspondência entre a classificação oficial de cada órgão e os temas do dia a dia usados no Brasil Transparente. A primeira regra que casar, na ordem abaixo, define o tema. Quando a fonte não classifica o item, vale o tipo do ato (fórmula inicial da ementa: crédito orçamentário, denominação, homenagem, indicação de autoridade) ou o tipo de decisão (ICMS, contas públicas). Sem correspondência: "Outros".',
+    descricao: 'Correspondência entre a classificação oficial de cada órgão e os temas do dia a dia usados no Brasil na Lupa. A primeira regra que casar, na ordem abaixo, define o tema. Quando a fonte não classifica o item, vale o tipo do ato (fórmula inicial da ementa: crédito orçamentário, denominação, homenagem, indicação de autoridade) ou o tipo de decisão (ICMS, contas públicas). Sem correspondência: "Outros".',
     temas: TEMAS,
     fontes_de_classificacao: {
       'camara-tema': 'Câmara dos Deputados — temas oficiais da proposição (Dados Abertos, /proposicoes/{id}/temas)',

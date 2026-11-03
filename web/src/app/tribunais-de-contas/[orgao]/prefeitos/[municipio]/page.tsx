@@ -71,7 +71,7 @@ export default async function ContasPrefeitoPage({ params }: PageProps<"/tribuna
             ))}
           </ul>
         ) : null}
-        <p className="mt-3 text-base text-[#3e4c59]">Dados coletados em {formatarDataTc(d.atualizado_em)}. Exercícios do mais recente para o mais antigo.</p>
+        <p className="mt-3 text-base text-[var(--cor-secundaria)]">Dados coletados em {formatarDataTc(d.atualizado_em)}. Exercícios do mais recente para o mais antigo.</p>
       </header>
 
       <nav aria-label="Exercícios" className="max-w-3xl">

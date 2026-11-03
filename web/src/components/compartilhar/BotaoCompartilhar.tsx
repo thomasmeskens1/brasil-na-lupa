@@ -101,7 +101,7 @@ export function BotaoCompartilhar({ titulo, texto, url, rotulo = "Compartilhar",
       <div
         id={`${id}-painel`}
         hidden={!aberto}
-        className="absolute right-0 z-20 mt-1 w-72 max-w-[calc(100vw-2rem)] rounded-md border border-[#7b8794] bg-white p-3 shadow-lg"
+        className="absolute right-0 z-20 mt-1 w-72 max-w-[calc(100vw-2rem)] rounded-md border border-[var(--cor-borda-forte)] bg-white p-3 shadow-lg"
       >
         <p className="text-sm font-semibold">Compartilhar esta página</p>
         <div className="mt-2 flex flex-col gap-2">
@@ -122,7 +122,7 @@ export function BotaoCompartilhar({ titulo, texto, url, rotulo = "Compartilhar",
               readOnly
               value={link}
               onFocus={(e) => e.currentTarget.select()}
-              className="mt-1 block w-full rounded border border-[#7b8794] px-2 text-sm text-foreground"
+              className="mt-1 block w-full rounded border border-[var(--cor-borda-forte)] px-2 text-sm text-foreground"
             />
           </label>
         </div>

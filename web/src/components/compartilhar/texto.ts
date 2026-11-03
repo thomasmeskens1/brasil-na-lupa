@@ -10,7 +10,7 @@
  *     dado: { tipo: "placar", itens: placarOficial({ sim: 330, nao: 104, outros: 1 }) },
  *     fonte: { orgao: "Câmara dos Deputados" },
  *   })
- *   // "Brasil Transparente: Câmara aprova … (Projeto de Lei Complementar 108/2024, votação nominal em
+ *   // "Brasil na Lupa: Câmara aprova … (Projeto de Lei Complementar 108/2024, votação nominal em
  *   //  15/12/2025). Placar oficial: Sim 330, Não 104, Outros 1. Fonte oficial: Câmara dos Deputados."
  *
  * O link NÃO entra no texto: o BotaoCompartilhar o envia à parte (Web Share) ou o acrescenta
@@ -19,7 +19,7 @@
 import type { DadoChave, FonteResumo, FormaDecisao } from "../decisao/tipos";
 import { FORMAS, dadoEmTexto, formatarData } from "../decisao/rotulos";
 
-export const MARCA = "Brasil Transparente";
+export const MARCA = "Brasil na Lupa";
 
 /** Forma curta para o texto (sem a explicação longa). */
 const FORMA_CURTA: Record<FormaDecisao, string> = {

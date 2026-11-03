@@ -16,7 +16,7 @@ export interface LinhaVotoPlenario {
   semCorrespondencia: boolean;
 }
 
-const CAMPO = "mt-1 block w-full rounded border border-[#7b8794] bg-white px-2 py-1.5 text-sm text-gray-900";
+const CAMPO = "mt-1 block w-full rounded border border-[var(--cor-borda-forte)] bg-white px-2 py-1.5 text-sm text-gray-900";
 
 function opcoes(v: (string | null)[], ordenar = (a: string, b: string) => a.localeCompare(b, "pt-BR")) {
   return [...new Set(v.filter((x): x is string => !!x))].sort(ordenar);

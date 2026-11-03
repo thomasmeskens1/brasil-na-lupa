@@ -24,7 +24,7 @@ export { tituloGovernador, tituloPrefeito, tituloPresidente };
 /** Item da linha do tempo (um exercício), com âncora própria e os cartões no topo. */
 function ItemLinha({ id, titulo, cartoes, children }: { id: string; titulo: string; cartoes: DadosCartaoTc[]; children: ReactNode }) {
   return (
-    <li id={id} className="relative scroll-mt-20 border-l-4 border-[#9aa5b1] pb-2 pl-4 md:pl-6">
+    <li id={id} className="relative scroll-mt-20 border-l-4 border-[var(--cor-borda-forte)] pb-2 pl-4 md:pl-6">
       <span aria-hidden="true" className="absolute -left-[0.6rem] top-1.5 h-4 w-4 rounded-full border-4 border-white bg-acento" />
       <article aria-labelledby={`${id}-t`} className="space-y-4">
         <h2 id={`${id}-t`} className="text-xl font-bold text-gray-900">
@@ -104,7 +104,7 @@ export function ExercicioPresidenteItem({ e, orgao }: { e: ExercicioPresidente; 
                 <ListaLiteral itens={c.alertas} um="alerta" varios="alertas" explicacao="Avisos formais do tribunal ao Poder Executivo federal." />
                 <ListaLiteral itens={c.recomendacoes ?? []} um="recomendação" varios="recomendações" />
                 <ListaLiteral itens={c.determinacoes ?? []} um="determinação" varios="determinações" />
-                <p className="text-base text-[#3e4c59]">
+                <p className="text-base text-[var(--cor-secundaria)]">
                   Texto copiado literalmente do inteiro teor oficial do acórdão
                   {c.documento?.acessado_em ? `, consultado em ${formatarDataTc(c.documento.acessado_em)}` : ""}.
                 </p>
@@ -229,7 +229,7 @@ export function ExercicioGovernadorItem({ p, o }: { p: ParecerPrevioTce; o: Orga
                   <FonteLink href={d.url} tipo={/\.pdf($|\?)/i.test(d.url) ? "pdf" : "oficial"} className="text-base!">
                     {d.titulo}
                   </FonteLink>
-                  {d.tamanho ? <span className="text-[#3e4c59]"> ({d.tamanho})</span> : null}
+                  {d.tamanho ? <span className="text-[var(--cor-secundaria)]"> ({d.tamanho})</span> : null}
                 </li>
               ))}
             </ul>
@@ -298,7 +298,7 @@ export function ExercicioPrefeitoItem({ p, o, municipio }: { p: ParecerPrevioTce
         />
         <ListaLiteral itens={par.ressalvas} um="ressalva" varios="ressalvas" />
         {p.link_voto_na_fonte ? (
-          <p className="text-base text-[#3e4c59]">
+          <p className="text-base text-[var(--cor-secundaria)]">
             Link do voto informado pelo conjunto de dados oficial:{" "}
             <FonteLink href={p.link_voto_na_fonte} tipo="pdf" className="text-base!">
               voto do relator

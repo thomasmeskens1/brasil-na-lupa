@@ -69,7 +69,7 @@ export default function SaoPauloPage() {
       <nav aria-label="Seções de São Paulo" className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
         {cartoes.map((c) => (
           <Link key={c.href} href={c.href} className="cartao block hover:bg-superficie">
-            <span className="block text-base font-semibold text-[#234a73] underline underline-offset-2">{c.titulo}</span>
+            <span className="block text-base font-semibold text-[var(--cor-link)] underline underline-offset-2">{c.titulo}</span>
             <span className="mt-1 block text-sm text-gray-800">{c.texto}</span>
           </Link>
         ))}

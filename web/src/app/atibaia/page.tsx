@@ -60,7 +60,7 @@ export default function AtibaiaPage() {
           ))}
         </ul>
         <p className="mt-4">
-          <Link href="/atibaia/leis-e-decretos" className="inline-block rounded-md bg-acento px-4 py-2 text-sm font-semibold text-white hover:bg-[#1f3347]">
+          <Link href="/atibaia/leis-e-decretos" className="inline-block rounded-md bg-acento px-4 py-2 text-sm font-semibold text-white hover:bg-[var(--cor-acento-hover)]">
             Buscar todas as leis e decretos
           </Link>
         </p>

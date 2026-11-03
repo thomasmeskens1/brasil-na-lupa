@@ -35,14 +35,14 @@ function Barras({ medida, meses }: { medida: Medida; meses: MesFinancas[] }) {
           const pct = typeof v === "number" && max > 0 ? Math.max(0.5, (v / max) * 100) : 0;
           return (
             <li key={m.mes} className="grid grid-cols-[2.25rem_1fr] items-center gap-2 text-xs" title={`${m.nome}: ${typeof v === "number" ? reais(v) : "sem dados"}`}>
-              <span className="text-[#3e4c59]">{m.nome.slice(0, 3)}</span>
+              <span className="text-[var(--cor-secundaria)]">{m.nome.slice(0, 3)}</span>
               {typeof v === "number" ? (
                 <span className="flex min-w-0 items-center gap-2">
-                  <span className="h-3 rounded-r bg-[#4f6d8a]" style={{ width: `${pct * 0.62}%` }} aria-hidden="true" />
+                  <span className="h-3 rounded-r bg-[var(--cor-placar-2)]" style={{ width: `${pct * 0.62}%` }} aria-hidden="true" />
                   <span className="shrink-0 text-gray-900">{MILHOES.format(v / 1e6)} mi</span>
                 </span>
               ) : (
-                <span className="text-[#3e4c59]">sem dados no TCE-SP</span>
+                <span className="text-[var(--cor-secundaria)]">sem dados no TCE-SP</span>
               )}
             </li>
           );

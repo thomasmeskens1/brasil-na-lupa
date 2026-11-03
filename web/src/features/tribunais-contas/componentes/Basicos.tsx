@@ -10,7 +10,7 @@ import { BASE_TC, formatarDataTc, type TermoTc } from "../rotulos";
 export function Trilha({ itens }: { itens: { href: string; rotulo: string }[] }) {
   const todos = [{ href: BASE_TC, rotulo: "Tribunais de Contas" }, ...itens];
   return (
-    <nav aria-label="Você está em" className="text-base text-[#3e4c59]">
+    <nav aria-label="Você está em" className="text-base text-[var(--cor-secundaria)]">
       <ol className="flex flex-wrap items-center gap-x-2">
         {todos.map((i, k) => (
           <li key={i.href} className="flex items-center gap-x-2">
@@ -43,8 +43,8 @@ export function Ficha({ itens, rotulo }: { itens: [string, ReactNode][]; rotulo?
 export function Literal({ children, fonte }: { children: ReactNode; fonte?: ReactNode }) {
   return (
     <figure className="min-w-0">
-      <blockquote className="border-l-4 border-[#9aa5b1] bg-superficie px-4 py-3 text-base leading-relaxed text-gray-900">{children}</blockquote>
-      {fonte ? <figcaption className="mt-1 text-base text-[#3e4c59]">{fonte}</figcaption> : null}
+      <blockquote className="border-l-4 border-[var(--cor-borda-forte)] bg-superficie px-4 py-3 text-base leading-relaxed text-gray-900">{children}</blockquote>
+      {fonte ? <figcaption className="mt-1 text-base text-[var(--cor-secundaria)]">{fonte}</figcaption> : null}
     </figure>
   );
 }
@@ -78,11 +78,11 @@ export function Fontes({ fontes }: { fontes: (FonteTc | null | undefined)[] }) {
           <FonteLink href={f.url} tipo={/\.pdf($|\?)/i.test(f.url) ? "pdf" : "oficial"} className="text-base!">
             {textoLegivel(f.titulo || f.orgao || "Fonte oficial")}
           </FonteLink>
-          <span className="block text-base text-[#3e4c59]">
+          <span className="block text-base text-[var(--cor-secundaria)]">
             {f.orgao ? `${f.orgao} · ` : ""}
             {f.acessado_em ? `coletado em ${formatarDataTc(f.acessado_em)}` : "data de coleta não informada"}
           </span>
-          {f.observacao ? <span className="block text-base text-[#3e4c59]">{textoLegivel(f.observacao)}</span> : null}
+          {f.observacao ? <span className="block text-base text-[var(--cor-secundaria)]">{textoLegivel(f.observacao)}</span> : null}
         </li>
       ))}
     </ul>

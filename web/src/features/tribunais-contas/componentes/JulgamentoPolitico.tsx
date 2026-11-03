@@ -92,7 +92,7 @@ function VotacaoAlesp({ v }: { v: VotacaoAlespLigada }) {
   const porTipo = Object.entries(v.votos_por_tipo ?? {});
   return (
     <li className="cartao">
-      <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-base text-[#3e4c59]">
+      <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-base text-[var(--cor-secundaria)]">
         <span className="font-semibold text-gray-900">{formatarDataTc(v.data)}</span>
         <span className="selo text-sm!">{v.orgao ?? "Órgão não informado"}</span>
         <span>{v.tipo === "nominal" ? "Votação nominal" : (v.tipo ?? "Tipo de votação não informado")}</span>
@@ -103,7 +103,7 @@ function VotacaoAlesp({ v }: { v: VotacaoAlespLigada }) {
         <dl className="mt-3 flex flex-wrap gap-2" aria-label="Placar oficial">
           {placar.map(([k, r]) => (
             <div key={k} className="min-w-[5.5rem] rounded border border-borda bg-superficie px-3 py-2 text-center">
-              <dt className="text-base font-medium text-[#3e4c59]">{r}</dt>
+              <dt className="text-base font-medium text-[var(--cor-secundaria)]">{r}</dt>
               <dd className="text-xl font-bold text-gray-900">{v.placar?.[k]}</dd>
             </div>
           ))}

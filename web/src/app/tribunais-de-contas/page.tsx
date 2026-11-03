@@ -71,7 +71,7 @@ export default function TribunaisDeContasPage() {
           Prefeito é o Poder Legislativo, numa votação própria: é o <strong>julgamento político</strong>. Por isso, cada
           página mostra as duas etapas lado a lado, com o que estava registrado em cada uma na data da coleta.
         </p>
-        <p className="mt-3 text-base text-[#3e4c59]">Registro dos tribunais atualizado em {formatarDataTc(reg.atualizado_em)}.</p>
+        <p className="mt-3 text-base text-[var(--cor-secundaria)]">Registro dos tribunais atualizado em {formatarDataTc(reg.atualizado_em)}.</p>
       </header>
 
       <Secao id="quem-julga" titulo="Quem julga as contas de quem">
@@ -114,7 +114,7 @@ export default function TribunaisDeContasPage() {
             {destaques.map((d) => (
               <li key={d.href}>
                 <Link href={d.href} className="cartao block min-h-11 hover:bg-superficie">
-                  <span className="block text-lg font-semibold text-[#234a73] underline underline-offset-2">{d.titulo}</span>
+                  <span className="block text-lg font-semibold text-[var(--cor-link)] underline underline-offset-2">{d.titulo}</span>
                   <span className="mt-1 block text-base text-gray-800">{d.texto}</span>
                 </Link>
               </li>

@@ -62,7 +62,7 @@ export default async function ContasPresidentePage({ params }: PageProps<"/tribu
         <p className="mt-2 text-base leading-relaxed text-gray-800">
           O parecer prévio do {o.nome} ({o.id.toUpperCase()}) e o julgamento no Congresso Nacional, exercício por exercício.
         </p>
-        <p className="mt-2 text-base text-[#3e4c59]">Dados coletados em {formatarDataTc(c.atualizado_em)}. Do mais recente para o mais antigo.</p>
+        <p className="mt-2 text-base text-[var(--cor-secundaria)]">Dados coletados em {formatarDataTc(c.atualizado_em)}. Do mais recente para o mais antigo.</p>
         <details className="mt-3 rounded-md border border-borda bg-white">
           <summary className="pr-3">Como as contas do Presidente são julgadas</summary>
           <div className="space-y-3 border-t border-borda px-3 pb-3 pt-2 text-base leading-relaxed text-gray-800">

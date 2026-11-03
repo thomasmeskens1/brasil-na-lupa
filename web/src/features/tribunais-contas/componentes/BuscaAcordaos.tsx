@@ -128,7 +128,7 @@ export function BuscaAcordaos({ orgao, anos, comPagina }: { orgao: string; anos:
         />
       </form>
 
-      <div aria-live="polite" className="mt-3 text-base text-[#3e4c59]">
+      <div aria-live="polite" className="mt-3 text-base text-[var(--cor-secundaria)]">
         {erro ? (
           <p className="lacuna">Não foi possível carregar a lista. Tente recarregar a página.</p>
         ) : carregando ? (
@@ -150,7 +150,7 @@ export function BuscaAcordaos({ orgao, anos, comPagina }: { orgao: string; anos:
             const t = arq.t[l[3]];
             return (
               <li key={key} className="cartao">
-                <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-base text-[#3e4c59]">
+                <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-base text-[var(--cor-secundaria)]">
                   <span className="font-semibold text-gray-900">{data(l[4])}</span>
                   <span className="selo text-sm!">{arq.c[l[2]] ?? "Colegiado não informado"}</span>
                   <span>{tipoLegivel(t)}</span>
@@ -175,7 +175,7 @@ export function BuscaAcordaos({ orgao, anos, comPagina }: { orgao: string; anos:
                     Sumário omitido: na fonte, este campo traz nomes ou documentos de particulares. O texto está no documento oficial.
                   </p>
                 ) : (
-                  <p className="mt-2 text-base text-[#3e4c59]">
+                  <p className="mt-2 text-base text-[var(--cor-secundaria)]">
                     {t === "ACÓRDÃO DE RELAÇÃO" ? "Acórdãos de relação não têm sumário na fonte oficial." : "Sumário não disponível em fonte oficial."}
                   </p>
                 )}

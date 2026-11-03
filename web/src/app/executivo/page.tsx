@@ -60,7 +60,7 @@ export default function ExecutivoPage() {
       <nav aria-label="Atos do Executivo" className="grid grid-cols-1 gap-4 md:grid-cols-3">
         {cartoes.map((c) => (
           <Link key={c.href} href={c.href} className="cartao block min-h-11 hover:bg-superficie">
-            <span className="block text-base font-semibold text-[#234a73] underline underline-offset-2">{c.titulo}</span>
+            <span className="block text-base font-semibold text-[var(--cor-link)] underline underline-offset-2">{c.titulo}</span>
             <span className="mt-1 block text-gray-800">{c.texto}</span>
           </Link>
         ))}

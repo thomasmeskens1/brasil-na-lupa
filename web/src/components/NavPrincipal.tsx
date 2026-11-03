@@ -48,7 +48,7 @@ export function NavPrincipal() {
         aria-expanded={aberto}
         aria-controls="menu-principal"
         onClick={() => setAberto((v) => !v)}
-        className="absolute right-4 top-3 inline-flex min-h-11 items-center gap-2 rounded border border-[#7b8794] bg-white px-3 py-1.5 text-sm font-medium text-foreground md:hidden"
+        className="absolute right-4 top-3 inline-flex min-h-11 items-center gap-2 rounded border border-[var(--cor-borda-forte)] bg-white px-3 py-1.5 text-sm font-medium text-foreground md:hidden"
       >
         <span aria-hidden="true" className="flex flex-col gap-0.5">
           <span className="block h-0.5 w-4 bg-foreground" />
@@ -70,7 +70,7 @@ export function NavPrincipal() {
                 aria-current={ativo ? "page" : undefined}
                 onClick={() => setAberto(false)}
                 className={`flex min-h-11 items-center rounded px-2.5 py-2 text-base font-medium md:min-h-0 md:py-1.5 md:text-sm ${
-                  ativo ? "bg-acento text-white" : "text-foreground hover:bg-[#e4e7eb]"
+                  ativo ? "bg-acento text-white" : "text-foreground hover:bg-[var(--cor-superficie-2)]"
                 }`}
               >
                 {i.rotulo}

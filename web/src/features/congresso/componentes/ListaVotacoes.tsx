@@ -254,7 +254,7 @@ export function ListaVotacoes({ iniciais, temas, anos }: ListaVotacoesProps) {
               ))}
             </ul>
             {g.lacunaDepois && i < visiveis.length - 1 ? (
-              <p className="mt-6 rounded-md border border-dashed border-[#7b8794] bg-superficie px-3 py-2 text-center text-sm text-[var(--cor-secundaria)]">
+              <p className="mt-6 rounded-md border border-dashed border-[var(--cor-borda-forte)] bg-superficie px-3 py-2 text-center text-sm text-[var(--cor-secundaria)]">
                 {textoLacuna(g.lacunaDepois, casasDoFiltro(casa))}
               </p>
             ) : null}

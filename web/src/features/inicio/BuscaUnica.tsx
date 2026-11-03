@@ -98,7 +98,7 @@ export function BuscaUnica() {
           }}
           placeholder="Ex.: nome do deputado, MEI, gasolina, Tema 1113"
           aria-describedby={`${id}-ajuda`}
-          className="mt-1 w-full rounded-md border border-[#7b8794] bg-white px-3 py-2 text-base"
+          className="mt-1 w-full rounded-md border border-[var(--cor-borda-forte)] bg-white px-3 py-2 text-base"
         />
         <p id={`${id}-ajuda`} className="meta mt-1">
           Busca em parlamentares, votações, medidas provisórias, vetos, leis federais, decisões do ICMS e temas do STJ e do STF.

@@ -58,7 +58,7 @@ export default async function ContasGovernadorPage({ params }: PageProps<"/tribu
         <p className="mt-2 text-base leading-relaxed text-gray-800">
           O parecer prévio do {o.nome} ({o.id.toUpperCase()}) e o julgamento pela {sp ? "Assembleia Legislativa do Estado de São Paulo (ALESP)" : "Assembleia Legislativa"}, exercício por exercício.
         </p>
-        <p className="mt-2 text-base text-[#3e4c59]">
+        <p className="mt-2 text-base text-[var(--cor-secundaria)]">
           Dados coletados em {formatarDataTc(meta?.atualizado_em ?? lista[0].coletado_em)}. Do mais recente para o mais antigo.
         </p>
         <details className="mt-3 rounded-md border border-borda bg-white">

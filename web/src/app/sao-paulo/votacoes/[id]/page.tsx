@@ -38,7 +38,7 @@ const PLACAR: [keyof NonNullable<VotacaoPlenarioSp["placar_oficial_relatorio"]>,
 function Caixa({ rotulo, valor }: { rotulo: string; valor: number }) {
   return (
     <div className="min-w-[5.5rem] rounded border border-borda bg-superficie px-3 py-2 text-center">
-      <dt className="text-xs font-medium text-[#3e4c59]">{rotulo}</dt>
+      <dt className="text-xs font-medium text-[var(--cor-secundaria)]">{rotulo}</dt>
       <dd className="text-xl font-bold text-gray-900">{valor}</dd>
     </div>
   );

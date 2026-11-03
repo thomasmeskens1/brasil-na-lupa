@@ -121,7 +121,7 @@ export async function exportarDados(sql: Sql, usuarioId: string) {
   const iso = (v: Date | string | null | undefined) => (v ? d(v).toISOString() : null);
   return {
     geradoEm: new Date().toISOString(),
-    site: "Brasil Transparente",
+    site: "Brasil na Lupa",
     conta: {
       email: estado.usuario.email,
       nome: estado.usuario.nome,

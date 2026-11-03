@@ -15,7 +15,7 @@ export interface LinhaRegistro {
   pid?: string | null;
 }
 
-const CAMPO = "mt-1 block w-full rounded border border-[#7b8794] bg-white px-2 py-1.5 text-sm text-gray-900";
+const CAMPO = "mt-1 block w-full rounded border border-[var(--cor-borda-forte)] bg-white px-2 py-1.5 text-sm text-gray-900";
 
 function opcoes(valores: (string | null)[], ordenar = (a: string, b: string) => a.localeCompare(b, "pt-BR")) {
   return [...new Set(valores.filter((v): v is string => !!v))].sort(ordenar);

@@ -38,13 +38,13 @@ export default function JusticaPage() {
 
       <nav aria-label="Tribunais" className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <Link href="/justica/stj" className="cartao block hover:bg-superficie">
-          <span className="block text-base font-semibold text-[#234a73] underline underline-offset-2">Superior Tribunal de Justiça (STJ)</span>
+          <span className="block text-base font-semibold text-[var(--cor-link)] underline underline-offset-2">Superior Tribunal de Justiça (STJ)</span>
           <span className="mt-1 block text-gray-800">
             {stj.total ? `${stj.total} temas repetitivos e de relevância; dados coletados em ${formatarData(stj.atualizado_em)}.` : "Dados ainda não coletados."}
           </span>
         </Link>
         <Link href="/justica/stf" className="cartao block hover:bg-superficie">
-          <span className="block text-base font-semibold text-[#234a73] underline underline-offset-2">Supremo Tribunal Federal (STF)</span>
+          <span className="block text-base font-semibold text-[var(--cor-link)] underline underline-offset-2">Supremo Tribunal Federal (STF)</span>
           <span className="mt-1 block text-gray-800">
             {stf.total ? `${stf.total} temas de repercussão geral; dados coletados em ${formatarData(stf.atualizado_em)}.` : "Em construção: dados em coleta."}
           </span>

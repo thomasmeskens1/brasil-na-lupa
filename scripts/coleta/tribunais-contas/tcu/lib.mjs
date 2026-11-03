@@ -17,7 +17,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 export const USER_AGENT =
-  'brasil-transparente-coletor-tcu/1.0 (robo de coleta diaria de dados publicos; +https://github.com/thomasmeskens1/quem-votar)';
+  'brasil-na-lupa-coletor-tcu/1.0 (robo de coleta diaria de dados publicos; +https://github.com/thomasmeskens1/quem-votar)';
 
 const MAX_PARALELO = 2;
 let ativos = 0;

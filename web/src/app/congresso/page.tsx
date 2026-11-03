@@ -60,7 +60,7 @@ export default function CongressoPage() {
       <nav aria-label="Parlamentares" className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {atalhos.map((a) => (
           <Link key={a.href} href={a.href} className="cartao block min-h-11 hover:bg-superficie">
-            <span className="block font-semibold text-[#234a73] underline underline-offset-2">{a.titulo}</span>
+            <span className="block font-semibold text-[var(--cor-link)] underline underline-offset-2">{a.titulo}</span>
             <span className="mt-1 block text-sm">{a.texto}</span>
           </Link>
         ))}

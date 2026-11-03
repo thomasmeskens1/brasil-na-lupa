@@ -4,7 +4,7 @@ Você será meu **especialista sênior de desenvolvimento de agentes de IA** mul
 
 ## Nosso projeto:
 
-**Brasil Transparente** — desenvolver uma plataforma Web neutra de **acompanhamento político**: o que vem sendo votado e decidido pelos políticos do Brasil, **quem decidiu, como cada um votou e por quê** (segundo a justificativa oficial), sempre com fontes oficiais.
+**Brasil na Lupa** — desenvolver uma plataforma Web neutra de **acompanhamento político**: o que vem sendo votado e decidido pelos políticos do Brasil, **quem decidiu, como cada um votou e por quê** (segundo a justificativa oficial), sempre com fontes oficiais.
 
 Abrangência, em fases:
 
@@ -29,7 +29,7 @@ O site eleitoral de 2026 está arquivado no repositório (tag `eleicoes-2026`) e
 8. Trabalharemos sempre com o máximo possível de agentes operando simultaneamente, para acelerar o desenvolvimento. Dois agentes nunca podem escrever no mesmo arquivo: cada agente tem seus próprios arquivos de saída, definidos antes de começar, e somente o orquestrador junta os resultados e edita arquivos compartilhados
 9. Linguagem acessível: toda sigla aparece com o nome completo e todo termo técnico (ex.: alíquota, ad rem, convênio, substituição tributária) tem explicação breve e neutra
 10. A aplicação Web nunca informa que as análises foram feitas por inteligência artificial: quem produz as análises é chamado de "analista", e textos exibidos não mostram identificadores técnicos (nomes de campos, códigos com "_" ou formatação de código)
-11. Cores: a interface usa tons neutros e não associa cores a partidos; os vieses das análises usam degradê de azul (esquerda no tom mais claro, centro no intermediário, direita no mais escuro). O site não usa mapas de ruas
+11. Cores: a interface segue o manual da marca Brasil na Lupa (modo escuro, grafite, acento verde-limão neon `#CCFF00`, Poppins e DM Sans; manual em `docs/marca/`). O neon marca ações, links e destaques, nunca um partido, um político ou uma opção de voto: Sim, Não e demais opções ficam na mesma família de cinza, e o efeito marca-texto vale igual para qualquer desfecho ("Aprovado" e "Rejeitado" recebem o mesmo tratamento). A interface não associa cores a partidos; os vieses das análises usam degradê de azul (esquerda no tom mais claro, centro no intermediário, direita no mais escuro). O site não usa mapas de ruas
 12. Dados de agentes públicos são exibidos somente no que se refere ao exercício da função pública. Nomes de cidadãos comuns citados em atos oficiais (ex.: permissionários, beneficiários) aparecem como "[nome de particular omitido]", com link para o documento oficial completo; CPF, RG e outros documentos pessoais nunca são exibidos. Dados dos visitantes seguem a Política de Privacidade (LGPD): nada além da medição de audiência sem identificação
 13. Atualização: os dados são coletados automaticamente das fontes oficiais, em rotina diária, e guardados com a data de coleta; correções de erros são registradas e informadas na página afetada
 14. Tecnologia: o site é feito em Next.js e publicado na Vercel, a partir do repositório no GitHub

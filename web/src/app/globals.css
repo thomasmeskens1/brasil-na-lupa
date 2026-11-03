@@ -1,33 +1,33 @@
 @import "tailwindcss";
 
 /*
- * Paleta neutra (diretriz 11): cinzas e azul-acinzentado, sem cores associadas a
- * partidos. Contrastes sobre branco (WCAG 2): texto #1f2933 14,8:1; secundário
- * #3e4c59 9,4:1; link #234a73 9,0:1; acento #2f4a63 9,5:1.
- * O degradê de azul dos vieses (.vt-*) fica reservado às leituras de analistas.
+ * Identidade visual Brasil na Lupa (manual da marca): modo escuro nativo, grafite de fundo,
+ * acento verde-limão neon (#CCFF00) para ações, links e destaques. Regras de neutralidade
+ * (diretrizes 4 e 11): o neon nunca marca partido nem distingue opções de voto (Sim/Não ficam
+ * na mesma família de cinza); o efeito marca-texto vale igual para qualquer desfecho.
+ * Contrastes sobre #121214 (WCAG 2): branco 18,9:1; apoio #A0A0A5 7,6:1; neon 16,6:1.
  */
 :root {
-  --background: #ffffff;
-  --foreground: #1f2933;
-  --cor-secundaria: #3e4c59;
-  --cor-link: #234a73;
-  --cor-link-hover: #142c45;
-  --cor-acento: #2f4a63;
-  --cor-acento-fundo: #eef2f6;
-  --cor-borda: #cbd2d9;
-  --cor-superficie: #f5f7fa;
-  /* Texto de apoio (metadados, rótulos): 6,5:1 sobre branco. */
-  --cor-texto-apoio: #52606d;
-  /*
-   * Placar e contagens (diretriz 4): todas as opções na MESMA família de cinza, em ordem fixa
-   * (Sim · Não · Abstenção · Obstrução · Outros). Nada de verde = bom / vermelho = ruim. A cor
-   * nunca é a única pista: cada parte tem rótulo e número em texto.
-   */
-  --cor-placar-1: #3e4c59;
-  --cor-placar-2: #7b8794;
-  --cor-placar-3: #b8c2cc;
-  --cor-placar-4: #dde2e7;
-  --cor-placar-5: #eef1f4;
+  --background: #121214;
+  --foreground: #ffffff;
+  --cor-secundaria: #d4d4d8;
+  --cor-texto-apoio: #a0a0a5;
+  --cor-link: #ccff00;
+  --cor-link-hover: #e5ff73;
+  --cor-acento: #ccff00;
+  --cor-acento-hover: #dfff4d;
+  --cor-sobre-acento: #121214;
+  --cor-acento-fundo: #1f2410;
+  --cor-foco: #ccff00;
+  --cor-borda: #2e2e33;
+  --cor-borda-forte: #5a5a62;
+  --cor-superficie: #1a1a1d;
+  --cor-superficie-2: #242428;
+  --cor-placar-1: #f0f0f2;
+  --cor-placar-2: #b4b4ba;
+  --cor-placar-3: #7a7a82;
+  --cor-placar-4: #4a4a50;
+  --cor-placar-5: #2a2a2e;
   /* Alvo de toque mínimo (WCAG 2.5.5 / Apple HIG). */
   --alvo-toque: 2.75rem;
 }
@@ -39,8 +39,16 @@
   --color-acento-fundo: var(--cor-acento-fundo);
   --color-superficie: var(--cor-superficie);
   --color-borda: var(--cor-borda);
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-    sans-serif;
+  /* Classes antigas do tema claro passam a apontar para o tema escuro. */
+  --color-white: var(--cor-superficie);
+  --color-gray-900: #ffffff;
+  --color-gray-800: #ededf0;
+  --color-gray-700: #d4d4d8;
+  --color-gray-300: var(--cor-borda-forte);
+  --color-gray-50: var(--cor-superficie-2);
+  --color-blue-800: var(--cor-link);
+  --font-sans: var(--fonte-texto), "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-titulo: var(--fonte-titulo), var(--fonte-texto), ui-sans-serif, system-ui, sans-serif;
 }
 
 /*
@@ -60,7 +68,7 @@
 }
 
 html {
-  color-scheme: light;
+  color-scheme: dark;
   /* Âncoras não ficam escondidas sob o cabeçalho fixo */
   scroll-padding-top: 5rem;
 }
@@ -76,7 +84,7 @@ body {
 }
 
 :focus-visible {
-  outline: 3px solid #1d4ed8;
+  outline: 3px solid var(--cor-foco);
   outline-offset: 2px;
 }
 
@@ -151,18 +159,18 @@ details > summary:hover {
   .tag-fonte {
     display: inline-block;
     border-radius: 0.25rem;
-    background: #e4e7eb;
+    background: var(--cor-superficie-2);
     padding: 0 0.3125rem;
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 600;
-    color: #1f2933;
+    color: var(--foreground);
     text-decoration: none;
   }
   .cartao {
     border: 1px solid var(--cor-borda);
     border-radius: 0.5rem;
-    background: #fff;
+    background: var(--cor-superficie);
     padding: 1rem;
     min-width: 0;
   }
@@ -175,23 +183,23 @@ details > summary:hover {
     display: inline-flex;
     align-items: center;
     gap: 0.375rem;
-    border: 1px solid #7b8794;
+    border: 1px solid var(--cor-borda-forte);
     border-radius: 0.25rem;
-    background: #fff;
+    background: var(--cor-superficie);
     padding: 0.125rem 0.5rem;
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 600;
-    color: #1f2933;
+    color: var(--foreground);
   }
   .selo-escuro {
     border-color: var(--cor-acento);
     background: var(--cor-acento);
-    color: #fff;
+    color: var(--cor-sobre-acento);
   }
   /* Aviso de destaque neutro (ex.: decisão sem votação de parlamentares). */
   .aviso {
-    border: 1px solid #9aa5b1;
+    border: 1px solid var(--cor-borda-forte);
     border-left-width: 4px;
     border-left-color: var(--cor-acento);
     border-radius: 0.25rem;
@@ -199,11 +207,11 @@ details > summary:hover {
     padding: 0.75rem 1rem;
   }
   .lacuna {
-    border: 1px dashed #7b8794;
+    border: 1px dashed var(--cor-borda-forte);
     border-radius: 0.25rem;
-    background: #fff;
+    background: var(--cor-superficie);
     padding: 0.5rem 0.75rem;
-    color: #323f4b;
+    color: var(--cor-secundaria);
   }
   /* Tabelas de dados: rolagem própria em telas estreitas, nunca a página inteira. */
   .tabela {
@@ -222,7 +230,7 @@ details > summary:hover {
   .tabela thead th {
     background: var(--cor-superficie);
     font-weight: 600;
-    color: #1f2933;
+    color: var(--foreground);
   }
   /* Tags de viés das leituras dos analistas (diretriz 11): degradê de azul. */
   .vt {
@@ -264,9 +272,9 @@ details > summary:hover {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    border: 1px solid #7b8794;
+    border: 1px solid var(--cor-borda-forte);
     border-radius: 0.375rem;
-    background: #fff;
+    background: var(--cor-superficie);
     padding: 0.5rem 0.875rem;
     font-size: 1rem;
     line-height: 1.25rem;
@@ -281,10 +289,10 @@ details > summary:hover {
   .botao-escuro {
     border-color: var(--cor-acento);
     background: var(--cor-acento);
-    color: #fff;
+    color: var(--cor-sobre-acento);
   }
   .botao-escuro:hover {
-    background: #22374a;
+    background: var(--cor-acento-hover);
   }
 
   /*
@@ -295,12 +303,12 @@ details > summary:hover {
     position: relative;
     border: 1px solid var(--cor-borda);
     border-radius: 0.5rem;
-    background: #fff;
+    background: var(--cor-superficie);
     padding: 1rem;
     min-width: 0;
   }
   .cartao-decisao:hover {
-    border-color: #7b8794;
+    border-color: var(--cor-borda-forte);
   }
   .cartao-decisao:focus-within {
     border-color: var(--cor-acento);
@@ -324,7 +332,7 @@ details > summary:hover {
     outline: none;
   }
   .cartao-decisao__link:focus-visible::after {
-    outline: 3px solid #1d4ed8;
+    outline: 3px solid var(--cor-foco);
     outline-offset: 2px;
   }
   .cartao-decisao__acima {
@@ -350,7 +358,7 @@ details > summary:hover {
     width: 0.75rem;
     height: 0.75rem;
     flex: none;
-    border: 1px solid #7b8794;
+    border: 1px solid var(--cor-borda-forte);
     border-radius: 0.125rem;
   }
 
@@ -392,7 +400,7 @@ details > summary:hover {
       margin-top: 0.5rem;
       border: 1px solid var(--cor-borda);
       border-radius: 0.5rem;
-      background: #fff;
+      background: var(--cor-superficie);
       padding: 0.5rem 0.75rem;
     }
     .tabela-resp.tabela th,
@@ -447,9 +455,9 @@ details > summary:hover {
     max-height: 70vh;
     margin: 0 auto;
     overflow: auto;
-    border: 1px solid #7b8794;
+    border: 1px solid var(--cor-borda-forte);
     border-radius: 0.5rem;
-    background: #fff;
+    background: var(--cor-superficie);
     padding: 1rem;
     color: var(--foreground);
     font-size: 1rem;
@@ -461,4 +469,27 @@ details > summary:hover {
   .termo-balao::backdrop {
     background: rgb(31 41 51 / 0.15);
   }
+}
+
+.text-white-puro {
+  color: #ffffff;
+}
+/* Marca Brasil na Lupa: títulos em Poppins 800 e efeito marca-texto neon. */
+h1, h2, .titulo-marca {
+  font-family: var(--font-titulo);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+h1 {
+  line-height: 1.15;
+}
+.marca-texto {
+  background: linear-gradient(100deg, transparent 0 2%, var(--cor-acento) 2% 97%, transparent 97%) no-repeat;
+  background-size: 100% 70%;
+  background-position: 0 70%;
+  color: var(--cor-sobre-acento);
+  padding: 0 0.15em;
+  border-radius: 0.2em 0.5em 0.3em 0.6em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }

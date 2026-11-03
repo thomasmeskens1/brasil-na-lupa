@@ -129,7 +129,7 @@ export function BuscaLocal({ rotulo = "Sua cidade ou estado", compacto = false }
             setAtivo(-1);
           }}
           onKeyDown={onKey}
-          className="min-w-0 flex-1 rounded-md border border-[#7b8794] bg-white px-3 py-2 text-base"
+          className="min-w-0 flex-1 rounded-md border border-[var(--cor-borda-forte)] bg-white px-3 py-2 text-base"
         />
         <button type="submit" className="botao botao-escuro">
           Ver
@@ -143,7 +143,7 @@ export function BuscaLocal({ rotulo = "Sua cidade ou estado", compacto = false }
         role="listbox"
         aria-label="Cidades e estados encontrados"
         hidden={!mostra}
-        className="absolute left-0 right-0 z-30 mt-1 max-h-80 overflow-y-auto rounded-md border border-[#7b8794] bg-white shadow-lg"
+        className="absolute left-0 right-0 z-30 mt-1 max-h-80 overflow-y-auto rounded-md border border-[var(--cor-borda-forte)] bg-white shadow-lg"
       >
         {opcoes.map((o, i) => (
           <li

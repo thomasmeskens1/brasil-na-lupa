@@ -63,7 +63,7 @@ export default async function AcordaosPage({ params }: PageProps<"/tribunais-de-
               </li>
             ))}
         </ul>
-        <p className="mt-3 text-base text-[#3e4c59]">Dados coletados em {formatarDataTc(meta?.atualizado_em)}.</p>
+        <p className="mt-3 text-base text-[var(--cor-secundaria)]">Dados coletados em {formatarDataTc(meta?.atualizado_em)}.</p>
       </header>
 
       {colecoes.map((c) => (
@@ -72,7 +72,7 @@ export default async function AcordaosPage({ params }: PageProps<"/tribunais-de-
             {c.itens.map((i) => (
               <li key={i.id}>
                 <Link href={`${BASE_TC}/${o.id}/acordaos/${i.id}`} className="cartao block min-h-11 hover:bg-superficie">
-                  <span className="block text-base font-semibold text-[#234a73] underline underline-offset-2">
+                  <span className="block text-base font-semibold text-[var(--cor-link)] underline underline-offset-2">
                     Acórdão {i.numero} — {i.orgao}
                   </span>
                   <span className="mt-1 block text-base text-gray-800">

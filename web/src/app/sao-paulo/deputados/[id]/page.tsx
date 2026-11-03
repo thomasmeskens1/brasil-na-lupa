@@ -30,7 +30,7 @@ function Contagem({ titulo, itens }: { titulo: string; itens: [string, number][]
       <dl className="mt-2 flex flex-wrap gap-2">
         {itens.map(([k, n]) => (
           <div key={k} className="min-w-[6rem] max-w-full rounded border border-borda bg-superficie px-3 py-2 text-center">
-            <dt className="text-xs font-medium text-[#3e4c59]">{rotuloVotoSp(k)}</dt>
+            <dt className="text-xs font-medium text-[var(--cor-secundaria)]">{rotuloVotoSp(k)}</dt>
             <dd className="text-xl font-bold text-gray-900">{n}</dd>
           </div>
         ))}
