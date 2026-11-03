@@ -13,6 +13,8 @@ import { Migalhas, TermosRecolhidos } from "@/features/executivo/componentes/Mig
 import { getIndiceExecutivo, getVeto, idsOuMarcador } from "@/features/executivo/dados";
 import { cabecalhoVeto, resumosDispositivos } from "@/features/executivo/detalhes";
 import { SITUACAO_DISPOSITIVO, TERMOS_EXECUTIVO, URL_CONSTITUICAO, explicarSigla, rotuloTipoVeto } from "@/features/executivo/rotulos";
+import { AcoesProposta } from "@/components/reacoes";
+import { idExecutivo } from "@/features/conta/ids";
 
 export function generateStaticParams() {
   return idsOuMarcador(getIndiceExecutivo().vetos.map((v) => v.id)).map((id) => ({ id }));
@@ -80,6 +82,7 @@ export default async function VetoPage({ params }: PageProps<"/executivo/vetos/[
         ]}
       />
       <CabecalhoDecisao
+        acoes={<AcoesProposta proposta={idExecutivo(v.id)} />}
         tituloOficial={c.tituloOficial}
         simples={c.simples}
         subtituloOficial={c.subtituloOficial}

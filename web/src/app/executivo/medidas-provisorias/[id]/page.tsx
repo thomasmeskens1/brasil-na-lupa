@@ -13,6 +13,8 @@ import { Migalhas, TermosRecolhidos } from "@/features/executivo/componentes/Mig
 import { getIndiceExecutivo, getMpv, idsOuMarcador } from "@/features/executivo/dados";
 import { cabecalhoMpv } from "@/features/executivo/detalhes";
 import { TERMOS_EXECUTIVO, explicarSigla, rotuloSituacaoMpv } from "@/features/executivo/rotulos";
+import { AcoesProposta } from "@/components/reacoes";
+import { idExecutivo } from "@/features/conta/ids";
 
 export function generateStaticParams() {
   return idsOuMarcador(getIndiceExecutivo().mpvs.map((m) => m.id)).map((id) => ({ id }));
@@ -89,6 +91,7 @@ export default async function MpvPage({ params }: PageProps<"/executivo/medidas-
         ]}
       />
       <CabecalhoDecisao
+        acoes={<AcoesProposta proposta={idExecutivo(m.id)} />}
         tituloOficial={c.tituloOficial}
         simples={c.simples}
         subtituloOficial={c.subtituloOficial}

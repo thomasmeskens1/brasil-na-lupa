@@ -21,6 +21,8 @@ import { Votacoes } from "@/features/icms/componentes/Votacoes";
 import { LigacoesIcmsSp } from "@/features/sao-paulo/componentes/LigacoesIcms";
 import { nomeDoAto } from "@/features/icms/rotulos";
 import type { Decisao } from "@/features/icms/tipos";
+import { AcoesProposta } from "@/components/reacoes";
+import { idIcms } from "@/features/conta/ids";
 
 export function generateStaticParams() {
   return getDecisoes().itens.map((d) => ({ id: d.id }));
@@ -81,6 +83,7 @@ export default async function DecisaoPage({ params }: PageProps<"/impostos/icms/
           </ol>
         </nav>
         <CabecalhoDecisao
+          acoes={<AcoesProposta proposta={idIcms(d.id)} />}
           tituloOficial={d.titulo}
           simples={tituloSimplesDe(getTitulos("icms"), d.id)}
           subtituloOficial={nomeOficialCurto(d)}

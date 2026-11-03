@@ -70,6 +70,8 @@ export interface CabecalhoDecisaoProps {
   etiqueta?: string | null;
   /** Caracteres do h1 antes do corte em fim de palavra com "ler tudo" (padrão 240; 0 = sem corte). */
   limiteTitulo?: number;
+  /** Espaço para os botões da conta (Favoritar e reações), logo abaixo da fonte e do Compartilhar. */
+  acoes?: ReactNode;
 }
 
 export function CabecalhoDecisao({
@@ -94,6 +96,7 @@ export function CabecalhoDecisao({
   className = "",
   etiqueta,
   limiteTitulo = 240,
+  acoes,
 }: CabecalhoDecisaoProps) {
   const t = resolverTitulo({ tituloOficial, simples, subtituloOficial, tema });
   const quem = quemDecidiu ?? rotuloCaminho(caminho, true);
@@ -162,6 +165,7 @@ export function CabecalhoDecisao({
           ) : null}
         </div>
       ) : null}
+      {acoes}
       {atalhos?.length ? (
         <nav aria-label="Nesta página">
           <ul className="flex flex-wrap gap-2">

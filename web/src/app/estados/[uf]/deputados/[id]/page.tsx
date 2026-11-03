@@ -10,6 +10,8 @@ import { getDeputado, ouMarcador, ufsComDados, getIndiceEstado, votacoesPlenario
 import { exigirUf, maiuscula } from "@/features/estados/pagina";
 import { TERMOS_SP, compararVotos, formatarData, rotuloVoto, termosDoEstado } from "@/features/estados/rotulos";
 import { baseUf, getUf } from "@/features/estados/ufs";
+import { Favoritar } from "@/components/reacoes";
+import { idDeputadoEstadual } from "@/features/conta/ids";
 
 export function generateStaticParams() {
   return ouMarcador(
@@ -94,6 +96,7 @@ export default async function DeputadoEstadoPage({ params }: PageProps<"/estados
       <header>
         <Figurinha nome="pessoas" className="heroi-figurinha figurinha-flutua" />
         <h1 className="text-2xl font-bold text-foreground md:text-3xl">{d.nome}</h1>
+        <Favoritar tipo="politico" valor={idDeputadoEstadual(u.uf, d.id)} nome="este deputado estadual" className="mt-2" />
         <p>
           {cargo} · {u.casa.nome} · partido: <strong className="text-foreground">{d.partido ?? "não informado"}</strong>
           {d.em_exercicio === true ? ` · em exercício na lista oficial de ${formatarData(ind.lista_atualizada_em)}` : ""}

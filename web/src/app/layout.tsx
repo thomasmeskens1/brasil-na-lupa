@@ -4,7 +4,10 @@ import Link from "next/link";
 import { FaixaAtualizacao } from "@/components/FaixaAtualizacao";
 import { NavPrincipal } from "@/components/NavPrincipal";
 import { BotaoOuvir } from "@/components/ouvir";
+import { ModalEntrar } from "@/components/reacoes/ModalEntrar";
 import { BotaoConta } from "@/features/conta/BotaoConta";
+import { cadastroAtivo } from "@/features/conta/config";
+import { AvisoCookies } from "@/features/privacidade/AvisoCookies";
 import { DM_Sans, Poppins } from "next/font/google";
 import { AberturaMarca, SCRIPT_ABERTURA } from "@/components/marca/AberturaMarca";
 import { Logo } from "@/components/marca/Logo";
@@ -73,6 +76,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             </p>
           </div>
         </footer>
+        <AvisoCookies />
+        {cadastroAtivo() ? <ModalEntrar /> : null}
         <Analytics />
       </body>
     </html>
