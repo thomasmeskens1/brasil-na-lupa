@@ -138,7 +138,7 @@ export async function apagarReacoes(sql: Sql, usuarioId: string): Promise<void> 
 
 /**
  * Correção do e-mail (art. 18, III), depois de confirmado o código enviado ao novo endereço.
- * Devolve false se o novo e-mail já pertencer a outra conta. Encerra as outras sessões.
+ * Devolve false se o novo e-mail já pertencer a outra conta.
  */
 export async function trocarEmail(sql: Sql, usuarioId: string, novoEmail: string): Promise<boolean> {
   const ocupado = await sql`SELECT 1 FROM usuarios WHERE email = ${novoEmail} AND id <> ${usuarioId}`;
