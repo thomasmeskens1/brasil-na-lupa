@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import Link from "next/link";
+import { FaixaAtualizacao } from "@/components/FaixaAtualizacao";
 import { NavPrincipal } from "@/components/NavPrincipal";
+import { BotaoOuvir } from "@/components/ouvir";
 import { BotaoConta } from "@/features/conta/BotaoConta";
 import "./globals.css";
 
@@ -40,6 +42,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <BotaoConta />
           </div>
         </header>
+        <div className="border-b border-borda bg-white">
+          <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-4 gap-y-1 px-4 py-1">
+            <FaixaAtualizacao />
+            <BotaoOuvir />
+          </div>
+        </div>
         <main id="conteudo" className="mx-auto w-full max-w-6xl flex-1 px-4 py-6">
           {children}
         </main>

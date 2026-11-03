@@ -11,6 +11,7 @@ export interface ItemNav {
 
 export const ITENS_NAV: ItemNav[] = [
   { href: "/", rotulo: "Início" },
+  { href: "/quem-me-representa", rotulo: "Quem me representa" },
   { href: "/impostos", rotulo: "Impostos" },
   { href: "/congresso", rotulo: "Congresso" },
   { href: "/executivo", rotulo: "Executivo" },
@@ -18,6 +19,7 @@ export const ITENS_NAV: ItemNav[] = [
   { href: "/tribunais-de-contas", rotulo: "Tribunais de Contas" },
   { href: "/sao-paulo", rotulo: "São Paulo" },
   { href: "/atibaia", rotulo: "Atibaia" },
+  { href: "/agenda", rotulo: "Agenda" },
   { href: "/metodologia", rotulo: "Metodologia" },
 ];
 
