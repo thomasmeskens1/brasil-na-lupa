@@ -14,7 +14,7 @@ export default function ContaExcluidaPage() {
     <article className="max-w-2xl space-y-3">
       <h1 className="text-2xl font-bold text-gray-900">Conta excluída</h1>
       <p className="text-sm leading-relaxed text-gray-800">
-        Sua conta, o consentimento e as preferências foram apagados do nosso banco de dados. Todo o conteúdo do site
+        Sua conta, o consentimento, as preferências, os favoritos e as reações foram apagados do nosso banco de dados. Todo o conteúdo do site
         continua disponível sem cadastro.
       </p>
       <p className="text-sm">

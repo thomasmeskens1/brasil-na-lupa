@@ -28,6 +28,8 @@ import {
   rotuloVoto,
 } from "@/features/congresso/rotulos";
 import { tituloSimplesVotacao } from "@/features/congresso/titulos";
+import { Favoritar } from "@/components/reacoes";
+import { idParlamentar } from "@/features/conta/ids";
 
 /** Perfis de todos os parlamentares da lista oficial e de quem aparece em votação nominal. */
 export function generateStaticParams() {
@@ -109,6 +111,7 @@ export default async function ParlamentarPage({ params }: PageProps<"/congresso/
       </nav>
 
       <Cracha casa={casa} p={p} nominais={nominais} presenca={resumoPresenca(casa, p.id)} gastos={resumoGastos(casa, p.id)} />
+      <Favoritar tipo="politico" valor={idParlamentar(casa, p.id)} nome={casa === "camara" ? "este deputado" : "este senador"} />
 
       <Secao
         id="votos"

@@ -4,6 +4,8 @@ import { ListaRecolhivel } from "@/components/lista";
 import { ContadorAnimado } from "@/components/marca/ContadorAnimado";
 import { Figurinha, SetaRabisco, Sublinhado } from "@/components/marca/Figurinhas";
 import { getAgenda, proximasSessoes } from "@/features/agenda/dados";
+import { SeusFavoritos } from "@/features/conta/componentes/SeusFavoritos";
+import { cadastroAtivo } from "@/features/conta/config";
 import { ItemSessao } from "@/features/agenda/Sessoes";
 import { BuscaUnica } from "@/features/inicio/BuscaUnica";
 import { getDecisoesSemana, simplesSeAtivo } from "@/features/inicio/dados";
@@ -27,6 +29,8 @@ export default function Home() {
 
   return (
     <div className="space-y-10">
+      {/* Só com o cadastro ligado e só para quem tem sessão (carregado no navegador). */}
+      {cadastroAtivo() ? <SeusFavoritos /> : null}
       <section aria-labelledby="titulo-home" className="heroi entrada">
         <p className="etiqueta-heroi">Política sem complicação, com fonte oficial</p>
         <h1 id="titulo-home" className="manchete mt-3 text-[2rem] leading-[1.05] md:text-6xl">

@@ -19,8 +19,7 @@ export default function EntrarPage() {
         <h1 className="text-2xl font-bold text-gray-900">Entrar</h1>
         <p className="text-sm leading-relaxed text-gray-800">
           A conta é opcional: todo o conteúdo do site continua aberto, sem cadastro. Com uma conta você pode guardar
-          os estados, temas, políticos e itens que quer acompanhar. Não há senha: enviamos um link de acesso para o
-          seu e-mail.
+          os estados, temas, políticos e propostas favoritos e reagir às propostas. Não há senha: enviamos um código de 6 dígitos (e um link) para o seu e-mail.
         </p>
       </header>
 
@@ -32,7 +31,7 @@ export default function EntrarPage() {
           <button type="submit" className={BOTAO_SECUNDARIO}>
             Entrar com Google
           </button>
-          <p className="meta">Do Google recebemos apenas o seu e-mail e o seu nome.</p>
+          <p className="meta">Do Google guardamos apenas o seu e-mail.</p>
         </form>
       ) : null}
 

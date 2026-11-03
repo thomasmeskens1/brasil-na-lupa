@@ -28,6 +28,8 @@ import {
 import { CASAS, CASA_NOME, TIPO, ehCasa, formatarData, rotuloResultado } from "@/features/congresso/rotulos";
 import { tituloSimplesVotacao } from "@/features/congresso/titulos";
 import type { FonteCongresso, VotacaoDetalhe } from "@/features/congresso/tipos";
+import { AcoesProposta } from "@/components/reacoes";
+import { idVotacaoCongresso } from "@/features/conta/ids";
 
 /** Todas as votações coletadas são geradas no build (nominais, secretas e simbólicas). */
 export function generateStaticParams() {
@@ -122,6 +124,7 @@ export default async function VotacaoPage({ params }: PageProps<"/congresso/vota
       </nav>
 
       <CabecalhoDecisao
+        acoes={<AcoesProposta proposta={idVotacaoCongresso(v.casa, v.id)} />}
         tituloOficial={tituloOficialVotacao({ proposicao: propTitulo(v), descricao: v.descricao ?? "" })}
         simples={tituloSimplesVotacao(v.casa, v.id)}
         subtituloOficial={propPorExtenso(propTitulo(v))}

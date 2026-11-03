@@ -10,9 +10,11 @@ export const metadata: Metadata = {
 };
 
 const MENSAGENS: Record<string, string> = {
-  Verification: "O link de acesso expirou ou já foi usado. Peça um novo link.",
+  Verification:
+    "O código ou o link está errado, venceu (vale 10 minutos) ou já foi usado. Depois de 5 tentativas erradas, o código é cancelado: peça um novo.",
+  Limite: "Muitas tentativas de código a partir desta conexão. Aguarde 15 minutos e peça um novo código.",
   AccessDenied: "O acesso não foi autorizado. Se entrou com o Google, confira se o e-mail da conta está verificado.",
-  OAuthAccountNotLinked: "Este e-mail já está ligado a outra forma de entrar. Use o link por e-mail.",
+  OAuthAccountNotLinked: "Este e-mail já está ligado a outra forma de entrar. Use o código por e-mail.",
 };
 const PADRAO = "Não foi possível concluir a entrada agora. Tente novamente em alguns minutos.";
 

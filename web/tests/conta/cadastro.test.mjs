@@ -5,22 +5,19 @@
 import assert from "node:assert/strict";
 import path from "node:path";
 import { after, before, describe, test } from "node:test";
+import { register } from "node:module";
 import { fileURLToPath } from "node:url";
 import { PGlite } from "@electric-sql/pglite";
 import { aplicarMigracoes } from "../../scripts/lib/migracoes.mjs";
-import { criarAdaptador } from "../../src/features/conta/adaptador.ts";
-import { cadastroAtivo, googleAtivo } from "../../src/features/conta/config.ts";
-import {
-  excluirConta,
-  exportarDados,
-  limparExpirados,
-  obterEstado,
-  registrarConsentimento,
-  revogarConsentimento,
-  salvarPreferencias,
-} from "../../src/features/conta/dados.ts";
-import { chaveLimite, consumirLimite, ipDaRequisicao, LIMITES_ENVIO } from "../../src/features/conta/limite.ts";
-import { normalizarEmail, validarPreferencias, VERSAO_POLITICA } from "../../src/features/conta/regras.ts";
+
+// Importações dinâmicas: o gancho precisa estar registrado antes (ver resolver.mjs).
+register("./resolver.mjs", import.meta.url);
+const { criarAdaptador } = await import("../../src/features/conta/adaptador.ts");
+const { cadastroAtivo, googleAtivo } = await import("../../src/features/conta/config.ts");
+const { excluirConta, exportarDados, limparExpirados, obterEstado, registrarConsentimento, revogarConsentimento, salvarPreferencias } =
+  await import("../../src/features/conta/dados.ts");
+const { chaveLimite, consumirLimite, ipDaRequisicao, LIMITES_ENVIO } = await import("../../src/features/conta/limite.ts");
+const { normalizarEmail, validarPreferencias, VERSAO_POLITICA } = await import("../../src/features/conta/regras.ts");
 
 const webDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 const pastaMigracoes = path.join(webDir, "db", "migracoes");
@@ -58,7 +55,7 @@ before(async () => {
   pg = new PGlite();
   const db = { exec: (t) => pg.exec(t), query: (t, p) => pg.query(t, p) };
   const aplicadas = await aplicarMigracoes(db, pastaMigracoes);
-  assert.deepEqual(aplicadas, ["001_cadastro.sql"]);
+  assert.deepEqual(aplicadas, ["001_cadastro.sql", "002_favoritos_reacoes.sql"]);
   // Idempotente: rodar de novo não aplica nada.
   assert.deepEqual(await aplicarMigracoes(db, pastaMigracoes), []);
   sql = sqlDe(pg);
@@ -92,13 +89,13 @@ describe("validação", () => {
   });
   test("preferências válidas", () => {
     const r = validarPreferencias(
-      form({ ufs: ["SP", "AC", "SP"], temas: "impostos", politicos: "camara:204554", alertasEmail: "sim" }),
+      form({ ufs: ["SP", "AC", "SP"], temas: "impostos-precos", politicos: "camara:204554", alertasEmail: "sim" }),
     );
     assert.equal(r.ok, true);
     assert.deepEqual(r.valor, {
       ufs: ["AC", "SP"],
       municipios: [],
-      temas: ["impostos"],
+      temas: ["impostos-precos"],
       politicos: ["camara:204554"],
       itens: [],
       alertasEmail: true,
@@ -156,7 +153,8 @@ describe("adapter do Auth.js", () => {
     const linhas = await sql`SELECT * FROM contas_externas WHERE usuario_id = ${u.id}`;
     assert.deepEqual(Object.keys(linhas[0]).sort(), ["id_no_provedor", "provedor", "tipo", "usuario_id"]);
     const atualizado = await adapter.updateUser({ id: u.id, emailVerified: new Date() });
-    assert.equal(atualizado.name, "Bia");
+    assert.equal(atualizado.name, null, "o nome do Google não é guardado");
+    assert.ok(!("nome" in (await sql`SELECT * FROM usuarios WHERE id = ${u.id}`)[0]));
     assert.ok(atualizado.emailVerified instanceof Date);
   });
 });
@@ -182,7 +180,8 @@ describe("consentimento, preferências, exportação e exclusão", () => {
 
     const json = await exportarDados(sql, u.id);
     assert.equal(json.conta.email, "caio@exemplo.com");
-    assert.deepEqual(json.preferencias, prefs);
+    assert.deepEqual(json.preferencias, { municipios: [], alertasEmail: false });
+    assert.deepEqual(json.favoritos, { estados: ["SP"], temas: ["saude"], politicos: ["senado:5012"], propostas: [] });
     assert.equal(json.consentimento.versaoDaPolitica, VERSAO_POLITICA);
     JSON.stringify(json);
 
@@ -205,7 +204,7 @@ describe("consentimento, preferências, exportação e exclusão", () => {
     const inativo = await adapter.createUser({ id: "x", email: "inativo@exemplo.com", emailVerified: null });
     await registrarConsentimento(sql, inativo.id, VERSAO_POLITICA);
     await sql`UPDATE usuarios SET sem_consentimento_desde = now() - interval '8 days' WHERE id = ${velho.id}`;
-    await sql`UPDATE usuarios SET ultimo_acesso_em = now() - interval '25 months' WHERE id = ${inativo.id}`;
+    await sql`UPDATE usuarios SET ultimo_acesso_em = now() - interval '25 months', aviso_inatividade_em = now() - interval '31 days' WHERE id = ${inativo.id}`;
     await limparExpirados(sql);
     assert.equal(await adapter.getUser(velho.id), null);
     assert.equal(await adapter.getUser(inativo.id), null);

@@ -1,134 +1,205 @@
 import Link from "next/link";
 import { Bloco } from "./Bloco";
 
-/** Item 9 da Política de Privacidade (versão 2): cadastro opcional. */
+const th = "py-2 pr-3 text-left font-semibold text-gray-900";
+const td = "py-2 pr-3 align-top";
+
+/** Finalidade × dado × base legal × prazo (LGPD, art. 6º, 7º, 9º e 11). */
+const TRATAMENTOS: { finalidade: string; dados: string; base: string; prazo: string }[] = [
+  {
+    finalidade: "Entrar na conta (código ou link por e-mail; Google, se você escolher)",
+    dados: "E-mail; código de acesso guardado só como resumo criptográfico; sessão; vínculo com o Google (sem nome, foto ou chaves)",
+    base: "Execução do serviço que você pediu (art. 7º, V)",
+    prazo: "Conta: enquanto existir. Código: 10 minutos ou até o uso. Sessão: até 30 dias ou até sair",
+  },
+  {
+    finalidade: "Guardar e mostrar seus favoritos (estados, temas, políticos e propostas) e preferências",
+    dados: "Favoritos; municípios; escolha de alertas por e-mail",
+    base: "Execução do serviço (art. 7º, V) e, como podem revelar opinião política, consentimento específico e destacado (art. 11, I)",
+    prazo: "Enquanto a conta existir ou até você apagar ou revogar",
+  },
+  {
+    finalidade: "Registrar suas reações (curtir e não curtir) e mostrar os totais a quem tem conta",
+    dados: "Proposta e reação, ligadas à conta",
+    base: "Consentimento específico e destacado, pedido na primeira reação (art. 11, I)",
+    prazo: "Até você trocar, retirar, apagar as reações ou revogar o consentimento delas",
+  },
+  {
+    finalidade: "Provar o consentimento e a declaração de idade",
+    dados: "Data, versão da política aceita, declaração de 18 anos ou mais, data do consentimento das reações",
+    base: "Cumprimento de obrigação legal (art. 7º, II, e art. 8º, § 2º)",
+    prazo: "Enquanto a conta existir",
+  },
+  {
+    finalidade: "Segurança: limitar pedidos repetidos e tentativas de código",
+    dados: "Resumo criptográfico (com chave secreta) do e-mail, do IP ou da conta; nunca o valor em claro",
+    base: "Legítimo interesse (art. 7º, IX)",
+    prazo: "24 horas",
+  },
+  {
+    finalidade: "Avisar antes de excluir conta sem acesso",
+    dados: "E-mail; data do último acesso; data do aviso",
+    base: "Execução do serviço (art. 7º, V)",
+    prazo: "Aviso aos 23 meses sem acesso; exclusão 30 dias depois",
+  },
+];
+
+/** Item 9 da Política de Privacidade (versão 4): cadastro opcional, favoritos e reações. */
 export function SecaoCadastro({ versao }: { versao: string }) {
   return (
-    <Bloco id="cadastro" titulo="9. Cadastro (opcional)">
+    <Bloco id="cadastro" titulo="9. Cadastro (opcional), favoritos e reações">
       <p>
-        O cadastro é opcional e não é necessário para ver nenhum conteúdo. Ele permite guardar os estados, temas,
-        políticos e itens que você quer acompanhar. O consentimento registrado na conta se refere à versão{" "}
-        {versao} desta política.
+        O cadastro é opcional e não é necessário para ver nenhum conteúdo. Ele permite marcar estados, temas, políticos e
+        propostas como favoritos e reagir às propostas (curtir ou não curtir). O consentimento registrado na conta se
+        refere à versão {versao} desta política. A conta é destinada a pessoas com <strong>18 anos ou mais</strong>: no
+        primeiro acesso pedimos essa declaração (art. 14), e não tratamos dados de crianças e adolescentes.
       </p>
 
-      <h3 className="pt-2 font-semibold text-gray-900">9.1 Dados coletados</h3>
+      <h3 className="pt-2 font-semibold text-gray-900">9.1 O que guardamos, para quê, com que base e por quanto tempo</h3>
+      <p>
+        Só o mínimo necessário (art. 6º, III): <strong>não guardamos nome, CPF, telefone, foto nem endereço IP em
+        claro</strong>.
+      </p>
+      <div className="overflow-x-auto">
+        <table className="w-full min-w-[40rem] border-collapse text-sm">
+          <caption className="sr-only">Finalidade, dados, base legal e prazo de cada tratamento do cadastro</caption>
+          <thead>
+            <tr className="border-b border-borda">
+              <th scope="col" className={th}>Finalidade</th>
+              <th scope="col" className={th}>Dados</th>
+              <th scope="col" className={th}>Base legal (LGPD)</th>
+              <th scope="col" className={th}>Prazo</th>
+            </tr>
+          </thead>
+          <tbody>
+            {TRATAMENTOS.map((t) => (
+              <tr key={t.finalidade} className="border-b border-borda">
+                <th scope="row" className={`${td} font-medium text-gray-900`}>
+                  {t.finalidade}
+                </th>
+                <td className={td}>{t.dados}</td>
+                <td className={td}>{t.base}</td>
+                <td className={td}>{t.prazo}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Também ficam as datas de criação da conta e do último acesso. Não fazemos perfil, publicidade, rastreamento ou
+        análise dos favoritos e reações, e eles nunca são usados para escolher o conteúdo exibido a outras pessoas.
+      </p>
+
+      <h3 className="pt-2 font-semibold text-gray-900">9.2 Reações: só totais, nunca quem reagiu</h3>
+      <p>
+        Cada conta tem no máximo uma reação por proposta, que pode ser trocada ou retirada. O site guarda os totais de
+        cada proposta de forma agregada e mostra só esses totais, e só a quem tem conta, sempre com o aviso de que são
+        opinião de usuários do site, não pesquisa nem dado oficial. Nenhuma tela, arquivo ou pessoa externa vê quem
+        reagiu. Os totais nunca entram em listas, notas, ordenações ou comparações de políticos.
+      </p>
+
+      <h3 className="pt-2 font-semibold text-gray-900">9.3 Consentimento</h3>
+      <p>
+        Há dois consentimentos, específicos e destacados, sem caixa pré-marcada: o dos favoritos e preferências, numa tela
+        própria no primeiro acesso, e o das reações, pedido na primeira vez que você curtir ou não curtir uma proposta.
+        Antes deles nada é guardado além do e-mail. Você pode revogar cada um a qualquer momento, sem custo (art. 8º,
+        § 5º): revogar o das reações apaga as reações; revogar o geral apaga favoritos, preferências e reações. Se não
+        der o consentimento, a única consequência é não poder usar esses recursos: todo o conteúdo continua disponível.
+      </p>
+
+      <h3 className="pt-2 font-semibold text-gray-900">9.4 Exclusão e retenção</h3>
       <ul className="list-disc space-y-1 pl-5">
+        <li>A exclusão da conta pedida por você apaga na hora, do banco de dados, a conta, os favoritos e as reações.</li>
         <li>
-          <strong>E-mail</strong>, para identificar a conta e enviar o link de acesso (não há senha).
+          Em até 15 dias não resta cópia: o histórico de restauração do banco é mantido por no máximo 7 dias, e os
+          registros técnicos da hospedagem, guardados por prazo menor, não incluem favoritos, reações nem códigos.
         </li>
         <li>
-          <strong>Nome</strong>, somente se você entrar com o Google (é o nome que o Google informa). Do Google
-          recebemos apenas e-mail, nome e um identificador da conta; não guardamos foto nem as chaves de acesso à
-          sua conta Google.
+          Contas sem acesso por 24 meses: avisamos por e-mail aos 23 meses e excluímos 30 dias depois do aviso, se você
+          não entrar de novo.
         </li>
-        <li>
-          <strong>Registro do consentimento</strong>: data e hora e a versão desta política que você aceitou.
-        </li>
-        <li>
-          <strong>Preferências</strong>: estados, municípios, temas, políticos e itens acompanhados (votações,
-          propostas, decisões) e se você quer receber alertas por e-mail. Os alertas vêm desligados e, por
-          enquanto, não são enviados: a opção só registra a sua preferência.
-        </li>
-        <li>
-          <strong>Dados técnicos da conta</strong>: data de criação, data do último acesso e as sessões abertas
-          (data de validade).
-        </li>
-        <li>
-          <strong>Proteção contra abuso</strong>: para limitar pedidos repetidos de link de acesso, guardamos
-          por até 24 horas um código cifrado (resumo criptográfico) do e-mail e do endereço IP, que não permite
-          recuperar o e-mail ou o IP.
-        </li>
+        <li>Contas sem consentimento válido guardam só o e-mail e são excluídas depois de 7 dias.</li>
+        <li>Códigos de acesso: apagados depois de usados, vencidos (10 minutos) ou após 5 tentativas erradas.</li>
       </ul>
+      <p className="meta">As exclusões automáticas são feitas sempre que alguém entra ou pede um código de acesso.</p>
 
-      <h3 className="pt-2 font-semibold text-gray-900">9.2 Finalidade</h3>
+      <h3 className="pt-2 font-semibold text-gray-900">9.5 Quem trata os dados (operadoras), onde e transferência internacional</h3>
       <p>
-        Somente manter a sua conta, mostrar a você o que escolheu acompanhar e, no futuro, se você ligar os
-        alertas, avisar por e-mail sobre novidades desses assuntos. Não fazemos perfil, publicidade, rastreamento
-        ou análise das preferências, e elas nunca são usadas para escolher o conteúdo exibido a outras pessoas.
+        Estas empresas prestam o serviço em nome do controlador, seguindo as instruções dele, e não podem usar os dados
+        para outros fins. Como todas são dos Estados Unidos, há transferência internacional de dados, feita nas hipóteses
+        do art. 33 da LGPD, com as garantias contratuais (cláusulas de proteção de dados) oferecidas por cada uma.
       </p>
-
-      <h3 className="pt-2 font-semibold text-gray-900">9.3 Base legal</h3>
-      <p>
-        <strong>Consentimento</strong> (LGPD, art. 7º, I, e, para as preferências que podem revelar opinião
-        política, art. 11, I — consentimento específico e destacado). Ele é pedido numa tela própria no primeiro
-        acesso, sem caixa pré-marcada, e nada é guardado além do e-mail antes dele. A proteção contra abuso do
-        envio de links se apoia no legítimo interesse (art. 7º, IX) e na segurança do serviço. Você pode revogar o
-        consentimento a qualquer momento (art. 8º, § 5º), sem custo.
-      </p>
-
-      <h3 className="pt-2 font-semibold text-gray-900">9.4 Por quanto tempo guardamos</h3>
-      <ul className="list-disc space-y-1 pl-5">
-        <li>Conta e preferências: enquanto a conta existir. A exclusão pedida por você é imediata.</li>
-        <li>Contas sem nenhum acesso por 24 meses são excluídas automaticamente.</li>
-        <li>
-          Contas sem consentimento válido (que não aceitaram ou que revogaram) guardam só o e-mail e são
-          excluídas automaticamente depois de 7 dias.
-        </li>
-        <li>Link de acesso: vale por 1 hora e é apagado depois de usado ou vencido.</li>
-        <li>Sessão: até 30 dias, ou até você sair.</li>
-        <li>Códigos da proteção contra abuso: 24 horas.</li>
-        <li>
-          O histórico de restauração do banco de dados mantido pela operadora pode conter dados excluídos por até 7
-          dias, até ser substituído.
-        </li>
-      </ul>
-      <p className="meta">
-        As exclusões automáticas são feitas sempre que alguém entra ou pede um link de acesso.
-      </p>
-
-      <h3 className="pt-2 font-semibold text-gray-900">9.5 Quem trata os dados (operadoras) e onde</h3>
-      <p>
-        Estas empresas prestam o serviço em nome do controlador, seguindo as instruções dele, e não podem usar os
-        dados para outros fins. Algumas ficam fora do Brasil; nesses casos há transferência internacional, feita nas
-        hipóteses do art. 33 da LGPD, com as garantias contratuais oferecidas por cada empresa.
-      </p>
-      <ul className="list-disc space-y-1 pl-5">
-        <li>
-          <strong>Vercel Inc.</strong> (Estados Unidos) — hospedagem do site e execução das páginas da conta.
-          Processa os dados em trânsito, em servidores que podem estar fora do Brasil.
-        </li>
-        <li>
-          <strong>Neon</strong> (empresa dos Estados Unidos) — banco de dados onde a conta e as preferências
-          ficam guardadas, contratado por meio da Vercel. O banco fica na região de São Paulo (Brasil), na
-          infraestrutura da Amazon Web Services; a empresa responsável fica nos Estados Unidos.
-        </li>
-        <li>
-          <strong>Resend, Inc.</strong> (Estados Unidos) — envio do e-mail com o link de acesso (e, no futuro, dos
-          alertas, se você ligar). Recebe o seu e-mail e o conteúdo da mensagem; o processamento pode ocorrer nos
-          Estados Unidos.
-        </li>
-        <li>
-          <strong>Google LLC</strong> (Estados Unidos) — somente se você escolher &quot;Entrar com Google&quot;. O
-          Google confirma a sua identidade e informa ao site o seu e-mail e nome; o uso da sua conta Google segue a
-          política de privacidade do próprio Google.
-        </li>
-      </ul>
+      <div className="overflow-x-auto">
+        <table className="w-full min-w-[36rem] border-collapse text-sm">
+          <caption className="sr-only">Operadoras, função e país de tratamento</caption>
+          <thead>
+            <tr className="border-b border-borda">
+              <th scope="col" className={th}>Operadora</th>
+              <th scope="col" className={th}>Função</th>
+              <th scope="col" className={th}>País de tratamento</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="border-b border-borda">
+              <th scope="row" className={`${td} font-medium text-gray-900`}>Vercel Inc.</th>
+              <td className={td}>Hospedagem do site e execução das páginas e rotas da conta</td>
+              <td className={td}>Estados Unidos e outros países onde a Vercel tem servidores (dados em trânsito)</td>
+            </tr>
+            <tr className="border-b border-borda">
+              <th scope="row" className={`${td} font-medium text-gray-900`}>Neon (contratado por meio da Vercel)</th>
+              <td className={td}>Banco de dados da conta, dos favoritos e das reações</td>
+              <td className={td}>Brasil (região de São Paulo, na Amazon Web Services); empresa nos Estados Unidos</td>
+            </tr>
+            <tr className="border-b border-borda">
+              <th scope="row" className={`${td} font-medium text-gray-900`}>Resend, Inc.</th>
+              <td className={td}>Envio dos e-mails da conta (código de acesso, troca de e-mail, aviso de inatividade)</td>
+              <td className={td}>Estados Unidos (e Brasil, se a região de São Paulo estiver disponível)</td>
+            </tr>
+            <tr className="border-b border-borda">
+              <th scope="row" className={`${td} font-medium text-gray-900`}>Google LLC</th>
+              <td className={td}>Só se você escolher “Entrar com Google”: confirma a identidade e informa o e-mail</td>
+              <td className={td}>Estados Unidos</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h3 className="pt-2 font-semibold text-gray-900">9.6 Segurança</h3>
       <p>
-        Conexão sempre cifrada (HTTPS), cookies de sessão protegidos, links de acesso de uso único guardados
-        apenas na forma de resumo criptográfico e acesso ao banco restrito ao controlador. Nenhuma senha é criada
-        ou guardada.
+        Conexão sempre cifrada (HTTPS); cookies de sessão HttpOnly, Secure e SameSite=Lax; nenhum cookie não essencial
+        (item 4); códigos de acesso de uso único guardados só como resumo criptográfico; limites de tentativas por conta e
+        por conexão; pedidos que alteram dados só aceitos a partir do próprio site; acesso ao banco restrito ao
+        controlador. Nenhuma senha é criada ou guardada.
       </p>
 
-      <h3 className="pt-2 font-semibold text-gray-900">9.7 Como exercer seus direitos</h3>
+      <h3 className="pt-2 font-semibold text-gray-900">9.7 Incidentes de segurança</h3>
+      <p>
+        Todo incidente de segurança que envolva dados pessoais é registrado (o que aconteceu, quando, quais dados, quantas
+        pessoas, as medidas tomadas). Se puder causar risco ou dano relevante, comunicamos a Autoridade Nacional de
+        Proteção de Dados (ANPD) e as pessoas afetadas, por e-mail, no prazo da regulamentação da ANPD, com a descrição
+        dos dados envolvidos, os riscos e as medidas adotadas (art. 48).
+      </p>
+
+      <h3 className="pt-2 font-semibold text-gray-900">9.8 Como exercer seus direitos</h3>
       <p>
         Na página{" "}
         <Link href="/minha-conta" className="lk" prefetch={false}>
           Minha conta
         </Link>{" "}
-        você pode, sozinho e a qualquer momento:
+        você pode, sozinho e a qualquer momento (art. 18):
       </p>
       <ul className="list-disc space-y-1 pl-5">
-        <li>ver e corrigir as suas preferências;</li>
+        <li>confirmar que tratamos seus dados e ver o que está guardado;</li>
         <li>baixar todos os seus dados num arquivo (formato JSON), para acesso e portabilidade;</li>
-        <li>revogar o consentimento, o que apaga na hora todas as preferências;</li>
-        <li>excluir a conta, com exclusão real e imediata do banco de dados.</li>
+        <li>corrigir o e-mail (com código enviado ao endereço novo) e editar favoritos e preferências;</li>
+        <li>apagar só os favoritos, só as reações, ou cada favorito separadamente;</li>
+        <li>revogar o consentimento das reações ou o consentimento geral;</li>
+        <li>excluir a conta inteira, com exclusão real e imediata do banco de dados;</li>
+        <li>saber com quem os dados são compartilhados (as operadoras do item 9.5, e mais ninguém).</li>
       </ul>
       <p>
-        Para qualquer outro pedido, ou se não conseguir entrar na conta, escreva ao encarregado (item 1). Se não
-        der o consentimento, a única consequência é não poder guardar preferências: todo o conteúdo do site
-        continua disponível.
+        Para qualquer outro pedido, ou se não conseguir entrar na conta, escreva ao encarregado (item 1); a resposta é
+        enviada no prazo legal.
       </p>
     </Bloco>
   );

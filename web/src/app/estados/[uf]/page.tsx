@@ -11,6 +11,7 @@ import { contextoGoverno, nomeDiario } from "@/features/estados/contexto";
 import { getIndiceEstado, votacoesPlenario } from "@/features/estados/dados";
 import { formatarData, nomeProposicao, termosDoEstado } from "@/features/estados/rotulos";
 import { DATA_LEVANTAMENTO, UFS, baseUf, caminhoCasa, getUf, nomeCompleto } from "@/features/estados/ufs";
+import { Favoritar } from "@/components/reacoes";
 
 export function generateStaticParams() {
   return UFS.map((u) => ({ uf: u.uf }));
@@ -42,6 +43,7 @@ export default async function EstadoPage({ params }: PageProps<"/estados/[uf]">)
         <header className="max-w-3xl">
           <Figurinha nome="mapa" className="heroi-figurinha figurinha-flutua" />
           <h1 className="text-2xl font-bold text-foreground md:text-3xl">{nomeCompleto(u)}</h1>
+          <Favoritar tipo="uf" valor={u.uf.toUpperCase()} nome="este estado" className="mt-2" />
           <p className="text-lg font-semibold text-foreground">Ainda não acompanhamos este estado.</p>
           <p>
             Quando a coleta começar, esta página vai mostrar as votações da {u.casa.nome}, o voto de cada deputado quando a
@@ -88,6 +90,7 @@ export default async function EstadoPage({ params }: PageProps<"/estados/[uf]">)
       <header className="max-w-3xl">
         <Figurinha nome="mapa" className="heroi-figurinha figurinha-flutua" />
         <h1 className="text-2xl font-bold text-foreground md:text-3xl">{nomeCompleto(u)}</h1>
+        <Favoritar tipo="uf" valor={u.uf.toUpperCase()} nome="este estado" className="mt-2" />
         <p>
           As leis são votadas pela {u.casa.nome} e depois sancionadas ou vetadas pelo governador, que também decide sozinho,
           por decreto, sem votação. Aqui estão as votações com o voto de cada deputado quando registrado oficialmente, os

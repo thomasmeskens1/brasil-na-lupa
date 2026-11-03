@@ -1,20 +1,23 @@
 # Cadastro de usuários — como configurar
 
-O cadastro (login por link no e-mail e, opcionalmente, "Entrar com Google") **só liga quando as
-quatro variáveis obrigatórias existem** no ambiente da Vercel:
+O cadastro (login por **código de 6 dígitos enviado por e-mail**, com o link como alternativa no mesmo
+e-mail, e, opcionalmente, "Entrar com Google"), os **favoritos** (estrela "Favoritar") e as **reações**
+(curtir / não curtir) **só ligam quando as quatro variáveis obrigatórias existem** no ambiente da Vercel:
 
 | Variável | Obrigatória | O que é |
 |---|---|---|
 | `DATABASE_URL` | sim | Endereço do banco Neon Postgres (a integração da Vercel cria) |
 | `AUTH_SECRET` | sim | Segredo do Auth.js (assina e protege cookies e tokens) |
-| `AUTH_RESEND_KEY` | sim | Chave de API do Resend (envio do e-mail com o link) |
+| `AUTH_RESEND_KEY` | sim | Chave de API do Resend (envio do e-mail com o código) |
 | `EMAIL_FROM` | sim | Remetente, ex.: `Brasil na Lupa <no-reply@brasilnalupa.com.br>` |
 | `AUTH_GOOGLE_ID` | não | ID do cliente OAuth do Google |
 | `AUTH_GOOGLE_SECRET` | não | Segredo do cliente OAuth do Google |
 
 Sem qualquer uma das quatro, o site funciona exatamente como antes: as páginas `/entrar` e
-`/minha-conta` respondem "Página não encontrada", o botão "Minha conta" não aparece e a Política
-de Privacidade mostra a versão 1 (sem cadastro).
+`/minha-conta` e as rotas `/api/conta/*` respondem "Página não encontrada", o botão "Minha conta",
+os botões "Favoritar" e de reação, o convite para entrar e o bloco "Seus favoritos" não aparecem, e a
+Política de Privacidade mostra a versão 3 (sem cadastro). O aviso de cookies do rodapé aparece nos dois
+casos.
 
 > A Vercel só aplica variáveis novas num **novo deploy**. Depois de criar ou mudar qualquer
 > variável, faça *Redeploy* do último deploy de produção.
@@ -30,7 +33,7 @@ Nunca coloque valores reais no repositório. O arquivo `web/.env.example` traz s
 3. Região: escolha **São Paulo (aws-sa-east-1)** se estiver na lista. A Política de Privacidade
    (item 9.5) diz que o banco fica em São Paulo — se escolher outra região, avise para o texto ser
    corrigido antes de ligar o cadastro.
-4. Plano: o gratuito basta para começar. Dê um nome (ex.: `placar-cadastro`) → **Create**.
+4. Plano: o gratuito basta para começar. Dê um nome (ex.: `brasil-na-lupa-cadastro`) → **Create**.
 5. Em **Connect Project**, ligue ao projeto do site e marque o ambiente **Production**.
    (Para Preview, prefira não ligar, ou use um *branch* separado do Neon, para que testes não
    gravem no banco de produção.)
@@ -56,7 +59,7 @@ Pré-requisito: o domínio `brasilnalupa.com.br` registrado (Registro.br) e com 
 4. No DNS do domínio (Registro.br → *Editar zona*, ou na Vercel se o DNS estiver lá), crie esses
    registros. Recomendado também: **TXT** em `_dmarc` → `v=DMARC1; p=none;`.
 5. Volte ao Resend e clique **Verify DNS Records**. Pode levar de minutos a algumas horas.
-6. **API Keys → Create API Key**: nome `placar-producao`, permissão **Sending access**, domínio
+6. **API Keys → Create API Key**: nome `brasil-na-lupa-producao`, permissão **Sending access**, domínio
    `brasilnalupa.com.br`. Copie a chave (ela só aparece uma vez).
 7. Na Vercel (Settings → Environment Variables, ambiente Production), crie:
    - `AUTH_RESEND_KEY` = a chave copiada (marque como *Sensitive*);
@@ -117,7 +120,8 @@ npx vercel env pull .env.local --environment=production   # baixa DATABASE_URL e
 npm run db:migrar
 ```
 
-A saída esperada é `aplicada: 001_cadastro.sql`. Rodar de novo mostra "Banco já está atualizado".
+A saída esperada é `aplicada: 001_cadastro.sql` e `aplicada: 002_favoritos_reacoes.sql` (num banco que já
+tinha a 001, só a 002). Rodar de novo mostra "Banco já está atualizado".
 O arquivo `.env.local` fica fora do Git (está no `.gitignore`); apague-o se não precisar mais.
 
 Rode `npm run db:migrar` de novo sempre que surgir uma migração nova, **antes** do deploy que a usa.
@@ -126,19 +130,29 @@ Rode `npm run db:migrar` de novo sempre que surgir uma migração nova, **antes*
 
 1. Com as variáveis criadas e a migração aplicada, faça **Redeploy** de produção.
 2. Confira que o botão **Minha conta** aparece no cabeçalho e que `/privacidade` mostra a
-   **versão 2**, com o item 9 "Cadastro (opcional)".
-3. Em `/entrar`, peça o link com o seu e-mail. Confira a chegada (e a caixa de spam).
-4. Clique no link: deve abrir **Minha conta** com a tela de consentimento (caixa desmarcada).
+   **versão 4**, com o item 9 "Cadastro (opcional), favoritos e reações" e o item 4 "Cookies".
+3. Em `/entrar`, peça o código com o seu e-mail. Deve abrir a tela **Digite o código**. Confira a
+   chegada do e-mail (e a caixa de spam): ele traz o código de 6 dígitos e um link.
+4. Digite o código: deve abrir **Minha conta** com a tela de consentimento (caixas desmarcadas, incluindo
+   "Declaro que tenho 18 anos ou mais").
+   - Digite um código errado 5 vezes: na 5ª, o código é cancelado (peça outro).
    - "Não concordo" deve apagar a conta e mostrar "Conta excluída".
-   - "Concordo" deve mostrar as preferências (alertas desligados).
-5. Marque estados e temas, salve, recarregue a página e confira que ficaram gravados.
-6. **Baixar meus dados**: deve baixar um JSON com e-mail, consentimento e preferências.
-7. **Revogar consentimento**: as preferências somem e a tela de consentimento volta.
-8. **Excluir minha conta**: após confirmar, a conta some (peça um link de novo: o primeiro acesso
-   volta a pedir consentimento).
-9. Peça o link 4 vezes seguidas com o mesmo e-mail: a 4ª deve mostrar o aviso de limite (3 a cada
-   15 minutos por e-mail; 10 a cada 15 minutos por IP).
-10. Se configurou o Google, teste "Entrar com Google" com uma conta que já entrou por e-mail: deve
+   - "Concordo" (com as duas caixas) deve mostrar favoritos e preferências.
+5. Abra uma votação (ex.: `/congresso/votacoes/camara/...`): aparecem **Favoritar** e os botões
+   **Curtir** / **Não curtir** com os contadores e o rótulo "Opinião de usuários do Brasil na Lupa —
+   não é pesquisa nem dado oficial". Na primeira reação aparece o consentimento das reações.
+6. Numa janela anônima (sem login), a mesma página mostra os botões **sem números**; clicar abre o
+   convite para entrar (Esc fecha e devolve o foco ao botão).
+7. Favorite um estado (`/estados/sp`), um político e uma votação; volte à página inicial: o bloco
+   **Seus favoritos** aparece no topo com as decisões recentes ligadas a eles, por data.
+8. **Baixar meus dados**: o JSON traz e-mail, consentimentos, favoritos e reações.
+9. **Corrigir o e-mail**: peça o código para um e-mail novo, digite-o e confira a troca.
+10. **Apagar todas as reações**, **Apagar todos os favoritos** e **Revogar o consentimento das reações**
+    devem funcionar sozinhos; **Revogar todo o consentimento** apaga favoritos, preferências e reações.
+11. **Excluir minha conta**: após confirmar, a conta some (o primeiro acesso volta a pedir consentimento).
+12. Peça o código 4 vezes seguidas com o mesmo e-mail: a 4ª mostra o aviso de limite (3 a cada 15
+    minutos por e-mail; 10 a cada 15 minutos por IP).
+13. Se configurou o Google, teste "Entrar com Google" com uma conta que já entrou por e-mail: deve
     cair na mesma conta.
 
 Testes automáticos (sem serviços externos; usam um Postgres em memória):
@@ -163,14 +177,28 @@ encerrado de vez — avise os usuários antes, por e-mail, conforme a política.
 
 | Tabela | Conteúdo |
 |---|---|
-| `usuarios` | e-mail, nome (só do Google), datas de criação, verificação e último acesso, início do período sem consentimento |
+| `usuarios` | e-mail, datas de criação, verificação, último acesso e aviso de inatividade, início do período sem consentimento (**sem nome**) |
 | `contas_externas` | vínculo com o Google (provedor e identificador; **sem** tokens) |
 | `sessoes` | token da sessão e validade |
-| `tokens_verificacao` | hash do link de acesso e validade (1 hora) |
-| `consentimentos` | versão da política aceita e data |
-| `preferencias` | UFs, municípios, temas, políticos e itens acompanhados, alertas por e-mail |
-| `limites_envio` | HMAC do e-mail ou do IP e horário (apagado em 24 horas) |
+| `tokens_verificacao` | hash do código (o mesmo do link), validade (10 minutos) e tentativas erradas (máx. 5) |
+| `consentimentos` | versão da política aceita e data, declaração de 18 anos ou mais, data do consentimento das reações |
+| `preferencias` | municípios e alertas por e-mail |
+| `favoritos` | tipo (estado, tema, político, proposta) e o identificador do site |
+| `reacoes` | proposta e reação (1 curti, -1 não curti), uma por conta por proposta |
+| `reacoes_contagem` | totais por proposta (mantidos por gatilho; não guardam quem reagiu) |
+| `limites_envio` | HMAC do e-mail, do IP ou da conta e horário (apagado em 24 horas) |
 
-A limpeza automática (contas sem consentimento há mais de 7 dias, sem acesso há mais de 24 meses,
-sessões e links vencidos, registros de limite com mais de 24 horas) roda a cada login e a cada
-pedido de link.
+A limpeza automática (contas sem consentimento há mais de 7 dias, contas sem acesso há 24 meses e
+avisadas por e-mail há 30 dias, sessões e códigos vencidos, registros de limite com mais de 24 horas)
+roda a cada login e a cada pedido de código. O aviso de inatividade é enviado no login de qualquer
+pessoa (até 20 por vez).
+
+## Segurança das rotas `/api/conta/*`
+
+- Só `POST` altera dados, sempre com sessão válida, `Origin` do próprio site, `Sec-Fetch-Site`
+  `same-origin` (quando o navegador envia) e corpo JSON de até 2 KB.
+- Limite por conta (60 a cada 10 minutos) e por IP (120 a cada 10 minutos) para reações e favoritos;
+  20 conferências de código a cada 15 minutos por IP.
+- Ids de proposta e de político conferidos contra o formato dos ids do site
+  (`web/src/features/conta/ids.ts`).
+- Contadores só para quem tem sessão; nunca aparecem em listas, comparador, crachá ou ordenação.

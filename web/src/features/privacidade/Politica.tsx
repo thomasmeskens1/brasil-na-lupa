@@ -2,20 +2,29 @@ import Link from "next/link";
 import { VERSAO_POLITICA } from "@/features/conta/regras";
 import { Bloco } from "./Bloco";
 import { SecaoCadastro } from "./SecaoCadastro";
+import { SecaoCookies } from "./SecaoCookies";
 
 /**
  * Política de Privacidade.
- * - Versão 1 (02/11/2026): site sem cadastro. Continua valendo enquanto o cadastro estiver desligado
- *   e fica arquivada em /privacidade/versao-1.
- * - Versão 2 (02/11/2026): acrescenta o cadastro opcional (item 9). Para quem não tem conta, nada muda.
+ * - Versão 1 (02/11/2026): site sem cadastro. Arquivada em /privacidade/versao-1.
+ * - Versão 2 (02/11/2026): acrescentava o cadastro opcional; nunca entrou em vigor (o cadastro não
+ *   foi ligado enquanto ela existiu) e foi substituída pela versão 4.
+ * - Versão 3 (03/11/2026): vale enquanto o cadastro estiver desligado. Item 4 "Cookies" com a lista
+ *   dos cookies e o aviso do rodapé; encarregado indicado; histórico de versões.
+ * - Versão 4 (03/11/2026): vale com o cadastro ligado. Versão 3 + item 9 (cadastro, favoritos,
+ *   reações, tabela de finalidades e bases legais, operadoras e países, incidentes, 18 anos).
  */
 export const VERSAO_1 = { numero: "1", data: "02/11/2026" } as const;
 export const VERSAO_2 = { numero: "2", data: "02/11/2026" } as const;
+export const VERSAO_3 = { numero: "3", data: "03/11/2026" } as const;
+export const VERSAO_4 = { numero: "4", data: "03/11/2026" } as const;
 
 const EMAIL = "thomas.meskense@gmail.com";
 
 export function Politica({ comCadastro, arquivada = false }: { comCadastro: boolean; arquivada?: boolean }) {
-  const versao = comCadastro ? VERSAO_2 : VERSAO_1;
+  // Arquivada = versão 1. Em vigor: 4 com o cadastro ligado, 3 sem ele.
+  const versao = arquivada ? VERSAO_1 : comCadastro ? VERSAO_4 : VERSAO_3;
+  const atual = !arquivada;
   return (
     <article className="max-w-3xl space-y-8">
       <header>
@@ -34,17 +43,16 @@ export function Politica({ comCadastro, arquivada = false }: { comCadastro: bool
           nº 13.709/2018), quais dados são tratados quando você visita este site, para quê e quais
           são os seus direitos.
         </p>
-        {comCadastro ? (
+        {atual ? (
           <p className="meta mt-2">
-            Versão {versao.numero}, de {versao.data}. Novidade desta versão: o cadastro opcional (item 9). Para
-            quem navega sem conta, nada mudou em relação à{" "}
-            <Link href="/privacidade/versao-1" className="lk">
-              versão {VERSAO_1.numero}
-            </Link>
-            .
+            Versão {versao.numero}, de {versao.data}.{" "}
+            {comCadastro
+              ? "Novidades: cadastro opcional com favoritos e reações (item 9) e a lista de cookies (item 4)."
+              : "Novidades: a lista de cookies e o aviso do rodapé (item 4) e o encarregado de dados (item 1)."}{" "}
+            Veja o <a href="#historico" className="lk">histórico de versões</a>.
           </p>
         ) : (
-          <p className="meta mt-2">Última atualização: {versao.data}.</p>
+          <p className="meta mt-2">Versão {versao.numero}, de {versao.data}.</p>
         )}
       </header>
 
@@ -60,7 +68,7 @@ export function Politica({ comCadastro, arquivada = false }: { comCadastro: bool
             {EMAIL}
           </a>
         </p>
-        {comCadastro ? (
+        {atual ? (
           <p>
             <strong>Encarregado pelo tratamento de dados pessoais</strong> (LGPD, art. 41), de forma provisória:
             Thomas Alcantara Meskens, no mesmo e-mail acima.
@@ -72,8 +80,7 @@ export function Politica({ comCadastro, arquivada = false }: { comCadastro: bool
         {comCadastro ? (
           <p>
             <strong>Para navegar, o site não pede cadastro, login nem qualquer dado pessoal.</strong> Todo o
-            conteúdo é aberto. O cadastro é opcional e serve só para guardar o que você quer acompanhar; ele é
-            descrito no item 9. Fora do cadastro, não há formulários de contato, comentários ou envio de
+            conteúdo é aberto. O cadastro é opcional e serve só para guardar favoritos e reações; ele é descrito no item 9. Fora do cadastro, não há formulários de contato, comentários ou envio de
             informações pelo visitante.
           </p>
         ) : (
@@ -117,37 +124,39 @@ export function Politica({ comCadastro, arquivada = false }: { comCadastro: bool
         </p>
       </Bloco>
 
-      <Bloco id="armazenamento-local" titulo="4. Cookies e armazenamento no seu navegador">
-        {comCadastro ? (
-          <>
+      {atual ? (
+        <SecaoCookies comCadastro={comCadastro} />
+      ) : (
+        <Bloco id="armazenamento-local" titulo="4. Cookies e armazenamento no seu navegador">
+          {comCadastro ? (
+            <>
+              <p>
+                <strong>Sem conta:</strong> o site não usa cookies e não grava informações no armazenamento do seu
+                navegador.
+              </p>
+              <p>
+                <strong>Com conta:</strong> ao entrar, o site grava um cookie de sessão, que mantém você conectado
+                por até 30 dias ou até você sair. Durante o login também são gravados cookies técnicos temporários
+                (proteção contra falsificação de pedidos e endereço de retorno; no login com o Google, verificação
+                da resposta do Google). Todos são estritamente necessários, protegidos contra leitura por scripts
+                (httpOnly), enviados só por conexão segura (HTTPS) e restritos ao próprio site (SameSite=Lax). Não
+                há cookies de publicidade, de rastreamento ou de terceiros.
+              </p>
+            </>
+          ) : (
             <p>
-              <strong>Sem conta:</strong> o site não usa cookies e não grava informações no armazenamento do seu
-              navegador.
+              O site não usa cookies e não grava informações no armazenamento do seu navegador.
             </p>
-            <p>
-              <strong>Com conta:</strong> ao entrar, o site grava um cookie de sessão, que mantém você conectado
-              por até 30 dias ou até você sair. Durante o login também são gravados cookies técnicos temporários
-              (proteção contra falsificação de pedidos e endereço de retorno; no login com o Google, verificação
-              da resposta do Google). Todos são estritamente necessários, protegidos contra leitura por scripts
-              (httpOnly), enviados só por conexão segura (HTTPS) e restritos ao próprio site (SameSite=Lax). Não
-              há cookies de publicidade, de rastreamento ou de terceiros.
-            </p>
-          </>
-        ) : (
-          <p>
-            O site não usa cookies e não grava informações no armazenamento do seu navegador.
-          </p>
-        )}
-      </Bloco>
+          )}
+        </Bloco>
+      )}
 
       <Bloco id="opiniao-politica" titulo="5. Opinião política">
         {comCadastro ? (
           <p>
             Opinião política é dado pessoal sensível (art. 5º, II, da LGPD). Para quem navega sem conta, o site
             não coleta esse tipo de informação: ele apenas apresenta decisões e votações registradas em documentos
-            oficiais. No cadastro opcional, a lista de políticos, temas e itens que você escolhe acompanhar pode
-            revelar opinião política; por isso ela só é guardada com o seu consentimento específico e destacado
-            (art. 11, I) e com as proteções do item 9.
+            oficiais. No cadastro opcional, os favoritos (políticos, temas, propostas) e as reações (curtir e não curtir) podem revelar opinião política; por isso só são guardados com o seu consentimento específico e destacado (art. 11, I), os totais de reações são só agregados e nunca mostram quem reagiu, com as proteções do item 9.
           </p>
         ) : (
           <p>
@@ -217,7 +226,33 @@ export function Politica({ comCadastro, arquivada = false }: { comCadastro: bool
         </p>
       </Bloco>
 
-      {comCadastro ? <SecaoCadastro versao={VERSAO_POLITICA} /> : null}
+      {comCadastro && atual ? <SecaoCadastro versao={VERSAO_POLITICA} /> : null}
+
+      {atual ? (
+        <Bloco id="historico" titulo={comCadastro ? "10. Histórico de versões" : "9. Histórico de versões"}>
+          <ul className="list-disc space-y-1 pl-5">
+            <li>
+              Versão {VERSAO_1.numero}, de {VERSAO_1.data}: site sem cadastro.{" "}
+              <Link href="/privacidade/versao-1" className="lk">
+                Ler a versão {VERSAO_1.numero}
+              </Link>
+              .
+            </li>
+            <li>
+              Versão {VERSAO_2.numero}, de {VERSAO_2.data}: previa o cadastro opcional; não chegou a valer, porque o
+              cadastro não foi ligado, e foi substituída pela versão {VERSAO_4.numero}.
+            </li>
+            <li>
+              Versão {VERSAO_3.numero}, de {VERSAO_3.data}: lista de cookies e aviso do rodapé, encarregado de dados e
+              este histórico. Vale enquanto o cadastro não estiver disponível.
+            </li>
+            <li>
+              Versão {VERSAO_4.numero}, de {VERSAO_4.data}: versão {VERSAO_3.numero} mais o cadastro opcional com
+              favoritos e reações (item 9). Vale quando o cadastro está disponível.
+            </li>
+          </ul>
+        </Bloco>
+      ) : null}
     </article>
   );
 }

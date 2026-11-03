@@ -12,6 +12,8 @@ import { exigirUf, maiuscula } from "@/features/estados/pagina";
 import { NAO_DISPONIVEL, ORDEM_VOTOS, TERMOS_SP, VOTO_SEM_LEGENDA, compararVotos, formatarData, lacunaLegivel, nomeProposicao, rotuloVoto, termoSigla, termosDoEstado } from "@/features/estados/rotulos";
 import type { VotacaoPlenario } from "@/features/estados/tipos";
 import { baseUf, caminhoCasa, getUf, type UfInfo } from "@/features/estados/ufs";
+import { AcoesProposta } from "@/components/reacoes";
+import { idVotacaoEstado } from "@/features/conta/ids";
 
 /** Só as votações de Plenário têm página; as de comissões ficam na lista de votações. */
 export function generateStaticParams() {
@@ -128,6 +130,7 @@ export default async function VotacaoEstadoPage({ params }: PageProps<"/estados/
         ]}
       />
       <CabecalhoDecisao
+          acoes={<AcoesProposta proposta={idVotacaoEstado(u.uf, v.id)} />}
           tituloOficial={tituloOficial(v)}
           subtituloOficial={subtitulo(u, v, ind.siglas)}
           caminho={casa.caminho}

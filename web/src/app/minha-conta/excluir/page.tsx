@@ -18,7 +18,7 @@ async function Confirmacao() {
     <div className="space-y-4">
       <p className="text-sm leading-relaxed text-gray-800">
         A conta <strong className="text-gray-900">{usuario.email}</strong> será apagada do banco de dados na hora,
-        junto com o consentimento, as preferências e as sessões abertas. Se quiser uma cópia antes, use{" "}
+        junto com o consentimento, as preferências, os favoritos, as reações e as sessões abertas. Se quiser uma cópia antes, use{" "}
         <a href="/minha-conta/baixar-dados" className="lk" download>
           Baixar meus dados
         </a>

@@ -9,6 +9,12 @@
 export const VARIAVEIS_OBRIGATORIAS = ["DATABASE_URL", "AUTH_SECRET", "AUTH_RESEND_KEY", "EMAIL_FROM"] as const;
 export const VARIAVEIS_GOOGLE = ["AUTH_GOOGLE_ID", "AUTH_GOOGLE_SECRET"] as const;
 
+/**
+ * Cookie essencial e temporário (10 minutos, só em /entrar) com o e-mail e o caminho de volta
+ * enquanto a pessoa digita o código de login. Descrito na Política de Privacidade (Cookies).
+ */
+export const COOKIE_LOGIN = "bnl-login";
+
 type Ambiente = Record<string, string | undefined>;
 
 function definida(env: Ambiente, nome: string): boolean {
