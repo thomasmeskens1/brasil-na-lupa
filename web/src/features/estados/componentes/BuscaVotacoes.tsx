@@ -25,6 +25,7 @@ export type LinhaVotacao = [
   votos: [number, number][] | null,
   presidente: string | null,
   coletadoEm: string | null,
+  tipoTexto?: string | null,
 ];
 
 export interface ArquivoVotacoes {
@@ -53,7 +54,7 @@ function VotosComissao({ a, l, aberto, ctx }: { a: ArquivoVotacoes; l: LinhaVota
   const votos = l[12] ?? [];
   if (!votos.length) return null;
   return (
-    <details className="cartao-decisao__acima rounded-md border border-borda bg-white" open={aberto}>
+    <details className="cartao-decisao__acima rounded-md border border-borda bg-superficie" open={aberto}>
       <summary className="pr-3">Ver {votos.length === 1 ? "o voto registrado" : `os ${votos.length} votos registrados`}</summary>
       <div className="border-t border-borda px-3 pb-3 pt-2">
         {l[13] ? <p className="meta">Presidente da votação, segundo a fonte: {l[13]}</p> : null}
@@ -216,6 +217,7 @@ export function BuscaVotacoes({ ctx }: { ctx: ContextoCasa }) {
                 >
                   {plen ? (
                     <p className="text-[var(--cor-secundaria)]">
+                      {l[15] ? `${l[15]}. ` : ""}
                       {l[10] ? `${l[10].toLocaleString("pt-BR")} votos individuais publicados.` : l[9] === "nominal" ? "Votos individuais não publicados." : "Sem voto individual registrado."}
                       {l[6] && p ? ` Descrição oficial: ${l[6]}` : ""}
                     </p>

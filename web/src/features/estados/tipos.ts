@@ -30,6 +30,8 @@ export interface ResumoVotacao {
   id: string;
   plenario: boolean;
   forma: FormaVotacao;
+  /** Tipo de votação como a fonte escreve (ex.: "Votação ostensiva"). */
+  tipo_texto?: string | null;
   data: string | null;
   hora: string | null;
   orgao: string | null;
@@ -116,6 +118,7 @@ export interface VotacaoPlenario {
   casa?: string | null;
   uf?: string | null;
   tipo?: string | null;
+  tipo_texto_oficial?: string | null;
   data: string | null;
   hora: string | null;
   orgao: string | null;

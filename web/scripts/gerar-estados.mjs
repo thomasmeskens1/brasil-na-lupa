@@ -148,7 +148,7 @@ function placarDe(d) {
 }
 
 /** Campos de uma norma, aceitando o formato do governo de SP e o de dados/esquema.json → norma/decisao. */
-function lerNorma(x) {
+function lerNorma(x, coleta = null) {
   const fonte = x.fonte ?? (Array.isArray(x.fontes) ? x.fontes[0] : null);
   const links = x.links && typeof x.links === "object" ? Object.values(x.links).find((v) => typeof v === "string" && /^https?:\/\//.test(v)) : null;
   return {
@@ -165,7 +165,7 @@ function lerNorma(x) {
     projeto: x.projeto ?? (x.projeto_origem && !Array.isArray(x.projeto_origem) ? x.projeto_origem : null),
     razoes_veto: texto(x.razoes_veto),
     texto: texto(x.texto),
-    acessado_em: texto(fonte?.acessado_em),
+    acessado_em: texto(fonte?.acessado_em) ?? texto(coleta)?.slice(0, 10) ?? null,
   };
 }
 
@@ -219,6 +219,7 @@ function processar(uf) {
       id: String(d.id),
       plenario: plen,
       forma: f,
+      tipo_texto: texto(d.tipo_texto_oficial),
       data: d.data ?? null,
       hora: d.hora ?? null,
       orgao: d.orgao_nome ?? d.orgao ?? null,
@@ -263,6 +264,7 @@ function processar(uf) {
       votos,
       r.plenario ? null : r._presidente,
       r.acessado_em,
+      r.tipo_texto,
     ];
   });
   const kbV = gravar(path.join(pub, "votacoes.json"), { gerado_em: new Date().toISOString(), o: dOrg.lista, p: dProp.lista, n: dNome.lista, t: dVoto.lista, v: linhasV });
@@ -292,7 +294,7 @@ function processar(uf) {
 
   // ------------------------------------------------------------ Normas do governador
   const idxNormas = listar(p.normas, (n) => n.startsWith("indice-")).map((n) => lerJson(path.join(p.normas, n)));
-  const normas = idxNormas.flatMap((i) => i?.itens ?? []).map(lerNorma).filter((x) => x.id);
+  const normas = idxNormas.flatMap((i) => (i?.itens ?? []).map((x) => lerNorma(x, i?.atualizado_em))).filter((x) => x.id);
   normas.sort((a, b) => b.data_publicacao.localeCompare(a.data_publicacao) || String(b.numero ?? "").localeCompare(String(a.numero ?? "")));
   const TIPOS = [...new Set(["Lei", "Lei Complementar", "Decreto", "Veto Total", "Veto Parcial", ...normas.map((x) => x.tipo)])];
   const projetoLigado = (pj) => {
@@ -377,11 +379,12 @@ function processar(uf) {
       vetos: normas.filter((x) => /^Veto/i.test(x.tipo)).length,
     },
     deputados: lstDep,
-    votacoes: resumos.map(({ _votos, _presidente, ...r }) => r),
+    votacoes: resumos.map((r) => Object.fromEntries(Object.entries(r).filter(([k]) => !k.startsWith("_")))),
     votos_por_deputado: votosPor,
     ligacoes_icms: ligacoes,
   };
   gravar(path.join(saida, `${uf}.json`), indice);
+  if (uf === "sp") legadoSp(indice, path.join(pub, "normas.json"));
   return {
     resumo: {
       atualizado_em: indice.atualizado_em,
@@ -396,6 +399,27 @@ function processar(uf) {
     },
     texto: `${uf}: ${lstDep.length} deputados, ${resumos.length} votações (${plen.length} em Plenário), ${projetos.length} projetos, ${normas.length} normas${uf === "sp" ? `, ${Object.keys(ligacoes).length} decisões do ICMS ligadas` : ""}; votacoes.json ${kbV} KB, projetos.json ${kbP} KB, normas.json ${kbN} KB`,
   };
+}
+
+/**
+ * Compatibilidade: scripts/gerar-inicio.mjs (página inicial) ainda lê content/_gerado/sp.json
+ * (placar no formato do relatório da ALESP) e public/sao-paulo/normas.json. Pode sair quando
+ * ele passar a ler content/_gerado/estados/sp.json e public/estados/sp/normas.json.
+ */
+function legadoSp(indice, normasJson) {
+  const votacoes = indice.votacoes.map((v) => {
+    const i = v.placar?.itens ?? {};
+    const pl = { votos_sim: i.sim, votos_nao: i.nao, abstencao: i.abstencao, em_branco: i["Em branco"], presidente: i.Presidente, total: v.placar?.total ?? undefined };
+    const placar = Object.fromEntries(Object.entries(pl).filter(([, x]) => typeof x === "number"));
+    return { ...v, placar: Object.keys(placar).length ? placar : null };
+  });
+  gravar(path.join(content, "_gerado", "sp.json"), { ...indice, votacoes });
+  const legado = path.join(path.dirname(pubBase), "sao-paulo");
+  fs.rmSync(legado, { recursive: true, force: true });
+  if (!arg("--public")) {
+    fs.mkdirSync(legado, { recursive: true });
+    fs.copyFileSync(normasJson, path.join(legado, "normas.json"));
+  }
 }
 
 /** Atos, projetos e votações de SP com o mesmo número citado numa decisão do ICMS (nada é deduzido). */

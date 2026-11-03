@@ -30,8 +30,10 @@ export function dadoVotacao(v: {
 }
 
 /** Dado-chave de uma norma do governador: o caminho pelo qual foi decidida. */
-export function dadoNorma(tipo: string, governo: string): DadoChave {
+export function dadoNorma(tipo: string, governo: string, retificacao = false): DadoChave {
+  if (retificacao) return { tipo: "texto", rotulo: "Retificação", texto: "Correção publicada no Diário Oficial de um ato anterior, com o texto corrigido" };
   if (tipo === "Decreto") return { tipo: "sem-votacao", caminho: `ato individual do ${governo.charAt(0).toLowerCase()}${governo.slice(1)}` };
   if (/^Veto/i.test(tipo)) return { tipo: "sem-votacao", caminho: "ato individual do governador sobre projeto aprovado pelo Legislativo", detalhe: "O Legislativo pode manter ou derrubar o veto." };
-  return { tipo: "texto", rotulo: "Caminho", texto: "Lei aprovada pelo Legislativo e publicada no Diário Oficial" };
+  if (/^Lei/i.test(tipo)) return { tipo: "texto", rotulo: "Caminho", texto: "Lei aprovada pelo Legislativo e publicada no Diário Oficial" };
+  return { tipo: "texto", rotulo: "Tipo do ato, como publicado", texto: tipo };
 }

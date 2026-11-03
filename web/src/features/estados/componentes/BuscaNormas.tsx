@@ -153,8 +153,8 @@ export function BuscaNormas({ ctx }: { ctx: ContextoGoverno }) {
               data={l[4] || null}
               rotuloData="publicado em"
               forma={l._t === "Decreto" || veto ? "ato-individual" : null}
-              dado={dadoNorma(l._t, ctx.governo)}
-              quemDecidiu={l._t === "Decreto" || veto ? ctx.governo : `${ctx.casaSigla} (aprovação) e ${ctx.governo.charAt(0).toLowerCase()}${ctx.governo.slice(1)} (sanção)`}
+              dado={dadoNorma(l._t, ctx.governo, !!l[7])}
+              quemDecidiu={l[7] ? "Conforme o texto da retificação publicado no Diário Oficial" : l._t === "Decreto" || veto ? ctx.governo : !/^Lei/i.test(l._t) ? "Conforme o texto oficial publicado no Diário Oficial" : `${ctx.casaSigla} (aprovação) e ${ctx.governo.charAt(0).toLowerCase()}${ctx.governo.slice(1)} (sanção)`}
               fonte={l[6] ? { url: l[6], titulo: `Publicação no ${ctx.diario}`, orgao: ctx.diario, acessado_em: l[12] } : null}
             >
               <div className="space-y-2">
@@ -175,7 +175,7 @@ export function BuscaNormas({ ctx }: { ctx: ContextoGoverno }) {
                   </p>
                 ) : null}
                 {l[10] ? (
-                  <details className="cartao-decisao__acima rounded-md border border-borda bg-white">
+                  <details className="cartao-decisao__acima rounded-md border border-borda bg-superficie">
                     <summary className="pr-3">Razões do veto (texto integral publicado)</summary>
                     <p className="whitespace-pre-line border-t border-borda px-3 pb-3 pt-2 leading-relaxed">{l[10]}</p>
                   </details>
@@ -183,7 +183,7 @@ export function BuscaNormas({ ctx }: { ctx: ContextoGoverno }) {
                   <p className="lacuna">Razões do veto não disponíveis em fonte oficial coletada.</p>
                 ) : null}
                 {l[11] ? (
-                  <details className="cartao-decisao__acima rounded-md border border-borda bg-white">
+                  <details className="cartao-decisao__acima rounded-md border border-borda bg-superficie">
                     <summary className="pr-3">Texto da retificação publicado</summary>
                     <p className="whitespace-pre-line border-t border-borda px-3 pb-3 pt-2 leading-relaxed">{l[11]}</p>
                   </details>
