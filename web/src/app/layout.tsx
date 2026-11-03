@@ -40,7 +40,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </a>
         <header className="sticky top-0 z-40 border-b border-borda bg-superficie/95 backdrop-blur supports-[backdrop-filter]:bg-superficie/85">
           <div className="relative mx-auto flex max-w-6xl flex-col gap-2 px-4 py-3 md:flex-row md:items-center md:justify-between">
-            <Link href="/" className="inline-flex min-h-11 items-center self-start text-lg font-bold text-foreground" aria-label="Brasil na Lupa — página inicial">
+            <Link href="/" className="inline-flex min-h-11 items-center self-start text-lg font-bold text-foreground">
               <Logo />
             </Link>
             <NavPrincipal />

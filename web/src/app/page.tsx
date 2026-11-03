@@ -1,6 +1,8 @@
 import Link from "next/link";
-import { CartaoDecisao, formatarData } from "@/components/decisao";
+import { CartaoDecisao, formatarData, rotuloCaminho, type Caminho } from "@/components/decisao";
 import { ListaRecolhivel } from "@/components/lista";
+import { ContadorAnimado } from "@/components/marca/ContadorAnimado";
+import { Figurinha, SetaRabisco, Sublinhado } from "@/components/marca/Figurinhas";
 import { getAgenda, proximasSessoes } from "@/features/agenda/dados";
 import { ItemSessao } from "@/features/agenda/Sessoes";
 import { BuscaUnica } from "@/features/inicio/BuscaUnica";
@@ -8,7 +10,15 @@ import { getDecisoesSemana, simplesSeAtivo } from "@/features/inicio/dados";
 import { ListaSecoes } from "@/features/inicio/Secoes";
 import { BuscaLocal } from "@/features/representantes/BuscaLocal";
 
-const ATALHO = "cartao flex min-h-11 flex-col gap-1 hover:bg-[var(--cor-superficie)]";
+/** Contagem neutra por tipo de decisão (ordem: mais frequente primeiro; empate, alfabética). */
+function contarPorTipo(itens: { caminho: string }[]): [string, number][] {
+  const m = new Map<string, number>();
+  for (const d of itens) {
+    const r = rotuloCaminho(d.caminho as Caminho);
+    m.set(r, (m.get(r) ?? 0) + 1);
+  }
+  return [...m.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "pt-BR"));
+}
 
 export default function Home() {
   const dec = getDecisoesSemana();
@@ -17,51 +27,59 @@ export default function Home() {
 
   return (
     <div className="space-y-10">
-      <section aria-labelledby="titulo-home" className="max-w-3xl">
-        <h1 id="titulo-home" className="text-2xl font-bold text-gray-900 md:text-3xl">
-          O que foi decidido, quem decidiu e por quê
+      <section aria-labelledby="titulo-home" className="heroi entrada">
+        <p className="etiqueta-heroi">Política sem complicação, com fonte oficial</p>
+        <h1 id="titulo-home" className="manchete mt-3 text-[2rem] leading-[1.05] md:text-6xl">
+          O que estão votando e como isso <span className="destaque-neon">afeta seu bolso</span>
         </h1>
-        <p className="mt-2 leading-relaxed text-gray-800">
-          Com a fonte oficial e a data da coleta em cada informação. O site não classifica votos, leis ou políticos: quem
-          julga é o leitor.
+        <p className="mt-3 max-w-2xl text-lg leading-relaxed text-[var(--cor-secundaria)]">
+          Quem decidiu, como cada um votou e por quê. Cada informação traz o link do documento oficial e a data da coleta. O
+          site não classifica votos, leis ou políticos: quem julga é você.
         </p>
-        <div className="mt-5">
+        <div className="relative mt-6 max-w-2xl">
+          <SetaRabisco className="pointer-events-none absolute -top-12 right-2 hidden h-14 w-20 sm:block" />
           <BuscaUnica />
         </div>
       </section>
 
       <section aria-labelledby="titulo-atalhos">
-        <h2 id="titulo-atalhos" className="text-xl font-bold text-gray-900">
+        <h2 id="titulo-atalhos" className="text-2xl">
           Por onde começar
         </h2>
-        <div className="mt-3 grid grid-cols-1 gap-3 md:grid-cols-3">
-          <div className="cartao">
-            <h3 className="text-base font-semibold">
-              <Link href="/quem-me-representa" className="lk inline-flex min-h-11 items-center">
+        <Sublinhado className="mt-1 h-3 w-44" />
+        <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-3">
+          <div className="bloco-atalho">
+            <Figurinha nome="pino" className="figurinha-flutua h-14 w-14" />
+            <h3 className="mt-2 font-titulo text-xl font-extrabold">
+              <Link href="/quem-me-representa" className="lk-titulo">
                 Quem me representa?
               </Link>
             </h3>
             <BuscaLocal rotulo="Sua cidade ou estado" />
           </div>
-          <Link href="/congresso/deputados" className={ATALHO}>
-            <span className="text-base font-semibold text-[var(--cor-link)] underline underline-offset-2">Como votou meu deputado?</span>
-            <span className="text-sm text-gray-800">
-              Deputados federais em exercício, por estado, com o voto em cada votação nominal. Também:{" "}
-              <span className="whitespace-nowrap">senadores e deputados estaduais de SP.</span>
+          <Link href="/congresso/deputados" className="bloco-atalho group">
+            <Figurinha nome="congresso" className="figurinha-flutua h-14 w-14" />
+            <span className="mt-2 block font-titulo text-xl font-extrabold">Como votou meu deputado?</span>
+            <span className="mt-1 block text-[var(--cor-secundaria)]">
+              Deputados federais em exercício, por estado, com o voto em cada votação nominal. Também senadores e deputados
+              estaduais de SP.
             </span>
+            <span className="seta-atalho" aria-hidden="true">→</span>
           </Link>
-          <Link href="/impostos/icms" className={ATALHO}>
-            <span className="text-base font-semibold text-[var(--cor-link)] underline underline-offset-2">O que mudou no ICMS?</span>
-            <span className="text-sm text-gray-800">
-              Cada mudança do Imposto sobre Circulação de Mercadorias e Serviços (ICMS) que afeta São Paulo, com os valores antes
-              e depois e quem decidiu.
+          <Link href="/impostos/icms" className="bloco-atalho group">
+            <Figurinha nome="dinheiro" className="figurinha-flutua h-14 w-14" />
+            <span className="mt-2 block font-titulo text-xl font-extrabold">O que mudou no ICMS?</span>
+            <span className="mt-1 block text-[var(--cor-secundaria)]">
+              Cada mudança do imposto sobre mercadorias e serviços (ICMS) que afeta São Paulo, com os valores antes e depois e
+              quem decidiu.
             </span>
+            <span className="seta-atalho" aria-hidden="true">→</span>
           </Link>
         </div>
       </section>
 
       <section aria-labelledby="titulo-semana">
-        <h2 id="titulo-semana" className="text-xl font-bold text-gray-900">
+        <h2 id="titulo-semana" className="text-2xl">
           Decidido esta semana
         </h2>
         {dec ? (
@@ -71,6 +89,14 @@ export default function Home() {
               mais recente para a mais antiga (ordem só pela data, sem seleção).
             </p>
             {dec.itens.length ? (
+              <>
+              <ul className="mt-4 flex flex-wrap gap-2" aria-label="Decisões da semana por tipo">
+                {contarPorTipo(dec.itens).map(([rotulo, n]) => (
+                  <li key={rotulo} className="pilula-numero">
+                    <ContadorAnimado valor={n} className="font-titulo text-xl font-extrabold text-white-puro" /> {rotulo}
+                  </li>
+                ))}
+              </ul>
               <ListaRecolhivel
                 rotulo={{ singular: "decisão", plural: "decisões" }}
                 inicial={6}
@@ -94,6 +120,7 @@ export default function Home() {
                   />
                 ))}
               />
+              </>
             ) : (
               <p className="lacuna mt-3">Nenhuma decisão registrada nas fontes coletadas neste período.</p>
             )}
@@ -104,7 +131,7 @@ export default function Home() {
       </section>
 
       <section aria-labelledby="titulo-sessoes">
-        <h2 id="titulo-sessoes" className="text-xl font-bold text-gray-900">
+        <h2 id="titulo-sessoes" className="text-2xl">
           Próximas sessões
         </h2>
         <p className="meta mt-1">Plenário da Câmara, do Senado e do Congresso, como marcado pelas casas. Não é tempo real.</p>
@@ -127,7 +154,7 @@ export default function Home() {
       </section>
 
       <section aria-labelledby="titulo-secoes">
-        <h2 id="titulo-secoes" className="text-xl font-bold text-gray-900">
+        <h2 id="titulo-secoes" className="text-2xl">
           Seções disponíveis
         </h2>
         <ListaSecoes />

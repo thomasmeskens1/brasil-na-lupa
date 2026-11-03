@@ -5,24 +5,24 @@
  * acento verde-limão neon (#CCFF00) para ações, links e destaques. Regras de neutralidade
  * (diretrizes 4 e 11): o neon nunca marca partido nem distingue opções de voto (Sim/Não ficam
  * na mesma família de cinza); o efeito marca-texto vale igual para qualquer desfecho.
- * Contrastes sobre #121214 (WCAG 2): branco 18,9:1; apoio #A0A0A5 7,6:1; neon 16,6:1.
+ * Tokens do guia de web design (docs/marca/). Contrastes sobre #121214 (WCAG 2): branco 18,9:1; apoio #A0A0A5 7,6:1; neon 16,6:1.
  */
 :root {
   --background: #121214;
   --foreground: #ffffff;
   --cor-secundaria: #d4d4d8;
   --cor-texto-apoio: #a0a0a5;
-  --cor-link: #ccff00;
-  --cor-link-hover: #e5ff73;
+  --cor-link: #ffffff;
+  --cor-link-hover: #ccff00;
   --cor-acento: #ccff00;
-  --cor-acento-hover: #dfff4d;
+  --cor-acento-hover: #b3e600;
   --cor-sobre-acento: #121214;
-  --cor-acento-fundo: #1f2410;
+  --cor-acento-fundo: #262b1c;
   --cor-foco: #ccff00;
-  --cor-borda: #2e2e33;
-  --cor-borda-forte: #5a5a62;
+  --cor-borda: #2a2a32;
+  --cor-borda-forte: #5c5c68;
   --cor-superficie: #1a1a1d;
-  --cor-superficie-2: #242428;
+  --cor-superficie-2: #242429;
   --cor-placar-1: #f0f0f2;
   --cor-placar-2: #b4b4ba;
   --cor-placar-3: #7a7a82;
@@ -147,8 +147,9 @@ details > summary:hover {
   .lk {
     color: var(--cor-link);
     text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
+    text-decoration-color: var(--cor-acento);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
   }
   .lk-url {
     overflow-wrap: anywhere;
@@ -478,7 +479,17 @@ details > summary:hover {
 h1, h2, .titulo-marca {
   font-family: var(--font-titulo);
   font-weight: 800;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+}
+/* Manchetes da marca (guia, item 3): caixa alta só em títulos de seção, nunca em títulos oficiais. */
+h2, .manchete {
+  text-transform: uppercase;
+}
+.manchete {
+  font-weight: 900;
+}
+body {
+  line-height: 1.6;
 }
 h1 {
   line-height: 1.15;
@@ -492,4 +503,219 @@ h1 {
   border-radius: 0.2em 0.5em 0.3em 0.6em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+}
+
+/* ----- Visual amigável (manual da marca): blocos arredondados, figurinhas e brilho suave ----- */
+@layer components {
+  .cartao,
+  .cartao-decisao {
+    border-radius: 1rem;
+  }
+  .heroi {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    border: 1px solid var(--cor-borda);
+    background:
+      radial-gradient(60% 80% at 100% 0%, rgb(204 255 0 / 0.14), transparent 60%),
+      radial-gradient(50% 60% at 0% 100%, rgb(204 255 0 / 0.06), transparent 70%),
+      var(--cor-superficie);
+    padding: 1.75rem 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .heroi {
+      padding: 3rem 2.5rem;
+    }
+  }
+  .etiqueta-heroi {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-radius: 999px;
+    background: var(--cor-acento-fundo);
+    border: 1px solid rgb(204 255 0 / 0.35);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--cor-acento);
+  }
+  .bloco-atalho {
+    position: relative;
+    display: block;
+    border-radius: 1.25rem;
+    border: 1px solid var(--cor-borda);
+    background: var(--cor-superficie);
+    padding: 1.25rem;
+    color: var(--foreground);
+    text-decoration: none;
+    transition: transform 0.15s, border-color 0.15s, background-color 0.15s;
+  }
+  a.bloco-atalho:hover {
+    transform: translateY(-2px);
+    border-color: rgb(204 255 0 / 0.5);
+    background: var(--cor-superficie-2);
+  }
+  .seta-atalho {
+    position: absolute;
+    right: 1.25rem;
+    top: 1.25rem;
+    display: inline-flex;
+    height: 2.25rem;
+    width: 2.25rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: var(--cor-acento);
+    color: var(--cor-sobre-acento);
+    font-weight: 700;
+  }
+  .lk-titulo {
+    color: var(--foreground);
+    text-decoration: underline;
+    text-decoration-color: var(--cor-acento);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+  }
+  .bloco-secao {
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+    gap: 0.875rem;
+    border-radius: 1rem;
+    border: 1px solid var(--cor-borda);
+    background: var(--cor-superficie);
+    padding: 1rem;
+    text-decoration: none;
+    transition: border-color 0.15s, background-color 0.15s;
+  }
+  .bloco-secao:hover {
+    border-color: rgb(204 255 0 / 0.5);
+    background: var(--cor-superficie-2);
+  }
+  .pilula-numero {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.375rem;
+    border-radius: 999px;
+    border: 1px solid var(--cor-borda);
+    background: var(--cor-superficie);
+    padding: 0.375rem 0.875rem;
+    color: var(--cor-secundaria);
+  }
+}
+
+/* ----- Guia de web design: componentes e movimento ----- */
+:root {
+  --sombra-neon: 0 0 20px rgb(204 255 0 / 0.25);
+  --raio-cartao: 16px;
+}
+@layer components {
+  .cartao,
+  .cartao-decisao,
+  .bloco-secao {
+    border-radius: var(--raio-cartao);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  }
+  .cartao-decisao:hover,
+  a.bloco-atalho:hover,
+  .bloco-secao:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-neon);
+  }
+  .botao-escuro {
+    font-family: var(--font-titulo);
+    font-weight: 800;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .botao-escuro:hover,
+  .botao:hover {
+    transform: scale(1.03);
+    box-shadow: var(--sombra-neon);
+  }
+  .botao:active,
+  .botao-escuro:active {
+    transform: scale(0.97);
+  }
+  /* Marca-texto (guia 4.A), com leve inclinação. */
+  .destaque-neon {
+    display: inline-block;
+    transform: rotate(-1deg);
+    border-radius: 4px;
+    background: var(--cor-acento);
+    color: var(--cor-sobre-acento);
+    padding: 2px 8px;
+    font-weight: 900;
+  }
+  .heroi input {
+    border-color: var(--cor-acento) !important;
+    box-shadow: 0 0 0 1px rgb(204 255 0 / 0.25);
+  }
+  .heroi input:focus {
+    box-shadow: var(--sombra-neon);
+  }
+}
+
+/* Movimento: só para quem não pediu redução de movimento (WCAG 2.3.3). */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes subir {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes pintar {
+    from { clip-path: inset(0 100% 0 0); }
+    to { clip-path: inset(0 0 0 0); }
+  }
+  @keyframes flutuar {
+    0%, 100% { transform: translateY(0) rotate(-3deg); }
+    50% { transform: translateY(-6px) rotate(3deg); }
+  }
+  @keyframes desenhar {
+    from { stroke-dashoffset: 1; }
+    to { stroke-dashoffset: 0; }
+  }
+  @keyframes brilho {
+    0%, 100% { filter: drop-shadow(0 0 0 rgb(204 255 0 / 0)); }
+    50% { filter: drop-shadow(0 0 10px rgb(204 255 0 / 0.55)); }
+  }
+  @keyframes surgir {
+    from { opacity: 0; translate: 0 24px; scale: 0.98; }
+    to { opacity: 1; translate: 0 0; scale: 1; }
+  }
+  .entrada > * {
+    animation: subir 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .entrada > *:nth-child(2) { animation-delay: 0.08s; }
+  .entrada > *:nth-child(3) { animation-delay: 0.16s; }
+  .entrada > *:nth-child(4) { animation-delay: 0.24s; }
+  .entrada > *:nth-child(5) { animation-delay: 0.32s; }
+  .destaque-neon,
+  .marca-texto {
+    animation: pintar 0.7s 0.45s cubic-bezier(0.6, 0, 0.2, 1) both;
+  }
+  .figurinha-flutua {
+    animation: flutuar 4s ease-in-out infinite;
+  }
+  .figurinha-flutua:nth-of-type(2n) {
+    animation-duration: 5s;
+    animation-delay: -1.5s;
+  }
+  .rabisco path {
+    stroke-dasharray: 1;
+    animation: desenhar 1s 0.8s ease-out both;
+  }
+  .logo-brilho {
+    animation: brilho 3.5s ease-in-out infinite;
+  }
+  /* Revelação ao rolar (navegadores com animação por rolagem; nos demais, aparece direto). */
+  @supports (animation-timeline: view()) {
+    .revelar,
+    .cartao-decisao,
+    .bloco-secao,
+    .bloco-atalho {
+      animation: surgir linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 22%;
+    }
+  }
 }
