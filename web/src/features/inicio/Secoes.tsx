@@ -13,7 +13,7 @@ export const SECOES = [
     href: "/congresso",
     icone: "congresso" as NomeFigurinha,
     titulo: "Congresso Nacional",
-    texto: "Votações da Câmara dos Deputados e do Senado Federal, o voto de cada parlamentar e, dos deputados, a presença em Plenário e os gastos da cota parlamentar.",
+    texto: "Votações da Câmara dos Deputados e do Senado Federal, o voto de cada parlamentar e os gastos da cota parlamentar; dos deputados, também a presença em Plenário.",
   },
   {
     href: "/agenda",
@@ -28,10 +28,10 @@ export const SECOES = [
     texto: "Medidas provisórias com a exposição de motivos, vetos com as razões oficiais e o que o Congresso decidiu, e leis e decretos.",
   },
   {
-    href: "/sao-paulo",
+    href: "/estados",
     icone: "mapa" as NomeFigurinha,
-    titulo: "Estado de São Paulo",
-    texto: "Votações da Assembleia Legislativa (ALESP) com o voto de cada deputado estadual, projetos apresentados e as leis, decretos e vetos do governador.",
+    titulo: "Estados",
+    texto: "Votações das Assembleias Legislativas (com o voto de cada deputado estadual quando a votação é nominal), projetos e as leis e decretos dos governadores, estado por estado.",
   },
   {
     href: "/atibaia",

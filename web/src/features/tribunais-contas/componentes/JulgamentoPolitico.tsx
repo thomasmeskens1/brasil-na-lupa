@@ -86,8 +86,8 @@ const PLACAR: [keyof NonNullable<VotacaoAlespLigada["placar"]>, string][] = [
 
 function VotacaoAlesp({ v }: { v: VotacaoAlespLigada }) {
   const plenario = v.orgao?.startsWith("Plenário") ?? false;
-  const pagina = plenario && getVotacaoPlenario(v.votacao_ref) ? `/sao-paulo/votacoes/${v.votacao_ref}` : null;
-  const naLista = !plenario ? `/sao-paulo/votacoes#id=${encodeURIComponent(v.votacao_ref)}` : null;
+  const pagina = plenario && getVotacaoPlenario(v.votacao_ref) ? `/estados/sp/votacoes/${v.votacao_ref}` : null;
+  const naLista = !plenario ? `/estados/sp/votacoes#id=${encodeURIComponent(v.votacao_ref)}` : null;
   const placar = v.placar ? PLACAR.filter(([k]) => typeof v.placar?.[k] === "number") : [];
   const porTipo = Object.entries(v.votos_por_tipo ?? {});
   return (

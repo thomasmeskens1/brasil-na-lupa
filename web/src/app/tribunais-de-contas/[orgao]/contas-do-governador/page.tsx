@@ -72,7 +72,7 @@ export default async function ContasGovernadorPage({ params }: PageProps<"/tribu
             {sp ? (
               <>
                 ; as votações aparecem também na seção{" "}
-                <Link href="/sao-paulo/votacoes" className="lk">
+                <Link href="/estados/sp/votacoes" className="lk">
                   votações da ALESP
                 </Link>
               </>

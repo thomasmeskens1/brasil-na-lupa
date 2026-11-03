@@ -48,7 +48,7 @@ export default function CompararPage() {
         <h1 className="mt-1 text-2xl font-bold text-foreground md:text-3xl">Comparar parlamentares</h1>
         <p className="mt-3 leading-relaxed">
           Escolha de 2 a 5 parlamentares da mesma casa para ver lado a lado os dados oficiais: partido, estado, presença em
-          Plenário e cota parlamentar em {ANO_RESUMO} (coletados só para a Câmara), quantas votações nominais têm voto registrado e
+          Plenário (só a Câmara publica por sessão) e cota parlamentar em {ANO_RESUMO}, quantas votações nominais têm voto registrado e
           em quais delas votaram igual ou diferente. Não há nota, índice nem ranking. A escolha fica só no endereço da página
           (que pode ser copiado e compartilhado); nada é guardado.
         </p>

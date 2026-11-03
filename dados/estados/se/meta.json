@@ -1,0 +1,100 @@
+{
+  "atualizado_em": "2026-11-03T20:26:13.031Z",
+  "ultima_execucao": "2026-11-03T20:26:13.031Z",
+  "uf": "SE",
+  "casa": "alese",
+  "nome": "Assembleia Legislativa do Estado de Sergipe (Alese)",
+  "periodo": {
+    "anos": [
+      "2026"
+    ]
+  },
+  "modo": "incremental",
+  "orcamento_min": 20,
+  "user_agent": "brasil-na-lupa-coletor/1.0 (coleta automatica de dados abertos para o site neutro de acompanhamento politico Brasil na Lupa; Node.js)",
+  "contagens": {
+    "parlamentares": 29,
+    "parlamentares_em_exercicio": 24,
+    "proposicoes": 5844,
+    "proposicoes_por_ano": {
+      "2026": 5844
+    },
+    "votacoes": 1812,
+    "normas": 434
+  },
+  "fontes": [
+    {
+      "titulo": "Parlamentares — dados abertos do SPL da Alese",
+      "url": "https://aleselegis.al.se.leg.br/api/publico/parlamentar/",
+      "orgao": "Assembleia Legislativa do Estado de Sergipe (Alese)",
+      "acessado_em": "2026-11-03"
+    },
+    {
+      "titulo": "Proposições e tramitação — dados abertos do SPL da Alese",
+      "url": "https://aleselegis.al.se.leg.br/api/publico/proposicao/",
+      "orgao": "Assembleia Legislativa do Estado de Sergipe (Alese)",
+      "acessado_em": "2026-11-03"
+    },
+    {
+      "titulo": "LegisOn — API pública de atos (PGE-SE)",
+      "url": "https://api.legislacao.se.gov.br/api/v1/public/acts",
+      "orgao": "Procuradoria-Geral do Estado de Sergipe (PGE-SE) — LegisOn",
+      "acessado_em": "2026-11-03"
+    },
+    {
+      "titulo": "Legislação — consulta por ano (Alese)",
+      "url": "https://aleselegis.al.se.leg.br/legislacao/consulta-legislacao.aspx",
+      "orgao": "Assembleia Legislativa do Estado de Sergipe (Alese)",
+      "acessado_em": "2026-11-03"
+    }
+  ],
+  "robots": {
+    "aleselegis.al.se.leg.br": {
+      "host": "aleselegis.al.se.leg.br",
+      "lido_em": "2026-11-03T20:19:27.985Z",
+      "status": 200,
+      "observacao": null,
+      "grupo_aplicado": "*",
+      "disallow": [],
+      "allow": [
+        "/"
+      ],
+      "raiz_permitida": true
+    },
+    "api.legislacao.se.gov.br": {
+      "host": "api.legislacao.se.gov.br",
+      "lido_em": "2026-11-03T20:26:04.060Z",
+      "status": 404,
+      "observacao": "robots.txt inexistente: sem regras declaradas",
+      "grupo_aplicado": "nenhum",
+      "disallow": [],
+      "allow": [],
+      "raiz_permitida": true
+    }
+  },
+  "requisicoes": {
+    "aleselegis.al.se.leg.br": 116
+  },
+  "falhas": [],
+  "observacoes": [
+    "Voto de cada deputado: a Casa não publica; o site mostra o resultado oficial e \"Informação não disponível em fonte oficial\" para o voto individual, sem deduzir voto de \"unanimidade\" ou de notícia.",
+    "Deliberação = trecho da tramitação que diz literalmente \"aprovado(a)\" ou \"rejeitado(a)\"; parecer \"pela aprovação\" é opinião e fica só na tramitação.",
+    "Autor que não é deputado nem órgão público aparece como \"[nome de particular omitido]\"; CPF/CNPJ, telefone e endereço do autor nunca são gravados.",
+    "Endereços de arquivo com domínio duplicado na API da Alese são corrigidos. O \"Resumo Gerado com Inteligência Artificial\" das páginas da Alese não é usado."
+  ],
+  "cursor": {
+    "proposicoes": {
+      "2026": {
+        "proxima_pagina": 1,
+        "paginas": 117,
+        "total": 5844,
+        "concluido_em": "2026-11-03"
+      }
+    },
+    "normas": {
+      "2026": {
+        "concluido_em": "2026-11-03"
+      }
+    }
+  }
+}

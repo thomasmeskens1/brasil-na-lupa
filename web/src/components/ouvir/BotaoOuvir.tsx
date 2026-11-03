@@ -116,15 +116,15 @@ export function BotaoOuvir({ alvo = "conteudo" }: { alvo?: string }) {
   return (
     <div className="flex flex-wrap items-center gap-2" data-nao-ler>
       {estado === "parado" ? (
-        <button type="button" className="botao" onClick={ouvir}>
+        <button type="button" className="botao botao-mini" onClick={ouvir}>
           <span aria-hidden="true">▶</span> Ouvir esta página
         </button>
       ) : (
         <>
-          <button type="button" className="botao" onClick={alternarPausa} aria-pressed={estado === "pausado"}>
+          <button type="button" className="botao botao-mini" onClick={alternarPausa} aria-pressed={estado === "pausado"}>
             {estado === "pausado" ? "Continuar leitura" : "Pausar leitura"}
           </button>
-          <button type="button" className="botao" onClick={parar}>
+          <button type="button" className="botao botao-mini" onClick={parar}>
             Parar
           </button>
         </>

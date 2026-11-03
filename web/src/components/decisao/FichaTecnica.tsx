@@ -32,7 +32,7 @@ export function FichaTecnica({ itens, titulo = "Ficha técnica", aberto = false,
   const com = itens.filter((i) => !vazio(i.valor));
   const sem = itens.filter((i) => vazio(i.valor)).map((i) => i.rotulo);
   return (
-    <details className={`rounded-md border border-borda bg-white ${className}`} open={aberto || undefined}>
+    <details className={`rounded-md border border-borda bg-superficie ${className}`} open={aberto || undefined}>
       <summary className="pr-3">
         {titulo} <span className="font-normal text-[var(--cor-secundaria)]">({com.length} {com.length === 1 ? "campo" : "campos"})</span>
       </summary>
@@ -69,7 +69,7 @@ export interface ItemRecolhivelProps {
 /** Item de acordeão (details/summary). Use dentro de ListaRecolhivel para listas longas. */
 export function ItemRecolhivel({ resumo, selo, aberto = false, id, className = "", children }: ItemRecolhivelProps) {
   return (
-    <details id={id} className={`rounded-md border border-borda bg-white ${className}`} open={aberto || undefined}>
+    <details id={id} className={`rounded-md border border-borda bg-superficie ${className}`} open={aberto || undefined}>
       <summary className="pr-3">
         <span className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
           <span className="min-w-0">{resumo}</span>

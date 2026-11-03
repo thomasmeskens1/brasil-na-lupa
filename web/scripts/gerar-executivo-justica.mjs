@@ -66,8 +66,10 @@ const titulosStf = lerJson(path.join(dirTitulos, "stf.json"))?.itens ?? {};
 /** Mesmas regras de components/decisao/rotulos.ts → tituloAprovado. */
 function aprovado(s) {
   if (!s || typeof s.titulo !== "string" || !s.titulo.trim()) return false;
+  // Mesma regra de tituloAprovado(): só título "estruturado" aprovado pelo verificador.
+  if (s.origem !== "estruturado") return false;
   const v = s.verificacao;
-  if (!v) return true;
+  if (!v || v.aprovado_pelo_verificador !== true) return false;
   if (v.numeros_e_datas_conferidos === false || v.verbo_permitido === false) return false;
   if (Array.isArray(v.palavras_proibidas) && v.palavras_proibidas.length > 0) return false;
   return v.veto_vies === null || v.veto_vies === undefined || v.veto_vies === false;
@@ -75,7 +77,7 @@ function aprovado(s) {
 
 /** Título para os índices de busca: só o aprovado que reformula o texto (o "oficial" é o próprio texto). */
 // Mesma chave de web/src/components/decisao/rotulos.ts (TITULOS_SIMPLES_ATIVOS).
-const TITULOS_SIMPLES_ATIVOS = false;
+const TITULOS_SIMPLES_ATIVOS = true; // a regra de aprovação (só "estruturado" verificado) fica em tituloAprovado()
 
 function tituloUtil(itens, id) {
   if (!TITULOS_SIMPLES_ATIVOS) return null;

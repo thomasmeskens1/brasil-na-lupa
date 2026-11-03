@@ -23,7 +23,7 @@ concurrency:
 jobs:
   coletar:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 100
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -33,6 +33,10 @@ jobs:
         run: node scripts/coleta/camara/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
       - name: Senado Federal
         run: node scripts/coleta/senado/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
+      - name: Senado Federal (registro nas votações e CEAPS)
+        run: |
+          node scripts/coleta/senado/presenca.mjs
+          node scripts/coleta/senado/despesas.mjs ${{ inputs.completo && '--forcar' || '' }}
       - name: Agenda e pauta do Plenário (depois de Câmara e Senado)
         run: node scripts/coleta/agenda/coletar.mjs
       - name: Executivo federal
@@ -80,11 +84,26 @@ jobs:
         run: |
           node scripts/coleta/titulos/gerar.mjs
           node scripts/coleta/titulos/verificar.mjs
+      - name: Assembleias de Sergipe e da Bahia (SPL Ágape)
+        env:
+          COLETA_ORCAMENTO_MIN: "20"
+        run: |
+          node scripts/coleta/estados/agape/testes.mjs
+          node scripts/coleta/estados/agape/coletar.mjs
+      - name: Assembleias do Rio Grande do Norte e do Espírito Santo
+        # O ES lê os boletins em PDF com o pdfplumber do ambiente da ALESP (preparado acima).
+        env:
+          COLETA_ORCAMENTO_MIN: "20"
+        run: |
+          node scripts/coleta/estados/rn/testes.mjs
+          node scripts/coleta/estados/es/testes.mjs
+          node scripts/coleta/estados/rn/coletar.mjs
+          node scripts/coleta/estados/es/coletar.mjs
       - name: Registrar mudanças
         run: |
           git config user.name "coleta-diaria"
           git config user.email "coleta-diaria@users.noreply.github.com"
-          git add dados/camara dados/senado dados/agenda dados/stj dados/stf dados/executivo dados/alesp dados/governo-sp dados/atibaia dados/tribunais-contas dados/eleitos dados/titulos
+          git add dados/camara dados/senado dados/agenda dados/stj dados/stf dados/executivo dados/alesp dados/governo-sp dados/atibaia dados/tribunais-contas dados/eleitos dados/titulos dados/estados/se dados/estados/ba dados/estados/rn dados/estados/es
           # meta.json muda a cada execução; só publica se algum dado de fato mudou.
           if git diff --cached --name-only | grep -qv '/meta\.json$'; then
             git commit -m "Coleta diária: dados oficiais ($(date -u +%F))"

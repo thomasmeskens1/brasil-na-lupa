@@ -152,7 +152,7 @@ function link(x, ids) {
   if (x.vinculo_confianca !== "exata" || !x.parlamentar_casa || !x.parlamentar_id) return null;
   const id = String(x.parlamentar_id);
   if (!ids[x.parlamentar_casa]?.has(id)) return null;
-  if (x.parlamentar_casa === "alesp") return `/sao-paulo/deputados/${id}`;
+  if (x.parlamentar_casa === "alesp") return `/estados/sp/deputados/${id}`;
   return `/congresso/${x.parlamentar_casa}/parlamentares/${id}`;
 }
 

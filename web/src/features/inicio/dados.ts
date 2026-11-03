@@ -11,7 +11,7 @@ import type { Caminho, DadoChave, FonteResumo, FormaDecisao, TituloSimples } fro
  * Títulos em linguagem simples ainda em revisão: enquanto for false, os cartões usam o título
  * oficial. Para liberar, troque para true (o dado já vem de dados/titulos via gerar-inicio.mjs).
  */
-export const TITULOS_SIMPLES_ATIVOS = false;
+export const TITULOS_SIMPLES_ATIVOS = true; // a regra fica em tituloAprovado() (só "estruturado" verificado)
 
 export function simplesSeAtivo(s: TituloSimples | null | undefined): TituloSimples | null {
   return TITULOS_SIMPLES_ATIVOS ? (s ?? null) : null;

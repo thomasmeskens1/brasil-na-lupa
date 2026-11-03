@@ -1,0 +1,121 @@
+{
+  "atualizado_em": "2026-11-03T20:40:40.999Z",
+  "ultima_execucao": "2026-11-03T20:40:40.999Z",
+  "uf": "ES",
+  "casa": "ales",
+  "periodo": {
+    "anos": [
+      2026
+    ],
+    "inicio_cobertura": "2023-01-01",
+    "fim": "2026-11-03"
+  },
+  "modo": "incremental",
+  "duracao_s": 299,
+  "orcamento_min": 10,
+  "contagens": {
+    "parlamentares": {
+      "total": 35,
+      "em_exercicio": 30
+    },
+    "votacoes_por_ano": {
+      "2026": {
+        "votacoes": 55,
+        "por_tipo": {
+          "nominal": 55
+        },
+        "plenario": 55,
+        "comissoes": 0,
+        "com_votos_individuais": 55,
+        "votos": 1650
+      }
+    },
+    "boletins_nesta_execucao": {
+      "boletins_na_fonte": 454,
+      "no_periodo": 55,
+      "processados": 8,
+      "publicados": 8,
+      "nao_publicados": 0,
+      "ja_gravados": 47
+    },
+    "proposicoes_nesta_execucao": {
+      "2026": {
+        "no_indice": 705,
+        "por_sigla_na_fonte": {
+          "PL": 545,
+          "PLC": 29,
+          "PEC": 4,
+          "PDL": 106,
+          "PR": 11,
+          "MV": 3,
+          "MGE": 7
+        },
+        "paginas_com_erro": 0
+      }
+    },
+    "normas_nesta_execucao": {
+      "2026": {
+        "total": 260,
+        "por_tipo": {
+          "Lei Ordinária": 237,
+          "Emenda à Constituição Estadual": 2,
+          "Lei Complementar": 21
+        }
+      }
+    },
+    "requisicoes": 49
+  },
+  "fontes": [
+    {
+      "titulo": "Dados abertos da ALES — catálogo",
+      "url": "https://www3.al.es.gov.br/dados-abertos.aspx",
+      "orgao": "Assembleia Legislativa do Estado do Espírito Santo (ALES)",
+      "acessado_em": "2026-11-03"
+    },
+    {
+      "titulo": "API pública de proposições",
+      "url": "https://www3.al.es.gov.br/api/publico/proposicao/",
+      "orgao": "Assembleia Legislativa do Estado do Espírito Santo (ALES)",
+      "acessado_em": "2026-11-03"
+    },
+    {
+      "titulo": "API pública de legislação",
+      "url": "https://www3.al.es.gov.br/api/publico/legislacao",
+      "orgao": "Assembleia Legislativa do Estado do Espírito Santo (ALES)",
+      "acessado_em": "2026-11-03"
+    }
+  ],
+  "robots": {
+    "www3.al.es.gov.br": {
+      "url": "https://www3.al.es.gov.br/robots.txt",
+      "status": 404,
+      "lido_em": "2026-11-03T20:35:42.127Z",
+      "crawl_delay_s": null,
+      "disallow": [],
+      "allow": [],
+      "observacao": "sem robots.txt (HTTP 404): nenhuma restrição declarada"
+    }
+  },
+  "observacoes": [
+    "Voto individual: só nos Boletins de Votação Nominal (RVP) publicados pela ALES. A maior parte das votações da Casa é simbólica e não tem registro nominal; elas não aparecem em votacoes/.",
+    "Boletim publicado só quando as linhas (deputado, partido, voto) conferem com os totais impressos no próprio boletim (Sim, Não, Abstenção) e o modo é \"Nominal\"; os demais ficam em cursor.boletins_nao_publicados com o motivo.",
+    "Voto reproduzido como no boletim (\"Sim\", \"Não\", \"Abstenção\", \"Ausente\", \"Não votou\", \"Licenciado\"), inclusive \"Ausente\" com horário. Nome e partido como impressos (abreviados); parlamentar_id só com correspondência única na lista oficial (expansões fixas: DEL = Delegado, ENG = Engenheiro).",
+    "Resultado: \"aprovada\"/\"rejeitada\" só quando o boletim diz isso; outros textos (ex.: \"MANTIDO O VETO\") ficam em resultado_texto_oficial, com resultado null.",
+    "Proposição votada: lida do título do boletim e ligada à API só quando a busca por sigla, número e ano devolve exatamente uma proposição.",
+    "A API de proposições traz CPF, e-mail e telefone de quem protocolou (AutorRequerenteDados): não são gravados. Autor mantido só quando é órgão/cargo público ou deputado da lista oficial; senão, nome omitido.",
+    "A lista de proposições/boletins às vezes responde erro numa página (\"Nullable object must have a value.\"); o trecho é refeito de 10 em 10 e o que continuar com erro é registrado nas pendências.",
+    "Índice de proposições: PL, PLC, PEC, PDL, PR, MV (veto) e MGE (mensagem do Governo do Estado), listados por sigla; ementa = campo \"assunto\" da fonte, com nomes de particulares mascarados.",
+    "Normas: leis ordinárias (tipo 3), complementares (4) e emendas à Constituição Estadual (2) da API de legislação. A API não traz os decretos do Governador (só os da própria Assembleia); decretos do Executivo exigem o DIO-ES em PDF e ficam para depois.",
+    "A rota de detalhe de sessão (/api/publico/spl/sessoes/?id=) respondeu HTTP 500 na pesquisa; sessões não são coletadas.",
+    "Pendências desta execução: lista de boletins: https://www3.al.es.gov.br/api/publico/proposicao/?sigla=RVP&pag=43&qtd=10: Nullable object must have a value."
+  ],
+  "cursor": {
+    "proposicoes_listadas_em": {
+      "2026": "2026-11-03"
+    },
+    "normas_listadas_em": {
+      "2026": "2026-11-03"
+    },
+    "boletins_nao_publicados": {}
+  }
+}
