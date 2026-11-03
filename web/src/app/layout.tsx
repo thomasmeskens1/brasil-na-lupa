@@ -67,6 +67,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 Metodologia
               </Link>
               <span aria-hidden="true">·</span>
+              <Link href="/participar" className="lk inline-flex min-h-11 items-center px-1">
+                Participar
+              </Link>
+              <span aria-hidden="true">·</span>
               <Link href="/privacidade" className="lk inline-flex min-h-11 items-center px-1">
                 Privacidade
               </Link>
