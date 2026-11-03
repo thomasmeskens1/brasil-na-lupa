@@ -22,7 +22,7 @@ const saida = (p: number) => 1 - Math.pow(1 - p, 3);
 const trecho = (t: number, a: number, b: number) => Math.min(1, Math.max(0, (t - a) / (b - a)));
 
 /** Roda antes da pintura (script no HTML): decide se a abertura aparece, sem piscar. */
-export const SCRIPT_ABERTURA = `try{var d=document.documentElement;d.dataset.abertura=(sessionStorage.getItem("${CHAVE}")||matchMedia("(prefers-reduced-motion: reduce)").matches)?"vista":"ativa"}catch(e){document.documentElement.dataset.abertura="vista"}`;
+export const SCRIPT_ABERTURA = `try{var d=document.documentElement;d.dataset.abertura=(!/[?&]abertura/.test(location.search)&&(sessionStorage.getItem("${CHAVE}")||matchMedia("(prefers-reduced-motion: reduce)").matches))?"vista":"ativa"}catch(e){document.documentElement.dataset.abertura="vista"}`;
 
 export function AberturaMarca() {
   const raiz = useRef<HTMLDivElement>(null);
@@ -32,7 +32,8 @@ export function AberturaMarca() {
     const html = document.documentElement;
     let vista = true;
     try {
-      vista = !!sessionStorage.getItem(CHAVE) || matchMedia("(prefers-reduced-motion: reduce)").matches;
+      // ?abertura no endereço força a abertura (para testar), mesmo já vista ou com movimento reduzido.
+      vista = !/[?&]abertura/.test(location.search) && (!!sessionStorage.getItem(CHAVE) || matchMedia("(prefers-reduced-motion: reduce)").matches);
     } catch {
       /* sem sessionStorage: não mostra */
     }
