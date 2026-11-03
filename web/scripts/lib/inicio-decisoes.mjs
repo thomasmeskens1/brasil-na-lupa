@@ -105,7 +105,7 @@ export function decisoesDaSemana(content, webDir, hoje) {
       {
         id: `alesp-${v.id}`,
         ordem: `${v.data}T${v.hora ?? "00:00"}`,
-        href: `/sao-paulo/votacoes/${v.id}`,
+        href: `/estados/sp/votacoes/${v.id}`,
         tituloOficial: corta(`${p.rotulo ?? "Votação"}: ${p.ementa ?? v.descricao ?? ""}`, 180),
         subtitulo: corta(v.descricao, 220) || null,
         caminho: "alesp",
@@ -167,7 +167,7 @@ export function decisoesDaSemana(content, webDir, hoje) {
   // Leis e decretos (federal, SP e Atibaia): índices públicos já gerados pelas outras seções.
   const normas = [
     { arq: "executivo/normas.json", secao: "executivo", rota: "/executivo/leis-e-decretos", url: 6, data: 3, titulo: 2, ementa: 4, esfera: "federal" },
-    { arq: "sao-paulo/normas.json", secao: "governo-sp", rota: "/sao-paulo/leis-e-decretos", url: 6, data: 4, titulo: 2, ementa: 5, esfera: "sp" },
+    { arq: "sao-paulo/normas.json", secao: "governo-sp", rota: "/estados/sp/leis-e-decretos", url: 6, data: 4, titulo: 2, ementa: 5, esfera: "sp" },
     { arq: "atibaia/normas.json", secao: "atibaia", rota: "/atibaia/leis-e-decretos", url: 8, data: 3, titulo: 2, ementa: 4, esfera: "atibaia" },
   ];
   const ESFERA = {
@@ -332,10 +332,10 @@ export function indiceBusca(content, webDir) {
     for (const it of vistos.values()) it[4] = it[4] === 1 ? "1 votação" : `${it[4]} votações`;
   }
   const sp = lerJson(path.join(content, "_gerado", "sp.json"));
-  for (const d of sp?.deputados ?? []) i.push([2, d.nome, null, `/sao-paulo/deputados/${d.id}`, d.partido ?? ""]);
+  for (const d of sp?.deputados ?? []) i.push([2, d.nome, null, `/estados/sp/deputados/${d.id}`, d.partido ?? ""]);
   for (const v of sp?.votacoes ?? []) {
     if (!v.plenario) continue;
-    i.push([5, corta(`${v.proposicao?.rotulo ?? "Votação"}: ${v.proposicao?.ementa ?? v.descricao ?? ""}`, 100), v.data ?? null, `/sao-paulo/votacoes/${v.id}`, ""]);
+    i.push([5, corta(`${v.proposicao?.rotulo ?? "Votação"}: ${v.proposicao?.ementa ?? v.descricao ?? ""}`, 100), v.data ?? null, `/estados/sp/votacoes/${v.id}`, ""]);
   }
   const ex = lerJson(path.join(content, "_gerado", "executivo.json"));
   for (const m of ex?.mpvs ?? []) i.push([6, corta(`MP ${m.numero}/${m.ano}: ${m.ementa ?? ""}`, 100), m.data ?? null, `/executivo/medidas-provisorias/${m.id}`, m.situacao ?? ""]);

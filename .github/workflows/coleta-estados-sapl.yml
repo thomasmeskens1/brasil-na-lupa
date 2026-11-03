@@ -1,0 +1,51 @@
+# Assembleias com SAPL 3 (AM, PI, PB, RO): o robots.txt pede 1 requisição por minuto por host,
+# então a coleta roda em workflow próprio, com orçamento de tempo e cursor em meta.json.
+# Diário: acompanha o que é novo (25 min). Manual: "orcamento" maior adianta o histórico
+# (ex.: 330 min ≈ 325 requisições por host); o cursor continua de onde parou.
+name: Coleta das Assembleias (SAPL)
+
+on:
+  schedule:
+    - cron: "17 14 * * *"
+  workflow_dispatch:
+    inputs:
+      orcamento:
+        description: "Minutos de coleta por execução (25 diário; até 330 para adiantar o histórico)"
+        type: number
+        default: 25
+
+permissions:
+  contents: write
+
+# Mesmo grupo da coleta diária: as duas nunca rodam ao mesmo tempo nem disputam o push.
+concurrency:
+  group: coleta-diaria
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Testes do coletor
+        run: node scripts/coleta/estados/sapl/testes.mjs
+      - name: Coleta (AM, PI, PB, RO em paralelo, 1 requisição por minuto por host)
+        env:
+          COLETA_ORCAMENTO_MIN: ${{ inputs.orcamento || 25 }}
+        run: node scripts/coleta/estados/sapl/coletar.mjs --uf am,pi,pb,ro
+      - name: Registrar mudanças (inclui o cursor em meta.json, para continuar de onde parou)
+        run: |
+          git config user.name "coleta-diaria"
+          git config user.email "coleta-diaria@users.noreply.github.com"
+          git add dados/estados/am dados/estados/pi dados/estados/pb dados/estados/ro
+          if git diff --cached --quiet; then
+            echo "Nada novo."
+          else
+            git commit -m "Coleta das Assembleias (SAPL): AM, PI, PB, RO ($(date -u +%F))"
+            git pull --rebase
+            git push
+          fi

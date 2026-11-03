@@ -17,7 +17,7 @@ export const ITENS_NAV: ItemNav[] = [
   { href: "/executivo", rotulo: "Executivo" },
   { href: "/justica", rotulo: "Justiça" },
   { href: "/tribunais-de-contas", rotulo: "Tribunais de Contas" },
-  { href: "/sao-paulo", rotulo: "São Paulo" },
+  { href: "/estados", rotulo: "Estados" },
   { href: "/atibaia", rotulo: "Atibaia" },
   { href: "/agenda", rotulo: "Agenda" },
   { href: "/metodologia", rotulo: "Metodologia" },

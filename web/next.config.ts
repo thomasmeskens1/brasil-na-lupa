@@ -2,6 +2,13 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   cacheComponents: true,
+  // A antiga seção "São Paulo" virou "Estados" (SP em /estados/sp).
+  async redirects() {
+    return [
+      { source: "/sao-paulo", destination: "/estados/sp", permanent: true },
+      { source: "/sao-paulo/:path*", destination: "/estados/sp/:path*", permanent: true },
+    ];
+  },
   partialPrefetching: true,
   // As páginas do Congresso são geradas no build a partir de content/ (~45 MB de JSON).
   // Nada de content/ entra no pacote das funções: um id não gerado no build vira 404.
@@ -32,8 +39,8 @@ const nextConfig: NextConfig = {
     "/justica": ["./content/**/*", "./public/**/*"],
     "/justica/**": ["./content/**/*", "./public/**/*"],
     // São Paulo e Atibaia: páginas geradas no build; índices de busca em public/ (arquivos estáticos).
-    "/sao-paulo": ["./content/**/*", "./public/**/*"],
-    "/sao-paulo/**": ["./content/**/*", "./public/**/*"],
+    "/estados": ["./content/**/*", "./public/**/*"],
+    "/estados/**": ["./content/**/*", "./public/**/*"],
     "/atibaia": ["./content/**/*", "./public/**/*"],
     "/atibaia/**": ["./content/**/*", "./public/**/*"],
     // Tribunais de Contas: páginas geradas no build; índice de acórdãos em public/ (arquivos estáticos).
