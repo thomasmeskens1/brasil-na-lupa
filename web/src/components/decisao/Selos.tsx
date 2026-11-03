@@ -42,6 +42,21 @@ export function SeloCaminho({ caminho, rotulo, data, rotuloData, className = "" 
   );
 }
 
+export interface EtiquetaDecisaoProps {
+  /** Texto montado só de campos estruturados (ex.: "Aprovado 312 × 140", "Veto mantido"). */
+  texto: string;
+  className?: string;
+}
+
+/**
+ * Etiqueta à frente do título — marca-texto (.destaque-neon) com o MESMO tratamento para qualquer
+ * desfecho: "Aprovado" e "Rejeitado", "Veto mantido" e "Veto derrubado" usam a mesma cor (diretriz 11).
+ *   <EtiquetaDecisao texto="Aprovado 312 × 140" />
+ */
+export function EtiquetaDecisao({ texto, className = "" }: EtiquetaDecisaoProps) {
+  return <span className={`destaque-neon text-sm leading-snug ${className}`}>{texto}</span>;
+}
+
 const PREFIXO: Record<NonNullable<FonteResumo["tipo"]>, string> = {
   oficial: "Oficial",
   pdf: "PDF oficial",

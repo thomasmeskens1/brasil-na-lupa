@@ -28,26 +28,62 @@ export interface TituloSimples {
   fonte?: string | { url: string; titulo?: string | null } | null;
   /** Tema do dia a dia (ex.: "Impostos e preços"). */
   tema?: string | null;
+  /** Etiqueta curta de campos estruturados (ex.: "Aprovado 312 × 140", "Veto mantido"). */
+  etiqueta?: string | null;
+  /** Modelo fixo usado quando origem = "estruturado" (credito | icms-mudanca | contas-tce). */
+  modelo?: string | null;
   verificacao?: {
     numeros_e_datas_conferidos?: boolean | null;
     verbo_permitido?: boolean | null;
     palavras_proibidas?: string[] | null;
     veto_vies?: unknown;
+    texto_oficial_literal?: boolean | null;
+    /** true quando scripts/coleta/titulos/verificar.mjs aprovou o registro. */
+    aprovado_pelo_verificador?: boolean | null;
   } | null;
 }
 
+/**
+ * "estruturado" e "oficial" são as únicas origens geradas hoje. As demais ficam no tipo só para
+ * arquivos antigos; nunca aparecem no lugar do título oficial (ver tituloAprovado).
+ */
 export type OrigemTitulo =
+  | "estruturado"
+  | "oficial"
   | "apelido-oficial"
   | "explicacao-oficial"
   | "agencia-camara"
   | "agencia-senado"
-  | "modelo"
-  | "oficial";
+  | "modelo";
 
 /** Arquivo dados/titulos/<secao>.json. */
 export interface ArquivoTitulos {
   atualizado_em?: string;
   itens: Record<string, TituloSimples>;
+}
+
+/** Destaque da página inicial escrito por pessoa (dados/titulos/destaques.json). */
+export interface Destaque {
+  id: string;
+  /** Só "aprovado" aparece no site. */
+  status: "rascunho" | "aprovado";
+  secao: string;
+  item_id: string;
+  titulo: string;
+  /** Até 2 frases. */
+  texto: string;
+  /** Uma entrada por frase, com o trecho citado da fonte. */
+  apoio: { frase: string; trecho: string; tipo_trecho?: string | null; fonte: string }[];
+  fonte: { url: string; titulo?: string | null; orgao?: string | null };
+  /** Data da decisão, AAAA-MM-DD. */
+  data: string;
+  redigido_em?: string | null;
+  aprovado_por?: string | null;
+}
+
+export interface ArquivoDestaques {
+  atualizado_em?: string;
+  itens: Destaque[];
 }
 
 /**

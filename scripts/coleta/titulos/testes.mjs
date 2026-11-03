@@ -1,158 +1,162 @@
 #!/usr/bin/env node
-// Testes do verificador, dos recortes e das regras da revisão de viés (sem rede). Os títulos vetados
-// pelos analistas na 1ª amostra entram como contraexemplos.
+// Testes do gerador/verificador (sem rede). Só existem as origens "estruturado" (modelo fixo de campos)
+// e "oficial" (texto do órgão sem alteração). Os erros de precisão da 2ª revisão entram como contraexemplos.
 import assert from 'node:assert/strict';
 import path from 'node:path';
-import { verificarTitulo } from './regras.mjs';
-import { cortarEmOracao, trechoDaEmenta, trechoCredito, universoNumerico, limpar } from './texto.mjs';
-import { modeloVotacao } from './modelos-votacoes.mjs';
-import { modeloIcms, modeloContasTce, modeloMp } from './modelos-atos.mjs';
-import { modeloTemaStf } from './modelos-justica.mjs';
-import { termosAusentes, alertasNaoLiterais, escopoPerdido, siglasSemExtenso, carregarVetos } from './conteudo.mjs';
+import { verificarTitulo, verificarEtiqueta, ORIGENS } from './regras.mjs';
+import { universoNumerico } from './texto.mjs';
+import { etiquetaVotacao } from './modelos-votacoes.mjs';
+import { modeloIcms, etiquetaIcms, modeloContasTce, etiquetaContasTce, modeloCredito, etiquetaVeto, etiquetaMp } from './modelos-atos.mjs';
+import { etiquetaTemaStj, etiquetaTemaStf, teseReal } from './modelos-justica.mjs';
+import { siglasSemExtenso, carregarVetos } from './conteudo.mjs';
 import { perturbar, carregarSecao } from './itens.mjs';
 import { contextoVerificacao } from './verificar.mjs';
 import { SAIDA, lerJson } from './lib.mjs';
 
 let ok = 0;
 const teste = (nome, fn) => { fn(); ok++; console.log(`ok - ${nome}`); };
-const ctx = (dados, extra = {}) => ({ universo: universoNumerico(dados), nominal: false, nomes: ['Fulano de Tal'], ...extra });
+const ctx = (dados, extra = {}) => ({ universo: universoNumerico(dados), nominal: false, nomes: ['Fulano de Tal'], modelo: 'credito', literais: [], ...extra });
 const votacao = (extra = {}) => ({
-  id: 'x', casa: 'camara', data: '2026-01-01', orgao_sigla: 'PLEN', orgao: 'Plenário', tipo: 'nominal', resultado: 'aprovada',
+  id: 'x', casa: 'camara', data: '2026-01-01', tipo: 'nominal', resultado: 'aprovada',
   descricao: 'Aprovado o Projeto de Lei nº 1, de 2026. Sim: 300; Não: 100; Total: 400.',
   proposicao: { id: '1', sigla: 'PL', numero: 1, ano: 2026, ementa: 'Institui o Programa Escola Aberta.' },
-  placar: { sim: 300, nao: 100 }, votos: [{ nome: 'Fulano de Tal', partido: 'AAA', voto: 'Sim' }], orientacoes: [{ bancada: 'AAA', orientacao: 'Sim' }],
+  placar: { sim: 300, nao: 100 }, votos: [{ nome: 'Fulano de Tal', partido: 'AAA', voto: 'Sim' }],
   ...extra,
 });
 
 // ---------- regras gerais ----------
-teste('contraexemplos do padrão editorial são reprovados', () => {
-  for (const t of ['Câmara dá goleada e aprova MEI', 'Votação histórica: Senado aprova reforma', 'Câmara aprova pacote polêmico']) {
-    assert.equal(verificarTitulo(t, 'modelo', ctx({})).aprovado, false, t);
-  }
+teste('só duas origens', () => assert.deepEqual(ORIGENS, ['estruturado', 'oficial']));
+teste('palavras proibidas e número fora do dado reprovam', () => {
+  for (const t of ['Câmara dá goleada e abre crédito', 'Votação histórica: lei abre crédito']) assert.equal(verificarTitulo(t, 'estruturado', ctx({})).aprovado, false, t);
+  assert.equal(verificarTitulo('Lei federal abre crédito especial de R$ 15,00', 'estruturado', ctx({ ementa: 'R$ 10,00' })).verificacao.numeros_e_datas_conferidos, false);
 });
-teste('número que não está no dado oficial reprova', () => {
-  assert.equal(verificarTitulo('Câmara aprova projeto que reduz imposto em 15%', 'modelo', ctx({ ementa: 'Reduz imposto.' })).verificacao.numeros_e_datas_conferidos, false);
+teste('modelo desconhecido e trecho não literal reprovam', () => {
+  assert.equal(verificarTitulo('Lei federal abre crédito especial de R$ 10,00', 'estruturado', ctx({ e: 'R$ 10,00' }, { modelo: 'reescrita' })).aprovado, false);
+  const r = verificarTitulo('Lei federal abre crédito especial de R$ 10,00', 'estruturado', ctx({ e: 'R$ 10,00' }, { textos: ['Abre crédito especial no valor de R$ 10,00'], literais: ['crédito especial', 'em favor do Ministério do Norte'] }));
+  assert.equal(r.aprovado, false);
+  assert.match(r.motivos.join(), /não literal/);
 });
-teste('contagem de votos só em votação nominal', () => {
-  const d = { placar: { sim: 300, nao: 100 } };
-  assert.equal(verificarTitulo('Câmara aprova projeto (300 Sim, 100 Não)', 'modelo', ctx(d)).aprovado, false);
-  assert.equal(verificarTitulo('Câmara aprova projeto (300 Sim, 100 Não)', 'modelo', ctx(d, { nominal: true })).aprovado, true);
+teste('título diferente do refeito pelo modelo reprova', () => {
+  assert.equal(verificarTitulo('Lei federal abre crédito especial de R$ 10,00', 'estruturado', ctx({ e: 'R$ 10,00' }, { titulo_refeito: 'outro' })).aprovado, false);
 });
-teste('nome de pessoa e tratamento reprovam; termos como "Senhor Bom Jesus" não', () => {
-  assert.equal(verificarTitulo('Câmara aprova projeto de Fulano de Tal', 'modelo', ctx({})).aprovado, false);
-  assert.equal(verificarTitulo('Lei de Atibaia declara a utilidade pública (de autoria do vereador José)', 'modelo', ctx({})).aprovado, false);
-  assert.equal(verificarTitulo('Câmara aprova projeto que declara a Romaria do Senhor Bom Jesus da Lapa', 'modelo', ctx({})).aprovado, true);
-});
-teste('corte de tese é prefixo literal e não descarta ressalva', () => {
-  const tese = 'É devida a correção monetária, salvo se o pagamento ocorrer no prazo; e os juros incidem desde a citação';
-  const c = cortarEmOracao(tese, 70, { estrito: true });
-  assert.ok(c === null || (tese.startsWith(c) && !/monetária$/.test(c)));
-});
-teste('simetria: trocar partido, autor e nomes não muda o título do modelo', () => {
-  const v = votacao();
-  assert.equal(modeloVotacao(v).titulo, 'Câmara aprova projeto que institui o Programa Escola Aberta (300 Sim, 100 Não)');
-  assert.equal(modeloVotacao(v).titulo, modeloVotacao(perturbar(v)).titulo);
+teste('nome de pessoa reprova', () => {
+  assert.equal(verificarTitulo('Lei federal abre crédito de Fulano de Tal', 'estruturado', ctx({})).aprovado, false);
 });
 
-// ---------- regras da revisão de viés ----------
-teste('a) termo de conteúdo da manchete precisa existir no texto oficial', () => {
-  const ementa = 'Dispõe sobre a realização de testes de aptidão física por gestantes e puérperas em concursos públicos da administração pública federal.';
-  assert.deepEqual(termosAusentes('Deputados aprovam projeto que garante segunda chamada em concursos para gestantes e puérperas', [ementa]).sort(), ['chamada', 'garante', 'segunda'].sort());
-  assert.deepEqual(termosAusentes('Câmara aprova testes de aptidão física para gestantes em concursos públicos federais', [ementa]), []);
+// ---------- modelos estruturados ----------
+teste('crédito: verbo literal, um único valor, beneficiário literal', () => {
+  const e = 'Abre crédito extraordinário, em favor do Ministério de Minas e Energia, no valor de R$ 6.605.000.000,00, para os fins que especifica.';
+  const c = modeloCredito(e, 'Medida provisória', 'https://x');
+  assert.equal(c.titulo, 'Medida provisória abre crédito extraordinário de R$ 6.605.000.000,00 em favor do Ministério de Minas e Energia');
+  for (const l of c.literais) assert.ok(e.includes(l), l);
+  assert.ok(modeloCredito('Abre crédito especial no valor de R$ 1,00 e de R$ 2,00.', 'Lei federal').erro, 'dois valores');
+  // lista de beneficiários nunca é cortada (MP 1.377/2026)
+  const lista = modeloCredito('Abre crédito extraordinário, em favor do Ministério da Agricultura e Pecuária, da Advocacia Geral da União, e de Operações Oficiais de Crédito, no valor de R$ 13.285.000.000,00, para os fins que especifica.', 'Medida provisória');
+  assert.ok(!/em favor do Ministério da Agricultura e Pecuária$/.test(lista.titulo), lista.titulo);
+  assert.equal(modeloCredito('Institui o programa X.', 'Lei federal'), null);
 });
-teste('a) escopo: título não pode perder a restrição "federal" da ementa', () => {
-  assert.deepEqual(escopoPerdido('Câmara aprova regras para gestantes em concursos', 'testes em concursos da administração pública federal'), ['federal']);
+teste('ICMS: uma mudança, valores do texto da norma', () => {
+  const d = { mudancas: [{ item: 'Gasolina', antes: '1,3721', depois: '1,47', unidade: 'R$ por litro', vigencia: '2025-02-01', fonte: 'https://ex/cv' }], fontes: [] };
+  assert.equal(modeloIcms(d).titulo, 'ICMS de gasolina passa de R$ 1,3721 para R$ 1,47 por litro a partir de 01/02/2025');
+  assert.equal(etiquetaIcms(d), 'ICMS: de R$ 1,3721 para R$ 1,47 por litro');
+  const autor = { mudancas: [{ item: 'X', antes: '50%', depois: '100%', fonte: 'https://ex/pl.pdf' }], fontes: [{ titulo: 'PL original e exposição de motivos', url: 'https://ex/pl.pdf' }] };
+  assert.ok(modeloIcms(autor).erro);
+  assert.equal(etiquetaIcms(autor), null);
 });
-teste('b) comparativos e promessas de efeito só passam se literais na ementa', () => {
-  assert.deepEqual(alertasNaoLiterais('Senado aprova regras mais rígidas para devedor contumaz', ['Dispõe sobre direitos, garantias e deveres dos contribuintes']).map((x) => x.toLowerCase()), ['mais', 'rígidas']);
-  assert.deepEqual(alertasNaoLiterais('MP amplia o prazo', ['Amplia o prazo de adesão']), []);
+teste('contas: mesmo molde para prefeito e governador; parecer não é julgamento', () => {
+  const sem = { parecer: { conclusao: 'Favorável', exercicio: '2016' } };
+  const com = { parecer: { conclusao: 'favorável', exercicio: '2024', com_ressalvas: true } };
+  assert.equal(modeloContasTce(sem, 'Prefeito').titulo, 'Tribunal de Contas emite parecer favorável às contas de 2016 do Prefeito; ressalvas não informadas na fonte');
+  assert.equal(modeloContasTce(com, 'Governador').titulo, 'Tribunal de Contas emite parecer favorável às contas de 2024 do Governador, com ressalvas');
+  assert.equal(etiquetaContasTce(com), 'Parecer favorável, com ressalvas');
+  assert.ok(!/aprovad/i.test(etiquetaContasTce(com)));
 });
-teste('c) rejeição com mais Sim que Não traz o quórum da espécie, ou cai para o oficial', () => {
-  const plp = votacao({ resultado: 'rejeitada', descricao: 'Rejeitado o Projeto de Lei Complementar nº 1, de 2026.', placar: { sim: 252, nao: 176 }, proposicao: { id: '1', sigla: 'PLP', numero: 1, ano: 2026, ementa: 'Institui o Programa Escola Aberta.' } });
-  assert.match(modeloVotacao(plp).titulo, /\(252 Sim, 176 Não; eram necessários 257 Sim\)$/);
-  const pl = votacao({ resultado: 'rejeitada', descricao: 'Rejeitado o Projeto de Lei nº 1, de 2026.', placar: { sim: 252, nao: 176 } });
-  assert.ok(modeloVotacao(pl).erro);
-  const sen = { ...plp, casa: 'senado', descricao: 'Votação nominal do Projeto de Lei Complementar nº 1, de 2026.', placar: { sim: 33, nao: 27 } };
-  assert.match(modeloVotacao(sen).titulo, /eram necessários 41 Sim/);
+
+// ---------- etiquetas ----------
+teste('etiqueta de votação: placar só em nominal; mesmo formato para aprovado e rejeitado', () => {
+  assert.equal(etiquetaVotacao(votacao()), 'Aprovado 300 × 100');
+  assert.equal(etiquetaVotacao(votacao({ resultado: 'rejeitada', descricao: 'Rejeitado o Projeto.', placar: { sim: 100, nao: 300 } })), 'Rejeitado 100 × 300');
+  assert.equal(etiquetaVotacao(votacao({ tipo: 'simbolica', placar: null })), 'Aprovado em votação simbólica');
+  assert.equal(etiquetaVotacao(votacao({ resultado: 'rejeitada', descricao: 'Aprovado o Projeto.' })), null, 'resultado e descrição divergem');
+  const plp = votacao({ resultado: 'rejeitada', descricao: 'Rejeitado o PLP.', placar: { sim: 252, nao: 176 }, proposicao: { sigla: 'PLP', numero: 1, ano: 2026 } });
+  assert.equal(etiquetaVotacao(plp), 'Rejeitado 252 × 176 (mínimo 257 Sim)');
+  assert.equal(etiquetaVotacao(votacao({ placar: { sim: 10, nao: 300 } })), 'Aprovado', 'placar contraditório: sem números');
+  assert.equal(etiquetaVotacao(votacao()), etiquetaVotacao(perturbar(votacao())), 'simetria');
 });
-teste('d) o objeto do título é o item votado (subemenda, emenda, destaque)', () => {
-  const sub = votacao({ resultado: 'rejeitada', descricao: 'Rejeitada a Subemenda Substitutiva ao Projeto de Lei nº 1, de 2026, adotada pelo relator.', placar: { sim: 10, nao: 300 } });
-  assert.match(modeloVotacao(sub).titulo, /^Câmara rejeita substitutivo ao projeto/);
-  const em = votacao({ resultado: 'rejeitada', descricao: 'Rejeitada a Emenda de Plenário n. 7.', placar: { sim: 10, nao: 300 } });
-  assert.match(modeloVotacao(em).titulo, /^Câmara rejeita emenda ao projeto/);
+teste('etiqueta de veto e de MP vêm de contagens e situação', () => {
+  const d = (s) => ({ situacao: s });
+  assert.equal(etiquetaVeto({ dispositivos: [d('mantido'), d('mantido')] }), 'Veto mantido');
+  assert.equal(etiquetaVeto({ dispositivos: [d('derrubado'), d('mantido'), d('mantido')] }), 'Veto derrubado em 1 de 3 trechos');
+  assert.equal(etiquetaVeto({ dispositivos: [d(null)] }), 'Veto aguarda decisão do Congresso');
+  assert.equal(etiquetaMp({ situacao: 'perdeu eficácia' }), 'Medida provisória perdeu a eficácia');
+  assert.equal(etiquetaMp({ situacao: 'outra coisa' }), null);
 });
-teste('e) votação nominal sem placar reprova', () => {
-  const r = verificarTitulo('Câmara aprova projeto que institui o programa', 'agencia-camara', ctx({}, { nominal: true, placarObrigatorio: true, textos: ['Institui o programa'] }));
-  assert.equal(r.aprovado, false);
+teste('2ª revisão: aviso "Aguardando a publicação do acórdão" não é tese; sem repercussão geral não é tese fixada', () => {
+  assert.equal(teseReal('*Aguardando a publicação do acórdão do julgamento de mérito'), false);
+  assert.equal(etiquetaTemaStj({ situacao: 'Trânsito em Julgado', tese: '*Aguardando a publicação do acórdão' }), null);
+  assert.equal(etiquetaTemaStj({ situacao: 'Trânsito em Julgado', tese: 'É devida a correção.' }), 'Tese firmada, decisão definitiva');
+  assert.equal(etiquetaTemaStf({ tese: 'Tese qualquer', situacao: { repercussao_geral: 'Não há repercussão geral (questão infraconstitucional)' } }), 'Sem repercussão geral');
 });
-teste('f) números da exposição de motivos não entram como fato', () => {
-  const d = { mudancas: [{ item: 'Parte X', antes: '50%', depois: '100%', fonte: 'https://ex/pl.pdf' }], fontes: [{ titulo: 'PL original e exposição de motivos', url: 'https://ex/pl.pdf' }] };
-  assert.ok(modeloIcms(d).erro);
+teste('verificador de etiqueta: número fora do dado e tamanho', () => {
+  assert.equal(verificarEtiqueta('Aprovado 300 × 100', { universo: universoNumerico({ placar: { sim: 300, nao: 100 } }) }).aprovado, true);
+  assert.equal(verificarEtiqueta('Aprovado 301 × 100', { universo: universoNumerico({ placar: { sim: 300, nao: 100 } }) }).aprovado, false);
+  assert.equal(verificarEtiqueta('Aprovado 300 × 100', { universo: universoNumerico({ placar: { sim: 300, nao: 100 } }), refeita: 'Rejeitado' }).aprovado, false);
 });
-teste('g) nunca "altera a Lei nº X" sozinho', () => {
-  assert.equal(trechoDaEmenta('Altera a Lei nº 9.605, de 12 de fevereiro de 1998.', 100), null);
-  assert.equal(trechoDaEmenta('Acrescenta § 4º-A ao art. 150 da Constituição Federal.', 100), null);
-  assert.match(trechoDaEmenta('Altera a Lei nº 10.705, de 28 de dezembro de 2000, para fixar alíquotas progressivas do imposto.', 80).texto, /para fixar alíquotas progressivas/);
-});
-teste('h) crédito: verbo "abre" e valor oficial', () => {
-  assert.equal(trechoCredito('Abre crédito extraordinário, em favor do Ministério de Minas e Energia, no valor de R$ 6.605.000.000,00, para os fins que especifica.', 100),
-    'abre crédito extraordinário de R$ 6.605.000.000,00 em favor do Ministério de Minas e Energia');
-  const mp = { ementa: 'Abre crédito extraordinário, em favor do Ministério X, no valor de R$ 10,00, para os fins que especifica.', links: {} };
-  assert.match(modeloMp(mp, { manchete: { titulo: 'MP amplia crédito', origem: 'agencia-camara' } }).titulo, /^Medida provisória abre crédito extraordinário de R\$ 10,00/);
-});
-teste('i) tese sem artefato de numeração e com sigla por extenso', () => {
-  const t = { tese: 'Reconhecimento da inconstitucionalidade parcial e progressiva do art. 19 do MCI. 1. Enquanto não sobrevier nova legislação, o art. 19 deve ser interpretado de forma que os provedores respondam civilmente por danos', titulo: 'Tema', situacao: { repercussao_geral: 'Há repercussão geral' } };
-  const m = modeloTemaStf(t);
-  assert.ok(m.erro || (!/MCI 1/.test(m.titulo) && !siglasSemExtenso(m.titulo).length));
+teste('siglas sem extenso', () => {
   assert.deepEqual(siglasSemExtenso('Senado aprova indicação para o Conselho Nacional de Justiça - CNJ'), []);
   assert.deepEqual(siglasSemExtenso('STF fixa tese sobre o art. 19 do MCI'), ['MCI']);
 });
-teste('j) etapa informada pela tramitação entra antes do placar', () => {
-  assert.match(modeloVotacao(votacao(), { etapa: 'segue para o Senado' }).titulo, /; segue para o Senado \(300 Sim, 100 Não\)$/);
-});
-teste('l) contas: mesmo molde para prefeito e governador; lacuna de ressalvas é dita', () => {
-  const sem = modeloContasTce({ parecer: { conclusao: 'Favorável', exercicio: '2016', ressalvas: [] } }, 'Prefeito');
-  const com = modeloContasTce({ parecer: { conclusao: 'favorável', exercicio: '2024', com_ressalvas: true } }, 'Governador');
-  assert.equal(sem.titulo, 'Tribunal de Contas emite parecer favorável às contas de 2016 do Prefeito; ressalvas não informadas na fonte');
-  assert.equal(com.titulo, 'Tribunal de Contas emite parecer favorável às contas de 2024 do Governador, com ressalvas');
-});
 
-// ---------- contra os dados reais: vetos da 1ª amostra ----------
-const vetos = carregarVetos();
+// ---------- contra os dados reais ----------
 const saida = (s) => lerJson(path.join(SAIDA, `${s}.json`))?.itens || {};
-teste('vetos: todo item vetado por qualquer analista está como "oficial", com veto_vies', () => {
+const SECOES_DADOS = ['camara', 'senado', 'executivo', 'stj', 'stf', 'alesp', 'governo-sp', 'atibaia', 'icms', 'tribunais-contas'];
+teste('dados: toda origem é "estruturado" ou "oficial"; estruturado só nos modelos fixos', () => {
+  for (const s of SECOES_DADOS) {
+    for (const [id, t] of Object.entries(saida(s))) {
+      assert.ok(ORIGENS.includes(t.origem), `${s} ${id} ${t.origem}`);
+      if (t.origem === 'estruturado') assert.ok(['credito', 'icms-mudanca', 'contas-tce'].includes(t.modelo), `${s} ${id}`);
+      assert.equal(t.verificacao?.aprovado_pelo_verificador, true, `${s} ${id}`);
+    }
+  }
+});
+teste('dados: título oficial é idêntico ao texto do órgão', () => {
+  for (const s of ['executivo', 'stj', 'stf', 'icms', 'tribunais-contas']) {
+    const porId = new Map(carregarSecao(s).map((i) => [i.id, i]));
+    for (const [id, t] of Object.entries(saida(s))) if (t.origem === 'oficial') assert.equal(t.titulo, porId.get(id).oficial.titulo, `${s} ${id}`);
+  }
+});
+teste('dados: todo item vetado por qualquer analista (duas rodadas) está como "oficial", com veto_vies', () => {
+  const vetos = carregarVetos();
   assert.ok(vetos.size >= 1);
   for (const [k, vieses] of vetos) {
     const [s, id] = k.split('|');
     const t = saida(s)[id];
-    assert.ok(t, k);
+    if (!t) continue; // item que saiu da coleta
     assert.equal(t.origem, 'oficial', k);
     assert.deepEqual([...t.verificacao.veto_vies].sort(), [...vieses].sort(), k);
   }
 });
-teste('manchetes vetadas são reprovadas pelas novas regras (contraexemplos)', () => {
-  const casos = [
-    ['camara', '2236186-60', 'Câmara rejeita criação de novo regime para socorrer ou liquidar bancos'],
-    ['camara', '2405705-65', 'Deputados aprovam projeto que garante segunda chamada em concursos para gestantes e puérperas'],
-    ['senado', '7010', 'Senado aprova regras mais rígidas para devedor contumaz'],
-    ['senado', '6955', 'Senado aprova benefício fiscal para micro e pequenas empresas exportarem mais'],
-    ['executivo', 'mpv-1389-2026', 'Medida provisória amplia crédito para subsídios aos preços dos combustíveis'],
-    ['executivo', 'lei-15510-2026', 'Lei cria Semana Nacional da Empresa Júnior, a ser celebrada em abril'],
-    ['executivo', 'mpv-1366-2026', 'Medida provisória cria financiamento para entregadores comprarem motos e bicicletas elétricas'],
-  ];
-  const porSecao = new Map();
-  for (const [s, id, titulo] of casos) {
-    if (!porSecao.has(s)) porSecao.set(s, new Map(carregarSecao(s).map((i) => [i.id, i])));
-    const it = porSecao.get(s).get(id);
-    assert.ok(it, `${s} ${id}`);
-    const r = verificarTitulo(titulo, s === 'senado' ? 'agencia-senado' : 'agencia-camara', contextoVerificacao(it, { titulo, origem: 'agencia-camara' }));
-    assert.equal(r.aprovado, false, titulo);
+teste('dados: erros de precisão da 2ª revisão não voltam (cria × autoriza, tese placeholder, nomes)', () => {
+  const cam = saida('camara'), ex = saida('executivo'), stj = saida('stj'), stf = saida('stf');
+  assert.ok(!/^Câmara aprova/.test(cam['2503832-46']?.titulo || ''));
+  assert.ok(!/Fronteira do Norte/.test(ex['lei-15520-2026']?.titulo || ''));
+  assert.ok(!/fixa tese/.test(stj['stj-tema-1241']?.titulo || ''));
+  assert.notEqual(stj['stj-tema-1241']?.etiqueta, 'Tese firmada, decisão definitiva');
+  assert.ok(!/fixa tese/.test(stf['stf-tema-791']?.titulo || ''));
+  assert.notEqual(stf['stf-tema-791']?.etiqueta, 'Tese fixada');
+});
+teste('dados: nenhum nome de advogado particular nos títulos do STF (diretriz 12)', () => {
+  for (const [id, t] of Object.entries(saida('stf'))) {
+    assert.ok(!/\bADV\.?\s*\(A\/S\)\s*:\s*(?!\[nome de particular omitido\])\p{Lu}/u.test(`${t.titulo} ${t.subtitulo}`), id);
   }
 });
-teste('k) consistência: a mesma proposição usa o mesmo apelido oficial nas seções', () => {
-  const lei = saida('executivo')['lcp-225-2026'];
-  const voto = saida('senado')['7010'];
-  assert.match(lei.titulo, /Código de Defesa do Contribuinte/);
-  assert.ok(voto.origem === 'oficial' || /Código de Defesa do Contribuinte/.test(voto.titulo));
+teste('simetria nos estruturados reais', () => {
+  for (const s of ['executivo', 'icms', 'tribunais-contas']) {
+    for (const it of carregarSecao(s)) {
+      const c = it.construir(it.raw);
+      if (!c?.titulo) continue;
+      assert.equal(contextoVerificacao(it, c).titulo_perturbado, c.titulo, `${s} ${it.id}`);
+    }
+  }
 });
 console.log(`${ok} testes passaram`);
