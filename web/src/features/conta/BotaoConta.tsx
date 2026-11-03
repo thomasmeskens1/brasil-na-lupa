@@ -12,7 +12,7 @@ export function BotaoConta() {
     <Link
       href="/minha-conta"
       prefetch={false}
-      className="absolute right-[7.25rem] top-2 inline-flex min-h-11 min-w-11 items-center justify-center gap-1 rounded border border-[#7b8794] bg-white px-2 text-sm font-medium text-foreground md:static md:min-w-0 md:px-3"
+      className="absolute right-[7.25rem] top-2 inline-flex min-h-11 min-w-11 items-center justify-center gap-1 rounded border border-[var(--cor-borda-forte)] bg-white px-2 text-sm font-medium text-foreground md:static md:min-w-0 md:px-3"
     >
       <svg aria-hidden="true" viewBox="0 0 20 20" className="h-5 w-5 md:hidden" fill="none" stroke="currentColor" strokeWidth="1.6">
         <circle cx="10" cy="7" r="3.25" />

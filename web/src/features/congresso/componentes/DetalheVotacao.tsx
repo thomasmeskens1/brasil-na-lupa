@@ -1,15 +1,19 @@
 import { FonteLink } from "@/components/FonteLink";
-import type { Casa, ConferenciaPlacar, Orientacao, ProposicaoCongresso, VotacaoDetalhe } from "../tipos";
+import { TabelaFiltravel, type LinhaDados } from "@/components/tabela/TabelaFiltravel";
+import { TabelaResponsiva } from "@/components/tabela/TabelaResponsiva";
+import type { ExplicacaoQuorum } from "../lista";
+import { REGIMENTOS } from "../lista";
+import type { Casa, Orientacao, ProposicaoCongresso, VotacaoDetalhe } from "../tipos";
 import {
-
   NAO_DISPONIVEL,
   TERMOS,
   nomeTipoProposicao,
+  rotaParlamentar,
   rotuloBancada,
   rotuloOrientacao,
+  rotuloVoto,
 } from "../rotulos";
-import { Placar, TermosExplicados } from "./Basicos";
-import { TabelaRegistros, type LinhaRegistro } from "./TabelaRegistros";
+import { TermosExplicados } from "./Basicos";
 
 function tituloDe(p: ProposicaoCongresso): string | null {
   return p.titulo ?? p.identificacao ?? null;
@@ -17,26 +21,14 @@ function tituloDe(p: ProposicaoCongresso): string | null {
 
 /** Ficha de uma proposição: tipo por extenso, número, ano, ementa e link oficial. */
 function FichaProposicao({ p, principal }: { p: ProposicaoCongresso; principal: boolean }) {
-  const tipo = nomeTipoProposicao(p.sigla);
   return (
     <div className={principal ? "" : "border-t border-borda pt-3"}>
-      <p className="text-base font-semibold text-gray-900">{tituloDe(p) ?? "Proposição não informada"}</p>
-      <dl className="mt-2 grid grid-cols-1 gap-x-6 gap-y-1 text-sm sm:grid-cols-3">
-        <div>
-          <dt className="meta">Tipo</dt>
-          <dd className="text-gray-900">{tipo ?? NAO_DISPONIVEL}</dd>
-        </div>
-        <div>
-          <dt className="meta">Número</dt>
-          <dd className="text-gray-900">{p.numero ?? NAO_DISPONIVEL}</dd>
-        </div>
-        <div>
-          <dt className="meta">Ano</dt>
-          <dd className="text-gray-900">{p.ano ?? NAO_DISPONIVEL}</dd>
-        </div>
-      </dl>
-      <p className="meta mt-3">Ementa (resumo oficial do assunto)</p>
-      <p className="mt-1 text-sm leading-relaxed text-gray-800">{p.ementa || "Ementa não disponível em fonte oficial"}</p>
+      <p className="font-semibold text-foreground">{tituloDe(p) ?? "Proposição não informada"}</p>
+      <p className="text-sm text-[var(--cor-secundaria)]">
+        {nomeTipoProposicao(p.sigla) ?? NAO_DISPONIVEL} · número {p.numero ?? "não informado"} · ano {p.ano ?? "não informado"}
+      </p>
+      <p className="mt-2 text-sm text-[var(--cor-secundaria)]">Ementa (resumo oficial do assunto)</p>
+      <p className="mt-1 leading-relaxed">{p.ementa || "Ementa não disponível em fonte oficial"}</p>
       {p.url ? (
         <p className="mt-2">
           <FonteLink href={p.url} tipo="oficial">
@@ -48,18 +40,21 @@ function FichaProposicao({ p, principal }: { p: ProposicaoCongresso; principal: 
   );
 }
 
-export function Proposicoes({ v }: { v: VotacaoDetalhe }) {
+export function listaProposicoes(v: VotacaoDetalhe): ProposicaoCongresso[] {
   const lista: ProposicaoCongresso[] = [];
   if (v.proposicao) lista.push(v.proposicao);
   for (const p of v.proposicoes ?? []) {
     if (!lista.some((x) => (x.id && x.id === p.id) || tituloDe(x) === tituloDe(p))) lista.push(p);
   }
+  return lista;
+}
+
+export function Proposicoes({ v }: { v: VotacaoDetalhe }) {
+  const lista = listaProposicoes(v);
   if (!lista.length) return <p className="lacuna text-sm">Proposição não disponível em fonte oficial.</p>;
   return (
-    <div className="cartao space-y-3">
-      {lista.length > 1 ? (
-        <p className="meta">A fonte vincula esta votação a {lista.length} proposições; a primeira é a principal.</p>
-      ) : null}
+    <div className="space-y-3">
+      {lista.length > 1 ? <p className="meta">A fonte vincula esta votação a {lista.length} proposições; a primeira é a principal.</p> : null}
       {lista.map((p, i) => (
         <FichaProposicao key={`${p.id ?? i}`} p={p} principal={i === 0} />
       ))}
@@ -67,163 +62,191 @@ export function Proposicoes({ v }: { v: VotacaoDetalhe }) {
   );
 }
 
-/** O que foi votado: textos oficiais da votação. */
+/** O que foi votado: textos oficiais da votação (transcritos da fonte). */
 export function OQueFoiVotado({ v }: { v: VotacaoDetalhe }) {
   const textos: [string, string][] = [];
   if (v.descricao_abertura) textos.push(["Texto de abertura da votação", v.descricao_abertura]);
   if (v.materia_votada) textos.push(["Matéria votada", v.materia_votada]);
-  textos.push(["Descrição oficial", v.descricao || "Descrição não disponível em fonte oficial"]);
+  textos.push(["Descrição oficial do que foi votado", v.descricao || "Descrição não disponível em fonte oficial"]);
   return (
-    <div className="space-y-3">
+    <div className="space-y-3 rounded-md border border-borda bg-white px-3 py-2.5">
       {textos.map(([r, t]) => (
         <div key={r}>
-          <p className="meta">{r}</p>
-          <p className="mt-1 whitespace-pre-line leading-relaxed text-gray-900">{t.trim()}</p>
+          <p className="text-sm text-[var(--cor-secundaria)]">{r}</p>
+          <p className="mt-0.5 whitespace-pre-line leading-relaxed">{t.trim()}</p>
         </div>
       ))}
     </div>
   );
 }
 
-function rotuloConferencia(c: string | null | undefined): string {
-  if (!c) return "não informado";
-  return c === "indisponivel" ? "indisponível" : c;
-}
-
-/** Placar e, quando houver, como a coleta o conferiu com outras páginas oficiais. */
-export function PlacarVotacao({ v }: { v: VotacaoDetalhe }) {
-  const c = v.conferencia_placar;
-  const conf = c && typeof c === "object" ? (c as ConferenciaPlacar) : null;
+/** Resultado que contraria a maioria simples, explicado pelo quórum da Constituição. */
+export function BlocoQuorum({ q }: { q: ExplicacaoQuorum }) {
   return (
-    <div className="space-y-3">
-      {v.placar ? <Placar placar={v.placar} /> : null}
-      {v.placar_origem ? <p className="meta">Origem do placar: {v.placar_origem}.</p> : null}
-      {conf ? (
-        <p className="meta">
-          Conferência do placar com o texto oficial da sessão: {rotuloConferencia(conf.texto_oficial)}; com o painel de
-          orientação: {rotuloConferencia(conf.painel_orientacao)}.
-        </p>
-      ) : typeof c === "string" ? (
-        <p className="meta">Conferência do placar: {c}</p>
-      ) : null}
+    <div className="aviso">
+      <p className="font-semibold text-foreground">Por que não foi aprovada?</p>
+      <p className="mt-1">{q.texto}</p>
+      <p className="mt-1">
+        <FonteLink href={q.url} tipo="oficial">
+          Constituição Federal — {q.artigo}
+        </FonteLink>
+      </p>
     </div>
   );
 }
 
-/** Orientações de bancada em ordem alfabética da bancada. */
+/** Orientações de bancada, recolhidas, em ordem alfabética da bancada. */
 export function Orientacoes({ orientacoes, casa }: { orientacoes: Orientacao[]; casa: Casa }) {
-  if (!orientacoes.length) {
-    return <p className="lacuna text-sm">Nenhuma orientação de bancada registrada na fonte oficial.</p>;
-  }
   const ordenadas = [...orientacoes].sort((a, b) => rotuloBancada(a.bancada).localeCompare(rotuloBancada(b.bancada), "pt-BR"));
   return (
-    <div>
-      <div className="max-h-[28rem] overflow-auto rounded border border-borda" tabIndex={0} role="region" aria-label="Orientações de bancada">
-        <table className="tabela">
-          <caption className="sr-only">Orientações de bancada, em ordem alfabética</caption>
-          <thead>
-            <tr>
-              <th scope="col">Bancada</th>
-              <th scope="col">Orientação</th>
-            </tr>
-          </thead>
-          <tbody>
-            {ordenadas.map((o, i) => (
-              <tr key={`${o.bancada}-${i}`}>
-                <td>{rotuloBancada(o.bancada)}</td>
-                <td>{rotuloOrientacao(o.orientacao)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+    <details id="orientacoes" className="scroll-mt-20 rounded-md border border-borda bg-white">
+      <summary className="pr-3">
+        Orientações de bancada <span className="font-normal text-[var(--cor-secundaria)]">({orientacoes.length})</span>
+      </summary>
+      <div className="space-y-2 border-t border-borda px-3 pb-3 pt-2">
+        <p className="text-sm">{TERMOS.orientacao.explicacao}</p>
+        {ordenadas.length ? (
+          <TabelaResponsiva
+            legenda="Orientações de bancada, em ordem alfabética"
+            legendaOculta
+            linhas={ordenadas}
+            chaveLinha={(o, i) => `${o.bancada}-${i}`}
+            colunas={[
+              { chave: "b", rotulo: "Bancada", principal: true, celula: (o) => rotuloBancada(o.bancada) },
+              { chave: "o", rotulo: "Orientação", celula: (o) => rotuloOrientacao(o.orientacao) },
+            ]}
+          />
+        ) : (
+          <p className="lacuna text-sm">Nenhuma orientação de bancada registrada na fonte oficial.</p>
+        )}
+        {casa === "camara" && ordenadas.length ? (
+          <p className="meta">Os nomes de blocos e federações aparecem abreviados como na fonte oficial da Câmara.</p>
+        ) : null}
       </div>
-      {casa === "camara" ? (
-        <p className="meta mt-2">
-          Os nomes de blocos e federações aparecem abreviados como na fonte oficial da Câmara (inclusive com reticências).
-        </p>
-      ) : null}
+    </details>
+  );
+}
+
+/** Explicação neutra para votações simbólicas, com os regimentos (artigos conferidos no texto oficial). */
+export function PorQueSimbolica({ casa }: { casa: Casa }) {
+  const r = REGIMENTOS[casa];
+  return (
+    <div className="space-y-2 rounded-md border border-borda bg-superficie px-3 py-3">
+      <h3 className="font-semibold text-foreground">Por que esta votação não tem voto individual?</h3>
+      <p>
+        Foi uma votação simbólica: o presidente da sessão anuncia a votação, os parlamentares se manifestam no plenário e o
+        presidente proclama o resultado, sem registrar o voto de cada um. É o processo padrão previsto no regimento de cada
+        casa; a votação nominal, com o nome de quem votou, é usada nos casos que o regimento indica.
+      </p>
+      <p>{r.resumo}</p>
+      <p>Por isso, este site não atribui voto a nenhum parlamentar nesta votação.</p>
+      <ul className="space-y-1">
+        {(["camara", "senado"] as Casa[]).map((c) => (
+          <li key={c}>
+            <FonteLink href={REGIMENTOS[c].url} tipo="pdf">
+              {REGIMENTOS[c].nome} ({REGIMENTOS[c].artigos})
+            </FonteLink>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
 
 /**
- * Votos individuais. Só existem em votação nominal (diretriz 5); na simbólica e na
- * secreta, a página explica por que não há voto individual.
+ * Votos individuais (só em votação nominal — diretriz 5) ou registro de comparecimento (secreta).
+ * Vira lista no celular (TabelaFiltravel).
  */
 export function VotosDaVotacao({ v, perfis }: { v: VotacaoDetalhe; perfis: Set<string> }) {
+  const membro = v.casa === "camara" ? "Deputado" : "Senador";
+  const href = (id: string | null | undefined) => (id && perfis.has(String(id)) ? rotaParlamentar(v.casa, String(id)) : null);
+  const colunas = (rotuloValor: string) => [
+    { chave: "nome", rotulo: membro, principal: true, link: "href" },
+    { chave: "partido", rotulo: "Partido" },
+    { chave: "uf", rotulo: "Estado (UF)" },
+    { chave: "valor", rotulo: rotuloValor },
+  ];
+  const filtros = (rotuloValor: string) => [
+    { chave: "valor", rotulo: rotuloValor, ordem: ["Sim", "Não", "Abstenção", "Obstrução"] },
+    { chave: "partido", rotulo: "Partido" },
+    { chave: "uf", rotulo: "Estado (UF)" },
+  ];
 
-  const link = (id: string | null | undefined) => (id && perfis.has(String(id)) ? String(id) : null);
-
-  if (v.tipo === "simbolica") {
-    return (
-      <div className="aviso">
-        <p className="font-semibold text-gray-900">Votação simbólica — não há registro oficial de voto individual.</p>
-        <p className="mt-1 text-sm text-gray-800">
-          O resultado foi anunciado pelo presidente da sessão sem o registro do voto de cada parlamentar. Por isso, este
-          site não atribui voto a nenhum deputado ou senador nesta votação.
-        </p>
-      </div>
-    );
-  }
+  if (v.tipo === "simbolica") return <PorQueSimbolica casa={v.casa} />;
 
   if (v.tipo === "secreta") {
-    const comp = v.comparecimento ?? [];
-    const linhas: LinhaRegistro[] = comp.map((c) => ({
+    const linhas: LinhaDados[] = (v.comparecimento ?? []).map((c, i) => ({
+      k: `${c.parlamentar_id ?? c.nome}-${i}`,
       nome: c.nome,
       partido: c.partido ?? null,
       uf: c.uf ?? null,
       valor: c.registro ?? c.situacao ?? null,
-      pid: link(c.parlamentar_id),
+      href: href(c.parlamentar_id),
     }));
     return (
       <div className="space-y-4">
         <div className="aviso">
-          <p className="font-semibold text-gray-900">Voto secreto — não há voto individual.</p>
-          <p className="mt-1 text-sm text-gray-800">
-            A casa divulga apenas o placar oficial. Nenhum voto é atribuído a parlamentar algum.
+          <p className="font-semibold text-foreground">Voto secreto — não há voto individual.</p>
+          <p className="mt-1">
+            A Constituição e o regimento preveem voto secreto em alguns casos, como a escolha de autoridades. A casa divulga só
+            os totais oficiais; nenhum voto é atribuído a parlamentar algum.
           </p>
         </div>
         {linhas.length ? (
-          <div>
-            <h3 className="text-base font-semibold text-gray-900">Registro oficial de comparecimento</h3>
-            <p className="mt-1 text-sm text-gray-800">
-              Lista publicada {v.casa === "camara" ? "pela Câmara dos Deputados" : "pelo Senado Federal"} com a situação de cada
-              parlamentar na votação (por exemplo, se votou, se estava presente sem registrar voto ou em licença).{" "}
-              <strong>Não é o voto:</strong> “Votou” indica apenas que o parlamentar participou.
+          <>
+            <p>
+              Registro oficial de comparecimento: a situação de cada parlamentar na votação (se votou, se estava presente sem
+              votar, em licença etc.). <strong>Não é o voto:</strong> “Votou” indica só que o parlamentar participou.
             </p>
-            <div className="mt-3">
-              <TabelaRegistros casa={v.casa} linhas={linhas} legenda="Registro oficial de comparecimento" rotuloValor="Registro" />
-            </div>
-          </div>
+            <TabelaFiltravel
+              legenda="Registro oficial de comparecimento (ordem alfabética)"
+              chave="k"
+              linhas={linhas}
+              colunas={colunas("Registro")}
+              busca={{ chaves: ["nome"], rotulo: "Buscar pelo nome" }}
+              filtros={filtros("Registro")}
+              itens={{ singular: "registro", plural: "registros" }}
+            />
+          </>
         ) : null}
       </div>
     );
   }
 
   const votos = v.votos ?? [];
-  if (!votos.length) {
-    return <p className="lacuna text-sm">Lista de votos individuais não disponível em fonte oficial coletada.</p>;
-  }
-  const linhas: LinhaRegistro[] = votos.map((x) => ({
-    nome: x.nome,
-    partido: x.partido ?? null,
-    uf: x.uf ?? null,
-    valor: x.voto,
-    pid: link(x.parlamentar_id),
-  }));
+  if (!votos.length) return <p className="lacuna">Lista de votos individuais não disponível em fonte oficial coletada.</p>;
+  const linhas: LinhaDados[] = [...votos]
+    .sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR"))
+    .map((x, i) => ({
+      k: `${x.parlamentar_id ?? x.nome}-${i}`,
+      nome: x.nome,
+      partido: x.partido ?? null,
+      uf: x.uf ?? null,
+      valor: x.voto ? rotuloVoto(x.voto) : rotuloVoto(null),
+      href: href(x.parlamentar_id),
+    }));
   const temArt17 = votos.some((x) => x.voto === "Artigo 17");
   const temArt51 = votos.some((x) => x.voto === "Presidente (art. 51 RISF)");
   const temObs = votos.some((x) => x.voto === "Obstrução");
   const termos = [TERMOS.abstencao, ...(temObs ? [TERMOS.obstrucao] : []), ...(temArt17 ? [TERMOS.artigo17] : []), ...(temArt51 ? [TERMOS.artigo51] : [])];
   return (
     <div className="space-y-4">
-      <p className="text-sm text-gray-800">
+      <p>
         Votos registrados oficialmente, com partido e estado como constam no registro da votação.
         {v.casa === "camara"
           ? " A lista da Câmara traz só quem registrou voto; quem não votou não aparece nela."
           : " A lista do Senado inclui também registros de ausência, licença e missão, como publicados."}
       </p>
-      <TabelaRegistros casa={v.casa} linhas={linhas} legenda="Votos individuais" />
+      <TabelaFiltravel
+        legenda={`Votos dos ${v.casa === "camara" ? "deputados" : "senadores"} (ordem alfabética)`}
+        chave="k"
+        linhas={linhas}
+        colunas={colunas("Voto")}
+        busca={{ chaves: ["nome"], rotulo: "Buscar pelo nome", dica: "Ex.: Silva" }}
+        filtros={filtros("Voto")}
+        itens={{ singular: "voto", plural: "votos" }}
+        porPagina={50}
+      />
       <TermosExplicados termos={termos} />
     </div>
   );

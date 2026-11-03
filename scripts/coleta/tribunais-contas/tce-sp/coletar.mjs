@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Coletor do Tribunal de Contas do Estado de São Paulo (TCE-SP) — Placar do Poder.
+ * Coletor do Tribunal de Contas do Estado de São Paulo (TCE-SP) — Brasil na Lupa.
  *
  * Gera, em dados/tribunais-contas/tce-sp/:
  *   contas-governador/<exercicio>.json  parecer prévio sobre as contas do Governador (tipo "julgamento")

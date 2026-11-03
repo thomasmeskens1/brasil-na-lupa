@@ -30,7 +30,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { lerJson, gravarSeMudou, hojeISO, somarDias, estatisticas, contagemGravacao, robotsCarregados, carregarRobots, permitidoPorRobots } from './lib.mjs';
+import { reprocessarPasta } from './privacidade.mjs';
+import { formatar, lerJson, gravarSeMudou, hojeISO, somarDias, estatisticas, contagemGravacao, robotsCarregados, carregarRobots, permitidoPorRobots } from './lib.mjs';
 import * as F from './fontes.mjs';
 import { lerListaTemas, lerTextoTese, montarTema, resumoTema } from './repercussao.mjs';
 import { lerPaginaComposicao, lerPaginaTurmas, montarMinistros, indiceMinistros } from './ministros.mjs';
@@ -206,7 +207,10 @@ async function main() {
   const sumulas = sv ? montarSumulas(sv, hoje) : lerJson(path.join(DIR, 'sumulas-vinculantes.json'));
   if (sv) gravarSeMudou(path.join(DIR, 'sumulas-vinculantes.json'), sumulas);
 
-  // 7) Meta
+  // 7) Privacidade (diretriz 12): reaplica o mascaramento a tudo que já está gravado em dados/stf.
+  const privacidade = reprocessarPasta(DIR, formatar);
+
+  // 7b) Meta
   const aguardando = julgamentos.filter((j) => j.lacunas.includes(LACUNA_ACORDAO)).map((j) => j.processo.identificacao);
   const meta = {
     atualizado_em: new Date().toISOString(),
@@ -227,6 +231,7 @@ async function main() {
       sumulas_vinculantes: sumulas?.total ?? null,
     },
     colecoes: { [config.colecao]: julgamentos.map((j) => j.id) },
+    privacidade,
     fontes: [
       F.fonte('Repercussão Geral – lista de todos os temas', F.URL_TODOS_TEMAS, hoje),
       F.fonte('Repercussão Geral – tese do tema (verTeseTema.asp)', F.urlTese('{n}'), hoje),

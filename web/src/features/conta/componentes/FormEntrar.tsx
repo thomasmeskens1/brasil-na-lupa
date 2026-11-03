@@ -21,7 +21,7 @@ export function FormEntrar() {
           maxLength={254}
           autoComplete="email"
           inputMode="email"
-          className="block min-h-11 w-full max-w-md rounded border border-[#7b8794] bg-white px-3 py-2 text-base text-gray-900"
+          className="block min-h-11 w-full max-w-md rounded border border-[var(--cor-borda-forte)] bg-white px-3 py-2 text-base text-gray-900"
         />
       </div>
       <Mensagem estado={estado} />

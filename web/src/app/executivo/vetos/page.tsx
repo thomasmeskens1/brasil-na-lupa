@@ -9,6 +9,7 @@ import { Migalhas, TermosRecolhidos } from "@/features/executivo/componentes/Mig
 import { getIndiceExecutivo } from "@/features/executivo/dados";
 import { cartaoVeto, padraoVeto } from "@/features/executivo/listas";
 import { TERMOS_EXECUTIVO } from "@/features/executivo/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = metadadosCompartilhamento({
   titulo: "Vetos do Presidente da República",
@@ -32,6 +33,7 @@ export default function VetosPage() {
     <div className="max-w-3xl space-y-8">
       <header>
         <Migalhas itens={[{ href: "/executivo", rotulo: "Executivo" }]} />
+        <Figurinha nome="caneta" className="heroi-figurinha figurinha-flutua" />
         <h1 className="mt-1 text-2xl font-bold text-foreground md:text-3xl">Vetos</h1>
         <p className="mt-3 leading-relaxed">
           Quando o Presidente da República <Termo termo="Veto">veta</Termo> um projeto aprovado pelo Congresso, no todo ou em

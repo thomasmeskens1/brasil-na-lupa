@@ -42,7 +42,7 @@ export interface FiltrosCompactosProps {
 }
 
 const CAMPO =
-  "block w-full rounded border border-[#7b8794] bg-white px-3 text-base text-foreground";
+  "block w-full rounded border border-[var(--cor-borda-forte)] bg-white px-3 text-base text-foreground";
 
 function opcao(o: string | OpcaoFiltro): OpcaoFiltro {
   return typeof o === "string" ? { valor: o, rotulo: o } : o;

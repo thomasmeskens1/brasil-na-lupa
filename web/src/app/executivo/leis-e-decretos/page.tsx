@@ -8,6 +8,7 @@ import { BuscaNormas } from "@/features/executivo/componentes/BuscaNormas";
 import { Migalhas, TermosRecolhidos } from "@/features/executivo/componentes/Migalhas";
 import { getIndiceExecutivo } from "@/features/executivo/dados";
 import { TERMOS_EXECUTIVO } from "@/features/executivo/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = metadadosCompartilhamento({
   titulo: "Leis e decretos federais",
@@ -22,6 +23,7 @@ export default function LeisEDecretosPage() {
     <div className="max-w-3xl space-y-8">
       <header>
         <Migalhas itens={[{ href: "/executivo", rotulo: "Executivo" }]} />
+        <Figurinha nome="caneta" className="heroi-figurinha figurinha-flutua" />
         <h1 className="mt-1 text-2xl font-bold text-foreground md:text-3xl">Leis e decretos</h1>
         <p className="mt-3 leading-relaxed">
           As leis são aprovadas pelo Congresso Nacional e sancionadas pelo Presidente da República; os{" "}

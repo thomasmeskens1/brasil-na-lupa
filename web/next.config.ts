@@ -6,6 +6,11 @@ const nextConfig: NextConfig = {
   // As páginas do Congresso são geradas no build a partir de content/ (~45 MB de JSON).
   // Nada de content/ entra no pacote das funções: um id não gerado no build vira 404.
   outputFileTracingExcludes: {
+    // Início, Agenda e Quem me representa: páginas geradas no build; índices em public/.
+    "/": ["./content/**/*", "./public/**/*"],
+    "/agenda": ["./content/**/*", "./public/**/*"],
+    "/quem-me-representa": ["./content/**/*", "./public/**/*"],
+    "/quem-me-representa/**": ["./content/**/*", "./public/**/*"],
     "/congresso": ["./content/**/*", "./public/**/*"],
     "/congresso/**": ["./content/**/*", "./public/**/*"],
     "/impostos/**": [

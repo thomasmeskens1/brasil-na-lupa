@@ -18,6 +18,7 @@ import {
   temContasPresidente,
 } from "@/features/tribunais-contas/dados";
 import { BASE_TC, NAO_DISPONIVEL, formatarDataTc, rotuloSituacao } from "@/features/tribunais-contas/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export function generateStaticParams() {
   return ouMarcador(getOrgaos().itens.map((o) => ({ orgao: o.id })), { orgao: "sem-dados" });
@@ -58,8 +59,9 @@ export default async function OrgaoTcPage({ params }: PageProps<"/tribunais-de-c
     <div className="space-y-10">
       <header className="max-w-3xl">
         <Trilha itens={[]} />
+        <Figurinha nome="lupa" className="heroi-figurinha figurinha-flutua" />
         <h1 className="mt-2 text-2xl font-bold text-gray-900 md:text-3xl">{o.nome}</h1>
-        <p className="mt-2 flex flex-wrap items-center gap-2 text-base text-[#3e4c59]">
+        <p className="mt-2 flex flex-wrap items-center gap-2 text-base text-[var(--cor-secundaria)]">
           <Selo escuro={ativo}>{rotuloSituacao(o)}</Selo>
           <span>{o.id.toUpperCase()}</span>
         </p>
@@ -68,14 +70,14 @@ export default async function OrgaoTcPage({ params }: PageProps<"/tribunais-de-c
             ? "Os dados deste tribunal são coletados diariamente das fontes oficiais listadas abaixo."
             : "Em breve: a coleta dos dados deste tribunal ainda não começou. Por enquanto, a página mostra só a ficha do tribunal e o site oficial."}
         </p>
-        {meta?.atualizado_em ? <p className="mt-2 text-base text-[#3e4c59]">Dados coletados em {formatarDataTc(meta.atualizado_em)}.</p> : null}
+        {meta?.atualizado_em ? <p className="mt-2 text-base text-[var(--cor-secundaria)]">Dados coletados em {formatarDataTc(meta.atualizado_em)}.</p> : null}
       </header>
 
       {secoes.length ? (
         <nav aria-label={`Dados do ${o.id.toUpperCase()}`} className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {secoes.map((s) => (
             <Link key={s.href} href={s.href} className="cartao block min-h-11 hover:bg-superficie">
-              <span className="block text-lg font-semibold text-[#234a73] underline underline-offset-2">{s.titulo}</span>
+              <span className="block text-lg font-semibold text-[var(--cor-link)] underline underline-offset-2">{s.titulo}</span>
               <span className="mt-1 block text-base text-gray-800">{s.texto}</span>
             </Link>
           ))}
@@ -102,7 +104,7 @@ export default async function OrgaoTcPage({ params }: PageProps<"/tribunais-de-c
             ["Situação no site", ativo ? "Dados disponíveis" : "Em breve"],
           ]}
         />
-        {o.conferencia ? <p className="mt-3 text-base text-[#3e4c59]">{textoLegivel(o.conferencia)}</p> : null}
+        {o.conferencia ? <p className="mt-3 text-base text-[var(--cor-secundaria)]">{textoLegivel(o.conferencia)}</p> : null}
       </Secao>
 
       {restricoes.length ? (

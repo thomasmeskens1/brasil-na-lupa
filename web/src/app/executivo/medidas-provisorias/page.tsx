@@ -9,6 +9,7 @@ import { Migalhas, TermosRecolhidos } from "@/features/executivo/componentes/Mig
 import { getIndiceExecutivo } from "@/features/executivo/dados";
 import { cartaoMpv, padraoMpv } from "@/features/executivo/listas";
 import { TERMOS_EXECUTIVO } from "@/features/executivo/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = metadadosCompartilhamento({
   titulo: "Medidas provisórias",
@@ -26,6 +27,7 @@ export default function MedidasProvisoriasPage() {
     <div className="max-w-3xl space-y-8">
       <header>
         <Migalhas itens={[{ href: "/executivo", rotulo: "Executivo" }]} />
+        <Figurinha nome="caneta" className="heroi-figurinha figurinha-flutua" />
         <h1 className="mt-1 text-2xl font-bold text-foreground md:text-3xl">Medidas provisórias</h1>
         <p className="mt-3 leading-relaxed">
           A <Termo termo="Medida provisória">medida provisória</Termo> é editada pelo Presidente da República e vale desde a

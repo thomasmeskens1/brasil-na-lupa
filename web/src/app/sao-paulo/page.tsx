@@ -5,6 +5,7 @@ import { Secao } from "@/components/Secao";
 import { ListaFontes, TermosExplicados } from "@/features/congresso/componentes/Basicos";
 import { getIndiceSp, votacoesPlenario } from "@/features/sao-paulo/dados";
 import { TERMOS_SP, formatarDataSp, nomeSiglaSp } from "@/features/sao-paulo/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = {
   title: "Estado de São Paulo",
@@ -44,6 +45,7 @@ export default function SaoPauloPage() {
   return (
     <div className="space-y-10">
       <header className="max-w-3xl">
+        <Figurinha nome="mapa" className="heroi-figurinha figurinha-flutua" />
         <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">Estado de São Paulo</h1>
         <p className="mt-3 leading-relaxed text-gray-800">
           As leis estaduais são votadas pela Assembleia Legislativa do Estado de São Paulo (ALESP), formada por 94 deputados
@@ -69,7 +71,7 @@ export default function SaoPauloPage() {
       <nav aria-label="Seções de São Paulo" className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
         {cartoes.map((c) => (
           <Link key={c.href} href={c.href} className="cartao block hover:bg-superficie">
-            <span className="block text-base font-semibold text-[#234a73] underline underline-offset-2">{c.titulo}</span>
+            <span className="block text-base font-semibold text-[var(--cor-link)] underline underline-offset-2">{c.titulo}</span>
             <span className="mt-1 block text-sm text-gray-800">{c.texto}</span>
           </Link>
         ))}

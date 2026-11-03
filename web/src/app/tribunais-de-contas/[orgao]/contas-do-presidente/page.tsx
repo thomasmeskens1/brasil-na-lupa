@@ -8,6 +8,7 @@ import { Fontes, Literal, Termos, Trilha } from "@/features/tribunais-contas/com
 import { ExercicioPresidenteItem, tituloPresidente } from "@/features/tribunais-contas/componentes/Exercicios";
 import { getContasPresidente, getMetaTcu, getOrgao, getOrgaos, ouMarcador, temContasPresidente } from "@/features/tribunais-contas/dados";
 import { BASE_TC, TERMOS_TC, formatarDataTc } from "@/features/tribunais-contas/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export function generateStaticParams() {
   return ouMarcador(
@@ -58,11 +59,12 @@ export default async function ContasPresidentePage({ params }: PageProps<"/tribu
     <div className="space-y-10">
       <header className="max-w-3xl">
         <Trilha itens={[{ href: `${BASE_TC}/${o.id}`, rotulo: o.id.toUpperCase() }]} />
+        <Figurinha nome="lupa" className="heroi-figurinha figurinha-flutua" />
         <h1 className="mt-2 text-2xl font-bold text-gray-900 md:text-3xl">Contas do Presidente da República</h1>
         <p className="mt-2 text-base leading-relaxed text-gray-800">
           O parecer prévio do {o.nome} ({o.id.toUpperCase()}) e o julgamento no Congresso Nacional, exercício por exercício.
         </p>
-        <p className="mt-2 text-base text-[#3e4c59]">Dados coletados em {formatarDataTc(c.atualizado_em)}. Do mais recente para o mais antigo.</p>
+        <p className="mt-2 text-base text-[var(--cor-secundaria)]">Dados coletados em {formatarDataTc(c.atualizado_em)}. Do mais recente para o mais antigo.</p>
         <details className="mt-3 rounded-md border border-borda bg-white">
           <summary className="pr-3">Como as contas do Presidente são julgadas</summary>
           <div className="space-y-3 border-t border-borda px-3 pb-3 pt-2 text-base leading-relaxed text-gray-800">

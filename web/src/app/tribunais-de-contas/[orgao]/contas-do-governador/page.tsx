@@ -8,6 +8,7 @@ import { Fontes, Termos, Trilha } from "@/features/tribunais-contas/componentes/
 import { ExercicioGovernadorItem, tituloGovernador } from "@/features/tribunais-contas/componentes/Exercicios";
 import { getContasGovernador, getMetaTce, getOrgao, getOrgaos, ouMarcador, temContasGovernador } from "@/features/tribunais-contas/dados";
 import { BASE_TC, TERMOS_TC, formatarDataTc } from "@/features/tribunais-contas/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export function generateStaticParams() {
   return ouMarcador(
@@ -54,11 +55,12 @@ export default async function ContasGovernadorPage({ params }: PageProps<"/tribu
     <div className="space-y-10">
       <header className="max-w-3xl">
         <Trilha itens={[{ href: `${BASE_TC}/${o.id}`, rotulo: o.id.toUpperCase() }]} />
+        <Figurinha nome="lupa" className="heroi-figurinha figurinha-flutua" />
         <h1 className="mt-2 text-2xl font-bold text-gray-900 md:text-3xl">Contas do Governador{o.uf ? ` de ${o.uf}` : ""}</h1>
         <p className="mt-2 text-base leading-relaxed text-gray-800">
           O parecer prévio do {o.nome} ({o.id.toUpperCase()}) e o julgamento pela {sp ? "Assembleia Legislativa do Estado de São Paulo (ALESP)" : "Assembleia Legislativa"}, exercício por exercício.
         </p>
-        <p className="mt-2 text-base text-[#3e4c59]">
+        <p className="mt-2 text-base text-[var(--cor-secundaria)]">
           Dados coletados em {formatarDataTc(meta?.atualizado_em ?? lista[0].coletado_em)}. Do mais recente para o mais antigo.
         </p>
         <details className="mt-3 rounded-md border border-borda bg-white">

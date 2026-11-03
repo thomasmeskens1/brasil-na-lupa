@@ -2,9 +2,10 @@
 /**
  * Sincroniza os dados do projeto para dentro de web/ antes de `dev` e `build`.
  *
- * - ../dados/{icms,camara,senado,executivo,stj,stf,alesp,governo-sp,atibaia,tribunais-contas}/** -> web/content/<mesma pasta>/**
+ * - ../dados/{icms,camara,senado,executivo,stj,stf,alesp,governo-sp,atibaia,tribunais-contas,eleitos,agenda,titulos}/** -> web/content/<mesma pasta>/**
  *   (pastas ausentes são ignoradas). De Atibaia não se copiam a pasta de curadoria (revisao/)
  *   nem o texto bruto das edições (normas/edicoes-*.json): o site só usa os índices publicados.
+ *   Dos títulos simples, não se copia a curadoria (revisao/ e amostra-revisao.json).
  *   Dos tribunais de contas, a curadoria do TCU (tcu/curadoria/) é copiada: o site exibe as
  *   ressalvas e alertas literais das Contas do Presidente que ela registra.
  * - ../dados/glossario.json          -> web/content/glossario.json
@@ -22,9 +23,9 @@ const webDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const dadosDir = path.join(webDir, "..", "dados");
 const contentFinal = path.join(webDir, "content");
 
-const PASTAS = ["icms", "camara", "senado", "executivo", "stj", "stf", "alesp", "governo-sp", "atibaia", "tribunais-contas"];
+const PASTAS = ["icms", "camara", "senado", "executivo", "stj", "stf", "alesp", "governo-sp", "atibaia", "tribunais-contas", "eleitos", "agenda", "titulos"];
 /** Caminhos relativos a ../dados que não entram em content/ (material de curadoria). */
-const EXCLUIR = [/^atibaia\/revisao(\/|$)/, /^atibaia\/normas\/edicoes-[^/]*$/];
+const EXCLUIR = [/^atibaia\/revisao(\/|$)/, /^atibaia\/normas\/edicoes-[^/]*$/, /^titulos\/revisao(\/|$)/, /^titulos\/amostra-revisao(-\d+)?\.json$/];
 const ARQUIVOS = ["glossario.json"];
 
 function copiarArvore(origem, destino) {
@@ -65,7 +66,13 @@ function trocarContent(tmp) {
       fs.renameSync(tmp, contentFinal);
       break;
     } catch (e) {
-      if (tentativa >= 10 || e?.code !== "EPERM") throw e;
+      if (e?.code !== "EPERM") throw e;
+      if (tentativa >= 10) {
+        // Bloqueio persistente (ex.: observador de arquivos do editor): copia em vez de renomear.
+        fs.cpSync(tmp, contentFinal, { recursive: true });
+        limpar(tmp);
+        break;
+      }
       Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 300 * tentativa);
     }
   }

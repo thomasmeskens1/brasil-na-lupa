@@ -5,6 +5,7 @@ import { ListaFontes, TermosExplicados } from "@/features/congresso/componentes/
 import { BuscaProjetosSp } from "@/features/sao-paulo/componentes/BuscaProjetosSp";
 import { getIndiceSp } from "@/features/sao-paulo/dados";
 import { SIGLAS_SP, TERMOS_SP, formatarDataSp } from "@/features/sao-paulo/rotulos";
+import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = {
   title: "Projetos na Assembleia Legislativa de São Paulo",
@@ -26,6 +27,7 @@ export default function ProjetosSpPage() {
             São Paulo
           </Link>
         </nav>
+        <Figurinha nome="mapa" className="heroi-figurinha figurinha-flutua" />
         <h1 className="mt-2 text-2xl font-bold text-gray-900 md:text-3xl">Projetos</h1>
         <p className="mt-3 leading-relaxed text-gray-800">
           {ind.projetos.total} proposições apresentadas na Assembleia Legislativa do Estado de São Paulo (ALESP) ({contagem}),
