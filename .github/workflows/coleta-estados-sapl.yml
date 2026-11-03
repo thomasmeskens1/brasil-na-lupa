@@ -2,7 +2,7 @@
 # então a coleta roda em workflow próprio, com orçamento de tempo e cursor em meta.json.
 # Diário: acompanha o que é novo (25 min). Manual: "orcamento" maior adianta o histórico
 # (ex.: 330 min ≈ 325 requisições por host); o cursor continua de onde parou.
-name: Coleta das Assembleias (SAPL)
+name: Coleta das Assembleias (SAPL, RS e MG)
 
 on:
   schedule:
@@ -31,21 +31,38 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Testes do coletor
-        run: node scripts/coleta/estados/sapl/testes.mjs
-      - name: Coleta (AM, PI, PB, RO em paralelo, 1 requisição por minuto por host)
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Preparar leitura de PDF (Diário do Legislativo de MG)
+        run: |
+          python -m venv scripts/coleta/estados/mg/.venv
+          scripts/coleta/estados/mg/.venv/bin/pip install -r scripts/coleta/estados/mg/requirements.txt
+      - name: Testes dos coletores
+        run: |
+          node scripts/coleta/estados/sapl/testes.mjs
+          node scripts/coleta/estados/rs/testes.mjs
+          node scripts/coleta/estados/mg/testes.mjs
+      - name: Coleta (SAPL de AM, PI, PB, RO; RS; MG — hosts diferentes, em paralelo)
         env:
           COLETA_ORCAMENTO_MIN: ${{ inputs.orcamento || 25 }}
-        run: node scripts/coleta/estados/sapl/coletar.mjs --uf am,pi,pb,ro
+        run: |
+          node scripts/coleta/estados/sapl/coletar.mjs --uf am,pi,pb,ro & a=$!
+          node scripts/coleta/estados/rs/coletar.mjs & b=$!
+          node scripts/coleta/estados/mg/coletar.mjs & c=$!
+          falhou=0
+          for p in $a $b $c; do wait $p || falhou=1; done
+          exit $falhou
       - name: Registrar mudanças (inclui o cursor em meta.json, para continuar de onde parou)
+        if: always()
         run: |
           git config user.name "coleta-diaria"
           git config user.email "coleta-diaria@users.noreply.github.com"
-          git add dados/estados/am dados/estados/pi dados/estados/pb dados/estados/ro
+          git add dados/estados/am dados/estados/pi dados/estados/pb dados/estados/ro dados/estados/rs dados/estados/mg
           if git diff --cached --quiet; then
             echo "Nada novo."
           else
-            git commit -m "Coleta das Assembleias (SAPL): AM, PI, PB, RO ($(date -u +%F))"
+            git commit -m "Coleta das Assembleias: AM, PI, PB, RO, RS, MG ($(date -u +%F))"
             git pull --rebase
             git push
           fi
