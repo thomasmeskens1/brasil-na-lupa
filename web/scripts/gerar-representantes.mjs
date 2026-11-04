@@ -117,6 +117,8 @@ function main() {
   const paginas = idsComPagina();
   const autoria = { camara: prepararAutoria("camara"), senado: prepararAutoria("senado") };
   const presenca = prepararPresenca();
+  // Fotos oficiais só das fontes com permissão declarada (scripts/coleta/fotos): marca quem tem.
+  const fotos = ler("fotos/manifest.json");
 
   const pessoas = [];
   const partidos = new Set();
@@ -142,6 +144,7 @@ function main() {
         if (of.nome_civil) o.nc = of.nome_civil;
         if (of.partido) o.pa = { p: of.partido, em: listas[casa].fonte?.acessado_em ?? null };
         if (of.url_oficial) o.uo = of.url_oficial;
+        if (fotos?.itens?.[`${casa}/${id}`] && fotos.fontes?.[casa]) o.f = 1;
         const ind = {};
         const aut = casa === "camara" || casa === "senado" ? autoria[casa] : null;
         if (aut) {
@@ -207,6 +210,9 @@ function main() {
     },
     autoria: { camara: autoria.camara?.meta ?? null, senado: autoria.senado?.meta ?? null },
     presenca: { camara: presenca?.meta ?? null },
+    fotos: Object.fromEntries(
+      Object.entries(fotos?.fontes ?? {}).map(([k, f]) => [k, { orgao: f.orgao, credito: f.credito, licenca: f.licenca, url_permissao: f.url_permissao, url_licenca: f.url_licenca }]),
+    ),
     partidos: [...partidos].sort((a, b) => a.localeCompare(b, "pt-BR")),
     pessoas,
   });

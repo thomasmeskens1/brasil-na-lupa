@@ -23,6 +23,8 @@ const COMUNS = [
   "content/titulos/**/*",
   "content/participacao/**/*",
   "content/_gerado/*.json",
+  // Quem tem foto oficial e o crédito (poucos KB); as imagens ficam em public/fotos, fora das funções.
+  "content/fotos/manifest.json",
 ];
 const CONGRESSO = [...COMUNS, "content/congresso/*.json", "content/camara/*.json", "content/senado/*.json"];
 const ESTADOS = [...COMUNS, "content/_gerado/estados/**/*", "content/estados/*/*.json", "content/icms/**/*"];

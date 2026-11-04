@@ -9,6 +9,9 @@
  *   Dos tribunais de contas, a curadoria do TCU (tcu/curadoria/) é copiada: o site exibe as
  *   ressalvas e alertas literais das Contas do Presidente que ela registra.
  * - ../dados/glossario.json          -> web/content/glossario.json
+ * - ../dados/fotos/manifest.json     -> web/content/fotos/manifest.json (quem tem foto e o crédito);
+ *   ../dados/fotos/<fonte>/*.webp    -> web/public/fotos/<fonte>/ (arquivo estático: não entra no
+ *   pacote das funções; ver next.config.ts)
  *
  * Pastas ou arquivos ausentes são ignorados. A cópia é feita numa pasta temporária,
  * trocada no fim: um build em paralelo nunca vê content/ vazio ou pela metade.
@@ -23,9 +26,9 @@ const webDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const dadosDir = path.join(webDir, "..", "dados");
 const contentFinal = path.join(webDir, "content");
 
-const PASTAS = ["icms", "camara", "senado", "executivo", "stj", "stf", "alesp", "governo-sp", "atibaia", "tribunais-contas", "eleitos", "agenda", "titulos", "estados", "participacao", "autoria", "municipios"];
+const PASTAS = ["icms", "camara", "senado", "executivo", "stj", "stf", "alesp", "governo-sp", "atibaia", "tribunais-contas", "eleitos", "agenda", "titulos", "estados", "participacao", "autoria", "municipios", "fotos"];
 /** Caminhos relativos a ../dados que não entram em content/ (material de curadoria). */
-const EXCLUIR = [/^atibaia\/revisao(\/|$)/, /^atibaia\/normas\/edicoes-[^/]*$/, /^titulos\/revisao(\/|$)/, /^titulos\/amostra-revisao(-\d+)?\.json$/];
+const EXCLUIR = [/^atibaia\/revisao(\/|$)/, /^atibaia\/normas\/edicoes-[^/]*$/, /^titulos\/revisao(\/|$)/, /^titulos\/amostra-revisao(-\d+)?\.json$/, /^fotos\/(?!manifest\.json$)/];
 const ARQUIVOS = ["glossario.json"];
 
 function copiarArvore(origem, destino) {
@@ -79,6 +82,28 @@ function trocarContent(tmp) {
   limpar(antigo);
 }
 
+/** Fotos oficiais reduzidas -> public/fotos (substitui a pasta inteira: quem saiu some). */
+function copiarFotos() {
+  const origem = path.join(dadosDir, "fotos");
+  const destino = path.join(webDir, "public", "fotos");
+  if (!fs.existsSync(origem)) return 0;
+  const tmp = `${destino}.tmp-${process.pid}`;
+  limpar(tmp);
+  let n = 0;
+  for (const e of fs.readdirSync(origem, { withFileTypes: true })) {
+    if (!e.isDirectory()) continue;
+    fs.mkdirSync(path.join(tmp, e.name), { recursive: true });
+    for (const f of fs.readdirSync(path.join(origem, e.name))) {
+      if (!/^[0-9A-Za-z_-]+\.webp$/.test(f)) continue;
+      fs.copyFileSync(path.join(origem, e.name, f), path.join(tmp, e.name, f));
+      n += 1;
+    }
+  }
+  limpar(destino);
+  fs.renameSync(tmp, destino);
+  return n;
+}
+
 function main() {
   if (!fs.existsSync(dadosDir)) {
     if (fs.existsSync(contentFinal)) {
@@ -111,6 +136,7 @@ function main() {
     JSON.stringify({ sincronizado_em: new Date().toISOString() }, null, 2),
   );
   trocarContent(tmp);
+  resumo.push(`fotos estáticas: ${copiarFotos()}`);
   console.log(`[sync-data] content/ atualizado (${resumo.length ? resumo.join(", ") : "nenhum dado encontrado"}).`);
 }
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { fotoOficial, fonteDasFotos } from "@/features/comum/fotos";
 import { getIndice } from "../dados";
 import type { Casa } from "../tipos";
 import { CASA_MEMBROS, CASA_NOME, formatarData, rotaParlamentar } from "../rotulos";
@@ -17,7 +18,9 @@ export function PaginaLista({ casa }: { casa: Casa }) {
     href: rotaParlamentar(casa, p.id),
     naListaAtual: p.na_lista_atual,
     nominais: ind.votos_por_parlamentar[p.id]?.length ?? 0,
+    temFoto: fotoOficial(casa, p.id) !== null,
   }));
+  const meta = fonteDasFotos(casa);
   const nAtual = linhas.filter((l) => l.naListaAtual).length;
   const nominais = ind.votacoes.filter((v) => v.tipo === "nominal").length;
 
@@ -48,6 +51,7 @@ export function PaginaLista({ casa }: { casa: Casa }) {
         linhas={linhas}
         legenda={`${m.plural}, em ordem alfabética`}
         rotuloForaDaLista="Incluir quem tem voto registrado no período e não está na lista atual de em exercício"
+        fotos={meta ? { fonte: casa, meta } : null}
       />
 
       <section aria-labelledby="fonte-lista">

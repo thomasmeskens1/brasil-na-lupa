@@ -1,4 +1,5 @@
 import type { FonteResumo } from "@/components/decisao";
+import type { FonteFoto, FonteFotoMeta } from "@/components/politico/fotos";
 
 /** Formatos gerados por scripts/gerar-representantes.mjs (public/quem-me-representa/r/). */
 
@@ -24,6 +25,8 @@ export interface PessoaBase {
   pa?: { p: string; em: string | null };
   uo?: string;
   i?: IndicadoresBrutos;
+  /** 1 quando há foto oficial de fonte com permissão de uso (public/fotos/<casa>/<id>.webp). */
+  f?: 1;
 }
 
 export interface MetaAutoria {
@@ -46,6 +49,8 @@ export interface ArquivoBase {
   listas: { camara: FonteResumo | null; senado: FonteResumo | null; alesp: FonteResumo | null };
   autoria: { camara: MetaAutoria | null; senado: MetaAutoria | null };
   presenca: { camara: MetaPresenca | null };
+  /** Crédito e permissão de cada fonte de fotos ativada. */
+  fotos?: Partial<Record<FonteFoto, FonteFotoMeta>>;
   partidos: string[];
   pessoas: PessoaBase[];
 }

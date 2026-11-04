@@ -9,7 +9,8 @@
 import { useCallback, useDeferredValue, useEffect, useId, useMemo, useState, type KeyboardEvent } from "react";
 import { UFS, CARGOS } from "./cargos";
 import { situacaoLegivel } from "./Eleitos";
-import { CartaoPolitico } from "./busca/CartaoPolitico";
+import { CartaoPolitico, fotoDaPessoa } from "./busca/CartaoPolitico";
+import { FotoPolitico } from "@/components/politico/FotoPolitico";
 import { Dialogo } from "./busca/Dialogo";
 import {
   FILTROS_VAZIOS, GRUPOS_CARGO, filtrar, filtrosDaUrl, grupoDe, normalizar, pessoasDaBase, pessoasDoMunicipio, temFiltro, urlDosFiltros,
@@ -356,14 +357,17 @@ export function BuscaRepresentantes() {
                         type="button"
                         aria-haspopup="dialog"
                         onClick={() => setEscolhido(p)}
-                        className="cartao flex min-h-11 w-full flex-col items-start text-left hover:border-[var(--cor-borda-forte)]"
+                        className="cartao flex min-h-11 w-full items-center gap-3 text-left hover:border-[var(--cor-borda-forte)]"
                       >
-                        <span className="font-semibold">{p.nome}</span>
-                        <span className="text-sm text-[var(--cor-secundaria)]">
-                          {CARGOS[p.cargo]?.singular ?? p.cargo}
-                          {p.partido ? ` · ${p.partido} (eleição de ${p.ano})` : ""}
-                          {" · "}
-                          {p.uf === null ? "todo o país" : p.cidade ? `${p.cidade.nome} – ${p.uf}` : nomeUf(p.uf)}
+                        <FotoPolitico nome={p.nome} foto={fotoDaPessoa(p, base)} tamanho="p" />
+                        <span className="flex min-w-0 flex-col items-start">
+                          <span className="font-semibold">{p.nome}</span>
+                          <span className="text-sm text-[var(--cor-secundaria)]">
+                            {CARGOS[p.cargo]?.singular ?? p.cargo}
+                            {p.partido ? ` · ${p.partido} (eleição de ${p.ano})` : ""}
+                            {" · "}
+                            {p.uf === null ? "todo o país" : p.cidade ? `${p.cidade.nome} – ${p.uf}` : nomeUf(p.uf)}
+                          </span>
                         </span>
                         {p.situacao && p.situacao !== "eleito" ? <span className="sr-only">, {situacaoLegivel(p.situacao)}</span> : null}
                         <span className="sr-only">. Abrir cartão.</span>

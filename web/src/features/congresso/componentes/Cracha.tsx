@@ -1,12 +1,16 @@
 /**
  * "Crachá" do parlamentar no topo do perfil: nome, partido, UF, casa, link oficial, resumo de
- * presença e de gastos (quando coletados) e Compartilhar. Sem foto grande, sem nota, sem ranking
- * (engajamento, seção 5.2 — variante parlamentar). Mesmo formato para todos (diretriz 6).
+ * presença e de gastos (quando coletados) e Compartilhar. Foto oficial em moldura de figurinha,
+ * com crédito visível (só de fonte com permissão de uso; sem ela, as iniciais no mesmo formato),
+ * sem nota, sem ranking (engajamento, seção 5.2 — variante parlamentar). Mesmo formato para todos
+ * (diretriz 6).
  */
 import Link from "next/link";
 import { BotaoCompartilhar } from "@/components/compartilhar/BotaoCompartilhar";
 import { montarTextoCompartilhar } from "@/components/compartilhar/texto";
 import { SeloFonte } from "@/components/decisao/Selos";
+import { FotoPolitico } from "@/components/politico/FotoPolitico";
+import type { FotoInfo } from "@/components/politico/fotos";
 import type { FonteResumo } from "@/components/decisao/tipos";
 import type { Casa, Parlamentar } from "../tipos";
 import { CASA_MEMBROS, CASA_NOME, formatarData, rotaParlamentar } from "../rotulos";
@@ -25,29 +29,35 @@ export interface CrachaProps {
   nominais: { comRegistro: number; total: number };
   presenca: ResumoCracha;
   gastos: ResumoCracha;
+  foto: FotoInfo | null;
 }
 
-export function Cracha({ casa, p, nominais, presenca, gastos }: CrachaProps) {
+export function Cracha({ casa, p, nominais, presenca, gastos, foto }: CrachaProps) {
   const m = CASA_MEMBROS[casa];
   const partidoUf = `${p.partido ?? "partido não informado"}-${p.uf ?? "UF não informada"}`;
   const titulo = `${p.nome} (${partidoUf}), ${m.singular.toLowerCase()}`;
   const url = rotaParlamentar(casa, p.id);
   return (
     <header className="rounded-lg border border-borda bg-white p-4">
-      <p className="text-sm text-[var(--cor-secundaria)]">
-        <span className="selo selo-escuro">{casa === "camara" ? "Câmara" : "Senado"}</span> {m.singular} · {CASA_NOME[casa]}
-      </p>
-      <h1 className="mt-2 text-2xl font-bold leading-tight text-foreground sm:text-3xl">{p.nome}</h1>
-      <dl className="mt-2 flex flex-wrap gap-x-6 gap-y-1 text-lg">
-        <div className="flex gap-1.5">
-          <dt className="text-[var(--cor-secundaria)]">Partido</dt>
-          <dd className="font-semibold">{p.partido ?? "não informado"}</dd>
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
+        <FotoPolitico nome={p.nome} foto={foto} tamanho="g" legenda prioridade />
+        <div className="min-w-0">
+          <p className="text-sm text-[var(--cor-secundaria)]">
+            <span className="selo selo-escuro">{casa === "camara" ? "Câmara" : "Senado"}</span> {m.singular} · {CASA_NOME[casa]}
+          </p>
+          <h1 className="mt-2 text-2xl font-bold leading-tight text-foreground sm:text-3xl">{p.nome}</h1>
+          <dl className="mt-2 flex flex-wrap gap-x-6 gap-y-1 text-lg">
+            <div className="flex gap-1.5">
+              <dt className="text-[var(--cor-secundaria)]">Partido</dt>
+              <dd className="font-semibold">{p.partido ?? "não informado"}</dd>
+            </div>
+            <div className="flex gap-1.5">
+              <dt className="text-[var(--cor-secundaria)]">Estado (UF)</dt>
+              <dd className="font-semibold">{p.uf ?? "não informado"}</dd>
+            </div>
+          </dl>
         </div>
-        <div className="flex gap-1.5">
-          <dt className="text-[var(--cor-secundaria)]">Estado (UF)</dt>
-          <dd className="font-semibold">{p.uf ?? "não informado"}</dd>
-        </div>
-      </dl>
+      </div>
       {!p.na_lista_atual ? (
         <p className="aviso mt-3 text-sm">
           Não consta da lista oficial de em exercício coletada. Partido e estado são os do registro de votação de{" "}
