@@ -120,7 +120,7 @@ const GATILHO_LOGRADOUROS = /(?<![A-Za-zÀ-ÿ])(?:ruas|avenidas|estradas|alameda
 function listaDeAgentes(antes, gatilho = GATILHO_AGENTES) {
   const m = antes.match(gatilho);
   if (!m) return false;
-  return /^(?:[A-ZÀ-Ý][A-Za-zÀ-ÿ'´’.]*\s*|(?:d[aeo]s?|e)\s+|,\s*)*$/.test(m[1]) && /(?:,|\se)\s*$|^$/.test(m[1]);
+  return /^(?:[A-ZÀ-Ý][A-Za-zÀ-ÿ'´’.]*(?![A-Za-zÀ-ÿ'´’.])\s*|(?:d[aeo]s?|e)\s+|,\s*)*$/.test(m[1]) && /(?:,|\se)\s*$|^$/.test(m[1]);
 }
 
 function tokens(seq) { return seq.split(/\s+/).filter((t) => !CONECTORES.has(sa(t))); }
