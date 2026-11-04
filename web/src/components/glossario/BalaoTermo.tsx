@@ -18,9 +18,11 @@ export interface BalaoTermoProps {
   /** Nome completo do termo (título do balão). */
   titulo: string;
   definicao: string;
+  /** Quando o texto é uma sigla: nome por extenso, exposto como <abbr title> (ex.: TextoComSiglas). */
+  extenso?: string;
 }
 
-export function BalaoTermo({ texto, titulo, definicao }: BalaoTermoProps) {
+export function BalaoTermo({ texto, titulo, definicao, extenso }: BalaoTermoProps) {
   const base = useId().replace(/:/g, "");
   const id = `termo-${base}`;
   const balao = useRef<HTMLSpanElement>(null);
@@ -33,8 +35,14 @@ export function BalaoTermo({ texto, titulo, definicao }: BalaoTermoProps) {
   return (
     <>
       <button type="button" className="termo-botao" popoverTarget={id} aria-controls={id} aria-describedby={`${id}-desc`}>
-        {texto}
-        <span className="sr-only"> (ver explicação)</span>
+        {extenso ? (
+          <abbr title={extenso} className="no-underline">
+            {texto}
+          </abbr>
+        ) : (
+          texto
+        )}
+        <span className="sr-only">{extenso ? ` (${extenso}, ver explicação)` : " (ver explicação)"}</span>
       </button>
       <span id={`${id}-desc`} hidden>
         {titulo}: {definicao}

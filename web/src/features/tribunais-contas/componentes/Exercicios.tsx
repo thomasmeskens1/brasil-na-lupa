@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { FonteLink } from "@/components/FonteLink";
+import { TextoComSiglas } from "@/components/glossario";
 import { CartaoDecisao } from "@/components/decisao/CartaoDecisao";
 import {
   cartaoJulgamentoAlesp,
@@ -111,7 +112,7 @@ export function ExercicioPresidenteItem({ e, orgao }: { e: ExercicioPresidente; 
                 {c.documento?.url ? (
                   <p>
                     <FonteLink href={c.documento.url} tipo="pdf" className="text-base!">
-                      {c.documento.titulo}
+                      <TextoComSiglas explicar={false}>{c.documento.titulo}</TextoComSiglas>
                     </FonteLink>
                   </p>
                 ) : null}
@@ -227,7 +228,7 @@ export function ExercicioGovernadorItem({ p, o }: { p: ParecerPrevioTce; o: Orga
               {docs.map((d) => (
                 <li key={d.url} className="text-base">
                   <FonteLink href={d.url} tipo={/\.pdf($|\?)/i.test(d.url) ? "pdf" : "oficial"} className="text-base!">
-                    {d.titulo}
+                    <TextoComSiglas explicar={false}>{d.titulo}</TextoComSiglas>
                   </FonteLink>
                   {d.tamanho ? <span className="text-[var(--cor-secundaria)]"> ({d.tamanho})</span> : null}
                 </li>

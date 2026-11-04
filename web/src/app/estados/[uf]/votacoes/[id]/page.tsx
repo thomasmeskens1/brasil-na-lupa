@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { metadadosCompartilhamento } from "@/components/compartilhar";
 import { CabecalhoDecisao, placarOficial, type DadoChave, type FonteResumo, type ItemFicha } from "@/components/decisao";
+import { TextoComSiglas } from "@/components/glossario";
 import { Secao } from "@/components/Secao";
 import { TabelaFiltravel } from "@/components/tabela";
 import { lacunasLegiveis } from "@/features/comum/texto";
@@ -114,8 +115,8 @@ export default async function VotacaoEstadoPage({ params }: PageProps<"/estados/
     { rotulo: "Tipo de votação", valor: f === "votacao-nominal" ? (sp ? "Votação nominal (verificação de votação)" : "Votação nominal") : f === "votacao-simbolica" ? "Votação simbólica" : f === "votacao-secreta" ? "Votação secreta" : (v.tipo_texto_oficial ?? null) },
     ...(v.tipo_texto_oficial && f ? [{ rotulo: "Tipo de votação, como escrito na fonte", valor: v.tipo_texto_oficial }] : []),
     { rotulo: "Resultado (texto oficial)", valor: resultado },
-    { rotulo: "Descrição oficial", valor: v.descricao },
-    { rotulo: "Texto de abertura da votação", valor: v.descricao_abertura },
+    { rotulo: "Descrição oficial", valor: v.descricao ? <TextoComSiglas>{v.descricao}</TextoComSiglas> : null },
+    { rotulo: "Texto de abertura da votação", valor: v.descricao_abertura ? <TextoComSiglas>{v.descricao_abertura}</TextoComSiglas> : null },
     { rotulo: "Total do placar oficial", valor: pl?.total != null ? String(pl.total) : null },
     { rotulo: "Partidos em obstrução, como impresso", valor: v.partidos_em_obstrucao },
   ];
@@ -146,7 +147,7 @@ export default async function VotacaoEstadoPage({ params }: PageProps<"/estados/
             ...(v.votos.length ? [{ href: "#votos", rotulo: "Como votou cada deputado" }] : []),
             ...(v.proposicao ? [{ href: "#proposicao", rotulo: "Proposição" }] : []),
           ]}
-          textoOficial={v.proposicao?.ementa ? { rotulo: "Ementa", texto: v.proposicao.ementa } : null}
+          textoOficial={v.proposicao?.ementa ? { rotulo: "Ementa", texto: <TextoComSiglas>{v.proposicao.ementa}</TextoComSiglas> } : null}
           ficha={ficha}
           fontes={fontes}
         />
@@ -211,7 +212,7 @@ export default async function VotacaoEstadoPage({ params }: PageProps<"/estados/
         {v.proposicao ? (
           <div className="cartao space-y-2">
             <p className="text-lg font-semibold">{nomeProposicao(`${v.proposicao.sigla} ${v.proposicao.numero}/${v.proposicao.ano}`, ind.siglas)}</p>
-            <p className="leading-relaxed">{v.proposicao.ementa ?? "Ementa não disponível em fonte oficial"}</p>
+            <p className="leading-relaxed">{v.proposicao.ementa ? <TextoComSiglas>{v.proposicao.ementa}</TextoComSiglas> : "Ementa não disponível em fonte oficial"}</p>
             <ul className="flex flex-wrap gap-x-4">
               <li>
                 <Link href={`${base}/projetos#id=${v.proposicao.id}`} prefetch={false} className="lk inline-flex min-h-11 items-center">

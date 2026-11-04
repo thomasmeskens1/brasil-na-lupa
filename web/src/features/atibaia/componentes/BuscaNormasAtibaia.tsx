@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useMemo, useState } from "react";
 import { FonteLink } from "@/components/FonteLink";
+import { TextoComSiglas } from "@/components/glossario";
 import { normalizar } from "@/features/congresso/rotulos";
 import { MostrarMais } from "@/components/lista/MostrarMais";
 
@@ -120,7 +121,9 @@ export function BuscaNormasAtibaia() {
             <h3 className="mt-2 text-base font-semibold text-gray-900">
               {l._t} nº {l[2] ?? "não informado"}
             </h3>
-            <p className="mt-1 text-sm leading-relaxed text-gray-800">{l[4]}</p>
+            <p className="mt-1 text-sm leading-relaxed text-gray-800">
+              <TextoComSiglas>{l[4]}</TextoComSiglas>
+            </p>
             {l[10] ? (
               <p className="meta mt-1">
                 Nomes de particulares e documentos pessoais foram omitidos nesta ementa; o texto completo está no documento

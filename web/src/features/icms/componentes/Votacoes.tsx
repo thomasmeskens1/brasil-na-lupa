@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FonteLink } from "@/components/FonteLink";
+import { TextoComSiglas } from "@/components/glossario";
 import { BlocoDadoChave } from "@/components/decisao/DadoChave";
 import { placarOficial } from "@/components/decisao/rotulos";
 import { TabelaFiltravel } from "@/components/tabela/TabelaFiltravel";
@@ -37,7 +38,7 @@ function UmaVotacao({ v, n }: { v: Votacao; n: number }) {
         <span>· {formatarData(v.data)}</span>
       </p>
       <h3 id={`votacao-${n}`} className="mt-2 text-base font-semibold leading-snug text-gray-900">
-        {v.descricao ?? "Descrição não disponível em fonte oficial"}
+        {v.descricao ? <TextoComSiglas>{v.descricao}</TextoComSiglas> : "Descrição não disponível em fonte oficial"}
       </h3>
       {tipo.explicacao ? <p className="mt-1 text-gray-800">{tipo.explicacao}</p> : null}
       {nominal && placar.length ? <BlocoDadoChave dado={{ tipo: "placar", itens: placar }} className="mt-3" /> : null}

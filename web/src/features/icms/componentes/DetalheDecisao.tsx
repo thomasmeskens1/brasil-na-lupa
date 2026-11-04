@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FonteLink } from "@/components/FonteLink";
 import { BalaoTermo } from "@/components/glossario/BalaoTermo";
+import { TextoComSiglas } from "@/components/glossario/TextoComSiglas";
 import { ListaRecolhivel } from "@/components/lista/ListaRecolhivel";
 import { TabelaResponsiva } from "@/components/tabela/TabelaResponsiva";
 import { CAMINHO_POR_ID, NAO_DISPONIVEL, formatarData, houveVotoDeParlamentares, rotuloPapel } from "../rotulos";
@@ -101,7 +102,7 @@ export function Justificativas({ decisao }: { decisao: Decisao }) {
     <div className="space-y-4">
       {j?.texto ? (
         <figure className="rounded border-l-4 border-acento bg-superficie px-4 py-3">
-          <blockquote className="italic leading-relaxed text-gray-900">“{j.texto}”</blockquote>
+          <blockquote className="italic leading-relaxed text-gray-900">“<TextoComSiglas>{j.texto}</TextoComSiglas>”</blockquote>
           <figcaption className="mt-2 text-[var(--cor-secundaria)]">
             {j.documento ?? "Documento oficial"}
             {j.url ? (
@@ -124,7 +125,7 @@ export function Justificativas({ decisao }: { decisao: Decisao }) {
             {contrarias.map((c, i) => (
               <li key={i}>
                 <figure className="rounded border border-borda px-4 py-3">
-                  <blockquote className="italic leading-relaxed text-gray-900">“{c.texto}”</blockquote>
+                  <blockquote className="italic leading-relaxed text-gray-900">“<TextoComSiglas>{c.texto}</TextoComSiglas>”</blockquote>
                   <figcaption className="mt-2 text-[var(--cor-secundaria)]">
                     {c.autor ?? "Autor não informado no documento"}
                     {c.url ? (
@@ -188,7 +189,7 @@ export function Fontes({ fontes }: { fontes: Fonte[] }) {
       itens={fontes.map((f, i) => (
         <div key={i}>
           <FonteLink href={f.url} tipo={/\.pdf($|\?)/i.test(f.url) ? "pdf" : "oficial"} className="inline-flex min-h-11 items-center text-base!">
-            {f.titulo}
+            <TextoComSiglas explicar={false}>{f.titulo}</TextoComSiglas>
           </FonteLink>
           <span className="block text-[var(--cor-secundaria)]">
             {f.orgao ? `${f.orgao} · ` : ""}
@@ -207,7 +208,7 @@ export function Relacionadas({ itens }: { itens: Pick<Decisao, "id" | "titulo">[
       {itens.map((d) => (
         <li key={d.id}>
           <Link href={`/impostos/icms/${d.id}`} className="lk inline-flex min-h-11 items-center">
-            {d.titulo}
+            <TextoComSiglas explicar={false}>{d.titulo}</TextoComSiglas>
           </Link>
         </li>
       ))}

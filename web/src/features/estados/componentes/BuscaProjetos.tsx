@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { SeloFonte } from "@/components/decisao";
+import { NomeProprio, TextoComSiglas } from "@/components/glossario";
 import { FiltrosCompactos, normalizarBusca } from "@/components/tabela";
 import { NAO_DISPONIVEL, formatarData, lerHash, nomeSigla } from "../rotulos";
 import type { ContextoCasa } from "./BuscaVotacoes";
@@ -127,14 +128,14 @@ export function BuscaProjetos({ ctx }: { ctx: ContextoCasa }) {
                   <span className="selo">{nomeSigla(l[1], dados.siglas)}</span>
                   <span>apresentado em {formatarData(l[5])}</span>
                 </p>
-                <h3 className="mt-2 text-lg font-semibold leading-snug">{l[4] || "Ementa não disponível em fonte oficial"}</h3>
+                <h3 className="mt-2 text-lg font-semibold leading-snug">{l[4] ? <TextoComSiglas>{l[4]}</TextoComSiglas> : "Ementa não disponível em fonte oficial"}</h3>
                 <p className="mt-1 text-[var(--cor-secundaria)]">
                   {nomeSigla(l[1], dados.siglas)?.replace(/\s*\([^)]*\)$/, "")} {l[2]}/{l[3]}
                 </p>
                 <dl className="mt-2 space-y-1">
                   <div>
                     <dt className="inline font-semibold">Autoria: </dt>
-                    <dd className="inline">{l[6] || NAO_DISPONIVEL}</dd>
+                    <dd className="inline">{l[6] ? <NomeProprio>{l[6]}</NomeProprio> : NAO_DISPONIVEL}</dd>
                   </div>
                   {l[7] ? (
                     <div>
@@ -145,7 +146,7 @@ export function BuscaProjetos({ ctx }: { ctx: ContextoCasa }) {
                   {l[8] || l[9] ? (
                     <div>
                       <dt className="inline font-semibold">Última tramitação{l[8] ? ` (${formatarData(l[8])})` : ""}: </dt>
-                      <dd className="inline">{l[9] ?? NAO_DISPONIVEL}</dd>
+                      <dd className="inline">{l[9] ? <TextoComSiglas>{l[9]}</TextoComSiglas> : NAO_DISPONIVEL}</dd>
                     </div>
                   ) : null}
                 </dl>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FonteLink } from "@/components/FonteLink";
 import { Secao } from "@/components/Secao";
+import { TextoComSiglas } from "@/components/glossario";
 import { metadadosCompartilhamento } from "@/components/compartilhar/metadados";
 import { CabecalhoDecisao } from "@/components/decisao/CabecalhoDecisao";
 import { resolverTitulo } from "@/components/decisao/rotulos";
@@ -132,7 +133,7 @@ export default async function AcordaoPage({ params }: PageProps<"/tribunais-de-c
             {a.documentos.map((d) => (
               <li key={d.url} className="inline-flex min-h-11 items-center">
                 <FonteLink href={d.url} tipo="pdf" className="text-base!">
-                  {d.titulo}
+                  <TextoComSiglas explicar={false}>{d.titulo}</TextoComSiglas>
                 </FonteLink>
               </li>
             ))}

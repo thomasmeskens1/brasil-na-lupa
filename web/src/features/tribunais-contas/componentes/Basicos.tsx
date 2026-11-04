@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { FonteLink } from "@/components/FonteLink";
+import { TextoComSiglas } from "@/components/glossario";
 import { lacunasLegiveis, textoLegivel } from "@/features/comum/texto";
 import type { FonteTc, Lacuna } from "../tipos";
 import { BASE_TC, formatarDataTc, type TermoTc } from "../rotulos";
@@ -43,7 +44,9 @@ export function Ficha({ itens, rotulo }: { itens: [string, ReactNode][]; rotulo?
 export function Literal({ children, fonte }: { children: ReactNode; fonte?: ReactNode }) {
   return (
     <figure className="min-w-0">
-      <blockquote className="border-l-4 border-[var(--cor-borda-forte)] bg-superficie px-4 py-3 text-base leading-relaxed text-gray-900">{children}</blockquote>
+      <blockquote className="border-l-4 border-[var(--cor-borda-forte)] bg-superficie px-4 py-3 text-base leading-relaxed text-gray-900">
+        {typeof children === "string" ? <TextoComSiglas>{children}</TextoComSiglas> : children}
+      </blockquote>
       {fonte ? <figcaption className="mt-1 text-base text-[var(--cor-secundaria)]">{fonte}</figcaption> : null}
     </figure>
   );

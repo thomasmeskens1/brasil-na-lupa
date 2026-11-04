@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FonteLink } from "@/components/FonteLink";
+import { TextoComSiglas } from "@/components/glossario";
 import { getVotacaoPlenario } from "@/features/sao-paulo/dados";
 import type { JulgamentoAlesp, JulgamentoCongresso, VotacaoAlespLigada } from "../tipos";
 import { NAO_DISPONIVEL, formatarDataTc } from "../rotulos";
@@ -66,7 +67,7 @@ export function JulgamentoCongressoBloco({ jp }: { jp: JulgamentoCongresso | nul
           {jp.recebimento_parecer_tcu.documento?.url ? (
             <p className="mt-2">
               <FonteLink href={jp.recebimento_parecer_tcu.documento.url} tipo="oficial" className="text-base!">
-                {jp.recebimento_parecer_tcu.documento.titulo}
+                <TextoComSiglas explicar={false}>{jp.recebimento_parecer_tcu.documento.titulo}</TextoComSiglas>
               </FonteLink>
             </p>
           ) : null}
@@ -97,7 +98,7 @@ function VotacaoAlesp({ v }: { v: VotacaoAlespLigada }) {
         <span className="selo text-sm!">{v.orgao ?? "Órgão não informado"}</span>
         <span>{v.tipo === "nominal" ? "Votação nominal" : (v.tipo ?? "Tipo de votação não informado")}</span>
       </p>
-      <h4 className="mt-2 text-base font-semibold text-gray-900">{v.descricao ?? "Votação"}</h4>
+      <h4 className="mt-2 text-base font-semibold text-gray-900">{v.descricao ? <TextoComSiglas>{v.descricao}</TextoComSiglas> : "Votação"}</h4>
       {v.resultado ? <p className="mt-1 text-base text-gray-800">Resultado registrado: {v.resultado}</p> : null}
       {placar.length ? (
         <dl className="mt-3 flex flex-wrap gap-2" aria-label="Placar oficial">
