@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import type { Casa, IndiceCasa, Parlamentar, ResumoVotacao, VotacaoDetalhe } from "./tipos";
+import type { Casa, IndiceCasa, PainelCongresso, Parlamentar, ResumoVotacao, VotacaoDetalhe } from "./tipos";
 import { decodificar, type IndiceBusca, type LinhaVotacao } from "./lista";
 
 /**
@@ -119,6 +119,21 @@ export function votacoesIniciais(n: number): LinhaVotacao[] {
 
 export function linhaVotacao(casa: Casa, id: string): LinhaVotacao | null {
   return linhas().get(`${casa}/${id}`) ?? null;
+}
+
+let cachePainel: PainelCongresso | null | undefined;
+
+/** Números do painel inicial (content/congresso/painel.json, gerado no prebuild). */
+export function getPainel(): PainelCongresso | null {
+  if (cachePainel === undefined) cachePainel = lerOpcional<PainelCongresso>(path.join(process.cwd(), "content", "congresso", "painel.json"));
+  return cachePainel;
+}
+
+/** Quantas votações que mudam leis cada tema tem no índice (para os atalhos por tema). */
+export function contagemPorTema(): Map<string, number> {
+  const m = new Map<string, number>();
+  for (const l of linhas().values()) if (l.mudaLei && l.tema) m.set(l.tema, (m.get(l.tema) ?? 0) + 1);
+  return m;
 }
 
 /** Temas (dos títulos simples) e anos presentes no índice, para os filtros. */

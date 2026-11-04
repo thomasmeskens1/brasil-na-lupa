@@ -139,3 +139,44 @@ export interface IndiceCasa {
   /** id do parlamentar → [índice em votacoes, voto registrado] */
   votos_por_parlamentar: Record<string, [number, string | null][]>;
 }
+
+/** Contagens de um período (content/congresso/painel.json). */
+export interface ContagemPeriodo {
+  inicio: string;
+  fim: string;
+  total: number;
+  camara: number;
+  senado: number;
+  nominais: number;
+  simbolicas: number;
+  secretas: number;
+  muda_lei: number;
+  aprovadas: number;
+  rejeitadas: number;
+}
+
+/** Painel inicial de /congresso (scripts/gerar-congresso.mjs → gerarPainel). */
+export interface PainelCongresso {
+  ultima_votacao: string | null;
+  semana: (ContagemPeriodo & { ultima_votacao: string; itens: [Casa, string][] }) | null;
+  mes: ContagemPeriodo | null;
+  leis: {
+    ano: string;
+    total: number;
+    ordinarias: number;
+    complementares: number;
+    primeira: string | null;
+    ultima: string | null;
+    atualizado_em: string | null;
+    fontes: FonteCongresso[];
+  } | null;
+  mps: {
+    em_tramitacao: number;
+    enviadas_a_sancao: number;
+    editadas: number;
+    anos: string[];
+    atualizado_em: string | null;
+    fonte: FonteCongresso;
+  } | null;
+  parlamentares: Partial<Record<Casa, { em_exercicio: number; lista_atualizada_em: string | null; fonte: FonteCongresso | null }>>;
+}

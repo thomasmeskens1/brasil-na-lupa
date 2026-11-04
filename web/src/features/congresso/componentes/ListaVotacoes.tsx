@@ -2,58 +2,54 @@
 
 /**
  * Lista de votações agrupada por dia (Câmara e Senado juntos, da mais recente para a mais antiga),
- * com busca, filtros compactos e "Carregar mais". O servidor entrega os primeiros dias já
- * prontos (filtro padrão "Só o que muda leis"); o índice completo (public/congresso/busca.json)
- * só é baixado quando o visitante busca, filtra ou pede mais. Nada do que é digitado sai do navegador.
+ * com busca, filtros em botões (chips: o que mostrar, casa, resultado, período e tema) e
+ * "Carregar mais". O servidor entrega os primeiros dias já prontos (filtro padrão "Só o que muda
+ * leis"); o índice completo (public/congresso/busca.json) só é baixado quando o visitante busca,
+ * filtra ou pede mais. Nada do que é digitado sai do navegador.
+ *
+ * Os atalhos da página (/congresso?tema=…, ?casa=…, ?resultado=…) chegam em `inicial`
+ * (ListaVotacoesComParametros).
  */
-import { useCallback, useMemo, useRef, useState } from "react";
-import { CartaoDecisao } from "@/components/decisao/CartaoDecisao";
-import { FiltrosCompactos } from "@/components/tabela/FiltrosCompactos";
-import type { Casa } from "../tipos";
-import { CASA_NOME, SIGLA_PROPOSICAO, normalizar, rotaVotacao } from "../rotulos";
+import { useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
+import { CASA_NOME, SIGLA_PROPOSICAO, normalizar } from "../rotulos";
 import {
   CRITERIO_MUDA_LEI,
   LACUNA_MINIMA,
   agruparPorDia,
   casasDoFiltro,
-  dadoDaVotacao,
   decodificar,
-  explicacaoQuorum,
-  formaDe,
-  propPorExtenso,
   textoBusca,
   textoLacuna,
-  tituloOficialVotacao,
   type GrupoDia,
   type IndiceBusca,
   type LinhaVotacao,
 } from "../lista";
+import { CartaoVotacao } from "./CartaoVotacao";
 
 const POR_PAGINA = 30;
-const PERIODOS = [
-  { valor: "7", rotulo: "Últimos 7 dias" },
-  { valor: "30", rotulo: "Últimos 30 dias" },
-  { valor: "90", rotulo: "Últimos 90 dias" },
-  { valor: "365", rotulo: "Últimos 12 meses" },
-];
 /** Sigla conhecida + número (+ ano opcional), ex.: "plp 108", "pec 45/2019". */
 const RE_PROPOSICAO = new RegExp(
   `\\b(${Object.keys(SIGLA_PROPOSICAO).join("|").toLowerCase()})\\s*(\\d+)(?:\\s*\\/\\s*(\\d{4}))?\\b`,
   "g",
 );
 
-/** Data (AAAA-MM-DD) de `dias` dias atrás; "" sem período. Chamada só no clique. */
-function dataInicial(dias: string): string {
-  return dias ? new Date(new Date().getTime() - Number(dias) * 86400000).toISOString().slice(0, 10) : "";
+/** Data (AAAA-MM-DD) de `dias` dias atrás. Chamada só no clique. */
+function dataInicial(dias: number): string {
+  return new Date(new Date().getTime() - dias * 86400000).toISOString().slice(0, 10);
 }
 
-const MEMBROS: Record<Casa, string> = { camara: "Deputados federais", senado: "Senadores" };
+export interface FiltroInicial {
+  tema?: string;
+  casa?: string;
+  resultado?: string;
+}
 
 export interface ListaVotacoesProps {
   /** Primeiros dias, já no filtro padrão (servidor). */
   iniciais: LinhaVotacao[];
   temas: string[];
   anos: string[];
+  inicial?: FiltroInicial;
 }
 
 /** Grupos completos (dia inteiro) até atingir o limite de votações. */
@@ -68,44 +64,77 @@ function cortarGrupos(grupos: GrupoDia[], limite: number): { visiveis: GrupoDia[
   return { visiveis, mostradas: n };
 }
 
-function Cartao({ l }: { l: LinhaVotacao }) {
-  const q = explicacaoQuorum(l);
+interface Opcao {
+  valor: string;
+  rotulo: string;
+}
+
+/** Grupo de botões de escolha única (aria-pressed). Mesmo visual para qualquer opção. */
+function Chips({
+  rotulo,
+  opcoes,
+  valor,
+  aoMudar,
+  rolar = false,
+}: {
+  rotulo: string;
+  opcoes: Opcao[];
+  valor: string;
+  aoMudar: (v: string) => void;
+  /** No celular, uma linha só com rolagem lateral (muitas opções). */
+  rolar?: boolean;
+}) {
+  const id = useId();
   return (
-    <CartaoDecisao
-      as="li"
-      href={rotaVotacao(l.casa, l.id)}
-      tituloOficial={tituloOficialVotacao(l)}
-      simples={l.simples}
-      subtituloOficial={propPorExtenso(l.proposicao)}
-      caminho={l.casa}
-      rotuloCaminho={l.casa === "camara" ? "Câmara" : "Senado"}
-      forma={formaDe(l.tipo)}
-      dado={dadoDaVotacao(l)}
-      quemDecidiu={MEMBROS[l.casa]}
-      fonte={l.fonteUrl ? { url: l.fonteUrl, orgao: CASA_NOME[l.casa], acessado_em: l.coletadoEm } : null}
-      tema={l.tema}
-      nivelTitulo={3}
-    >
-      {q ? (
-        <p className="text-sm">
-          <span className="font-semibold">Por que não foi aprovada:</span> {q.texto}
-        </p>
-      ) : null}
-    </CartaoDecisao>
+    <div className="flex flex-col gap-1.5 sm:flex-row sm:items-start sm:gap-3">
+      <span id={id} className="shrink-0 text-sm font-semibold text-foreground sm:w-24 sm:pt-3">
+        {rotulo}
+      </span>
+      <div
+        role="group"
+        aria-labelledby={id}
+        className={rolar ? "-mx-3 flex min-w-0 gap-2 overflow-x-auto px-3 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 sm:pb-0" : "flex flex-wrap gap-2"}
+      >
+        {opcoes.map((o) => {
+          const ativo = valor === o.valor;
+          return (
+            <button
+              key={o.valor || "todos"}
+              type="button"
+              aria-pressed={ativo}
+              className={`${ativo ? "botao botao-escuro" : "botao"} shrink-0 whitespace-nowrap rounded-full px-3.5 py-1.5 text-sm`}
+              onClick={() => {
+                if (!ativo) aoMudar(o.valor);
+              }}
+            >
+              {o.rotulo}
+            </button>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 
-export function ListaVotacoes({ iniciais, temas, anos }: ListaVotacoesProps) {
+const CAMPO = "mt-1 block w-full rounded border border-[var(--cor-borda-forte)] bg-white px-3 py-2.5 text-base text-foreground";
+
+export function ListaVotacoes({ iniciais, temas, anos, inicial }: ListaVotacoesProps) {
+  const idBusca = useId();
+  const temaInicial = inicial?.tema && temas.includes(inicial.tema) ? inicial.tema : "";
+  const casaInicial = inicial?.casa === "camara" || inicial?.casa === "senado" ? inicial.casa : "";
+  const resultadoInicial = inicial?.resultado === "aprovada" || inicial?.resultado === "rejeitada" ? inicial.resultado : "";
+
   const [todas, setTodas] = useState<LinhaVotacao[] | null>(null);
   const [erro, setErro] = useState(false);
   const pedido = useRef(false);
   const [texto, setTexto] = useState("");
-  const [casa, setCasa] = useState("");
-  const [tema, setTema] = useState("");
+  const [casa, setCasa] = useState(casaInicial);
+  const [tema, setTema] = useState(temaInicial);
+  const [resultado, setResultado] = useState(resultadoInicial);
+  /** "" | "d30" (últimos 30 dias) | "a2026" (ano). */
   const [periodo, setPeriodo] = useState("");
-  /** Data inicial do período, calculada no momento da escolha (AAAA-MM-DD). */
+  /** Data inicial do período relativo, calculada no momento da escolha (AAAA-MM-DD). */
   const [desde, setDesde] = useState("");
-  const [ano, setAno] = useState("");
   const [soLeis, setSoLeis] = useState(true);
   const [limite, setLimite] = useState(POR_PAGINA);
 
@@ -114,15 +143,18 @@ export function ListaVotacoes({ iniciais, temas, anos }: ListaVotacoesProps) {
     pedido.current = true;
     fetch("/congresso/busca.json")
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
-      .then((j: IndiceBusca) => {
-        const ls = decodificar(j);
-        setTodas(ls);
-      })
+      .then((j: IndiceBusca) => setTodas(decodificar(j)))
       .catch(() => {
         pedido.current = false;
         setErro(true);
       });
   }, []);
+
+  // Chegou por um atalho (tema, casa ou resultado): baixa o índice completo para filtrar.
+  const veioDeAtalho = !!(temaInicial || casaInicial || resultadoInicial);
+  useEffect(() => {
+    if (veioDeAtalho) carregar();
+  }, [veioDeAtalho, carregar]);
 
   const indexadas = useMemo(() => (todas ? todas.map((l) => ({ l, t: textoBusca(l), p: normalizar(l.proposicao ?? "") })) : null), [todas]);
 
@@ -136,7 +168,9 @@ export function ListaVotacoes({ iniciais, temas, anos }: ListaVotacoesProps) {
     return { termos: resto.split(/\s+/).filter(Boolean), props };
   }, [texto]);
 
-  const filtroAtivo = termos.length > 0 || props.length > 0 || !!casa || !!tema || !!periodo || !!ano || !soLeis;
+  const ano = periodo.startsWith("a") ? periodo.slice(1) : "";
+  const algumFiltro = termos.length > 0 || props.length > 0 || !!casa || !!tema || !!resultado || !!periodo;
+  const filtroAtivo = algumFiltro || !soLeis;
 
   const filtradas = useMemo(() => {
     if (!indexadas) return iniciais;
@@ -146,25 +180,21 @@ export function ListaVotacoes({ iniciais, temas, anos }: ListaVotacoesProps) {
           (!soLeis || l.mudaLei) &&
           (!casa || l.casa === casa) &&
           (!tema || l.tema === tema) &&
+          (!resultado || l.resultado === resultado) &&
           (!ano || l.data.startsWith(ano)) &&
           (!desde || l.data >= desde) &&
           props.every((x) => p.startsWith(x)) &&
           termos.every((x) => t.includes(x)),
       )
       .map(({ l }) => l);
-  }, [indexadas, iniciais, soLeis, casa, tema, ano, desde, props, termos]);
+  }, [indexadas, iniciais, soLeis, casa, tema, resultado, ano, desde, props, termos]);
 
-  // Aviso de intervalo só faz sentido sem busca nem tema: senão o "vazio" é do filtro, não do Plenário.
-  const avisoLacuna = soLeis && !tema && termos.length === 0 && props.length === 0;
+  // Aviso de intervalo só faz sentido sem busca, tema nem resultado: senão o "vazio" é do filtro, não do Plenário.
+  const avisoLacuna = soLeis && !tema && !resultado && termos.length === 0 && props.length === 0;
   const grupos = useMemo(() => agruparPorDia(filtradas, avisoLacuna), [filtradas, avisoLacuna]);
   const aguardando = filtroAtivo && !todas;
   const { visiveis, mostradas } = cortarGrupos(aguardando ? [] : grupos, limite);
   const total = todas ? filtradas.length : null;
-
-  function escolherPeriodo(v: string) {
-    setPeriodo(v);
-    setDesde(dataInicial(v));
-  }
 
   function mudar(set: (v: string) => void) {
     return (v: string) => {
@@ -174,70 +204,116 @@ export function ListaVotacoes({ iniciais, temas, anos }: ListaVotacoesProps) {
     };
   }
 
+  function escolherPeriodo(v: string) {
+    setPeriodo(v);
+    setDesde(v.startsWith("d") ? dataInicial(Number(v.slice(1))) : "");
+  }
+
+  function limpar() {
+    setTexto("");
+    setCasa("");
+    setTema("");
+    setResultado("");
+    setPeriodo("");
+    setDesde("");
+    setLimite(POR_PAGINA);
+  }
+
+  const contagem = erro
+    ? "Não foi possível carregar o índice de votações. Tente recarregar a página."
+    : aguardando
+      ? "Carregando o índice de votações…"
+      : total !== null
+        ? `${total.toLocaleString("pt-BR")} ${total === 1 ? "votação" : "votações"}, da mais recente para a mais antiga`
+        : "Votações mais recentes, da mais recente para a mais antiga";
+
   return (
     <div className="space-y-4">
-      <div role="group" aria-label="O que mostrar" className="flex flex-wrap gap-2">
-        {[
-          [true, "Só o que muda leis"],
-          [false, "Tudo"],
-        ].map(([v, r]) => (
-          <button
-            key={String(v)}
-            type="button"
-            aria-pressed={soLeis === v}
-            className={soLeis === v ? "botao botao-escuro" : "botao"}
-            onClick={() => {
-              if (soLeis !== v) {
-                carregar();
-                setLimite(POR_PAGINA);
-                setSoLeis(v as boolean);
-              }
-            }}
-          >
-            {r as string}
-          </button>
-        ))}
-      </div>
+      <form role="search" aria-label="Buscar e filtrar votações" onSubmit={(e) => e.preventDefault()} onFocus={carregar} className="space-y-3 rounded-2xl border border-borda bg-superficie p-3 sm:p-4">
+        <label htmlFor={idBusca} className="block text-sm font-semibold text-foreground">
+          Buscar por assunto, proposição ou texto da votação
+          <input
+            id={idBusca}
+            type="search"
+            value={texto}
+            placeholder="Ex.: imposto, MEI, PLP 108"
+            onChange={(e) => mudar(setTexto)(e.target.value)}
+            className={CAMPO}
+          />
+        </label>
+        <Chips
+          rotulo="Mostrar"
+          valor={soLeis ? "leis" : "tudo"}
+          aoMudar={(v) => {
+            carregar();
+            setLimite(POR_PAGINA);
+            setSoLeis(v === "leis");
+          }}
+          opcoes={[
+            { valor: "leis", rotulo: "Só o que muda leis" },
+            { valor: "tudo", rotulo: "Tudo, inclusive procedimentos" },
+          ]}
+        />
+        <Chips
+          rotulo="Casa"
+          valor={casa}
+          aoMudar={mudar(setCasa)}
+          opcoes={[
+            { valor: "", rotulo: "As duas" },
+            { valor: "camara", rotulo: CASA_NOME.camara },
+            { valor: "senado", rotulo: CASA_NOME.senado },
+          ]}
+        />
+        <Chips
+          rotulo="Resultado"
+          valor={resultado}
+          aoMudar={mudar(setResultado)}
+          opcoes={[
+            { valor: "", rotulo: "Todos" },
+            { valor: "aprovada", rotulo: "Aprovada" },
+            { valor: "rejeitada", rotulo: "Rejeitada" },
+          ]}
+        />
+        <Chips
+          rolar
+          rotulo="Período"
+          valor={periodo}
+          aoMudar={mudar(escolherPeriodo)}
+          opcoes={[
+            { valor: "", rotulo: "Todo o período" },
+            { valor: "d30", rotulo: "Últimos 30 dias" },
+            { valor: "d90", rotulo: "Últimos 90 dias" },
+            { valor: "d365", rotulo: "Últimos 12 meses" },
+            ...anos.map((a) => ({ valor: `a${a}`, rotulo: a })),
+          ]}
+        />
+        {temas.length ? (
+          <Chips rolar rotulo="Tema" valor={tema} aoMudar={mudar(setTema)} opcoes={[{ valor: "", rotulo: "Todos" }, ...temas.map((t) => ({ valor: t, rotulo: t }))]} />
+        ) : null}
+        <div className="flex flex-wrap items-center justify-between gap-2 border-t border-borda pt-3">
+          <p aria-live="polite" className="text-sm text-[var(--cor-secundaria)]">
+            {contagem}
+          </p>
+          {algumFiltro ? (
+            <button type="button" className="botao text-sm" onClick={limpar}>
+              Limpar filtros
+            </button>
+          ) : null}
+        </div>
+      </form>
+
       <details className="rounded-md border border-borda bg-white">
-        <summary className="pr-3">Como funciona o filtro “Só o que muda leis”</summary>
+        <summary className="pr-3">Saiba mais: como funciona “Só o que muda leis”</summary>
         <div className="space-y-2 border-t border-borda px-3 pb-3 pt-2">
           <p>{CRITERIO_MUDA_LEI}</p>
           <p className="text-sm text-[var(--cor-secundaria)]">
             Os avisos “Sem votação que muda lei” aparecem entre dois dias com votação quando o intervalo é de {LACUNA_MINIMA} dias
-            ou mais. Eles são calculados só com as votações coletadas (veja “O que a coleta cobre”, mais abaixo).
+            ou mais. Eles são calculados só com as votações coletadas (veja “O que a coleta cobre”, mais abaixo). O tema vem do
+            título em linguagem simples e segue a classificação oficial de cada casa; votações sem título simples aprovado não
+            aparecem no filtro por tema.
           </p>
         </div>
       </details>
-
-      <form role="search" aria-label="Buscar votações" onSubmit={(e) => e.preventDefault()} onFocus={carregar}>
-        <FiltrosCompactos
-          busca={{ valor: texto, aoMudar: mudar(setTexto), rotulo: "Buscar por assunto, proposição ou texto da votação", dica: "Ex.: imposto, MEI, PLP 108" }}
-          filtros={[
-            { id: "casa", rotulo: "Casa", valor: casa, aoMudar: mudar(setCasa), opcoes: [{ valor: "camara", rotulo: CASA_NOME.camara }, { valor: "senado", rotulo: CASA_NOME.senado }], todos: "As duas" },
-            { id: "tema", rotulo: "Tema", valor: tema, aoMudar: mudar(setTema), opcoes: temas },
-            { id: "periodo", rotulo: "Período", valor: periodo, aoMudar: mudar(escolherPeriodo), opcoes: PERIODOS, todos: "Todo o período" },
-            { id: "ano", rotulo: "Ano", valor: ano, aoMudar: mudar(setAno), opcoes: anos },
-          ]}
-          contagem={
-            erro
-              ? "Não foi possível carregar o índice de votações. Tente recarregar a página."
-              : aguardando
-                ? "Carregando o índice de votações…"
-                : total !== null
-                  ? `${total.toLocaleString("pt-BR")} ${total === 1 ? "votação" : "votações"}, da mais recente para a mais antiga`
-                  : "Votações mais recentes, da mais recente para a mais antiga"
-          }
-          aoLimpar={() => {
-            setTexto("");
-            setCasa("");
-            setTema("");
-            setPeriodo("");
-            setDesde("");
-            setAno("");
-            setLimite(POR_PAGINA);
-          }}
-        />
-      </form>
 
       {!aguardando && !visiveis.length ? <p className="lacuna">Nenhuma votação com esses filtros. Tente limpar os filtros.</p> : null}
 
@@ -250,7 +326,7 @@ export function ListaVotacoes({ iniciais, temas, anos }: ListaVotacoesProps) {
             </h3>
             <ul className="mt-3 space-y-3">
               {g.linhas.map((l) => (
-                <Cartao key={`${l.casa}-${l.id}`} l={l} />
+                <CartaoVotacao key={`${l.casa}-${l.id}`} l={l} />
               ))}
             </ul>
             {g.lacunaDepois && i < visiveis.length - 1 ? (
