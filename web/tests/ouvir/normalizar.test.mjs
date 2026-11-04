@@ -4,7 +4,12 @@
  */
 import assert from "node:assert/strict";
 import { describe, test } from "node:test";
-import {
+import { register } from "node:module";
+
+// normalizar.ts importa o dicionário de siglas sem extensão (como o Next.js aceita): o gancho
+// de tests/conta/resolver.mjs tenta o mesmo caminho com ".ts".
+register("../conta/resolver.mjs", import.meta.url);
+const {
   anuncioTitulo,
   dataPorExtenso,
   dividirEmTrechos,
@@ -18,7 +23,7 @@ import {
   paraFala,
   porExtenso,
   reaisPorExtenso,
-} from "../../src/components/ouvir/normalizar.ts";
+} = await import("../../src/components/ouvir/normalizar.ts");
 
 describe("porExtenso", () => {
   const casos = [

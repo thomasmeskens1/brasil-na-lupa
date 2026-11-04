@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { TextoComSiglas } from "@/components/glossario";
 import { FiltrosCompactos, normalizarBusca } from "@/components/tabela";
 import { compararVotos, formatarData, rotuloVoto } from "../rotulos";
 import type { ArquivoVotacoes } from "./BuscaVotacoes";
@@ -121,10 +122,14 @@ export function VotosDoDeputado({ uf, base, pid, plenario, nComissao }: { uf: st
             </p>
             <p className="mt-2 text-lg font-semibold leading-snug">
               <Link href={l.plenario ? `${base}/votacoes/${l.id}` : `${base}/votacoes#id=${l.id}`} prefetch={false} className="lk">
-                {l.ementa ?? l.proposicao ?? (l.descricao || "Proposição não informada")}
+                <TextoComSiglas explicar={false}>{l.ementa ?? l.proposicao ?? (l.descricao || "Proposição não informada")}</TextoComSiglas>
               </Link>
             </p>
-            {l.proposicao && l.ementa ? <p className="mt-1 text-[var(--cor-secundaria)]">{l.proposicao}</p> : null}
+            {l.proposicao && l.ementa ? (
+              <p className="mt-1 text-[var(--cor-secundaria)]">
+                <TextoComSiglas>{l.proposicao}</TextoComSiglas>
+              </p>
+            ) : null}
             <p className="mt-2 rounded-md border border-borda bg-superficie px-3 py-2">
               <span className="text-[var(--cor-secundaria)]">Voto registrado: </span>
               <strong className="text-lg">{rotuloVoto(l.voto)}</strong>
@@ -133,7 +138,7 @@ export function VotosDoDeputado({ uf, base, pid, plenario, nComissao }: { uf: st
             </p>
             {l.descricao && (l.proposicao || l.ementa) ? (
               <p className="meta mt-2">
-                {l.plenario ? "Descrição oficial" : "Deliberação"}: {l.descricao}
+                {l.plenario ? "Descrição oficial" : "Deliberação"}: <TextoComSiglas>{l.descricao}</TextoComSiglas>
                 {l.plenario && l.resultado ? ` · resultado: ${l.resultado}` : ""}
               </p>
             ) : null}

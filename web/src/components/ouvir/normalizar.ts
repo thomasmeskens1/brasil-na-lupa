@@ -8,8 +8,10 @@
  *
  * Siglas: as de tipo de norma (PL, PLP, PEC…) são expandidas quando vêm com número; as de órgãos
  * (STF, STJ, TCU…) são expandidas na primeira vez que aparecem na leitura (o conjunto `ditas`
- * guarda as já ditas). "Nome por extenso (SIGLA)" não repete a sigla.
+ * guarda as já ditas). "Nome por extenso (SIGLA)" não repete a sigla. As duas listas vêm do
+ * dicionário único do site (components/glossario/siglas.ts), o mesmo usado na tela.
  */
+import { SIGLAS_OFICIAIS } from "../glossario/siglas";
 
 const UNIDADES = ["zero", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez", "onze", "doze", "treze", "catorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove"];
 const DEZENAS = ["", "", "vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"];
@@ -89,54 +91,15 @@ export function dataPorExtenso(dia: number, mes: number, ano?: number): string |
   return `${d} de ${MESES[mes - 1]}${ano ? ` de ${ano}` : ""}`;
 }
 
-/** Tipos de norma e proposição: expandidos quando seguidos de número. */
-export const SIGLAS_NORMA: Record<string, string> = {
-  PL: "Projeto de Lei",
-  PLP: "Projeto de Lei Complementar",
-  PLN: "Projeto de Lei do Congresso Nacional",
-  PLV: "Projeto de Lei de Conversão",
-  PEC: "Proposta de Emenda à Constituição",
-  PDL: "Projeto de Decreto Legislativo",
-  PDC: "Projeto de Decreto Legislativo",
-  PRC: "Projeto de Resolução",
-  MPV: "Medida Provisória",
-  MP: "Medida Provisória",
-  LC: "Lei Complementar",
-  EC: "Emenda Constitucional",
-  REQ: "Requerimento",
-  VET: "Veto",
-  ADI: "Ação Direta de Inconstitucionalidade",
-  ADPF: "Arguição de Descumprimento de Preceito Fundamental",
-  RE: "Recurso Extraordinário",
-  REsp: "Recurso Especial",
-  ARE: "Recurso Extraordinário com Agravo",
-};
+/** Tipos de norma e proposição: expandidos quando seguidos de número (voz "com-numero" no dicionário). */
+export const SIGLAS_NORMA: Record<string, string> = Object.fromEntries(
+  SIGLAS_OFICIAIS.filter((s) => s.voz === "com-numero").map((s) => [s.sigla, s.nome]),
+);
 
-/** Siglas de órgãos e termos: expandidas na primeira ocorrência da leitura. */
-export const SIGLAS: Record<string, string> = {
-  STF: "Supremo Tribunal Federal",
-  STJ: "Superior Tribunal de Justiça",
-  TCU: "Tribunal de Contas da União",
-  "TCE-SP": "Tribunal de Contas do Estado de São Paulo",
-  TSE: "Tribunal Superior Eleitoral",
-  CGU: "Controladoria-Geral da União",
-  CONFAZ: "Conselho Nacional de Política Fazendária",
-  ALESP: "Assembleia Legislativa do Estado de São Paulo",
-  DOU: "Diário Oficial da União",
-  LAI: "Lei de Acesso à Informação",
-  RICD: "Regimento Interno da Câmara dos Deputados",
-  RISF: "Regimento Interno do Senado Federal",
-  CEAP: "Cota para o Exercício da Atividade Parlamentar",
-  CNAE: "Classificação Nacional de Atividades Econômicas",
-  RICMS: "Regulamento do ICMS",
-  SEFAZ: "Secretaria da Fazenda",
-  "SEFAZ-SP": "Secretaria da Fazenda e Planejamento de São Paulo",
-  UF: "unidade da federação",
-  CPC: "Código de Processo Civil",
-  CTN: "Código Tributário Nacional",
-  IBS: "Imposto sobre Bens e Serviços",
-  CBS: "Contribuição sobre Bens e Serviços",
-};
+/** Siglas de órgãos e termos: expandidas na primeira ocorrência da leitura (voz "sempre" no dicionário). */
+export const SIGLAS: Record<string, string> = Object.fromEntries(
+  SIGLAS_OFICIAIS.filter((s) => s.voz === "sempre").map((s) => [s.sigla, s.nome]),
+);
 
 function escaparRe(s: string): string {
   return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");

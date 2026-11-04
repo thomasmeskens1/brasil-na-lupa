@@ -1,5 +1,6 @@
 import type { ItemLiteral, RegistroRelator } from "../tipos";
 import { FonteLink } from "@/components/FonteLink";
+import { NomeProprio, TextoComSiglas } from "@/components/glossario";
 import { ListaRecolhivel } from "@/components/lista/ListaRecolhivel";
 
 /**
@@ -41,7 +42,9 @@ export function ListaLiteral({
               {novoGrupo ? <p className="mb-1 mt-3 text-base font-semibold text-gray-900">{i.grupo}</p> : null}
               <p className="flex gap-2 text-base leading-relaxed text-gray-900" style={nivel ? { paddingLeft: `${nivel * 0.75}rem` } : undefined}>
                 {i.numero ? <span className="shrink-0 font-semibold tabular-nums text-[var(--cor-secundaria)]">{i.numero}</span> : null}
-                <span className="min-w-0">{i.texto}</span>
+                <span className="min-w-0">
+                  <TextoComSiglas>{i.texto}</TextoComSiglas>
+                </span>
               </p>
             </div>
           );
@@ -68,7 +71,9 @@ export function RegistrosRelator({ registros, divergem }: { registros: RegistroR
       <ul className={`mt-3 grid grid-cols-1 gap-3 ${registros.length > 2 ? "lg:grid-cols-3" : ""} ${registros.length > 1 ? "md:grid-cols-2" : ""}`}>
         {registros.map((r, k) => (
           <li key={k} className="cartao text-base">
-            <p className="font-semibold text-gray-900">{r.texto}</p>
+            <p className="font-semibold text-gray-900">
+              <NomeProprio>{r.texto}</NomeProprio>
+            </p>
             <p className="mt-1 text-[var(--cor-secundaria)]">
               Segundo:{" "}
               {r.url ? (

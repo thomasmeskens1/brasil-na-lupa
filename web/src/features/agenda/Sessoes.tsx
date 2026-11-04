@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FonteLink } from "@/components/FonteLink";
 import { NAO_DISPONIVEL, formatarData } from "@/components/decisao";
+import { NomeProprio, TextoComSiglas } from "@/components/glossario";
 import type { ItemPauta, SessaoAgenda } from "./dados";
 
 /** Linha de sessão (agenda): data, hora, casa, tipo e situação oficiais, link da casa. */
@@ -26,7 +27,9 @@ export function ItemSessao({ s, compacto = false }: { s: SessaoAgenda; compacto?
           <time dateTime={s.data}>{formatarData(s.data)}</time> ({diaDaSemana(s.data)}){s.hora ? `, ${s.hora}` : ""}
         </span>
       </p>
-      <p className="mt-2 font-semibold">{s.descricao_oficial ?? s.tipo_oficial ?? s.tipo ?? NAO_DISPONIVEL}</p>
+      <p className="mt-2 font-semibold">
+        <TextoComSiglas>{s.descricao_oficial ?? s.tipo_oficial ?? s.tipo ?? NAO_DISPONIVEL}</TextoComSiglas>
+      </p>
       <p className="text-sm">
         Situação na fonte: {s.situacao_oficial ?? NAO_DISPONIVEL}
         {!compacto && s.itens_pauta ? ` · ${s.itens_pauta} ${s.itens_pauta === 1 ? "item" : "itens"} na pauta` : ""}
@@ -59,16 +62,20 @@ export function ItemDaPauta({ i }: { i: ItemPauta }) {
       <p className="font-semibold">
         {i.url ? (
           <a href={i.url} className="lk" target="_blank" rel="noopener noreferrer">
-            {i.titulo ?? NAO_DISPONIVEL}
+            <TextoComSiglas explicar={false}>{i.titulo ?? NAO_DISPONIVEL}</TextoComSiglas>
             <span className="sr-only"> (abre em nova aba)</span>
           </a>
         ) : (
-          (i.titulo ?? NAO_DISPONIVEL)
+          <TextoComSiglas>{i.titulo ?? NAO_DISPONIVEL}</TextoComSiglas>
         )}
       </p>
-      {i.ementa ? <p className="mt-1 text-sm">{i.ementa}</p> : null}
+      {i.ementa ? (
+        <p className="mt-1 text-sm">
+          <TextoComSiglas>{i.ementa}</TextoComSiglas>
+        </p>
+      ) : null}
       <p className="mt-2 text-sm">
-        <span className="font-semibold">Relator:</span> {i.relatores.length ? i.relatores.join("; ") : NAO_DISPONIVEL}
+        <span className="font-semibold">Relator:</span> {i.relatores.length ? <NomeProprio>{i.relatores.join("; ")}</NomeProprio> : NAO_DISPONIVEL}
       </p>
       <div className="mt-2 rounded border border-[var(--cor-borda)] bg-[var(--cor-superficie)] p-2 text-sm">
         <p>
