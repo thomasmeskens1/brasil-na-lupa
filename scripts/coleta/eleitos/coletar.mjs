@@ -181,11 +181,16 @@ function carregarParlamentares() {
   for (const [casa, rel] of Object.entries(PARLAMENTARES)) {
     const j = lerJson(path.join(RAIZ, rel));
     const porChave = new Map();
+    const porCivil = new Map();
     for (const p of j?.itens || []) {
       const k = `${p.uf}|${upper(p.nome)}`;
       porChave.set(k, [...(porChave.get(k) || []), p]);
+      if (p.nome_civil) {
+        const kc = `${p.uf}|${upper(p.nome_civil)}`;
+        porCivil.set(kc, [...(porCivil.get(kc) || []), p]);
+      }
     }
-    casas[casa] = { porChave, total: j?.itens?.length || 0, atualizado_em: j?.atualizado_em || null };
+    casas[casa] = { porChave, porCivil, total: j?.itens?.length || 0, atualizado_em: j?.atualizado_em || null };
   }
   return casas;
 }
@@ -198,16 +203,22 @@ function casaDoCargo(r) {
 }
 
 /**
- * Vínculo só por correspondência EXATA (nome de urna = nome parlamentar, sem diferença de letras ou
- * acentos, ignorando maiúsculas/minúsculas) + mesma UF, e ÚNICA nos dois sentidos. Senão, null.
+ * Vínculo só por correspondência EXATA + mesma UF, e ÚNICA nos dois sentidos. Senão, null.
+ * 1º: nome de urna = nome parlamentar (sem diferença de letras ou acentos, ignorando maiúsculas).
+ * 2º (se o 1º não achar): nome completo do candidato no TSE = nome civil no cadastro oficial da Casa.
  */
 function vincular(registros, casas, cont) {
   const chaves = new Map();
+  const civis = new Map();
   for (const r of registros) {
     const casa = casaDoCargo(r);
     if (!casa) continue;
     const k = `${casa}|${r.uf}|${upper(r.nome_urna)}`;
     chaves.set(k, (chaves.get(k) || 0) + 1);
+    if (r.nome_completo) {
+      const kc = `${casa}|${r.uf}|${upper(r.nome_completo)}`;
+      civis.set(kc, (civis.get(kc) || 0) + 1);
+    }
   }
   for (const r of registros) {
     const casa = casaDoCargo(r);
@@ -217,6 +228,13 @@ function vincular(registros, casas, cont) {
     const cand = casas[casa].porChave.get(`${r.uf}|${upper(r.nome_urna)}`) || [];
     if (cand.length === 1 && chaves.get(`${casa}|${r.uf}|${upper(r.nome_urna)}`) === 1) {
       r.parlamentar_casa = casa; r.parlamentar_id = String(cand[0].id); r.vinculo_confianca = 'exata';
+      cont[casa].exata++;
+      continue;
+    }
+    const kc = r.nome_completo ? `${r.uf}|${upper(r.nome_completo)}` : null;
+    const candCivil = kc ? casas[casa].porCivil.get(kc) || [] : [];
+    if (candCivil.length === 1 && civis.get(`${casa}|${kc}`) === 1) {
+      r.parlamentar_casa = casa; r.parlamentar_id = String(candCivil[0].id); r.vinculo_confianca = 'exata';
       cont[casa].exata++;
     } else cont[casa].sem_vinculo++;
   }

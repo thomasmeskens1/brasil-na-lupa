@@ -1013,8 +1013,9 @@ table .lk:hover {
   border-radius: 0.875rem;
   background: var(--cor-superficie-2);
   box-shadow: 0 0 0 1.5px #1b1b23, 0 4px 10px rgb(0 0 0 / 0.35);
-  object-fit: cover;
-  object-position: center top;
+  /* Foto inteira, sem corte (o Senado veda descaracterização; vale para todas as fontes). */
+  object-fit: contain;
+  object-position: center bottom;
 }
 .figurinha-iniciais {
   display: inline-flex;
