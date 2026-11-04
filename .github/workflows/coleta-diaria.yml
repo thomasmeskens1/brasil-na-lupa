@@ -37,6 +37,8 @@ jobs:
         run: |
           node scripts/coleta/senado/presenca.mjs
           node scripts/coleta/senado/despesas.mjs ${{ inputs.completo && '--forcar' || '' }}
+      - name: Autoria transformada em norma (Câmara e Senado)
+        run: node scripts/coleta/autoria/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
       - name: Consultas públicas do Senado e enquetes da Câmara (canais oficiais)
         run: node scripts/coleta/participacao/coletar.mjs --prazo-min 20
       - name: Agenda e pauta do Plenário (depois de Câmara e Senado)
@@ -109,7 +111,7 @@ jobs:
         run: |
           git config user.name "coleta-diaria"
           git config user.email "coleta-diaria@users.noreply.github.com"
-          git add dados/camara dados/senado dados/agenda dados/stj dados/stf dados/executivo dados/alesp dados/governo-sp dados/atibaia dados/tribunais-contas dados/eleitos dados/titulos dados/estados/se dados/estados/ba dados/estados/rn dados/estados/es dados/estados/pe dados/estados/df dados/participacao
+          git add dados/camara dados/senado dados/agenda dados/stj dados/stf dados/executivo dados/alesp dados/governo-sp dados/atibaia dados/tribunais-contas dados/eleitos dados/titulos dados/estados/se dados/estados/ba dados/estados/rn dados/estados/es dados/estados/pe dados/estados/df dados/participacao dados/autoria
           # meta.json muda a cada execução; só publica se algum dado de fato mudou.
           if git diff --cached --name-only | grep -qv '/meta\.json$'; then
             git commit -m "Coleta diária: dados oficiais ($(date -u +%F))"
