@@ -1,0 +1,848 @@
+{
+  "legislaturas": [
+    {
+      "id": 5,
+      "numero": 20,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31"
+    },
+    {
+      "id": 4,
+      "numero": 19,
+      "inicio": "2021-01-01",
+      "fim": "2024-12-31"
+    },
+    {
+      "id": 1,
+      "numero": 18,
+      "inicio": "2017-01-01",
+      "fim": "2020-12-31"
+    },
+    {
+      "id": 2,
+      "numero": 17,
+      "inicio": "2013-01-01",
+      "fim": "2016-12-31"
+    },
+    {
+      "id": 3,
+      "numero": 16,
+      "inicio": "2009-01-01",
+      "fim": "2012-12-31"
+    }
+  ],
+  "legislatura_atual": {
+    "id": 5,
+    "numero": 20,
+    "inicio": "2025-01-01",
+    "fim": "2028-12-31"
+  },
+  "tipos_resultado": [
+    {
+      "id": 1,
+      "nome": "Aprovada por unanimidade",
+      "natureza": "A"
+    },
+    {
+      "id": 2,
+      "nome": "Aprovada por maioria simples",
+      "natureza": "A"
+    },
+    {
+      "id": 3,
+      "nome": "Aprovada por maioria absoluta",
+      "natureza": "A"
+    },
+    {
+      "id": 4,
+      "nome": "Aprovada por quórum qualificado",
+      "natureza": "A"
+    },
+    {
+      "id": 5,
+      "nome": "Rejeitada",
+      "natureza": "R"
+    },
+    {
+      "id": 6,
+      "nome": "Adiada",
+      "natureza": ""
+    },
+    {
+      "id": 7,
+      "nome": "Retirada de pauta",
+      "natureza": ""
+    },
+    {
+      "id": 8,
+      "nome": "Não alcançado o quórum mínimo",
+      "natureza": ""
+    },
+    {
+      "id": 9,
+      "nome": "Lido no expediente",
+      "natureza": ""
+    },
+    {
+      "id": 10,
+      "nome": "adiada a votação em razão do encerramento da sessão",
+      "natureza": ""
+    },
+    {
+      "id": 11,
+      "nome": "Veto Derrubado",
+      "natureza": "A"
+    },
+    {
+      "id": 12,
+      "nome": "Veto mantido",
+      "natureza": "R"
+    }
+  ],
+  "tipos_materia": [
+    {
+      "id": 11,
+      "sigla": "EMDA",
+      "descricao": "Emenda Aditiva"
+    },
+    {
+      "id": 9,
+      "sigla": "EMDF",
+      "descricao": "Emenda Modificativa"
+    },
+    {
+      "id": 10,
+      "sigla": "EMDS",
+      "descricao": "Emenda Substitutiva"
+    },
+    {
+      "id": 15,
+      "sigla": "EMSU",
+      "descricao": "Emenda Supressiva"
+    },
+    {
+      "id": 6,
+      "sigla": "ID",
+      "descricao": "Indicação"
+    },
+    {
+      "id": 17,
+      "sigla": "LO",
+      "descricao": "Lei Ordinária"
+    },
+    {
+      "id": 16,
+      "sigla": "MS",
+      "descricao": "Mensagem"
+    },
+    {
+      "id": 8,
+      "sigla": "Moção",
+      "descricao": "Moção"
+    },
+    {
+      "id": 14,
+      "sigla": "OF",
+      "descricao": "Ofício"
+    },
+    {
+      "id": 7,
+      "sigla": "PROC",
+      "descricao": "Processo"
+    },
+    {
+      "id": 3,
+      "sigla": "PDL",
+      "descricao": "Projeto de Decreto Legislativo"
+    },
+    {
+      "id": 2,
+      "sigla": "PELO",
+      "descricao": "Projeto de Emenda a Lei Orgânica"
+    },
+    {
+      "id": 1,
+      "sigla": "PL",
+      "descricao": "Projeto de Lei"
+    },
+    {
+      "id": 4,
+      "sigla": "PLC",
+      "descricao": "Projeto de Lei Complementar"
+    },
+    {
+      "id": 13,
+      "sigla": "PLSUB",
+      "descricao": "Projeto de Lei Substitutivo"
+    },
+    {
+      "id": 12,
+      "sigla": "PR",
+      "descricao": "Projeto de Resolução"
+    },
+    {
+      "id": 5,
+      "sigla": "REQ",
+      "descricao": "Requerimento"
+    },
+    {
+      "id": 18,
+      "sigla": "RQURg",
+      "descricao": "Requerimento Urgência"
+    },
+    {
+      "id": 19,
+      "sigla": "EMEMD",
+      "descricao": "Emenda Orçamentária"
+    },
+    {
+      "id": 20,
+      "sigla": "EmPV",
+      "descricao": "Emenda PLC 04/2020"
+    },
+    {
+      "id": 21,
+      "sigla": "EMPD",
+      "descricao": "Emenda ao Plano Diretor 2021"
+    },
+    {
+      "id": 22,
+      "sigla": "EMPPA",
+      "descricao": "Emenda ao PPA"
+    },
+    {
+      "id": 23,
+      "sigla": "ATO",
+      "descricao": "ATO"
+    },
+    {
+      "id": 24,
+      "sigla": "PRC",
+      "descricao": "Parecer (Comissões Técnicas)"
+    },
+    {
+      "id": 25,
+      "sigla": "ERInt",
+      "descricao": "Emenda ao Regimento Interno"
+    },
+    {
+      "id": 26,
+      "sigla": "EImp",
+      "descricao": "Emenda Impositiva"
+    },
+    {
+      "id": 27,
+      "sigla": "REC",
+      "descricao": "Recurso"
+    }
+  ],
+  "mandatos": [
+    {
+      "id": 120,
+      "parlamentar_id": 43,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 138,
+      "parlamentar_id": 106,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 121,
+      "parlamentar_id": 85,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 122,
+      "parlamentar_id": 84,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 139,
+      "parlamentar_id": 37,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 140,
+      "parlamentar_id": 6,
+      "legislatura_id": 5,
+      "titular": false,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 110,
+      "parlamentar_id": 93,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 141,
+      "parlamentar_id": 107,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 112,
+      "parlamentar_id": 95,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 111,
+      "parlamentar_id": 94,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 123,
+      "parlamentar_id": 90,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 124,
+      "parlamentar_id": 83,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 125,
+      "parlamentar_id": 12,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 119,
+      "parlamentar_id": 101,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 117,
+      "parlamentar_id": 69,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 126,
+      "parlamentar_id": 81,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 127,
+      "parlamentar_id": 80,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 115,
+      "parlamentar_id": 98,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 116,
+      "parlamentar_id": 99,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 128,
+      "parlamentar_id": 20,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 118,
+      "parlamentar_id": 100,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 129,
+      "parlamentar_id": 79,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 130,
+      "parlamentar_id": 24,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 134,
+      "parlamentar_id": 102,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 131,
+      "parlamentar_id": 26,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 132,
+      "parlamentar_id": 28,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 135,
+      "parlamentar_id": 103,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 113,
+      "parlamentar_id": 96,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 136,
+      "parlamentar_id": 104,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 133,
+      "parlamentar_id": 75,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 137,
+      "parlamentar_id": 105,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 114,
+      "parlamentar_id": 97,
+      "legislatura_id": 5,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    }
+  ],
+  "atualizado_em": "2026-11-03",
+  "uf": "RN",
+  "casa": "cm-natal",
+  "observacao": "Tabelas de apoio do SAPL usadas pelo coletor (sem CPF, telefone, endereço ou data de nascimento).",
+  "tipos_norma": [
+    {
+      "id": 5,
+      "sigla": "DL",
+      "descricao": "DECRETO LEGISLATIVO"
+    },
+    {
+      "id": 6,
+      "sigla": "ELO",
+      "descricao": "EMENDA À LEI ORGÂNICA DO MUNICÍPIO"
+    },
+    {
+      "id": 2,
+      "sigla": "LC",
+      "descricao": "LEI COMPLEMENTAR"
+    },
+    {
+      "id": 7,
+      "sigla": "LDO",
+      "descricao": "Lei de Diretrizes Orçamentárias"
+    },
+    {
+      "id": 1,
+      "sigla": "LEI",
+      "descricao": "LEI ORDINÁRIA"
+    },
+    {
+      "id": 10,
+      "sigla": "LOM",
+      "descricao": "LEI ORGÂNICA DO MUNICÍPIO"
+    },
+    {
+      "id": 9,
+      "sigla": "LP",
+      "descricao": "LEI PROMULGADA"
+    },
+    {
+      "id": 11,
+      "sigla": "RI",
+      "descricao": "REGIMENTO INTERNO"
+    },
+    {
+      "id": 3,
+      "sigla": "RS",
+      "descricao": "RESOLUÇÃO"
+    }
+  ],
+  "tipos_sessao": [
+    {
+      "id": 3,
+      "nome": "Especial"
+    },
+    {
+      "id": 2,
+      "nome": "Extraordinária"
+    },
+    {
+      "id": 1,
+      "nome": "Ordinária"
+    }
+  ],
+  "partidos": [
+    {
+      "id": 37,
+      "sigla": "AVANTE",
+      "nome": "AVANTE"
+    },
+    {
+      "id": 43,
+      "sigla": "CIDADANIA",
+      "nome": "Cidadania"
+    },
+    {
+      "id": 44,
+      "sigla": "DC",
+      "nome": "Democracia Cristã"
+    },
+    {
+      "id": 5,
+      "sigla": "DEM",
+      "nome": "DEMOCRATAS"
+    },
+    {
+      "id": 36,
+      "sigla": "MDB",
+      "nome": "MOVIMENTO DEMOCRÁTICO BRASILEIRO"
+    },
+    {
+      "id": 33,
+      "sigla": "NOVO",
+      "nome": "PARTIDO NOVO"
+    },
+    {
+      "id": 38,
+      "sigla": "PATRI",
+      "nome": "PATRIOTA"
+    },
+    {
+      "id": 18,
+      "sigla": "PCB",
+      "nome": "PARTIDO COMUNISTA BRASILEIRO"
+    },
+    {
+      "id": 6,
+      "sigla": "PCdoB",
+      "nome": "PARTIDO COMUNISTA DO BRASIL"
+    },
+    {
+      "id": 22,
+      "sigla": "PCO",
+      "nome": "PARTIDO DA CAUSA OPERÁRIA"
+    },
+    {
+      "id": 3,
+      "sigla": "PDT",
+      "nome": "PARTIDO DEMOCRÁTICO TRABALHISTA"
+    },
+    {
+      "id": 30,
+      "sigla": "PEN",
+      "nome": "PARTIDO ECOLÓGICO NACIONAL"
+    },
+    {
+      "id": 20,
+      "sigla": "PHS",
+      "nome": "PARTIDO HUMANISTA DA SOLIDARIEDADE"
+    },
+    {
+      "id": 40,
+      "sigla": "PL",
+      "nome": "PARTIDO LIBERAL"
+    },
+    {
+      "id": 39,
+      "sigla": "PL",
+      "nome": "PARTIDO LIBERAL"
+    },
+    {
+      "id": 35,
+      "sigla": "PMB",
+      "nome": "PARTIDO DA MULHER BRASILEIRA"
+    },
+    {
+      "id": 1,
+      "sigla": "PMDB",
+      "nome": "PARTIDO DO MOVIMENTO DEMOCRÁTICO BRASILEIRO"
+    },
+    {
+      "id": 11,
+      "sigla": "PMN",
+      "nome": "PARTIDO DA MOBILIZAÇÃO NACIONAL"
+    },
+    {
+      "id": 23,
+      "sigla": "PODE",
+      "nome": "PODEMOS"
+    },
+    {
+      "id": 16,
+      "sigla": "PP",
+      "nome": "PARTIDO PROGRESSISTA"
+    },
+    {
+      "id": 29,
+      "sigla": "PPL",
+      "nome": "PARTIDO PÁTRIA LIVRE"
+    },
+    {
+      "id": 13,
+      "sigla": "PPS",
+      "nome": "PARTIDO POPULAR SOCIALISTA"
+    },
+    {
+      "id": 27,
+      "sigla": "PR",
+      "nome": "PARTIDO DA REPÚBLICA"
+    },
+    {
+      "id": 25,
+      "sigla": "PRB",
+      "nome": "PARTIDO REPUBLICANO BRASILEIRO"
+    },
+    {
+      "id": 31,
+      "sigla": "PROS",
+      "nome": "PARTIDO REPUBLICANO DA ORDEM SOCIAL"
+    },
+    {
+      "id": 12,
+      "sigla": "PRP",
+      "nome": "PARTIDO REPUBLICANO PROGRESSISTA"
+    },
+    {
+      "id": 19,
+      "sigla": "PRTB",
+      "nome": "PARTIDO RENOVADOR TRABALHISTA BRASILEIRO"
+    },
+    {
+      "id": 7,
+      "sigla": "PSB",
+      "nome": "PARTIDO SOCIALISTA BRASILEIRO"
+    },
+    {
+      "id": 10,
+      "sigla": "PSC",
+      "nome": "PARTIDO SOCIAL CRISTÃO"
+    },
+    {
+      "id": 28,
+      "sigla": "PSD",
+      "nome": "PARTIDO SOCIAL DEMOCRÁTICO"
+    },
+    {
+      "id": 8,
+      "sigla": "PSDB",
+      "nome": "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA"
+    },
+    {
+      "id": 21,
+      "sigla": "PSDC",
+      "nome": "PARTIDO SOCIAL DEMOCRATA CRISTÃO"
+    },
+    {
+      "id": 24,
+      "sigla": "PSL",
+      "nome": "PARTIDO SOCIAL LIBERAL"
+    },
+    {
+      "id": 26,
+      "sigla": "PSOL",
+      "nome": "PARTIDO SOCIALISMO E LIBERDADE"
+    },
+    {
+      "id": 17,
+      "sigla": "PSTU",
+      "nome": "PARTIDO SOCIALISTA DOS TRABALHADORES UNIFICADO"
+    },
+    {
+      "id": 4,
+      "sigla": "PT",
+      "nome": "PARTIDO DOS TRABALHADORES"
+    },
+    {
+      "id": 2,
+      "sigla": "PTB",
+      "nome": "PARTIDO TRABALHISTA BRASILEIRO"
+    },
+    {
+      "id": 9,
+      "sigla": "PTC",
+      "nome": "PARTIDO TRABALHISTA CRISTÃO"
+    },
+    {
+      "id": 15,
+      "sigla": "PTdoB",
+      "nome": "PARTIDO TRABALHISTA DO BRASIL"
+    },
+    {
+      "id": 14,
+      "sigla": "PV",
+      "nome": "PARTIDO VERDE"
+    },
+    {
+      "id": 34,
+      "sigla": "REDE",
+      "nome": "REDE SUSTENTABILIDADE"
+    },
+    {
+      "id": 41,
+      "sigla": "REPUB",
+      "nome": "REPUBLICANOS"
+    },
+    {
+      "id": 32,
+      "sigla": "SD",
+      "nome": "SOLIDARIEDADE"
+    },
+    {
+      "id": 42,
+      "sigla": "UNIÃO BRASIL",
+      "nome": "União Brasil"
+    }
+  ]
+}

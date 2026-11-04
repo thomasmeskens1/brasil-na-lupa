@@ -1,0 +1,42 @@
+{
+  "atualizado_em": "2026-11-03",
+  "fonte": {
+    "titulo": "API de dados abertos do Siconfi (Tesouro Nacional) — RREO",
+    "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo",
+    "orgao": "Tesouro Nacional",
+    "acessado_em": "2026-11-03"
+  },
+  "robots": {
+    "apidatalake.tesouro.gov.br": {
+      "status": 404,
+      "crawl_delay_s": null,
+      "intervalo_usado_s": 1.5,
+      "disallow": []
+    }
+  },
+  "relatorios_alvo": [
+    "2025-b6",
+    "2026-b4"
+  ],
+  "ultima_execucao": {
+    "em": "2026-11-04T01:10:07.519Z",
+    "requisicoes": 1359,
+    "municipios_consultados": 683,
+    "falhas": []
+  },
+  "contagens": {
+    "2025-b6": {
+      "com_dados": 676,
+      "sem_dados": 7
+    },
+    "2026-b4": {
+      "com_dados": 1,
+      "sem_dados": 0
+    }
+  },
+  "observacoes": [
+    "Valores declarados pelo próprio município ao Tesouro Nacional no RREO, copiados sem cálculo; o site não soma nem completa linhas ausentes.",
+    "Funções de governo identificadas pelo nome exato da lista oficial (Portaria MOG nº 42/1999); as subfunções da fonte não são guardadas.",
+    "Município sem o relatório na API: \"sem dados\" na data da consulta (o município pode não ter entregado ou o Tesouro ainda não publicou); reconsultado depois de 15 dias."
+  ]
+}

@@ -1,0 +1,995 @@
+{
+  "legislaturas": [
+    {
+      "id": 2,
+      "numero": 1,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31"
+    },
+    {
+      "id": 1,
+      "numero": 0,
+      "inicio": "2021-01-01",
+      "fim": "2024-12-31"
+    }
+  ],
+  "legislatura_atual": {
+    "id": 2,
+    "numero": 1,
+    "inicio": "2025-01-01",
+    "fim": "2028-12-31"
+  },
+  "tipos_resultado": [
+    {
+      "id": 1,
+      "nome": "Aprovado",
+      "natureza": "A"
+    },
+    {
+      "id": 2,
+      "nome": "Rejeitado",
+      "natureza": "R"
+    },
+    {
+      "id": 3,
+      "nome": "prejudicado",
+      "natureza": ""
+    }
+  ],
+  "tipos_materia": [
+    {
+      "id": 1,
+      "sigla": "PELOL",
+      "descricao": "Projeto de Emenda Constitucional - Leg"
+    },
+    {
+      "id": 80,
+      "sigla": "PELOE",
+      "descricao": "Projeto de Emenda Constitucional - Exe"
+    },
+    {
+      "id": 101,
+      "sigla": "PLC-E",
+      "descricao": "Projeto de Lei Complementar - Exe"
+    },
+    {
+      "id": 2,
+      "sigla": "PLCLE",
+      "descricao": "Projeto de Lei Complementar - Leg"
+    },
+    {
+      "id": 3,
+      "sigla": "PLE",
+      "descricao": "Projeto de Lei do Executivo"
+    },
+    {
+      "id": 24,
+      "sigla": "PLL",
+      "descricao": "Projeto de Lei do Legislativo"
+    },
+    {
+      "id": 5,
+      "sigla": "PRES",
+      "descricao": "Projeto de Resolução"
+    },
+    {
+      "id": 6,
+      "sigla": "PDL",
+      "descricao": "Projeto de Decreto Legislativo"
+    },
+    {
+      "id": 114,
+      "sigla": "PDL-A",
+      "descricao": "PROJ. DE DECRETO LEGISLATIVO - Aprovação de Contas"
+    },
+    {
+      "id": 115,
+      "sigla": "PDL-R",
+      "descricao": "PROJ. DE DECRETO LEGISLATIVO - Rejeição de Contas"
+    },
+    {
+      "id": 4,
+      "sigla": "PC",
+      "descricao": "Projeto de Código"
+    },
+    {
+      "id": 7,
+      "sigla": "EMDLE",
+      "descricao": "Emenda escrita -  Leg"
+    },
+    {
+      "id": 104,
+      "sigla": "AM",
+      "descricao": "Ato de Mesa"
+    },
+    {
+      "id": 105,
+      "sigla": "PORT",
+      "descricao": "Portaria"
+    },
+    {
+      "id": 8,
+      "sigla": "IND",
+      "descricao": "Indicação escrita"
+    },
+    {
+      "id": 11,
+      "sigla": "PCR",
+      "descricao": "Parecer"
+    },
+    {
+      "id": 12,
+      "sigla": "RCS",
+      "descricao": "Recurso"
+    },
+    {
+      "id": 13,
+      "sigla": "RQT",
+      "descricao": "Requerimento"
+    },
+    {
+      "id": 14,
+      "sigla": "SBE",
+      "descricao": "Subemenda"
+    },
+    {
+      "id": 18,
+      "sigla": "PSE",
+      "descricao": "Substitutivo - Executivo"
+    },
+    {
+      "id": 100,
+      "sigla": "PSL",
+      "descricao": "Substitutivo - Legislativo"
+    },
+    {
+      "id": 15,
+      "sigla": "VTO",
+      "descricao": "Veto"
+    },
+    {
+      "id": 16,
+      "sigla": "MÇO",
+      "descricao": "Moção"
+    },
+    {
+      "id": 17,
+      "sigla": "OTS",
+      "descricao": "Outros"
+    },
+    {
+      "id": 19,
+      "sigla": "ATAO",
+      "descricao": "Ata Ordinária"
+    },
+    {
+      "id": 22,
+      "sigla": "ATAE",
+      "descricao": "Ata Extraordinária"
+    },
+    {
+      "id": 21,
+      "sigla": "CPL",
+      "descricao": "Ciência ao Plenário"
+    },
+    {
+      "id": 23,
+      "sigla": "ATAA",
+      "descricao": "Ata Audiência Pública"
+    },
+    {
+      "id": 25,
+      "sigla": "PCJR",
+      "descricao": "Parecer Justiça e Redação"
+    },
+    {
+      "id": 28,
+      "sigla": "PFOCP",
+      "descricao": "Parecer Finanças, Orçamento, Controle, Planejament"
+    },
+    {
+      "id": 29,
+      "sigla": "PCSAS",
+      "descricao": "Parecer Saúde, Assistência Social e Meio Ambiente"
+    },
+    {
+      "id": 27,
+      "sigla": "PCECE",
+      "descricao": "Parecer Educação, Cultura e Esporte"
+    },
+    {
+      "id": 26,
+      "sigla": "PCAM",
+      "descricao": "Parecer Assuntos Metropolitanos"
+    },
+    {
+      "id": 31,
+      "sigla": "RQT-V",
+      "descricao": "Requerimento verbal - fala dos inscritos- Plenário"
+    },
+    {
+      "id": 32,
+      "sigla": "MÇO-V",
+      "descricao": "Moção verbal fala dos inscritos - Plenário"
+    },
+    {
+      "id": 33,
+      "sigla": "IND-V",
+      "descricao": "Indicação verbal - fala dos inscritos - Plenário"
+    },
+    {
+      "id": 34,
+      "sigla": "EMD-V",
+      "descricao": "Emenda verbal - Plenário"
+    },
+    {
+      "id": 35,
+      "sigla": "PCR-V",
+      "descricao": "Parecer verbal - Plenário"
+    },
+    {
+      "id": 36,
+      "sigla": "CBE-V",
+      "descricao": "Subemenda verbal - Plenário"
+    },
+    {
+      "id": 37,
+      "sigla": "RRE",
+      "descricao": "Requerimento de Regime de Urgência"
+    },
+    {
+      "id": 38,
+      "sigla": "DLAO",
+      "descricao": "Dispensa de Leitura de Ata Ordinária"
+    },
+    {
+      "id": 39,
+      "sigla": "DLAE",
+      "descricao": "Dispensa de Leitura de Ata Extraordinária"
+    },
+    {
+      "id": 40,
+      "sigla": "DIR",
+      "descricao": "Dispensa de Intervalo Regimental"
+    },
+    {
+      "id": 41,
+      "sigla": "DLAOV",
+      "descricao": "Dispensa de Leitura (atas ord/extraord/vot/bloco)"
+    },
+    {
+      "id": 42,
+      "sigla": "ACJR",
+      "descricao": "Ata da Comissão Permanente de Justiça e Redação"
+    },
+    {
+      "id": 43,
+      "sigla": "AFOCP",
+      "descricao": "Ata da Comissão de Finan. Orçam. Cont. e Planejame"
+    },
+    {
+      "id": 44,
+      "sigla": "ACECE",
+      "descricao": "Ata da Comissão de Educação, Cultura e Esporte"
+    },
+    {
+      "id": 45,
+      "sigla": "ASASM",
+      "descricao": "Ata da Comissão de Saúde, Assist. Social, Meio Amb"
+    },
+    {
+      "id": 46,
+      "sigla": "AAM",
+      "descricao": "Ata da Comissão Metropolitana"
+    },
+    {
+      "id": 52,
+      "sigla": "PJREX",
+      "descricao": "Parecer Justiça e Redação - PL - Exe"
+    },
+    {
+      "id": 47,
+      "sigla": "PJRPL",
+      "descricao": "Parecer Justiça e Redação - PL - Leg"
+    },
+    {
+      "id": 48,
+      "sigla": "PJRPC",
+      "descricao": "Parecer Justiça e Redação - PLC - Leg"
+    },
+    {
+      "id": 49,
+      "sigla": "PJRRE",
+      "descricao": "Parecer Justiça e Redação - PRes - Leg"
+    },
+    {
+      "id": 50,
+      "sigla": "PJRDE",
+      "descricao": "Parecer Comissão de Justiça e Redação - PDec - Leg"
+    },
+    {
+      "id": 51,
+      "sigla": "PJRLO",
+      "descricao": "Parecer Justiça e Redação - Eme Lei Orgânica - Leg"
+    },
+    {
+      "id": 53,
+      "sigla": "PJLEX",
+      "descricao": "Parecer Justiça e Redação - PLC - Exe"
+    },
+    {
+      "id": 54,
+      "sigla": "PJROE",
+      "descricao": "Parecer Justiça e Redação - Emenda Lei Orgâ  - Exe"
+    },
+    {
+      "id": 60,
+      "sigla": "FPLEX",
+      "descricao": "Parecer Fin. Orç. Con. Plan - PL - Exe"
+    },
+    {
+      "id": 55,
+      "sigla": "PFOLE",
+      "descricao": "Parecer Fin. Orç. Con. Plan - PL - Leg"
+    },
+    {
+      "id": 56,
+      "sigla": "PLCL",
+      "descricao": "Parecer Fin. Orç. Con. Plan - PLC - Leg"
+    },
+    {
+      "id": 57,
+      "sigla": "FRLEG",
+      "descricao": "Parecer Fin. Orç. Con. Plan - PRes - Leg"
+    },
+    {
+      "id": 58,
+      "sigla": "FDELE",
+      "descricao": "Parecer Fin. Orç. Con. Plan - PDec - Leg"
+    },
+    {
+      "id": 59,
+      "sigla": "FELOL",
+      "descricao": "Parecer Fin. Orç. Con. Plan - Em à Lei Org - Leg"
+    },
+    {
+      "id": 61,
+      "sigla": "FPLCE",
+      "descricao": "Parecer Fin. Orç. Con. Plan - PLC - Exe"
+    },
+    {
+      "id": 62,
+      "sigla": "FELOE",
+      "descricao": "Parecer Fin. Orç. Con. Plan - Emen Lei Orgân - Exe"
+    },
+    {
+      "id": 68,
+      "sigla": "EPLEX",
+      "descricao": "Parecer Educação Cultura e Esporte - PL - Exe"
+    },
+    {
+      "id": 63,
+      "sigla": "EDLEG",
+      "descricao": "Parecer Educação Cultura e Esporte - PL - Leg"
+    },
+    {
+      "id": 64,
+      "sigla": "EPLCL",
+      "descricao": "Parecer Educação Cultura e Esporte - PLC - Leg"
+    },
+    {
+      "id": 65,
+      "sigla": "ERESL",
+      "descricao": "Parecer Educação Cultura e Esporte - PRs - Leg"
+    },
+    {
+      "id": 66,
+      "sigla": "EDELE",
+      "descricao": "Parecer Educação Cultura e Esporte - PDec - Leg"
+    },
+    {
+      "id": 67,
+      "sigla": "ELORL",
+      "descricao": "Parecer Educação Cultura e Esporte - PELOrgâ - Leg"
+    },
+    {
+      "id": 69,
+      "sigla": "EPLCE",
+      "descricao": "Parecer Educação Cultura e Esporte - PLC - Exe"
+    },
+    {
+      "id": 70,
+      "sigla": "EORGE",
+      "descricao": "Parecer Educação Cultura e Esporte - EmLeiOr - Exe"
+    },
+    {
+      "id": 76,
+      "sigla": "SAPLE",
+      "descricao": "Parecer Saúde Assis. Social e Meio Amb - PL - Exe"
+    },
+    {
+      "id": 71,
+      "sigla": "SAPLL",
+      "descricao": "Parecer Saúde Assis. Social e Meio Amb - PL - Leg"
+    },
+    {
+      "id": 72,
+      "sigla": "SALCL",
+      "descricao": "Parecer Saúde Assis. Social e Meio Amb - PLC- Leg"
+    },
+    {
+      "id": 73,
+      "sigla": "SRESL",
+      "descricao": "Parecer Saúde Assis. Social e Meio Amb - PRes- Leg"
+    },
+    {
+      "id": 74,
+      "sigla": "SPDEL",
+      "descricao": "Parecer Saúde Assis. Social e Meio Amb - PDec- Leg"
+    },
+    {
+      "id": 75,
+      "sigla": "SLOGL",
+      "descricao": "Parecer Saúde Assis. Social e Meio Amb - PLOr- Leg"
+    },
+    {
+      "id": 77,
+      "sigla": "SPLCE",
+      "descricao": "Parecer Saúde Assis. Social e Meio Amb - PLC- Exe"
+    },
+    {
+      "id": 78,
+      "sigla": "SLOGE",
+      "descricao": "Parecer Saúde Assis. Social e Meio Amb - PLOr- Exe"
+    },
+    {
+      "id": 81,
+      "sigla": "PLCEX",
+      "descricao": "Projeto de Lei Complementar - Exe"
+    },
+    {
+      "id": 82,
+      "sigla": "EMEXE",
+      "descricao": "Emenda -  Exe"
+    },
+    {
+      "id": 84,
+      "sigla": "DLPCP",
+      "descricao": "Dispensa da leitura de pareceres das Com. Permanen"
+    },
+    {
+      "id": 85,
+      "sigla": "DLP",
+      "descricao": "Dispensa da leitura de projeto"
+    },
+    {
+      "id": 86,
+      "sigla": "DLC",
+      "descricao": "Dispensa da leitura das correspondências"
+    },
+    {
+      "id": 87,
+      "sigla": "DLPVB",
+      "descricao": "Dispensa da leitura de pareceres/vot em bloco"
+    },
+    {
+      "id": 88,
+      "sigla": "VBP",
+      "descricao": "Votação em Bloco de Projetos"
+    },
+    {
+      "id": 89,
+      "sigla": "EVDPC",
+      "descricao": "Emenda verbal com dispensa parecer das comissões"
+    },
+    {
+      "id": 90,
+      "sigla": "SEVDP",
+      "descricao": "Subemenda verba com dispensa de parecer comissões"
+    },
+    {
+      "id": 91,
+      "sigla": "DVUP",
+      "descricao": "Discussão e votação de urgência de proposição"
+    },
+    {
+      "id": 92,
+      "sigla": "DLME",
+      "descricao": "Dispensa de Leitura - matérias do expediente"
+    },
+    {
+      "id": 93,
+      "sigla": "RV-P",
+      "descricao": "Requerimento verbal - Plenário"
+    },
+    {
+      "id": 94,
+      "sigla": "ODDLV",
+      "descricao": "Ordem do dia - dispensa de leitura/votação em bloc"
+    },
+    {
+      "id": 95,
+      "sigla": "PR",
+      "descricao": "Precedente Regimental"
+    },
+    {
+      "id": 96,
+      "sigla": "ACCP",
+      "descricao": "Ata Conjunta de Comissões Permanentes"
+    },
+    {
+      "id": 97,
+      "sigla": "PCPAM",
+      "descricao": "Parecer Comissão Permanente de Assuntos Metropolit"
+    },
+    {
+      "id": 98,
+      "sigla": "TCESP",
+      "descricao": "Parecer - Tribunal de Contas Estado de São Paulo"
+    },
+    {
+      "id": 99,
+      "sigla": "PRE",
+      "descricao": "Parecer - Relator Especial"
+    },
+    {
+      "id": 102,
+      "sigla": "DPCPT",
+      "descricao": "Dispensa de Parecer - Comissão Permanente/Temp"
+    },
+    {
+      "id": 103,
+      "sigla": "JCEM",
+      "descricao": "Julgamento de Conta do Executivo - Exercício"
+    },
+    {
+      "id": 107,
+      "sigla": "CET",
+      "descricao": "COMISSÃO ESPECIAL TEMPORÁRIA"
+    },
+    {
+      "id": 112,
+      "sigla": "DP",
+      "descricao": "Dilação de Prazo"
+    },
+    {
+      "id": 113,
+      "sigla": "COMP",
+      "descricao": "COMPLEMENTO"
+    },
+    {
+      "id": 116,
+      "sigla": "VTOP",
+      "descricao": "Veto Parcial"
+    },
+    {
+      "id": 117,
+      "sigla": "EMPAR",
+      "descricao": "Emenda Parlamentar - Art. 140-A da LOM"
+    },
+    {
+      "id": 118,
+      "sigla": "RP",
+      "descricao": "Retirada de Paulta"
+    }
+  ],
+  "mandatos": [
+    {
+      "id": 26,
+      "parlamentar_id": 20,
+      "legislatura_id": 2,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 16,
+      "parlamentar_id": 7,
+      "legislatura_id": 2,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 17,
+      "parlamentar_id": 8,
+      "legislatura_id": 2,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 25,
+      "parlamentar_id": 19,
+      "legislatura_id": 2,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 23,
+      "parlamentar_id": 17,
+      "legislatura_id": 2,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 18,
+      "parlamentar_id": 10,
+      "legislatura_id": 2,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 24,
+      "parlamentar_id": 18,
+      "legislatura_id": 2,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 19,
+      "parlamentar_id": 2,
+      "legislatura_id": 2,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 20,
+      "parlamentar_id": 9,
+      "legislatura_id": 2,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 28,
+      "parlamentar_id": 22,
+      "legislatura_id": 2,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 22,
+      "parlamentar_id": 16,
+      "legislatura_id": 2,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 27,
+      "parlamentar_id": 21,
+      "legislatura_id": 2,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 21,
+      "parlamentar_id": 4,
+      "legislatura_id": 2,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    }
+  ],
+  "atualizado_em": "2026-11-03",
+  "uf": "SP",
+  "casa": "cm-jardinopolis",
+  "observacao": "Tabelas de apoio do SAPL usadas pelo coletor (sem CPF, telefone, endereço ou data de nascimento).",
+  "tipos_norma": [
+    {
+      "id": 10,
+      "sigla": "AM",
+      "descricao": "Ato de Mesa"
+    },
+    {
+      "id": 11,
+      "sigla": "AT",
+      "descricao": "Autógrafo"
+    },
+    {
+      "id": 8,
+      "sigla": "COD",
+      "descricao": "Código"
+    },
+    {
+      "id": 6,
+      "sigla": "DL",
+      "descricao": "Decreto Legislativo"
+    },
+    {
+      "id": 1,
+      "sigla": "ELO",
+      "descricao": "Emenda à Lei Orgânica"
+    },
+    {
+      "id": 3,
+      "sigla": "LC",
+      "descricao": "Lei Complementar"
+    },
+    {
+      "id": 4,
+      "sigla": "LOD",
+      "descricao": "Lei Ordinária"
+    },
+    {
+      "id": 2,
+      "sigla": "LO",
+      "descricao": "Lei Orgânica"
+    },
+    {
+      "id": 7,
+      "sigla": "PTA",
+      "descricao": "Portaria"
+    },
+    {
+      "id": 9,
+      "sigla": "RI",
+      "descricao": "Regimento Interno"
+    },
+    {
+      "id": 5,
+      "sigla": "RES",
+      "descricao": "Resolução"
+    }
+  ],
+  "tipos_sessao": [
+    {
+      "id": 2,
+      "nome": "Extraordinária"
+    },
+    {
+      "id": 1,
+      "nome": "Ordinária"
+    },
+    {
+      "id": 3,
+      "nome": "Sessão Solene"
+    }
+  ],
+  "partidos": [
+    {
+      "id": 37,
+      "sigla": "CIDADANIA",
+      "nome": "CIDADANIA"
+    },
+    {
+      "id": 5,
+      "sigla": "DEM",
+      "nome": "DEMOCRATAS"
+    },
+    {
+      "id": 38,
+      "sigla": "MDB",
+      "nome": "Movimento Democrático Brasileiro"
+    },
+    {
+      "id": 33,
+      "sigla": "NOVO",
+      "nome": "PARTIDO NOVO"
+    },
+    {
+      "id": 18,
+      "sigla": "PCB",
+      "nome": "PARTIDO COMUNISTA BRASILEIRO"
+    },
+    {
+      "id": 22,
+      "sigla": "PCO",
+      "nome": "PARTIDO DA CAUSA OPERÁRIA"
+    },
+    {
+      "id": 6,
+      "sigla": "PCdoB",
+      "nome": "PARTIDO COMUNISTA DO BRASIL"
+    },
+    {
+      "id": 3,
+      "sigla": "PDT",
+      "nome": "PARTIDO DEMOCRÁTICO TRABALHISTA"
+    },
+    {
+      "id": 36,
+      "sigla": "PDT",
+      "nome": "Partido Democrático Trabalhista"
+    },
+    {
+      "id": 30,
+      "sigla": "PEN",
+      "nome": "PARTIDO ECOLÓGICO NACIONAL"
+    },
+    {
+      "id": 20,
+      "sigla": "PHS",
+      "nome": "PARTIDO HUMANISTA DA SOLIDARIEDADE"
+    },
+    {
+      "id": 40,
+      "sigla": "PL",
+      "nome": "PARTIDO LIBERAL"
+    },
+    {
+      "id": 35,
+      "sigla": "PMB",
+      "nome": "PARTIDO DA MULHER BRASILEIRA"
+    },
+    {
+      "id": 1,
+      "sigla": "PMDB",
+      "nome": "PARTIDO DO MOVIMENTO DEMOCRÁTICO BRASILEIRO"
+    },
+    {
+      "id": 11,
+      "sigla": "PMN",
+      "nome": "PARTIDO DA MOBILIZAÇÃO NACIONAL"
+    },
+    {
+      "id": 41,
+      "sigla": "PODE",
+      "nome": "PODEMOS"
+    },
+    {
+      "id": 23,
+      "sigla": "PODE",
+      "nome": "PODEMOS"
+    },
+    {
+      "id": 16,
+      "sigla": "PP",
+      "nome": "PARTIDO PROGRESSISTA"
+    },
+    {
+      "id": 29,
+      "sigla": "PPL",
+      "nome": "PARTIDO PÁTRIA LIVRE"
+    },
+    {
+      "id": 13,
+      "sigla": "PPS",
+      "nome": "PARTIDO POPULAR SOCIALISTA"
+    },
+    {
+      "id": 27,
+      "sigla": "PR",
+      "nome": "PARTIDO DA REPÚBLICA"
+    },
+    {
+      "id": 25,
+      "sigla": "PRB",
+      "nome": "PARTIDO REPUBLICANO BRASILEIRO"
+    },
+    {
+      "id": 31,
+      "sigla": "PROS",
+      "nome": "PARTIDO REPUBLICANO DA ORDEM SOCIAL"
+    },
+    {
+      "id": 12,
+      "sigla": "PRP",
+      "nome": "PARTIDO REPUBLICANO PROGRESSISTA"
+    },
+    {
+      "id": 19,
+      "sigla": "PRTB",
+      "nome": "PARTIDO RENOVADOR TRABALHISTA BRASILEIRO"
+    },
+    {
+      "id": 7,
+      "sigla": "PSB",
+      "nome": "PARTIDO SOCIALISTA BRASILEIRO"
+    },
+    {
+      "id": 10,
+      "sigla": "PSC",
+      "nome": "PARTIDO SOCIAL CRISTÃO"
+    },
+    {
+      "id": 28,
+      "sigla": "PSD",
+      "nome": "PARTIDO SOCIAL DEMOCRÁTICO"
+    },
+    {
+      "id": 8,
+      "sigla": "PSDB",
+      "nome": "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA"
+    },
+    {
+      "id": 21,
+      "sigla": "PSDC",
+      "nome": "PARTIDO SOCIAL DEMOCRATA CRISTÃO"
+    },
+    {
+      "id": 24,
+      "sigla": "PSL",
+      "nome": "PARTIDO SOCIAL LIBERAL"
+    },
+    {
+      "id": 26,
+      "sigla": "PSOL",
+      "nome": "PARTIDO SOCIALISMO E LIBERDADE"
+    },
+    {
+      "id": 17,
+      "sigla": "PSTU",
+      "nome": "PARTIDO SOCIALISTA DOS TRABALHADORES UNIFICADO"
+    },
+    {
+      "id": 4,
+      "sigla": "PT",
+      "nome": "PARTIDO DOS TRABALHADORES"
+    },
+    {
+      "id": 2,
+      "sigla": "PTB",
+      "nome": "PARTIDO TRABALHISTA BRASILEIRO"
+    },
+    {
+      "id": 9,
+      "sigla": "PTC",
+      "nome": "PARTIDO TRABALHISTA CRISTÃO"
+    },
+    {
+      "id": 15,
+      "sigla": "PTdoB",
+      "nome": "PARTIDO TRABALHISTA DO BRASIL"
+    },
+    {
+      "id": 14,
+      "sigla": "PV",
+      "nome": "PARTIDO VERDE"
+    },
+    {
+      "id": 34,
+      "sigla": "REDE",
+      "nome": "REDE SUSTENTABILIDADE"
+    },
+    {
+      "id": 39,
+      "sigla": "REPUBLICANOS",
+      "nome": "REPUBLICANOS"
+    },
+    {
+      "id": 32,
+      "sigla": "SD",
+      "nome": "SOLIDARIEDADE"
+    },
+    {
+      "id": 42,
+      "sigla": "UNIÃO",
+      "nome": "União Brasil"
+    }
+  ]
+}
