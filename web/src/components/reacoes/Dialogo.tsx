@@ -59,12 +59,12 @@ export function Dialogo({
 }
 
 /** Aviso mostrado quando o cadastro ainda não está ligado neste site. */
-export function DialogoEmBreve({ origem, aoFechar }: { origem: HTMLElement | null; aoFechar: () => void }) {
+export function DialogoEmBreve({ origem, aoFechar, texto }: { origem: HTMLElement | null; aoFechar: () => void; texto?: string }) {
   return (
     <Dialogo titulo="O cadastro estará disponível em breve" origem={origem} aoFechar={aoFechar}>
       <p className="text-sm leading-relaxed text-[var(--cor-secundaria)]">
-        Curtir e não curtir uma proposta é só para quem tem conta, e as contas ainda não foram abertas. Todo o conteúdo do
-        site continua aberto, sem cadastro.
+        {texto ??
+          "Curtir e não curtir uma proposta é só para quem tem conta, e as contas ainda não foram abertas. Todo o conteúdo do site continua aberto, sem cadastro."}
       </p>
       <form method="dialog">
         <button type="submit" className="botao" data-foco-inicial>
