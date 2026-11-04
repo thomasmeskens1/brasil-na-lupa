@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: PageProps<"/estados/[uf]/leis
 export default async function LeisEstadoPage({ params }: PageProps<"/estados/[uf]/leis-e-decretos">) {
   const { uf } = await params;
   const { u, ind } = exigirUf(uf);
-  const ctx = contextoGoverno(u);
+  const ctx = contextoGoverno(u, ind);
   const t = termosDoEstado(u);
   return (
     <div className="space-y-10">

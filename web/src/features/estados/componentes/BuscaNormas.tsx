@@ -34,6 +34,9 @@ export interface ContextoGoverno {
   /** "Diário Oficial do Estado de São Paulo". */
   diario: string;
   casaSigla: string;
+  casaNome: string;
+  /** As normas vêm do sistema da própria Assembleia: o link é o registro dela, não o Diário Oficial. */
+  registroCasa: boolean;
 }
 
 const POR_PAGINA = 20;
@@ -155,8 +158,8 @@ export function BuscaNormas({ ctx }: { ctx: ContextoGoverno }) {
               rotuloData="publicado em"
               forma={l._t === "Decreto" || veto ? "ato-individual" : null}
               dado={dadoNorma(l._t, ctx.governo, !!l[7])}
-              quemDecidiu={l[7] ? "Conforme o texto da retificação publicado no Diário Oficial" : l._t === "Decreto" || veto ? ctx.governo : !/^Lei/i.test(l._t) ? "Conforme o texto oficial publicado no Diário Oficial" : `${ctx.casaSigla} (aprovação) e ${ctx.governo.charAt(0).toLowerCase()}${ctx.governo.slice(1)} (sanção)`}
-              fonte={l[6] ? { url: l[6], titulo: `Publicação no ${ctx.diario}`, orgao: ctx.diario, acessado_em: l[12] } : null}
+              quemDecidiu={l[7] ? "Conforme o texto da retificação publicado no Diário Oficial" : l._t === "Decreto" || veto ? ctx.governo : /^Resolu/i.test(l._t) ? `${ctx.casaSigla} (ato da própria Assembleia)` : !/^Lei/i.test(l._t) ? "Conforme o texto oficial" : `${ctx.casaSigla} (aprovação) e ${ctx.governo.charAt(0).toLowerCase()}${ctx.governo.slice(1)} (sanção)`}
+              fonte={l[6] ? { url: l[6], titulo: ctx.registroCasa ? `Registro no sistema da ${ctx.casaSigla}` : `Publicação no ${ctx.diario}`, orgao: ctx.registroCasa ? ctx.casaNome : ctx.diario, acessado_em: l[12] } : null}
             >
               <div className="space-y-2">
                 {!l[5] && !veto ? <p className="lacuna">Ementa não disponível em fonte oficial</p> : null}

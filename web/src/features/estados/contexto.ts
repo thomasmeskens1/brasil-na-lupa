@@ -23,7 +23,7 @@ export function nomeDiario(u: UfInfo): string {
   return u.uf === "df" ? "Diário Oficial do Distrito Federal" : `Diário Oficial do ${nomeCompleto(u)}`;
 }
 
-export function contextoGoverno(u: UfInfo): ContextoGoverno {
+export function contextoGoverno(u: UfInfo, ind?: IndiceEstado | null): ContextoGoverno {
   const c = caminhoGoverno(u);
   return {
     uf: u.uf,
@@ -33,5 +33,7 @@ export function contextoGoverno(u: UfInfo): ContextoGoverno {
     governo: nomeGoverno(u),
     diario: nomeDiario(u),
     casaSigla: u.casa.sigla,
+    casaNome: u.casa.nome,
+    registroCasa: !!ind?.normas?.registro_casa,
   };
 }

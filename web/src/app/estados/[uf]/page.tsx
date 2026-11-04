@@ -72,7 +72,7 @@ export default async function EstadoPage({ params }: PageProps<"/estados/[uf]">)
   const nTipo = (t: string) => Object.entries(ind.normas.por_ano_tipo).filter(([k]) => k.endsWith(`|${t}`)).reduce((s, [, n]) => s + n, 0);
   const t = termosDoEstado(u);
   const casa = caminhoCasa(u);
-  const gov = contextoGoverno(u);
+  const gov = contextoGoverno(u, ind);
   // Assembleia sem coleta (ex.: GO): os atalhos dela ficam como "Em breve", com o motivo logo abaixo.
   const semCasa = ind.assembleia_indisponivel ?? null;
   const atalhos = [
@@ -171,7 +171,7 @@ export default async function EstadoPage({ params }: PageProps<"/estados/[uf]">)
           </p>
         </Secao>
         )}
-        <Secao id="atos-recentes" titulo="Atos mais recentes do governador">
+        <Secao id="atos-recentes" titulo="Leis e atos mais recentes">
           {ind.normas.recentes.length ? (
             <ul className="space-y-3">
               {ind.normas.recentes.map((n) => (
@@ -187,8 +187,8 @@ export default async function EstadoPage({ params }: PageProps<"/estados/[uf]">)
                   rotuloData="publicado em"
                   forma={n.tipo === "Decreto" || /^Veto/i.test(n.tipo) ? "ato-individual" : null}
                   dado={dadoNorma(n.tipo, gov.governo)}
-                  quemDecidiu={n.tipo === "Decreto" || /^Veto/i.test(n.tipo) ? gov.governo : /^Lei/i.test(n.tipo) ? `${u.casa.sigla} (aprovação) e governador (sanção)` : "Conforme o texto oficial publicado no Diário Oficial"}
-                  fonte={n.url ? { url: n.url, titulo: `Publicação no ${gov.diario}`, orgao: gov.diario, acessado_em: n.acessado_em ?? ind.normas.atualizado_em } : null}
+                  quemDecidiu={n.tipo === "Decreto" || /^Veto/i.test(n.tipo) ? gov.governo : /^Lei/i.test(n.tipo) ? `${u.casa.sigla} (aprovação) e governador (sanção)` : /^Resolu/i.test(n.tipo) ? `${u.casa.sigla} (ato da própria Assembleia)` : "Conforme o texto oficial"}
+                  fonte={n.url ? { url: n.url, titulo: gov.registroCasa ? `Registro no sistema da ${gov.casaSigla}` : `Publicação no ${gov.diario}`, orgao: gov.registroCasa ? gov.casaNome : gov.diario, acessado_em: n.acessado_em ?? ind.normas.atualizado_em } : null}
                 />
               ))}
             </ul>

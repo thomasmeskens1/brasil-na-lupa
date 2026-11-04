@@ -161,6 +161,8 @@ function lerNorma(x, coleta = null) {
     ementa: texto(x.ementa) ?? texto(x.resumo),
     url: texto(x.url) ?? texto(fonte?.url) ?? links ?? null,
     retificacao: !!x.retificacao,
+    // Norma lida do sistema da própria Assembleia (MA, PE, DF…), não do Diário Oficial.
+    casa: texto(x.casa),
     projeto_origem_texto: texto(x.projeto_origem_texto) ?? (Array.isArray(x.projeto_origem) ? x.projeto_origem.map((p) => texto(p?.identificacao)).filter(Boolean).join("; ") || null : null),
     projeto: x.projeto ?? (x.projeto_origem && !Array.isArray(x.projeto_origem) ? x.projeto_origem : null),
     razoes_veto: texto(x.razoes_veto),
@@ -372,6 +374,7 @@ function processar(uf) {
       atualizado_em: metaNormas?.atualizado_em ?? idxNormas.find((i) => i?.atualizado_em)?.atualizado_em ?? null,
       fontes: [...fontesMeta(metaNormas), ...(metaNormas ? [] : idxNormas.flatMap((i) => (i?.fonte ? [i.fonte] : (i?.fontes ?? []))).filter((f) => f?.url))],
       observacoes: metaNormas?.observacoes ?? [],
+      registro_casa: normas.length > 0 && normas.every((x) => x.casa),
       recentes: normas
         .filter((x) => !x.retificacao)
         .slice(0, 5)

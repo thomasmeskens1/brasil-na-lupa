@@ -76,6 +76,8 @@ export interface IndiceEstado {
   projetos: { total: number; por_sigla: Record<string, number> };
   normas: {
     total: number;
+    /** As normas vêm do sistema da própria Assembleia (não do Diário Oficial). */
+    registro_casa?: boolean;
     por_ano_tipo: Record<string, number>;
     atualizado_em: string | null;
     fontes: FonteEstado[];
