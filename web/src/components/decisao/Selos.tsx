@@ -78,7 +78,7 @@ export function SeloFonte({ fonte, compacto = false, className = "" }: SeloFonte
   const link = (
     <a
       href={fonte.url}
-      className="lk inline-flex min-h-11 items-center gap-1.5 py-1 text-sm"
+      className="lk lk-discreto inline-flex min-h-11 items-center gap-1.5 py-1 text-sm"
       {...(externo ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       title={compacto && fonte.titulo ? fonte.titulo : undefined}
     >

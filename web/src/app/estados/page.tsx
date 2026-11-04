@@ -24,7 +24,7 @@ export default function EstadosPage() {
         <p>
           {acompanhados.length
             ? `Hoje acompanhamos ${acompanhados.length === 1 ? "o estado" : "os estados"} ${juntar(acompanhados.map((u) => u.de))}.`
-            : "Ainda não acompanhamos nenhum estado."}{" "}
+            : "Em breve."}{" "}
           Em cada estado, as leis são votadas pela Assembleia Legislativa e depois sancionadas ou vetadas pelo governador, que
           também decide sozinho, por decreto.
         </p>
@@ -52,7 +52,7 @@ export default function EstadosPage() {
                         {r.atualizado_em ? ` · coletado em ${formatarData(r.atualizado_em)}` : ""}
                       </>
                     ) : (
-                      "Ainda não acompanhamos"
+                      "Em breve"
                     )}
                   </span>
                 </Link>

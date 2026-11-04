@@ -44,7 +44,7 @@ export default async function EstadoPage({ params }: PageProps<"/estados/[uf]">)
           <Figurinha nome="mapa" className="heroi-figurinha figurinha-flutua" />
           <h1 className="text-2xl font-bold text-foreground md:text-3xl">{nomeCompleto(u)}</h1>
           <Favoritar tipo="uf" valor={u.uf.toUpperCase()} nome="este estado" className="mt-2" />
-          <p className="text-lg font-semibold text-foreground">Ainda não acompanhamos este estado.</p>
+          <p className="text-lg font-semibold text-foreground">Em breve.</p>
           <p>
             Quando a coleta começar, esta página vai mostrar as votações da {u.casa.nome}, o voto de cada deputado quando a
             votação for nominal, os projetos e as leis, decretos e vetos do governador, sempre com a fonte oficial e a data

@@ -51,7 +51,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           </a>
         </nav>
         <header className="sticky top-0 z-40 border-b border-borda bg-superficie/95 backdrop-blur supports-[backdrop-filter]:bg-superficie/85">
-          <div className="relative flex w-full flex-col gap-2 px-[5%] py-3 md:flex-row md:items-center md:justify-between">
+          <div className="relative flex w-full flex-col gap-2 px-[5%] py-3 md:grid md:grid-cols-[auto_1fr_auto] md:items-center md:gap-6">
             <Link href="/" className="inline-flex min-h-11 items-center self-start text-lg font-bold text-foreground">
               <Logo />
               <span className="sr-only">, página inicial</span>

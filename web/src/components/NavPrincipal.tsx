@@ -60,7 +60,7 @@ export function NavPrincipal() {
       </button>
       <ul
         id="menu-principal"
-        className={`${aberto ? "flex" : "hidden"} flex-col gap-1 pt-2 md:flex md:flex-row md:flex-wrap md:pt-0`}
+        className={`${aberto ? "flex" : "hidden"} flex-col gap-1 pt-2 md:flex md:flex-row md:flex-wrap md:justify-center md:pt-0`}
       >
         {ITENS_NAV.map((i) => {
           const ativo = i.href === "/" ? pathname === "/" : pathname.startsWith(i.href);

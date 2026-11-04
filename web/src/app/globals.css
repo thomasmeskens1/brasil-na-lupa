@@ -986,3 +986,18 @@ footer:focus-visible,
 nav:focus-visible {
   outline: none;
 }
+
+/* Links discretos: selo de fonte ("Oficial") e dados em tabela, sem o sublinhado neon (menos poluição visual). */
+.lk.lk-discreto,
+.tabela .lk,
+.tabela-resp .lk,
+table .lk {
+  text-decoration-color: var(--cor-borda-forte);
+  text-decoration-thickness: 1px;
+}
+.lk.lk-discreto:hover,
+.tabela .lk:hover,
+.tabela-resp .lk:hover,
+table .lk:hover {
+  text-decoration-color: var(--cor-acento);
+}
