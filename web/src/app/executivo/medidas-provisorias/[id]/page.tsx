@@ -10,15 +10,18 @@ import { CASA_NOME, TIPO, rotaVotacao } from "@/features/congresso/rotulos";
 import { QUEM_MPV, encurtar } from "@/features/executivo/apresentacao";
 import { Citacao } from "@/features/executivo/componentes/Dispositivo";
 import { Migalhas, TermosRecolhidos } from "@/features/executivo/componentes/Migalhas";
-import { getIndiceExecutivo, getMpv, idsOuMarcador } from "@/features/executivo/dados";
+import { getMpv, idsMpvNoBuild } from "@/features/executivo/dados";
 import { cabecalhoMpv } from "@/features/executivo/detalhes";
 import { TERMOS_EXECUTIVO, explicarSigla, rotuloSituacaoMpv } from "@/features/executivo/rotulos";
 import { AcoesProposta } from "@/components/reacoes";
 import { idExecutivo } from "@/features/conta/ids";
 
 export function generateStaticParams() {
-  return idsOuMarcador(getIndiceExecutivo().mpvs.map((m) => m.id)).map((id) => ({ id }));
+  return idsMpvNoBuild().map((id) => ({ id }));
 }
+
+/** Id fora do build: a primeira visita espera a página completa (e o 404 do id inexistente). */
+export const ensureStatic = "navigation";
 
 export async function generateMetadata({ params }: PageProps<"/executivo/medidas-provisorias/[id]">): Promise<Metadata> {
   const { id } = await params;

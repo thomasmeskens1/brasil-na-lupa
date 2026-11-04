@@ -14,16 +14,25 @@ import { FinancasSiconfi } from "@/features/municipios/componentes/FinancasSicon
 import { baseCidade, getCidade, getIndiceMunicipios, ouMarcador } from "@/features/municipios/dados";
 import { TERMOS_MUNICIPIOS } from "@/features/municipios/termos";
 import type { CidadeMun, FonteMunicipio } from "@/features/municipios/tipos";
+import { ouPrimeiro } from "@/features/comum/prerender";
 
 const NAO = "Informação não disponível em fonte oficial";
 const FORMA: Record<string, string> = { nominal: "Votação nominal", simbolica: "Votação simbólica", secreta: "Votação secreta" };
 
+/**
+ * No build, só as capitais, Atibaia e as cidades com dados da Câmara; as demais com dados
+ * (finanças do Siconfi) são geradas na primeira visita e ficam em cache.
+ */
 export function generateStaticParams() {
+  const todos = getIndiceMunicipios().presentes;
   return ouMarcador(
-    getIndiceMunicipios().presentes.map((m) => ({ uf: m.uf, cidade: m.slug })),
+    ouPrimeiro(todos.filter((m) => m.capital || m.atibaia || m.tem.camara), todos).map((m) => ({ uf: m.uf, cidade: m.slug })),
     { uf: "xx", cidade: "sem-dados" },
   );
 }
+
+/** Cidade fora do build: a primeira visita espera a página completa (e o 404 da inexistente). */
+export const ensureStatic = "navigation";
 
 function nomeComUf(c: CidadeMun): string {
   return `${c.nome} (${c.uf.toUpperCase()})`;

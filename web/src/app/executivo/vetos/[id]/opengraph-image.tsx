@@ -1,5 +1,5 @@
 import { imagemDecisaoOG, TAMANHO_OG, TIPO_OG } from "@/components/compartilhar/og";
-import { getIndiceExecutivo, getVeto, idsOuMarcador } from "@/features/executivo/dados";
+import { getVeto, idsVetoNoBuild } from "@/features/executivo/dados";
 import { cabecalhoVeto } from "@/features/executivo/detalhes";
 
 export const size = TAMANHO_OG;
@@ -7,7 +7,7 @@ export const contentType = TIPO_OG;
 export const alt = "Resumo do veto: trechos vetados e o que o Congresso Nacional decidiu, com a fonte oficial";
 
 export function generateStaticParams() {
-  return idsOuMarcador(getIndiceExecutivo().vetos.map((v) => v.id)).map((id) => ({ id }));
+  return idsVetoNoBuild().map((id) => ({ id }));
 }
 
 export default async function Image({ params }: { params: Promise<{ id: string }> }) {
