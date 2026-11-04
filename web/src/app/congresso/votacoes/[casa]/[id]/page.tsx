@@ -31,11 +31,21 @@ import { tituloSimplesVotacao } from "@/features/congresso/titulos";
 import type { FonteCongresso, VotacaoDetalhe } from "@/features/congresso/tipos";
 import { AcoesProposta } from "@/components/reacoes";
 import { idVotacaoCongresso } from "@/features/conta/ids";
+import { ouPrimeiro, recentes } from "@/features/comum/prerender";
 
-/** Todas as votações coletadas são geradas no build (nominais, secretas e simbólicas). */
+/**
+ * No build, só as votações dos últimos 60 dias de cada Casa (features/comum/prerender); as
+ * demais (nominais, secretas e simbólicas) são geradas na primeira visita e ficam em cache.
+ */
 export function generateStaticParams() {
-  return CASAS.flatMap((casa) => getIndice(casa).votacoes.map((v) => ({ casa, id: v.id })));
+  return CASAS.flatMap((casa) => {
+    const todas = getIndice(casa).votacoes;
+    return ouPrimeiro(recentes(todas, (v) => v.data), todas).map((v) => ({ casa, id: v.id }));
+  });
 }
+
+/** Id fora do build: a primeira visita espera a página completa (e o 404 do id inexistente). */
+export const ensureStatic = "navigation";
 
 function carregar(casa: string, id: string): VotacaoDetalhe | null {
   return ehCasa(casa) ? getVotacao(casa, decodeURIComponent(id)) : null;

@@ -12,13 +12,19 @@ import { TERMOS_SP, compararVotos, formatarData, rotuloVoto, termosDoEstado } fr
 import { baseUf, getUf } from "@/features/estados/ufs";
 import { Favoritar } from "@/components/reacoes";
 import { idDeputadoEstadual } from "@/features/conta/ids";
+import { ouPrimeiro } from "@/features/comum/prerender";
 
+/** No build, só os deputados em exercício; os demais são gerados na primeira visita. */
 export function generateStaticParams() {
+  const todos = ufsComDados().flatMap((uf) => (getIndiceEstado(uf)?.deputados ?? []).map((d) => ({ uf, id: d.id, em: d.em_exercicio })));
   return ouMarcador(
-    ufsComDados().flatMap((uf) => (getIndiceEstado(uf)?.deputados ?? []).map((d) => ({ uf, id: d.id }))),
+    ouPrimeiro(todos.filter((d) => d.em), todos).map(({ uf, id }) => ({ uf, id })),
     { uf: "sem-dados", id: "sem-dados" },
   );
 }
+
+/** Id fora do build: a primeira visita espera a página completa (e o 404 do id inexistente). */
+export const ensureStatic = "navigation";
 
 export async function generateMetadata({ params }: PageProps<"/estados/[uf]/deputados/[id]">): Promise<Metadata> {
   const { uf, id } = await params;

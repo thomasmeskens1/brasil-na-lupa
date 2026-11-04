@@ -30,11 +30,21 @@ import {
 import { tituloSimplesVotacao } from "@/features/congresso/titulos";
 import { Favoritar } from "@/components/reacoes";
 import { idParlamentar } from "@/features/conta/ids";
+import { ouPrimeiro } from "@/features/comum/prerender";
 
-/** Perfis de todos os parlamentares da lista oficial e de quem aparece em votação nominal. */
+/**
+ * Há perfil de todos os parlamentares da lista oficial e de quem aparece em votação nominal.
+ * No build, só os em exercício (lista oficial atual); os demais são gerados na primeira visita.
+ */
 export function generateStaticParams() {
-  return CASAS.flatMap((casa) => getIndice(casa).parlamentares.map((p) => ({ casa, id: p.id })));
+  return CASAS.flatMap((casa) => {
+    const todos = getIndice(casa).parlamentares;
+    return ouPrimeiro(todos.filter((p) => p.na_lista_atual || p.em_exercicio), todos).map((p) => ({ casa, id: p.id }));
+  });
 }
+
+/** Id fora do build: a primeira visita espera a página completa (e o 404 do id inexistente). */
+export const ensureStatic = "navigation";
 
 function carregar(casa: string, id: string) {
   if (!ehCasa(casa)) return null;

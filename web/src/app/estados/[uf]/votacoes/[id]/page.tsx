@@ -15,14 +15,22 @@ import type { VotacaoPlenario } from "@/features/estados/tipos";
 import { baseUf, caminhoCasa, getUf, type UfInfo } from "@/features/estados/ufs";
 import { AcoesProposta } from "@/components/reacoes";
 import { idVotacaoEstado } from "@/features/conta/ids";
+import { ouPrimeiro, recentes } from "@/features/comum/prerender";
 
-/** Só as votações de Plenário têm página; as de comissões ficam na lista de votações. */
+/**
+ * Só as votações de Plenário têm página; as de comissões ficam na lista de votações. No build,
+ * só as dos últimos 60 dias (features/comum/prerender); as demais, na primeira visita.
+ */
 export function generateStaticParams() {
+  const todas = ufsComDados().flatMap((uf) => votacoesPlenario(uf).map((v) => ({ uf, id: v.id, data: v.data })));
   return ouMarcador(
-    ufsComDados().flatMap((uf) => votacoesPlenario(uf).map((v) => ({ uf, id: v.id }))),
+    ouPrimeiro(recentes(todas, (v) => v.data), todas).map(({ uf, id }) => ({ uf, id })),
     { uf: "sem-dados", id: "sem-dados" },
   );
 }
+
+/** Id fora do build: a primeira visita espera a página completa (e o 404 do id inexistente). */
+export const ensureStatic = "navigation";
 
 function tituloOficial(v: VotacaoPlenario): string {
   return v.proposicao?.ementa ?? v.descricao ?? "Ementa não disponível em fonte oficial";

@@ -9,13 +9,21 @@ import { NAO_DISPONIVEL, ORDEM_VOTOS, compararVotos, formatarData, lacunaLegivel
 import { baseCidade, getCidade, getIndiceMunicipios, getVotacaoMun, ouMarcador } from "@/features/municipios/dados";
 import { TERMOS_MUNICIPIOS } from "@/features/municipios/termos";
 import type { VotacaoMun } from "@/features/municipios/tipos";
+import { ouPrimeiro, recentes } from "@/features/comum/prerender";
 
+/** No build, só as votações dos últimos 60 dias (features/comum/prerender); as demais, na primeira visita. */
 export function generateStaticParams() {
   const lista = getIndiceMunicipios()
     .presentes.filter((m) => m.tem.votacoes)
-    .flatMap((m) => (getCidade(m.uf, m.slug)?.camara?.votacoes ?? []).map((v) => ({ uf: m.uf, cidade: m.slug, id: v.id })));
-  return ouMarcador(lista, { uf: "xx", cidade: "sem-dados", id: "sem-dados" });
+    .flatMap((m) => (getCidade(m.uf, m.slug)?.camara?.votacoes ?? []).map((v) => ({ uf: m.uf, cidade: m.slug, id: v.id, data: v.data })));
+  return ouMarcador(
+    ouPrimeiro(recentes(lista, (v) => v.data), lista).map(({ uf, cidade, id }) => ({ uf, cidade, id })),
+    { uf: "xx", cidade: "sem-dados", id: "sem-dados" },
+  );
 }
+
+/** Id fora do build: a primeira visita espera a página completa (e o 404 do id inexistente). */
+export const ensureStatic = "navigation";
 
 function titulo(v: VotacaoMun): string {
   return v.proposicao?.ementa ?? v.descricao ?? "Ementa não disponível em fonte oficial";

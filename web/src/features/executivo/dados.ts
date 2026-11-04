@@ -1,12 +1,14 @@
 import fs from "node:fs";
 import path from "node:path";
+import { ouPrimeiro, recentes } from "../comum/prerender";
 import type { IndiceExecutivo, MedidaProvisoria, Veto } from "./tipos";
 
 /**
  * Leitura dos dados do Executivo federal em web/content (somente servidor / build).
  * content/_gerado/executivo.json é gerado por scripts/gerar-executivo-justica.mjs; o detalhe
- * vem de content/executivo/{medidas-provisorias,vetos}/<id>.json. As páginas são geradas no
- * build e o rastreamento de arquivos exclui content/ (next.config.ts).
+ * vem de content/executivo/{medidas-provisorias,vetos}/<id>.json. As MPs e vetos recentes são
+ * gerados no build; os demais, na primeira visita (os arquivos que essas rotas leem vão no
+ * pacote da função: outputFileTracingIncludes em next.config.ts).
  */
 function lerOpcional<T>(arquivo: string): T | null {
   try {
@@ -55,4 +57,16 @@ export function getVeto(id: string): Veto | null {
 /** Ids gerados no build; com cacheComponents a lista não pode ser vazia (o marcador vira 404). */
 export function idsOuMarcador(ids: string[]): string[] {
   return ids.length ? ids : ["sem-dados"];
+}
+
+/** MPs geradas no build (página e imagem): as dos últimos 60 dias; as demais, na primeira visita. */
+export function idsMpvNoBuild(): string[] {
+  const todas = getIndiceExecutivo().mpvs;
+  return idsOuMarcador(ouPrimeiro(recentes(todas, (m) => m.data), todas).map((m) => m.id));
+}
+
+/** Vetos gerados no build (página e imagem): os publicados nos últimos 60 dias. */
+export function idsVetoNoBuild(): string[] {
+  const todos = getIndiceExecutivo().vetos;
+  return idsOuMarcador(ouPrimeiro(recentes(todos, (v) => v.data_publicacao), todos).map((v) => v.id));
 }

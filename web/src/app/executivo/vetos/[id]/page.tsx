@@ -10,15 +10,18 @@ import { ListaLacunas } from "@/features/congresso/componentes/Basicos";
 import { QUEM_VETO } from "@/features/executivo/apresentacao";
 import { DispositivosVeto } from "@/features/executivo/componentes/DispositivosVeto";
 import { Migalhas, TermosRecolhidos } from "@/features/executivo/componentes/Migalhas";
-import { getIndiceExecutivo, getVeto, idsOuMarcador } from "@/features/executivo/dados";
+import { getVeto, idsVetoNoBuild } from "@/features/executivo/dados";
 import { cabecalhoVeto, resumosDispositivos } from "@/features/executivo/detalhes";
 import { SITUACAO_DISPOSITIVO, TERMOS_EXECUTIVO, URL_CONSTITUICAO, explicarSigla, rotuloTipoVeto } from "@/features/executivo/rotulos";
 import { AcoesProposta } from "@/components/reacoes";
 import { idExecutivo } from "@/features/conta/ids";
 
 export function generateStaticParams() {
-  return idsOuMarcador(getIndiceExecutivo().vetos.map((v) => v.id)).map((id) => ({ id }));
+  return idsVetoNoBuild().map((id) => ({ id }));
 }
+
+/** Id fora do build: a primeira visita espera a página completa (e o 404 do id inexistente). */
+export const ensureStatic = "navigation";
 
 export async function generateMetadata({ params }: PageProps<"/executivo/vetos/[id]">): Promise<Metadata> {
   const { id } = await params;
