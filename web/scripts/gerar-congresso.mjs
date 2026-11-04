@@ -9,6 +9,9 @@
  * - public/congresso/busca.json    (navegador): índice compacto da lista e da busca de votações,
  *   com o título em linguagem simples aprovado (dados/titulos/<casa>.json) quando existir.
  *   É um arquivo estático; a busca roda no navegador e nada do visitante é enviado.
+ * - content/congresso/painel.json (só servidor/build): números do painel da página /congresso
+ *   (semana e mês da última votação coletada, leis do ano, medidas provisórias em tramitação,
+ *   parlamentares em exercício), cada um com período e fonte.
  * - public/congresso/votos-<casa>.json (navegador): votos nominais de cada parlamentar, em texto
  *   compacto (um caractere por votação nominal), para o comparador lado a lado.
  * - content/congresso/og-dados.mjs (empacotado só nas rotas de imagem Open Graph): as mesmas
@@ -207,6 +210,108 @@ function votosCompactos(r, titulos) {
   return { casa: r.casa, atualizado_em: r.atualizado_em, rotulos, v, p };
 }
 
+// ---------------------------------------------------------------- painel da página /congresso
+
+function dataUTC(d) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(d ?? "");
+  return m ? new Date(Date.UTC(+m[1], +m[2] - 1, +m[3])) : null;
+}
+
+function iso(x) {
+  return x.toISOString().slice(0, 10);
+}
+
+/** Contagens de um conjunto de linhas do índice (só campos da fonte; nada é estimado). */
+function contarLinhas(ls) {
+  const n = (f) => ls.filter(f).length;
+  return {
+    total: ls.length,
+    camara: n((l) => l[0] === 0),
+    senado: n((l) => l[0] === 1),
+    nominais: n((l) => l[3] === 0),
+    simbolicas: n((l) => l[3] === 1),
+    secretas: n((l) => l[3] === 2),
+    muda_lei: n((l) => l[8] === 1),
+    aprovadas: n((l) => l[4] === 1),
+    rejeitadas: n((l) => l[4] === 0),
+  };
+}
+
+/**
+ * Números do painel inicial. Períodos fechados pela data da última votação coletada (não pela
+ * data do build): a semana (segunda a domingo) e o mês do calendário dessa votação. Leis e
+ * medidas provisórias vêm dos índices oficiais do Executivo (content/executivo, copiados por
+ * sync-data.mjs). Presença média não entra: as casas não publicam esse número.
+ */
+function gerarPainel(linhas, listas) {
+  const ultima = linhas.find((l) => l[2])?.[2] ?? null;
+  const d = dataUTC(ultima);
+  let semana = null;
+  let mes = null;
+  if (d) {
+    const seg = new Date(d);
+    seg.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 6) % 7));
+    const dom = new Date(seg);
+    dom.setUTCDate(seg.getUTCDate() + 6);
+    const [ini, fim] = [iso(seg), iso(dom)];
+    const ls = linhas.filter((l) => l[2] >= ini && l[2] <= fim);
+    semana = { inicio: ini, fim, ultima_votacao: ultima, ...contarLinhas(ls), itens: ls.filter((l) => l[8] === 1).map((l) => [CASAS[l[0]], l[1]]) };
+    const am = ultima.slice(0, 7);
+    const lm = linhas.filter((l) => l[2].startsWith(am));
+    mes = { inicio: `${am}-01`, fim: ultima, ...contarLinhas(lm) };
+  }
+
+  const exec = path.join(content, "executivo");
+  const anoLeis = (ultima ?? "").slice(0, 4);
+  let leis = null;
+  const ni = anoLeis ? lerJson(path.join(exec, "normas", `indice-${anoLeis}.json`)) : null;
+  if (ni?.itens) {
+    const doCongresso = ni.itens.filter((i) => i.caminho === "congresso" && (i.tipo === "Lei" || i.tipo === "Lei Complementar"));
+    const datas = doCongresso.map((i) => i.data_assinatura).filter(Boolean).sort();
+    leis = {
+      ano: anoLeis,
+      total: doCongresso.length,
+      ordinarias: doCongresso.filter((i) => i.tipo === "Lei").length,
+      complementares: doCongresso.filter((i) => i.tipo === "Lei Complementar").length,
+      primeira: datas[0] ?? null,
+      ultima: datas[datas.length - 1] ?? null,
+      atualizado_em: ni.atualizado_em ?? null,
+      fontes: [
+        { titulo: `Legislação federal: leis de ${anoLeis}`, url: `https://legis.senado.leg.br/dadosabertos/legislacao/lista?tipo=LEI&ano=${anoLeis}`, orgao: "Senado Federal" },
+        { titulo: `Legislação federal: leis complementares de ${anoLeis}`, url: `https://legis.senado.leg.br/dadosabertos/legislacao/lista?tipo=LCP&ano=${anoLeis}`, orgao: "Senado Federal" },
+      ],
+    };
+  }
+
+  let mps = null;
+  const dirMp = path.join(exec, "medidas-provisorias");
+  if (fs.existsSync(dirMp)) {
+    const itens = [];
+    let atualizado = null;
+    const anos = [];
+    for (const nome of fs.readdirSync(dirMp)) {
+      const m = /^indice-(\d{4})\.json$/.exec(nome);
+      if (!m) continue;
+      const j = lerJson(path.join(dirMp, nome));
+      if (!j?.itens) continue;
+      anos.push(m[1]);
+      itens.push(...j.itens);
+      if (j.atualizado_em && (!atualizado || j.atualizado_em > atualizado)) atualizado = j.atualizado_em;
+    }
+    anos.sort();
+    mps = {
+      em_tramitacao: itens.filter((i) => i.situacao === "em tramitação").length,
+      enviadas_a_sancao: itens.filter((i) => i.situacao === "aprovada pelo Congresso, enviada à sanção").length,
+      editadas: itens.length,
+      anos,
+      atualizado_em: atualizado,
+      fonte: { titulo: "Processos de medidas provisórias (Dados Abertos)", url: "https://legis.senado.leg.br/dadosabertos/processo?sigla=MPV", orgao: "Senado Federal / Congresso Nacional" },
+    };
+  }
+
+  return { ultima_votacao: ultima, semana, mes, leis, mps, parlamentares: listas };
+}
+
 function main() {
   const inicio = Date.now();
   fs.mkdirSync(saidaServidor, { recursive: true });
@@ -220,6 +325,7 @@ function main() {
   const casas = {};
   const resumo = [];
   const parlamentaresOg = {};
+  const listas = {};
 
   CASAS.forEach((casa, c) => {
     const r = gerarCasa(casa);
@@ -229,6 +335,11 @@ function main() {
     const votos = votosCompactos(r, titulos);
     fs.writeFileSync(path.join(saidaPublica, `votos-${casa}.json`), JSON.stringify(votos));
     casas[casa] = { atualizado_em: r.atualizado_em };
+    listas[casa] = {
+      em_exercicio: r.parlamentares.filter((p) => p.na_lista_atual).length,
+      lista_atualizada_em: r.lista_atualizada_em,
+      fonte: r.lista_fonte ? { titulo: r.lista_fonte.titulo ?? null, url: r.lista_fonte.url, orgao: r.lista_fonte.orgao ?? null } : null,
+    };
     let comTitulo = 0;
     for (const p of r.parlamentares) {
       parlamentaresOg[`${casa}/${p.id}`] = [p.nome, p.partido ?? "", p.uf ?? "", (r.votos_por_parlamentar[p.id] ?? []).length, p.na_lista_atual ? 1 : 0];
@@ -283,6 +394,7 @@ function main() {
   const busca = { gerado_em: new Date().toISOString(), casas, temas, p: proposicoes, v };
   fs.writeFileSync(path.join(saidaPublica, "busca.json"), JSON.stringify(busca));
   const kb = Math.round(fs.statSync(path.join(saidaPublica, "busca.json")).size / 1024);
+  fs.writeFileSync(path.join(saidaServidor, "painel.json"), JSON.stringify(gerarPainel(linhas, listas)));
 
   // Módulo das imagens Open Graph: sem ementa (não aparece na imagem).
   const og = { casas, temas, p: proposicoes.map(([t, , s]) => [t, "", s]), v: v.map((l) => [...l.slice(0, 6), String(l[6]).slice(0, 200), ...l.slice(7)]), parlamentares: parlamentaresOg };
