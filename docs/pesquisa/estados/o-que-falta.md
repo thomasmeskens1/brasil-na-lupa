@@ -27,7 +27,7 @@ Situação em **03/11/2026**. O site já acompanha SP, AM, PI, PB, RO, RN, ES, R
 | **MT** | Parcial, com barreira | Página HTML | Só página por página (robots.txt proíbe as listas); API exige credencial | Não publicado em formato aberto | Diário Oficial (IOMAT) com busca em JSON | Coletor de normas; credencial da API pedida na LAI já redigida | médio + depende de terceiros |
 | **PA** | Falta coletor | Página HTML | Página HTML (formulário) | Voto nominal em HTML (só em parte das matérias) | API aberta do Banco de Leis | Raspador das votações e coletor da API de leis | médio |
 | **PE** | Coletor pronto (dados abertos da ALEPE) | Sim (só nome e partido) | Sim, com resultado de cada discussão e número da lei | Resultado: sim. Voto de cada deputado: não publicado | Sim, leis e decretos do Executivo | Ligar no workflow; votos nominais (raros) só em ata | baixo + alto (votos) |
-| **PR** | Falta coletor | Página HTML | API aberta documentada | **Bloqueado** (robots.txt e CAPTCHA) | API aberta | Coletor da API (fácil); votos dependem da LAI já redigida | baixo + depende de terceiros |
+| **PR** | Coletor pronto (API da ALEP) | Sim (nome e partido, página HTML) | Sim, com resultado de cada turno e lei gerada | Resultado: sim. Voto de cada deputado: **bloqueado** (robots.txt e CAPTCHA) | Leis, LCs, resoluções, decretos legislativos e ECs: sim. Decretos do governador: só no Diário Oficial | Votos dependem da LAI já redigida; coletor de decretos do Diário Oficial | depende de terceiros + médio |
 | **RJ** | Difícil | Página HTML | Sistema antigo (Lotus Notes) | Só o placar nas notas taquigráficas | Leis: sistema antigo. Decretos: PDF com acesso dificultado | Raspador do sistema antigo; votos e decretos pela LAI já redigida | alto + depende de terceiros |
 | **RR** | Coletor pronto (SAPL) | Sim | Sim | Nenhum voto lançado no SAPL; resultado só na ata digitalizada | Leis: sim. Decretos: só no Diário Oficial | Ligar no workflow; atas por curadoria | baixo + alto (votações) |
 | **SC** | Falta coletor | Página HTML | Página HTML (e-Legis) | Voto nominal publicado em HTML ("extrato de votação"), sem partido | Sistema de leis da ALESC (leis e decretos) | Raspador do e-Legis e do sistema de leis | médio |
@@ -110,9 +110,10 @@ Situação em **03/11/2026**. O site já acompanha SP, AM, PI, PB, RO, RN, ES, R
   3. A API de projetos não está na documentação oficial e pode mudar sem aviso: os testes offline ajudam a perceber a mudança.
 
 ### Paraná (PR)
-- **O que a fonte tem:** API JSON documentada da Assembleia com proposições, andamento e normas (só responde em `http://`). O "Controle de Votações" fica num caminho proibido pelo robots.txt (`/api/`) e com CAPTCHA.
+- **Feito nesta rodada:** coletor próprio (`scripts/coleta/estados/pr/`, no workflow diário) da API pública documentada da ALEP (só responde em `http://`) e da página "Conheça os deputados". Coleta real gravada em `dados/estados/pr/`: 54 deputados (nome, partido e cargo na Mesa), 864 projetos de 2026 com o andamento completo (829 projetos de lei, 14 de lei complementar, 8 de resolução, 7 de decreto legislativo e 6 propostas de emenda à Constituição), 343 resultados de turno na Ordem do Dia e 494 normas de 2026 (479 leis, 6 leis complementares, 5 resoluções, 3 decretos legislativos e 1 emenda constitucional), todas com a proposição de origem; 229 projetos de 2026 ligados à lei gerada.
+- **O que a fonte tem:** API JSON documentada da Assembleia com proposições, andamento e normas. O resultado de cada turno ("1º TURNO - APROVADO") vem nos trâmites, sem a forma da votação, sem placar e sem o voto de cada deputado. O "Controle de Votações" fica num caminho proibido pelo robots.txt (`/api/`) e com CAPTCHA: não é acessado.
 - **O que falta:**
-  1. Coletor da API pública (projetos, leis, decretos). Esforço baixo.
+  1. Decretos do governador: não estão na API da ALEP; só no Diário Oficial do Estado (DIOE, JSON de edições e matérias em HTML). Esforço médio.
   2. Voto de cada deputado: pedido pela LAI já redigido (`docs/pesquisa/pedidos-lai/pr.md`) para publicar votos e presença na API pública. Até lá, "Informação não disponível em fonte oficial". Depende de terceiros.
 
 ### Rio de Janeiro (RJ)
@@ -144,7 +145,7 @@ Situação em **03/11/2026**. O site já acompanha SP, AM, PI, PB, RO, RN, ES, R
 
 ## Próximos passos sugeridos (ordem de custo-benefício)
 1. **Ligar no workflow** AC, AL, RR, TO (SAPL) e PE, DF (coletor de dados abertos): já estão prontos.
-2. **APIs abertas que faltam:** PR (projetos e normas), GO (normas e vetos da Casa Civil), MA (ALEMALEGIS), PA (Banco de Leis). Cada uma, esforço baixo.
+2. **APIs abertas que faltam:** PA (Banco de Leis), esforço baixo. GO (Casa Civil), MA (ALEMALEGIS) e PR (ALEP) já estão no ar.
 3. **Raspadores de HTML com voto nominal publicado:** SC e PA. Esforço médio.
 4. **Enviar os pedidos pela LAI já redigidos** (MT, MS, GO, RJ, PR, DF) e redigir os que faltam (AC, AL e PE, para votos nominais e normas).
 5. **Curadoria de PDF:** CE (60 votações), MS (OCR), RR e TO (atas).
