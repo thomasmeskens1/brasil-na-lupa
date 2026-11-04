@@ -96,6 +96,12 @@ export function Politica({ comCadastro, arquivada = false }: { comCadastro: bool
           individualmente: os dados são contados em conjunto e não permitem saber quem você é.
           {comCadastro ? " A medição nunca é ligada à sua conta." : null}
         </p>
+        <p>
+          <strong>Medição de desempenho.</strong> Usamos o Vercel Speed Insights para saber quanto tempo as páginas
+          levam para carregar e responder (por exemplo, o tempo até o conteúdo principal aparecer), junto com a
+          página visitada, o tipo de dispositivo e o país. Também não usa cookies e não identifica visitantes: os
+          dados servem só para deixar o site mais rápido.
+        </p>
         <ul className="list-disc space-y-1 pl-5">
           <li>
             <strong>Finalidade:</strong> entender como o site é usado, para manter e melhorar o
@@ -249,6 +255,10 @@ export function Politica({ comCadastro, arquivada = false }: { comCadastro: bool
             <li>
               Versão {VERSAO_4.numero}, de {VERSAO_4.data}: versão {VERSAO_3.numero} mais o cadastro opcional com
               favoritos e reações (item 9). Vale quando o cadastro está disponível.
+            </li>
+            <li>
+              Atualização de 04/11/2026 (versões {VERSAO_3.numero} e {VERSAO_4.numero}): inclusão da medição de
+              desempenho (Vercel Speed Insights), sem cookies e sem identificação de visitantes.
             </li>
           </ul>
         </Bloco>

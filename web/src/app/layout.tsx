@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Link from "next/link";
 import { FaixaAtualizacao } from "@/components/FaixaAtualizacao";
 import { NavPrincipal } from "@/components/NavPrincipal";
@@ -94,6 +95,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <AvisoCookies />
         {cadastroAtivo() ? <ModalEntrar /> : null}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

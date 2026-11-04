@@ -58,7 +58,7 @@ export function SecaoCookies({ comCadastro }: { comCadastro: boolean }) {
         continua igual.
       </p>
       <p>
-        <strong>Medição de audiência:</strong> o Vercel Web Analytics não usa cookies e não identifica visitantes (item
+        <strong>Medição de audiência e de desempenho:</strong> o Vercel Web Analytics e o Vercel Speed Insights não usam cookies e não identificam visitantes (item
         2).
       </p>
       <p>
