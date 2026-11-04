@@ -34,7 +34,7 @@ export const SECOES = [
     texto: "Votações das Assembleias Legislativas (com o voto de cada deputado estadual quando a votação é nominal), projetos e as leis e decretos dos governadores, estado por estado.",
   },
   {
-    href: "/atibaia",
+    href: "/municipios/sp/atibaia",
     icone: "cidade" as NomeFigurinha,
     titulo: "Atibaia",
     texto: "Leis e decretos publicados na Imprensa Oficial do município, a composição da Câmara Municipal e as receitas e despesas informadas ao Tribunal de Contas do Estado.",

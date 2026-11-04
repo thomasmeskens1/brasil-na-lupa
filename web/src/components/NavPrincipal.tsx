@@ -20,7 +20,7 @@ export const ITENS_NAV: ItemNav[] = [
   { href: "/justica", rotulo: "Justiça" },
   { href: "/tribunais-de-contas", rotulo: "TCU", extenso: "Tribunais de Contas" },
   { href: "/estados", rotulo: "Estados" },
-  { href: "/atibaia", rotulo: "Atibaia" },
+  { href: "/municipios", rotulo: "Municípios" },
   { href: "/agenda", rotulo: "Agenda" },
 ];
 

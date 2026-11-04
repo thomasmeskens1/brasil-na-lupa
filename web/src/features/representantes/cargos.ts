@@ -133,5 +133,5 @@ export const EM_EXERCICIO = {
   camara: { href: "/congresso/deputados", rotulo: "Deputados federais em exercício (lista oficial da Câmara)" },
   senado: { href: "/congresso/senadores", rotulo: "Senadores em exercício (lista oficial do Senado)" },
   alesp: { href: "/estados/sp/deputados", rotulo: "Deputados estaduais de SP em exercício (lista oficial da ALESP)" },
-  atibaia: { href: "/atibaia", rotulo: "Composição atual da Câmara Municipal de Atibaia" },
+  atibaia: { href: "/municipios/sp/atibaia", rotulo: "Composição atual da Câmara Municipal de Atibaia" },
 } as const;

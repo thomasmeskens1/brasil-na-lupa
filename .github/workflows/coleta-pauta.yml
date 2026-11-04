@@ -1,0 +1,52 @@
+# Pauta e votações do Congresso, atualizadas a cada hora nos dias de sessão.
+# Só consulta o que muda rápido (votações recentes da Câmara e do Senado e a agenda do Plenário);
+# o restante continua na coleta diária. Minuto 23: o Senado pede para evitar horários redondos.
+# Só faz commit quando algum dado mudou; o push dispara a publicação na Vercel.
+name: Pauta e votações (a cada hora)
+
+on:
+  schedule:
+    # 8h às 23h de Brasília, de segunda a sexta (11h–02h UTC).
+    - cron: "23 11-23 * * 1-5"
+    - cron: "23 0-2 * * 2-6"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Mesmo grupo das outras coletas: nunca rodam ao mesmo tempo nem disputam o push.
+concurrency:
+  group: coleta-diaria
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Câmara dos Deputados (votações dos últimos dias)
+        continue-on-error: true
+        run: node scripts/coleta/camara/coletar.mjs --sem-presenca --sem-despesas
+      - name: Senado Federal (votações dos últimos dias)
+        continue-on-error: true
+        run: node scripts/coleta/senado/coletar.mjs
+      - name: Agenda e pauta do Plenário
+        continue-on-error: true
+        run: node scripts/coleta/agenda/coletar.mjs
+      - name: Registrar mudanças
+        run: |
+          git config user.name "coleta-diaria"
+          git config user.email "coleta-diaria@users.noreply.github.com"
+          git add dados/camara dados/senado dados/agenda
+          # meta.json muda a cada execução; só publica se algum dado de fato mudou.
+          if git diff --cached --name-only | grep -qv '/meta\.json$'; then
+            git commit -m "Pauta e votações: atualização ($(date -u +'%F %H:%M') UTC)"
+            git pull --rebase
+            git push
+          else
+            echo "Nenhum dado novo."
+          fi

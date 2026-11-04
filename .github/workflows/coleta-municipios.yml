@@ -1,0 +1,58 @@
+# Câmaras Municipais com SAPL (lista oficial do Interlegis/SIGI) e finanças municipais (Siconfi, Tesouro Nacional).
+# SAPL: robots.txt pede 1 requisição por minuto por host; Siconfi: até 1 requisição por segundo.
+# A coleta avança aos poucos, com cursor em meta.json, e continua de onde parou.
+name: Coleta dos Municípios (Câmaras SAPL e Siconfi)
+
+on:
+  schedule:
+    - cron: "47 17 * * *"
+  workflow_dispatch:
+    inputs:
+      orcamento:
+        description: "Minutos de coleta por execução (25 diário)"
+        type: number
+        default: 25
+
+permissions:
+  contents: write
+
+# Mesmo grupo das outras coletas: nunca rodam ao mesmo tempo nem disputam o push.
+concurrency:
+  group: coleta-diaria
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Testes dos coletores
+        run: node scripts/coleta/municipios/testes.mjs
+      - name: Registro das Câmaras (verifica robots.txt e API)
+        run: node scripts/coleta/municipios/registro.mjs --amostra todas --max 40
+      - name: Coleta (SAPL das Câmaras e Siconfi, em paralelo)
+        env:
+          COLETA_ORCAMENTO_MIN: ${{ inputs.orcamento || 25 }}
+        run: |
+          node scripts/coleta/municipios/sapl.mjs --max 12 & a=$!
+          node scripts/coleta/municipios/siconfi.mjs & b=$!
+          falhou=0
+          for p in $a $b; do wait $p || falhou=1; done
+          exit $falhou
+      - name: Registrar mudanças (inclui o cursor)
+        if: always()
+        run: |
+          git config user.name "coleta-diaria"
+          git config user.email "coleta-diaria@users.noreply.github.com"
+          git add dados/municipios
+          if git diff --cached --quiet; then
+            echo "Nada novo."
+          else
+            git commit -m "Coleta dos Municípios: Câmaras e Siconfi ($(date -u +%F))"
+            git pull --rebase
+            git push
+          fi

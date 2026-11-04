@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
     return [
       { source: "/sao-paulo", destination: "/estados/sp", permanent: true },
       { source: "/sao-paulo/:path*", destination: "/estados/sp/:path*", permanent: true },
+      { source: "/atibaia", destination: "/municipios/sp/atibaia", permanent: true },
+      { source: "/atibaia/leis-e-decretos", destination: "/municipios/sp/atibaia/leis-e-decretos", permanent: true },
     ];
   },
   partialPrefetching: true,

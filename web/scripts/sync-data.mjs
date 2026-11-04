@@ -23,7 +23,7 @@ const webDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const dadosDir = path.join(webDir, "..", "dados");
 const contentFinal = path.join(webDir, "content");
 
-const PASTAS = ["icms", "camara", "senado", "executivo", "stj", "stf", "alesp", "governo-sp", "atibaia", "tribunais-contas", "eleitos", "agenda", "titulos", "estados", "participacao", "autoria"];
+const PASTAS = ["icms", "camara", "senado", "executivo", "stj", "stf", "alesp", "governo-sp", "atibaia", "tribunais-contas", "eleitos", "agenda", "titulos", "estados", "participacao", "autoria", "municipios"];
 /** Caminhos relativos a ../dados que não entram em content/ (material de curadoria). */
 const EXCLUIR = [/^atibaia\/revisao(\/|$)/, /^atibaia\/normas\/edicoes-[^/]*$/, /^titulos\/revisao(\/|$)/, /^titulos\/amostra-revisao(-\d+)?\.json$/];
 const ARQUIVOS = ["glossario.json"];

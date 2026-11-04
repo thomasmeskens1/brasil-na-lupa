@@ -30,20 +30,27 @@ jobs:
         with:
           node-version: 22
       - name: Câmara dos Deputados
+        continue-on-error: true
         run: node scripts/coleta/camara/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
       - name: Senado Federal
+        continue-on-error: true
         run: node scripts/coleta/senado/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
       - name: Senado Federal (registro nas votações e CEAPS)
+        continue-on-error: true
         run: |
           node scripts/coleta/senado/presenca.mjs
           node scripts/coleta/senado/despesas.mjs ${{ inputs.completo && '--forcar' || '' }}
       - name: Autoria transformada em norma (Câmara e Senado)
+        continue-on-error: true
         run: node scripts/coleta/autoria/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
       - name: Consultas públicas do Senado e enquetes da Câmara (canais oficiais)
+        continue-on-error: true
         run: node scripts/coleta/participacao/coletar.mjs --prazo-min 20
       - name: Agenda e pauta do Plenário (depois de Câmara e Senado)
+        continue-on-error: true
         run: node scripts/coleta/agenda/coletar.mjs
       - name: Executivo federal
+        continue-on-error: true
         run: node scripts/coleta/executivo/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
       # O portal de dados abertos do STJ é lento: reaproveita os arquivos já baixados entre execuções.
       - uses: actions/cache@v4
@@ -52,8 +59,10 @@ jobs:
           key: stj-${{ github.run_id }}
           restore-keys: stj-
       - name: Superior Tribunal de Justiça
+        continue-on-error: true
         run: node scripts/coleta/stj/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
       - name: Supremo Tribunal Federal
+        continue-on-error: true
         run: node scripts/coleta/stf/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
       # Votos nominais do plenário da ALESP só existem em PDF: leitura por coordenadas (pdfplumber).
       - uses: actions/setup-python@v5
@@ -65,18 +74,23 @@ jobs:
           scripts/coleta/alesp/.venv/bin/pip install --quiet -r scripts/coleta/alesp/requirements.txt
           node scripts/coleta/alesp/teste-referencia.mjs
       - name: Assembleia Legislativa e governo de SP
+        continue-on-error: true
         run: node scripts/coleta/alesp/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
       - name: Tribunal de Contas da União
+        continue-on-error: true
         run: node scripts/coleta/tribunais-contas/tcu/coletar.mjs
       - name: Tribunal de Contas do Estado de São Paulo
+        continue-on-error: true
         env:
           TCESP_PYTHON: scripts/coleta/alesp/.venv/bin/python
         run: node scripts/coleta/tribunais-contas/tce-sp/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
       - name: Preparar leitor de PDF de Atibaia
         run: python -m pip install --quiet --user pdfplumber==0.11.10
       - name: Atibaia (Imprensa Oficial, Câmara e finanças pelo TCE-SP)
+        continue-on-error: true
         run: node scripts/coleta/atibaia/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
       - name: Eleitos (TSE)
+        continue-on-error: true
         run: node scripts/coleta/eleitos/coletar.mjs
       # Títulos em linguagem simples: rodam depois de todos os coletores; o cache evita refazer ~25 min de consultas às agências.
       - uses: actions/cache@v4
@@ -85,16 +99,19 @@ jobs:
           key: titulos-${{ github.run_id }}
           restore-keys: titulos-
       - name: Títulos em linguagem simples (com verificador)
+        continue-on-error: true
         run: |
           node scripts/coleta/titulos/gerar.mjs
           node scripts/coleta/titulos/verificar.mjs
       - name: Assembleias de Sergipe e da Bahia (SPL Ágape)
+        continue-on-error: true
         env:
           COLETA_ORCAMENTO_MIN: "20"
         run: |
           node scripts/coleta/estados/agape/testes.mjs
           node scripts/coleta/estados/agape/coletar.mjs
       - name: Assembleias do Rio Grande do Norte e do Espírito Santo
+        continue-on-error: true
         # O ES lê os boletins em PDF com o pdfplumber do ambiente da ALESP (preparado acima).
         env:
           COLETA_ORCAMENTO_MIN: "20"
@@ -104,6 +121,7 @@ jobs:
           node scripts/coleta/estados/rn/coletar.mjs
           node scripts/coleta/estados/es/coletar.mjs
       - name: Assembleias de Pernambuco e do Distrito Federal (dados abertos)
+        continue-on-error: true
         run: |
           node scripts/coleta/estados/abertos/testes.mjs
           node scripts/coleta/estados/abertos/coletar.mjs
@@ -115,6 +133,7 @@ jobs:
           # meta.json muda a cada execução; só publica se algum dado de fato mudou.
           if git diff --cached --name-only | grep -qv '/meta\.json$'; then
             git commit -m "Coleta diária: dados oficiais ($(date -u +%F))"
+            git pull --rebase
             git push
           else
             echo "Nenhum dado novo."

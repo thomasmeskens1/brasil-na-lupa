@@ -10,7 +10,7 @@ import { BASE_TC, TERMOS_TC, formatarDataTc } from "@/features/tribunais-contas/
 import { Figurinha } from "@/components/marca/Figurinhas";
 
 /** Municípios com seção própria no site. */
-const SECAO_MUNICIPIO: Record<string, string> = { atibaia: "/atibaia" };
+const SECAO_MUNICIPIO: Record<string, string> = { atibaia: "/municipios/sp/atibaia" };
 
 export function generateStaticParams() {
   return ouMarcador(
