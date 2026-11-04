@@ -1,0 +1,98 @@
+{
+  "atualizado_em": "2026-11-04T12:58:14.906Z",
+  "ultima_execucao": "2026-11-04T12:44:50.873Z",
+  "uf": "MA",
+  "casa": "alema",
+  "orgao": "Assembleia Legislativa do Estado do Maranhão (ALEMA)",
+  "periodo": {
+    "anos": [
+      2026
+    ],
+    "fim": "2026-11-04"
+  },
+  "modo": "incremental",
+  "fontes": [
+    {
+      "titulo": "API pública do sistema legislativo ALEMALEGIS",
+      "url": "https://alemalegis.al.ma.leg.br/api/v1/public",
+      "orgao": "Assembleia Legislativa do Estado do Maranhão (ALEMA)",
+      "acessado_em": "2026-11-04"
+    },
+    {
+      "titulo": "ALEMALEGIS: consulta pública de matérias",
+      "url": "https://alemalegis.al.ma.leg.br/sapl/protocol/legislative-matter/research",
+      "orgao": "Assembleia Legislativa do Estado do Maranhão (ALEMA)",
+      "acessado_em": "2026-11-04"
+    },
+    {
+      "titulo": "Diário da Assembleia (transcrição das sessões, PDF)",
+      "url": "https://www.al.ma.leg.br/sitealema/diarios/",
+      "orgao": "Assembleia Legislativa do Estado do Maranhão (ALEMA)",
+      "acessado_em": "2026-11-04"
+    }
+  ],
+  "robots": {
+    "alemalegis.al.ma.leg.br": {
+      "url": "https://alemalegis.al.ma.leg.br/robots.txt",
+      "status": 200,
+      "lido_em": "2026-11-04T12:44:50.877Z",
+      "crawl_delay_s": null,
+      "intervalo_usado_s": 2,
+      "disallow": [],
+      "observacao": "o endereço devolve uma página HTML, não um robots.txt: nenhuma restrição declarada"
+    }
+  },
+  "execucao": {
+    "requisicoes": 335,
+    "falhas": [
+      "GET https://alemalegis.al.ma.leg.br/api/v1/public/processing/filter/legislative-matter/101416: fetch failed",
+      "GET https://alemalegis.al.ma.leg.br/api/v1/public/processing/filter/legislative-matter/101416: fetch failed",
+      "GET https://alemalegis.al.ma.leg.br/api/v1/public/processing/filter/legislative-matter/101141: fetch failed",
+      "GET https://alemalegis.al.ma.leg.br/api/v1/public/legal-norm/2769: fetch failed",
+      "GET https://alemalegis.al.ma.leg.br/api/v1/public/legal-norm/2769: fetch failed"
+    ]
+  },
+  "contagens": {
+    "parlamentares": 42,
+    "proposicoes_por_ano": {
+      "2026": 1455
+    },
+    "proposicoes_na_fonte": {
+      "2026": 1455
+    },
+    "tramitacoes_lidas_nesta_execucao": 60,
+    "tramitacoes_pendentes": 427,
+    "normas_por_ano": {
+      "2026": 257
+    },
+    "normas_na_fonte": {
+      "2026": 257
+    },
+    "normas_detalhadas_nesta_execucao": 257,
+    "normas_sem_detalhe": 0,
+    "sessoes_cadastradas": 1,
+    "votos_publicados_na_api": 0
+  },
+  "sessoes_plenarias": [
+    {
+      "id_oficial": 33,
+      "numero": 86,
+      "tipo": "I - Ordinária",
+      "data": "2026-10-07",
+      "situacao": "ENDED",
+      "presentes_plenario": 27,
+      "atas": [
+        "Ata_Sessao_86_2026-10-07"
+      ],
+      "votos_publicados": 0,
+      "url": "https://alemalegis.al.ma.leg.br/sapl/protocol/plenary-session/detail/33"
+    }
+  ],
+  "observacoes": [
+    "Fonte: API pública do ALEMALEGIS (sistema legislativo da ALEMA, sem autenticação e sem documentação publicada; rotas mapeadas a partir do código do próprio site, que pode mudar sem aviso). O host não publica robots.txt (o endereço devolve a página do sistema); intervalo mínimo de 2 s.",
+    "Votações: o Plenário da ALEMA vota de forma simbólica (\"Os Deputados e as Deputadas que aprovam permaneçam como estão\"), registrada no Diário da Assembleia (PDF). A API tem a rota de votos, mas ela vem vazia; o resultado aparece só como situação da matéria (por exemplo \"Proposição aprovada\"). Voto de cada deputado: \"Informação não disponível em fonte oficial\".",
+    "Deputados: composição da 20ª legislatura (2023–2026) pela rota própria da API; partido e atividade (\"Ativo na Casa\") vêm do cadastro geral, cruzado pelo id oficial. O campo de legislatura do cadastro não serve para filtrar (cada deputado fica ligado à legislatura do primeiro mandato no sistema).",
+    "Proposições: todas as espécies do ano (projetos, indicações, requerimentos, moções, mensagens, medidas provisórias, vetos), com a situação, a unidade atual e a última ação informadas pela fonte. A tramitação completa dos projetos é lida aos poucos (MA_MAX_TRAMITACOES por execução). Anexos (cartão CNPJ, estatutos, declarações) não são gravados.",
+    "Normas: leis, leis complementares e resoluções legislativas cadastradas no ALEMALEGIS; o detalhe (data de publicação e projeto de origem) é lido aos poucos, leis primeiro. Decretos e medidas provisórias do Governador saem no Diário Oficial do Estado e ainda não são coletados."
+  ]
+}

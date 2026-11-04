@@ -22,7 +22,7 @@ Situação em **03/11/2026**. O site já acompanha SP, AM, PI, PB, RO, RN, ES, R
 | **CE** | Falta coletor | Página HTML | Página HTML (sistema antigo) | 60 votações nominais em PDF (2023–2026) | Diário Oficial em PDF | Raspador de projetos; leitor dos PDFs de votação com conferência | médio a alto |
 | **DF** | Coletor pronto (API do PLe) | Sim (sem partido) | Sim | Só nas atas (PDF); a API não traz | Sim, leis e decretos com publicação no Diário Oficial | Ligar no workflow; votos dependem da LAI já redigida | baixo + depende de terceiros |
 | **GO** | Bloqueado no Legislativo | Página HTML | **Bloqueado** (robots.txt proíbe tudo) | Bloqueado | API aberta da Casa Civil, com razões de veto | Coletor de normas e vetos (fácil); Legislativo depende da LAI já redigida | baixo + depende de terceiros |
-| **MA** | Falta coletor | API aberta | API aberta | Votação simbólica; sem dado estruturado | API aberta | Coletor da API ALEMALEGIS | baixo a médio |
+| **MA** | Coletor pronto (API do ALEMALEGIS) | Sim (42, com partido) | Sim, com situação e andamento | Votação simbólica; a API não publica votos (rota vazia) | Leis, leis complementares e resoluções: sim. Decretos: só no Diário Oficial | Coletor do Diário Oficial para decretos; votos só se a Assembleia passar a registrá-los | baixo + médio |
 | **MS** | Parcial, com barreira | Nos relatórios de votação | **Bloqueado** (CAPTCHA) | Publicado como imagem dentro do PDF do Diário | Diário Oficial em PDF e Governadoria | OCR com conferência humana; LAI já redigida pede os dados abertos | alto + depende de terceiros |
 | **MT** | Parcial, com barreira | Página HTML | Só página por página (robots.txt proíbe as listas); API exige credencial | Não publicado em formato aberto | Diário Oficial (IOMAT) com busca em JSON | Coletor de normas; credencial da API pedida na LAI já redigida | médio + depende de terceiros |
 | **PA** | Falta coletor | Página HTML | Página HTML (formulário) | Voto nominal em HTML (só em parte das matérias) | API aberta do Banco de Leis | Raspador das votações e coletor da API de leis | médio |
@@ -77,7 +77,11 @@ Situação em **03/11/2026**. O site já acompanha SP, AM, PI, PB, RO, RN, ES, R
 
 ### Maranhão (MA)
 - **O que a fonte tem:** o sistema novo da Assembleia (ALEMALEGIS) tem uma API pública em JSON, sem documentação, com deputados, projetos, andamento e normas. As votações são simbólicas e não há voto estruturado (a rota de votos existe, mas está vazia).
-- **O que falta:** escrever o coletor da API (filtrar os deputados pela legislatura 20) e testar o formato, porque o sistema acabou de entrar no ar. Esforço baixo a médio. O voto de cada deputado fica "Informação não disponível em fonte oficial".
+- **Feito:** coletor novo (`scripts/coleta/estados/ma/`) para a API pública do ALEMALEGIS, ligado no workflow diário. Coleta real gravada em `dados/estados/ma/` em 04/11/2026: 42 deputados da 20ª legislatura (pela rota de composição da legislatura; o campo de legislatura do cadastro liga cada deputado só ao primeiro mandato e não serve para filtrar), 1.455 matérias de 2026 (todas as espécies, com situação, unidade atual e última ação; a tramitação completa dos projetos é lida aos poucos, 40 por execução) e 257 normas de 2026 (leis, leis complementares e resoluções legislativas), todas com o projeto de origem e 79 com a data de publicação informada.
+- **O que falta:**
+  1. Votações: a única sessão cadastrada no sistema (86ª Ordinária, 07/10/2026) não tem votos; o resultado aparece só como situação da matéria ("Proposição aprovada"). O coletor confere a rota de votos a cada execução e avisa no meta.json se ela passar a ter dados. O voto de cada deputado fica "Informação não disponível em fonte oficial".
+  2. Decretos e medidas provisórias do Governador: só no Diário Oficial do Estado (busca em JSON e PDF por edição). Esforço médio.
+  3. Foto e e-mail dos deputados: a API só entrega a foto por link temporário; ficam de fora.
 
 ### Mato Grosso do Sul (MS)
 - **O que a fonte tem:** é o único estado do Centro-Oeste que publica o voto de cada deputado ("Lista de votação" no Diário da Assembleia), mas **como imagem dentro do PDF**. O sistema de proposições tem API protegida por CAPTCHA, que não deve ser contornado.
