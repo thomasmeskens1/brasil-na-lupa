@@ -47,7 +47,7 @@ jobs:
         env:
           COLETA_ORCAMENTO_MIN: ${{ inputs.orcamento || 25 }}
         run: |
-          node scripts/coleta/estados/sapl/coletar.mjs --uf am,pi,pb,ro & a=$!
+          node scripts/coleta/estados/sapl/coletar.mjs --uf am,pi,pb,ro,ac,al,rr,to & a=$!
           node scripts/coleta/estados/rs/coletar.mjs & b=$!
           node scripts/coleta/estados/mg/coletar.mjs & c=$!
           falhou=0
@@ -58,7 +58,7 @@ jobs:
         run: |
           git config user.name "coleta-diaria"
           git config user.email "coleta-diaria@users.noreply.github.com"
-          git add dados/estados/am dados/estados/pi dados/estados/pb dados/estados/ro dados/estados/rs dados/estados/mg
+          git add dados/estados/am dados/estados/pi dados/estados/pb dados/estados/ro dados/estados/rs dados/estados/mg dados/estados/ac dados/estados/al dados/estados/rr dados/estados/to
           if git diff --cached --quiet; then
             echo "Nada novo."
           else
