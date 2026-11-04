@@ -1,0 +1,107 @@
+{
+  "atualizado_em": "2026-11-04T14:21:30.753Z",
+  "ultima_execucao": "2026-11-04T13:35:46.930Z",
+  "uf": "PR",
+  "casa": "alep",
+  "orgao": "Assembleia Legislativa do Estado do Paraná (ALEP)",
+  "periodo": {
+    "anos": [
+      2026
+    ],
+    "fim": "2026-11-04"
+  },
+  "modo": "incremental",
+  "fontes": [
+    {
+      "titulo": "API pública de dados abertos da ALEP (proposições, trâmites e normas legais)",
+      "url": "http://webservices.assembleia.pr.leg.br/api/public/proposicao/campos",
+      "orgao": "Assembleia Legislativa do Estado do Paraná (ALEP)",
+      "acessado_em": "2026-11-04"
+    },
+    {
+      "titulo": "Documentação da API (Portal da Transparência da ALEP)",
+      "url": "https://transparencia.assembleia.pr.leg.br/servicos/dados-abertos",
+      "orgao": "Assembleia Legislativa do Estado do Paraná (ALEP)",
+      "acessado_em": "2026-11-04"
+    },
+    {
+      "titulo": "Conheça os deputados — portal da ALEP",
+      "url": "https://www.assembleia.pr.leg.br/deputados/conheca",
+      "orgao": "Assembleia Legislativa do Estado do Paraná (ALEP)",
+      "acessado_em": "2026-11-04"
+    }
+  ],
+  "robots": {
+    "www.assembleia.pr.leg.br": {
+      "url": "https://www.assembleia.pr.leg.br/robots.txt",
+      "status": 200,
+      "lido_em": "2026-11-04T13:35:46.938Z",
+      "crawl_delay_s": null,
+      "intervalo_usado_s": 2,
+      "disallow": [
+        "/publicador",
+        "/login",
+        "/api/",
+        "/flicker/",
+        "/search",
+        "/*tags=",
+        "/*busca=",
+        "/*data_inicio=",
+        "/*retry="
+      ],
+      "observacao": "robots.txt lido e obedecido"
+    },
+    "webservices.assembleia.pr.leg.br": {
+      "url": "http://webservices.assembleia.pr.leg.br/robots.txt",
+      "status": 200,
+      "lido_em": "2026-11-04T13:35:49.147Z",
+      "crawl_delay_s": null,
+      "intervalo_usado_s": 2,
+      "disallow": [
+        "/api/account",
+        "/api/account/change-password",
+        "/api/account/sessions",
+        "/api/audits/",
+        "/api/logs/",
+        "/api/users/",
+        "/management/",
+        "/v2/api-docs/"
+      ],
+      "observacao": "robots.txt lido e obedecido"
+    }
+  },
+  "execucao": {
+    "requisicoes": 1363,
+    "falhas": []
+  },
+  "contagens": {
+    "parlamentares": 54,
+    "proposicoes_por_ano": {
+      "2026": 864
+    },
+    "proposicoes_na_fonte_todos_os_tipos": {
+      "2026": 3255
+    },
+    "normas_por_ano": {
+      "2026": 494
+    },
+    "normas_na_fonte_todos_os_tipos": {
+      "2026": 495
+    },
+    "votacoes_por_ano": {
+      "2026": 343
+    },
+    "projetos_detalhados_nesta_execucao": 864,
+    "projetos_sem_detalhe": 0,
+    "normas_detalhadas_nesta_execucao": 494,
+    "normas_sem_detalhe": 0
+  },
+  "observacoes": [
+    "Fonte: API pública de dados abertos da ALEP, documentada no Portal da Transparência. A API só responde em http:// (sem criptografia); o robots.txt do host (lido por http://) bloqueia só áreas de sistema, não /api/public. Intervalo mínimo de 2 s entre requisições.",
+    "Votações: a API registra só o resultado de cada turno na Ordem do Dia (ex.: \"1º TURNO - APROVADO\"), com a data. Não informa a forma da votação, o placar nem o voto de cada deputado: tipo null e voto individual \"Informação não disponível em fonte oficial\". Nada é deduzido de \"aprovado\".",
+    "O \"Controle de Votações\" do Portal da Transparência (https://transparencia.assembleia.pr.leg.br/plenario/controle-de-votacao) busca os dados num caminho proibido a robôs pelo robots.txt (/api/) e exige reCAPTCHA: não é acessado. O pedido pela Lei de Acesso à Informação (LAI) para publicar votos e presença na API pública está redigido em docs/pesquisa/pedidos-lai/pr.md (ainda não enviado).",
+    "Proposições: só projetos (de lei, de lei complementar, de decreto legislativo, de resolução), propostas de emenda à Constituição e vetos; requerimentos, indicações e emendas de Plenário não são coletados. Sigla oficial da ALEP (PRO = Projeto de Lei). A data de apresentação é a data de recebimento registrada pela ALEP. O detalhe (trâmites e normas geradas) é lido aos poucos, no máximo PR_MAX_DETALHES por execução.",
+    "Deputados: página \"Conheça os deputados\" do portal da ALEP (nome, partido e cargo na Mesa como publicados). O autor de um projeto só é ligado ao deputado quando o nome é idêntico ao da página.",
+    "Normas: lei, lei complementar, resolução, decreto legislativo, emenda constitucional da API de normas legais (atos, ofícios, portarias e designações da administração da Casa ficam de fora). A API informa o número e a data do Diário Oficial e se a norma foi sancionada ou promulgada; a proposição de origem vem do detalhe da norma, lido aos poucos (PR_MAX_NORMAS por execução). Os decretos do Governador não estão nessa API (são publicados no Diário Oficial do Estado) e não são coletados."
+  ]
+}
