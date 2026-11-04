@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Coletor automático do Superior Tribunal de Justiça (STJ) — voto-em-quem (Fase 6).
+ * Coletor automático do Superior Tribunal de Justiça (STJ) — Brasil na Lupa (Fase 6).
  *
  * USO (Node 20+, sem dependências; de qualquer pasta):
  *   node scripts/coleta/stj/coletar.mjs                  # rotina diária: temas com alguma data nos últimos 120 dias

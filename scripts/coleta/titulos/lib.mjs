@@ -13,7 +13,7 @@ export const SAIDA = path.join(DADOS, 'titulos');
 export const CACHE = path.join(AQUI, '.cache');
 
 export const USER_AGENT =
-  'voto-em-quem-coletor/1.0 (titulos em linguagem simples para site neutro de acompanhamento politico; Node.js)';
+  'BrasilNaLupa-coletor/1.0 (titulos em linguagem simples para site neutro de acompanhamento politico; Node.js)';
 
 const MAX_PARALELO = 2;
 const INTERVALO_PADRAO_MS = 400; // entre duas requisições ao mesmo servidor
@@ -54,7 +54,7 @@ async function robots(host) {
           if (!emGrupo) grupoAplica = false;
           emGrupo = true;
           const ua = valor.toLowerCase();
-          if (ua === '*' || ua.includes('voto-em-quem')) grupoAplica = true;
+          if (ua === '*' || ua.includes('brasilnalupa')) grupoAplica = true;
           continue;
         }
         emGrupo = false;

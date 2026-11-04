@@ -7,7 +7,7 @@ import { mascararObjeto } from './privacidade.mjs';
 import zlib from 'node:zlib';
 
 export const USER_AGENT =
-  'voto-em-quem-coletor/1.0 (coleta automatica de dados abertos para site neutro de acompanhamento politico; Node.js)';
+  'BrasilNaLupa-coletor/1.0 (coleta automatica de dados abertos para site neutro de acompanhamento politico; Node.js)';
 
 const MAX_PARALELO = 2;
 let ativos = 0;

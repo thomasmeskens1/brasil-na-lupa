@@ -9,7 +9,7 @@ export const RAIZ = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '
 export const SAIDA = path.join(RAIZ, 'dados', 'autoria');
 
 export const USER_AGENT =
-  'Brasil na Lupa - coletor de autoria/1.0 (coleta diaria de dados abertos para site neutro de acompanhamento politico; Node.js; +https://github.com/thomasmeskens1/quem-votar)';
+  'Brasil na Lupa - coletor de autoria/1.0 (coleta diaria de dados abertos para site neutro de acompanhamento politico; Node.js; +https://github.com/thomasmeskens1/brasil-na-lupa)';
 
 export const MAX_PARALELO = 2;
 export const estat = { requisicoes: 0, retentativas: 0, bytes: 0, falhas: [] };

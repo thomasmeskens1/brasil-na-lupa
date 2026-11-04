@@ -19,7 +19,7 @@ teste('robots.txt: grupo *, Disallow vazio libera tudo; Crawl-delay e Disallow l
   assert.equal(permitido(r2, '/api/x'), false);
   assert.equal(permitido(r2, '/api/publico/proposicao/'), true);
   assert.equal(permitido(r2, '/leis'), true);
-  const r3 = interpretarRobots('User-agent: voto-em-quem-coletor\nDisallow: /\n');
+  const r3 = interpretarRobots('User-agent: BrasilNaLupa-coletor\nDisallow: /\n');
   assert.equal(permitido(r3, '/'), false);
 });
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Coletor automático da Câmara dos Deputados (dados abertos) — voto-em-quem.
+ * Coletor automático da Câmara dos Deputados (dados abertos) — Brasil na Lupa.
  *
  * USO (Node 20+, sem dependências; rodar na raiz do repositório ou de qualquer lugar):
  *   node scripts/coleta/camara/coletar.mjs                 # rotina diária: últimos 7 dias

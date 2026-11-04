@@ -7,7 +7,7 @@ import crypto from 'node:crypto';
 
 // O Planalto derruba conexões com User-Agent curto (docs/pesquisa/fontes-federais.md, seção 4.1).
 export const USER_AGENT =
-  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) voto-em-quem-coletor/1.0 (coleta diaria de dados abertos oficiais; site neutro de acompanhamento politico)';
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) BrasilNaLupa-coletor/1.0 (coleta diaria de dados abertos oficiais; site neutro de acompanhamento politico)';
 
 const MAX_PARALELO = 2;
 // Intervalo mínimo entre inícios de requisição por servidor (ms).

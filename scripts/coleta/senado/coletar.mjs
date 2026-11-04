@@ -43,7 +43,7 @@ import { fileURLToPath } from 'node:url';
 
 const BASE = 'https://legis.senado.leg.br/dadosabertos';
 const PAGINA_MATERIA = 'https://www25.senado.leg.br/web/atividade/materias/-/materia';
-const USER_AGENT = 'voto-em-quem-coletor/1.0 (coleta diaria de dados abertos; +https://github.com/thomasmeskens1/quem-votar)';
+const USER_AGENT = 'BrasilNaLupa-coletor/1.0 (coleta diaria de dados abertos; +https://github.com/thomasmeskens1/brasil-na-lupa)';
 const ORGAO = 'Senado Federal';
 const ANOS_COMPLETO = [2025, 2026];
 const REFORMA_TRIBUTARIA = [{ sigla: 'PLP', numero: 68, ano: 2024 }, { sigla: 'PLP', numero: 108, ano: 2024 }];

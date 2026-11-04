@@ -33,7 +33,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const BASE = 'https://legis.senado.leg.br/dadosabertos';
-export const USER_AGENT = 'voto-em-quem-coletor/1.0 (coleta diaria de dados abertos; +https://github.com/thomasmeskens1/quem-votar)';
+export const USER_AGENT = 'BrasilNaLupa-coletor/1.0 (coleta diaria de dados abertos; +https://github.com/thomasmeskens1/brasil-na-lupa)';
 export const ORGAO = 'Senado Federal';
 export const NAO_DISPONIVEL = 'Informação não disponível em fonte oficial';
 const MAX_PARALELO = 2;

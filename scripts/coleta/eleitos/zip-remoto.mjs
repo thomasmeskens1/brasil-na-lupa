@@ -5,7 +5,7 @@ import zlib from 'node:zlib';
 import { Readable } from 'node:stream';
 
 export const USER_AGENT =
-  'voto-em-quem-coletor/1.0 (coleta automatica de dados abertos para site neutro de acompanhamento politico; Node.js)';
+  'BrasilNaLupa-coletor/1.0 (coleta automatica de dados abertos para site neutro de acompanhamento politico; Node.js)';
 
 export const estatisticas = { requisicoes: 0, bytes_baixados: 0, retentativas: 0 };
 const dormir = (ms) => new Promise((r) => setTimeout(r, ms));

@@ -14,7 +14,7 @@ export const RAIZ = path.resolve(AQUI, '..', '..', '..', '..');
 export const SAIDA = path.join(RAIZ, 'dados', 'tribunais-contas', 'tce-sp');
 
 export const USER_AGENT =
-  'voto-em-quem-coletor/1.0 (coleta automatica de dados abertos para site neutro de acompanhamento politico; Node.js)';
+  'BrasilNaLupa-coletor/1.0 (coleta automatica de dados abertos para site neutro de acompanhamento politico; Node.js)';
 
 // Hosts que o robots.txt proíbe (www10: "Disallow: /"; doe: "/pdf/") ou que recusam acesso (www2: 403).
 // O coletor nunca os acessa: o que estiver lá entra só por curadoria humana.

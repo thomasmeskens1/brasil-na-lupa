@@ -69,7 +69,7 @@ function rodarExtrator(pdf) {
 
 let pastaTemp = null;
 function temp() {
-  if (!pastaTemp) pastaTemp = fs.mkdtempSync(path.join(os.tmpdir(), 'voto-em-quem-ioe-'));
+  if (!pastaTemp) pastaTemp = fs.mkdtempSync(path.join(os.tmpdir(), 'brasil-na-lupa-ioe-'));
   return pastaTemp;
 }
 export function limparTemp() {

@@ -9,7 +9,7 @@ import { mascararObjeto } from './privacidade.mjs';
 // User-Agents (ex.: com a palavra "Node.js"); este, com link do repositório, é aceito. Não é contorno:
 // o coletor continua se identificando como robô.
 export const USER_AGENT =
-  'voto-em-quem-coletor/1.0 (coleta automatica de dados publicos; +https://github.com/thomasmeskens1/quem-votar)';
+  'BrasilNaLupa-coletor/1.0 (coleta automatica de dados publicos; +https://github.com/thomasmeskens1/brasil-na-lupa)';
 
 const MAX_PARALELO = 2;
 let ativos = 0;

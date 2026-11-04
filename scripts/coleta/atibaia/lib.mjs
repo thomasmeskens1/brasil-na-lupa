@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 export const USER_AGENT =
-  'voto-em-quem-coletor/1.0 (coleta automatica de dados publicos para site neutro de acompanhamento politico; Node.js)';
+  'BrasilNaLupa-coletor/1.0 (coleta automatica de dados publicos para site neutro de acompanhamento politico; Node.js)';
 
 const MAX_PARALELO = 2;
 const INTERVALO_MS = 1200; // espaço mínimo entre o início de duas requisições

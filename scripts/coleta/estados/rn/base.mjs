@@ -18,7 +18,7 @@ export { lerJson, gravarSeMudou, hojeISO, estatisticas, contagemGravacao, normal
 // ---------------------------------------------------------------- robots.txt
 const ROBOTS = new Map(); // host → { status, crawl_delay_s, disallow[], allow[], lido_em, observacao } | Promise
 const ULTIMA = new Map(); // host → horário (ms) da última requisição liberada (para Crawl-delay)
-const MEU_AGENTE = 'voto-em-quem-coletor';
+const MEU_AGENTE = 'BrasilNaLupa-coletor';
 
 /** Interpreta o robots.txt: regras do grupo que cita nosso agente; senão, do grupo "*". */
 export function interpretarRobots(texto) {
