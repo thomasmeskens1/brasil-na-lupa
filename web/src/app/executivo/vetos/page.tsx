@@ -4,10 +4,10 @@ import { Termo } from "@/components/glossario";
 import { Secao } from "@/components/Secao";
 import { ListaFontes } from "@/features/congresso/componentes/Basicos";
 import { formatarData } from "@/features/congresso/rotulos";
-import { ListaCartoes } from "@/features/executivo/componentes/ListaCartoes";
+import { ListaFiltros } from "@/features/executivo/componentes/ListaFiltros";
 import { Migalhas, TermosRecolhidos } from "@/features/executivo/componentes/Migalhas";
 import { getIndiceExecutivo } from "@/features/executivo/dados";
-import { cartaoVeto, padraoVeto } from "@/features/executivo/listas";
+import { ATO_VETO, FACETAS_EXECUTIVO, itensExecutivo, numerosVetos } from "@/features/executivo/painel";
 import { TERMOS_EXECUTIVO } from "@/features/executivo/rotulos";
 import { Figurinha } from "@/components/marca/Figurinhas";
 
@@ -20,7 +20,6 @@ export const metadata: Metadata = metadadosCompartilhamento({
 
 export default function VetosPage() {
   const ind = getIndiceExecutivo();
-  const itens = ind.vetos.map(cartaoVeto);
   const termos = [
     TERMOS_EXECUTIVO.veto,
     TERMOS_EXECUTIVO.vetoTotalParcial,
@@ -30,8 +29,8 @@ export default function VetosPage() {
   ];
 
   return (
-    <div className="max-w-3xl space-y-8">
-      <header>
+    <div className="space-y-8">
+      <header className="max-w-3xl">
         <Migalhas itens={[{ href: "/executivo", rotulo: "Executivo" }]} />
         <Figurinha nome="caneta" className="heroi-figurinha figurinha-flutua" />
         <h1 className="mt-1 text-2xl font-bold text-foreground md:text-3xl">Vetos</h1>
@@ -45,19 +44,16 @@ export default function VetosPage() {
         </p>
       </header>
 
-      <Secao id="lista" titulo="Lista de vetos">
-        <ListaCartoes
-          itens={itens}
-          padrao={padraoVeto(ind)}
-          filtros={[
-            { chave: "ano", rotulo: "Ano", decrescente: true },
-            { chave: "tipo", rotulo: "Tipo de veto" },
-          ]}
-          busca={{ rotulo: "Buscar no assunto, na ementa ou no projeto", dica: "Ex.: orçamento, PL 4537" }}
-          rotulo={{ singular: "veto", plural: "vetos" }}
-          vazio="Nenhum veto coletado."
-        />
-      </Secao>
+      <ListaFiltros
+        itens={itensExecutivo(ind, "veto")}
+        numeros={[numerosVetos(ind)]}
+        facetas={FACETAS_EXECUTIVO.map((f) => (f.chave === "tipoVeto" || f.chave === "trechos" ? { ...f, secundaria: false } : f))}
+        fixos={{ ato: ATO_VETO }}
+        busca={{ rotulo: "Buscar no assunto, na ementa ou no projeto", dica: "Ex.: orçamento, PL 4537" }}
+        rotulo={{ singular: "veto", plural: "vetos" }}
+        ordem="do mais recente para o mais antigo"
+        tituloLista="Lista de vetos"
+      />
 
       <TermosRecolhidos termos={termos} />
 

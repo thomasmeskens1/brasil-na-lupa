@@ -31,6 +31,8 @@ export interface IndiceStj {
   situacoes: string[];
   orgaos: string[];
   tipos: string[];
+  /** Contagens do índice inteiro (scripts/gerar-executivo-justica.mjs). */
+  contagens?: { por_situacao: Record<string, number>; por_tipo: Record<string, number>; com_tese: number };
 }
 
 export interface ProcessoStj {
@@ -139,6 +141,14 @@ export type LinhaTemaStj = [
   data: string | null,
   url: 1 | string | null,
   titulo?: string | null,
+  /** Acrescentados para a lista com filtros: tema do dia a dia, etiqueta estruturada, */
+  temaDiaADia?: string | null,
+  etiqueta?: string | null,
+  /** expressões literais do resultado do mérito ("Por unanimidade", "Por maioria"), trecho oficial cortado */
+  resultado?: string[],
+  trechoResultado?: string | null,
+  /** qual data está na posição 9: "j" julgamento, "a" afetação. */
+  tipoData?: "j" | "a" | null,
 ];
 
 // ---------------------------------------------------------------- STF (contrato "julgamento")
@@ -212,6 +222,8 @@ export interface ResumoJulgamentoStf {
   orgao?: string | null;
   acessado_em?: string | null;
   url?: string | null;
+  tema_dia_a_dia?: string | null;
+  etiqueta?: string | null;
 }
 
 export interface TemaStf {
@@ -242,6 +254,7 @@ export interface IndiceStf {
   julgamentos_total: number;
   julgamentos: ResumoJulgamentoStf[];
   fontes: Fonte[];
+  contagens?: { por_situacao: Record<string, number>; por_andamento: Record<string, number>; com_tese: number };
 }
 
 /** Linha de public/justica/stf-temas.json. */
@@ -258,4 +271,12 @@ export type LinhaTemaStf = [
   url: string | null,
   descricao: string | null,
   tituloSimples?: string | null,
+  temaDiaADia?: string | null,
+  etiqueta?: string | null,
+  resultado?: string[],
+  trechoResultado?: string | null,
+  data?: string | null,
+  /** "j" julgamento ligado, "t" data da tese, "r" análise da repercussão geral. */
+  tipoData?: "j" | "t" | "r" | null,
+  orgao?: string | null,
 ];
