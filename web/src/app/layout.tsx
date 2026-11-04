@@ -1,3 +1,4 @@
+import { SITE } from "./site";
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -18,6 +19,8 @@ const fonteTitulo = Poppins({ subsets: ["latin"], weight: ["800", "900"], variab
 const fonteTexto = DM_Sans({ subsets: ["latin"], weight: ["400", "500", "700"], variable: "--fonte-texto", display: "swap" });
 
 export const metadata: Metadata = {
+  // Endereço oficial: links de compartilhamento (Open Graph) e mapa do site saem com o domínio próprio.
+  metadataBase: new URL(SITE),
   title: {
     default: "Brasil na Lupa — acompanhamento político com fontes oficiais",
     template: "%s · Brasil na Lupa",
