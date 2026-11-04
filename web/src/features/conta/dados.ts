@@ -189,6 +189,58 @@ export async function salvarPreferencias(
   return linhas.length === 1;
 }
 
+/**
+ * Formulário "Estados, temas e alertas" da Minha conta: grava só os favoritos dos tipos estado e
+ * tema (políticos e propostas ficam como estão; são removidos um a um na lista de favoritos),
+ * os municípios e a preferência de alertas. Exige consentimento na versão atual.
+ */
+export async function salvarEstadosTemas(
+  sql: Sql,
+  usuarioId: string,
+  versaoAtual: string,
+  p: Pick<Preferencias, "ufs" | "temas" | "municipios" | "alertasEmail">,
+): Promise<boolean> {
+  const novos: [string, string][] = [
+    ...p.ufs.map((r) => ["uf", r] as [string, string]),
+    ...p.temas.map((r) => ["tema", r] as [string, string]),
+  ];
+  const tipos = novos.map((n) => n[0]);
+  const refs = novos.map((n) => n[1]);
+  const linhas = await sql`
+    WITH p AS (
+      UPDATE preferencias SET municipios = ${p.municipios}, alertas_email = ${p.alertasEmail}, atualizado_em = now()
+      WHERE usuario_id = ${usuarioId}
+        AND EXISTS (SELECT 1 FROM consentimentos c
+                    WHERE c.usuario_id = ${usuarioId} AND c.versao_politica = ${versaoAtual})
+      RETURNING usuario_id
+    ), novos AS (
+      SELECT t.tipo, t.ref FROM unnest(${tipos}::text[], ${refs}::text[]) AS t (tipo, ref)
+    ), apagados AS (
+      DELETE FROM favoritos f
+      WHERE f.usuario_id IN (SELECT usuario_id FROM p)
+        AND f.tipo IN ('uf', 'tema')
+        AND NOT EXISTS (SELECT 1 FROM novos n WHERE n.tipo = f.tipo AND n.ref = f.ref)
+    ), inseridos AS (
+      INSERT INTO favoritos (usuario_id, tipo, ref)
+      SELECT p.usuario_id, n.tipo, n.ref FROM p CROSS JOIN novos n
+      ON CONFLICT DO NOTHING
+    )
+    SELECT usuario_id FROM p`;
+  return linhas.length === 1;
+}
+
+export interface MinhaReacao {
+  proposta: string;
+  valor: 1 | -1;
+}
+
+/** "Minhas reações": as reações da pessoa (só a proposta e o valor; não há data guardada). */
+export async function listarReacoes(sql: Sql, usuarioId: string): Promise<MinhaReacao[]> {
+  const l = await sql<{ proposta: string; valor: number | string }>`
+    SELECT proposta, valor FROM reacoes WHERE usuario_id = ${usuarioId} ORDER BY proposta`;
+  return l.map((r) => ({ proposta: r.proposta, valor: Number(r.valor) === 1 ? 1 : -1 }));
+}
+
 /** "Baixar meus dados": tudo o que o banco guarda sobre a pessoa. */
 export async function exportarDados(sql: Sql, usuarioId: string) {
   const estado = await obterEstado(sql, usuarioId);

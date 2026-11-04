@@ -83,3 +83,36 @@ export function caminhoDeVolta(v: unknown): string | null {
   if (!/^\/(?![/\\])[A-Za-z0-9/_\-.~%]*$/.test(v)) return null;
   return v;
 }
+
+/**
+ * Inverso de hrefDoId para as páginas de proposta: o id do site a partir do endereço da página
+ * (usado pelo Cartão de Decisão, que só recebe o href). Fora desses formatos, null.
+ */
+export function idPropostaDoHref(href: string): string | null {
+  let caminho = href.split(/[?#]/)[0];
+  try {
+    caminho = decodeURIComponent(caminho);
+  } catch {
+    return null;
+  }
+  let m = /^\/congresso\/votacoes\/(camara|senado)\/([^/]+)$/.exec(caminho);
+  let id: string | null = null;
+  if (m) id = `${m[1]}-votacao:${m[2]}`;
+  else if ((m = /^\/estados\/([a-z]{2})\/votacoes\/([^/]+)$/.exec(caminho))) id = `${m[1]}-votacao:${m[2]}`;
+  else if ((m = /^\/executivo\/(?:medidas-provisorias|vetos)\/([^/]+)$/.exec(caminho))) id = `executivo:${m[1]}`;
+  else if ((m = /^\/impostos\/icms\/([^/]+)$/.exec(caminho))) id = `icms:${m[1]}`;
+  return id && ehIdProposta(id) ? id : null;
+}
+
+/**
+ * Parte do catálogo (rota /api/conta/catalogo/<parte>) onde está o id de uma proposta ou de um
+ * político: "camara", "senado", "executivo", "icms" ou a sigla da UF em minúsculas.
+ */
+export function parteDoId(id: string): string | null {
+  const origem = id.slice(0, Math.max(0, id.indexOf(":")));
+  if (origem === "camara" || origem === "camara-votacao") return "camara";
+  if (origem === "senado" || origem === "senado-votacao") return "senado";
+  if (origem === "executivo" || origem === "icms") return origem;
+  const m = /^([a-z]{2})-(?:votacao|deputado)$/.exec(origem);
+  return m && (SIGLAS_UF as readonly string[]).includes(m[1]) ? m[1] : null;
+}
