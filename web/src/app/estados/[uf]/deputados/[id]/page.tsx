@@ -19,7 +19,8 @@ import { fotoOficial } from "@/features/comum/fotos";
 export function generateStaticParams() {
   const todos = ufsComDados().flatMap((uf) => (getIndiceEstado(uf)?.deputados ?? []).map((d) => ({ uf, id: d.id, em: d.em_exercicio })));
   return ouMarcador(
-    ouPrimeiro(todos.filter((d) => d.em), todos).map(({ uf, id }) => ({ uf, id })),
+    // Perfis com a lista de votos são pesados: no build só o primeiro; os demais na primeira visita.
+    ouPrimeiro(todos.filter((d) => d.em), todos).slice(0, 1).map(({ uf, id }) => ({ uf, id })),
     { uf: "sem-dados", id: "sem-dados" },
   );
 }

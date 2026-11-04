@@ -40,7 +40,10 @@ import { fotoOficial } from "@/features/comum/fotos";
 export function generateStaticParams() {
   return CASAS.flatMap((casa) => {
     const todos = getIndice(casa).parlamentares;
-    return ouPrimeiro(todos.filter((p) => p.na_lista_atual || p.em_exercicio), todos).map((p) => ({ casa, id: p.id }));
+    const atuais = ouPrimeiro(todos.filter((p) => p.na_lista_atual || p.em_exercicio), todos);
+    // Câmara: cada perfil tem centenas de votações (~780 KB); no build só o primeiro, os demais na
+    // primeira visita (cache até o próximo deploy), para não multiplicar o armazenamento de cada deploy.
+    return (casa === "camara" ? atuais.slice(0, 1) : atuais).map((p) => ({ casa, id: p.id }));
   });
 }
 
