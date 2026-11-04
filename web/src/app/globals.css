@@ -1001,3 +1001,28 @@ table .lk {
 table .lk:hover {
   text-decoration-color: var(--cor-acento);
 }
+
+/* ----- Foto oficial do político (components/politico/FotoPolitico.tsx) -----
+ * Moldura de figurinha (borda branca de adesivo, contorno escuro), igual para todos: nenhuma cor
+ * por partido e sem neon (diretriz 11). As iniciais usam o MESMO formato, tamanho e moldura. */
+.figurinha-foto {
+  display: inline-block;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  border: 3px solid #ffffff;
+  border-radius: 0.875rem;
+  background: var(--cor-superficie-2);
+  box-shadow: 0 0 0 1.5px #1b1b23, 0 4px 10px rgb(0 0 0 / 0.35);
+  object-fit: cover;
+  object-position: center top;
+}
+.figurinha-iniciais {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-titulo);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--foreground);
+  user-select: none;
+}

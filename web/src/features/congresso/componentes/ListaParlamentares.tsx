@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useId, useMemo, useState } from "react";
+import { FotoPolitico } from "@/components/politico/FotoPolitico";
+import { montarFoto, type FonteFoto, type FonteFotoMeta } from "@/components/politico/fotos";
 import { normalizar } from "../rotulos";
 
 export interface LinhaParlamentar {
@@ -12,6 +14,8 @@ export interface LinhaParlamentar {
   href: string;
   naListaAtual: boolean;
   nominais: number;
+  /** Há foto oficial de fonte com permissão de uso (crédito em `fotos`). */
+  temFoto?: boolean;
 }
 
 const CAMPO = "mt-1 block w-full rounded border border-[var(--cor-borda-forte)] bg-white px-2 py-1.5 text-sm text-gray-900";
@@ -25,10 +29,13 @@ export function ListaParlamentares({
   linhas,
   legenda,
   rotuloForaDaLista,
+  fotos,
 }: {
   linhas: LinhaParlamentar[];
   legenda: string;
   rotuloForaDaLista: string;
+  /** Fonte e crédito das fotos desta casa (as linhas só dizem se há foto). */
+  fotos?: { fonte: FonteFoto; meta: FonteFotoMeta } | null;
 }) {
   const base = useId();
   const [busca, setBusca] = useState("");
@@ -107,10 +114,15 @@ export function ListaParlamentares({
             {filtradas.map((l) => (
               <tr key={l.id}>
                 <td>
-                  <Link href={l.href} prefetch={false} className="lk">
-                    {l.nome}
-                  </Link>
-                  {!l.naListaAtual ? <span className="meta block">Fora da lista atual de em exercício</span> : null}
+                  <span className="flex items-center gap-3">
+                    <FotoPolitico nome={l.nome} foto={l.temFoto && fotos ? montarFoto(fotos.fonte, l.id, fotos.meta) : null} tamanho="pp" />
+                    <span>
+                      <Link href={l.href} prefetch={false} className="lk">
+                        {l.nome}
+                      </Link>
+                      {!l.naListaAtual ? <span className="meta block">Fora da lista atual de em exercício</span> : null}
+                    </span>
+                  </span>
                 </td>
                 <td>{l.partido ?? "Não informado"}</td>
                 <td>{l.uf ?? "Não informado"}</td>
@@ -121,6 +133,15 @@ export function ListaParlamentares({
         </table>
         {!filtradas.length ? <p className="p-3 text-sm text-gray-800">Nenhum parlamentar com esses filtros.</p> : null}
       </div>
+      {fotos ? (
+        <p className="meta mt-2 text-sm">
+          Fotos: {fotos.meta.credito}, com{" "}
+          <a href={fotos.meta.url_permissao} className="lk" target="_blank" rel="noopener">
+            permissão de uso declarada pela fonte oficial<span className="sr-only"> (abre em nova aba)</span>
+          </a>
+          . Quem não tem foto na lista oficial atual aparece com as iniciais do nome.
+        </p>
+      ) : null}
     </div>
   );
 }

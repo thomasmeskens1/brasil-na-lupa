@@ -2,12 +2,15 @@
 
 /**
  * Cartão do político (conteúdo da janela modal). Só dados de fonte oficial, com período, fonte e
- * data da coleta; sem foto (as fontes consultadas não declaram licença de uso das imagens), sem
- * nota, ranking ou cor de avaliação (diretrizes 1, 2, 4, 6 e 11).
+ * data da coleta; foto oficial só de fonte que declara permissão de uso, com o crédito exigido
+ * (as demais pessoas aparecem com as iniciais, no mesmo formato); sem nota, ranking ou cor de
+ * avaliação (diretrizes 1, 2, 4, 6 e 11).
  */
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FonteLink } from "@/components/FonteLink";
+import { FotoPolitico } from "@/components/politico/FotoPolitico";
+import { montarFoto, type FotoInfo } from "@/components/politico/fotos";
 import type { FonteResumo } from "@/components/decisao";
 import { CARGOS, UFS } from "../cargos";
 import { situacaoLegivel } from "../Eleitos";
@@ -23,6 +26,12 @@ export function dataBr(v: string | null | undefined): string {
 const nomeUf = (uf: string | null) => UFS.find((u) => u.sigla === uf)?.nome ?? uf ?? "";
 const LISTA: Record<string, string> = { camara: "Câmara dos Deputados", senado: "Senado Federal", alesp: "Assembleia Legislativa de SP (ALESP)" };
 const EXECUTIVO = new Set(["Prefeito", "Vice-prefeito", "Governador", "Vice-governador", "Presidente", "Vice-presidente"]);
+
+/** Foto oficial da pessoa, quando a lista oficial vinculada tem foto de fonte com permissão de uso. */
+export function fotoDaPessoa(p: Pessoa, base: ArquivoBase | null): FotoInfo | null {
+  const v = p.base?.v;
+  return v && p.base?.f ? montarFoto(v.casa, v.id, base?.fotos?.[v.casa]) : null;
+}
 
 function Fonte({ f }: { f: FonteResumo | null | undefined }) {
   if (!f) return null;
@@ -54,6 +63,8 @@ export function CartaoPolitico({ pessoa, base, idTitulo, aoFechar }: { pessoa: P
     pessoa.cidade ? /2024|munic/i.test(f.titulo ?? "") : pessoa.ano === 2018 ? /2018/.test(f.titulo ?? "") : /2022/.test(f.titulo ?? ""),
   );
   const perfil = b?.h ?? null;
+  const foto = fotoDaPessoa(pessoa, base);
+  const fonteFoto = foto && b?.v ? base?.fotos?.[b.v.casa] : null;
   const pagUf = pessoa.uf
     ? pessoa.cidade
       ? `/quem-me-representa/${pessoa.uf.toLowerCase()}?cidade=${encodeURIComponent(pessoa.cidade.slug)}#na-sua-cidade`
@@ -63,7 +74,8 @@ export function CartaoPolitico({ pessoa, base, idTitulo, aoFechar }: { pessoa: P
   return (
     <article className="p-4 sm:p-6">
       <div className="flex items-start justify-between gap-3">
-        <div className="min-w-0">
+        <FotoPolitico nome={pessoa.nome} foto={foto} tamanho="m" prioridade className="shrink-0" />
+        <div className="min-w-0 flex-1">
           <p className="meta">{info?.singular ?? pessoa.cargo}</p>
           <h2 id={idTitulo} tabIndex={-1} className="text-xl font-bold outline-none focus-visible:outline-2 sm:text-2xl">
             {pessoa.nome}
@@ -158,6 +170,14 @@ export function CartaoPolitico({ pessoa, base, idTitulo, aoFechar }: { pessoa: P
         <ul className="mt-1 space-y-1">
           {pessoa.fonte ? <Fonte f={pessoa.fonte} /> : fontesEleicao.map((f) => <Fonte key={f.url} f={f} />)}
           {b?.v ? <Fonte f={base?.listas[b.v.casa]} /> : null}
+          {fonteFoto ? (
+            <li>
+              Foto: {fonteFoto.credito}.{" "}
+              <FonteLink href={fonteFoto.url_permissao} tipo="oficial">
+                {fonteFoto.url_licenca ? "Licença Creative Commons Atribuição 4.0 (CC BY 4.0)" : "Permissão de uso das fotos"} ({fonteFoto.orgao})
+              </FonteLink>
+            </li>
+          ) : null}
         </ul>
         <p className="meta mt-2">
           {pessoa.fonte

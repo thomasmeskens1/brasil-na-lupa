@@ -76,6 +76,13 @@ jobs:
       - name: Assembleia Legislativa e governo de SP
         continue-on-error: true
         run: node scripts/coleta/alesp/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
+      # Fotos oficiais só das fontes que declaram permissão de uso (Câmara, Senado e ALESP; ver
+      # docs/pesquisa/fotos-licencas.md). Depois das listas oficiais; sharp só para reduzir a 256 px.
+      - name: Fotos oficiais de parlamentares (Câmara, Senado e ALESP)
+        continue-on-error: true
+        run: |
+          npm install --no-save --no-package-lock --no-audit --no-fund --prefix scripts/coleta/fotos sharp@0.35.5
+          node scripts/coleta/fotos/coletar.mjs
       - name: Tribunal de Contas da União
         continue-on-error: true
         run: node scripts/coleta/tribunais-contas/tcu/coletar.mjs
@@ -136,7 +143,7 @@ jobs:
         run: |
           git config user.name "coleta-diaria"
           git config user.email "coleta-diaria@users.noreply.github.com"
-          git add dados/camara dados/senado dados/agenda dados/stj dados/stf dados/executivo dados/alesp dados/governo-sp dados/atibaia dados/tribunais-contas dados/eleitos dados/titulos dados/estados/se dados/estados/ba dados/estados/rn dados/estados/es dados/estados/pe dados/estados/df dados/estados/ma dados/participacao dados/autoria
+          git add dados/camara dados/senado dados/agenda dados/stj dados/stf dados/executivo dados/alesp dados/governo-sp dados/atibaia dados/tribunais-contas dados/eleitos dados/titulos dados/estados/se dados/estados/ba dados/estados/rn dados/estados/es dados/estados/pe dados/estados/df dados/estados/ma dados/participacao dados/autoria dados/fotos
           # meta.json muda a cada execução; só publica se algum dado de fato mudou.
           if git diff --cached --name-only | grep -qv '/meta\.json$'; then
             git commit -m "Coleta diária: dados oficiais ($(date -u +%F))"

@@ -31,6 +31,7 @@ import { tituloSimplesVotacao } from "@/features/congresso/titulos";
 import { Favoritar } from "@/components/reacoes";
 import { idParlamentar } from "@/features/conta/ids";
 import { ouPrimeiro } from "@/features/comum/prerender";
+import { fotoOficial } from "@/features/comum/fotos";
 
 /**
  * Há perfil de todos os parlamentares da lista oficial e de quem aparece em votação nominal.
@@ -120,7 +121,7 @@ export default async function ParlamentarPage({ params }: PageProps<"/congresso/
         </Link>
       </nav>
 
-      <Cracha casa={casa} p={p} nominais={nominais} presenca={resumoPresenca(casa, p.id)} gastos={resumoGastos(casa, p.id)} />
+      <Cracha casa={casa} p={p} nominais={nominais} presenca={resumoPresenca(casa, p.id)} gastos={resumoGastos(casa, p.id)} foto={fotoOficial(casa, p.id)} />
       <Favoritar tipo="politico" valor={idParlamentar(casa, p.id)} nome={casa === "camara" ? "este deputado" : "este senador"} />
 
       <Secao

@@ -63,8 +63,11 @@ export default function QuemMeRepresentaPage() {
             governadores e a Presidência, o site ainda não reúne esses indicadores em fonte oficial, e o cartão diz isso.
           </p>
           <p>
-            <strong>Sem fotos.</strong> As fontes oficiais consultadas não declaram uma licença de uso das imagens; por isso os cartões não
-            mostram foto.
+            <strong>Fotos.</strong> Os cartões só mostram a foto oficial quando a própria fonte declara que as imagens podem ser
+            usadas, e sempre com o crédito que ela pede: deputados federais (“Arquivo/Câmara dos Deputados”), senadores (“Agência
+            Senado”) e deputados estaduais de São Paulo (“Alesp”, licença Creative Commons Atribuição 4.0). As demais Assembleias,
+            prefeitos, vereadores, governadores e a Presidência aparecem com as iniciais do nome, no mesmo formato, porque as fontes
+            consultadas não declaram permissão de uso das fotos.
           </p>
           <p>
             <strong>Partidos.</strong> A lista de partidos está em ordem alfabética e é a do partido na eleição; quando há vínculo exato com a

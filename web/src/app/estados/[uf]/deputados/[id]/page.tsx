@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SeloFonte } from "@/components/decisao";
-import { Figurinha } from "@/components/marca/Figurinhas";
+import { FotoPolitico } from "@/components/politico/FotoPolitico";
 import { Secao } from "@/components/Secao";
 import { ListaFontes } from "@/features/congresso/componentes/Basicos";
 import { Migalhas, TermosRecolhidos } from "@/features/executivo/componentes/Migalhas";
@@ -13,6 +13,7 @@ import { baseUf, getUf } from "@/features/estados/ufs";
 import { Favoritar } from "@/components/reacoes";
 import { idDeputadoEstadual } from "@/features/conta/ids";
 import { ouPrimeiro } from "@/features/comum/prerender";
+import { fotoOficial } from "@/features/comum/fotos";
 
 /** No build, só os deputados em exercício; os demais são gerados na primeira visita. */
 export function generateStaticParams() {
@@ -100,7 +101,9 @@ export default async function DeputadoEstadoPage({ params }: PageProps<"/estados
         ]}
       />
       <header>
-        <Figurinha nome="pessoas" className="heroi-figurinha figurinha-flutua" />
+        {/* Foto só de fonte com permissão de uso declarada (hoje, entre as Assembleias, só a ALESP);
+            nas demais, as iniciais no mesmo formato (docs/pesquisa/fotos-licencas.md). */}
+        <FotoPolitico nome={d.nome} foto={u.uf === "sp" ? fotoOficial("alesp", d.id) : null} tamanho="g" legenda prioridade className="mb-3" />
         <h1 className="text-2xl font-bold text-foreground md:text-3xl">{d.nome}</h1>
         <Favoritar tipo="politico" valor={idDeputadoEstadual(u.uf, d.id)} nome="este deputado estadual" className="mt-2" />
         <p>
@@ -113,12 +116,6 @@ export default async function DeputadoEstadoPage({ params }: PageProps<"/estados
         </p>
         {d.url_oficial ? <SeloFonte fonte={{ url: d.url_oficial, titulo: `Página oficial na ${u.casa.sigla}`, orgao: u.casa.sigla, acessado_em: ind.lista_atualizada_em }} /> : null}
       </header>
-
-      {d.foto ? (
-        // Foto do repositório oficial da Assembleia (URL da fonte, sem cópia local).
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={d.foto} alt={`Foto oficial de ${d.nome}`} width={120} height={160} className="h-40 w-30 rounded border border-borda bg-superficie object-cover" />
-      ) : null}
 
       <Secao id="resumo" titulo="Resumo dos registros" descricao="Votações simbólicas não têm voto individual e não entram nesta conta.">
         {votos.length ? (
