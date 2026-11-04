@@ -4,6 +4,7 @@ import { Secao } from "@/components/Secao";
 import { TabelaFiltravel } from "@/components/tabela";
 import { ListaFontes } from "@/features/congresso/componentes/Basicos";
 import { Migalhas } from "@/features/executivo/componentes/Migalhas";
+import { PaginaAssembleiaIndisponivel } from "@/features/estados/componentes/AssembleiaIndisponivel";
 import { paramsUfsComDados, votacoesPlenario } from "@/features/estados/dados";
 import { exigirUf, maiuscula, ufComDados } from "@/features/estados/pagina";
 import { formatarData } from "@/features/estados/rotulos";
@@ -27,6 +28,7 @@ export async function generateMetadata({ params }: PageProps<"/estados/[uf]/depu
 export default async function DeputadosEstadoPage({ params }: PageProps<"/estados/[uf]/deputados">) {
   const { uf } = await params;
   const { u, ind } = exigirUf(uf);
+  if (ind.assembleia_indisponivel) return <PaginaAssembleiaIndisponivel u={u} aviso={ind.assembleia_indisponivel} titulo={maiuscula(u.membros)} />;
   const base = baseUf(u.uf);
   const plen = votacoesPlenario(u.uf).length;
   return (

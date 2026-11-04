@@ -47,8 +47,10 @@ export default function EstadosPage() {
                   <span className="block text-sm text-[var(--cor-texto-apoio)]">
                     {r ? (
                       <>
-                        <span className="text-foreground">Acompanhado</span> · {r.votacoes.toLocaleString("pt-BR")} votações, {r.normas.toLocaleString("pt-BR")} atos do
-                        governador
+                        <span className="text-foreground">Acompanhado</span> ·{" "}
+                        {r.assembleia_indisponivel
+                          ? `${r.normas.toLocaleString("pt-BR")} atos do governador; Assembleia em breve`
+                          : `${r.votacoes.toLocaleString("pt-BR")} votações, ${r.normas.toLocaleString("pt-BR")} atos do governador`}
                         {r.atualizado_em ? ` · coletado em ${formatarData(r.atualizado_em)}` : ""}
                       </>
                     ) : (

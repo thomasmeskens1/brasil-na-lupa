@@ -1,0 +1,108 @@
+{
+  "atualizado_em": "2026-11-04T13:25:50.482Z",
+  "ultima_execucao": "2026-11-04T13:09:45.500Z",
+  "uf": "GO",
+  "casa": "alego",
+  "orgao": "Secretaria de Estado da Casa Civil de Goiás",
+  "periodo": {
+    "anos": [
+      2026
+    ],
+    "fim": "2026-11-04"
+  },
+  "modo": "incremental",
+  "fontes": [
+    {
+      "titulo": "Legislação do Estado de Goiás — Casa Civil",
+      "url": "https://legisla.casacivil.go.gov.br/pesquisa_legislacao",
+      "orgao": "Secretaria de Estado da Casa Civil de Goiás",
+      "acessado_em": "2026-11-04"
+    },
+    {
+      "titulo": "Mensagens de veto — Casa Civil de Goiás",
+      "url": "https://legisla.casacivil.go.gov.br/pesquisa_mensagem_veto",
+      "orgao": "Secretaria de Estado da Casa Civil de Goiás",
+      "acessado_em": "2026-11-04"
+    }
+  ],
+  "assembleia_indisponivel": {
+    "motivo": "O sistema legislativo da Assembleia Legislativa do Estado de Goiás (ALEGO Digital), onde ficam os projetos, as sessões e as votações, proíbe a coleta automática no seu arquivo robots.txt (\"Disallow: /\"). Por isso, deputados, projetos e votações da Assembleia não são coletados.",
+    "pedido_lai": "Foi preparado um pedido pela Lei de Acesso à Informação (LAI) à Assembleia, pedindo as votações com o voto de cada deputado e os projetos em formato aberto, e uma forma autorizada de acesso automatizado. Enquanto não houver resposta, esses dados ficam indisponíveis aqui.",
+    "fonte": {
+      "titulo": "robots.txt do sistema ALEGO Digital (consulta legislativa)",
+      "url": "https://alegodigital.al.go.leg.br/robots.txt",
+      "orgao": "Assembleia Legislativa do Estado de Goiás (ALEGO)",
+      "acessado_em": "2026-11-02"
+    }
+  },
+  "robots": {
+    "legisla.casacivil.go.gov.br": {
+      "url": "https://legisla.casacivil.go.gov.br/robots.txt",
+      "status": 200,
+      "lido_em": "2026-11-04T13:09:45.580Z",
+      "crawl_delay_s": null,
+      "intervalo_usado_s": 2,
+      "disallow": [],
+      "observacao": "o endereço devolve uma página HTML, não um robots.txt: nenhuma restrição declarada"
+    }
+  },
+  "execucao": {
+    "requisicoes": 34,
+    "falhas": [
+      "Lei 2026 p.2: HTTP 504 em https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=2&ano=2026&qtd_por_pagina=100&page=2",
+      "Lei 2026 p.6: HTTP 504 em https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=2&ano=2026&qtd_por_pagina=100&page=6",
+      "Lei 2026 p.12 (50): HTTP 504 em https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=2&ano=2026&qtd_por_pagina=50&page=12",
+      "Decreto 2026 p.1: HTTP 502 em https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=3&ano=2026&qtd_por_pagina=100&page=1",
+      "Decreto 2026 p.1 (50): HTTP 502 em https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=3&ano=2026&qtd_por_pagina=50&page=1",
+      "Emenda Constitucional 2026 p.1: HTTP 502 em https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=13&ano=2026&qtd_por_pagina=100&page=1",
+      "Emenda Constitucional 2026 p.1 (50): HTTP 502 em https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=13&ano=2026&qtd_por_pagina=50&page=1",
+      "vetos 2026 p.1: HTTP 502 em https://legisla.casacivil.go.gov.br/api/v1/pesquisa/mensagens_veto?ano=2026&qtd_por_pagina=100&page=1",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=2&ano=2026&qtd_por_pagina=100&page=2: HTTP 504",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=2&ano=2026&qtd_por_pagina=100&page=2: HTTP 504",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=2&ano=2026&qtd_por_pagina=100&page=2: HTTP 504",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=2&ano=2026&qtd_por_pagina=50&page=4: HTTP 504",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=2&ano=2026&qtd_por_pagina=100&page=6: HTTP 504",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=2&ano=2026&qtd_por_pagina=100&page=6: HTTP 504",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=2&ano=2026&qtd_por_pagina=100&page=6: HTTP 504",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=2&ano=2026&qtd_por_pagina=50&page=12: HTTP 504",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=2&ano=2026&qtd_por_pagina=50&page=12: HTTP 504",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=2&ano=2026&qtd_por_pagina=50&page=12: HTTP 504",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=3&ano=2026&qtd_por_pagina=100&page=1: HTTP 502",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=3&ano=2026&qtd_por_pagina=100&page=1: HTTP 502",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=3&ano=2026&qtd_por_pagina=100&page=1: HTTP 502",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=3&ano=2026&qtd_por_pagina=50&page=1: HTTP 502",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=3&ano=2026&qtd_por_pagina=50&page=1: HTTP 502",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=3&ano=2026&qtd_por_pagina=50&page=1: HTTP 502",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=13&ano=2026&qtd_por_pagina=100&page=1: HTTP 502",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=13&ano=2026&qtd_por_pagina=100&page=1: HTTP 502",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=13&ano=2026&qtd_por_pagina=100&page=1: HTTP 502",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=13&ano=2026&qtd_por_pagina=50&page=1: HTTP 502",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=13&ano=2026&qtd_por_pagina=50&page=1: HTTP 502",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/legislacoes?tipo_legislacao=13&ano=2026&qtd_por_pagina=50&page=1: HTTP 502",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/mensagens_veto?ano=2026&qtd_por_pagina=100&page=1: HTTP 502",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/mensagens_veto?ano=2026&qtd_por_pagina=100&page=1: HTTP 502",
+      "GET https://legisla.casacivil.go.gov.br/api/v1/pesquisa/mensagens_veto?ano=2026&qtd_por_pagina=100&page=1: HTTP 502"
+    ]
+  },
+  "contagens": {
+    "normas_por_ano": {
+      "2026": 708
+    },
+    "na_fonte": {
+      "2026|Lei Complementar": 4,
+      "2026|Lei": 573,
+      "2026|Decreto": 148,
+      "2026|Emenda Constitucional": 0,
+      "2026|Vetos": 54
+    },
+    "vetos_com_razoes": 54,
+    "vetos_sem_razoes": 0,
+    "razoes_lidas_nesta_execucao": 0
+  },
+  "observacoes": [
+    "Fonte: API JSON aberta usada pelo próprio site da Casa Civil de Goiás (sem documentação pública; o formato pode mudar). O host não publica robots.txt (devolve a página do sistema); intervalo mínimo de 2 s.",
+    "Assembleia Legislativa (ALEGO): não acessada. O sistema ALEGO Digital proíbe a coleta automática no robots.txt (\"Disallow: /\"). Deputados, projetos e votações: \"Informação não disponível em fonte oficial\" até haver acesso autorizado ou resposta ao pedido pela LAI (docs/pesquisa/pedidos-lai/go.md).",
+    "Leis: a autoria é a registrada pela Casa Civil (\"Governador do Estado de Goiás\" ou o nome dos deputados). O link leva à edição do Diário Oficial informada pela Casa Civil; quando ela ainda não informou o link, leva à página da norma no site da Casa Civil.",
+    "Vetos: a Casa Civil publica a mensagem de veto à Assembleia com as razões em texto integral; a data é a da mensagem (a data de publicação no Diário Oficial não vem na API)."
+  ]
+}

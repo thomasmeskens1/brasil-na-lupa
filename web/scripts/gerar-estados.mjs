@@ -382,6 +382,8 @@ function processar(uf) {
     votacoes: resumos.map((r) => Object.fromEntries(Object.entries(r).filter(([k]) => !k.startsWith("_")))),
     votos_por_deputado: votosPor,
     ligacoes_icms: ligacoes,
+    // Assembleia sem coleta (ex.: GO, robots.txt proíbe): motivo e fonte gravados pelo coletor em meta.json.
+    assembleia_indisponivel: metaRaiz?.assembleia_indisponivel ?? null,
   };
   gravar(path.join(saida, `${uf}.json`), indice);
   if (uf === "sp") legadoSp(indice, path.join(pub, "normas.json"));
@@ -396,6 +398,7 @@ function processar(uf) {
       comissoes: resumos.length - plen.length,
       projetos: projetos.length,
       normas: normas.length,
+      assembleia_indisponivel: !!metaRaiz?.assembleia_indisponivel,
     },
     texto: `${uf}: ${lstDep.length} deputados, ${resumos.length} votações (${plen.length} em Plenário), ${projetos.length} projetos, ${normas.length} normas${uf === "sp" ? `, ${Object.keys(ligacoes).length} decisões do ICMS ligadas` : ""}; votacoes.json ${kbV} KB, projetos.json ${kbP} KB, normas.json ${kbN} KB`,
   };

@@ -3,6 +3,7 @@ import { Figurinha } from "@/components/marca/Figurinhas";
 import { Secao } from "@/components/Secao";
 import { ListaFontes } from "@/features/congresso/componentes/Basicos";
 import { Migalhas, TermosRecolhidos } from "@/features/executivo/componentes/Migalhas";
+import { PaginaAssembleiaIndisponivel } from "@/features/estados/componentes/AssembleiaIndisponivel";
 import { BuscaVotacoes } from "@/features/estados/componentes/BuscaVotacoes";
 import { contextoCasa } from "@/features/estados/contexto";
 import { paramsUfsComDados, votacoesPlenario } from "@/features/estados/dados";
@@ -28,6 +29,7 @@ export async function generateMetadata({ params }: PageProps<"/estados/[uf]/vota
 export default async function VotacoesEstadoPage({ params }: PageProps<"/estados/[uf]/votacoes">) {
   const { uf } = await params;
   const { u, ind } = exigirUf(uf);
+  if (ind.assembleia_indisponivel) return <PaginaAssembleiaIndisponivel u={u} aviso={ind.assembleia_indisponivel} titulo="Votações" />;
   const plen = votacoesPlenario(u.uf);
   const anos = [...new Set(ind.votacoes.map((v) => v.data?.slice(0, 4)).filter((a): a is string => !!a))].sort();
   const t = termosDoEstado(u);

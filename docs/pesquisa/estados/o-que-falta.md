@@ -21,7 +21,7 @@ Situação em **03/11/2026**. O site já acompanha SP, AM, PI, PB, RO, RN, ES, R
 | **AP** | Falta coletor | Página HTML | Página HTML (eLegis) | Resultado na ata em texto; sem voto nominal | Leis no eLegis; decretos no Diário Oficial (JSON) | Raspador do eLegis e do Diário Oficial | médio |
 | **CE** | Falta coletor | Página HTML | Página HTML (sistema antigo) | 60 votações nominais em PDF (2023–2026) | Diário Oficial em PDF | Raspador de projetos; leitor dos PDFs de votação com conferência | médio a alto |
 | **DF** | Coletor pronto (API do PLe) | Sim (sem partido) | Sim | Só nas atas (PDF); a API não traz | Sim, leis e decretos com publicação no Diário Oficial | Ligar no workflow; votos dependem da LAI já redigida | baixo + depende de terceiros |
-| **GO** | Bloqueado no Legislativo | Página HTML | **Bloqueado** (robots.txt proíbe tudo) | Bloqueado | API aberta da Casa Civil, com razões de veto | Coletor de normas e vetos (fácil); Legislativo depende da LAI já redigida | baixo + depende de terceiros |
+| **GO** | No ar só com o governador (coletor da Casa Civil, no workflow) | Não coletado (Assembleia não acessada) | **Bloqueado** (robots.txt proíbe tudo) | Bloqueado | Sim: leis, decretos e vetos com as razões (API da Casa Civil) | Legislativo depende da LAI já redigida | depende de terceiros |
 | **MA** | Coletor pronto (API do ALEMALEGIS) | Sim (42, com partido) | Sim, com situação e andamento | Votação simbólica; a API não publica votos (rota vazia) | Leis, leis complementares e resoluções: sim. Decretos: só no Diário Oficial | Coletor do Diário Oficial para decretos; votos só se a Assembleia passar a registrá-los | baixo + médio |
 | **MS** | Parcial, com barreira | Nos relatórios de votação | **Bloqueado** (CAPTCHA) | Publicado como imagem dentro do PDF do Diário | Diário Oficial em PDF e Governadoria | OCR com conferência humana; LAI já redigida pede os dados abertos | alto + depende de terceiros |
 | **MT** | Parcial, com barreira | Página HTML | Só página por página (robots.txt proíbe as listas); API exige credencial | Não publicado em formato aberto | Diário Oficial (IOMAT) com busca em JSON | Coletor de normas; credencial da API pedida na LAI já redigida | médio + depende de terceiros |
@@ -71,9 +71,10 @@ Situação em **03/11/2026**. O site já acompanha SP, AM, PI, PB, RO, RN, ES, R
 
 ### Goiás (GO)
 - **O que a fonte tem:** o sistema legislativo da Assembleia (ALEGO Digital) tem `robots.txt` com `Disallow: /`, ou seja, **proíbe toda coleta automática**. O governo tem uma API aberta da Casa Civil com leis, decretos e mensagens de veto com as razões, e o Diário Oficial tem busca em JSON.
+- **Feito nesta rodada:** coletor novo (`scripts/coleta/estados/go/`) para a API da Casa Civil, já no workflow diário. Coleta as leis, leis complementares, decretos numerados e emendas constitucionais do ano e as mensagens de veto com as razões em texto integral. A Assembleia não é acessada. Coleta real gravada em `dados/estados/go/` (ver `meta.json` → `contagens`). A página `/estados/go` mostra os atos do governador; deputados, projetos e votações aparecem como "Em breve", com o motivo (robots.txt) e o pedido pela LAI.
 - **O que falta:**
-  1. Coletor de leis, decretos e vetos pela API da Casa Civil. Esforço baixo. Daria ao site os atos do governador de Goiás, mesmo sem a Assembleia.
-  2. Projetos e votações da Assembleia: só com autorização ou dados abertos. Pedido pela LAI já redigido em `docs/pesquisa/pedidos-lai/go.md`. Depende de terceiros.
+  1. Projetos e votações da Assembleia: só com autorização ou dados abertos. Pedido pela LAI já redigido em `docs/pesquisa/pedidos-lai/go.md`. Depende de terceiros.
+  2. Data de publicação dos vetos no Diário Oficial: a API da Casa Civil não informa; hoje aparece a data da mensagem. Esforço médio (busca no Diário Oficial).
 
 ### Maranhão (MA)
 - **O que a fonte tem:** o sistema novo da Assembleia (ALEMALEGIS) tem uma API pública em JSON, sem documentação, com deputados, projetos, andamento e normas. As votações são simbólicas e não há voto estruturado (a rota de votos existe, mas está vazia).

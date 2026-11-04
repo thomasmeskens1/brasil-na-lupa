@@ -7,6 +7,7 @@ import { Secao } from "@/components/Secao";
 import { ListaFontes } from "@/features/congresso/componentes/Basicos";
 import { Migalhas, TermosRecolhidos } from "@/features/executivo/componentes/Migalhas";
 import { dadoNorma } from "@/features/estados/apresentacao";
+import { AvisoAssembleia } from "@/features/estados/componentes/AssembleiaIndisponivel";
 import { contextoGoverno, nomeDiario } from "@/features/estados/contexto";
 import { getIndiceEstado, votacoesPlenario } from "@/features/estados/dados";
 import { formatarData, nomeProposicao, termosDoEstado } from "@/features/estados/rotulos";
@@ -72,11 +73,14 @@ export default async function EstadoPage({ params }: PageProps<"/estados/[uf]">)
   const t = termosDoEstado(u);
   const casa = caminhoCasa(u);
   const gov = contextoGoverno(u);
+  // Assembleia sem coleta (ex.: GO): os atalhos dela ficam como "Em breve", com o motivo logo abaixo.
+  const semCasa = ind.assembleia_indisponivel ?? null;
   const atalhos = [
-    { href: `${base}/votacoes`, titulo: "Votações", n: ind.votacoes.length, texto: `${plen.length} em Plenário e ${nComissoes} em comissões, com o voto de cada um quando a votação é nominal.` },
-    { href: `${base}/deputados`, titulo: u.membros[0].toUpperCase() + u.membros.slice(1), n: ind.deputados.length, texto: "Partido, link oficial e o voto de cada um nas votações nominais." },
-    { href: `${base}/projetos`, titulo: "Projetos", n: ind.projetos.total, texto: "Proposições apresentadas na Assembleia, com autoria e última tramitação." },
+    { href: `${base}/votacoes`, titulo: "Votações", n: ind.votacoes.length, fora: !!semCasa, texto: `${plen.length} em Plenário e ${nComissoes} em comissões, com o voto de cada um quando a votação é nominal.` },
+    { href: `${base}/deputados`, titulo: u.membros[0].toUpperCase() + u.membros.slice(1), n: ind.deputados.length, fora: !!semCasa, texto: "Partido, link oficial e o voto de cada um nas votações nominais." },
+    { href: `${base}/projetos`, titulo: "Projetos", n: ind.projetos.total, fora: !!semCasa, texto: "Proposições apresentadas na Assembleia, com autoria e última tramitação." },
     {
+      fora: false,
       href: `${base}/leis-e-decretos`,
       titulo: "Leis, decretos e vetos",
       n: ind.normas.total,
@@ -93,8 +97,10 @@ export default async function EstadoPage({ params }: PageProps<"/estados/[uf]">)
         <Favoritar tipo="uf" valor={u.uf.toUpperCase()} nome="este estado" className="mt-2" />
         <p>
           As leis são votadas pela {u.casa.nome} e depois sancionadas ou vetadas pelo governador, que também decide sozinho,
-          por decreto, sem votação. Aqui estão as votações com o voto de cada deputado quando registrado oficialmente, os
-          projetos e os atos do governador.
+          por decreto, sem votação.{" "}
+          {semCasa
+            ? "Por enquanto, aqui estão só os atos do governador: as leis sancionadas, os decretos e os vetos, com as razões publicadas."
+            : "Aqui estão as votações com o voto de cada deputado quando registrado oficialmente, os projetos e os atos do governador."}
         </p>
         <p className="meta">
           Dados coletados em {formatarData(ind.atualizado_em)}
@@ -106,6 +112,13 @@ export default async function EstadoPage({ params }: PageProps<"/estados/[uf]">)
         <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {atalhos.map((a) => (
             <li key={a.href}>
+              {a.fora ? (
+                <a href="#assembleia-indisponivel" className="bloco-secao flex-col gap-1">
+                  <span className="font-titulo text-lg font-extrabold text-white-puro">{a.titulo}</span>
+                  <span className="pilula-numero">Em breve</span>
+                  <span className="block text-sm text-[var(--cor-texto-apoio)]">Ainda não disponível: veja o motivo abaixo.</span>
+                </a>
+              ) : (
               <Link href={a.href} className="bloco-secao flex-col gap-1">
                 <span className="font-titulo text-lg font-extrabold text-white-puro">{a.titulo}</span>
                 <span className="pilula-numero">
@@ -113,12 +126,14 @@ export default async function EstadoPage({ params }: PageProps<"/estados/[uf]">)
                 </span>
                 <span className="block text-sm text-[var(--cor-texto-apoio)]">{a.texto}</span>
               </Link>
+              )}
             </li>
           ))}
         </ul>
       </nav>
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+        {semCasa ? <AvisoAssembleia u={u} aviso={semCasa} /> : (
         <Secao id="plenario-recentes" titulo="Votações mais recentes em Plenário">
           {plen.length ? (
             <ul className="space-y-3">
@@ -155,6 +170,7 @@ export default async function EstadoPage({ params }: PageProps<"/estados/[uf]">)
             </Link>
           </p>
         </Secao>
+        )}
         <Secao id="atos-recentes" titulo="Atos mais recentes do governador">
           {ind.normas.recentes.length ? (
             <ul className="space-y-3">
@@ -190,7 +206,13 @@ export default async function EstadoPage({ params }: PageProps<"/estados/[uf]">)
       <TermosRecolhidos termos={[t.casa, t.nominal, t.simbolica, t.comissao, t.veto, t.decreto, t.doe]} />
 
       <Secao id="fontes" titulo="Fontes">
-        <ListaFontes fontes={[...(ind.lista_fonte ? [ind.lista_fonte] : []), ...ind.fontes_votacoes, ...ind.fontes_projetos.slice(0, 1), ...ind.normas.fontes]} />
+        <ListaFontes
+          fontes={
+            semCasa
+              ? [...ind.normas.fontes, ...(semCasa.fonte?.url ? [semCasa.fonte] : [])]
+              : [...(ind.lista_fonte ? [ind.lista_fonte] : []), ...ind.fontes_votacoes, ...ind.fontes_projetos.slice(0, 1), ...ind.normas.fontes]
+          }
+        />
       </Secao>
     </div>
   );
