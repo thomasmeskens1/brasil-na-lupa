@@ -88,6 +88,14 @@ export interface IndiceEstado {
   /** Deputado → [índice da votação, voto(s) como na fonte, nº de registros, letra impressa antes do nome]. */
   votos_por_deputado: Record<string, [number, string, number, string | null][]>;
   ligacoes_icms: Record<string, LigacaoEstado[]>;
+  /** Assembleia sem coleta (ex.: GO): motivo oficial e fonte, gravados pelo coletor. Ausente = Assembleia coletada. */
+  assembleia_indisponivel?: AssembleiaIndisponivel | null;
+}
+
+export interface AssembleiaIndisponivel {
+  motivo: string;
+  pedido_lai?: string | null;
+  fonte?: FonteEstado | null;
 }
 
 /** Contagens de uma UF presente (content/_gerado/estados/indice.json). */
@@ -101,6 +109,7 @@ export interface ResumoUf {
   comissoes: number;
   projetos: number;
   normas: number;
+  assembleia_indisponivel?: boolean;
 }
 
 export interface VotoEstado {

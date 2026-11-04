@@ -3,6 +3,7 @@ import { Figurinha } from "@/components/marca/Figurinhas";
 import { Secao } from "@/components/Secao";
 import { ListaFontes } from "@/features/congresso/componentes/Basicos";
 import { Migalhas, TermosRecolhidos } from "@/features/executivo/componentes/Migalhas";
+import { PaginaAssembleiaIndisponivel } from "@/features/estados/componentes/AssembleiaIndisponivel";
 import { BuscaProjetos } from "@/features/estados/componentes/BuscaProjetos";
 import { contextoCasa } from "@/features/estados/contexto";
 import { paramsUfsComDados } from "@/features/estados/dados";
@@ -28,6 +29,7 @@ export async function generateMetadata({ params }: PageProps<"/estados/[uf]/proj
 export default async function ProjetosEstadoPage({ params }: PageProps<"/estados/[uf]/projetos">) {
   const { uf } = await params;
   const { u, ind } = exigirUf(uf);
+  if (ind.assembleia_indisponivel) return <PaginaAssembleiaIndisponivel u={u} aviso={ind.assembleia_indisponivel} titulo="Projetos" />;
   const ctx = contextoCasa(u, ind);
   const t = termosDoEstado(u);
   const contagem = Object.entries(ind.projetos.por_sigla)
