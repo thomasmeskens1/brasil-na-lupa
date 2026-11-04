@@ -14,7 +14,7 @@ import {
   registrarConsentimento,
   revogarConsentimento,
   revogarConsentimentoReacoes,
-  salvarPreferencias,
+  salvarEstadosTemas,
   trocarEmail,
 } from "./dados";
 import { obterSql } from "./db";
@@ -99,9 +99,10 @@ export async function salvarPreferenciasAcao(_: EstadoFormulario, form: FormData
   if (!usuario) redirect("/entrar");
   const r = validarPreferencias(form);
   if (!r.ok) return { erro: r.erro };
-  const gravou = await salvarPreferencias(obterSql(), usuario.id, VERSAO_POLITICA, r.valor);
+  // Só estados, temas, municípios e alertas: políticos e propostas são removidos um a um na lista.
+  const gravou = await salvarEstadosTemas(obterSql(), usuario.id, VERSAO_POLITICA, r.valor);
   if (!gravou) redirect("/minha-conta");
-  return { ok: `Preferências salvas às ${new Date().toLocaleTimeString("pt-BR", { timeZone: "America/Sao_Paulo" })}.` };
+  return { ok: `Escolhas salvas às ${new Date().toLocaleTimeString("pt-BR", { timeZone: "America/Sao_Paulo", hour: "2-digit", minute: "2-digit" })}.` };
 }
 
 export async function revogarConsentimentoAcao(): Promise<void> {

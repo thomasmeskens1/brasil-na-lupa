@@ -68,7 +68,8 @@ export function BotaoFavoritar({ tipo, valor, nome }: { tipo: TipoFavorito; valo
         <span key={pulso} className={pulso ? estilos.pulso : undefined}>
           <Estrela cheia={favorito} className={estilos.icone} />
         </span>
-        <span aria-hidden="true">{favorito ? "Favorito" : "Favoritar"}</span>
+        {/* Texto fixo (o nome acessível começa pelo texto visível, WCAG 2.5.3); a estrela cheia e aria-pressed mostram o estado. */}
+        <span aria-hidden="true">Favoritar</span>
       </button>
       <span aria-live="polite" className="sr-only">
         {anuncio}

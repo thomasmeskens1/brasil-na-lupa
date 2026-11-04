@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
-import { aoPedirEntrada } from "@/features/conta/cliente";
+import { aoPedirEntrada, ID_MODAL_ENTRAR } from "@/features/conta/cliente";
 import { FormEntrar } from "@/features/conta/componentes/FormEntrar";
 
 /**
@@ -60,6 +60,7 @@ export function ModalEntrar() {
 
   return (
     <dialog
+      id={ID_MODAL_ENTRAR}
       ref={dialogo}
       aria-modal="true"
       aria-labelledby="modal-entrar-titulo"

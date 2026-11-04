@@ -8,7 +8,7 @@
  *   │ Convênio ICMS 127/2026                    │  subtítulo = nome oficial por extenso
  *   │ [Antes R$ 1,57 → Depois R$ 1,64 por litro]│  dado-chave
  *   │ Quem decidiu: CONFAZ (…) · decisão de …   │
- *   │ [Oficial] CONFAZ ↗ · coletado em 02/11    │  selo de fonte + [Compartilhar]
+ *   │ [Oficial] CONFAZ ↗ · coletado em 02/11    │  selo de fonte + curtir/não curtir + [Compartilhar]
  *   └───────────────────────────────────────────┘
  *
  * O cartão inteiro é clicável (o link fica no título e se estende pelo cartão); a fonte e o
@@ -32,7 +32,9 @@
  */
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { idPropostaDoHref } from "@/features/conta/ids";
 import { BotaoCompartilhar } from "../compartilhar/BotaoCompartilhar";
+import { BotoesReacao } from "../reacoes/BotoesReacao";
 import { montarTextoCompartilhar } from "../compartilhar/texto";
 import { BlocoDadoChave } from "./DadoChave";
 import { EtiquetaDecisao, SeloCaminho, SeloFonte } from "./Selos";
@@ -78,6 +80,11 @@ export interface CartaoDecisaoProps {
   etiqueta?: string | null;
   /** Caracteres do título antes do corte em fim de palavra com "ler tudo" (padrão 160; 0 = sem corte). */
   limiteTitulo?: number;
+  /**
+   * Id da proposta para Curtir / Não curtir (features/conta/ids.ts). Sem a prop: derivado do
+   * `href` (votações, medidas provisórias, vetos e ICMS); null: sem os botões de reação.
+   */
+  proposta?: string | null;
 }
 
 export function CartaoDecisao({
@@ -101,7 +108,9 @@ export function CartaoDecisao({
   className = "",
   etiqueta,
   limiteTitulo = 160,
+  proposta,
 }: CartaoDecisaoProps) {
+  const idReacao = proposta === undefined ? idPropostaDoHref(href) : proposta;
   const t = resolverTitulo({ tituloOficial, simples, subtituloOficial, tema });
   const H = `h${nivelTitulo}` as "h2" | "h3" | "h4";
   const quem = quemDecidiu ?? rotuloCaminho(caminho, true);
@@ -153,22 +162,27 @@ export function CartaoDecisao({
         <span className="font-semibold">Quem decidiu:</span> {quem}
         {forma ? <span className="text-[var(--cor-secundaria)]"> · {FORMAS[forma]}</span> : null}
       </p>
-      {fonte || compartilhar ? (
+      {fonte || compartilhar || idReacao ? (
         <div className="cartao-decisao__acima mt-2 flex flex-wrap items-center justify-between gap-2">
           {fonte ? <SeloFonte fonte={fonte} compacto /> : <span />}
-          {compartilhar ? (
-            <BotaoCompartilhar
-              titulo={t.titulo}
-              url={href}
-              texto={montarTextoCompartilhar({
-                titulo: t.titulo,
-                linhaOficial: t.subtitulo,
-                forma,
-                data,
-                dado,
-                fonte,
-              })}
-            />
+          {idReacao || compartilhar ? (
+            <div className="ml-auto flex flex-wrap items-center justify-end gap-2">
+              {idReacao ? <BotoesReacao proposta={idReacao} compacto /> : null}
+              {compartilhar ? (
+                <BotaoCompartilhar
+                  titulo={t.titulo}
+                  url={href}
+                  texto={montarTextoCompartilhar({
+                    titulo: t.titulo,
+                    linhaOficial: t.subtitulo,
+                    forma,
+                    data,
+                    dado,
+                    fonte,
+                  })}
+                />
+              ) : null}
+            </div>
           ) : null}
         </div>
       ) : null}
