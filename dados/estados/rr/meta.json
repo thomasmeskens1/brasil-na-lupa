@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-04T00:57:32.729Z",
-  "ultima_execucao": "2026-11-04T00:27:01.101Z",
+  "atualizado_em": "2026-11-04T21:06:17.866Z",
+  "ultima_execucao": "2026-11-04T20:49:59.677Z",
   "uf": "RR",
   "casa": "alerr",
   "orgao": "Assembleia Legislativa do Estado de Roraima (ALE-RR)",
   "host": "sapl.al.rr.leg.br",
   "periodo": {
     "inicio": "2023-01-01",
-    "fim": "2026-11-03"
+    "fim": "2026-11-04"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,54 @@
       "titulo": "SAPL — Assembleia Legislativa do Estado de Roraima (ALE-RR) (API REST pública)",
       "url": "https://sapl.al.rr.leg.br/api/",
       "orgao": "Assembleia Legislativa do Estado de Roraima (ALE-RR)",
-      "acessado_em": "2026-11-03"
+      "acessado_em": "2026-11-04"
     }
   ],
   "robots": {
     "sapl.al.rr.leg.br": {
-      "lido_em": "2026-11-04T00:27:01.101Z",
-      "status": 200,
-      "crawl_delay_s": 60,
+      "lido_em": "2026-11-04T20:49:59.677Z",
+      "status": 403,
+      "crawl_delay_s": null,
       "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
+      "disallow": []
     }
   },
   "execucao": {
-    "requisicoes": 31,
-    "falhas": []
+    "requisicoes": 17,
+    "falhas": [
+      "fluxo-ordemdia: HTTP 403 em /api/sessao/ordemdia/?o=-id&page=1&page_size=1000",
+      "fluxo-expedientemateria: HTTP 403 em /api/sessao/expedientemateria/?o=-id&page=1&page_size=1000",
+      "fluxo-sessaoplenaria: HTTP 403 em /api/sessao/sessaoplenaria/?o=-id&page=1&page_size=1000",
+      "fluxo-materialegislativa: HTTP 403 em /api/materia/materialegislativa/?o=-id&page=1&page_size=1000",
+      "fluxo-normajuridica: HTTP 403 em /api/norma/normajuridica/?o=-id&page=1&page_size=1000",
+      "fluxo-tramitacao: HTTP 403 em /api/materia/tramitacao/?o=-id&page=1&page_size=1000",
+      "pend-materia-19253: HTTP 403 em /api/materia/materialegislativa/19253/",
+      "pend-materia-19252: HTTP 403 em /api/materia/materialegislativa/19252/",
+      "pend-materia-19084: HTTP 403 em /api/materia/materialegislativa/19084/",
+      "pend-materia-19083: HTTP 403 em /api/materia/materialegislativa/19083/",
+      "pend-materia-17834: HTTP 403 em /api/materia/materialegislativa/17834/",
+      "pend-materia-17649: HTTP 403 em /api/materia/materialegislativa/17649/",
+      "pend-materia-17632: HTTP 403 em /api/materia/materialegislativa/17632/",
+      "pend-materia-18085: HTTP 403 em /api/materia/materialegislativa/18085/",
+      "rev-materialegislativa: HTTP 403 em /api/materia/materialegislativa/?o=-data_ultima_atualizacao&page=1&page_size=1000",
+      "rev-normajuridica: HTTP 403 em /api/norma/normajuridica/?o=-data_ultima_atualizacao&page=1&page_size=1000",
+      "/api/sessao/ordemdia/?o=-id&page=1&page_size=1000: HTTP 403",
+      "/api/sessao/expedientemateria/?o=-id&page=1&page_size=1000: HTTP 403",
+      "/api/sessao/sessaoplenaria/?o=-id&page=1&page_size=1000: HTTP 403",
+      "/api/materia/materialegislativa/?o=-id&page=1&page_size=1000: HTTP 403",
+      "/api/norma/normajuridica/?o=-id&page=1&page_size=1000: HTTP 403",
+      "/api/materia/tramitacao/?o=-id&page=1&page_size=1000: HTTP 403",
+      "/api/materia/materialegislativa/19253/: HTTP 403",
+      "/api/materia/materialegislativa/19252/: HTTP 403",
+      "/api/materia/materialegislativa/19084/: HTTP 403",
+      "/api/materia/materialegislativa/19083/: HTTP 403",
+      "/api/materia/materialegislativa/17834/: HTTP 403",
+      "/api/materia/materialegislativa/17649/: HTTP 403",
+      "/api/materia/materialegislativa/17632/: HTTP 403",
+      "/api/materia/materialegislativa/18085/: HTTP 403",
+      "/api/materia/materialegislativa/?o=-data_ultima_atualizacao&page=1&page_size=1000: HTTP 403",
+      "/api/norma/normajuridica/?o=-data_ultima_atualizacao&page=1&page_size=1000: HTTP 403"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -195,7 +225,7 @@
       "status_tramitacao": "2026-11-04T00:47:21.827Z",
       "autores": "2026-11-04T00:51:26.326Z"
     },
-    "ultima_requisicao": "2026-11-04T00:57:31.683Z",
+    "ultima_requisicao": "2026-11-04T21:06:15.679Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
