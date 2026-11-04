@@ -34,6 +34,7 @@ import { FichaTecnica, type ItemFicha } from "./FichaTecnica";
 import { EtiquetaDecisao, SeloCaminho, SeloFonte } from "./Selos";
 import { FORMAS, cortarEmPalavra, etiquetaDoDado, resolverTitulo, rotuloCaminho } from "./rotulos";
 import type { Caminho, DadoChave, FonteResumo, FormaDecisao, TituloSimples } from "./tipos";
+import { TextoComSiglas } from "@/components/glossario/TextoComSiglas";
 
 export interface CabecalhoDecisaoProps {
   tituloOficial: string;
@@ -121,11 +122,11 @@ export function CabecalhoDecisao({
               {/* Leitor de tela e leitura em voz alta recebem o título inteiro. */}
               <span aria-hidden="true">{titulo.curto}…</span>
               <span className="sr-only" data-ler>
-                {t.titulo}
+                <TextoComSiglas texto={t.titulo} />
               </span>
             </>
           ) : (
-            titulo.curto
+            <TextoComSiglas texto={titulo.curto} />
           )}
         </h1>
         {titulo.cortado ? (
@@ -133,10 +134,16 @@ export function CabecalhoDecisao({
             <summary className="lk inline-flex min-h-11 cursor-pointer items-center">
               ler tudo<span className="sr-only"> (título completo)</span>
             </summary>
-            <p className="mt-1 text-lg leading-relaxed text-foreground">{t.titulo}</p>
+            <p className="mt-1 text-lg leading-relaxed text-foreground">
+              <TextoComSiglas texto={t.titulo} />
+            </p>
           </details>
         ) : null}
-        {t.subtitulo ? <p className="mt-2 text-lg text-[var(--cor-secundaria)]">{t.subtitulo}</p> : null}
+        {t.subtitulo ? (
+          <p className="mt-2 text-lg text-[var(--cor-secundaria)]">
+            <TextoComSiglas texto={t.subtitulo} />
+          </p>
+        ) : null}
         {t.simples && t.origem ? (
           <p className="meta mt-1">
             Título em linguagem simples: {t.origem}
@@ -196,7 +203,7 @@ export function CabecalhoDecisao({
         <details className="rounded-md border border-borda bg-superficie">
           <summary className="pr-3">Texto oficial ({textoOficial.rotulo})</summary>
           <blockquote className="border-t border-borda px-3 pb-3 pt-2 leading-relaxed text-foreground">
-            {textoOficial.texto}
+            {typeof textoOficial.texto === "string" ? <TextoComSiglas texto={textoOficial.texto} /> : textoOficial.texto}
           </blockquote>
         </details>
       ) : null}

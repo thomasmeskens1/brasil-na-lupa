@@ -40,6 +40,7 @@ import { BlocoDadoChave } from "./DadoChave";
 import { EtiquetaDecisao, SeloCaminho, SeloFonte } from "./Selos";
 import { FORMAS, cortarEmPalavra, etiquetaDoDado, resolverTitulo, rotuloCaminho } from "./rotulos";
 import type { Caminho, DadoChave, FonteResumo, FormaDecisao, TituloSimples } from "./tipos";
+import { TextoComSiglas } from "@/components/glossario/TextoComSiglas";
 
 export interface CartaoDecisaoProps {
   /** Página de detalhe. */
@@ -134,11 +135,11 @@ export function CartaoDecisao({
             <>
               <span aria-hidden="true">{titulo.curto}…</span>
               <span className="sr-only" data-ler>
-                {t.titulo}
+                <TextoComSiglas texto={t.titulo} explicar={false} />
               </span>
             </>
           ) : (
-            titulo.curto
+            <TextoComSiglas texto={titulo.curto} explicar={false} />
           )}
         </Link>
       </H>
@@ -147,7 +148,9 @@ export function CartaoDecisao({
           <summary className="lk inline-flex min-h-11 cursor-pointer items-center">
             ler tudo<span className="sr-only"> (título completo)</span>
           </summary>
-          <p className="mt-1 leading-relaxed text-foreground">{t.titulo}</p>
+          <p className="mt-1 leading-relaxed text-foreground">
+            <TextoComSiglas texto={t.titulo} />
+          </p>
         </details>
       ) : null}
       {sub ? (
