@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Coletor SAPL 3 (Interlegis) das Assembleias Legislativas de AM, PI, PB e RO — genérico, parametrizado
+ * Coletor SAPL 3 (Interlegis) das Assembleias Legislativas de AM, PI, PB, RO, AC, AL, RR e TO — genérico, parametrizado
  * pelo host (hosts.mjs). Node 20+, sem dependências.
  *
  * USO

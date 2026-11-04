@@ -1,0 +1,73 @@
+{
+  "atualizado_em": "2026-11-04T00:46:06.085Z",
+  "ultima_execucao": "2026-11-04T00:42:29.682Z",
+  "uf": "DF",
+  "casa": "cldf",
+  "orgao": "Câmara Legislativa do Distrito Federal (CLDF)",
+  "periodo": {
+    "anos": [
+      2026
+    ],
+    "fim": "2026-11-03"
+  },
+  "modo": "incremental",
+  "fontes": [
+    {
+      "titulo": "API pública do Processo Legislativo Eletrônico (PLe) da CLDF",
+      "url": "https://ple.cl.df.gov.br/pleservico/api/public",
+      "orgao": "Câmara Legislativa do Distrito Federal (CLDF)",
+      "acessado_em": "2026-11-03"
+    },
+    {
+      "titulo": "Documentação da API (Portal de Dados Abertos da CLDF)",
+      "url": "https://dados.cl.df.gov.br/dataset/proposicoes",
+      "orgao": "Câmara Legislativa do Distrito Federal (CLDF)",
+      "acessado_em": "2026-11-03"
+    }
+  ],
+  "robots": {
+    "ple.cl.df.gov.br": {
+      "url": "https://ple.cl.df.gov.br/robots.txt",
+      "status": 200,
+      "lido_em": "2026-11-04T00:42:29.756Z",
+      "crawl_delay_s": null,
+      "intervalo_usado_s": 2,
+      "disallow": [],
+      "observacao": "o endereço devolve uma página HTML, não um robots.txt: nenhuma restrição declarada"
+    }
+  },
+  "execucao": {
+    "requisicoes": 98,
+    "falhas": [
+      "POST https://ple.cl.df.gov.br/pleservico/api/public/proposicao/filter?page=24&size=100&sort=dataLeitura,DESC: fetch failed",
+      "GET https://ple.cl.df.gov.br/pleservico/api/public/norma/41840: fetch failed",
+      "GET https://ple.cl.df.gov.br/pleservico/api/public/norma/41703: fetch failed",
+      "GET https://ple.cl.df.gov.br/pleservico/api/public/norma/41218: fetch failed",
+      "GET https://ple.cl.df.gov.br/pleservico/api/public/norma/41212: fetch failed"
+    ]
+  },
+  "contagens": {
+    "parlamentares": 24,
+    "proposicoes_por_ano": {
+      "2026": 3096
+    },
+    "proposicoes_na_fonte": {
+      "2026": 3097
+    },
+    "normas_por_ano": {
+      "2026": 1711
+    },
+    "normas_na_fonte": {
+      "2026": 1711
+    },
+    "normas_detalhadas_nesta_execucao": 40,
+    "normas_sem_detalhe": 1671
+  },
+  "observacoes": [
+    "Fonte: API pública documentada do PLe da CLDF (\"Autenticação: não requerida\"; \"Estrutura pode evoluir sem aviso prévio\"). O host não publica robots.txt (devolve a página do sistema); intervalo mínimo de 2 s. A API de dados do portal dados.cl.df.gov.br (/api/) é proibida pelo robots.txt e não é usada.",
+    "Votações: a API pública não traz votações nem votos. As votações da CLDF ficam nas atas das sessões (PDF); a maioria é simbólica. Voto individual: \"Informação não disponível em fonte oficial\" até haver registro nominal em formato aberto (pedido pela LAI em docs/pesquisa/pedidos-lai/df.md).",
+    "Proposições: todas as espécies do ano (projetos, indicações, requerimentos, moções…), com a etapa informada pela fonte. A data exibida é a de leitura em Plenário; a data de apresentação não vem na lista.",
+    "Deputados: autores do tipo PARLAMENTAR com situação ATIVO no cadastro do PLe; o partido não vem preenchido nessa fonte. E-mail só do domínio cl.df.gov.br. O histórico das proposições (com login e IP de servidores) não é gravado.",
+    "Normas: lista do ano na API de Normas; o detalhe (publicação no DODF e proposição de origem) é lido aos poucos, leis primeiro, no máximo DF_MAX_DETALHES por execução."
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "atualizado_em": "2026-11-04T00:44:25.406Z",
+  "ultima_execucao": "2026-11-04T00:42:29.682Z",
+  "uf": "PE",
+  "casa": "alepe",
+  "orgao": "Assembleia Legislativa do Estado de Pernambuco (ALEPE)",
+  "periodo": {
+    "anos": [
+      2026
+    ],
+    "fim": "2026-11-03"
+  },
+  "modo": "incremental",
+  "fontes": [
+    {
+      "titulo": "Dados Abertos da ALEPE — parlamentares e proposições (API pública)",
+      "url": "https://dadosabertos.alepe.pe.gov.br/api/v1/parlamentares/?formato=json",
+      "orgao": "Assembleia Legislativa do Estado de Pernambuco (ALEPE)",
+      "acessado_em": "2026-11-03"
+    },
+    {
+      "titulo": "Sistema de Legislação Estadual da ALEPE",
+      "url": "https://legis.alepe.pe.gov.br",
+      "orgao": "Assembleia Legislativa do Estado de Pernambuco (ALEPE)",
+      "acessado_em": "2026-11-03"
+    }
+  ],
+  "robots": {
+    "dadosabertos.alepe.pe.gov.br": {
+      "url": "https://dadosabertos.alepe.pe.gov.br/robots.txt",
+      "status": 404,
+      "lido_em": "2026-11-04T00:42:29.688Z",
+      "crawl_delay_s": null,
+      "intervalo_usado_s": 2,
+      "disallow": [],
+      "observacao": "sem robots.txt (HTTP 404): nenhuma restrição declarada (RFC 9309)"
+    },
+    "legis.alepe.pe.gov.br": {
+      "url": "https://legis.alepe.pe.gov.br/robots.txt",
+      "status": 404,
+      "lido_em": "2026-11-04T00:43:54.235Z",
+      "crawl_delay_s": null,
+      "intervalo_usado_s": 2,
+      "disallow": [],
+      "observacao": "sem robots.txt (HTTP 404): nenhuma restrição declarada (RFC 9309)"
+    }
+  },
+  "execucao": {
+    "requisicoes": 48,
+    "falhas": []
+  },
+  "contagens": {
+    "parlamentares": 49,
+    "proposicoes_por_ano": {
+      "2026": 650
+    },
+    "normas_por_ano": {
+      "2026": 1675
+    },
+    "votacoes_por_ano": {
+      "2026": 10
+    },
+    "detalhados_nesta_execucao": 40,
+    "sem_detalhe": 610
+  },
+  "observacoes": [
+    "Fonte: API pública de dados abertos da ALEPE (parlamentares em JSON; projetos em XML, endpoint público usado pelo site de proposições e não listado na documentação) e listas do sistema de legislação estadual da ALEPE (HTML). Nenhum dos hosts publica robots.txt (HTTP 404); intervalo mínimo de 2 s por host.",
+    "Proposições: só projetos (PLO, PLC, PEC, PR, LOA, LDO, PPA); indicações e requerimentos não são coletados. A sigla é a usada pela ALEPE para o tipo informado na fonte. O detalhe (histórico, resultado de cada discussão, autógrafo e número da lei) é lido aos poucos, no máximo PE_MAX_DETALHES por execução.",
+    "Votações: a fonte registra só o resultado de cada discussão em Plenário (ex.: \"APROVADA EM PRIMEIRA DISCUSSÃO\"), com a data. Não informa a forma da votação nem o voto de cada deputado: tipo null e voto individual \"Informação não disponível em fonte oficial\". Nada é deduzido de \"aprovada\".",
+    "Ligação projeto → lei: só quando o autógrafo do projeto cita o número da lei e o tipo bate (PLO → Lei, PLC → Lei Complementar, PEC → Emenda Constitucional).",
+    "Deputados: a API traz só nome e partido (sem identificador oficial, mandato ou foto); o identificador é derivado do nome. Autor externo passa pelo mascaramento de nomes de particulares (diretriz 12).",
+    "Normas: só as publicadas nos anos coletados (as listas de leis complementares e emendas constitucionais trazem todos os anos; as de leis e decretos, o ano corrente), com nome oficial, data de publicação no Diário Oficial e ementa; a data de assinatura vem do autógrafo do projeto quando houver ligação."
+  ]
+}
