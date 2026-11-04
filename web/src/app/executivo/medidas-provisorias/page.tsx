@@ -4,10 +4,10 @@ import { Termo } from "@/components/glossario";
 import { Secao } from "@/components/Secao";
 import { ListaFontes } from "@/features/congresso/componentes/Basicos";
 import { formatarData } from "@/features/congresso/rotulos";
-import { ListaCartoes } from "@/features/executivo/componentes/ListaCartoes";
+import { ListaFiltros } from "@/features/executivo/componentes/ListaFiltros";
 import { Migalhas, TermosRecolhidos } from "@/features/executivo/componentes/Migalhas";
 import { getIndiceExecutivo } from "@/features/executivo/dados";
-import { cartaoMpv, padraoMpv } from "@/features/executivo/listas";
+import { ATO_MPV, FACETAS_EXECUTIVO, itensExecutivo, numerosMpv } from "@/features/executivo/painel";
 import { TERMOS_EXECUTIVO } from "@/features/executivo/rotulos";
 import { Figurinha } from "@/components/marca/Figurinhas";
 
@@ -20,12 +20,11 @@ export const metadata: Metadata = metadadosCompartilhamento({
 
 export default function MedidasProvisoriasPage() {
   const ind = getIndiceExecutivo();
-  const itens = ind.mpvs.map(cartaoMpv);
   const termos = [TERMOS_EXECUTIVO.mpv, TERMOS_EXECUTIVO.exposicao, TERMOS_EXECUTIVO.plv, TERMOS_EXECUTIVO.perdaEficacia];
 
   return (
-    <div className="max-w-3xl space-y-8">
-      <header>
+    <div className="space-y-8">
+      <header className="max-w-3xl">
         <Migalhas itens={[{ href: "/executivo", rotulo: "Executivo" }]} />
         <Figurinha nome="caneta" className="heroi-figurinha figurinha-flutua" />
         <h1 className="mt-1 text-2xl font-bold text-foreground md:text-3xl">Medidas provisórias</h1>
@@ -39,19 +38,17 @@ export default function MedidasProvisoriasPage() {
         </p>
       </header>
 
-      <Secao id="lista" titulo="Lista de medidas provisórias">
-        <ListaCartoes
-          itens={itens}
-          padrao={padraoMpv(ind)}
-          filtros={[
-            { chave: "ano", rotulo: "Ano de edição", decrescente: true },
-            { chave: "situacao", rotulo: "Situação" },
-          ]}
-          busca={{ rotulo: "Buscar na ementa ou pelo número", dica: "Ex.: Pix, 1300" }}
-          rotulo={{ singular: "medida provisória", plural: "medidas provisórias" }}
-          vazio="Nenhuma medida provisória coletada."
-        />
-      </Secao>
+      <ListaFiltros
+        itens={itensExecutivo(ind, "mpv")}
+        numeros={[numerosMpv(ind)]}
+        facetas={FACETAS_EXECUTIVO.filter((f) => !["tipoVeto", "trechos"].includes(f.chave))}
+        fixos={{ ato: ATO_MPV }}
+        busca={{ rotulo: "Buscar na ementa ou pelo número", dica: "Ex.: Pix, 1300" }}
+        rotulo={{ singular: "medida provisória", plural: "medidas provisórias" }}
+        genero="f"
+        ordem="da mais recente para a mais antiga"
+        tituloLista="Lista de medidas provisórias"
+      />
 
       <TermosRecolhidos termos={termos} />
 

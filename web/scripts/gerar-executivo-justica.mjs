@@ -85,6 +85,48 @@ function tituloUtil(itens, id) {
   return aprovado(s) && s.origem !== "oficial" ? s.titulo.trim() : null;
 }
 
+/** Tema do dia a dia e etiqueta estruturada do arquivo de títulos (mesmas regras de etiquetaDe). */
+function temaEtiqueta(itens, id) {
+  const s = itens[id];
+  if (!s) return [null, null];
+  const e = typeof s.etiqueta === "string" ? s.etiqueta.trim() : "";
+  const okEtiqueta = e && e.length <= 60 && !(s.verificacao && s.verificacao.aprovado_pelo_verificador === false);
+  return [typeof s.tema === "string" && s.tema.trim() ? s.tema.trim() : null, okEtiqueta ? e : null];
+}
+
+/** Expressões literais do resultado ("por unanimidade", "por maioria") presentes no trecho oficial. */
+function expressoesResultado(trecho) {
+  const t = String(trecho ?? "");
+  const r = [];
+  if (/por\s+unanimidade/i.test(t)) r.push("Por unanimidade");
+  if (/por\s+maioria/i.test(t)) r.push("Por maioria");
+  return r;
+}
+
+/** Corta o texto oficial em fim de palavra (para o cartão; a página de detalhe tem o texto inteiro). */
+function cortar(texto, max) {
+  const t = String(texto ?? "").replace(/\s+/g, " ").trim();
+  if (!t) return null;
+  if (t.length <= max) return t;
+  return `${t.slice(0, max + 1).replace(/\s+\S*$/, "").replace(/[\s,;:.–—-]+$/, "")}…`;
+}
+
+/** Trecho literal do mérito (mesma escolha de resultadoMeritoStj em features/justica/apresentacao.ts). */
+function meritoStj(sessoes) {
+  const s = (sessoes ?? []).find((x) => x.etapa === "merito" && (x.resultado_trechos ?? []).length);
+  if (!s) return null;
+  return s.resultado_trechos.find((x) => /tese/i.test(x.trecho)) ?? s.resultado_trechos[0];
+}
+
+function contar(itens, f) {
+  const m = {};
+  for (const x of itens) {
+    const k = f(x);
+    if (k != null && k !== "") m[k] = (m[k] ?? 0) + 1;
+  }
+  return m;
+}
+
 function gravarTitulos(secao, ids) {
   const fonte = { executivo: titulosExecutivo, stj: titulosStj, stf: titulosStf }[secao];
   const itens = {};
@@ -224,6 +266,8 @@ function gerarStj() {
   for (const t of indice.itens) {
     const d = lerJson(path.join(base, "temas", `${t.numero}.json`));
     const url = t.url_oficial ?? null;
+    const merito = meritoStj(d?.julgamento?.sessoes);
+    const [tema, etiqueta] = temaEtiqueta(titulosStj, `stj-tema-${t.numero}`);
     linhas.push([
       String(t.numero),
       t.tipo_precedente ?? null,
@@ -237,6 +281,13 @@ function gerarStj() {
       t.datas?.julgamento ?? t.datas?.afetacao ?? null,
       url === modelo.replaceAll("{n}", String(t.numero)) ? 1 : url,
       tituloUtil(titulosStj, `stj-tema-${t.numero}`),
+      // Acrescentados para a lista com filtros (Justiça): tema do dia a dia, etiqueta, expressões
+      // literais do resultado do mérito, o trecho oficial (cortado) e qual data é a da posição 9.
+      tema,
+      etiqueta,
+      merito ? expressoesResultado(merito.trecho) : [],
+      merito ? cortar(merito.trecho, 200) : null,
+      t.datas?.julgamento ? "j" : t.datas?.afetacao ? "a" : null,
     ]);
   }
   linhas.sort((a, b) => Number(b[0]) - Number(a[0]));
@@ -259,6 +310,12 @@ function gerarStj() {
     com_pagina: comPagina,
     itens: indice.itens.filter((t) => setPagina.has(String(t.numero))),
     situacoes: [...new Set(indice.itens.map((t) => t.situacao).filter(Boolean))].sort(),
+    // Contagens oficiais do índice inteiro (painel de números da Justiça).
+    contagens: {
+      por_situacao: contar(indice.itens, (t) => t.situacao),
+      por_tipo: contar(indice.itens, (t) => t.tipo_precedente),
+      com_tese: indice.itens.filter((t) => t.tem_tese).length,
+    },
     orgaos: [...new Set(indice.itens.map((t) => t.orgao).filter(Boolean))].sort(),
     tipos: [...new Set(indice.itens.map((t) => t.tipo_precedente).filter(Boolean))].sort(),
   });
@@ -289,9 +346,29 @@ function gerarStf() {
     .filter((t) => (t.colecoes ?? []).length || t.julgamento_ref || julgPorTema[String(t.numero)])
     .map((t) => String(t.numero));
   const setPagina = new Set(comPagina);
+  const porArquivoJ = new Map(julgamentos.map((j) => [j.arquivo, j.d]));
+  /** Trecho literal do mérito na certidão (mesma escolha de resultadoCertidao em apresentacao.ts). */
+  const trechoCertidao = (d) => {
+    const cert = (d?.votacoes ?? []).filter((v) => v.origem !== "plenario-virtual" && v.trecho);
+    return (cert.find((v) => /m[ée]rito/i.test(String(v.parte ?? ""))) ?? cert[cert.length - 1])?.trecho ?? null;
+  };
+  /** Julgamento mais recente ligado ao tema (mesma regra de julgamentosDoTemaStf + cartaoTemaStf). */
+  const julgamentoDoTema = (t) => {
+    const refs = new Set(julgPorTema[String(t.numero)] ?? []);
+    for (const r of [t.julgamento_ref].flat()) if (typeof r === "string") refs.add(r.replace(/^.*\//, "").replace(/\.json$/, ""));
+    return [...refs]
+      .map((r) => porArquivoJ.get(r))
+      .filter(Boolean)
+      .sort((a, b) => String(b.data_julgamento ?? "").localeCompare(String(a.data_julgamento ?? "")))[0] ?? null;
+  };
   if (itens.length) {
     const linhas = itens.map((t) => {
       const d = lerJson(path.join(base, "repercussao-geral", `${t.numero}.json`));
+      const julg = julgamentoDoTema(t);
+      const trecho = julg ? trechoCertidao(julg) : null;
+      const [tema, etiqueta] = temaEtiqueta(titulosStf, `stf-tema-${t.numero}`);
+      const dataTese = d?.data_tese ?? t.data_tese ?? null;
+      const dataRg = d?.situacao?.data_repercussao_geral ?? null;
       return [
         String(t.numero),
         t.titulo ?? d?.titulo ?? null,
@@ -305,6 +382,15 @@ function gerarStf() {
         d?.url ?? null,
         d?.descricao ?? null,
         tituloUtil(titulosStf, `stf-tema-${t.numero}`),
+        // Acrescentados para a lista com filtros (Justiça): tema do dia a dia, etiqueta, expressões
+        // literais do resultado na certidão do julgamento ligado, o trecho (cortado), a data e qual é.
+        tema,
+        etiqueta,
+        expressoesResultado(trecho),
+        cortar(trecho, 200),
+        julg?.data_julgamento ?? dataTese ?? dataRg,
+        julg?.data_julgamento ? "j" : dataTese ? "t" : dataRg ? "r" : null,
+        julg?.orgao ?? null,
       ];
     });
     linhas.sort((a, b) => Number(b[0]) - Number(a[0]));
@@ -327,6 +413,8 @@ function gerarStf() {
         orgao: d.orgao ?? null,
         acessado_em: d.atualizado_em ?? null,
         url: d.certidao_fonte?.url ?? d.processo?.url ?? null,
+        tema_dia_a_dia: temaEtiqueta(titulosStf, j.id)[0],
+        etiqueta: temaEtiqueta(titulosStf, j.id)[1],
       };
     });
   gravarTitulos("stf", [...comPagina.map((n) => `stf-tema-${n}`), ...listaJulgamentos.map((j) => j.id)]);
@@ -338,6 +426,12 @@ function gerarStf() {
     itens: itens.filter((t) => setPagina.has(String(t.numero))),
     julgamentos_por_tema: julgPorTema,
     julgamentos_total: julgamentos.length,
+    // Contagens oficiais do índice inteiro (painel de números da Justiça).
+    contagens: {
+      por_situacao: contar(itens, (t) => t.situacao),
+      por_andamento: contar(itens, (t) => t.andamento),
+      com_tese: itens.filter((t) => t.tem_tese).length,
+    },
     // Lista dos julgamentos (todos têm página de detalhe: são poucos e vêm das coleções acompanhadas).
     julgamentos: listaJulgamentos,
     fontes: (lerJson(path.join(base, "meta.json"))?.fontes ?? []).filter((f) => f?.url && !String(f.url).includes("{")),

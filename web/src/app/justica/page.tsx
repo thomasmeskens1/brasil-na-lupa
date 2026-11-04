@@ -1,76 +1,71 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Secao } from "@/components/Secao";
-import { TermosExplicados } from "@/features/congresso/componentes/Basicos";
+import { tituloFonteLegivel } from "@/features/comum/texto";
+import { ListaFontes } from "@/features/congresso/componentes/Basicos";
 import { formatarData } from "@/features/congresso/rotulos";
-import { CartaoDecisao } from "@/components/decisao";
-import { cartaoTemaStj } from "@/features/justica/cartoes";
-import { getIndiceStf, getIndiceStj, temasPorColecaoStj } from "@/features/justica/dados";
-import { TERMOS_JUSTICA } from "@/features/justica/rotulos";
+import { TiposExplicados } from "@/features/executivo/componentes/TiposExplicados";
+import type { GrupoNumeros } from "@/features/executivo/componentes/ListaFiltros";
+import { ListaJustica } from "@/features/justica/componentes/ListaJustica";
+import { getIndiceStf, getIndiceStj } from "@/features/justica/dados";
+import { TIPOS_COMUNS, TIPOS_STF, TIPOS_STJ, itensJulgamentosStf, numerosStf, numerosStj } from "@/features/justica/painel";
 import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = {
   title: "Justiça: STJ e STF",
   description:
-    "Julgamentos do Superior Tribunal de Justiça e do Supremo Tribunal Federal: tese firmada, relator, órgão julgador, resultado e votos conferidos, com fonte oficial.",
+    "Temas e julgamentos do Superior Tribunal de Justiça e do Supremo Tribunal Federal em números oficiais e numa lista com filtros por relator, resultado e tema, com fonte oficial.",
 };
 
 export default function JusticaPage() {
   const stj = getIndiceStj();
   const stf = getIndiceStf();
-  const icms = temasPorColecaoStj().find((c) => c.colecao === "icms")?.temas ?? [];
-  const termos = [TERMOS_JUSTICA.repetitivo, TERMOS_JUSTICA.repercussao, TERMOS_JUSTICA.tese, TERMOS_JUSTICA.relator, TERMOS_JUSTICA.vencido, TERMOS_JUSTICA.plenarioVirtual];
+  const numeros = [numerosStj(stj), numerosStf(stf)].filter((g): g is GrupoNumeros => !!g);
+  const fontes = [...(stj.fonte ? [stj.fonte] : []), ...(stf.fonte ? [stf.fonte] : [])].map(tituloFonteLegivel);
 
   return (
     <div className="space-y-10">
-      <header className="max-w-3xl">
+      <header className="entrada max-w-3xl">
         <Figurinha nome="balanca" className="heroi-figurinha figurinha-flutua" />
-        <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">Justiça: STJ e STF</h1>
+        <h1 className="text-2xl font-bold text-foreground md:text-3xl">Justiça: STJ e STF</h1>
         <p className="mt-3 leading-relaxed text-gray-800">
-          O Superior Tribunal de Justiça (STJ) uniformiza a interpretação das leis federais, e o Supremo Tribunal Federal
-          (STF) é o guardião da Constituição. Quando os dois julgam uma questão repetida em muitos processos, fixam
-          uma tese que os demais tribunais seguem. Aqui estão essas teses, quem relatou, qual órgão julgou, o resultado como
-          escrito na decisão e, quando conferidos contra o texto oficial, os votos de cada ministro.
+          O Superior Tribunal de Justiça (STJ) uniformiza a interpretação das leis federais, e o Supremo Tribunal Federal (STF)
+          guarda a Constituição. Quando julgam uma questão repetida em muitos processos, fixam uma tese que os demais
+          tribunais seguem. Os números abaixo são contagens dos dados oficiais; toque em um deles para ver os temas na lista.
         </p>
         <p className="mt-2 text-gray-800">
-          Votos de ministros só aparecem quando foram conferidos nome a nome contra o texto oficial da decisão ou quando o
-          próprio tribunal os publica de forma estruturada. Nos demais casos, o site mostra apenas o resultado literal.
+          Votos de ministros só aparecem na página de cada julgamento, quando conferidos nome a nome contra o texto oficial ou
+          publicados pelo próprio tribunal. O site não avalia nem compara ministros.
+        </p>
+        <p className="meta mt-3">
+          STJ: dados coletados em {formatarData(stj.atualizado_em)} · STF: dados coletados em {formatarData(stf.atualizado_em)}.
+        </p>
+        <p className="mt-2 flex flex-wrap gap-x-4">
+          <Link href="/justica/stj" className="lk inline-flex min-h-11 items-center">
+            Só o STJ
+          </Link>
+          <Link href="/justica/stf" className="lk inline-flex min-h-11 items-center">
+            Só o STF (com as súmulas vinculantes)
+          </Link>
         </p>
       </header>
 
-      <nav aria-label="Tribunais" className="grid grid-cols-1 gap-4 md:grid-cols-2">
-        <Link href="/justica/stj" className="cartao block hover:bg-superficie">
-          <span className="block text-base font-semibold text-[var(--cor-link)] underline underline-offset-2">Superior Tribunal de Justiça (STJ)</span>
-          <span className="mt-1 block text-gray-800">
-            {stj.total ? `${stj.total} temas repetitivos e de relevância; dados coletados em ${formatarData(stj.atualizado_em)}.` : "Dados ainda não coletados."}
-          </span>
-        </Link>
-        <Link href="/justica/stf" className="cartao block hover:bg-superficie">
-          <span className="block text-base font-semibold text-[var(--cor-link)] underline underline-offset-2">Supremo Tribunal Federal (STF)</span>
-          <span className="mt-1 block text-gray-800">
-            {stf.total ? `${stf.total} temas de repercussão geral; dados coletados em ${formatarData(stf.atualizado_em)}.` : "Em construção: dados em coleta."}
-          </span>
-          {!stf.total ? <span className="selo mt-2">Em construção</span> : null}
-        </Link>
-      </nav>
+      {!stj.total && !stf.total ? (
+        <p className="lacuna text-sm">Os dados do STJ e do STF ainda não foram coletados.</p>
+      ) : (
+        <ListaJustica
+          stj={{ ativo: !!stj.total, coletadoEm: stj.atualizado_em }}
+          stf={{ ativo: !!stf.total, coletadoEm: stf.atualizado_em }}
+          julgamentos={itensJulgamentosStf(stf)}
+          numeros={numeros}
+          tituloLista="Temas e julgamentos"
+        >
+          <TiposExplicados id="tipos" titulo="O que é cada tipo de julgamento" itens={[...TIPOS_STJ, ...TIPOS_STF, ...TIPOS_COMUNS]} />
+        </ListaJustica>
+      )}
 
-      {icms.length ? (
-        <Secao id="icms" titulo="Em destaque: o que o STJ decidiu sobre o ICMS" descricao="Temas do STJ em que a questão ou a tese menciona o Imposto sobre Circulação de Mercadorias e Serviços (ICMS).">
-          <ul className="grid grid-cols-1 gap-3 lg:grid-cols-2">
-            {icms.slice(0, 4).map((t) => (
-              <CartaoDecisao key={t.numero} as="li" {...cartaoTemaStj(t)} />
-            ))}
-          </ul>
-          <p className="mt-3">
-            <Link href="/justica/stj#colecao-icms" className="lk inline-flex min-h-11 items-center">
-              Ver todos os temas do ICMS no STJ
-            </Link>
-          </p>
-        </Secao>
-      ) : null}
-
-      <Secao id="termos" titulo="Termos explicados">
-        <TermosExplicados termos={termos} />
+      <Secao id="fontes" titulo="Fontes">
+        <ListaFontes fontes={fontes} />
       </Secao>
     </div>
   );

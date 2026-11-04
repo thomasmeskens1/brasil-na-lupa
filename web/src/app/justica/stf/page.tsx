@@ -1,38 +1,32 @@
 import type { Metadata } from "next";
 import { Secao } from "@/components/Secao";
-import { ListaFontes, TermosExplicados } from "@/features/congresso/componentes/Basicos";
+import { ListaFontes } from "@/features/congresso/componentes/Basicos";
 import { formatarData } from "@/features/congresso/rotulos";
-import { BuscaTemasStf } from "@/features/justica/componentes/BuscasTribunais";
-import { CartaoDecisao } from "@/components/decisao";
 import { Migalhas } from "@/features/executivo/componentes/Migalhas";
-import { cartaoTemaStf } from "@/features/justica/cartoes";
-import { ListaJulgamentosStf } from "@/features/justica/componentes/ListaJulgamentosStf";
-import { getIndiceStf, getSumulasVinculantes, getTemaStf } from "@/features/justica/dados";
-import { COLECOES, TERMOS_JUSTICA } from "@/features/justica/rotulos";
-import type { TemaStf } from "@/features/justica/tipos";
+import { TiposExplicados } from "@/features/executivo/componentes/TiposExplicados";
+import { ListaJustica } from "@/features/justica/componentes/ListaJustica";
+import { getIndiceStf, getSumulasVinculantes } from "@/features/justica/dados";
+import { TIPOS_COMUNS, TIPOS_STF, itensJulgamentosStf, numerosStf } from "@/features/justica/painel";
+import { TERMOS_JUSTICA } from "@/features/justica/rotulos";
 import { Figurinha } from "@/components/marca/Figurinhas";
 
 export const metadata: Metadata = {
   title: "Supremo Tribunal Federal (STF)",
   description:
-    "Temas de repercussão geral do Supremo Tribunal Federal: a questão, a tese firmada, o relator e o resultado dos julgamentos, com fonte oficial.",
+    "Temas de repercussão geral e julgamentos do Supremo Tribunal Federal em números oficiais e numa lista com filtros: a tese firmada, o relator e o resultado, com fonte oficial.",
 };
 
 export default function StfPage() {
   const ind = getIndiceStf();
-  const destaques = ind.com_pagina.map(getTemaStf).filter((t): t is TemaStf => !!t);
-  const colecoes = [...new Set([...destaques.flatMap((t) => t.colecoes ?? []), ...ind.julgamentos.flatMap((j) => j.colecoes ?? [])])];
   const sumulas = getSumulasVinculantes();
-  const termos = [
-    TERMOS_JUSTICA.repercussao,
-    TERMOS_JUSTICA.controleConcentrado, TERMOS_JUSTICA.tese, TERMOS_JUSTICA.plenarioVirtual, TERMOS_JUSTICA.sumulaVinculante, TERMOS_JUSTICA.certidao, TERMOS_JUSTICA.relator];
+  const numeros = numerosStf(ind);
 
   return (
     <div className="space-y-10">
-      <header className="max-w-3xl">
+      <header className="entrada max-w-3xl">
         <Migalhas itens={[{ href: "/justica", rotulo: "Justiça" }]} />
         <Figurinha nome="balanca" className="heroi-figurinha figurinha-flutua" />
-        <h1 className="mt-1 text-2xl font-bold text-gray-900 md:text-3xl">Supremo Tribunal Federal (STF)</h1>
+        <h1 className="mt-1 text-2xl font-bold text-foreground md:text-3xl">Supremo Tribunal Federal (STF)</h1>
         <p className="mt-3 leading-relaxed text-gray-800">
           O STF é o guardião da Constituição. Nos temas de repercussão geral, julga uma questão constitucional que se repete
           em muitos processos e fixa uma tese que vale para casos iguais. Nos julgamentos do Plenário Virtual, o tribunal
@@ -51,32 +45,16 @@ export default function StfPage() {
         </div>
       ) : null}
 
-      {colecoes.map((c) => (
-        <Secao key={c} id={`colecao-${c}`} titulo={`Destaque: ${COLECOES[c]?.titulo ?? c}`} descricao={COLECOES[c]?.explicacao}>
-          <ul className="grid grid-cols-1 gap-3 lg:grid-cols-2">
-            {destaques
-              .filter((t) => (t.colecoes ?? []).includes(c))
-              .map((t) => (
-                <CartaoDecisao key={String(t.numero)} as="li" {...cartaoTemaStf(t)} />
-              ))}
-          </ul>
-        </Secao>
-      ))}
-
-      {ind.julgamentos.length ? (
-        <Secao
-          id="julgamentos"
-          titulo="Julgamentos acompanhados"
-          descricao="Julgamentos das coleções acompanhadas (como o ICMS), com o resultado escrito na certidão. Nos julgamentos do Plenário Virtual, a página de cada um traz o voto registrado por ministro."
-        >
-          <ListaJulgamentosStf itens={ind.julgamentos} />
-        </Secao>
-      ) : null}
-
       {ind.total ? (
-        <Secao id="buscar" titulo="Buscar temas de repercussão geral" descricao="A busca roda no seu navegador: o que você digita não é enviado a nenhum servidor.">
-          <BuscaTemasStf colecoes={Object.fromEntries(colecoes.map((c) => [c, COLECOES[c]?.titulo ?? c]))} coletadoEm={ind.atualizado_em} />
-        </Secao>
+        <ListaJustica
+          stj={{ ativo: false, coletadoEm: null }}
+          stf={{ ativo: true, coletadoEm: ind.atualizado_em }}
+          julgamentos={itensJulgamentosStf(ind)}
+          numeros={numeros ? [numeros] : []}
+          tituloLista="Temas e julgamentos do STF"
+        >
+          <TiposExplicados id="tipos" titulo="O que é cada tipo de julgamento" itens={[...TIPOS_STF, ...TIPOS_COMUNS]} />
+        </ListaJustica>
       ) : null}
 
       {sumulas.itens.length ? (
@@ -112,10 +90,6 @@ export default function StfPage() {
           ) : null}
         </Secao>
       ) : null}
-
-      <Secao id="termos" titulo="Termos explicados">
-        <TermosExplicados termos={termos} />
-      </Secao>
 
       {ind.fonte?.url || ind.fontes.length ? (
         <Secao id="fontes" titulo="Fontes">
