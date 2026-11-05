@@ -84,7 +84,11 @@ export default async function EstadoPage({ params }: PageProps<"/estados/[uf]">)
       href: `${base}/leis-e-decretos`,
       titulo: "Leis, decretos e vetos",
       n: ind.normas.total,
-      texto: `${nTipo("Lei") + nTipo("Lei Complementar")} leis, ${nTipo("Decreto")} decretos e ${ind.normas.vetos} vetos publicados no ${nomeDiario(u)}.`,
+      // Sem vetos coletados, não afirma "0 vetos" (a fonte pode não publicá-los nesse registro).
+      texto:
+        ind.normas.vetos > 0
+          ? `${nTipo("Lei") + nTipo("Lei Complementar")} leis, ${nTipo("Decreto")} decretos e ${ind.normas.vetos} vetos publicados no ${nomeDiario(u)}.`
+          : `${nTipo("Lei") + nTipo("Lei Complementar")} leis e ${nTipo("Decreto")} decretos publicados no ${nomeDiario(u)}.`,
     },
   ];
 

@@ -9,7 +9,7 @@ import { NAO_DISPONIVEL, ORDEM_VOTOS, compararVotos, formatarData, lacunaLegivel
 import { baseCidade, getCidade, getIndiceMunicipios, getVotacaoMun, ouMarcador } from "@/features/municipios/dados";
 import { TERMOS_MUNICIPIOS } from "@/features/municipios/termos";
 import type { VotacaoMun } from "@/features/municipios/tipos";
-import { ouPrimeiro, recentes } from "@/features/comum/prerender";
+import { maisRecentes, ouPrimeiro } from "@/features/comum/prerender";
 
 /** No build, só as votações dos últimos 60 dias (features/comum/prerender); as demais, na primeira visita. */
 export function generateStaticParams() {
@@ -17,7 +17,8 @@ export function generateStaticParams() {
     .presentes.filter((m) => m.tem.votacoes)
     .flatMap((m) => (getCidade(m.uf, m.slug)?.camara?.votacoes ?? []).map((v) => ({ uf: m.uf, cidade: m.slug, id: v.id, data: v.data })));
   return ouMarcador(
-    ouPrimeiro(recentes(lista, (v) => v.data), lista).map(({ uf, cidade, id }) => ({ uf, cidade, id })),
+    // Votações municipais crescem a cada coleta: no build só as 20 mais recentes; as demais na primeira visita.
+    ouPrimeiro(maisRecentes(lista, (v) => v.data, 20), lista).map(({ uf, cidade, id }) => ({ uf, cidade, id })),
     { uf: "xx", cidade: "sem-dados", id: "sem-dados" },
   );
 }

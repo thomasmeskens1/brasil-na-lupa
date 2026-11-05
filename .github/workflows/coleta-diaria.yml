@@ -163,11 +163,19 @@ jobs:
         run: |
           node scripts/coleta/estados/pa/testes.mjs
           node scripts/coleta/estados/pa/coletar.mjs
+      - name: Assembleia de Santa Catarina (portal da ALESC, e-Legis e Legislação SC)
+        continue-on-error: true
+        timeout-minutes: 20
+        env:
+          COLETA_ORCAMENTO_MIN: "15"
+        run: |
+          node scripts/coleta/estados/sc/testes.mjs
+          node scripts/coleta/estados/sc/coletar.mjs
       - name: Registrar mudanças
         run: |
           git config user.name "coleta-diaria"
           git config user.email "coleta-diaria@users.noreply.github.com"
-          git add dados/camara dados/senado dados/agenda dados/stj dados/stf dados/executivo dados/alesp dados/governo-sp dados/atibaia dados/tribunais-contas dados/eleitos dados/titulos dados/estados/se dados/estados/ba dados/estados/rn dados/estados/es dados/estados/pe dados/estados/df dados/estados/ma dados/participacao dados/autoria dados/fotos dados/estados/go dados/estados/pr dados/estados/pa
+          git add dados/camara dados/senado dados/agenda dados/stj dados/stf dados/executivo dados/alesp dados/governo-sp dados/atibaia dados/tribunais-contas dados/eleitos dados/titulos dados/estados/se dados/estados/ba dados/estados/rn dados/estados/es dados/estados/pe dados/estados/df dados/estados/ma dados/participacao dados/autoria dados/fotos dados/estados/go dados/estados/pr dados/estados/pa dados/estados/sc
           # meta.json muda a cada execução; só publica se algum dado de fato mudou.
           if git diff --cached --name-only | grep -qv '/meta\.json$'; then
             git commit -m "Coleta diária: dados oficiais ($(date -u +%F))"

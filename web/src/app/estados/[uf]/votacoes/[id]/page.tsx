@@ -15,16 +15,17 @@ import type { VotacaoPlenario } from "@/features/estados/tipos";
 import { baseUf, caminhoCasa, getUf, type UfInfo } from "@/features/estados/ufs";
 import { AcoesProposta } from "@/components/reacoes";
 import { idVotacaoEstado } from "@/features/conta/ids";
-import { ouPrimeiro, recentes } from "@/features/comum/prerender";
+import { maisRecentes, ouPrimeiro } from "@/features/comum/prerender";
 
 /**
  * Só as votações de Plenário têm página; as de comissões ficam na lista de votações. No build,
  * só as dos últimos 60 dias (features/comum/prerender); as demais, na primeira visita.
  */
 export function generateStaticParams() {
-  const todas = ufsComDados().flatMap((uf) => votacoesPlenario(uf).map((v) => ({ uf, id: v.id, data: v.data })));
+  // Por UF, só as 10 votações de Plenário mais recentes no build; as demais na primeira visita.
+  const todas = ufsComDados().flatMap((uf) => maisRecentes(votacoesPlenario(uf).map((v) => ({ uf, id: v.id, data: v.data })), (v) => v.data, 10));
   return ouMarcador(
-    ouPrimeiro(recentes(todas, (v) => v.data), todas).map(({ uf, id }) => ({ uf, id })),
+    ouPrimeiro(todas, todas).map(({ uf, id }) => ({ uf, id })),
     { uf: "sem-dados", id: "sem-dados" },
   );
 }

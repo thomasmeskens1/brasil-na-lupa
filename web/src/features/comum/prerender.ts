@@ -36,3 +36,14 @@ export function recentes<T>(itens: T[], data: (item: T) => string | null | undef
 export function ouPrimeiro<T>(recorte: T[], todos: T[]): T[] {
   return recorte.length ? recorte : todos.slice(0, 1);
 }
+
+/**
+ * Os `n` itens mais recentes (por data, decrescente), para listas que crescem a cada coleta.
+ * Limita o tamanho de cada deploy: o restante é gerado na primeira visita.
+ */
+export function maisRecentes<T>(itens: T[], data: (item: T) => string | null | undefined, n: number): T[] {
+  return itens
+    .filter((i) => !!data(i))
+    .sort((a, b) => (data(b) ?? "").localeCompare(data(a) ?? ""))
+    .slice(0, n);
+}
