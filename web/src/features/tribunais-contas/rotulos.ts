@@ -1,3 +1,4 @@
+import { getUf } from "@/features/estados/ufs";
 import type { OrgaoTc, ParecerTce } from "./tipos";
 
 export const NAO_DISPONIVEL = "Informação não disponível em fonte oficial";
@@ -39,7 +40,8 @@ export function rotuloSituacao(o: Pick<OrgaoTc, "situacao_coleta">): string {
 
 /** "de SP", "do DF": usado nos títulos das contas do Governador. */
 export function deUf(uf: string | null): string {
-  return uf ? `de ${uf}` : "";
+  // "do Paraná", "de São Paulo": nome do estado por extenso (a sigla só se a UF não for conhecida).
+  return uf ? (getUf(uf.toLowerCase())?.de ?? `de ${uf}`) : "";
 }
 
 /**
@@ -62,7 +64,8 @@ export function resumoParecerTce(p: ParecerTce): string | null {
   // "favorável", "pela aprovação" seguem "parecer"; um substantivo ("aprovação", "rejeição") pede "de".
   const de = /^(aprova|desaprova|rejei|reprova)/.test(c) ? "de " : "";
   const ressalvas = p.com_ressalvas && !c.includes("ressalva") ? " com ressalvas" : "";
-  return `parecer ${de}${c}${ressalvas}`;
+  // Conclusão que já começa por "parecer prévio ..." (TCE-PR) não repete a palavra.
+  return /^parecer\b/.test(c) ? `${c}${ressalvas}` : `parecer ${de}${c}${ressalvas}`;
 }
 
 export interface TermoTc {
