@@ -1,6 +1,6 @@
 # O que falta para acompanhar cada estado
 
-Situação em **03/11/2026**. O site já acompanha SP, AM, PI, PB, RO, RN, ES, RS, MG, SE e BA. Este arquivo trata das 16 unidades da Federação que ainda aparecem como "Em breve". Ele resume a pesquisa de 02/11/2026 (arquivos `<uf>.md` e `resumo-*.md` desta pasta) e o que foi feito nesta rodada.
+Situação em **04/11/2026** (PA e SC entraram no ar nesta data). O site já acompanha SP, AM, PI, PB, RO, RN, ES, RS, MG, SE e BA. Este arquivo trata das 16 unidades da Federação que ainda aparecem como "Em breve". Ele resume a pesquisa de 02/11/2026 (arquivos `<uf>.md` e `resumo-*.md` desta pasta) e o que foi feito nesta rodada.
 
 **Como ler.** "Acompanhar" quer dizer mostrar, com fonte oficial e data de coleta, quatro coisas: os deputados, os projetos com o andamento, o resultado das votações (e o voto de cada deputado quando houver votação nominal registrada) e as leis e decretos. O que a fonte oficial não publica aparece como "Informação não disponível em fonte oficial". Nada é deduzido.
 
@@ -25,12 +25,12 @@ Situação em **03/11/2026**. O site já acompanha SP, AM, PI, PB, RO, RN, ES, R
 | **MA** | Coletor pronto (API do ALEMALEGIS) | Sim (42, com partido) | Sim, com situação e andamento | Votação simbólica; a API não publica votos (rota vazia) | Leis, leis complementares e resoluções: sim. Decretos: só no Diário Oficial | Coletor do Diário Oficial para decretos; votos só se a Assembleia passar a registrá-los | baixo + médio |
 | **MS** | Parcial, com barreira | Nos relatórios de votação | **Bloqueado** (CAPTCHA) | Publicado como imagem dentro do PDF do Diário | Diário Oficial em PDF e Governadoria | OCR com conferência humana; LAI já redigida pede os dados abertos | alto + depende de terceiros |
 | **MT** | Parcial, com barreira | Página HTML | Só página por página (robots.txt proíbe as listas); API exige credencial | Não publicado em formato aberto | Diário Oficial (IOMAT) com busca em JSON | Coletor de normas; credencial da API pedida na LAI já redigida | médio + depende de terceiros |
-| **PA** | Falta coletor | Página HTML | Página HTML (formulário) | Voto nominal em HTML (só em parte das matérias) | API aberta do Banco de Leis | Raspador das votações e coletor da API de leis | médio |
+| **PA** | **No ar desde 04/11/2026** (coletor `scripts/coleta/estados/pa/`, no workflow diário) | Página HTML | Página HTML (formulário) | Voto nominal em HTML (só em parte das matérias) | API aberta do Banco de Leis | Raspador das votações e coletor da API de leis | médio |
 | **PE** | Coletor pronto (dados abertos da ALEPE) | Sim (só nome e partido) | Sim, com resultado de cada discussão e número da lei | Resultado: sim. Voto de cada deputado: não publicado | Sim, leis e decretos do Executivo | Ligar no workflow; votos nominais (raros) só em ata | baixo + alto (votos) |
 | **PR** | Coletor pronto (API da ALEP) | Sim (nome e partido, página HTML) | Sim, com resultado de cada turno e lei gerada | Resultado: sim. Voto de cada deputado: **bloqueado** (robots.txt e CAPTCHA) | Leis, LCs, resoluções, decretos legislativos e ECs: sim. Decretos do governador: só no Diário Oficial | Votos dependem da LAI já redigida; coletor de decretos do Diário Oficial | depende de terceiros + médio |
 | **RJ** | Difícil | Página HTML | Sistema antigo (Lotus Notes) | Só o placar nas notas taquigráficas | Leis: sistema antigo. Decretos: PDF com acesso dificultado | Raspador do sistema antigo; votos e decretos pela LAI já redigida | alto + depende de terceiros |
 | **RR** | Coletor pronto (SAPL) | Sim | Sim | Nenhum voto lançado no SAPL; resultado só na ata digitalizada | Leis: sim. Decretos: só no Diário Oficial | Ligar no workflow; atas por curadoria | baixo + alto (votações) |
-| **SC** | Falta coletor | Página HTML | Página HTML (e-Legis) | Voto nominal publicado em HTML ("extrato de votação"), sem partido | Sistema de leis da ALESC (leis e decretos) | Raspador do e-Legis e do sistema de leis | médio |
+| **SC** | **No ar desde 04/11/2026** (coletor `scripts/coleta/estados/sc/`, no workflow diário) | Página HTML | Página HTML (e-Legis) | Voto nominal publicado em HTML ("extrato de votação"), sem partido | Sistema de leis da ALESC (leis e decretos) | Raspador do e-Legis e do sistema de leis | médio |
 | **TO** | Coletor pronto (SAPL) | Sim (sem partido no SAPL) | Sim | Sem sessões no SAPL desde 12/05/2026; nenhum voto | Leis: sim (até jul/2026). Decretos: só no Diário Oficial | Ligar no workflow; Diário da Assembleia por curadoria | baixo + alto (votações) |
 
 ## Estado por estado
