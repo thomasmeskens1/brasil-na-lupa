@@ -77,10 +77,14 @@ export function LogoSvg({ prefixo = "bnl" }: { prefixo?: string }) {
         <path fill="#ccff00" filter={`url(#${id("brilho")})`} d="M45,45 L85,85 C92,92 104,92 111,85 C118,78 118,66 111,59 L71,19 Z" />
         <circle cx="0" cy="0" r={RAIO_LUPA} fill="#1a1a1d" stroke="#ccff00" strokeWidth="14" filter={`url(#${id("brilho")})`} />
         <circle cx="0" cy="0" r={RAIO_LUPA - 10} fill="#121214" />
+        {/* Contorno do Brasil (litoral e fronteiras simplificados), centrado na lente. */}
         <path
+          id={id("mapa")}
           fill="#ccff00"
-          transform="translate(-30 -34) scale(0.62)"
-          d="M37 8 L52 5 L63 12 L74 9 L84 18 L96 22 L98 32 L92 41 L84 46 L80 58 L70 66 L64 78 L56 92 L50 88 L52 76 L45 70 L44 60 L36 55 L32 46 L22 44 L14 38 L12 28 L20 20 L30 18 Z"
+          stroke="#ccff00"
+          strokeWidth="2.5"
+          strokeLinejoin="round"
+          d="M-13.0 -42.9 L-12.1 -41.1 L-8.2 -35.6 L-3.7 -35.6 L-1.1 -36.7 L3.1 -36.3 L6.0 -41.1 L7.3 -40.0 L9.5 -35.4 L8.8 -33.2 L11.7 -31.0 L14.1 -30.1 L17.9 -29.2 L21.6 -25.9 L27.1 -25.2 L31.8 -25.0 L34.8 -23.3 L37.7 -20.8 L41.7 -20.2 L43.0 -15.8 L42.6 -12.5 L41.0 -10.0 L38.4 -7.6 L34.8 -2.8 L33.7 1.2 L34.0 6.1 L32.2 11.6 L30.9 13.3 L29.3 16.4 L27.1 19.3 L22.7 19.5 L17.6 21.5 L14.1 24.1 L12.6 26.4 L12.8 29.4 L11.9 31.6 L9.0 35.6 L6.2 39.1 L2.0 42.9 L1.8 40.5 L-2.6 36.7 L-7.3 35.2 L-3.7 30.8 L0.4 28.6 L1.3 25.9 L-0.7 25.0 L0.0 21.5 L-2.9 18.4 L-7.9 17.3 L-8.6 13.1 L-7.1 8.3 L-9.0 4.5 L-13.0 4.3 L-13.2 -1.0 L-18.1 -2.5 L-23.6 -5.4 L-24.5 -9.8 L-29.1 -8.5 L-31.5 -6.9 L-35.9 -7.2 L-35.9 -10.5 L-39.5 -10.7 L-43.0 -15.1 L-41.0 -20.0 L-34.6 -22.2 L-33.3 -28.8 L-34.4 -33.8 L-28.2 -34.1 L-26.5 -33.2 L-24.7 -33.0 L-21.4 -34.7 L-20.1 -36.7 L-21.4 -39.8 L-18.5 -40.2 L-14.6 -41.3 Z"
         />
         <g clipPath={`url(#${id("lente")})`}>
           <rect id={id("reflexo-faixa")} x="-140" y="-140" width="70" height="280" fill={`url(#${id("reflexo")})`} transform="rotate(25)" />
