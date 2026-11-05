@@ -54,7 +54,7 @@ export function AberturaMarca() {
     let quadro = 0;
     let inicio = 0;
     let pularPara = -1;
-    let destinoX = 480;
+    let destinoX = 495;
     const destinoY = 72;
     const escalaLupa = 1.05;
     const inicioX = -110;
@@ -132,11 +132,11 @@ export function AberturaMarca() {
       }
     };
 
-    // Encaixe calculado pela largura real de "BRASIL" (lupa colada ao texto).
+    // Encaixe calculado pela largura real de "BRASIL" (lupa logo após o texto, sem encostar no "A").
     const comecar = () => {
       try {
         const b = q<SVGTextElement>("#bnl-brasil")!.getBBox();
-        destinoX = b.x + b.width + (RAIO_LUPA + 7) * escalaLupa - 12;
+        destinoX = b.x + b.width + (RAIO_LUPA + 7) * escalaLupa + 3;
       } catch {
         /* usa o valor padrão */
       }
