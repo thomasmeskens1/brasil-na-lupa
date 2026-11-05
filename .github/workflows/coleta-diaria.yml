@@ -23,7 +23,8 @@ concurrency:
 jobs:
   coletar:
     runs-on: ubuntu-latest
-    timeout-minutes: 100
+    # Cada etapa lenta tem limite próprio (timeout-minutes): se estourar, as outras seguem e o registro roda.
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -107,6 +108,8 @@ jobs:
           restore-keys: titulos-
       - name: Títulos em linguagem simples (com verificador)
         continue-on-error: true
+        # Grava só no fim (arquivo temporário) e guarda cache por consulta: interrompido, retoma no dia seguinte.
+        timeout-minutes: 30
         run: |
           node scripts/coleta/titulos/gerar.mjs
           node scripts/coleta/titulos/verificar.mjs
@@ -119,6 +122,7 @@ jobs:
           node scripts/coleta/estados/agape/coletar.mjs
       - name: Assembleias do Rio Grande do Norte e do Espírito Santo
         continue-on-error: true
+        timeout-minutes: 25
         # O ES lê os boletins em PDF com o pdfplumber do ambiente da ALESP (preparado acima).
         env:
           COLETA_ORCAMENTO_MIN: "20"
@@ -153,6 +157,7 @@ jobs:
           node scripts/coleta/estados/pr/coletar.mjs
       - name: Assembleia do Pará (portal da ALEPA e API do Banco de Leis)
         continue-on-error: true
+        timeout-minutes: 20
         env:
           COLETA_ORCAMENTO_MIN: "15"
         run: |
