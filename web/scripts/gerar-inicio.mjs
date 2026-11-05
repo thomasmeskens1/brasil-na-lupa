@@ -258,10 +258,10 @@ function main() {
   const agenda = gerarAgenda();
   if (agenda) gravar(path.join(saida, "agenda.json"), agenda);
 
+  // Depois dos representantes: a busca usa a lista de municípios que eles gravam.
+  const rep = gerarRepresentantes();
   const busca = indiceBusca(content, webDir);
   const tamBusca = gravar(path.join(pubBusca, "busca.json"), busca);
-
-  const rep = gerarRepresentantes();
   console.log(
     `[gerar-inicio] decisões de ${dec.periodo.inicio} a ${dec.periodo.fim}: ${dec.itens.length}; ` +
       `agenda: ${agenda ? agenda.sessoes.length : 0} sessões; busca.json ${Math.round(tamBusca / 1024)} KB (${busca.i.length} itens); ` +

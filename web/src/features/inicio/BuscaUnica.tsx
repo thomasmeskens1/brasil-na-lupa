@@ -22,13 +22,18 @@ interface Pronto {
 }
 
 const POR_GRUPO = 5;
-const GRUPOS_ALFABETICOS = new Set([0, 1, 2]);
+const GRUPOS_ALFABETICOS = new Set([0, 1, 2, 12]);
+/** Cidades (grupo 12) aparecem primeiro; os demais seguem a ordem fixa dos grupos. */
+const CIDADES = 12;
+const posicao = (g: number) => (g === CIDADES ? -1 : g);
+/** Texto pesquisável: nas cidades, só o nome e a UF (senão "cidade" ou "eleito" casariam com todas). */
+const chave = (idx: Indice, l: Linha) => normalizar(l[0] === CIDADES ? l[1] : `${idx.t[l[0]]} ${l[1]} ${l[4]}`);
 
 let promessa: Promise<Pronto | null> | null = null;
 function carregar(): Promise<Pronto | null> {
   promessa ??= fetch("/inicio/busca.json")
     .then((r) => (r.ok ? (r.json() as Promise<Indice>) : null))
-    .then((idx) => (idx ? { idx, chaves: idx.i.map((l) => normalizar(`${idx.t[l[0]]} ${l[1]} ${l[4]}`)) } : null))
+    .then((idx) => (idx ? { idx, chaves: idx.i.map((l) => chave(idx, l)) } : null))
     .catch(() => {
       promessa = null;
       return null;
@@ -37,6 +42,9 @@ function carregar(): Promise<Pronto | null> {
 }
 
 function resolverHref(h: string, u: Indice["u"]): string {
+  // "@m:uf/slug" = página da cidade; "@q:uf/slug" = quem foi eleito na cidade.
+  const c = /^@(m|q):([a-z]{2})\/([a-z0-9-]+)$/.exec(h);
+  if (c) return c[1] === "m" ? `/municipios/${c[2]}/${c[3]}` : `/quem-me-representa/${c[2]}?cidade=${c[3]}#na-sua-cidade`;
   const m = /^@(stj|stf):(\d+)$/.exec(h);
   if (m) return (u?.[m[1] as "stj" | "stf"] ?? "").replaceAll("{n}", m[2]);
   return h;
@@ -75,7 +83,7 @@ export function BuscaUnica() {
       if (GRUPOS_ALFABETICOS.has(g)) l.sort((a, b) => a[1].localeCompare(b[1], "pt-BR"));
       else l.sort((a, b) => (b[2] ?? "").localeCompare(a[2] ?? "") || a[1].localeCompare(b[1], "pt-BR"));
     }
-    return [...por.entries()].sort((a, b) => a[0] - b[0]);
+    return [...por.entries()].sort((a, b) => posicao(a[0]) - posicao(b[0]));
   }, [q, dados]);
 
   const total = grupos?.reduce((s, [, l]) => s + l.length, 0) ?? 0;
@@ -84,7 +92,7 @@ export function BuscaUnica() {
     <div>
       <form role="search" aria-label="Buscar em todo o site" onSubmit={(e) => e.preventDefault()}>
         <label htmlFor={`${id}-q`} className="block text-lg font-semibold">
-          Buscar político, lei, votação ou tema
+          Buscar cidade, político, lei, votação ou tema
         </label>
         <input
           id={`${id}-q`}
@@ -96,12 +104,12 @@ export function BuscaUnica() {
             setAbertos(new Set());
             preparar();
           }}
-          placeholder="Ex.: nome do deputado, MEI, gasolina, Tema 1113"
+          placeholder="Ex.: sua cidade, nome do deputado, MEI, gasolina"
           aria-describedby={`${id}-ajuda`}
           className="mt-1 w-full rounded-md border border-[var(--cor-borda-forte)] bg-white px-3 py-2 text-base"
         />
         <p id={`${id}-ajuda`} className="meta mt-1">
-          Busca em parlamentares, votações, medidas provisórias, vetos, leis federais, decisões do ICMS e temas do STJ e do STF.
+          Busca em cidades, parlamentares, votações, medidas provisórias, vetos, leis federais, decisões do ICMS e temas do STJ e do STF.
           Roda neste aparelho: o que você digita não é enviado.
         </p>
       </form>

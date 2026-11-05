@@ -307,6 +307,7 @@ export function indiceBusca(content, webDir) {
     "Decisões sobre o ICMS",
     "Temas do STJ",
     "Temas do STF",
+    "Cidades",
   ];
   const i = [];
   for (const [g, casa] of [[0, "camara"], [1, "senado"]]) {
@@ -371,6 +372,33 @@ export function indiceBusca(content, webDir) {
     const href = comPaginaStf.has(n) ? `/justica/stf/temas/${n}` : t[9] === URL_STF.replaceAll("{n}", n) ? `@stf:${n}` : t[9];
     if (!href || !t[1]) continue;
     i.push([11, corta(`Tema ${n}: ${t[1]}`, 100), null, href, comPaginaStf.has(n) ? "" : "página do STF"]);
+  }
+  // Cidades: os 5.570 municípios. Com dados coletados, leva à página da cidade; os demais, a quem foi
+  // eleito lá (Quem me representa). Nome oficial do Siconfi quando o município casa pela UF e pelo slug.
+  const entes = lerJson(path.join(content, "municipios", "entes.json"));
+  const nomes = new Map((entes?.itens ?? []).map((e) => [`${e[2]}|${e[3]}`, e[1]]));
+  // Mesmo nome escrito com ou sem apóstrofo/espaço ("Dias D Ávila" e "Dias d'Ávila"): compara sem hífens.
+  const compacto = (uf, s) => `${uf}|${s.replace(/-/g, "")}`;
+  const porCompacto = new Map((entes?.itens ?? []).map((e) => [compacto(e[2], e[3]), e[3]]));
+  const ind = lerJson(path.join(content, "_gerado", "municipios", "indice.json"));
+  const comPagina = new Set((ind?.presentes ?? []).map((p) => `${p.uf}|${p.slug}`));
+  const rep = lerJson(path.join(webDir, "public", "quem-me-representa", "municipios.json"));
+  const vistos = new Set();
+  for (const [nome, ufM, s] of rep?.m ?? []) {
+    const uf = String(ufM).toLowerCase();
+    // Slug repetido na UF leva o código do TSE no fim ("-12345").
+    const base = s.replace(/-\d{3,}$/, "");
+    const oficial = nomes.has(`${uf}|${s}`) ? s : porCompacto.get(compacto(uf, base));
+    const chave = `${uf}|${oficial ?? base}`;
+    const pagina = comPagina.has(chave);
+    const href = pagina ? `@m:${chave.replace("|", "/")}` : `@q:${uf}/${s}`;
+    vistos.add(chave);
+    i.push([12, `${nomes.get(chave) ?? nome} (${uf.toUpperCase()})`, null, href, pagina ? "página da cidade" : "quem foi eleito na cidade"]);
+  }
+  // Municípios com página que não estejam na lista de eleitos (não deve ocorrer; garante o acesso).
+  for (const p of ind?.presentes ?? []) {
+    const chave = `${p.uf}|${p.slug}`;
+    if (!vistos.has(chave)) i.push([12, `${p.nome} (${p.uf.toUpperCase()})`, null, `@m:${p.uf}/${p.slug}`, "página da cidade"]);
   }
   // "@stj:N" e "@stf:N" = página oficial do tema, montada no navegador com o modelo de "u".
   return { g: new Date().toISOString(), t: T, u: { stj: URL_STJ, stf: URL_STF }, i };
