@@ -1,6 +1,6 @@
 {
-  "atualizado_em": "2026-11-04T00:46:06.085Z",
-  "ultima_execucao": "2026-11-04T00:42:29.682Z",
+  "atualizado_em": "2026-11-05T20:13:52.287Z",
+  "ultima_execucao": "2026-11-05T20:13:41.486Z",
   "uf": "DF",
   "casa": "cldf",
   "orgao": "Câmara Legislativa do Distrito Federal (CLDF)",
@@ -8,7 +8,7 @@
     "anos": [
       2026
     ],
-    "fim": "2026-11-03"
+    "fim": "2026-11-05"
   },
   "modo": "incremental",
   "fontes": [
@@ -16,34 +16,72 @@
       "titulo": "API pública do Processo Legislativo Eletrônico (PLe) da CLDF",
       "url": "https://ple.cl.df.gov.br/pleservico/api/public",
       "orgao": "Câmara Legislativa do Distrito Federal (CLDF)",
-      "acessado_em": "2026-11-03"
+      "acessado_em": "2026-11-05"
     },
     {
       "titulo": "Documentação da API (Portal de Dados Abertos da CLDF)",
       "url": "https://dados.cl.df.gov.br/dataset/proposicoes",
       "orgao": "Câmara Legislativa do Distrito Federal (CLDF)",
-      "acessado_em": "2026-11-03"
+      "acessado_em": "2026-11-05"
     }
   ],
   "robots": {
     "ple.cl.df.gov.br": {
       "url": "https://ple.cl.df.gov.br/robots.txt",
-      "status": 200,
-      "lido_em": "2026-11-04T00:42:29.756Z",
+      "status": null,
+      "lido_em": "2026-11-05T20:13:41.526Z",
       "crawl_delay_s": null,
       "intervalo_usado_s": 2,
       "disallow": [],
-      "observacao": "o endereço devolve uma página HTML, não um robots.txt: nenhuma restrição declarada"
+      "observacao": "robots.txt inacessível (fetch failed); host não coletado nesta execução"
     }
   },
   "execucao": {
-    "requisicoes": 98,
+    "requisicoes": 1,
     "falhas": [
-      "POST https://ple.cl.df.gov.br/pleservico/api/public/proposicao/filter?page=24&size=100&sort=dataLeitura,DESC: fetch failed",
-      "GET https://ple.cl.df.gov.br/pleservico/api/public/norma/41840: fetch failed",
-      "GET https://ple.cl.df.gov.br/pleservico/api/public/norma/41703: fetch failed",
-      "GET https://ple.cl.df.gov.br/pleservico/api/public/norma/41218: fetch failed",
-      "GET https://ple.cl.df.gov.br/pleservico/api/public/norma/41212: fetch failed"
+      "autores: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/autor/listar",
+      "proposições 2026 p.0: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/proposicao/filter",
+      "normas 2026 p.0: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/buscar",
+      "norma 40963: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40963",
+      "norma 40962: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40962",
+      "norma 40915: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40915",
+      "norma 40914: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40914",
+      "norma 40913: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40913",
+      "norma 40912: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40912",
+      "norma 40894: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40894",
+      "norma 40893: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40893",
+      "norma 40892: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40892",
+      "norma 40891: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40891",
+      "norma 40890: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40890",
+      "norma 40889: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40889",
+      "norma 40848: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40848",
+      "norma 40828: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40828",
+      "norma 40825: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40825",
+      "norma 40824: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40824",
+      "norma 40797: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40797",
+      "norma 40711: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40711",
+      "norma 40684: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40684",
+      "norma 40677: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40677",
+      "norma 40676: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40676",
+      "norma 40707: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40707",
+      "norma 40706: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40706",
+      "norma 40708: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40708",
+      "norma 40705: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40705",
+      "norma 40704: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40704",
+      "norma 40703: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40703",
+      "norma 40702: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40702",
+      "norma 40701: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40701",
+      "norma 40692: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40692",
+      "norma 40691: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40691",
+      "norma 40700: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40700",
+      "norma 40690: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40690",
+      "norma 40699: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40699",
+      "norma 40698: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40698",
+      "norma 40697: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40697",
+      "norma 40696: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40696",
+      "norma 40695: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40695",
+      "norma 40694: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40694",
+      "norma 40693: bloqueado pelo robots.txt de ple.cl.df.gov.br: /pleservico/api/public/norma/40693"
     ]
   },
   "contagens": {
@@ -51,16 +89,12 @@
     "proposicoes_por_ano": {
       "2026": 3096
     },
-    "proposicoes_na_fonte": {
-      "2026": 3097
-    },
+    "proposicoes_na_fonte": {},
     "normas_por_ano": {
       "2026": 1711
     },
-    "normas_na_fonte": {
-      "2026": 1711
-    },
-    "normas_detalhadas_nesta_execucao": 40,
+    "normas_na_fonte": {},
+    "normas_detalhadas_nesta_execucao": 0,
     "normas_sem_detalhe": 1671
   },
   "observacoes": [

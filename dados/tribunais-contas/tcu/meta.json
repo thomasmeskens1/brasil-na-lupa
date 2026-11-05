@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-02",
+  "atualizado_em": "2026-11-05",
   "tribunal": "tcu",
   "orgao": {
     "id": "tcu",
@@ -10,40 +10,31 @@
     "situacao_coleta": "ativa"
   },
   "ultima_execucao": {
-    "data": "2026-11-02",
-    "modo": "completo",
-    "paginas_lidas": 34,
+    "data": "2026-11-05",
+    "modo": "incremental",
+    "paginas_lidas": 1,
     "leitura_chegou_ao_fim": true,
-    "duracao_s": 932,
-    "registros_lidos": 34000,
-    "novos": 32556,
+    "duracao_s": 25,
+    "registros_lidos": 200,
+    "novos": 163,
     "atualizados": 0,
-    "anteriores_ao_periodo_descartados": 1444,
+    "anteriores_ao_periodo_descartados": 0,
     "repetidos_entre_paginas": 0,
-    "gravados_que_nao_vieram_na_leitura_completa": 0,
-    "paginas_rejeitadas_por_resposta_misturada": 7,
-    "exemplos_de_rejeicao": [
-      "inicio=8999: âncora ausente (página descontínua)",
-      "inicio=10999: tamanho 1021 (pedido 1001)",
-      "inicio=19999: tamanho 2001 (pedido 1001)",
-      "inicio=21999: tamanho 1021 (pedido 1001)",
-      "inicio=22999: tamanho 1002 (pedido 1001)",
-      "inicio=29999: âncora na posição 1 (registros novos inseridos no topo durante a leitura)",
-      "inicio=31999: tamanho 1101 (pedido 1001)"
-    ],
+    "paginas_rejeitadas_por_resposta_misturada": 0,
+    "exemplos_de_rejeicao": [],
     "http": {
-      "requisicoes": 50,
+      "requisicoes": 10,
       "retentativas": 0,
-      "bytes": 37396896,
+      "bytes": 400368,
       "por_host": {
-        "dados-abertos.apps.tcu.gov.br": 42,
+        "dados-abertos.apps.tcu.gov.br": 2,
         "legis.senado.leg.br": 6
       }
     }
   },
   "periodo": "acórdãos de 2025 em diante (ano do acórdão)",
   "contagens": {
-    "acordaos": 32556,
+    "acordaos": 32719,
     "por_ano": {
       "2025": {
         "total": 18557,
@@ -59,17 +50,17 @@
         "com_sumario": 6247
       },
       "2026": {
-        "total": 13999,
+        "total": 14162,
         "por_colegiado": {
-          "Plenário": 2964,
-          "Primeira Câmara": 5712,
-          "Segunda Câmara": 5323
+          "Plenário": 3008,
+          "Primeira Câmara": 5754,
+          "Segunda Câmara": 5400
         },
         "por_tipo": {
-          "ACÓRDÃO": 4352,
-          "ACÓRDÃO DE RELAÇÃO": 9647
+          "ACÓRDÃO": 4404,
+          "ACÓRDÃO DE RELAÇÃO": 9758
         },
-        "com_sumario": 4335
+        "com_sumario": 4387
       }
     },
     "julgamentos_das_colecoes": {
@@ -126,13 +117,13 @@
       "titulo": "API de dados abertos do TCU — acórdãos (recupera-acordaos)",
       "url": "https://dados-abertos.apps.tcu.gov.br/api/acordao/recupera-acordaos",
       "orgao": "Tribunal de Contas da União",
-      "acessado_em": "2026-11-02"
+      "acessado_em": "2026-11-05"
     },
     {
       "titulo": "Dados Abertos do Senado Federal — processos (MCN das contas do Presidente)",
       "url": "https://legis.senado.leg.br/dadosabertos/processo?sigla=MCN",
       "orgao": "Senado Federal / Congresso Nacional",
-      "acessado_em": "2026-11-02"
+      "acessado_em": "2026-11-05"
     }
   ],
   "restricoes_respeitadas": [

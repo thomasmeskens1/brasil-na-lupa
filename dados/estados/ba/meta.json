@@ -1,6 +1,6 @@
 {
-  "atualizado_em": "2026-11-03T20:36:11.122Z",
-  "ultima_execucao": "2026-11-03T20:36:11.123Z",
+  "atualizado_em": "2026-11-05T19:54:40.142Z",
+  "ultima_execucao": "2026-11-05T19:54:40.142Z",
   "uf": "BA",
   "casa": "alba",
   "nome": "Assembleia Legislativa do Estado da Bahia (ALBA)",
@@ -10,7 +10,7 @@
     ]
   },
   "modo": "incremental",
-  "orcamento_min": 15,
+  "orcamento_min": 20,
   "user_agent": "brasil-na-lupa-coletor/1.0 (coleta automatica de dados abertos para o site neutro de acompanhamento politico Brasil na Lupa; Node.js)",
   "contagens": {
     "parlamentares": 72,
@@ -24,40 +24,26 @@
   },
   "fontes": [
     {
-      "titulo": "Parlamentares — dados abertos do SPL da ALBA",
-      "url": "https://albalegis.nopapercloud.com.br/api/publico/parlamentar/",
-      "orgao": "Assembleia Legislativa do Estado da Bahia (ALBA)",
-      "acessado_em": "2026-11-03"
-    },
-    {
-      "titulo": "Proposições e tramitação — dados abertos do SPL da ALBA",
-      "url": "https://albalegis.nopapercloud.com.br/api/publico/proposicao/",
-      "orgao": "Assembleia Legislativa do Estado da Bahia (ALBA)",
-      "acessado_em": "2026-11-03"
-    },
-    {
       "titulo": "Tramitação das proposições — dados abertos do SPL da ALBA",
       "url": "https://albalegis.nopapercloud.com.br/api/publico/proposicao/",
       "orgao": "Assembleia Legislativa do Estado da Bahia (ALBA)",
-      "acessado_em": "2026-11-03"
+      "acessado_em": "2026-11-05"
     }
   ],
   "robots": {
     "albalegis.nopapercloud.com.br": {
       "host": "albalegis.nopapercloud.com.br",
-      "lido_em": "2026-11-03T20:33:23.139Z",
-      "status": 200,
-      "observacao": null,
-      "grupo_aplicado": "*",
+      "lido_em": "2026-11-05T19:54:33.617Z",
+      "status": 403,
+      "observacao": "robots.txt inexistente: sem regras declaradas",
+      "grupo_aplicado": "nenhum",
       "disallow": [],
-      "allow": [
-        "/"
-      ],
+      "allow": [],
       "raiz_permitida": true
     },
     "www.legislabahia.ba.gov.br": {
       "host": "www.legislabahia.ba.gov.br",
-      "lido_em": "2026-11-03T20:36:09.696Z",
+      "lido_em": "2026-11-05T19:54:40.006Z",
       "status": 200,
       "observacao": null,
       "grupo_aplicado": "*",
@@ -69,9 +55,11 @@
     }
   },
   "requisicoes": {
-    "albalegis.nopapercloud.com.br": 43
+    "albalegis.nopapercloud.com.br": 2
   },
-  "falhas": [],
+  "falhas": [
+    "albalegis.nopapercloud.com.br respondeu 403 (captcha); coleta deste host interrompida sem tentativa de contorno"
+  ],
   "observacoes": [
     "Legisla Bahia (Casa Civil) não coletado porque o robots.txt, lido segundo a RFC 9309, coloca \"User-agent: *\" no mesmo grupo de \"Disallow: /\". As leis listadas vêm da tramitação oficial da ALBA (\"Promulgada a Lei nº …\", \"Publicada a Lei nº …\"); ementa e texto ficam como lacuna até o acesso ser permitido ou a curadoria conferir.",
     "Voto de cada deputado: a Casa não publica; o site mostra o resultado oficial e \"Informação não disponível em fonte oficial\" para o voto individual, sem deduzir voto de \"unanimidade\" ou de notícia.",

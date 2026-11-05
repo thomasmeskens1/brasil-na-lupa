@@ -1,6 +1,6 @@
 {
-  "atualizado_em": "2026-11-02T17:50:53.151Z",
-  "ultima_execucao": "2026-11-02T17:50:53.151Z",
+  "atualizado_em": "2026-11-05T19:17:39.312Z",
+  "ultima_execucao": "2026-11-05T19:17:39.312Z",
   "tribunal": "tce-sp",
   "modo": "incremental",
   "periodo": {
@@ -12,8 +12,8 @@
   },
   "contagens": {
     "exercicios_governador_publicados_na_pagina": 18,
-    "exercicios_governador_processados": 3,
-    "exercicios_governador_com_erro": 0,
+    "exercicios_governador_processados": 1,
+    "exercicios_governador_com_erro": 2,
     "linhas_conjunto_pareceres": 6440,
     "municipios": [
       {
@@ -27,25 +27,11 @@
   "contas_governador": [
     {
       "exercicio": 2023,
-      "publicado": true,
-      "data_julgamento": "2024-06-26",
-      "conclusao": "favorável",
-      "com_ressalvas": true,
-      "relator": "Valdenir Antonio Polizeli",
-      "julgamento_politico": null,
-      "situacao_conferencia": "automatico-estruturado",
-      "lacunas": 8
+      "erro": "spawnSync scripts/coleta/alesp/.venv/bin/python ENOENT"
     },
     {
       "exercicio": 2024,
-      "publicado": true,
-      "data_julgamento": "2025-06-25",
-      "conclusao": "favorável",
-      "com_ressalvas": true,
-      "relator": "Dimas Ramalho",
-      "julgamento_politico": "PDL 46/2025",
-      "situacao_conferencia": "automatico-estruturado",
-      "lacunas": 5
+      "erro": "spawnSync scripts/coleta/alesp/.venv/bin/python ENOENT"
     },
     {
       "exercicio": 2025,
@@ -64,13 +50,13 @@
       "titulo": "Contas Anuais (página oficial)",
       "url": "https://www.tce.sp.gov.br/contas-anuais",
       "orgao": "Tribunal de Contas do Estado de São Paulo (TCE-SP)",
-      "acessado_em": "2026-11-02"
+      "acessado_em": "2026-11-05"
     },
     {
       "titulo": "Conjunto de dados \"Pareceres\" (Contas de Prefeituras 2008 a 2017)",
       "url": "https://transparencia.tce.sp.gov.br/sites/default/files/conjunto-dados/pareceres/pareceres.zip",
       "orgao": "Tribunal de Contas do Estado de São Paulo (TCE-SP)",
-      "acessado_em": "2026-11-02",
+      "acessado_em": "2026-11-05",
       "pagina": "https://transparencia.tce.sp.gov.br/conjunto-de-dados",
       "sha256": "3e1b1d31645641b3cc2c5b5cafb8ab1ecfcac8ecc1c5e58930783d3b6a1d70b7",
       "atualizado_na_fonte": "Wed, 14 Oct 2020 20:30:41 GMT"
@@ -89,10 +75,10 @@
     "Conferência: os campos extraídos de 2023 e 2024 foram conferidos por amostragem contra os PDFs oficiais em 02/11/2026."
   ],
   "estatisticas_http": {
-    "requisicoes": 8,
+    "requisicoes": 4,
     "retentativas": 0,
-    "bytes": 2245320,
+    "bytes": 897654,
     "falhas": []
   },
-  "duracao_s": 24
+  "duracao_s": 6
 }
