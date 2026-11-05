@@ -49,6 +49,13 @@ const DADOS_SOB_DEMANDA: Record<string, string[]> = {
   "/executivo/vetos/\\[id\\]": [...COMUNS, "content/executivo/vetos/**/*", "content/congresso/*.json"],
   "/municipios/\\[uf\\]/\\[cidade\\]": [...COMUNS, "content/_gerado/municipios/**/*", "content/atibaia/**/*", "content/municipios/**/*"],
   "/municipios/\\[uf\\]/\\[cidade\\]/votacoes/\\[id\\]": [...COMUNS, "content/_gerado/municipios/**/*"],
+  // Contas dos Prefeitos: centenas de municípios por tribunal (~1 MB cada página gerada); só uma por
+  // tribunal sai no build, as demais na primeira visita.
+  "/tribunais-de-contas/\\[orgao\\]/prefeitos/\\[municipio\\]": [
+    ...COMUNS,
+    "content/tribunais-contas/orgaos.json",
+    "content/tribunais-contas/*/contas-prefeitos/*.json",
+  ],
 };
 
 /** Seções (primeiro segmento da rota) sem página gerada sob demanda: nada de content/. */
@@ -64,7 +71,7 @@ const SECOES_SEM_SOB_DEMANDA = [
   "/participar",
   "/privacidade",
   "/quem-me-representa",
-  "/tribunais-de-contas",
+  // /tribunais-de-contas tem uma rota sob demanda (contas dos prefeitos), acima.
 ];
 
 const relativo = (g: string) => `./${g}`;

@@ -16,7 +16,12 @@ export function generateStaticParams() {
   return ouMarcador(
     getOrgaos()
       .itens.filter((o) => o.situacao_coleta === "ativa")
-      .flatMap((o) => municipiosComContas(o.id).map((m) => ({ orgao: o.id, municipio: m.id }))),
+      // Um município por tribunal no build (mais os que têm seção própria); os demais na primeira visita.
+      .flatMap((o) =>
+        municipiosComContas(o.id)
+          .filter((m, i) => i === 0 || m.id in SECAO_MUNICIPIO)
+          .map((m) => ({ orgao: o.id, municipio: m.id })),
+      ),
     { orgao: "sem-dados", municipio: "sem-dados" },
   );
 }
