@@ -1,0 +1,293 @@
+{
+  "atualizado_em": "2026-11-05T01:56:28.220Z",
+  "ultima_execucao": "2026-11-05T01:49:49.328Z",
+  "uf": "PA",
+  "casa": "alepa",
+  "orgao": "Assembleia Legislativa do Estado do Pará (ALEPA)",
+  "periodo": {
+    "anos": [
+      2026
+    ],
+    "fim": "2026-11-04"
+  },
+  "modo": "incremental",
+  "fontes": [
+    {
+      "titulo": "Votações nominais — portal da ALEPA",
+      "url": "https://www.alepa.pa.gov.br/Legislativo/VotacoesNominais",
+      "orgao": "Assembleia Legislativa do Estado do Pará (ALEPA)",
+      "acessado_em": "2026-11-04"
+    },
+    {
+      "titulo": "Proposições — portal da ALEPA",
+      "url": "https://www.alepa.pa.gov.br/Legislativo/Proposicoes",
+      "orgao": "Assembleia Legislativa do Estado do Pará (ALEPA)",
+      "acessado_em": "2026-11-04"
+    },
+    {
+      "titulo": "Deputados da 61ª legislatura — portal da ALEPA",
+      "url": "https://www.alepa.pa.gov.br/Institucional/Deputados",
+      "orgao": "Assembleia Legislativa do Estado do Pará (ALEPA)",
+      "acessado_em": "2026-11-04"
+    },
+    {
+      "titulo": "Dados Abertos API do Banco de Leis (documentação)",
+      "url": "https://bancodeleis.alepa.pa.gov.br/api.php",
+      "orgao": "Assembleia Legislativa do Estado do Pará (ALEPA)",
+      "acessado_em": "2026-11-04"
+    }
+  ],
+  "robots": {
+    "bancodeleis.alepa.pa.gov.br": {
+      "url": "https://bancodeleis.alepa.pa.gov.br/robots.txt",
+      "status": 404,
+      "lido_em": "2026-11-05T01:49:49.331Z",
+      "crawl_delay_s": null,
+      "intervalo_usado_s": 2,
+      "disallow": [],
+      "observacao": "sem robots.txt (HTTP 404): nenhuma restrição declarada (RFC 9309)"
+    },
+    "www.alepa.pa.gov.br": {
+      "url": "https://www.alepa.pa.gov.br/robots.txt",
+      "status": 404,
+      "lido_em": "2026-11-05T01:49:49.379Z",
+      "crawl_delay_s": null,
+      "intervalo_usado_s": 2,
+      "disallow": [],
+      "observacao": "sem robots.txt (HTTP 404): nenhuma restrição declarada (RFC 9309)"
+    }
+  },
+  "execucao": {
+    "requisicoes": 186,
+    "consultas_banco_de_leis": 121,
+    "falhas": []
+  },
+  "contagens": {
+    "parlamentares": 41,
+    "proposicoes_por_ano": {
+      "2026": 46
+    },
+    "normas_por_ano": {
+      "2026": 928
+    },
+    "normas_por_tipo": {
+      "2026 Decreto Legislativo": 37,
+      "2026 Decreto": 515,
+      "2026 Lei": 361,
+      "2026 Lei Complementar": 7,
+      "2026 Resolução": 6,
+      "2026 Emenda Constitucional": 2
+    },
+    "votacoes_por_ano": {
+      "2026": 30
+    },
+    "votacoes_listadas": 34,
+    "votacoes_nao_conferidas": 0,
+    "votos_sem_ligacao_com_deputado": 156,
+    "janelas_lidas_nesta_execucao": 15,
+    "janelas_nunca_lidas": 48,
+    "janelas_truncadas": 0,
+    "proposicoes_detalhadas_nesta_execucao": 6,
+    "proposicoes_sem_detalhe": 40,
+    "consultas_truncadas_banco_de_leis": 0
+  },
+  "observacoes": [
+    "Fontes: portal da Assembleia Legislativa do Pará (páginas HTML) e API aberta do Banco de Leis da ALEPA. Nenhum dos dois hosts publica robots.txt (HTTP 404: nenhuma restrição declarada); intervalo mínimo de 2 s entre requisições ao mesmo host. O portal é lento (cerca de 10 s por página) e às vezes responde com página de erro: a coleta é incremental e o que falha fica para a próxima execução.",
+    "Votações: a ALEPA publica a votação nominal (lista mensal e detalhe) com tipo e número da sessão, projeto, data, autor, turno, resultado e as listas Sim, Não, Abstenção e Não votaram, com nome e partido como impressos na página (federações aparecem com a sigla da página, por exemplo \"FE PT PV PCdoB\"). Cada votação só é gravada quando o número de nomes de cada lista confere com a quantidade informada e a soma confere com o total. \"Não votaram\" é registrado como está na página, sem dizer se o deputado estava ausente.",
+    "Votações simbólicas: a ficha da proposição traz só o turno, a data e o resultado (por exemplo \"REDAÇÃO FINAL: APROVADA\"); ficam na proposição, sem voto individual (\"Informação não disponível em fonte oficial\"). A ALEPA registra votação nominal só em parte das matérias (em 2026, projetos de lei complementar e propostas de emenda à Constituição).",
+    "Deputados: página \"Deputados da 61ª legislatura\" (nome parlamentar e partido). O voto é ligado ao deputado só quando o nome da lista de votação é idêntico ao da página (sem acentos e maiúsculas); alguns nomes diferem (ex.: \"Aveilton\" × \"AVEILTON SOUZA\") e o voto fica sem ligação com o perfil, mas aparece na votação. As páginas de perfil não são acessadas (trazem dados pessoais).",
+    "Proposições: só projetos (de lei, de lei complementar, de decreto legislativo, de resolução) e propostas de emenda à Constituição; indicações, requerimentos, moções e processos não são coletados. A lista do portal mostra 10 por página; cada tipo é lido por janelas de datas, divididas quando passam de uma página. A data de apresentação é a data de entrada mostrada na lista. A ficha (situação, regime e votação no Plenário por turno) é lida aos poucos (PA_MAX_DETALHES por execução, PLC e PEC primeiro).",
+    "Normas: API do Banco de Leis (leis, leis complementares, decretos do Executivo, decretos legislativos, resoluções e emendas constitucionais), com ementa e PDF oficial. A API não informa as datas de assinatura e de publicação nem o projeto de origem (\"Informação não disponível em fonte oficial\"); o texto completo está no PDF. A API devolve no máximo 50 resultados por chamada, sem paginação: tipos com mais normas no ano são varridos pelo trecho inicial do número.",
+    "Vetos e razões de veto: publicados só no Diário Oficial do Estado (PDF no Google Drive, busca fora do ar em 2026-11-02); não são coletados."
+  ],
+  "janelas_proposicoes": {
+    "4|2026-11-01|2026-11-30": {
+      "situacao": "vazia",
+      "paginas": 0,
+      "itens": 0,
+      "lida_em": "2026-11-04"
+    },
+    "2|2026-11-01|2026-11-30": {
+      "situacao": "vazia",
+      "paginas": 0,
+      "itens": 0,
+      "lida_em": "2026-11-04"
+    },
+    "3|2026-11-01|2026-11-30": {
+      "situacao": "completa",
+      "paginas": 1,
+      "itens": 8,
+      "lida_em": "2026-11-04"
+    },
+    "1|2026-11-01|2026-11-30": {
+      "situacao": "completa",
+      "paginas": 1,
+      "itens": 1,
+      "lida_em": "2026-11-04"
+    },
+    "5|2026-11-01|2026-11-30": {
+      "situacao": "vazia",
+      "paginas": 0,
+      "itens": 0,
+      "lida_em": "2026-11-04"
+    },
+    "4|2026-10-01|2026-10-31": {
+      "situacao": "completa",
+      "paginas": 1,
+      "itens": 1,
+      "lida_em": "2026-11-04"
+    },
+    "2|2026-10-01|2026-10-31": {
+      "situacao": "completa",
+      "paginas": 1,
+      "itens": 1,
+      "lida_em": "2026-11-04"
+    },
+    "3|2026-10-01|2026-10-31": {
+      "situacao": "dividida",
+      "partes": 5,
+      "paginas": 3,
+      "lida_em": "2026-11-04"
+    },
+    "3|2026-10-01|2026-10-06": {
+      "situacao": "completa",
+      "paginas": 1,
+      "itens": 3,
+      "lida_em": "2026-11-04"
+    },
+    "3|2026-10-07|2026-10-12": {
+      "situacao": "completa",
+      "paginas": 1,
+      "itens": 1,
+      "lida_em": "2026-11-04"
+    },
+    "3|2026-10-13|2026-10-19": {
+      "situacao": "completa",
+      "paginas": 1,
+      "itens": 5,
+      "lida_em": "2026-11-04"
+    },
+    "3|2026-10-20|2026-10-25": {
+      "situacao": "completa",
+      "paginas": 1,
+      "itens": 7,
+      "lida_em": "2026-11-04"
+    },
+    "3|2026-10-26|2026-10-31": {
+      "situacao": "completa",
+      "paginas": 1,
+      "itens": 9,
+      "lida_em": "2026-11-04"
+    },
+    "1|2026-10-01|2026-10-31": {
+      "situacao": "dividida",
+      "partes": 3,
+      "paginas": 2,
+      "lida_em": "2026-11-04"
+    },
+    "1|2026-10-01|2026-10-10": {
+      "situacao": "vazia",
+      "paginas": 0,
+      "itens": 0,
+      "lida_em": "2026-11-04"
+    }
+  },
+  "meses_votacoes": {
+    "2026-11": {
+      "lida_em": "2026-11-04",
+      "paginas": 1,
+      "itens": [
+        {"id_proposicao":16368,"id_votacao":8877,"data":"2026-11-03","titulo":"03/11/2026 - PROJETO DE LEI COMPLEMENTAR N º 11/2026 - 1º TURNO"},
+        {"id_proposicao":16368,"id_votacao":8883,"data":"2026-11-03","titulo":"03/11/2026 - PROJETO DE LEI COMPLEMENTAR N º 11/2026 - 2º TURNO"}
+      ]
+    },
+    "2026-10": {
+      "lida_em": "2026-11-04",
+      "paginas": 1,
+      "itens": [
+        {"id_proposicao":16339,"id_votacao":8869,"data":"2026-10-27","titulo":"27/10/2026 - PROJETO DE LEI COMPLEMENTAR N º 10/2026 - 1º TURNO"},
+        {"id_proposicao":16339,"id_votacao":8874,"data":"2026-10-27","titulo":"27/10/2026 - PROJETO DE LEI COMPLEMENTAR N º 10/2026 - 2º TURNO"},
+        {"id_proposicao":16369,"id_votacao":8854,"data":"2026-10-20","titulo":"20/10/2026 - PROJETO DE EMENDA CONSTITUCIONAL N º 8/2026 - 1º TURNO"},
+        {"id_proposicao":16369,"id_votacao":8864,"data":"2026-10-20","titulo":"20/10/2026 - PROJETO DE EMENDA CONSTITUCIONAL N º 8/2026 - 2º TURNO"},
+        {"id_proposicao":16236,"id_votacao":8860,"data":"2026-10-20","titulo":"20/10/2026 - PROJETO DE LEI COMPLEMENTAR N º 8/2026 - 1º TURNO"},
+        {"id_proposicao":16236,"id_votacao":8865,"data":"2026-10-20","titulo":"20/10/2026 - PROJETO DE LEI COMPLEMENTAR N º 8/2026 - 2º TURNO"},
+        {"id_proposicao":16237,"id_votacao":8861,"data":"2026-10-20","titulo":"20/10/2026 - PROJETO DE LEI COMPLEMENTAR N º 9/2026 - 1º TURNO"},
+        {"id_proposicao":16237,"id_votacao":8866,"data":"2026-10-20","titulo":"20/10/2026 - PROJETO DE LEI COMPLEMENTAR N º 9/2026 - 2º TURNO"}
+      ]
+    },
+    "2026-09": {
+      "lida_em": "2026-11-04",
+      "paginas": 0,
+      "itens": []
+    },
+    "2026-08": {
+      "lida_em": "2026-11-04",
+      "paginas": 0,
+      "itens": []
+    },
+    "2026-07": {
+      "lida_em": "2026-11-04",
+      "paginas": 0,
+      "itens": []
+    },
+    "2026-06": {
+      "lida_em": "2026-11-04",
+      "paginas": 1,
+      "itens": [
+        {"id_proposicao":16097,"id_votacao":8799,"data":"2026-06-23","titulo":"23/06/2026 - PROJETO DE LEI COMPLEMENTAR N º 7/2026 - 1º TURNO"},
+        {"id_proposicao":16097,"id_votacao":8807,"data":"2026-06-23","titulo":"23/06/2026 - PROJETO DE LEI COMPLEMENTAR N º 7/2026 - 2º TURNO"},
+        {"id_proposicao":0,"id_votacao":8762,"data":"2026-06-02","titulo":"02/06/2026 - EMENDA ADITIVA Nº 01 AO PLC 06/2026 - TURNO ÚNICO"},
+        {"id_proposicao":0,"id_votacao":8763,"data":"2026-06-02","titulo":"02/06/2026 - EMENDA ADITIVA Nº 02 AO PLC 06/2026 - TURNO ÚNICO"},
+        {"id_proposicao":15515,"id_votacao":8766,"data":"2026-06-02","titulo":"02/06/2026 - PROJETO DE LEI COMPLEMENTAR N º 1/2026 - 1º TURNO"},
+        {"id_proposicao":15515,"id_votacao":8772,"data":"2026-06-02","titulo":"02/06/2026 - PROJETO DE LEI COMPLEMENTAR N º 1/2026 - 2º TURNO"},
+        {"id_proposicao":16002,"id_votacao":8761,"data":"2026-06-02","titulo":"02/06/2026 - PROJETO DE LEI COMPLEMENTAR N º 6/2026 - 1º TURNO"},
+        {"id_proposicao":16002,"id_votacao":8771,"data":"2026-06-02","titulo":"02/06/2026 - PROJETO DE LEI COMPLEMENTAR N º 6/2026 - 2º TURNO"}
+      ]
+    },
+    "2026-05": {
+      "lida_em": "2026-11-04",
+      "paginas": 1,
+      "itens": [
+        {"id_proposicao":0,"id_votacao":8752,"data":"2026-05-26","titulo":"26/05/2026 - EMENDA ADITIVA AO PLC 05/2026 - TURNO ÚNICO"},
+        {"id_proposicao":0,"id_votacao":8753,"data":"2026-05-26","titulo":"26/05/2026 - EMENDA ADITIVA AO PLC 05/2026 - TURNO ÚNICO"},
+        {"id_proposicao":15882,"id_votacao":8751,"data":"2026-05-26","titulo":"26/05/2026 - PROJETO DE LEI COMPLEMENTAR N º 5/2026 - 1º TURNO"},
+        {"id_proposicao":15882,"id_votacao":8760,"data":"2026-05-26","titulo":"26/05/2026 - PROJETO DE LEI COMPLEMENTAR N º 5/2026 - 2º TURNO"}
+      ]
+    },
+    "2026-04": {
+      "lida_em": "2026-11-04",
+      "paginas": 1,
+      "itens": [
+        {"id_proposicao":15843,"id_votacao":8719,"data":"2026-04-14","titulo":"14/04/2026 - PROJETO DE LEI COMPLEMENTAR N º 4/2026 - 1º TURNO"},
+        {"id_proposicao":15843,"id_votacao":8729,"data":"2026-04-14","titulo":"14/04/2026 - PROJETO DE LEI COMPLEMENTAR N º 4/2026 - 2º TURNO"}
+      ]
+    },
+    "2026-03": {
+      "lida_em": "2026-11-04",
+      "paginas": 1,
+      "itens": [
+        {"id_proposicao":0,"id_votacao":8701,"data":"2026-03-31","titulo":"31/03/2026 - EMENDA ADITIVA Nº 1 AO PLC 2/2026 - TURNO ÚNICO"},
+        {"id_proposicao":0,"id_votacao":8700,"data":"2026-03-31","titulo":"31/03/2026 - EMENDA MODIFICATIVA Nº 1 PLC 2/2026 - TURNO ÚNICO"},
+        {"id_proposicao":15773,"id_votacao":8699,"data":"2026-03-31","titulo":"31/03/2026 - PROJETO DE LEI COMPLEMENTAR N º 2/2026 - 1º TURNO"},
+        {"id_proposicao":15773,"id_votacao":8710,"data":"2026-03-31","titulo":"31/03/2026 - PROJETO DE LEI COMPLEMENTAR N º 2/2026 - 2º TURNO"},
+        {"id_proposicao":15785,"id_votacao":8702,"data":"2026-03-31","titulo":"31/03/2026 - PROJETO DE LEI COMPLEMENTAR N º 3/2026 - 1º TURNO"},
+        {"id_proposicao":15785,"id_votacao":8711,"data":"2026-03-31","titulo":"31/03/2026 - PROJETO DE LEI COMPLEMENTAR N º 3/2026 - 2º TURNO"},
+        {"id_proposicao":15513,"id_votacao":8682,"data":"2026-03-17","titulo":"17/03/2026 - PROJETO DE EMENDA CONSTITUCIONAL N º 1/2026 - 1º TURNO"},
+        {"id_proposicao":15513,"id_votacao":8689,"data":"2026-03-17","titulo":"17/03/2026 - PROJETO DE EMENDA CONSTITUCIONAL N º 1/2026 - 2º TURNO"}
+      ]
+    },
+    "2026-02": {
+      "lida_em": "2026-11-04",
+      "paginas": 1,
+      "itens": [
+        {"id_proposicao":15587,"id_votacao":8658,"data":"2026-02-24","titulo":"24/02/2026 - PROJETO DE EMENDA CONSTITUCIONAL N º 3/2026 - 1º TURNO"},
+        {"id_proposicao":15587,"id_votacao":8666,"data":"2026-02-24","titulo":"24/02/2026 - PROJETO DE EMENDA CONSTITUCIONAL N º 3/2026 - 2º TURNO"}
+      ]
+    },
+    "2026-01": {
+      "lida_em": "2026-11-04",
+      "paginas": 0,
+      "itens": []
+    }
+  }
+}
