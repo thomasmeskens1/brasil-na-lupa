@@ -3,8 +3,8 @@
   "descricao": "Registro dos tribunais de contas acompanhados ou planejados. Cada órgão ativo tem um coletor em scripts/coleta/tribunais-contas/<id>/ e uma pasta em dados/tribunais-contas/<id>/, no mesmo formato.",
   "contagens": {
     "total": 33,
-    "ativa": 4,
-    "planejada": 29
+    "ativa": 5,
+    "planejada": 28
   },
   "itens": [
     {
@@ -411,9 +411,21 @@
       "nome": "Tribunal de Contas do Estado de Pernambuco",
       "esfera": "estadual",
       "uf": "PE",
-      "jurisdiciona": null,
+      "jurisdiciona": "Estado de Pernambuco e seus 184 municípios",
       "site_oficial": "https://www.tce.pe.gov.br/internet/",
       "fontes": [
+        {
+          "titulo": "API de Dados Abertos do TCE-PE (catálogo de entidades)",
+          "url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!listar",
+          "orgao": "Tribunal de Contas do Estado de Pernambuco (TCE-PE)",
+          "acessado_em": "2026-11-05"
+        },
+        {
+          "titulo": "API de Dados Abertos do TCE-PE — entidade Resultados (contas de governo julgadas)",
+          "url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=42",
+          "orgao": "Tribunal de Contas do Estado de Pernambuco (TCE-PE)",
+          "acessado_em": "2026-11-05"
+        },
         {
           "titulo": "Página inicial — Tribunal de Contas do Estado de Pernambuco",
           "url": "https://www.tce.pe.gov.br/internet/",
@@ -421,10 +433,17 @@
           "acessado_em": "2026-11-02"
         }
       ],
-      "situacao_coleta": "planejada",
-      "robots_e_restricoes": null,
+      "situacao_coleta": "ativa",
+      "robots_e_restricoes": "Acessado só sistemas.tcepe.tc.br (API de Dados Abertos, sem chave; robots.txt 404, sem regras, lido a cada execução). Uma requisição por vez, pausa de 1,5 s. Os documentos e a consulta de processos do e-TCE (etce.tcepe.tc.br) não são abertos: só o link oficial é guardado. Interessados da entidade Processos não são copiados.",
       "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
-      "lacunas": []
+      "lacunas": [
+        "Contas anteriores ao exercício de 2014 (processos físicos) não estão na API",
+        "Ressalvas, votação e número do parecer não constam na API; estão no documento do parecer no e-TCE",
+        "Data do trânsito em julgado não consta na API",
+        "Julgamento das contas pela Alepe e pelas Câmaras Municipais ainda não coletado"
+      ],
+      "coletor": "scripts/coleta/tribunais-contas/tce-pe/coletar.mjs",
+      "dados": "dados/tribunais-contas/tce-pe/"
     },
     {
       "id": "tce-pi",

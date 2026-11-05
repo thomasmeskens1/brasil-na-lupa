@@ -59,7 +59,10 @@ export function resumoParecerTcu(conclusao: string | null | undefined): string |
 export function resumoParecerTce(p: ParecerTce): string | null {
   if (!p.conclusao) return null;
   const c = p.conclusao.toLowerCase();
-  return `parecer ${c}${p.com_ressalvas ? " com ressalvas" : ""}`;
+  // "favorável", "pela aprovação" seguem "parecer"; um substantivo ("aprovação", "rejeição") pede "de".
+  const de = /^(aprova|desaprova|rejei|reprova)/.test(c) ? "de " : "";
+  const ressalvas = p.com_ressalvas && !c.includes("ressalva") ? " com ressalvas" : "";
+  return `parecer ${de}${c}${ressalvas}`;
 }
 
 export interface TermoTc {
