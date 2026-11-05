@@ -8,6 +8,7 @@ import { SeusFavoritos } from "@/features/conta/componentes/SeusFavoritos";
 import { cadastroAtivo } from "@/features/conta/config";
 import { ItemSessao } from "@/features/agenda/Sessoes";
 import { BuscaUnica } from "@/features/inicio/BuscaUnica";
+import { DestaquesInicio } from "@/features/inicio/Destaques";
 import { getDecisoesSemana, simplesSeAtivo } from "@/features/inicio/dados";
 import { ListaSecoes } from "@/features/inicio/Secoes";
 import { BuscaLocal } from "@/features/representantes/BuscaLocal";
@@ -81,6 +82,8 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      <DestaquesInicio />
 
       <section aria-labelledby="titulo-semana">
         <h2 id="titulo-semana" className="text-2xl">
