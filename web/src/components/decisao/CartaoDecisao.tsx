@@ -8,7 +8,8 @@
  *   │ Convênio ICMS 127/2026                    │  subtítulo = nome oficial por extenso
  *   │ [Antes R$ 1,57 → Depois R$ 1,64 por litro]│  dado-chave
  *   │ Quem decidiu: CONFAZ (…) · decisão de …   │
- *   │ [Oficial] CONFAZ ↗ · coletado em 02/11    │  selo de fonte + curtir/não curtir + [Compartilhar]
+ *   │ [Oficial] CONFAZ ↗ · coletado em 02/11    │  selo de fonte
+ *   │ 👍 👎                       [Compartilhar] │  curtir/não curtir à esquerda, Compartilhar à direita
  *   └───────────────────────────────────────────┘
  *
  * O cartão inteiro é clicável (o link fica no título e se estende pelo cartão); a fonte e o
@@ -165,13 +166,17 @@ export function CartaoDecisao({
         <span className="font-semibold">Quem decidiu:</span> {quem}
         {forma ? <span className="text-[var(--cor-secundaria)]"> · {FORMAS[forma]}</span> : null}
       </p>
-      {fonte || compartilhar || idReacao ? (
+      {fonte ? (
+        <div className="cartao-decisao__acima mt-2">
+          <SeloFonte fonte={fonte} compacto />
+        </div>
+      ) : null}
+      {/* Curtir/não curtir à esquerda; Compartilhar sozinho à direita. */}
+      {compartilhar || idReacao ? (
         <div className="cartao-decisao__acima mt-2 flex flex-wrap items-center justify-between gap-2">
-          {fonte ? <SeloFonte fonte={fonte} compacto /> : <span />}
-          {idReacao || compartilhar ? (
-            <div className="ml-auto flex flex-wrap items-center justify-end gap-2">
-              {idReacao ? <BotoesReacao proposta={idReacao} compacto /> : null}
-              {compartilhar ? (
+          {idReacao ? <BotoesReacao proposta={idReacao} compacto /> : <span />}
+          {compartilhar ? (
+            <div className="ml-auto">
                 <BotaoCompartilhar
                   titulo={t.titulo}
                   url={href}
@@ -184,7 +189,6 @@ export function CartaoDecisao({
                     fonte,
                   })}
                 />
-              ) : null}
             </div>
           ) : null}
         </div>
