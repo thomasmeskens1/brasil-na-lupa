@@ -97,12 +97,28 @@ function cortar(t: string, max: number): string {
   return s.length > max ? `${s.slice(0, max - 1).trimEnd()}…` : s;
 }
 
-/** Título oficial (quando não há título simples aprovado): proposição + descrição oficial. */
-export function tituloOficialVotacao(l: Pick<LinhaVotacao, "proposicao" | "descricao">): string {
+/**
+ * Título oficial (quando não há título simples aprovado): a proposição e o começo literal da ementa,
+ * para dizer do que trata o que foi votado (a mesma regra de scripts/coleta/titulos/modelos-votacoes.mjs).
+ * Sem ementa, a descrição oficial da votação.
+ */
+export function tituloOficialVotacao(l: Pick<LinhaVotacao, "proposicao" | "descricao"> & { ementa?: string | null }): string {
   const p = propPorExtenso(l.proposicao);
+  const e = l.ementa?.trim() ? ementaCurta(l.ementa) : "";
+  if (p && e) return `${p}: ${e}`;
   const d = l.descricao ? cortar(l.descricao, 140) : "";
   if (p && d) return `${p}: ${d}`;
   return p ?? (d || "Votação sem proposição informada na fonte");
+}
+
+/** Começo literal da ementa (até 170 caracteres, cortado numa vírgula ou entre palavras). */
+export function ementaCurta(ementa: string): string {
+  const t = ementa.replace(/\s+/g, " ").trim();
+  if (t.length <= 170) return t;
+  const corte = t.slice(0, 170);
+  const virgula = corte.lastIndexOf(", ");
+  const fim = virgula >= 80 ? virgula : corte.lastIndexOf(" ");
+  return `${corte.slice(0, fim > 0 ? fim : 170).replace(/[\s,;:–-]+$/, "")}…`;
 }
 
 export function formaDe(tipo: string | null | undefined): FormaDecisao | null {

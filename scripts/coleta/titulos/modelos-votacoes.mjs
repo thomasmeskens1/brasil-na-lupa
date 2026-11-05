@@ -46,18 +46,57 @@ export function etiquetaVotacao(v) {
   return palavra;
 }
 
-export function subtituloVotacao(v) {
+/** Nome oficial por extenso da proposição ("Projeto de Lei 5815/2025"), ou null. */
+function nomeDaProposicao(v) {
   const p = v.proposicao || {};
   const conhecida = p.sigla && (NOME_EXTENSO[p.sigla] || (v.casa === 'alesp' && p.sigla === 'PLC'));
-  const nome = conhecida && p.numero ? nomeOficial(p.sigla, p.numero, p.ano, v.casa) : (p.titulo || p.identificacao || null);
-  const forma = { nominal: 'votação nominal', simbolica: 'votação simbólica', secreta: 'votação secreta' }[v.tipo] || null;
-  const orgao = v.orgao_nome && !/^plen/i.test(v.orgao_nome) ? v.orgao_nome : (v.casa === 'camara' ? 'Plenário da Câmara dos Deputados' : v.casa === 'senado' ? 'Plenário do Senado Federal' : 'Plenário da Assembleia Legislativa do Estado de São Paulo');
-  return [nome, orgao, forma, dataBR(v.data)].filter(Boolean).join(' · ');
+  return conhecida && p.numero ? nomeOficial(p.sigla, p.numero, p.ano, v.casa) : (p.titulo || p.identificacao || null);
 }
 
-/** Título oficial sem alteração: a descrição oficial do resultado (ou a ementa, se faltar). */
+/** Descrição oficial do resultado da votação, sem os parênteses externos. */
+function descricaoOficial(v) {
+  return limpar(v.descricao || '').replace(/^\((.*)\)\.?$/, '$1');
+}
+
+const MAX_EMENTA = 170;
+
+/**
+ * Começo literal da ementa, para caber no título: até MAX_EMENTA caracteres, cortado numa vírgula
+ * (se houver uma depois do 80º caractere) ou entre palavras, com reticências. Nada é reescrito.
+ */
+export function ementaCurta(ementa) {
+  const t = limpar(ementa || '');
+  if (t.length <= MAX_EMENTA) return t;
+  const corte = t.slice(0, MAX_EMENTA);
+  const virgula = corte.lastIndexOf(', ');
+  const fim = virgula >= 80 ? virgula : corte.lastIndexOf(' ');
+  return `${corte.slice(0, fim > 0 ? fim : MAX_EMENTA).replace(/[\s,;:–-]+$/, '')}…`;
+}
+
+/** O título usa a ementa (nome da proposição + o que ela propõe)? */
+function tituloPelaEmenta(v) {
+  return Boolean(nomeDaProposicao(v) && limpar(v.proposicao?.ementa || ''));
+}
+
+/**
+ * Subtítulo: a descrição oficial do resultado (quando o título traz a ementa, ela diz qual etapa foi
+ * votada: urgência, redação final, o projeto em si), o órgão, a forma e a data.
+ */
+export function subtituloVotacao(v) {
+  const forma = { nominal: 'votação nominal', simbolica: 'votação simbólica', secreta: 'votação secreta' }[v.tipo] || null;
+  const orgao = v.orgao_nome && !/^plen/i.test(v.orgao_nome) ? v.orgao_nome : (v.casa === 'camara' ? 'Plenário da Câmara dos Deputados' : v.casa === 'senado' ? 'Plenário do Senado Federal' : 'Plenário da Assembleia Legislativa do Estado de São Paulo');
+  const primeiro = tituloPelaEmenta(v) ? descricaoOficial(v) || null : nomeDaProposicao(v);
+  return [primeiro, orgao, forma, dataBR(v.data)].filter(Boolean).join(' · ');
+}
+
+/**
+ * Título oficial: o nome da proposição e o começo literal da ementa ("Projeto de Lei 5815/2025:
+ * Institui e cria o Programa Nacional…"), para dizer do que trata o que foi votado. Sem ementa, a
+ * descrição oficial do resultado.
+ */
 export function oficialVotacao(v) {
-  const d = limpar(v.descricao || '').replace(/^\((.*)\)\.?$/, '$1');
-  const titulo = d || limpar(v.proposicao?.ementa || '') || 'Votação';
-  return { titulo, fonte: v.fonte?.url || v.url || null };
+  const fonte = v.fonte?.url || v.url || null;
+  if (tituloPelaEmenta(v)) return { titulo: `${nomeDaProposicao(v)}: ${ementaCurta(v.proposicao.ementa)}`, fonte };
+  const titulo = descricaoOficial(v) || limpar(v.proposicao?.ementa || '') || 'Votação';
+  return { titulo, fonte };
 }

@@ -62,7 +62,7 @@ function propTitulo(v: VotacaoDetalhe): string | null {
 function titulos(v: VotacaoDetalhe) {
   const prop = propTitulo(v);
   return resolverTitulo({
-    tituloOficial: tituloOficialVotacao({ proposicao: prop, descricao: v.descricao ?? "" }),
+    tituloOficial: tituloOficialVotacao({ proposicao: prop, descricao: v.descricao ?? "", ementa: v.proposicao?.ementa }),
     simples: tituloSimplesVotacao(v.casa, v.id),
     subtituloOficial: propPorExtenso(prop),
   });
@@ -136,7 +136,7 @@ export default async function VotacaoPage({ params }: PageProps<"/congresso/vota
 
       <CabecalhoDecisao
         acoes={<AcoesProposta proposta={idVotacaoCongresso(v.casa, v.id)} />}
-        tituloOficial={tituloOficialVotacao({ proposicao: propTitulo(v), descricao: v.descricao ?? "" })}
+        tituloOficial={tituloOficialVotacao({ proposicao: propTitulo(v), descricao: v.descricao ?? "", ementa: v.proposicao?.ementa })}
         simples={tituloSimplesVotacao(v.casa, v.id)}
         subtituloOficial={propPorExtenso(propTitulo(v))}
         caminho={v.casa}
