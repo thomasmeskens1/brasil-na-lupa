@@ -1,0 +1,146 @@
+{
+  "atualizado_em": "2026-11-05T01:55:48.715Z",
+  "ultima_execucao": "2026-11-05T01:48:26.396Z",
+  "uf": "SC",
+  "casa": "alesc",
+  "orgao": "Assembleia Legislativa do Estado de Santa Catarina (ALESC)",
+  "periodo": {
+    "anos": [
+      2026
+    ],
+    "fim": "2026-11-04"
+  },
+  "modo": "incremental",
+  "fontes": [
+    {
+      "titulo": "e-Legis — Processo Legislativo (ALESC)",
+      "url": "https://portalelegis.alesc.sc.gov.br/proposicoes/processo-legislativo",
+      "orgao": "Assembleia Legislativa do Estado de Santa Catarina (ALESC)",
+      "acessado_em": "2026-11-04"
+    },
+    {
+      "titulo": "e-Legis — Sessões Plenárias: Ordem do Dia e Extrato de votação (ALESC)",
+      "url": "https://portalelegis.alesc.sc.gov.br/sessoes-plenarias",
+      "orgao": "Assembleia Legislativa do Estado de Santa Catarina (ALESC)",
+      "acessado_em": "2026-11-04"
+    },
+    {
+      "titulo": "Deputados — portal da ALESC",
+      "url": "https://www.alesc.sc.gov.br/",
+      "orgao": "Assembleia Legislativa do Estado de Santa Catarina (ALESC)",
+      "acessado_em": "2026-11-04"
+    },
+    {
+      "titulo": "Legislação SC — leis e decretos do Executivo (ALESC)",
+      "url": "https://leis.alesc.sc.gov.br",
+      "orgao": "Assembleia Legislativa do Estado de Santa Catarina (ALESC)",
+      "acessado_em": "2026-11-04"
+    }
+  ],
+  "robots": {
+    "www.alesc.sc.gov.br": {
+      "url": "https://www.alesc.sc.gov.br/robots.txt",
+      "status": 200,
+      "lido_em": "2026-11-05T01:48:26.399Z",
+      "crawl_delay_s": null,
+      "intervalo_usado_s": 2,
+      "disallow": [
+        "/?s=",
+        "/page/*/?s=",
+        "/search/",
+        "/wp-json/",
+        "/?rest_route=",
+        "/guia-botanico/"
+      ],
+      "observacao": "robots.txt lido e obedecido"
+    },
+    "leis.alesc.sc.gov.br": {
+      "url": "https://leis.alesc.sc.gov.br/robots.txt",
+      "status": 404,
+      "lido_em": "2026-11-05T01:48:28.509Z",
+      "crawl_delay_s": null,
+      "intervalo_usado_s": 2,
+      "disallow": [],
+      "observacao": "sem robots.txt (HTTP 404): nenhuma restrição declarada (RFC 9309)"
+    },
+    "portalelegis.alesc.sc.gov.br": {
+      "url": "https://portalelegis.alesc.sc.gov.br/robots.txt",
+      "status": 404,
+      "lido_em": "2026-11-05T01:48:28.508Z",
+      "crawl_delay_s": null,
+      "intervalo_usado_s": 2,
+      "disallow": [],
+      "observacao": "sem robots.txt (HTTP 404): nenhuma restrição declarada (RFC 9309)"
+    }
+  },
+  "execucao": {
+    "requisicoes": 297,
+    "falhas": []
+  },
+  "contagens": {
+    "parlamentares": 40,
+    "proposicoes_por_ano": {
+      "2025": 3,
+      "2026": 737
+    },
+    "proposicoes_na_fonte_por_tipo": {
+      "2026": {
+        "Medida Provisória": 2,
+        "Mensagem de Veto": 39,
+        "Projeto de Conversão em Lei de Medida Provisória": 2,
+        "Projeto de Decreto Legislativo": 2,
+        "Projeto de Lei": 663,
+        "Projeto de Lei Complementar": 23,
+        "Projeto de Resolução": 2,
+        "Proposta de Emenda Constitucional": 3,
+        "Proposta de Sustação de Ato": 4
+      }
+    },
+    "tramitacoes_lidas_nesta_execucao": 40,
+    "tramitacoes_pendentes": 640,
+    "sessoes_por_ano": {
+      "2026": 149
+    },
+    "sessoes_lidas_nesta_execucao": 60,
+    "sessoes_pendentes": 88,
+    "votacoes_por_ano": {
+      "2026": 601
+    },
+    "votacoes_nominais": 17,
+    "votacoes_nominais_com_votos": 17,
+    "votacoes_simbolicas": 584,
+    "extratos_lidos_nesta_execucao": 17,
+    "normas_por_ano": {
+      "2026": 363
+    },
+    "normas_na_fonte": {
+      "legislativo-2026": 436,
+      "executivo-2026": 434
+    },
+    "fichas_de_leis_lidas_nesta_execucao": 60,
+    "leis_sem_ficha": 67
+  },
+  "normas_cursor": {
+    "legislativo": {
+      "2026": {
+        "pagina": 39,
+        "completo": false
+      }
+    },
+    "executivo": {
+      "2026": {
+        "pagina": 38,
+        "completo": false
+      }
+    }
+  },
+  "observacoes": [
+    "Fonte: páginas HTML públicas da ALESC (não há API de processo legislativo). Portal (www.alesc.sc.gov.br): o robots.txt proíbe /wp-json/, /?rest_route=, /search/ e /?s=, que não são usados; só a página inicial é lida. e-Legis e Legislação SC não publicam robots.txt (HTTP 404: nenhuma restrição declarada). Intervalo mínimo de 2 s entre requisições ao mesmo host.",
+    "Votações: cada item votado na Ordem do Dia de uma sessão plenária, com o resultado e a forma como a fonte escreve (\"Votação simbólica\" ou \"Votação nominal\"). Na votação simbólica não há voto individual. Na nominal, o \"Extrato de votação\" traz o nome e o voto de cada deputado; o extrato não publica totais, então o placar é a contagem dos nomes, conferida antes de gravar (cada cartão com um nome e um voto; identificação igual à da Ordem do Dia). Extrato que não passa na conferência não é gravado.",
+    "Partido na data da votação: Informação não disponível em fonte oficial. O extrato traz só o nome; o partido atual da página de deputados não é usado para votações passadas.",
+    "O sentido do \"Sim\" em votação de veto (manter ou derrubar) não está escrito no extrato; não é deduzido.",
+    "Deputados: os 40 cartões da página inicial do portal da ALESC (nome, partido e foto como publicados hoje). Um voto ou autoria só é ligado ao deputado quando o nome é idêntico ao do cartão.",
+    "Proposições: projetos de lei, de lei complementar, de decreto legislativo e de resolução, propostas de emenda à Constituição, mensagens de veto, medidas provisórias, projetos de conversão de medida provisória e propostas de sustação de ato, com entrada no ano (filtro da própria fonte, incluindo as arquivadas). Situação e setor atual vêm da lista; a tramitação completa é lida aos poucos (SC_MAX_TRAMITACOES por execução). Ofícios, abaixo-assinados, anteprojetos, representações e sugestões legislativas não são coletados.",
+    "Normas: Legislação SC, base oficial da ALESC. Leis: número e data do Diário Oficial do Estado e proposição de origem vêm da ficha de cada lei (lida aos poucos). Decretos do Governador: título, data, ementa e início de vigência como publicados; a ficha do decreto não traz o número do Diário Oficial. A própria base avisa que os textos têm caráter informativo e não substituem o Diário Oficial do Estado (DOE-SC)."
+  ]
+}
