@@ -1,0 +1,817 @@
+{
+ "atualizado_em": "2026-11-05T14:30:28.357Z",
+ "municipio": {
+  "id": "diamante-doeste",
+  "nome": "Diamante D'Oeste",
+  "uf": "PR",
+  "codigo_ibge": "4107157"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2011,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 10,
+  "pareceres": 10,
+  "com_parecer_em_fonte_aberta": 10,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 10,
+  "pdf_lido": 10,
+  "sem_exercicio_na_fonte": 0
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "3b7fb76a75413d34e4541e63dccfa3cab923f7d498fc63703a156f2f00d63a4c",
+   "atualizado_na_fonte": "26/06/2025 14:58:07"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2025-11-000200091",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 378/2025 — contas do Prefeito de Diamante D'Oeste, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "378",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 378/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "189883/2025",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2025-11-10",
+   "data_publicacao": "2025-11-24",
+   "publicacao_literal": "DETC nº 3573",
+   "entidade_literal": "MUNICÍPIO DE DIAMANTE D'OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor GUILHERME PIVATTO JUNIOR, na qualidade de prefeito do MUNICÍPIO DE DIAMANTE D'OESTE, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Diamante D'Oeste",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 378/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/11/000200091.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "96dfa3bcc54d4e5a5a4146b1fcef84825d680cbcd52e79eb9008f205db24e3c1",
+    "paginas_lidas": 1,
+    "total_paginas": 47,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor GUILHERME PIVATTO JUNIOR, na qualidade de prefeito do MUNICÍPIO DE DIAMANTE D'OESTE, relativas ao exercício de 2024. b. RESSALVAR as contas em virtude de: i. baixo desempenho evidenciado na avaliação da atuação governamental na área da Assistência Social. Após o trânsito em julgado da deliberação, encaminhem-se os autos ao Gabinete da Presidência para as providências contidas no § 6º do artigo 217-A do Regimento Interno, à Coordenadoria de Medidas Executórias para as anotações pertinentes e, por fim, à Diretoria de Protocolo para encerrament […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor GUILHERME PIVATTO JUNIOR, na qualidade de prefeito do MUNICÍPIO DE DIAMANTE D'OESTE, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Diamante D'Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2025-1-000196927",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 452/2024 — contas do Prefeito de Diamante D'Oeste, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "452",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 452/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "213136/2024",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2024-12-09",
+   "data_publicacao": "2025-01-14",
+   "publicacao_literal": "DETC nº 3363",
+   "entidade_literal": "MUNICÍPIO DE DIAMANTE D'OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor GUILHERME PIVATTO JUNIOR, na qualidade de prefeito do MUNICÍPIO DE DIAMANTE D'OESTE, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Diamante D'Oeste",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 452/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/1/000196927.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "2fccd91990d18b715f252f8f243def318f23e57bb1391cbf127c2d6bd2842025",
+    "paginas_lidas": 1,
+    "total_paginas": 42,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade: Considerando os fatos expostos no item de fundamentação, VOTO, com respaldo no artigo 1º, I, da Lei Complementar Estadual n.º 113/2005 e em observância ao artigo 217-A, caput, do Regimento Interno, no sentido de: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor GUILHERME PIVATTO JUNIOR, na qualidade de prefeito do MUNICÍPIO DE DIAMANTE D'OESTE, relativas ao exercício de 2023. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Gestão Municipal, para registro em sistema da alteração da nota contida no item “Transparência e Relacionamento Público”. Em seguida, à Coordenadoria de Moni […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor GUILHERME PIVATTO JUNIOR, na qualidade de prefeito do MUNICÍPIO DE DIAMANTE D'OESTE, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Diamante D'Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-11-00381135",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 42/2023 — contas do Prefeito de Diamante D'Oeste, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "42",
+    "ano": "2023",
+    "titulo_oficial": "Parecer Prévio 42/2023"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "206896/2023",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2023-11-13",
+   "data_publicacao": "2023-11-29",
+   "publicacao_literal": "DETC nº 3112",
+   "entidade_literal": "MUNICÍPIO DE DIAMANTE D'OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) GUILHERME PIVATTO JUNIOR, na qualidade de prefeito(a) do MUNICÍPIO DE DIAMANTE D'OESTE, relativas ao exercício de 2022.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Diamante D'Oeste",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 42/2023 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/11/00381135.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "eaf0a6cb3f0b67db55473f254f329718849ba0453512cc57f7bb39c1b99d93cb",
+    "paginas_lidas": 1,
+    "total_paginas": 34,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) GUILHERME PIVATTO JUNIOR, na qualidade de prefeito(a) do MUNICÍPIO DE DIAMANTE D'OESTE, relativas ao exercício de 2022. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, §6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) GUILHERME PIVATTO JUNIOR, na qualidade de prefeito(a) do MUNICÍPIO DE DIAMANTE D'OESTE, relativas ao exercício de 2022.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Diamante D'Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2022-12-00371225",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 231/2022 da Secretaria Primeira Câmara — contas do Prefeito de Diamante D'Oeste, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "231",
+    "ano": "2022",
+    "titulo_oficial": "Acórdão de Parecer Prévio 231/2022 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "214259/2022",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2022-11-28",
+   "data_publicacao": "2022-12-13",
+   "publicacao_literal": "DETC nº 2891",
+   "entidade_literal": "MUNICÍPIO DE DIAMANTE D'OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "emitir Parecer Prévio recomendando a regularidade das contas do Prefeito Municipal de Diamante D’Oeste, referentes ao exercício de 2021.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Diamante D'Oeste",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 231/2022 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2022/12/00371225.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "5c67b67e70a5075bbf959924b59588a97fcc2d9ac9488d01ba3bb2b247d47377",
+    "paginas_lidas": 1,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: - emitir Parecer Prévio recomendando a regularidade das contas do Prefeito Municipal de Diamante D’Oeste, referentes ao exercício de 2021. Após o trânsito em julgado, encaminhar os autos ao Gabinete da Presidência para comunicação da deliberação ao Poder Legislativo Municipal. Na sequência, determinar o encerramento do feito, em conformidade com o art. 398, § 1º, do Regimento Interno, e seu arquivamento junto à Diretoria de Protocolo.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando a regularidade das contas do Prefeito Municipal de Diamante D’Oeste, referentes ao exercício de 2021.",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2022,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Diamante D'Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-4-00373337",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 127/2023 da Secretaria Segunda Câmara — contas do Prefeito de Diamante D'Oeste, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "127",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 127/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "182345/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "AUGUSTINHO ZUCCHI",
+   "data_julgamento": "2023-04-03",
+   "data_publicacao": "2023-04-17",
+   "publicacao_literal": "DETC nº 2961",
+   "entidade_literal": "MUNICÍPIO DE DIAMANTE D'OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE COM RESSALVAS",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a REGULARIDADE COM RESSALVAS das contas do Município de Diamante D’ Oeste, relativas exercício de 2020, de responsabilidade do Sr. Guilherme Pivatto Junior, consistindo as ressalvas na ausência do devido procedimento de ateste e liquidação de notas fiscais e contabilização equivocada das despesas com publicidade institucional realizadas no período que antecede as eleições;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Diamante D'Oeste",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 127/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/4/00373337.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "b27b5cd8cc3817ac3813e5e7e2216d67cae2461a9150e29f73b32e3abf993538",
+    "paginas_lidas": 2,
+    "total_paginas": 6,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro AUGUSTINHO ZUCCHI, por unanimidade, em: I- Emitir Parecer Prévio recomendando a REGULARIDADE COM RESSALVAS das contas do Município de Diamante D’ Oeste, relativas exercício de 2020, de responsabilidade do Sr. Guilherme Pivatto Junior, consistindo as ressalvas na ausência do devido procedimento de ateste e liquidação de notas fiscais e contabilização equivocada das despesas com publicidade institucional realizadas no período que antecede as eleições; SEGUNDA CÂMARA II- encaminhar, após o trânsito em julgado do presente, os autos à Coordenadoria de Monitoramento e Execuções (CMEX) para anotações e providências necessárias; e III- encaminhar, após, ao Gabinete da Presidên […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a REGULARIDADE COM RESSALVAS das contas do Município de Diamante D’ Oeste, relativas exercício de 2020, de responsabilidade do Sr. Guilherme Pivatto Junior, consistindo as ressalvas na ausência do devido procedimento de ateste e liquidação de notas fiscais e contabilização equivocada das despesas com publicidade institucional realizadas no período que antecede as eleições;",
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE COM RESSALVAS",
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Diamante D'Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-9-00350260",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 447/2020 da Secretaria Primeira Câmara — contas do Prefeito de Diamante D'Oeste, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "447",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 447/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "220367/2020",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2020-09-14",
+   "data_publicacao": "2020-09-24",
+   "publicacao_literal": "DETC nº 2388",
+   "entidade_literal": "MUNICÍPIO DE DIAMANTE D'OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio recomendado a regularidade",
+    "conclusao_literal": "emitir parecer prévio recomendado a regularidade das contas do Sr. Guilherme Pivatto Junior, como Prefeito de Diamante D’Oeste, no exercício de 2019, com base no disposto no art. 16, I, da LC/PR 113/05;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Diamante D'Oeste",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 447/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/9/00350260.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "9b7c4e8aa0f5c78076b94e905d9ca8431f8ffb6bab8b865ce131488e71943f00",
+    "paginas_lidas": 1,
+    "total_paginas": 2,
+    "deliberacao": "ACORDAM Os membros da PRIMEIRA CÂMARA do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: I. emitir parecer prévio recomendado a regularidade das contas do Sr. Guilherme Pivatto Junior, como Prefeito de Diamante D’Oeste, no exercício de 2019, com base no disposto no art. 16, I, da LC/PR 113/05; II. determinar o encerramento do Processo, após o trânsito em julgado da decisão.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir parecer prévio recomendado a regularidade das contas do Sr. Guilherme Pivatto Junior, como Prefeito de Diamante D’Oeste, no exercício de 2019, com base no disposto no art. 16, I, da LC/PR 113/05;",
+    "conclusao": "parecer prévio recomendado a regularidade",
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Diamante D'Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-3-00344250",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 86/2020 da Secretaria Segunda Câmara — contas do Prefeito de Diamante D'Oeste, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "86",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 86/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "199279/2019",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2020-03-17",
+   "data_publicacao": "2020-03-25",
+   "publicacao_literal": "DETC nº 2266",
+   "entidade_literal": "MUNICÍPIO DE DIAMANTE D'OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade com ressalva",
+    "conclusao_literal": "emitir Parecer Prévio recomendando a regularidade com ressalva das contas do Município de Diamante do Oeste, referentes ao exercício financeiro de 2018, de responsabilidade do Prefeito Municipal, Senhor Guilherme Pivatto Junior, nos termos dos artigos 1.º, inciso I,10 e 16, inciso II,11 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Diamante D'Oeste",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 86/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/3/00344250.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "c16d066916aa7b727cd6a4846f949d62c7c3fa8a70f3e3c937cc3a6056a54994",
+    "paginas_lidas": 2,
+    "total_paginas": 5,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I. emitir Parecer Prévio recomendando a regularidade com ressalva das contas do Município de Diamante do Oeste, referentes ao exercício financeiro de 2018, de responsabilidade do Prefeito Municipal, Senhor Guilherme Pivatto Junior, nos termos dos artigos 1.º, inciso I,10 e 16, inciso II,11 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise: (a) resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS; e (b) Relatório de Controle Interno sem os conteúdos mínimos prescritos pelo Tribunal; II. remeter os autos, após […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando a regularidade com ressalva das contas do Município de Diamante do Oeste, referentes ao exercício financeiro de 2018, de responsabilidade do Prefeito Municipal, Senhor Guilherme Pivatto Junior, nos termos dos artigos 1.º, inciso I,10 e 16, inciso II,11 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise:",
+    "conclusao": "Parecer Prévio recomendando a regularidade com ressalva",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício financeiro de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Diamante D'Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-2-00334394",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 9/2019 da Secretaria Primeira Câmara — contas do Prefeito de Diamante D'Oeste, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "9",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 9/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "262112/2018",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2019-02-04",
+   "data_publicacao": "2019-02-08",
+   "publicacao_literal": "DETC nº 1996",
+   "entidade_literal": "MUNICÍPIO DE DIAMANTE D'OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando o julgamento pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando o julgamento pela REGULARIDADE das contas do Poder Executivo do Município de Diamante do Oeste, referente ao exercício financeiro de 2017, de responsabilidade do senhor Guilherme Pivatto Junior, RESSALVANDO:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Diamante D'Oeste",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 9/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/2/00334394.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "089efa22f32fd7594e42835547a7f32817381aaa4daa1c23b3e37ff3e16e2f5f",
+    "paginas_lidas": 2,
+    "total_paginas": 5,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I – Emitir Parecer Prévio recomendando o julgamento pela REGULARIDADE das contas do Poder Executivo do Município de Diamante do Oeste, referente ao exercício financeiro de 2017, de responsabilidade do senhor Guilherme Pivatto Junior, RESSALVANDO: (i) o atraso na publicação do Relatório Resumido da Execução Orçamentária do primeiro bimestre do exercício 2017; (ii) o atraso na publicação do Relatório Resumido da Execução Orçamentária do segundo 2 Art. 217-A. Pelo parecer prévio o Tribunal manifesta seu juízo acerca das contas de governo prestadas pelos Chefes do Poder Executivo Estadual e Municipal, que serão encaminhadas, ap […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando o julgamento pela REGULARIDADE das contas do Poder Executivo do Município de Diamante do Oeste, referente ao exercício financeiro de 2017, de responsabilidade do senhor Guilherme Pivatto Junior, RESSALVANDO:",
+    "conclusao": "Parecer Prévio recomendando o julgamento pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício financeiro de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Diamante D'Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-11-00352894",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 614/2020 da Secretaria Primeira Câmara — contas do Prefeito de Diamante D'Oeste, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "614",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 614/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "283183/2017",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2020-11-09",
+   "data_publicacao": "2020-11-18",
+   "publicacao_literal": "DETC nº 2425",
+   "entidade_literal": "MUNICÍPIO DE DIAMANTE D'OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando o julgamento pela IRREGULARIDADE",
+    "conclusao_literal": "emitir Parecer Prévio recomendando o julgamento pela IRREGULARIDADE das contas do senhor Renato Antônio Pereira, relativas ao exercício financeiro de 2016, em razão de contrair despesas nos últimos dois quadrimestres que antecedem o pleito eleitoral que tenham parcelas a serem pagas no exercício seguinte, sem que haja disponibilidade de caixa, RESSALVANDO i) resultado financeiro deficitário de 3,01% nas fontes não vinculadas;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Diamante D'Oeste",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 614/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/11/00352894.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "5d18d9174f7e686ae8a63613c074ffc8d47cc3c568e8cac62d0c3d5914bf600b",
+    "paginas_lidas": 3,
+    "total_paginas": 15,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I – emitir Parecer Prévio recomendando o julgamento pela IRREGULARIDADE das contas do senhor Renato Antônio Pereira, relativas ao exercício financeiro de 2016, em razão de contrair despesas nos últimos dois quadrimestres que antecedem o pleito eleitoral que tenham parcelas a serem pagas no exercício seguinte, sem que haja disponibilidade de caixa, RESSALVANDO i) resultado financeiro deficitário de 3,01% nas fontes não vinculadas; ii) contrair despesas nos últimos dois quadrimestres que antecedem o pleito eleitoral que tenha parcelas a serem pagas no exercício seguinte sem que haja disponibilidade de caixa; iii) despesas com […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando o julgamento pela IRREGULARIDADE das contas do senhor Renato Antônio Pereira, relativas ao exercício financeiro de 2016, em razão de contrair despesas nos últimos dois quadrimestres que antecedem o pleito eleitoral que tenham parcelas a serem pagas no exercício seguinte, sem que haja disponibilidade de caixa, RESSALVANDO i) resultado financeiro deficitário de 3,01% nas fontes não vinculadas;",
+    "conclusao": "Parecer Prévio recomendando o julgamento pela IRREGULARIDADE",
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício financeiro de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Diamante D'Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-10-00341123",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 419/2019 da Secretaria Segunda Câmara — contas do Prefeito de Diamante D'Oeste, exercício 2011",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "419",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 419/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "172570/2012",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2019-10-15",
+   "data_publicacao": "2019-10-30",
+   "publicacao_literal": "DETC nº 2175",
+   "entidade_literal": "MUNICÍPIO DE DIAMANTE D'OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "conclusao_literal": "emitir, na forma do artigo 23 da Lei Complementar n.° 113/2005, Parecer Prévio recomendando a irregularidade das contas da Prefeita do Município de Diamante do Oeste, exercício de 2011, senhora Inês Gomes, CPF 659.213.809-20, em razão da Legalidade das Alterações Orçamentárias - Abertura de créditos adicionais acima do limite autorizado;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Diamante D'Oeste",
+    "exercicio": "2011",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 419/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/10/00341123.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "8a25fc7bb6e132c168f4c5fa7316642fe334bc89c830072b85ddf4e6a3fbfe61",
+    "paginas_lidas": 2,
+    "total_paginas": 26,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: 1) emitir, na forma do artigo 23 da Lei Complementar n.° 113/2005, Parecer Prévio recomendando a irregularidade das contas da Prefeita do Município de Diamante do Oeste, exercício de 2011, senhora Inês Gomes, CPF 659.213.809-20, em razão da Legalidade das Alterações Orçamentárias - Abertura de créditos adicionais acima do limite autorizado; 2) apor ressalva em razão da Remuneração dos Agentes Políticos – Recebimento acima do valor devido; 3) determinar a juntada dos documentos apresentados às peças n.º 154 até n.º 156 dos presentes autos, ao Processo de Prestação de Contas de Transferência n.º 333933/13, que analisa o Termo […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir, na forma do artigo 23 da Lei Complementar n.° 113/2005, Parecer Prévio recomendando a irregularidade das contas da Prefeita do Município de Diamante do Oeste, exercício de 2011, senhora Inês Gomes, CPF 659.213.809-20, em razão da Legalidade das Alterações Orçamentárias - Abertura de créditos adicionais acima do limite autorizado;",
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "exercicio": {
+     "ano": 2011,
+     "trecho": "exercício de 2011"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Diamante D'Oeste não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [],
+ "acordaos_relacionados": []
+}

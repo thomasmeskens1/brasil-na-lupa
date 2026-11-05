@@ -1,0 +1,732 @@
+{
+ "atualizado_em": "2026-11-05T14:29:01.082Z",
+ "municipio": {
+  "id": "corbelia",
+  "nome": "Corbélia",
+  "uf": "PR",
+  "codigo_ibge": "4106308"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2017,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 8,
+  "pareceres": 9,
+  "com_parecer_em_fonte_aberta": 8,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 8,
+  "pdf_lido": 8,
+  "sem_exercicio_na_fonte": 1
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "3b7fb76a75413d34e4541e63dccfa3cab923f7d498fc63703a156f2f00d63a4c",
+   "atualizado_na_fonte": "26/06/2025 14:58:07"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2025-12-000200272",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 403/2025 — contas do Prefeito de Corbélia, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "403",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 403/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "190075/2025",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2025-11-24",
+   "data_publicacao": "2025-12-03",
+   "publicacao_literal": "DETC nº 3580",
+   "entidade_literal": "MUNICÍPIO DE CORBÉLIA",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela IRREGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela IRREGULARIDADE das contas do senhor GIOVANI MIGUEL WOLF HNATUW, na qualidade de prefeito do MUNICÍPIO DE CORBÉLIA, relativas ao exercício de 2024, em razão de:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Corbélia",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 403/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/12/000200272.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "a6d0d32409eecd79fa330b03135731b1ff02715b7a7dd96c3fec603f169c7793",
+    "paginas_lidas": 1,
+    "total_paginas": 49,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: a. Emitir Parecer Prévio pela IRREGULARIDADE das contas do senhor GIOVANI MIGUEL WOLF HNATUW, na qualidade de prefeito do MUNICÍPIO DE CORBÉLIA, relativas ao exercício de 2024, em razão de: i. Resultado Financeiro de fontes não vinculadas a programas, convênios, operações de crédito e ao Regime Próprio de Previdência Social (RPPS), em descumprimento ao disposto nos artigos 1º, § 1º, da LRF e 48, alínea b, da Lei Federal n.º 4.320/64. ii. Obrigações de Despesas contraídas nos últimos dois quadrimestres do mandato, em descumprimento ao disposto no artigo 42 da LRF. iii. aportes para cobertura do déficit atuarial em montante inferior […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela IRREGULARIDADE das contas do senhor GIOVANI MIGUEL WOLF HNATUW, na qualidade de prefeito do MUNICÍPIO DE CORBÉLIA, relativas ao exercício de 2024, em razão de:",
+    "conclusao": "Parecer Prévio pela IRREGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Corbélia não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2025-6-000198003",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 173/2025 — contas do Prefeito de Corbélia, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "173",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 173/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "209783/2024",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2025-05-26",
+   "data_publicacao": "2025-06-11",
+   "publicacao_literal": "DETC nº 3461",
+   "entidade_literal": "MUNICÍPIO DE CORBÉLIA",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) GIOVANI MIGUEL WOLF HNATUW, na qualidade de prefeito(a) do MUNICÍPIO DE CORBÉLIA, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Corbélia",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 173/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/6/000198003.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "00ded07aa52b46d31cdd61541a6c9cfa1a9c45ec475eb82084a2771b8a7bbc07",
+    "paginas_lidas": 1,
+    "total_paginas": 47,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: Considerando os fatos expostos no item de fundamentação, VOTO, com respaldo no artigo 1º, I, da Lei Complementar Estadual n.º 113/2005 e em observância ao artigo 217-A, caput, do Regimento Interno, no sentido de: a. Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) GIOVANI MIGUEL WOLF HNATUW, na qualidade de prefeito(a) do MUNICÍPIO DE CORBÉLIA, relativas ao exercício de 2023. b. RESSALVAR as contas em virtude de: i. aportes para cobertura do déficit atuarial em montante inferior ao previsto no resultado de avaliação atuarial, resultando em descumprimento do disposto no artigo 9º da Lei Federal n.º 9.7 […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) GIOVANI MIGUEL WOLF HNATUW, na qualidade de prefeito(a) do MUNICÍPIO DE CORBÉLIA, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Corbélia não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2025-2-000196397",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 59/2025 — contas do Prefeito de Corbélia, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "59",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 59/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "219149/2023",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2025-02-17",
+   "data_publicacao": "2025-02-26",
+   "publicacao_literal": "DETC nº 3394",
+   "entidade_literal": "MUNICÍPIO DE CORBÉLIA",
+   "resumo_literal": null,
+   "indexacao_literal": "Irregularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela IRREGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela IRREGULARIDADE das contas do(a) senhor(a) GIOVANI MIGUEL WOLF HNATUW, na qualidade de prefeito(a) do MUNICÍPIO DE CORBÉLIA, relativas ao exercício de 2022, em razão de:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Corbélia",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 59/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/2/000196397.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "f88ca02cae98cab142370b1aad41fb83a84697813c76a063f5178baa3d193bb8",
+    "paginas_lidas": 1,
+    "total_paginas": 35,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade: a. Emitir Parecer Prévio pela IRREGULARIDADE das contas do(a) senhor(a) GIOVANI MIGUEL WOLF HNATUW, na qualidade de prefeito(a) do MUNICÍPIO DE CORBÉLIA, relativas ao exercício de 2022, em razão de: i. descumprimento dos artigos 1º, § 1º, da LRF e 48, alínea b, da Lei Federal n.º 4.320/64, conforme indicado na análise do resultado orçamentário e financeiro, em razão da obtenção de resultados orçamentário e financeiro negativos de fontes não vinculadas. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela IRREGULARIDADE das contas do(a) senhor(a) GIOVANI MIGUEL WOLF HNATUW, na qualidade de prefeito(a) do MUNICÍPIO DE CORBÉLIA, relativas ao exercício de 2022, em razão de:",
+    "conclusao": "Parecer Prévio pela IRREGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Corbélia não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-5-00374190",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 188/2023 da Secretaria Segunda Câmara — contas do Prefeito de Corbélia, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "188",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 188/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "221085/2022",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2023-05-02",
+   "data_publicacao": "2023-05-16",
+   "publicacao_literal": "DETC nº 2980",
+   "entidade_literal": "MUNICÍPIO DE CORBÉLIA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE",
+    "conclusao_literal": "emitir Parecer Prévio recomendando a REGULARIDADE das contas do Poder Executivo do Município de Corbélia referente ao exercício financeiro de 2021, de responsabilidade do senhor Giovani Miguel Wolf Hnatuw;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Corbélia",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 188/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/5/00374190.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "8e5e25799935b2f0998d7af8caea669e9f439735ffa46474f1ddea812cec0552",
+    "paginas_lidas": 1,
+    "total_paginas": 4,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I – emitir Parecer Prévio recomendando a REGULARIDADE das contas do Poder Executivo do Município de Corbélia referente ao exercício financeiro de 2021, de responsabilidade do senhor Giovani Miguel Wolf Hnatuw; e II – determinar, depois de transitada em julgado a decisão, a remessa dos autos ao Gabinete da Presidência para comunicação ao Poder Legislativo do Município de Corbélia, nos termos do art. 217-A, § 6º, do Regimento Interno7; na sequência, com fundamento no art. 398, § 1º, do Regimento Interno8, o encerramento do processo e o encaminhamento dos autos à Diretoria de Protocolo para arquivamento do feito9.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando a REGULARIDADE das contas do Poder Executivo do Município de Corbélia referente ao exercício financeiro de 2021, de responsabilidade do senhor Giovani Miguel Wolf Hnatuw;",
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Corbélia não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2022-8-00368359",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 155/2022 da Secretaria Primeira Câmara — contas do Prefeito de Corbélia, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "155",
+    "ano": "2022",
+    "titulo_oficial": "Acórdão de Parecer Prévio 155/2022 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "253331/2021",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2022-08-08",
+   "data_publicacao": "2022-08-19",
+   "publicacao_literal": "DETC nº 2818",
+   "entidade_literal": "MUNICÍPIO DE CORBÉLIA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "emitir Parecer Prévio recomendando a regularidade das contas do Prefeito do Município de Corbélia, referente ao exercício de 2020, com ressalvas em razão de contabilização equivocada de despesas com publicidade e regularização de impropriedades na fase de instrução do processo, quais sejam, “obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja disponibilidade de caixa, conforme critérios fixados no Prejulgado 15” e “o Relatório do Controle Interno encaminhado não apresenta os conteúdos mínimos prescritos pelo Tribunal”;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Corbélia",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 155/2022 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2022/8/00368359.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "e78df029d504ac1f13aa9b7237751bcc70ffefb64a98a159f6459482602cf705",
+    "paginas_lidas": 2,
+    "total_paginas": 7,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I - emitir Parecer Prévio recomendando a regularidade das contas do Prefeito do Município de Corbélia, referente ao exercício de 2020, com ressalvas em razão de contabilização equivocada de despesas com publicidade e regularização de impropriedades na fase de instrução do processo, quais sejam, “obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja disponibilidade de caixa, conforme critérios fixados no Prejulgado 15” e “o Relatório do Controle Interno encaminhado não apresenta os conteúdos mínimos prescritos pelo Tribunal”; II - após o tr […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando a regularidade das contas do Prefeito do Município de Corbélia, referente ao exercício de 2020, com ressalvas em razão de contabilização equivocada de despesas com publicidade e regularização de impropriedades na fase de instrução do processo, quais sejam, “obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja disponibilidade de caixa, conforme critérios fixados no Prejulgado 15” e “o Relatório do Controle Interno encaminhado não apresenta os conteúdos mínimos prescritos pelo Tribunal”;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2022,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Corbélia não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-10-00350776",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 489/2020 da Secretaria Primeira Câmara — contas do Prefeito de Corbélia, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "489",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 489/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "276605/2020",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2020-09-28",
+   "data_publicacao": "2020-10-09",
+   "publicacao_literal": "DETC nº 2399",
+   "entidade_literal": "MUNICÍPIO DE CORBÉLIA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio recomendado a regularidade",
+    "conclusao_literal": "emitir parecer prévio recomendado a regularidade das contas do Sr. Giovani Miguel Wolf Hnatuw como Prefeito de Corbélia, no exercício de 2019, com base no disposto no art. 16, I, da LC/PR 113/05;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Corbélia",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 489/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/10/00350776.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "c75a9021bd3a08c9393efaa171a41ac25022bd2e095b5cacfcb55805f2ad6a5d",
+    "paginas_lidas": 1,
+    "total_paginas": 2,
+    "deliberacao": "ACORDAM Os membros da PRIMEIRA CÂMARA do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: I. emitir parecer prévio recomendado a regularidade das contas do Sr. Giovani Miguel Wolf Hnatuw como Prefeito de Corbélia, no exercício de 2019, com base no disposto no art. 16, I, da LC/PR 113/05; II. determinar o encerramento do Processo, após o trânsito em julgado da decisão.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir parecer prévio recomendado a regularidade das contas do Sr. Giovani Miguel Wolf Hnatuw como Prefeito de Corbélia, no exercício de 2019, com base no disposto no art. 16, I, da LC/PR 113/05;",
+    "conclusao": "parecer prévio recomendado a regularidade",
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Corbélia não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-9-00339619",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 226/2019 da Secretaria Segunda Câmara — contas do Prefeito de Corbélia, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "226",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 226/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "200749/2019",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2019-08-27",
+   "data_publicacao": "2019-09-10",
+   "publicacao_literal": "DETC nº 2140",
+   "entidade_literal": "MUNICÍPIO DE CORBÉLIA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "emitir, com fundamento no artigo 1.º, inciso I5 e artigo 16, inciso I6, da Lei Complementar Estadual n.º 113/2005, Parecer Prévio recomendando a regularidade das contas do Município de Corbélia, referentes ao exercício de 2018;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Corbélia",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 226/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/9/00339619.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "338daf3318aaf092be68eeb06b84abd97d6f0cb08f9fb0bbeede0ee17595bb1d",
+    "paginas_lidas": 2,
+    "total_paginas": 4,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I. emitir, com fundamento no artigo 1.º, inciso I5 e artigo 16, inciso I6, da Lei Complementar Estadual n.º 113/2005, Parecer Prévio recomendando a regularidade das contas do Município de Corbélia, referentes ao exercício de 2018; I. encaminhar os autos ao Gabinete da Presidência para comunicação da deliberação ao Poder Legislativo Municipal após o trânsito em julgado. Autorizar, na sequência, o encerramento do feito, em conformidade com o 3 Regimento Interno: “Art. 217-A. Pelo parecer prévio o Tribunal manifesta seu juízo acerca das contas de governo prestadas pelos Chefes do Poder Executivo Estadual e Municipal, que serão enca […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir, com fundamento no artigo 1.º, inciso I5 e artigo 16, inciso I6, da Lei Complementar Estadual n.º 113/2005, Parecer Prévio recomendando a regularidade das contas do Município de Corbélia, referentes ao exercício de 2018;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Corbélia não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-4-00336002",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 94/2019 da Secretaria Primeira Câmara — contas do Prefeito de Corbélia, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "94",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 94/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "277500/2018",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2019-04-15",
+   "data_publicacao": "2019-04-25",
+   "publicacao_literal": "DETC nº 2045",
+   "entidade_literal": "MUNICÍPIO DE CORBÉLIA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio pela regularidade",
+    "conclusao_literal": "expedir parecer prévio pela regularidade das contas do MUNICÍPIO DE CORBÉLIA, CNPJ 76.208.826/0001-02, relativa ao exercício financeiro de 2017, de responsabilidade do Sr. GIOVANI MIGUEL WOLF HNATUW, CPF 016.549.529-40, com base no disposto no art. 16, I, da LC/PR 113/05;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Corbélia",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 94/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/4/00336002.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "91ffab677388495320264118ecd69569b57fd20201b68c71998b938135af8b98",
+    "paginas_lidas": 1,
+    "total_paginas": 4,
+    "deliberacao": "ACORDAM Os membros da PRIMEIRA CÂMARA do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: I. expedir parecer prévio pela regularidade das contas do MUNICÍPIO DE CORBÉLIA, CNPJ 76.208.826/0001-02, relativa ao exercício financeiro de 2017, de responsabilidade do Sr. GIOVANI MIGUEL WOLF HNATUW, CPF 016.549.529-40, com base no disposto no art. 16, I, da LC/PR 113/05; II. aplicar multa administrativa ao Sr. GIOVANI MIGUEL WOLF HNATUW, CPF 016.549.529-40, representante legal do MUNICÍPIO DE CORBÉLIA, CNPJ 76.208.826/0001-02, nos termos do art. 87, III, b, da LC 113/2005, em face dos atrasos na alimentação dos dados do sistema SIM/AM nos meses de Abril (32 dias) e Maio (34 dias) de 2017; IV. determinar a expediçã […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "expedir parecer prévio pela regularidade das contas do MUNICÍPIO DE CORBÉLIA, CNPJ 76.208.826/0001-02, relativa ao exercício financeiro de 2017, de responsabilidade do Sr. GIOVANI MIGUEL WOLF HNATUW, CPF 016.549.529-40, com base no disposto no art. 16, I, da LC/PR 113/05;",
+    "conclusao": "parecer prévio pela regularidade",
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício financeiro de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Corbélia não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2021-218-segundacmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 218/2021 da Secretaria Segunda Câmara — contas do Prefeito de Corbélia",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "218",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 218/2021 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "280175/2014",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2021-07-12",
+   "data_publicacao": "2021-07-26",
+   "publicacao_literal": "DETC nº 2588",
+   "entidade_literal": "MUNICÍPIO DE CORBÉLIA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Corbélia",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Corbélia não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

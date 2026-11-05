@@ -1,0 +1,730 @@
+{
+ "atualizado_em": "2026-11-05T14:07:23.898Z",
+ "municipio": {
+  "id": "santa-terezinha-de-itaipu",
+  "nome": "Santa Terezinha de Itaipu",
+  "uf": "PR",
+  "codigo_ibge": "4124053"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2013,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 6,
+  "pareceres": 9,
+  "com_parecer_em_fonte_aberta": 6,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 8,
+  "pdf_lido": 7,
+  "sem_exercicio_na_fonte": 3
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f68ca8a9b64d6286d5f605b923705fb7602cf450e7408d143f7545e514359bfb",
+   "atualizado_na_fonte": "05/06/2026 00:00:40"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "3b7fb76a75413d34e4541e63dccfa3cab923f7d498fc63703a156f2f00d63a4c",
+   "atualizado_na_fonte": "26/06/2025 14:58:07"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2026-3-000201025",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 102/2026 — contas do Prefeito de Santa Terezinha de Itaipu, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "102",
+    "ano": "2026",
+    "titulo_oficial": "Parecer Prévio 102/2026"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "191616/2025",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "AUGUSTINHO ZUCCHI",
+   "data_julgamento": "2026-03-02",
+   "data_publicacao": "2026-03-12",
+   "publicacao_literal": "DETC nº 3632",
+   "entidade_literal": "MUNICÍPIO DE SANTA TEREZINHA DE ITAIPU",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas da senhora KARLA FRANCIELI GALENDE, na qualidade de prefeita do MUNICÍPIO DE SANTA TEREZINHA DE ITAIPU, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Terezinha de Itaipu",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 102/2026 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2026/3/000201025.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "6eeb112dd7b43efd2bb2d24807e0d014a90d4beff3c85998c5cbef2248bc8924",
+    "paginas_lidas": 1,
+    "total_paginas": 45,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro AUGUSTINHO ZUCCHI, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas da senhora KARLA FRANCIELI GALENDE, na qualidade de prefeita do MUNICÍPIO DE SANTA TEREZINHA DE ITAIPU, relativas ao exercício de 2024. Após o trânsito em julgado da deliberação, encaminhar os autos ao Gabinete da Presidência para as providências contidas no § 6º do artigo 217-A do Regimento Interno, à Coordenadoria de Medidas Executórias para as anotações pertinentes e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas da senhora KARLA FRANCIELI GALENDE, na qualidade de prefeita do MUNICÍPIO DE SANTA TEREZINHA DE ITAIPU, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2026,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Terezinha de Itaipu não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-9-00388236",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 319/2024 — contas do Prefeito de Santa Terezinha de Itaipu, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "319",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 319/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "204994/2024",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2024-09-02",
+   "data_publicacao": "2024-09-11",
+   "publicacao_literal": "DETC nº 3292",
+   "entidade_literal": "MUNICÍPIO DE SANTA TEREZINHA DE ITAIPU",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas da senhora KARLA FRANCIELI GALENDE, na qualidade de prefeita do MUNICÍPIO DE SANTA TEREZINHA DE ITAIPU, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Terezinha de Itaipu",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 319/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/9/00388236.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "ef67b3e86a56266c82339935e6cd43609bb70a69f2a0561a5ea2061b618929dc",
+    "paginas_lidas": 1,
+    "total_paginas": 44,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas da senhora KARLA FRANCIELI GALENDE, na qualidade de prefeita do MUNICÍPIO DE SANTA TEREZINHA DE ITAIPU, relativas ao exercício de 2023. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, § 6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas da senhora KARLA FRANCIELI GALENDE, na qualidade de prefeita do MUNICÍPIO DE SANTA TEREZINHA DE ITAIPU, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Terezinha de Itaipu não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-5-00384008",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 196/2024 — contas do Prefeito de Santa Terezinha de Itaipu, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "196",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 196/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "216026/2023",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2024-04-15",
+   "data_publicacao": "2024-05-02",
+   "publicacao_literal": "DETC nº 3200",
+   "entidade_literal": "MUNICÍPIO DE SANTA TEREZINHA DE ITAIPU",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE com RESSALVA",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE com RESSALVA das contas do(a) senhor(a) KARLA FRANCIELI GALENDE, na qualidade de prefeito(a) do MUNICÍPIO DE SANTA TEREZINHA DE ITAIPU, relativas ao exercício de 2022, em razão do resultado da avaliação da atuação governamental na área de Administração Financeira (4,78).",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Terezinha de Itaipu",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 196/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/5/00384008.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "dbb61de067ab5b7af79e2c3bf266549e6dd686b2effda9a9919ec1bad78a4076",
+    "paginas_lidas": 1,
+    "total_paginas": 32,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE com RESSALVA das contas do(a) senhor(a) KARLA FRANCIELI GALENDE, na qualidade de prefeito(a) do MUNICÍPIO DE SANTA TEREZINHA DE ITAIPU, relativas ao exercício de 2022, em razão do resultado da avaliação da atuação governamental na área de Administração Financeira (4,78). Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, §6º do Regimento Interno desta Corte de […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE com RESSALVA das contas do(a) senhor(a) KARLA FRANCIELI GALENDE, na qualidade de prefeito(a) do MUNICÍPIO DE SANTA TEREZINHA DE ITAIPU, relativas ao exercício de 2022, em razão do resultado da avaliação da atuação governamental na área de Administração Financeira (4,78).",
+    "conclusao": "Parecer Prévio pela REGULARIDADE com RESSALVA",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Terezinha de Itaipu não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-1-00371747",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 329/2022 da Secretaria Primeira Câmara — contas do Prefeito de Santa Terezinha de Itaipu, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "329",
+    "ano": "2022",
+    "titulo_oficial": "Acórdão de Parecer Prévio 329/2022 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "212930/2022",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2022-12-12",
+   "data_publicacao": "2023-01-19",
+   "publicacao_literal": "DETC nº 2904",
+   "entidade_literal": "MUNICÍPIO DE SANTA TEREZINHA DE ITAIPU",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando o julgamento pela regularidade",
+    "conclusao_literal": "emitir Parecer Prévio recomendando o julgamento pela regularidade das contas da Sra. Karla Francieli Galende, prefeita do Município de Santa Terezinha de Itaipu, relativa ao exercício financeiro de 2021, com fundamento no art. 1º, I, combinado com o art. 16, I, da Lei Complementar Estadual nº 113/2005;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Terezinha de Itaipu",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 329/2022 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/1/00371747.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "54532221a88732033c367fba833b85b565504af9e6b4a60c758864c3592a636a",
+    "paginas_lidas": 1,
+    "total_paginas": 2,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade, em: I - emitir Parecer Prévio recomendando o julgamento pela regularidade das contas da Sra. Karla Francieli Galende, prefeita do Município de Santa Terezinha de Itaipu, relativa ao exercício financeiro de 2021, com fundamento no art. 1º, I, combinado com o art. 16, I, da Lei Complementar Estadual nº 113/2005; e II – determinar, após o trânsito em julgado, a remessa dos autos ao Gabinete da Presidência, para as providências contidas no §6º do art. 217-A do Regimento Interno e, na sequência, à Diretoria de Protocolo, para encerramento e arquivamento, nos termos do art. 398 §1º e art. 168, inciso VII, ambos do Regimento Intern […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando o julgamento pela regularidade das contas da Sra. Karla Francieli Galende, prefeita do Município de Santa Terezinha de Itaipu, relativa ao exercício financeiro de 2021, com fundamento no art. 1º, I, combinado com o art. 16, I, da Lei Complementar Estadual nº 113/2005;",
+    "conclusao": "Parecer Prévio recomendando o julgamento pela regularidade",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2022,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Terezinha de Itaipu não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-10-00340692",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 369/2019 da Secretaria Segunda Câmara — contas do Prefeito de Santa Terezinha de Itaipu, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "369",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 369/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "287565/2018",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2019-10-01",
+   "data_publicacao": "2019-10-14",
+   "publicacao_literal": "DETC nº 2164",
+   "entidade_literal": "MUNICÍPIO DE SANTA TEREZINHA DE ITAIPU",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, com fundamento nos artigos 1.º, inciso I9 e 16, inciso II10, da Lei Complementar Estadual n.º 113/2005, bem como no artigo 21511 do Regimento Interno, recomendando a regularidade com ressalva das contas do Município de Santa Terezinha de Itaipu, referentes ao exercício de 2017, em razão da entrega com atraso dos dados do SIM-AM, com expedição de recomendação quanto à necessidade de definição, em ato normativo, das atribuições dos cargos em comissão e da revisão da estrutura funcional, para que se verifique se tais cargos efetivamente se destinam à chefia, direção ou assessoramento;",
+    "conclusao_literal": "emitir Parecer Prévio, com fundamento nos artigos 1.º, inciso I9 e 16, inciso II10, da Lei Complementar Estadual n.º 113/2005, bem como no artigo 21511 do Regimento Interno, recomendando a regularidade com ressalva das contas do Município de Santa Terezinha de Itaipu, referentes ao exercício de 2017, em razão da entrega com atraso dos dados do SIM-AM, com expedição de recomendação quanto à necessidade de definição, em ato normativo, das atribuições dos cargos em comissão e da revisão da estrutura funcional, para que se verifique se tais cargos efetivamente se destinam à chefia, direção ou assessoramento;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Terezinha de Itaipu",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 369/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/10/00340692.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "69c0240216ca791a7cd25f53111b96cf172479286a59e96468b9587ab18e2e6d",
+    "paginas_lidas": 2,
+    "total_paginas": 6,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por maioria absoluta, em: I- emitir Parecer Prévio, com fundamento nos artigos 1.º, inciso I9 e 16, inciso II10, da Lei Complementar Estadual n.º 113/2005, bem como no artigo 21511 do Regimento Interno, recomendando a regularidade com ressalva das contas do Município de Santa Terezinha de Itaipu, referentes ao exercício de 2017, em razão da entrega com atraso dos dados do SIM-AM, com expedição de recomendação quanto à necessidade de definição, em ato normativo, das atribuições dos cargos em comissão e da revisão da estrutura funcional, para que se verifique se tais cargos efetivamente se destinam à chefia, direção ou assessoramento; II- aplicar ao g […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "emitir Parecer Prévio, com fundamento nos artigos 1.º, inciso I9 e 16, inciso II10, da Lei Complementar Estadual n.º 113/2005, bem como no artigo 21511 do Regimento Interno, recomendando a regularidade com ressalva das contas do Município de Santa Terezinha de Itaipu, referentes ao exercício de 2017, em razão da entrega com atraso dos dados do SIM-AM, com expedição de recomendação quanto à necessidade de definição, em ato normativo, das atribuições dos cargos em comissão e da revisão da estrutura funcional, para que se verifique se tais cargos efetivamente se destinam à chefia, direção ou assessoramento;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Terezinha de Itaipu não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-7-00347723",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 208/2020 da Secretaria Segunda Câmara — contas do Prefeito de Santa Terezinha de Itaipu, exercício 2013",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "208",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 208/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "212943/2014",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2020-06-29",
+   "data_publicacao": "2020-07-16",
+   "publicacao_literal": "DETC nº 2340",
+   "entidade_literal": "MUNICÍPIO DE SANTA TEREZINHA DE ITAIPU",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.º 113/2005, recomendando a regularidade das contas do Prefeito do Município de Santa Terezinha de Itaipu, exercício de 2013, Sr. Claudio Dirceu Eberhard, CPF 490.217.709-97, com ressalva, em decorrência das Imputações de débitos ao gestor por danos (encargos) causados ao erário pelo recolhimento em atraso de contribuições devidas ao INSS, a qualquer título, incluindo parcelamentos do período respectivo às contas;",
+    "conclusao_literal": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.º 113/2005, recomendando a regularidade das contas do Prefeito do Município de Santa Terezinha de Itaipu, exercício de 2013, Sr. Claudio Dirceu Eberhard, CPF 490.217.709-97, com ressalva, em decorrência das Imputações de débitos ao gestor por danos (encargos) causados ao erário pelo recolhimento em atraso de contribuições devidas ao INSS, a qualquer título, incluindo parcelamentos do período respectivo às contas;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Terezinha de Itaipu",
+    "exercicio": "2013",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 208/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/7/00347723.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "d44ab04c9cc5ae9a8446b1b1515aba521f13c3e96da10dde1ff37d5a04e134c2",
+    "paginas_lidas": 2,
+    "total_paginas": 8,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: I- emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.º 113/2005, recomendando a regularidade das contas do Prefeito do Município de Santa Terezinha de Itaipu, exercício de 2013, Sr. Claudio Dirceu Eberhard, CPF 490.217.709-97, com ressalva, em decorrência das Imputações de débitos ao gestor por danos (encargos) causados ao erário pelo recolhimento em atraso de contribuições devidas ao INSS, a qualquer título, incluindo parcelamentos do período respectivo às contas; II- remeter os autos, após o trânsito em julgado, à Coordenadoria de Monitoramento e Execuções (CMEX) para registros, nos termos do artigo 301, p […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.º 113/2005, recomendando a regularidade das contas do Prefeito do Município de Santa Terezinha de Itaipu, exercício de 2013, Sr. Claudio Dirceu Eberhard, CPF 490.217.709-97, com ressalva, em decorrência das Imputações de débitos ao gestor por danos (encargos) causados ao erário pelo recolhimento em atraso de contribuições devidas ao INSS, a qualquer título, incluindo parcelamentos do período respectivo às contas;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2013,
+     "trecho": "exercício de 2013"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Terezinha de Itaipu não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2022-8-00368361",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 157/2022 da Secretaria Primeira Câmara — contas do Prefeito de Santa Terezinha de Itaipu",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "157",
+    "ano": "2022",
+    "titulo_oficial": "Acórdão de Parecer Prévio 157/2022 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "179212/2021",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2022-08-08",
+   "data_publicacao": "2022-08-23",
+   "publicacao_literal": "DETC nº 2820",
+   "entidade_literal": "MUNICÍPIO DE SANTA TEREZINHA DE ITAIPU",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Terezinha de Itaipu",
+    "exercicio": null,
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 157/2022 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2022/8/00368361.pdf"
+    }
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "sem_deliberacao",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "515395ad47cb6ce088dce26c4156fc1db8c695518498d4840d25c565ed886079",
+    "paginas_lidas": 1,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: I – julgar REGULARES as contas do PREFEITO MUNICIPAL DE SANTA TEREZINHA DE ITAIPU, Sr. Claudio Dirceu Eberhard, CPF 490.217.709- 97, Gestor da Entidade no exercício de 2020; II - Encaminhar à Diretoria de Protocolo, nos termos do artigo 398 [§ 1º] do Regimento Interno, para encerramento após o trânsito em julgado do processo.",
+    "votacao": "por unanimidade",
+    "item_parecer": null,
+    "conclusao": null,
+    "exercicio": null
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2022,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo; o trecho \"Emitir Parecer Prévio…\" não foi localizado nas páginas finais do PDF",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Terezinha de Itaipu não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2021-156-segundacmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 156/2021 da Secretaria Segunda Câmara — contas do Prefeito de Santa Terezinha de Itaipu",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "156",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 156/2021 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "256558/2020",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2021-05-17",
+   "data_publicacao": "2021-05-31",
+   "publicacao_literal": "DETC nº 2550",
+   "entidade_literal": "MUNICÍPIO DE SANTA TEREZINHA DE ITAIPU",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Terezinha de Itaipu",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Terezinha de Itaipu não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-12-00342121",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 586/2019 da Secretaria Primeira Câmara — contas do Prefeito de Santa Terezinha de Itaipu",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "586",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 586/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "192975/2019",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2019-12-02",
+   "data_publicacao": "2019-12-10",
+   "publicacao_literal": "DETC nº 2203",
+   "entidade_literal": "MUNICÍPIO DE SANTA TEREZINHA DE ITAIPU",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual dos gestores do MUNICÍPIO DE SANTA TEREZINHA DE ITAIPU, 1 Art.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Terezinha de Itaipu",
+    "exercicio": null,
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 586/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/12/00342121.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "d980b3829fc39233eed11450d6816b0f48e222b0d50bc98860ef13889834b585",
+    "paginas_lidas": 2,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual dos gestores do MUNICÍPIO DE SANTA TEREZINHA DE ITAIPU, 1 Art. 398. Todos os processos autuados no Tribunal permanecerão no sistema, segundo as regras de gestão documental para a sua guarda e disponibilização. § 1º Proferida a decisão monocrática ou do órgão colegiado, com o respectivo trânsito em julgado e certificado seu integral cumprimento, o processo será encerrado, mediante despacho do relator. relativa ao exercício financeiro de 2018, Sr. Claudio Dirceu Eberhard (períodos de 01/01/2018 a 21/05/2018 e 13/12/2018 a 31/12/2018) e Sra […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual dos gestores do MUNICÍPIO DE SANTA TEREZINHA DE ITAIPU, 1 Art.",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": null
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Terezinha de Itaipu não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

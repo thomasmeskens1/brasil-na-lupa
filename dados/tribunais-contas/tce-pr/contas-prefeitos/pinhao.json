@@ -1,0 +1,817 @@
+{
+ "atualizado_em": "2026-11-05T14:29:01.941Z",
+ "municipio": {
+  "id": "pinhao",
+  "nome": "Pinhão",
+  "uf": "PR",
+  "codigo_ibge": "4119301"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2012,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 10,
+  "pareceres": 10,
+  "com_parecer_em_fonte_aberta": 10,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 10,
+  "pdf_lido": 10,
+  "sem_exercicio_na_fonte": 0
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f68ca8a9b64d6286d5f605b923705fb7602cf450e7408d143f7545e514359bfb",
+   "atualizado_na_fonte": "05/06/2026 00:00:40"
+  },
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2026-6-000201839",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 167/2026 — contas do Prefeito de Pinhão, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "167",
+    "ano": "2026",
+    "titulo_oficial": "Parecer Prévio 167/2026"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "192825/2025",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2026-05-18",
+   "data_publicacao": "2026-06-02",
+   "publicacao_literal": "DETC nº 3685",
+   "entidade_literal": "MUNICÍPIO DE PINHÃO",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor VALDECIR BIASEBETTI, na qualidade de prefeito do MUNICÍPIO DE PINHÃO, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Pinhão",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 167/2026 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2026/6/000201839.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "fdb31c7e79b48b8f838b603ecbdcf90c7bf98f8ca13e4a87f5e2b6b13951fa3c",
+    "paginas_lidas": 1,
+    "total_paginas": 50,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por maioria absoluta: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor VALDECIR BIASEBETTI, na qualidade de prefeito do MUNICÍPIO DE PINHÃO, relativas ao exercício de 2024. b. RESSALVAR as contas em virtude de: i. utilização dos recursos do Fundeb no exercício de sua arrecadação inferior ao percentual mínimo estabelecido por lei. Após o trânsito em julgado da deliberação, encaminhar os autos ao Gabinete da Presidência para as providências contidas no § 6º do artigo 217-A do Regimento Interno, à Coordenadoria de Medidas Executórias para as anotações pertinentes e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor VALDECIR BIASEBETTI, na qualidade de prefeito do MUNICÍPIO DE PINHÃO, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2026,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Pinhão não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2025-8-000198672",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 213/2025 — contas do Prefeito de Pinhão, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "213",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 213/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "211613/2024",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2025-07-21",
+   "data_publicacao": "2025-08-01",
+   "publicacao_literal": "DETC nº 3496",
+   "entidade_literal": "MUNICÍPIO DE PINHÃO",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor(a) JOSÉ VITORINO PRÉSTES e senhor VALDECIR BIASEBETTI, na qualidade de prefeitos do MUNICÍPIO DE PINHÃO, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Pinhão",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 213/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/8/000198672.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "cc097cd4067d9fc870742a196832b71354a76ccf533dc3930637267af5b285b6",
+    "paginas_lidas": 1,
+    "total_paginas": 45,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade: Considerando os fatos expostos no item de fundamentação, VOTO, com respaldo no artigo 1º, I, da Lei Complementar Estadual n.º 113/2005 e em observância ao artigo 217-A, caput, do Regimento Interno, no sentido de: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor(a) JOSÉ VITORINO PRÉSTES e senhor VALDECIR BIASEBETTI, na qualidade de prefeitos do MUNICÍPIO DE PINHÃO, relativas ao exercício de 2023. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Medidas Executórias para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido enc […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor(a) JOSÉ VITORINO PRÉSTES e senhor VALDECIR BIASEBETTI, na qualidade de prefeitos do MUNICÍPIO DE PINHÃO, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Pinhão não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-3-00383094",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 85/2024 — contas do Prefeito de Pinhão, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "85",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 85/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "211040/2023",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2024-03-04",
+   "data_publicacao": "2024-03-22",
+   "publicacao_literal": "DETC nº 3174",
+   "entidade_literal": "MUNICÍPIO DE PINHÃO",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) JOSÉ VITORINO PRÉSTES, na qualidade de prefeito(a) do MUNICÍPIO DE PINHÃO, relativas ao exercício de 2022.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Pinhão",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 85/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/3/00383094.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "8785bb0f1a5eb36891e23cfee13907918a2493362eb2de4d812fd001cf138979",
+    "paginas_lidas": 1,
+    "total_paginas": 37,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade: Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) JOSÉ VITORINO PRÉSTES, na qualidade de prefeito(a) do MUNICÍPIO DE PINHÃO, relativas ao exercício de 2022. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, §6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) JOSÉ VITORINO PRÉSTES, na qualidade de prefeito(a) do MUNICÍPIO DE PINHÃO, relativas ao exercício de 2022.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Pinhão não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-9-00379327",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 439/2023 da Secretaria Primeira Câmara — contas do Prefeito de Pinhão, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "439",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 439/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "220313/2022",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2023-09-04",
+   "data_publicacao": "2023-09-18",
+   "publicacao_literal": "DETC nº 3065",
+   "entidade_literal": "MUNICÍPIO DE PINHÃO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "PARECER PRÉVIO deste Tribunal recomendando o julgamento",
+    "conclusao_literal": "Emitir, acompanhando a Coordenadoria de Gestão Municipal e o Ministério Público de Contas, PARECER PRÉVIO deste Tribunal recomendando o julgamento das contas do PREFEITO MUNICIPAL DE PINHÃO, relativas ao exercício de 2021, de responsabilidade do Sr. JOSÉ VITORINO PRÉSTES, pela regularidade com ressalva, quanto ao item “O Relatório do Controle Interno encaminhado não apresenta os conteúdos mínimos prescritos pelo Tribunal”;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Pinhão",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 439/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/9/00379327.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "f09ae3aab99683429230a1347c9686da10bfbae95d99e7d12038ed19c6fefdfd",
+    "paginas_lidas": 2,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade, em: I – Emitir, acompanhando a Coordenadoria de Gestão Municipal e o Ministério Público de Contas, PARECER PRÉVIO deste Tribunal recomendando o julgamento das contas do PREFEITO MUNICIPAL DE PINHÃO, relativas ao exercício de 2021, de responsabilidade do Sr. JOSÉ VITORINO PRÉSTES, pela regularidade com ressalva, quanto ao item “O Relatório do Controle Interno encaminhado não apresenta os conteúdos mínimos prescritos pelo Tribunal”; II – determinar, após o trânsito em julgado, a remessa dos autos à Coordenadoria de Monitoramento e Execuções para os devidos registros e ao Gabinete da Presidência para disponibilização à […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir, acompanhando a Coordenadoria de Gestão Municipal e o Ministério Público de Contas, PARECER PRÉVIO deste Tribunal recomendando o julgamento das contas do PREFEITO MUNICIPAL DE PINHÃO, relativas ao exercício de 2021, de responsabilidade do Sr. JOSÉ VITORINO PRÉSTES, pela regularidade com ressalva, quanto ao item “O Relatório do Controle Interno encaminhado não apresenta os conteúdos mínimos prescritos pelo Tribunal”;",
+    "conclusao": "PARECER PRÉVIO deste Tribunal recomendando o julgamento",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Pinhão não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-5-00373725",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 156/2023 da Secretaria Primeira Câmara — contas do Prefeito de Pinhão, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "156",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 156/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "188050/2021",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2023-04-17",
+   "data_publicacao": "2023-05-03",
+   "publicacao_literal": "DETC nº 2971",
+   "entidade_literal": "MUNICÍPIO DE PINHÃO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Emitir Parecer Prévio deste Tribunal recomendando o julgamento pela regularidade das contas do Sr. ODIR ANTONIO GOTARDO, prefeito do Município de Pinhão, relativas ao exercício financeiro de 2020, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, ressalvando-se as despesas com publicidade institucional realizadas até 15 de agosto de 2020 em montante superior à média dos gastos nos 2 (dois) primeiros quadrimestres dos 3 (três) últimos anos que antecedem o pleito, e a classificação contábil equivocada de despesas com publicidade institucional realizadas no período que antecede as eleições;",
+    "conclusao_literal": "Emitir Parecer Prévio deste Tribunal recomendando o julgamento pela regularidade das contas do Sr. ODIR ANTONIO GOTARDO, prefeito do Município de Pinhão, relativas ao exercício financeiro de 2020, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, ressalvando-se as despesas com publicidade institucional realizadas até 15 de agosto de 2020 em montante superior à média dos gastos nos 2 (dois) primeiros quadrimestres dos 3 (três) últimos anos que antecedem o pleito, e a classificação contábil equivocada de despesas com publicidade institucional realizadas no período que antecede as eleições;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Pinhão",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 156/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/5/00373725.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "ebc2ff2bf183cbb966f580cb3d2168926f16e33f1ee8372e7ff7eff559ca9f26",
+    "paginas_lidas": 2,
+    "total_paginas": 9,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade, em: I - Emitir Parecer Prévio deste Tribunal recomendando o julgamento pela regularidade das contas do Sr. ODIR ANTONIO GOTARDO, prefeito do Município de Pinhão, relativas ao exercício financeiro de 2020, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, ressalvando-se as despesas com publicidade institucional realizadas até 15 de agosto de 2020 em montante superior à média dos gastos nos 2 (dois) primeiros quadrimestres dos 3 (três) últimos anos que antecedem o pleito, e a classificação contábil equivocada de despesas com publicidade institucional realizadas no período que a […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio deste Tribunal recomendando o julgamento pela regularidade das contas do Sr. ODIR ANTONIO GOTARDO, prefeito do Município de Pinhão, relativas ao exercício financeiro de 2020, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, ressalvando-se as despesas com publicidade institucional realizadas até 15 de agosto de 2020 em montante superior à média dos gastos nos 2 (dois) primeiros quadrimestres dos 3 (três) últimos anos que antecedem o pleito, e a classificação contábil equivocada de despesas com publicidade institucional realizadas no período que antecede as eleições;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício financeiro de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Pinhão não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2021-1-00353615",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 751/2020 da Secretaria Segunda Câmara — contas do Prefeito de Pinhão, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "751",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 751/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "188919/2020",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2020-12-07",
+   "data_publicacao": "2021-01-08",
+   "publicacao_literal": "DETC nº 2452",
+   "entidade_literal": "MUNICÍPIO DE PINHÃO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, com fundamento nos arts. 1º, inciso I6, e 16, inciso III, alínea “b”7, ambos da Lei Complementar Estadual nº 113/2005 deste Tribunal de Contas, recomendando a irregularidade das contas do Prefeito Municipal de Pinhão, senhor Odir Antonio Gotardo, exercício de 2019, em razão do seguinte item:",
+    "conclusao_literal": "emitir Parecer Prévio, com fundamento nos arts. 1º, inciso I6, e 16, inciso III, alínea “b”7, ambos da Lei Complementar Estadual nº 113/2005 deste Tribunal de Contas, recomendando a irregularidade das contas do Prefeito Municipal de Pinhão, senhor Odir Antonio Gotardo, exercício de 2019, em razão do seguinte item:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Pinhão",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 751/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2021/1/00353615.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "6405362a2f548d819b8bf8f6b588ec3336ee687d70eb2e5838199ddbccd79b1f",
+    "paginas_lidas": 2,
+    "total_paginas": 7,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I- emitir Parecer Prévio, com fundamento nos arts. 1º, inciso I6, e 16, inciso III, alínea “b”7, ambos da Lei Complementar Estadual nº 113/2005 deste Tribunal de Contas, recomendando a irregularidade das contas do Prefeito Municipal de Pinhão, senhor Odir Antonio Gotardo, exercício de 2019, em razão do seguinte item: Limite de Despesas com Pessoal - Não Retorno ao Limite no prazo legal – relacionados aos dois primeiros quadrimestres do exercício de 2019; II- apor ressalva em relação à regularização de impropriedade na fase de instrução do processo, qual seja, o Relatório do Controle Interno encaminhado não apresenta os conteúdos […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, com fundamento nos arts. 1º, inciso I6, e 16, inciso III, alínea “b”7, ambos da Lei Complementar Estadual nº 113/2005 deste Tribunal de Contas, recomendando a irregularidade das contas do Prefeito Municipal de Pinhão, senhor Odir Antonio Gotardo, exercício de 2019, em razão do seguinte item:",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Pinhão não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-6-00345924",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 135/2020 da Secretaria Segunda Câmara — contas do Prefeito de Pinhão, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "135",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 135/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "201613/2019",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2020-05-25",
+   "data_publicacao": "2020-06-05",
+   "publicacao_literal": "DETC nº 2313",
+   "entidade_literal": "MUNICÍPIO DE PINHÃO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, com fundamento no artigo 1.º, I, combinado com o artigo 16, II, da Lei Complementar Estadual n.º 113/2005, recomendando a regularidade das contas do senhor Odir Antonio Gotardo, prefeito do Município de Pinhão, relativas ao exercício de 2018, ressalvando-se a ausência do parecer do Conselho Municipal de Saúde e a redução intempestiva de 1/3 do excesso da despesa total com pessoal;",
+    "conclusao_literal": "emitir Parecer Prévio, com fundamento no artigo 1.º, I, combinado com o artigo 16, II, da Lei Complementar Estadual n.º 113/2005, recomendando a regularidade das contas do senhor Odir Antonio Gotardo, prefeito do Município de Pinhão, relativas ao exercício de 2018, ressalvando-se a ausência do parecer do Conselho Municipal de Saúde e a redução intempestiva de 1/3 do excesso da despesa total com pessoal;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Pinhão",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 135/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/6/00345924.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "72a154b7d6eb1329989821fbebe0104a41236b6d7ef29f606fdee24fe68cb449",
+    "paginas_lidas": 1,
+    "total_paginas": 6,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade, em: I- emitir Parecer Prévio, com fundamento no artigo 1.º, I, combinado com o artigo 16, II, da Lei Complementar Estadual n.º 113/2005, recomendando a regularidade das contas do senhor Odir Antonio Gotardo, prefeito do Município de Pinhão, relativas ao exercício de 2018, ressalvando-se a ausência do parecer do Conselho Municipal de Saúde e a redução intempestiva de 1/3 do excesso da despesa total com pessoal; II- remeter os autos, após o trânsito em julgado, à Coordenadoria de Monitoramento e Execuções para registro, e, posteriormente, ao Gabinete da Presidência, para as providências contidas no § 6.º do artigo 217-A do Regi […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, com fundamento no artigo 1.º, I, combinado com o artigo 16, II, da Lei Complementar Estadual n.º 113/2005, recomendando a regularidade das contas do senhor Odir Antonio Gotardo, prefeito do Município de Pinhão, relativas ao exercício de 2018, ressalvando-se a ausência do parecer do Conselho Municipal de Saúde e a redução intempestiva de 1/3 do excesso da despesa total com pessoal;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Pinhão não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-9-00339465",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 245/2019 da Secretaria Primeira Câmara — contas do Prefeito de Pinhão, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "245",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 245/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "266720/2018",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2019-09-02",
+   "data_publicacao": "2019-09-06",
+   "publicacao_literal": "DETC nº 2138",
+   "entidade_literal": "MUNICÍPIO DE PINHÃO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando o julgamento pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando o julgamento pela REGULARIDADE das contas do Poder Executivo do Município de Pinhão, referente ao exercício financeiro de 2017, de responsabilidade do senhor Odir Antonio Gotardo, RESSALVANDO:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Pinhão",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 245/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/9/00339465.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "7f7913c832a7f59f37d0fd819832e0cf86b7f049ce6de5e2c5f70e93a6aacbab",
+    "paginas_lidas": 1,
+    "total_paginas": 6,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I – Emitir Parecer Prévio recomendando o julgamento pela REGULARIDADE das contas do Poder Executivo do Município de Pinhão, referente ao exercício financeiro de 2017, de responsabilidade do senhor Odir Antonio Gotardo, RESSALVANDO: (i) divergências nos registros de transferências constitucionais do FUNDEB (ii) entrega dos dados do SIM-AM com atraso; II – determinar, depois de transitada em julgado a decisão e realizados os registros pertinentes pela Coordenadoria de Monitoramento e Execuções, com fundamento no art. 398, § 1º do Regimento Interno, o encerramento do processo e o encaminhamento dos autos à Diretoria de Protoco […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando o julgamento pela REGULARIDADE das contas do Poder Executivo do Município de Pinhão, referente ao exercício financeiro de 2017, de responsabilidade do senhor Odir Antonio Gotardo, RESSALVANDO:",
+    "conclusao": "Parecer Prévio recomendando o julgamento pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício financeiro de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Pinhão não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-3-00343963",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 62/2020 da Secretaria Segunda Câmara — contas do Prefeito de Pinhão, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "62",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 62/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "268850/2017",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2020-03-03",
+   "data_publicacao": "2020-03-11",
+   "publicacao_literal": "DETC nº 2256",
+   "entidade_literal": "MUNICÍPIO DE PINHÃO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.° 113/2005, recomendando a irregularidade das contas do Prefeito do Município de Pinhão, exercício de 2016, senhor Dirceu José de Oliveira, CPF 905.703.839-00, em decorrência dos seguintes itens:",
+    "conclusao_literal": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.° 113/2005, recomendando a irregularidade das contas do Prefeito do Município de Pinhão, exercício de 2016, senhor Dirceu José de Oliveira, CPF 905.703.839-00, em decorrência dos seguintes itens:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Pinhão",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 62/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/3/00343963.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "b196502a3fbb057a4bce0c427654cd04929ecc8252c644026f5c85c13ba8f7c8",
+    "paginas_lidas": 3,
+    "total_paginas": 32,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: I- emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.° 113/2005, recomendando a irregularidade das contas do Prefeito do Município de Pinhão, exercício de 2016, senhor Dirceu José de Oliveira, CPF 905.703.839-00, em decorrência dos seguintes itens: a. relatório do Controle Interno apresenta ocorrência de irregularidade passível de desaprovação da gestão; b. divergências nos registros de transferências constitucionais dos repasses de FPM, ICMS, IPVA e FUNDEB; c. despesas com publicidade institucional realizadas no primeiro semestre de 2016 em montante superior à média dos gastos no primeiro semestre dos três […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.° 113/2005, recomendando a irregularidade das contas do Prefeito do Município de Pinhão, exercício de 2016, senhor Dirceu José de Oliveira, CPF 905.703.839-00, em decorrência dos seguintes itens:",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Pinhão não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-8-00338590",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 170/2019 da Secretaria Segunda Câmara — contas do Prefeito de Pinhão, exercício 2012",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "170",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 170/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "138901/2013",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2019-07-30",
+   "data_publicacao": "2019-08-05",
+   "publicacao_literal": "DETC nº 2114",
+   "entidade_literal": "MUNICÍPIO DE PINHÃO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio pela irregularidade",
+    "conclusao_literal": "emitir parecer prévio pela irregularidade das contas do Município de Pinhão, referentes ao exercício de 2012, sob responsabilidade do Prefeito Municipal, senhor Jose Vitorino Préstes, entre 01/01/2009 e 07/11/2012, e senhor Paulo Cezar Basilio, entre 08/11/2012 e 31/12/2012, nos termos dos artigos 1º, inciso I,26 e 16, inciso III, alínea “b”,27 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise da prestação de contas:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Pinhão",
+    "exercicio": "2012",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 170/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/8/00338590.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "1d32b6e4426acfe069255ce248de43ec106f04347f715d575140329e3827b751",
+    "paginas_lidas": 4,
+    "total_paginas": 13,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: 22 Art. 89. Ficará sujeito à multa proporcional ao dano, sem prejuízo da reparação deste, o ordenador da despesa ou terceiro que com este concorrer, por ação ou omissão, dolosa ou culposa, que resultar em lesão ao erário. § 1º Considera-se lesão ao erário: I – a prática de ato que importe em despesa desnecessária ou indevida, ou acima da devida, apurando-se esta mediante aferição do valor médio de mercado, de bens e serviços, ou de média de consumo, bem como no caso de dilapidação de receita ou patrimônio social, e ainda a perda de valor decorrente do mau uso e conservação de bens públicos; 23 Art. 175-L. Compete à Coordenadoria […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir parecer prévio pela irregularidade das contas do Município de Pinhão, referentes ao exercício de 2012, sob responsabilidade do Prefeito Municipal, senhor Jose Vitorino Préstes, entre 01/01/2009 e 07/11/2012, e senhor Paulo Cezar Basilio, entre 08/11/2012 e 31/12/2012, nos termos dos artigos 1º, inciso I,26 e 16, inciso III, alínea “b”,27 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise da prestação de contas:",
+    "conclusao": "parecer prévio pela irregularidade",
+    "exercicio": {
+     "ano": 2012,
+     "trecho": "exercício de 2012"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Pinhão não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [],
+ "acordaos_relacionados": []
+}

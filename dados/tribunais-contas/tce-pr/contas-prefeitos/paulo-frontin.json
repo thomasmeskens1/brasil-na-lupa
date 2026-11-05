@@ -1,0 +1,802 @@
+{
+ "atualizado_em": "2026-11-05T14:30:28.783Z",
+ "municipio": {
+  "id": "paulo-frontin",
+  "nome": "Paulo Frontin",
+  "uf": "PR",
+  "codigo_ibge": "4118709"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2013,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 7,
+  "pareceres": 10,
+  "com_parecer_em_fonte_aberta": 7,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 9,
+  "pdf_lido": 8,
+  "sem_exercicio_na_fonte": 3
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f68ca8a9b64d6286d5f605b923705fb7602cf450e7408d143f7545e514359bfb",
+   "atualizado_na_fonte": "05/06/2026 00:00:40"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2026-5-000201747",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 172/2026 — contas do Prefeito de Paulo Frontin, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "172",
+    "ano": "2026",
+    "titulo_oficial": "Parecer Prévio 172/2026"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "179047/2025",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "AUGUSTINHO ZUCCHI",
+   "data_julgamento": "2026-05-18",
+   "data_publicacao": "2026-05-28",
+   "publicacao_literal": "DETC nº 3682",
+   "entidade_literal": "MUNICÍPIO DE PAULO FRONTIN",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JAMIL PECH, na qualidade de prefeito do MUNICÍPIO DE PAULO FRONTIN, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Paulo Frontin",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 172/2026 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2026/5/000201747.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "5bab12471c6ba93778ca2872b6d550702600e2a3ca13a8795d514801429caec9",
+    "paginas_lidas": 1,
+    "total_paginas": 46,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro AUGUSTINHO ZUCCHI, por maioria absoluta: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JAMIL PECH, na qualidade de prefeito do MUNICÍPIO DE PAULO FRONTIN, relativas ao exercício de 2024. b. RESSALVAR as contas em virtude de: i. Resultado financeiro de fontes não vinculadas a programas, convênios, operações de crédito e ao Regime Próprio de Previdência Social (RPPS); ii. obrigações de despesas contraídas nos últimos dois quadrimestres; iii. baixo desempenho evidenciado na avaliação da atuação governamental na área da Transparência e Relacionamento com o Cidadão; iv. baixo desempenho evidenciado na avaliação da atuação governamental na área da Administr […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JAMIL PECH, na qualidade de prefeito do MUNICÍPIO DE PAULO FRONTIN, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2026,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Paulo Frontin não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-12-00391860",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 467/2024 — contas do Prefeito de Paulo Frontin, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "467",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 467/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "210676/2024",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2024-12-09",
+   "data_publicacao": "2024-12-19",
+   "publicacao_literal": "DETC nº 3360",
+   "entidade_literal": "MUNICÍPIO DE PAULO FRONTIN",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVAS",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do senhor JAMIL PECH, na qualidade de prefeito do MUNICÍPIO DE PAULO FRONTIN, relativas ao exercício de 2023, com ressalva em razão dos seguintes apontamentos:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Paulo Frontin",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 467/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/12/00391860.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "e13a1d5575ebd32bff29b991eff2041ceaf878dab8058da35fdcded87589c7da",
+    "paginas_lidas": 1,
+    "total_paginas": 44,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade: Considerando os fatos expostos no item de fundamentação, VOTO, com respaldo no artigo 1º, I, da Lei Complementar Estadual n.º 113/2005 e em observância ao artigo 217-A, caput, do Regimento Interno, no sentido de: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do senhor JAMIL PECH, na qualidade de prefeito do MUNICÍPIO DE PAULO FRONTIN, relativas ao exercício de 2023, com ressalva em razão dos seguintes apontamentos: i. Déficit orçamentário/financeiro de fontes financeiras não vinculadas, acumulado em 2,91%. ii. Baixo desempenho evidenciado na avaliação da atuação governamental na área da Transparência e […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do senhor JAMIL PECH, na qualidade de prefeito do MUNICÍPIO DE PAULO FRONTIN, relativas ao exercício de 2023, com ressalva em razão dos seguintes apontamentos:",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVAS",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Paulo Frontin não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-4-00383936",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 168/2024 — contas do Prefeito de Paulo Frontin, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "168",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 168/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "170000/2023",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2024-04-15",
+   "data_publicacao": "2024-04-30",
+   "publicacao_literal": "DETC nº 3199",
+   "entidade_literal": "MUNICÍPIO DE PAULO FRONTIN",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor JAMIL PECH, na qualidade de prefeito do MUNICÍPIO DE PAULO FRONTIN, relativas ao exercício de 2022, em razão dos resultados da avaliação da atuação governamental nas áreas da Educação (5,59), Assistência Social (3,53), Administração Financeira (3,13) e Transparência e Relacionamento com o Cidadão (3,25);",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Paulo Frontin",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 168/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/4/00383936.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "c8cf84fc11e919bfa7c030ab65eae0853c9015a4ef453e431cbb99ec5b87c423",
+    "paginas_lidas": 1,
+    "total_paginas": 32,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor JAMIL PECH, na qualidade de prefeito do MUNICÍPIO DE PAULO FRONTIN, relativas ao exercício de 2022, em razão dos resultados da avaliação da atuação governamental nas áreas da Educação (5,59), Assistência Social (3,53), Administração Financeira (3,13) e Transparência e Relacionamento com o Cidadão (3,25); b. Encaminhar os autos à Coordenadoria Geral de Fiscalização - CGF para ciência e, se entender cabível, inclusão no Plano Anual de Fiscalização – PAF, nos termos do art. 151-A, inciso II, do Regimento Interno, em razão das pontuações obtidas nas áreas de As […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor JAMIL PECH, na qualidade de prefeito do MUNICÍPIO DE PAULO FRONTIN, relativas ao exercício de 2022, em razão dos resultados da avaliação da atuação governamental nas áreas da Educação (5,59), Assistência Social (3,53), Administração Financeira (3,13) e Transparência e Relacionamento com o Cidadão (3,25);",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Paulo Frontin não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-10-00390459",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 95/2024 da Secretaria Segunda Câmara — contas do Prefeito de Paulo Frontin, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "95",
+    "ano": "2024",
+    "titulo_oficial": "Acórdão de Parecer Prévio 95/2024 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "211926/2022",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2024-10-14",
+   "data_publicacao": "2024-10-30",
+   "publicacao_literal": "DETC nº 3326",
+   "entidade_literal": "MUNICÍPIO DE PAULO FRONTIN",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a IRREGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a IRREGULARIDADE das contas do MUNICÍPIO DE PAULO FRONTIN, exercício de 2021, de responsabilidade de JAMIL PECH, em razão do encaminhamento do Relatório do 6 Art. 217-A. (...) § 6º Após o trânsito em julgado, a decisão será comunicada ao Poder Legislativo competente para o julgamento das contas, ficando o parecer prévio e demais documentos constantes do processo disponíveis para a consulta pública no sítio do Tribunal na internet. 7 Art.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Paulo Frontin",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 95/2024 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/10/00390459.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "8203ba482e96198eb18c51d2b68d9b1ab1490b3a2049e9236f850a15d428fa23",
+    "paginas_lidas": 2,
+    "total_paginas": 8,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I- Emitir Parecer Prévio recomendando a IRREGULARIDADE das contas do MUNICÍPIO DE PAULO FRONTIN, exercício de 2021, de responsabilidade de JAMIL PECH, em razão do encaminhamento do Relatório do 6 Art. 217-A. (...) § 6º Após o trânsito em julgado, a decisão será comunicada ao Poder Legislativo competente para o julgamento das contas, ficando o parecer prévio e demais documentos constantes do processo disponíveis para a consulta pública no sítio do Tribunal na internet. 7 Art. 398. (...) § 1º Proferida a decisão monocrática ou do órgão colegiado, com o respectivo trânsito em julgado e certificado seu integral cumprimento, o pr […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a IRREGULARIDADE das contas do MUNICÍPIO DE PAULO FRONTIN, exercício de 2021, de responsabilidade de JAMIL PECH, em razão do encaminhamento do Relatório do 6 Art. 217-A. (...) § 6º Após o trânsito em julgado, a decisão será comunicada ao Poder Legislativo competente para o julgamento das contas, ficando o parecer prévio e demais documentos constantes do processo disponíveis para a consulta pública no sítio do Tribunal na internet. 7 Art.",
+    "conclusao": "Parecer Prévio recomendando a IRREGULARIDADE",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Paulo Frontin não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-6-00377323",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 252/2023 da Secretaria Primeira Câmara — contas do Prefeito de Paulo Frontin, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "252",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 252/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "182310/2021",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2023-06-12",
+   "data_publicacao": "2023-06-30",
+   "publicacao_literal": "DETC nº 3011",
+   "entidade_literal": "MUNICÍPIO DE PAULO FRONTIN",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Emitir parecer prévio deste Tribunal, recomendando o julgamento pela regularidade das contas do Sr. ANTONIO GILBERTO GRUBA, prefeito do Município de Paulo Frontin, relativas ao exercício financeiro de 2020, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, ressalvando-se a ausência de medidas necessárias para obtenção dos recursos com finalidade específica nos prazos pactuados com vistas a evitar, no exercício, os déficits nas respectivas fontes;",
+    "conclusao_literal": "Emitir parecer prévio deste Tribunal, recomendando o julgamento pela regularidade das contas do Sr. ANTONIO GILBERTO GRUBA, prefeito do Município de Paulo Frontin, relativas ao exercício financeiro de 2020, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, ressalvando-se a ausência de medidas necessárias para obtenção dos recursos com finalidade específica nos prazos pactuados com vistas a evitar, no exercício, os déficits nas respectivas fontes;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Paulo Frontin",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 252/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/6/00377323.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "599029b1b0911c07e794e25fe1a14a1659938049d1fac6dc027082dc22137c93",
+    "paginas_lidas": 2,
+    "total_paginas": 12,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por maioria absoluta, em: I - Emitir parecer prévio deste Tribunal, recomendando o julgamento pela regularidade das contas do Sr. ANTONIO GILBERTO GRUBA, prefeito do Município de Paulo Frontin, relativas ao exercício financeiro de 2020, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, ressalvando-se a ausência de medidas necessárias para obtenção dos recursos com finalidade específica nos prazos pactuados com vistas a evitar, no exercício, os déficits nas respectivas fontes; II – determinar, após o trânsito em julgado, a remessa dos autos à Coordenadoria de Monitoramento e Execuções para reg […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "Emitir parecer prévio deste Tribunal, recomendando o julgamento pela regularidade das contas do Sr. ANTONIO GILBERTO GRUBA, prefeito do Município de Paulo Frontin, relativas ao exercício financeiro de 2020, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, ressalvando-se a ausência de medidas necessárias para obtenção dos recursos com finalidade específica nos prazos pactuados com vistas a evitar, no exercício, os déficits nas respectivas fontes;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício financeiro de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Paulo Frontin não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-8-00350037",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 330/2020 da Secretaria Segunda Câmara — contas do Prefeito de Paulo Frontin, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "330",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 330/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "285929/2018",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2020-08-03",
+   "data_publicacao": "2020-08-13",
+   "publicacao_literal": "DETC nº 2360",
+   "entidade_literal": "MUNICÍPIO DE PAULO FRONTIN",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio, com fundamento nos artigos 1º, inciso I13 e 16, inciso III, “b”14, da Lei Complementar Estadual nº 113/2005, bem como no artigo 21515 do Regimento Interno e na Súmula nº 8, recomendando a irregularidade",
+    "conclusao_literal": "emitir Parecer Prévio, com fundamento nos artigos 1º, inciso I13 e 16, inciso III, “b”14, da Lei Complementar Estadual nº 113/2005, bem como no artigo 21515 do Regimento Interno e na Súmula nº 8, recomendando a irregularidade das contas do Município de Paulo Frontin, referentes ao exercício de 2017, de responsabilidade do Sr. Sebastião Elias da Silva Neto, em razão dos repasses irregulares de recursos financeiros ao Poder Legislativo Municipal, ressalvando o déficit orçamentário de fontes livres, o saneamento de impropriedades16 no curso da instrução processual, os atrasos nas publicações do RREO do primeiro ao quinto 13 Art.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Paulo Frontin",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 330/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/8/00350037.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "77cd4cccea853b9a098506edf9f351ac0c2a040685a66297bf1fc25cb26367af",
+    "paginas_lidas": 3,
+    "total_paginas": 11,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I- emitir Parecer Prévio, com fundamento nos artigos 1º, inciso I13 e 16, inciso III, “b”14, da Lei Complementar Estadual nº 113/2005, bem como no artigo 21515 do Regimento Interno e na Súmula nº 8, recomendando a irregularidade das contas do Município de Paulo Frontin, referentes ao exercício de 2017, de responsabilidade do Sr. Sebastião Elias da Silva Neto, em razão dos repasses irregulares de recursos financeiros ao Poder Legislativo Municipal, ressalvando o déficit orçamentário de fontes livres, o saneamento de impropriedades16 no curso da instrução processual, os atrasos nas publicações do RREO do primeiro ao quinto 13 Art. […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, com fundamento nos artigos 1º, inciso I13 e 16, inciso III, “b”14, da Lei Complementar Estadual nº 113/2005, bem como no artigo 21515 do Regimento Interno e na Súmula nº 8, recomendando a irregularidade das contas do Município de Paulo Frontin, referentes ao exercício de 2017, de responsabilidade do Sr. Sebastião Elias da Silva Neto, em razão dos repasses irregulares de recursos financeiros ao Poder Legislativo Municipal, ressalvando o déficit orçamentário de fontes livres, o saneamento de impropriedades16 no curso da instrução processual, os atrasos nas publicações do RREO do primeiro ao quinto 13 Art.",
+    "conclusao": "Parecer Prévio, com fundamento nos artigos 1º, inciso I13 e 16, inciso III, “b”14, da Lei Complementar Estadual nº 113/2005, bem como no artigo 21515 do Regimento Interno e na Súmula nº 8, recomendando a irregularidade",
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Paulo Frontin não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-3-00335267",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 20/2019 da Secretaria Segunda Câmara — contas do Prefeito de Paulo Frontin, exercício 2013",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "20",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 20/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "198263/2016",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2019-02-12",
+   "data_publicacao": "2019-03-21",
+   "publicacao_literal": "DETC nº 2022",
+   "entidade_literal": "MUNICÍPIO DE PAULO FRONTIN",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando o julgamento pela REGULARIDADE",
+    "conclusao_literal": "Emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, Parecer Prévio recomendando o julgamento pela REGULARIDADE das contas do PREFEITO DO MUNICÍPIO DE PAULO FRONTIN, exercício 2013, de responsabilidade de seu ex-Prefeito JAMIL PECH (2013/2016), CPF 648.672.349-15;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Paulo Frontin",
+    "exercicio": "2013",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 20/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/3/00335267.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "831766ba5c33d2e16a499735dc3086eaf95d09f8a9c5708fba0b80ed6146c83c",
+    "paginas_lidas": 2,
+    "total_paginas": 12,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: I- Emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, Parecer Prévio recomendando o julgamento pela REGULARIDADE das contas do PREFEITO DO MUNICÍPIO DE PAULO FRONTIN, exercício 2013, de responsabilidade de seu ex-Prefeito JAMIL PECH (2013/2016), CPF 648.672.349-15; II- RESSALVAR os itens relacionados à entrega dos dados do mês 13 - encerramento do exercício do Sistema SIM-AM com atraso; e às funções técnicas da contabilidade. III- Aplicar a multa prevista no art. 87, III, “B”, da Lei Complementar n.º 113/2005, em desfavor de JAMIL PECH, ex-Prefeito do MUNICÍPIO DE PAULO FRONTIN (2013/2016), CPF 648.672.349-15, e […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, Parecer Prévio recomendando o julgamento pela REGULARIDADE das contas do PREFEITO DO MUNICÍPIO DE PAULO FRONTIN, exercício 2013, de responsabilidade de seu ex-Prefeito JAMIL PECH (2013/2016), CPF 648.672.349-15;",
+    "conclusao": "Parecer Prévio recomendando o julgamento pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2013,
+     "trecho": "exercício 2013"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Paulo Frontin não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2021-208-primeiracmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 208/2021 da Secretaria Primeira Câmara — contas do Prefeito de Paulo Frontin",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "208",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 208/2021 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "241925/2020",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2021-06-28",
+   "data_publicacao": "2021-07-14",
+   "publicacao_literal": "DETC nº 2580",
+   "entidade_literal": "MUNICÍPIO DE PAULO FRONTIN",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Paulo Frontin",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Paulo Frontin não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2021-1-00353577",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 766/2020 da Secretaria Primeira Câmara — contas do Prefeito de Paulo Frontin",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "766",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 766/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "213395/2019",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2020-12-14",
+   "data_publicacao": "2021-01-07",
+   "publicacao_literal": "DETC nº 2451",
+   "entidade_literal": "MUNICÍPIO DE PAULO FRONTIN",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "expedir parecer prévio recomendando: - A irregularidade das contas do Sr.",
+    "conclusao_literal": "expedir parecer prévio recomendando: - A irregularidade das contas do Sr.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Paulo Frontin",
+    "exercicio": null,
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 766/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2021/1/00353577.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "fff516a5db116179fb1eedbeab00166834b475da63db45bd417229eabe83c2df",
+    "paginas_lidas": 2,
+    "total_paginas": 12,
+    "deliberacao": "ACORDAM Os membros da PRIMEIRA CÂMARA do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: I. expedir parecer prévio recomendando: - A irregularidade das contas do Sr. Sebastião Elias da Silva Neto como Prefeito de Paulo Frontin no exercício de 2018, em razão de déficit orçamentários das fontes não vinculadas (sendo [-3,96%] para o exercício em si e [-8,49%] no acumulado) e não atendimento ao disposto no art. 198, da Constituição Federal c/c LC 141/12 relativamente à aplicação de recursos na área da saúde. Além disso, deve ser aposta ressalva em relação ao conteúdo dos Pareceres do Conselho de Acompanhamento e Controle Social do FUNDEB e do Conselho Municipal de Saúde (Peça 58), os quais não atendem integra […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "expedir parecer prévio recomendando: - A irregularidade das contas do Sr.",
+    "conclusao": null,
+    "exercicio": null
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Paulo Frontin não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-12-00342240",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 594/2019 da Secretaria Segunda Câmara — contas do Prefeito de Paulo Frontin",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "594",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 594/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "307082/2017",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2019-12-03",
+   "data_publicacao": "2019-12-12",
+   "publicacao_literal": "DETC nº 2205",
+   "entidade_literal": "MUNICÍPIO DE PAULO FRONTIN",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Paulo Frontin",
+    "exercicio": null,
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 594/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/12/00342240.pdf"
+    }
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "sem_deliberacao",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "663aaf60e33a41be646d3431b65f356e35de11e9a5d9379641bdd92ae951da85",
+    "paginas_lidas": 3,
+    "total_paginas": 11,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por maioria absoluta, em: 1) emitir, com fundamento nos artigos 1º, inciso I, e 16, inciso III, alínea “b”19, ambos da Lei Complementar Estadual n.º 113/2005, da Lei 17 Art. 175-K. Compete à Coordenadoria de Gestão Municipal: (...) III – propor e instruir os processos de tomadas de contas sobre assuntos afetos a sua área de competência, nos termos deste Regimento; 18 Regimento Interno: “Art. 217-A. Pelo parecer prévio o Tribunal manifesta seu juízo acerca das contas de governo prestadas pelos Chefes do Poder Executivo Estadual e Municipal, que serão encaminhadas, após o trânsito em julgado, ao Poder Legislativo competente para o julgamento. (...) § […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": null,
+    "conclusao": null,
+    "exercicio": null
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo; o trecho \"Emitir Parecer Prévio…\" não foi localizado nas páginas finais do PDF",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Paulo Frontin não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

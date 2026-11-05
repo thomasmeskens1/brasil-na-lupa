@@ -1,0 +1,745 @@
+{
+ "atualizado_em": "2026-11-05T14:24:03.239Z",
+ "municipio": {
+  "id": "reboucas",
+  "nome": "Rebouças",
+  "uf": "PR",
+  "codigo_ibge": "4121505"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2016,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 9,
+  "pareceres": 9,
+  "com_parecer_em_fonte_aberta": 9,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 9,
+  "pdf_lido": 9,
+  "sem_exercicio_na_fonte": 0
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "3b7fb76a75413d34e4541e63dccfa3cab923f7d498fc63703a156f2f00d63a4c",
+   "atualizado_na_fonte": "26/06/2025 14:58:07"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2025-8-000198848",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 229/2025 — contas do Prefeito de Rebouças, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "229",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 229/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "190458/2025",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2025-08-04",
+   "data_publicacao": "2025-08-15",
+   "publicacao_literal": "DETC nº 3506",
+   "entidade_literal": "MUNICÍPIO DE REBOUÇAS",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) LUIZ EVERALDO ZAK, na qualidade de prefeito(a) do MUNICÍPIO DE REBOUÇAS, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Rebouças",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 229/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/8/000198848.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "e113591141531339fb0c91ad5e90777f797376f25cc958d801f6d15d21fa605b",
+    "paginas_lidas": 1,
+    "total_paginas": 45,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: Considerando os fatos expostos no item de fundamentação, voto, com respaldo no artigo 1º, I, da Lei Complementar Estadual n.º 113/2005 e em observância ao artigo 217-A, caput, do Regimento Interno, no sentido de: a. Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) LUIZ EVERALDO ZAK, na qualidade de prefeito(a) do MUNICÍPIO DE REBOUÇAS, relativas ao exercício de 2024. Após o trânsito em julgado da deliberação, encaminhem-se os autos ao Gabinete da Presidência para as providências contidas no § 6º do artigo 217-A do Regimento Interno, à Coordenadoria de Medidas Executórias para as anotações pertinentes […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) LUIZ EVERALDO ZAK, na qualidade de prefeito(a) do MUNICÍPIO DE REBOUÇAS, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Rebouças não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-9-00388652",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 330/2024 — contas do Prefeito de Rebouças, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "330",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 330/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "168653/2024",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "AUGUSTINHO ZUCCHI",
+   "data_julgamento": "2024-09-16",
+   "data_publicacao": "2024-09-27",
+   "publicacao_literal": "DETC nº 3304",
+   "entidade_literal": "MUNICÍPIO DE REBOUÇAS",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor LUIZ EVERALDO ZAK, na qualidade de prefeito do MUNICÍPIO DE REBOUÇAS, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Rebouças",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 330/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/9/00388652.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "627019bb841a15cf19fa71046630fd315547a90e3e045b370ef0e386c9cfffa4",
+    "paginas_lidas": 1,
+    "total_paginas": 35,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro AUGUSTINHO ZUCCHI, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor LUIZ EVERALDO ZAK, na qualidade de prefeito do MUNICÍPIO DE REBOUÇAS, relativas ao exercício de 2023. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, § 6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor LUIZ EVERALDO ZAK, na qualidade de prefeito do MUNICÍPIO DE REBOUÇAS, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Rebouças não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-3-00382733",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 71/2024 — contas do Prefeito de Rebouças, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "71",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 71/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "198516/2023",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2024-02-19",
+   "data_publicacao": "2024-03-08",
+   "publicacao_literal": "DETC nº 3166",
+   "entidade_literal": "MUNICÍPIO DE REBOUÇAS",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a REGULARIDADE das contas do senhor LUIZ EVERALDO ZAK, na qualidade de prefeito do MUNICÍPIO DE REBOUÇAS, relativas ao exercício de 2022.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Rebouças",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 71/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/3/00382733.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "f41e59f67942907157c322036ec34a4e73ce91c342b5cf6fcb75863f5faa0c73",
+    "paginas_lidas": 1,
+    "total_paginas": 32,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade: a. Emitir Parecer Prévio recomendando a REGULARIDADE das contas do senhor LUIZ EVERALDO ZAK, na qualidade de prefeito do MUNICÍPIO DE REBOUÇAS, relativas ao exercício de 2022. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, §6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a REGULARIDADE das contas do senhor LUIZ EVERALDO ZAK, na qualidade de prefeito do MUNICÍPIO DE REBOUÇAS, relativas ao exercício de 2022.",
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Rebouças não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-11-00380898",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 506/2023 da Secretaria Segunda Câmara — contas do Prefeito de Rebouças, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "506",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 506/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "166602/2022",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2023-11-13",
+   "data_publicacao": "2023-11-22",
+   "publicacao_literal": "DETC nº 3107",
+   "entidade_literal": "MUNICÍPIO DE REBOUÇAS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade com ressalva",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade com ressalva das contas do Município de Rebouças, referentes ao exercício de 2021, sob responsabilidade do Senhor Luiz Everaldo Zak, nos termos dos artigos 1º, inciso I,11 e 16, inciso II,12 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto ao seguinte item de análise da prestação de contas:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Rebouças",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 506/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/11/00380898.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "5c30890512996bc75e384556b08de5cd191b23056a7c07c598633cf83231ddba",
+    "paginas_lidas": 3,
+    "total_paginas": 9,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I- Emitir Parecer Prévio recomendando a regularidade com ressalva das contas do Município de Rebouças, referentes ao exercício de 2021, sob responsabilidade do Senhor Luiz Everaldo Zak, nos termos dos artigos 1º, inciso I,11 e 16, inciso II,12 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto ao seguinte item de análise da prestação de contas: Aplicação de no mínimo 90% dos recursos do FUNDEB no exercício da arrecadação. Saldo deixado de aplicar no primeiro quadrimestre do exercício seguinte excede a 10%; 10 Art. 217-A. Pelo parecer prévio o Tribunal manifesta seu juízo acerca das contas de gover […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade com ressalva das contas do Município de Rebouças, referentes ao exercício de 2021, sob responsabilidade do Senhor Luiz Everaldo Zak, nos termos dos artigos 1º, inciso I,11 e 16, inciso II,12 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto ao seguinte item de análise da prestação de contas:",
+    "conclusao": "Parecer Prévio recomendando a regularidade com ressalva",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Rebouças não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2022-10-00370194",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 200/2022 da Secretaria Segunda Câmara — contas do Prefeito de Rebouças, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "200",
+    "ano": "2022",
+    "titulo_oficial": "Acórdão de Parecer Prévio 200/2022 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "214042/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "NESTOR BAPTISTA",
+   "data_julgamento": "2022-10-17",
+   "data_publicacao": "2022-10-28",
+   "publicacao_literal": "DETC nº 2864",
+   "entidade_literal": "MUNICÍPIO DE REBOUÇAS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Emitir Parecer Prévio deste Tribunal, recomendando o julgamento pela REGULARIDADE com RESSALVA das contas do MUNICÍPIO DE REBOUÇAS, exercício de 2020, de responsabilidade do Sr. Luiz Everaldo Zak, CPF Nº 820.823.409-53, nos termos do art. 16, II, da Lei Orgânica do TCE-PR, devido a inobservância das prescrições da Nota SIM-AM nº 003/2020 deste Tribunal;",
+    "conclusao_literal": "Emitir Parecer Prévio deste Tribunal, recomendando o julgamento pela REGULARIDADE com RESSALVA das contas do MUNICÍPIO DE REBOUÇAS, exercício de 2020, de responsabilidade do Sr. Luiz Everaldo Zak, CPF Nº 820.823.409-53, nos termos do art. 16, II, da Lei Orgânica do TCE-PR, devido a inobservância das prescrições da Nota SIM-AM nº 003/2020 deste Tribunal;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Rebouças",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 200/2022 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2022/10/00370194.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "e7dda63819acd49da76272de8efa1de68a7edc70900c85bc4b813b4f87edeffc",
+    "paginas_lidas": 1,
+    "total_paginas": 6,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro NESTOR BAPTISTA, por unanimidade, em: I – Emitir Parecer Prévio deste Tribunal, recomendando o julgamento pela REGULARIDADE com RESSALVA das contas do MUNICÍPIO DE REBOUÇAS, exercício de 2020, de responsabilidade do Sr. Luiz Everaldo Zak, CPF Nº 820.823.409-53, nos termos do art. 16, II, da Lei Orgânica do TCE-PR, devido a inobservância das prescrições da Nota SIM-AM nº 003/2020 deste Tribunal; II - determinar, após o trânsito em julgado, a remessa dos autos à Coordenadoria de Monitoramento e Execuções (CMEX) para anotações e providências necessárias; III – encaminhar ao Gabinete da Presidência (GP) para comunicação ao Poder Legislativo do Município, nos termos do arti […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio deste Tribunal, recomendando o julgamento pela REGULARIDADE com RESSALVA das contas do MUNICÍPIO DE REBOUÇAS, exercício de 2020, de responsabilidade do Sr. Luiz Everaldo Zak, CPF Nº 820.823.409-53, nos termos do art. 16, II, da Lei Orgânica do TCE-PR, devido a inobservância das prescrições da Nota SIM-AM nº 003/2020 deste Tribunal;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2022,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Rebouças não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-10-00351257",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 513/2020 da Secretaria Segunda Câmara — contas do Prefeito de Rebouças, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "513",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 513/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "268556/2020",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2020-10-05",
+   "data_publicacao": "2020-10-21",
+   "publicacao_literal": "DETC nº 2406",
+   "entidade_literal": "MUNICÍPIO DE REBOUÇAS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "PARECER PRÉVIO recomendando a REGULARIDADE",
+    "conclusao_literal": "emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, PARECER PRÉVIO recomendando a REGULARIDADE das contas do PREFEITO MUNICIPAL DE REBOUÇAS, exercício de 2019, Sr. Luiz Everaldo Zak, CPF n.º 820.823.409-53, Gestor da Entidade no exercício;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Rebouças",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 513/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/10/00351257.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "52ca9ee3dd4ca00b8abcc5cae00a5d76eb21291c8246db8e98a7cda3116f9541",
+    "paginas_lidas": 1,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: I. emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, PARECER PRÉVIO recomendando a REGULARIDADE das contas do PREFEITO MUNICIPAL DE REBOUÇAS, exercício de 2019, Sr. Luiz Everaldo Zak, CPF n.º 820.823.409-53, Gestor da Entidade no exercício; II. remeter os autos, após o trânsito em julgado, ao Gabinete da Presidência (GP), para comunicação da deliberação ao Poder Legislativo municipal, nos termos do artigo 217-A, § 6º, do Regimento Interno; III. autorizar, cumpridas todas providências, o encerramento do feito e seu arquivamento na Diretoria de Protocolo.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, PARECER PRÉVIO recomendando a REGULARIDADE das contas do PREFEITO MUNICIPAL DE REBOUÇAS, exercício de 2019, Sr. Luiz Everaldo Zak, CPF n.º 820.823.409-53, Gestor da Entidade no exercício;",
+    "conclusao": "PARECER PRÉVIO recomendando a REGULARIDADE",
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Rebouças não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-10-00340623",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 380/2019 da Secretaria Primeira Câmara — contas do Prefeito de Rebouças, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "380",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 380/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "207158/2019",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2019-10-07",
+   "data_publicacao": "2019-10-11",
+   "publicacao_literal": "DETC nº 2163",
+   "entidade_literal": "MUNICÍPIO DE REBOUÇAS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando o julgamento pela regularidade",
+    "conclusao_literal": "emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do Poder Executivo do Município de Rebouças, referente ao exercício financeiro de 2018, de responsabilidade do senhor Luiz Everaldo Zak;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Rebouças",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 380/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/10/00340623.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "c817dea0fdb69e6405a8e863d151776da68507fa3ea06c02075db1d33ee2dbd2",
+    "paginas_lidas": 2,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I – emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do Poder Executivo do Município de Rebouças, referente ao exercício financeiro de 2018, de responsabilidade do senhor Luiz Everaldo Zak; II – determinar, depois de transitada em julgado a decisão, o encaminhamento dos autos ao Gabinete da Presidência para comunicação ao respectivo Poder Legislativo, nos termos do art. 217-A, § 6º do Regimento Interno1. Na sequência, à Coordenadoria de Monitoramento e Execuções; e III – determinar, depois de adotadas as providências pertinentes, com fundamento no art. 398, § 1° do Regimento Interno, o encerramen […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do Poder Executivo do Município de Rebouças, referente ao exercício financeiro de 2018, de responsabilidade do senhor Luiz Everaldo Zak;",
+    "conclusao": "Parecer Prévio recomendando o julgamento pela regularidade",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício financeiro de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Rebouças não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-5-00336514",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 115/2019 da Secretaria Primeira Câmara — contas do Prefeito de Rebouças, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "115",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 115/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "299407/2018",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2019-05-06",
+   "data_publicacao": "2019-05-10",
+   "publicacao_literal": "DETC nº 2055",
+   "entidade_literal": "MUNICÍPIO DE REBOUÇAS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito de REBOUÇAS, Sr. Luiz Everaldo Zak, CPF n.º 820.823.409-53, exercício financeiro de 2017, com ressalvas em decorrência dos repetidos atrasos na alimentação dos módulos SIM-AM, especificamente nos meses de abertura (27 dias), janeiro (64 dias), fevereiro (42 dias), março (50 dias), abril (24 dias), maio (31 dias) e junho (3 dias);",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Rebouças",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 115/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/5/00336514.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "e85647a7d0b9dda27977fd8cd268fd8542a09f0d346ca447264eb48edf13d30f",
+    "paginas_lidas": 2,
+    "total_paginas": 7,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito de REBOUÇAS, Sr. Luiz Everaldo Zak, CPF n.º 820.823.409-53, exercício financeiro de 2017, com ressalvas em decorrência dos repetidos atrasos na alimentação dos módulos SIM-AM, especificamente nos meses de abertura (27 dias), janeiro (64 dias), fevereiro (42 dias), março (50 dias), abril (24 dias), maio (31 dias) e junho (3 dias); bem como da inobservância aos ditames do art. 4º, § 2º, da Lei Municipal n.º 1184/07; II. Aplicar, por uma única vez, a multa prevista no art. 87, III, “b”, da Lei Complementar n.º 113/2005, ao Sr. L […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito de REBOUÇAS, Sr. Luiz Everaldo Zak, CPF n.º 820.823.409-53, exercício financeiro de 2017, com ressalvas em decorrência dos repetidos atrasos na alimentação dos módulos SIM-AM, especificamente nos meses de abertura (27 dias), janeiro (64 dias), fevereiro (42 dias), março (50 dias), abril (24 dias), maio (31 dias) e junho (3 dias);",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício financeiro de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Rebouças não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-11-00352855",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 645/2020 da Secretaria Segunda Câmara — contas do Prefeito de Rebouças, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "645",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 645/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "233933/2017",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2020-11-16",
+   "data_publicacao": "2020-11-25",
+   "publicacao_literal": "DETC nº 2430",
+   "entidade_literal": "MUNICÍPIO DE REBOUÇAS",
+   "resumo_literal": "Imputação de multa.",
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio recomendando a regularidade",
+    "conclusao_literal": "emitir parecer prévio recomendando a regularidade das contas do Sr. CLAUDEMIR DOS SANTOS HERTHEL, prefeito do Município de Rebouças, relativas ao exercício financeiro de 2016, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, ressalvando-se a realização de despesas com publicidade institucional no período que antecede as eleições, as divergências de saldos no Ativo Financeiro e Ativo Permanente do Balanço Patrimonial emitido pelo Sistema de Contabilidade da Entidade e os dados enviados pelo SIM/AM, e o atraso na entrega de dados no Sistema de Informações Municipais – Acompanhamento Mensal;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Rebouças",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 645/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/11/00352855.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "e25fba9f544c9019b06074041fdbbe3ca3c6cc0abc066015499b1e1235f583bd",
+    "paginas_lidas": 2,
+    "total_paginas": 14,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade, em: 1. emitir parecer prévio recomendando a regularidade das contas do Sr. CLAUDEMIR DOS SANTOS HERTHEL, prefeito do Município de Rebouças, relativas ao exercício financeiro de 2016, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, ressalvando-se a realização de despesas com publicidade institucional no período que antecede as eleições, as divergências de saldos no Ativo Financeiro e Ativo Permanente do Balanço Patrimonial emitido pelo Sistema de Contabilidade da Entidade e os dados enviados pelo SIM/AM, e o atraso na entrega de dados no Sistema de Informações Municipais – Ac […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir parecer prévio recomendando a regularidade das contas do Sr. CLAUDEMIR DOS SANTOS HERTHEL, prefeito do Município de Rebouças, relativas ao exercício financeiro de 2016, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, ressalvando-se a realização de despesas com publicidade institucional no período que antecede as eleições, as divergências de saldos no Ativo Financeiro e Ativo Permanente do Balanço Patrimonial emitido pelo Sistema de Contabilidade da Entidade e os dados enviados pelo SIM/AM, e o atraso na entrega de dados no Sistema de Informações Municipais – Acompanhamento Mensal;",
+    "conclusao": "parecer prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício financeiro de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Rebouças não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [],
+ "acordaos_relacionados": []
+}

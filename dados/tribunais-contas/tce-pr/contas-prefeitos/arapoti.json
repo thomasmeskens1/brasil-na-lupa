@@ -1,0 +1,660 @@
+{
+ "atualizado_em": "2026-11-05T14:29:00.781Z",
+ "municipio": {
+  "id": "arapoti",
+  "nome": "Arapoti",
+  "uf": "PR",
+  "codigo_ibge": "4101606"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2017,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 7,
+  "pareceres": 8,
+  "com_parecer_em_fonte_aberta": 7,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 7,
+  "pdf_lido": 7,
+  "sem_exercicio_na_fonte": 1
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2025-9-000199250",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 267/2025 — contas do Prefeito de Arapoti, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "267",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 267/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "176498/2025",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2025-09-01",
+   "data_publicacao": "2025-09-15",
+   "publicacao_literal": "DETC nº 3526",
+   "entidade_literal": "MUNICÍPIO DE ARAPOTI",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) IRANI JOSE BARROS, na qualidade de prefeito(a) do MUNICÍPIO DE ARAPOTI, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Arapoti",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 267/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/9/000199250.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "fdf1c8cfde5ff699fe0473a7182be5008ed661be8f40a4c31d8681942c8fe7f7",
+    "paginas_lidas": 1,
+    "total_paginas": 48,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: Considerando os fatos expostos no item de fundamentação, voto, com respaldo no artigo 1º, I, da Lei Complementar Estadual n.º 113/2005 e em observância ao artigo 217-A, caput, do Regimento Interno, no sentido de: a. Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) IRANI JOSE BARROS, na qualidade de prefeito(a) do MUNICÍPIO DE ARAPOTI, relativas ao exercício de 2024. b. RESSALVAR as contas em virtude de: i. aportes para cobertura do déficit atuarial em montante inferiores ao previstos no resultado de avaliação atuarial. Após o trânsito em julgado da deliberação, encaminhem-se os autos ao Gabinete da Pr […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) IRANI JOSE BARROS, na qualidade de prefeito(a) do MUNICÍPIO DE ARAPOTI, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Arapoti não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2025-9-000199253",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 280/2025 — contas do Prefeito de Arapoti, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "280",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 280/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "210692/2024",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "AUGUSTINHO ZUCCHI",
+   "data_julgamento": "2025-09-01",
+   "data_publicacao": "2025-09-15",
+   "publicacao_literal": "DETC nº 3526",
+   "entidade_literal": "MUNICÍPIO DE ARAPOTI",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVAS",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do(a) senhor(a) IRANI JOSE BARROS, na qualidade de prefeito(a) do MUNICÍPIO DE ARAPOTI, relativas ao exercício de 2023, em razão de:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Arapoti",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 280/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/9/000199253.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "826ddb85f1bf28735a0f3e5fdb3d1a4286a697bfe73e4728be5f2af98cc4d781",
+    "paginas_lidas": 1,
+    "total_paginas": 48,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro AUGUSTINHO ZUCCHI, por maioria absoluta: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do(a) senhor(a) IRANI JOSE BARROS, na qualidade de prefeito(a) do MUNICÍPIO DE ARAPOTI, relativas ao exercício de 2023, em razão de: i. aportes para cobertura do déficit atuarial em montante inferior ao previsto no resultado de avaliação atuarial, resultando em descumprimento do disposto no artigo 9º da Lei Federal n.º 9.717/1998 e nos artigos 53, § 1º, e 55, da Portaria MF n.º 464/2018. ii. baixo desempenho evidenciado na avaliação da atuação governamental na área da Assistência Social. Após o trânsito em julgado da deliberação, encaminhar os autos à Coordenado […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do(a) senhor(a) IRANI JOSE BARROS, na qualidade de prefeito(a) do MUNICÍPIO DE ARAPOTI, relativas ao exercício de 2023, em razão de:",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVAS",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Arapoti não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-8-00387221",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 285/2024 — contas do Prefeito de Arapoti, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "285",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 285/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "170484/2023",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2024-07-22",
+   "data_publicacao": "2024-08-02",
+   "publicacao_literal": "DETC nº 3264",
+   "entidade_literal": "MUNICÍPIO DE ARAPOTI",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVAS",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do(a) senhor(a) IRANI JOSE BARROS, na qualidade de prefeito(a) do MUNICÍPIO DE ARAPOTI, relativas ao exercício de 2022, em razão de:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Arapoti",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 285/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/8/00387221.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "62ef517c3c5571e29d9ceae2c171f51460bc31417cb1281614ca80281c020181",
+    "paginas_lidas": 1,
+    "total_paginas": 36,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do(a) senhor(a) IRANI JOSE BARROS, na qualidade de prefeito(a) do MUNICÍPIO DE ARAPOTI, relativas ao exercício de 2022, em razão de: i. Ressalva quanto aos aportes para cobertura do déficit atuarial, conforme ao previstos no resultado de avaliação atuarial, conforme Súmula 8; ii. Ressalva em razão dos resultados da avaliação da atuação governamental nas áreas de Educação: 5,61; Assistência Social: 5,37; Administração Financeira: 2,65; Transparência e Relacionamento com o Cidadão: 5,37; e Previdência Social: 3,38; b. Encaminhar os autos à Coordenadoria Geral de Fisca […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do(a) senhor(a) IRANI JOSE BARROS, na qualidade de prefeito(a) do MUNICÍPIO DE ARAPOTI, relativas ao exercício de 2022, em razão de:",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVAS",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Arapoti não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-9-00379323",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 435/2023 da Secretaria Primeira Câmara — contas do Prefeito de Arapoti, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "435",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 435/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "204040/2022",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2023-09-04",
+   "data_publicacao": "2023-09-18",
+   "publicacao_literal": "DETC nº 3065",
+   "entidade_literal": "MUNICÍPIO DE ARAPOTI",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "PARECER PRÉVIO deste Tribunal recomendando o julgamento pela REGULARIDADE com ressalva",
+    "conclusao_literal": "Emitir, na forma do art. 23 da Lei Complementar Estadual nº 113/2005, PARECER PRÉVIO deste Tribunal recomendando o julgamento pela REGULARIDADE com ressalva das contas do prefeito do MUNICÍPIO DE ARAPOTI, relativas ao exercício de 2021, de responsabilidade de IRANI JOSE BARROS.;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Arapoti",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 435/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/9/00379323.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "7723264e722eb762096e8cd3ad7dd645dee28c1c4a991839168fa03ef54f687b",
+    "paginas_lidas": 2,
+    "total_paginas": 5,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade, em: I – Emitir, na forma do art. 23 da Lei Complementar Estadual nº 113/2005, PARECER PRÉVIO deste Tribunal recomendando o julgamento pela REGULARIDADE com ressalva das contas do prefeito do MUNICÍPIO DE ARAPOTI, relativas ao exercício de 2021, de responsabilidade de IRANI JOSE BARROS.; II - ressalvar os itens “Ausência de Pagamento de aportes para cobertura do déficit atuarial na forma apurada no Laudo Atuarial” e “aplicação de no mínimo 90% dos recursos do FUNDEB no exercício da arrecadação. Saldo deixado de aplicar no primeiro quadrimestre do exercício seguinte excede a 10%”; III – determinar, após o trânsito em j […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir, na forma do art. 23 da Lei Complementar Estadual nº 113/2005, PARECER PRÉVIO deste Tribunal recomendando o julgamento pela REGULARIDADE com ressalva das contas do prefeito do MUNICÍPIO DE ARAPOTI, relativas ao exercício de 2021, de responsabilidade de IRANI JOSE BARROS.;",
+    "conclusao": "PARECER PRÉVIO deste Tribunal recomendando o julgamento pela REGULARIDADE com ressalva",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Arapoti não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-2-00372289",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 11/2023 da Secretaria Primeira Câmara — contas do Prefeito de Arapoti, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "11",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 11/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "180040/2021",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2023-02-06",
+   "data_publicacao": "2023-02-24",
+   "publicacao_literal": "DETC nº 2927",
+   "entidade_literal": "MUNICÍPIO DE ARAPOTI",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio deste Tribunal recomendando o julgamento pela regularidade",
+    "conclusao_literal": "Emitir, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, Parecer Prévio deste Tribunal recomendando o julgamento pela regularidade das contas da Sra. NERILDA APARECIDA PENNA, prefeita do Município de Arapoti, relativas ao exercício financeiro de 2019, ressalvando-se o pagamento de parte dos aportes para cobertura do déficit atuarial na forma apurada no laudo atuarial em exercício diverso da competência 2020;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Arapoti",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 11/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/2/00372289.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "7132961f213fb76d195604b9fbbf5abb666de387007ec27113e149d03c2116a5",
+    "paginas_lidas": 2,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade, em: I – Emitir, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, Parecer Prévio deste Tribunal recomendando o julgamento pela regularidade das contas da Sra. NERILDA APARECIDA PENNA, prefeita do Município de Arapoti, relativas ao exercício financeiro de 2019, ressalvando-se o pagamento de parte dos aportes para cobertura do déficit atuarial na forma apurada no laudo atuarial em exercício diverso da competência 2020; II – determinar, após o trânsito em julgado, a remessa dos autos à Coordenadoria de Monitoramento e Execuções para registro, e, posteriormente, ao Gabinete da Pr […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, Parecer Prévio deste Tribunal recomendando o julgamento pela regularidade das contas da Sra. NERILDA APARECIDA PENNA, prefeita do Município de Arapoti, relativas ao exercício financeiro de 2019, ressalvando-se o pagamento de parte dos aportes para cobertura do déficit atuarial na forma apurada no laudo atuarial em exercício diverso da competência 2020;",
+    "conclusao": "Parecer Prévio deste Tribunal recomendando o julgamento pela regularidade",
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício financeiro de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Arapoti não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-2-00343501",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 38/2020 da Secretaria Segunda Câmara — contas do Prefeito de Arapoti, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "38",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 38/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "175655/2019",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2020-02-11",
+   "data_publicacao": "2020-02-17",
+   "publicacao_literal": "DETC nº 2242",
+   "entidade_literal": "MUNICÍPIO DE ARAPOTI",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, com fundamento nos artigos 1.º, inciso I, e 16, inciso II, ambos da Lei Complementar Estadual n.° 113/20054, recomendando a regularidade das contas da Prefeita do Município de Arapoti, exercício de 2018, com ressalva em função da ausência de pagamento de aportes para cobertura do déficit atuarial na forma apurada no Laudo Atuarial;",
+    "conclusao_literal": "emitir Parecer Prévio, com fundamento nos artigos 1.º, inciso I, e 16, inciso II, ambos da Lei Complementar Estadual n.° 113/20054, recomendando a regularidade das contas da Prefeita do Município de Arapoti, exercício de 2018, com ressalva em função da ausência de pagamento de aportes para cobertura do déficit atuarial na forma apurada no Laudo Atuarial;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Arapoti",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 38/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/2/00343501.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "76c34863c471b0af02129ff8cc04f18145f9dd42a2c5454baec8de4e87b6d6b6",
+    "paginas_lidas": 2,
+    "total_paginas": 7,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I- emitir Parecer Prévio, com fundamento nos artigos 1.º, inciso I, e 16, inciso II, ambos da Lei Complementar Estadual n.° 113/20054, recomendando a regularidade das contas da Prefeita do Município de Arapoti, exercício de 2018, com ressalva em função da ausência de pagamento de aportes para cobertura do déficit atuarial na forma apurada no Laudo Atuarial; II- encaminhar os autos, após o trânsito em julgado, à Coordenadoria de Monitoramento e Execuções para as devidas anotações e ao Gabinete da Presidência para comunicação da deliberação ao Poder Legislativo Municipal5; III- determinar o encerramento do processo, com fundamento […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, com fundamento nos artigos 1.º, inciso I, e 16, inciso II, ambos da Lei Complementar Estadual n.° 113/20054, recomendando a regularidade das contas da Prefeita do Município de Arapoti, exercício de 2018, com ressalva em função da ausência de pagamento de aportes para cobertura do déficit atuarial na forma apurada no Laudo Atuarial;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Arapoti não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-10-00340520",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 364/2019 da Secretaria Segunda Câmara — contas do Prefeito de Arapoti, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "364",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 364/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "249736/2018",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2019-10-01",
+   "data_publicacao": "2019-10-07",
+   "publicacao_literal": "DETC nº 2159",
+   "entidade_literal": "MUNICÍPIO DE ARAPOTI",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "conclusao_literal": "emitir, na forma do artigo 23 da Lei Complementar n.° 113/2005, Parecer Prévio recomendando a irregularidade das contas dos Prefeitos do Município de Arapoti, exercício de 2017, senhor Braz Rizzi, CPF 177.929.759-91, Gestor no período de 01/01/2017 até 14/09/2017, e da senhora Nerilda Aparecida Penna, CPF 034.054.039-79, Gestora no período de 15/09/17 até 31/12/17, em razão do Pagamento parcial de aportes para cobertura do déficit atuarial na forma apurada no Laudo Atuarial;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Arapoti",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 364/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/10/00340520.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "8638e0128226a249d78a1a9940582d7bbcf700663cff94d92100abf65edbad02",
+    "paginas_lidas": 2,
+    "total_paginas": 12,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por maioria absoluta, em: I. emitir, na forma do artigo 23 da Lei Complementar n.° 113/2005, Parecer Prévio recomendando a irregularidade das contas dos Prefeitos do Município de Arapoti, exercício de 2017, senhor Braz Rizzi, CPF 177.929.759-91, Gestor no período de 01/01/2017 até 14/09/2017, e da senhora Nerilda Aparecida Penna, CPF 034.054.039-79, Gestora no período de 15/09/17 até 31/12/17, em razão do Pagamento parcial de aportes para cobertura do déficit atuarial na forma apurada no Laudo Atuarial; II. apor ressalvas em razão das Divergências de saldos em quaisquer das classes ou grupos do Balanço Patrimonial emitido pelo Sistema de Contabi […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "emitir, na forma do artigo 23 da Lei Complementar n.° 113/2005, Parecer Prévio recomendando a irregularidade das contas dos Prefeitos do Município de Arapoti, exercício de 2017, senhor Braz Rizzi, CPF 177.929.759-91, Gestor no período de 01/01/2017 até 14/09/2017, e da senhora Nerilda Aparecida Penna, CPF 034.054.039-79, Gestora no período de 15/09/17 até 31/12/17, em razão do Pagamento parcial de aportes para cobertura do déficit atuarial na forma apurada no Laudo Atuarial;",
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Arapoti não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2021-153-segundacmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 153/2021 da Secretaria Segunda Câmara — contas do Prefeito de Arapoti",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "153",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 153/2021 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "185952/2020",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "NESTOR BAPTISTA",
+   "data_julgamento": "2021-05-17",
+   "data_publicacao": "2021-05-31",
+   "publicacao_literal": "DETC nº 2550",
+   "entidade_literal": "MUNICÍPIO DE ARAPOTI",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Arapoti",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Arapoti não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

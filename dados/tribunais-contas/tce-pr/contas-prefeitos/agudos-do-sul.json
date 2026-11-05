@@ -1,0 +1,804 @@
+{
+ "atualizado_em": "2026-11-05T14:29:00.681Z",
+ "municipio": {
+  "id": "agudos-do-sul",
+  "nome": "Agudos do Sul",
+  "uf": "PR",
+  "codigo_ibge": "4100301"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2016,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 8,
+  "pareceres": 10,
+  "com_parecer_em_fonte_aberta": 8,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 9,
+  "pdf_lido": 8,
+  "sem_exercicio_na_fonte": 2
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f68ca8a9b64d6286d5f605b923705fb7602cf450e7408d143f7545e514359bfb",
+   "atualizado_na_fonte": "05/06/2026 00:00:40"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2026-3-000201232",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 113/2026 — contas do Prefeito de Agudos do Sul, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "113",
+    "ano": "2026",
+    "titulo_oficial": "Parecer Prévio 113/2026"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "157760/2025",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2026-03-16",
+   "data_publicacao": "2026-03-27",
+   "publicacao_literal": "DETC nº 3643",
+   "entidade_literal": "MUNICÍPIO DE AGUDOS DO SUL",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas dos senhores GENEZIO GONCALVES DA LUZ e JESSE DA ROCHA ZOELLNER, na qualidade de prefeitos do MUNICÍPIO DE AGUDOS DO SUL, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Agudos do Sul",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 113/2026 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2026/3/000201232.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "3af6dc7eefa88b5ef3db4a6b55b817bdad7147254bb5260a6b60af3b4c4e3e82",
+    "paginas_lidas": 1,
+    "total_paginas": 46,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por maioria absoluta: a. Emitir Parecer Prévio pela REGULARIDADE das contas dos senhores GENEZIO GONCALVES DA LUZ e JESSE DA ROCHA ZOELLNER, na qualidade de prefeitos do MUNICÍPIO DE AGUDOS DO SUL, relativas ao exercício de 2024. b. RESSALVAR as contas em virtude de: i. obrigações de despesas contraídas nos dois últimos quadrimestres do mandato (art. 42 da LRF) sem suficiente disponibilidade de caixa. Após o trânsito em julgado da deliberação, encaminhem-se os autos ao Gabinete da Presidência para as providências contidas no § 6º do artigo 217-A do Regimento Interno, à Coordenadoria de Medidas Executórias para as anotações pertinentes e, […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas dos senhores GENEZIO GONCALVES DA LUZ e JESSE DA ROCHA ZOELLNER, na qualidade de prefeitos do MUNICÍPIO DE AGUDOS DO SUL, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2026,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Agudos do Sul não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-9-00388582",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 333/2024 — contas do Prefeito de Agudos do Sul, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "333",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 333/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "159891/2024",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2024-09-16",
+   "data_publicacao": "2024-09-25",
+   "publicacao_literal": "DETC nº 3302",
+   "entidade_literal": "MUNICÍPIO DE AGUDOS DO SUL",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JESSE DA ROCHA ZOELLNER, na qualidade de prefeito do MUNICÍPIO DE AGUDOS DO SUL, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Agudos do Sul",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 333/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/9/00388582.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "999d863e25c2ff14d13da5c7835fcab326dd1f3ac94165a873430cfc76909120",
+    "paginas_lidas": 1,
+    "total_paginas": 44,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JESSE DA ROCHA ZOELLNER, na qualidade de prefeito do MUNICÍPIO DE AGUDOS DO SUL, relativas ao exercício de 2023. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, § 6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JESSE DA ROCHA ZOELLNER, na qualidade de prefeito do MUNICÍPIO DE AGUDOS DO SUL, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Agudos do Sul não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-12-00391397",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 414/2024 — contas do Prefeito de Agudos do Sul, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "414",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 414/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "146400/2023",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2024-11-25",
+   "data_publicacao": "2024-12-09",
+   "publicacao_literal": "DETC nº 3352",
+   "entidade_literal": "MUNICÍPIO DE AGUDOS DO SUL",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JESSE DA ROCHA ZOELLNER, na qualidade de prefeito do MUNICÍPIO DE AGUDOS DO SUL, relativas ao exercício de 2022, RESSALVANDO:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Agudos do Sul",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 414/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/12/00391397.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "8abe83af61ba265df0ddeff5f57ae088da9465611614736eb83383cddecb3f2a",
+    "paginas_lidas": 1,
+    "total_paginas": 33,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JESSE DA ROCHA ZOELLNER, na qualidade de prefeito do MUNICÍPIO DE AGUDOS DO SUL, relativas ao exercício de 2022, RESSALVANDO: i. o resultado financeiro acumulado negativo nas fontes não vinculadas no percentual de -6,21%, haja vista que o Município passou por situação de calamidade pública no exercício e comprovou a adoção de medidas de contingenciamento de despesas. b. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presi […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JESSE DA ROCHA ZOELLNER, na qualidade de prefeito do MUNICÍPIO DE AGUDOS DO SUL, relativas ao exercício de 2022, RESSALVANDO:",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Agudos do Sul não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-9-00378927",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 376/2023 da Secretaria Segunda Câmara — contas do Prefeito de Agudos do Sul, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "376",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 376/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "178526/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2023-08-21",
+   "data_publicacao": "2023-09-01",
+   "publicacao_literal": "DETC nº 3056",
+   "entidade_literal": "MUNICÍPIO DE AGUDOS DO SUL",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "conclusao_literal": "emitir Parecer Prévio recomendando a irregularidade das Contas do exercício de 2020 da Prefeita Municipal de Agudos do Sul, senhora Luciane Maira Teixeira, nos termos dos artigos 1º, inciso I,11 da Lei Complementar Estadual 10 REsp 1.899.674-SP, Rel.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Agudos do Sul",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 376/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/9/00378927.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "214796e6854b5a245d8d03152214c6da4f6ad66f21ec06ae7202d269df2d0291",
+    "paginas_lidas": 3,
+    "total_paginas": 12,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por maioria absoluta, em: I - emitir Parecer Prévio recomendando a irregularidade das Contas do exercício de 2020 da Prefeita Municipal de Agudos do Sul, senhora Luciane Maira Teixeira, nos termos dos artigos 1º, inciso I,11 da Lei Complementar Estadual 10 REsp 1.899.674-SP, Rel. Min. Nancy Andrighi, Terceira Turma, por unanimidade, julgado em 16/03/2021 11 Art. 1º - Ao Tribunal de Contas do Estado, órgão constitucional de controle externo, com sede na Capital do Estado, compete, nos termos da Constituição Estadual e na forma estabelecida nesta lei: SEGUNDA CÂMARA 113/2005, em razão do exposto na fundamentação quanto ao seguinte item de análise da p […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "emitir Parecer Prévio recomendando a irregularidade das Contas do exercício de 2020 da Prefeita Municipal de Agudos do Sul, senhora Luciane Maira Teixeira, nos termos dos artigos 1º, inciso I,11 da Lei Complementar Estadual 10 REsp 1.899.674-SP, Rel.",
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Agudos do Sul não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-11-00352912",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 600/2020 da Secretaria Segunda Câmara — contas do Prefeito de Agudos do Sul, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "600",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 600/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "252560/2020",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2020-11-03",
+   "data_publicacao": "2020-11-16",
+   "publicacao_literal": "DETC nº 2423",
+   "entidade_literal": "MUNICÍPIO DE AGUDOS DO SUL",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio, na forma do artigo 23 da Lei Complementar n° 113/2005, recomendando a REGULARIDADE",
+    "conclusao_literal": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n° 113/2005, recomendando a REGULARIDADE das contas da PREFEITA MUNICIPAL DE AGUDOS DO SUL, exercício de 2019, Sra. Luciane Maíra Teixeira, CPF 614.508.129-53;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Agudos do Sul",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 600/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/11/00352912.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "62ad30a67a59aae320b465ce06aefb8ff45eea45d3c09711edcd015d30c0ab6a",
+    "paginas_lidas": 1,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: I- emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n° 113/2005, recomendando a REGULARIDADE das contas da PREFEITA MUNICIPAL DE AGUDOS DO SUL, exercício de 2019, Sra. Luciane Maíra Teixeira, CPF 614.508.129-53; II- encaminhar os autos, ao Gabinete da Presidência para deliberações, nos termos do artigo 217-A, § 6.º, do Regimento Interno desta Corte de Contas; III- autorizar, após o cumprimento integral da decisão, o encerramento do processo, e encaminhamento à Diretoria de Protocolo para arquivamento, nos termos do artigo 398, § 1.º do Regimento Interno.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n° 113/2005, recomendando a REGULARIDADE das contas da PREFEITA MUNICIPAL DE AGUDOS DO SUL, exercício de 2019, Sra. Luciane Maíra Teixeira, CPF 614.508.129-53;",
+    "conclusao": "Parecer Prévio, na forma do artigo 23 da Lei Complementar n° 113/2005, recomendando a REGULARIDADE",
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Agudos do Sul não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-2-00343413",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 22/2020 da Secretaria Segunda Câmara — contas do Prefeito de Agudos do Sul, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "22",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 22/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "202601/2019",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2020-01-28",
+   "data_publicacao": "2020-02-11",
+   "publicacao_literal": "DETC nº 2238",
+   "entidade_literal": "MUNICÍPIO DE AGUDOS DO SUL",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio recomendando a irregularidade",
+    "conclusao_literal": "emitir parecer prévio recomendando a irregularidade das contas do Município de Agudos do Sul, referentes ao exercício financeiro de 2018, de responsabilidade da Prefeita Municipal, senhora Luciane Maira Teixeira, nos termos dos artigos 1.º, inciso I,8 e 16, inciso III, alínea “b”,9 ambos dispositivos da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise da prestação de contas:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Agudos do Sul",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 22/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/2/00343413.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "8303677c054f5c5c9b37e80ef382f434b64d91e0abd344923db0ab1ff3645051",
+    "paginas_lidas": 2,
+    "total_paginas": 5,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I. emitir parecer prévio recomendando a irregularidade das contas do Município de Agudos do Sul, referentes ao exercício financeiro de 2018, de responsabilidade da Prefeita Municipal, senhora Luciane Maira Teixeira, nos termos dos artigos 1.º, inciso I,8 e 16, inciso III, alínea “b”,9 ambos dispositivos da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise da prestação de contas: Resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS; 5 Art. 175-L. Compete à Coordenadoria de Monitoramento e Execuções: (Incluído pe […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir parecer prévio recomendando a irregularidade das contas do Município de Agudos do Sul, referentes ao exercício financeiro de 2018, de responsabilidade da Prefeita Municipal, senhora Luciane Maira Teixeira, nos termos dos artigos 1.º, inciso I,8 e 16, inciso III, alínea “b”,9 ambos dispositivos da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise da prestação de contas:",
+    "conclusao": "parecer prévio recomendando a irregularidade",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício financeiro de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Agudos do Sul não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-7-00338150",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 146/2019 da Secretaria Primeira Câmara — contas do Prefeito de Agudos do Sul, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "146",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 146/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "257852/2018",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2019-07-08",
+   "data_publicacao": "2019-07-16",
+   "publicacao_literal": "DETC nº 2100",
+   "entidade_literal": "MUNICÍPIO DE AGUDOS DO SUL",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio pela regularidade",
+    "conclusao_literal": "emitir Parecer Prévio pela regularidade das contas do MUNICÍPIO DE AGUDOS DO SUL, CNPJ 76.105.667/0001-10, relativa ao exercício financeiro de 2017, de responsabilidade da Sra. LUCIANE MAIRA TEIXEIRA, CPF 614.508.129-53, com base no disposto no art. 16, I, da LC/PR 113/05;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Agudos do Sul",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 146/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/7/00338150.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "9f2578da962629c9c3fbf5defdd41a48183e77dbcc88effac2c09bcf03a6d290",
+    "paginas_lidas": 1,
+    "total_paginas": 4,
+    "deliberacao": "ACORDAM Os membros da SEGUNDA CÂMARA do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: I. emitir Parecer Prévio pela regularidade das contas do MUNICÍPIO DE AGUDOS DO SUL, CNPJ 76.105.667/0001-10, relativa ao exercício financeiro de 2017, de responsabilidade da Sra. LUCIANE MAIRA TEIXEIRA, CPF 614.508.129-53, com base no disposto no art. 16, I, da LC/PR 113/05; II. aplicar multa administrativa à Sra. LUCIANE MAIRA TEIXEIRA, CPF 614.508.129-53, representante legal do MUNICÍPIO DE AGUDOS DO SUL, CNPJ 76.105.667/0001-10, nos termos do art. 87, III, b, da LC 113/2005, em face dos atrasos na alimentação dos dados do sistema SIM/AM nos meses de Janeiro (55 dias), Maio (35 dias), Agosto (39 dias) e Dezembro (37 […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio pela regularidade das contas do MUNICÍPIO DE AGUDOS DO SUL, CNPJ 76.105.667/0001-10, relativa ao exercício financeiro de 2017, de responsabilidade da Sra. LUCIANE MAIRA TEIXEIRA, CPF 614.508.129-53, com base no disposto no art. 16, I, da LC/PR 113/05;",
+    "conclusao": "Parecer Prévio pela regularidade",
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício financeiro de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Agudos do Sul não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-8-00349976",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 335/2020 da Secretaria Primeira Câmara — contas do Prefeito de Agudos do Sul, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "335",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 335/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "293065/2017",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2020-08-10",
+   "data_publicacao": "2020-08-19",
+   "publicacao_literal": "DETC nº 2364",
+   "entidade_literal": "MUNICÍPIO DE AGUDOS DO SUL",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando o julgamento pela regularidade",
+    "conclusao_literal": "emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do senhor Antônio Gonçalves da Luz, chefe do Poder Executivo do Município de Agudos do Sul, referente ao exercício financeiro de 2016, ressalvando:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Agudos do Sul",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 335/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/8/00349976.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "9d717ab3f9a727715025c55db67b854588afef1e03edf6141dee4085465b3e68",
+    "paginas_lidas": 2,
+    "total_paginas": 15,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I – emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do senhor Antônio Gonçalves da Luz, chefe do Poder Executivo do Município de Agudos do Sul, referente ao exercício financeiro de 2016, ressalvando: i) as obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa no grupo “Transferências do FUNDEB”; ii) as divergências nos registros das transferências do FPM; e iii) os atrasos nos envios dos dados do SIM-AM, referente aos períodos de abertura ao mês de outubro; II - aplicar, […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do senhor Antônio Gonçalves da Luz, chefe do Poder Executivo do Município de Agudos do Sul, referente ao exercício financeiro de 2016, ressalvando:",
+    "conclusao": "Parecer Prévio recomendando o julgamento pela regularidade",
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício financeiro de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Agudos do Sul não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2023-5-00373839",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 173/2023 da Secretaria Primeira Câmara — contas do Prefeito de Agudos do Sul",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "173",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 173/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "192344/2022",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2023-04-17",
+   "data_publicacao": "2023-05-05",
+   "publicacao_literal": "DETC nº 2973",
+   "entidade_literal": "MUNICÍPIO DE AGUDOS DO SUL",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Agudos do Sul",
+    "exercicio": null,
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 173/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/5/00373839.pdf"
+    }
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "sem_deliberacao",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "44097fe40d7de3369abb382f0790081342feb740ec117a418d1dcd0527c781ae",
+    "paginas_lidas": 2,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade, em: I - Julgar, acompanhando a Coordenadoria de Gestão Municipal e o Ministério Público de Contas, na forma do artigo 23, da Lei Complementar n° 113/2005, PARECER PRÉVIO deste Tribunal recomendando o julgamento pela REGULARIDADE das contas do PREFEITO MUNICIPAL DE AGUDOS DOS SUL, relativas ao exercício de 2021, de responsabilidade do Sr. JESSE DA ROCHA ZOELLNER (gestão 2021); II – determinar, após o trânsito em julgado, a remessa dos autos ao Gabinete da Presidência para comunicação ao Poder Legislativo Municipal, conforme disposto no artigo 217-A, § 6º, do Regimento Interno; III – encaminhar à Diretoria de Protocolo […]",
+    "votacao": "por unanimidade",
+    "item_parecer": null,
+    "conclusao": null,
+    "exercicio": null
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo; o trecho \"Emitir Parecer Prévio…\" não foi localizado nas páginas finais do PDF",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Agudos do Sul não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2021-196-segundacmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 196/2021 da Secretaria Segunda Câmara — contas do Prefeito de Agudos do Sul",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "196",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 196/2021 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "231070/2015",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2021-06-14",
+   "data_publicacao": "2021-06-30",
+   "publicacao_literal": "DETC nº 2570",
+   "entidade_literal": "MUNICÍPIO DE AGUDOS DO SUL",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Agudos do Sul",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Agudos do Sul não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

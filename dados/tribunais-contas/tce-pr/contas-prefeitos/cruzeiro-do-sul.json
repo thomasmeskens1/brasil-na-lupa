@@ -1,0 +1,788 @@
+{
+ "atualizado_em": "2026-11-05T14:29:01.125Z",
+ "municipio": {
+  "id": "cruzeiro-do-sul",
+  "nome": "Cruzeiro do Sul",
+  "uf": "PR",
+  "codigo_ibge": "4106704"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2015,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 7,
+  "pareceres": 10,
+  "com_parecer_em_fonte_aberta": 7,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 8,
+  "pdf_lido": 8,
+  "sem_exercicio_na_fonte": 3
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f68ca8a9b64d6286d5f605b923705fb7602cf450e7408d143f7545e514359bfb",
+   "atualizado_na_fonte": "05/06/2026 00:00:40"
+  },
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2026-5-000201745",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 171/2026 — contas do Prefeito de Cruzeiro do Sul, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "171",
+    "ano": "2026",
+    "titulo_oficial": "Parecer Prévio 171/2026"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "158864/2025",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "AUGUSTINHO ZUCCHI",
+   "data_julgamento": "2026-05-18",
+   "data_publicacao": "2026-05-28",
+   "publicacao_literal": "DETC nº 3682",
+   "entidade_literal": "MUNICÍPIO DE CRUZEIRO DO SUL",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Irregularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela IRREGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela IRREGULARIDADE das contas do senhor MARCOS CESAR SUGIGAN, na qualidade de prefeito do MUNICÍPIO DE CRUZEIRO DO SUL, relativas ao exercício de 2024, em razão de:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Cruzeiro do Sul",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 171/2026 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2026/5/000201745.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "b09798579d40e892ade9b524a8176fd1e6e292fc3866f5ab1826830c99427c8d",
+    "paginas_lidas": 1,
+    "total_paginas": 51,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro AUGUSTINHO ZUCCHI, por maioria absoluta: a. Emitir Parecer Prévio pela IRREGULARIDADE das contas do senhor MARCOS CESAR SUGIGAN, na qualidade de prefeito do MUNICÍPIO DE CRUZEIRO DO SUL, relativas ao exercício de 2024, em razão de: i. ausência de encaminhamento do Plano de Equacionamento do Déficit Atuarial, resultando em descumprimento do previsto nos artigos 1º, caput, da Lei Federal nº 9.717/1998 e 53, caput e § 6º, da Portaria MF n.º 464/2018. b. RESSALVAR as contas em virtude de: i. Resultado Orçamentário e Financeiro de fontes não vinculadas a programas, convênios, operações de crédito e ao Regime Próprio de Previdência Social (RPPS); ii. Obrigações de despesas c […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "Emitir Parecer Prévio pela IRREGULARIDADE das contas do senhor MARCOS CESAR SUGIGAN, na qualidade de prefeito do MUNICÍPIO DE CRUZEIRO DO SUL, relativas ao exercício de 2024, em razão de:",
+    "conclusao": "Parecer Prévio pela IRREGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2026,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Cruzeiro do Sul não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2025-6-000197984",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 165/2025 — contas do Prefeito de Cruzeiro do Sul, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "165",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 165/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "216925/2024",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2025-05-26",
+   "data_publicacao": "2025-06-09",
+   "publicacao_literal": "DETC nº 3459",
+   "entidade_literal": "MUNICÍPIO DE CRUZEIRO DO SUL",
+   "resumo_literal": null,
+   "indexacao_literal": "Recomendação > Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) MARCOS CESAR SUGIGAN, na qualidade de prefeito(a) do MUNICÍPIO DE CRUZEIRO DO SUL, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Cruzeiro do Sul",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 165/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/6/000197984.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "68050e52874bc4e4b19cbaa2e05a1d4843c590205f1756726c4784d451b6e3b8",
+    "paginas_lidas": 1,
+    "total_paginas": 50,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por maioria absoluta: Considerando os fatos expostos no item de fundamentação, VOTO, com respaldo no artigo 1º, I, da Lei Complementar Estadual n.º 113/2005 e em observância ao artigo 217-A, caput, do Regimento Interno, no sentido de: a. Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) MARCOS CESAR SUGIGAN, na qualidade de prefeito(a) do MUNICÍPIO DE CRUZEIRO DO SUL, relativas ao exercício de 2023. b. RESSALVAR as contas em virtude de: i. descumprimento dos artigos 1º, § 1º, da LRF e 48, alínea b, da Lei Federal n.º 4.320/64, conforme indicado na análise do resultado orçamentário e financeiro. c. RECOMENDAR ao prefe […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) MARCOS CESAR SUGIGAN, na qualidade de prefeito(a) do MUNICÍPIO DE CRUZEIRO DO SUL, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Cruzeiro do Sul não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-5-00385552",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 240/2024 — contas do Prefeito de Cruzeiro do Sul, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "240",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 240/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "221224/2023",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2024-05-13",
+   "data_publicacao": "2024-05-24",
+   "publicacao_literal": "DETC nº 3216",
+   "entidade_literal": "MUNICÍPIO DE CRUZEIRO DO SUL",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor MARCOS CESAR SUGIGAN, na qualidade de prefeito do MUNICÍPIO DE CRUZEIRO DO SUL, relativas ao exercício de 2022;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Cruzeiro do Sul",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 240/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/5/00385552.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "76bc6e585e7f5daa9d36082619994dbe7b1f9fbf949316a617715050b68e93b5",
+    "paginas_lidas": 1,
+    "total_paginas": 37,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor MARCOS CESAR SUGIGAN, na qualidade de prefeito do MUNICÍPIO DE CRUZEIRO DO SUL, relativas ao exercício de 2022; b. RESSALVAR as contas em virtude de: i. resultado financeiro acumulado negativo equivalente a -3,28%. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, § 6º do Regimento Interno desta Corte de Contas e, por fim, à Di […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor MARCOS CESAR SUGIGAN, na qualidade de prefeito do MUNICÍPIO DE CRUZEIRO DO SUL, relativas ao exercício de 2022;",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Cruzeiro do Sul não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-11-00380904",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 511/2023 da Secretaria Segunda Câmara — contas do Prefeito de Cruzeiro do Sul, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "511",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 511/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "212779/2022",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2023-11-13",
+   "data_publicacao": "2023-11-22",
+   "publicacao_literal": "DETC nº 3107",
+   "entidade_literal": "MUNICÍPIO DE CRUZEIRO DO SUL",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade com ressalva",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade com ressalva das contas do Município de Cruzeiro do Sul, referentes ao exercício financeiro de 2021, em razão dos apontamentos concernentes ao resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS, ao pagamento de aportes para cobertura do déficit atuarial e à falta de aplicação de no mínimo 90% dos recursos do FUNDEB no exercício da arrecadação;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Cruzeiro do Sul",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 511/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/11/00380904.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "fb827f99c5af3728e61d510e03294712fdd2f4642ca00177dd1ef11eefe7b8da",
+    "paginas_lidas": 1,
+    "total_paginas": 11,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I- Emitir Parecer Prévio recomendando a regularidade com ressalva das contas do Município de Cruzeiro do Sul, referentes ao exercício financeiro de 2021, em razão dos apontamentos concernentes ao resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS, ao pagamento de aportes para cobertura do déficit atuarial e à falta de aplicação de no mínimo 90% dos recursos do FUNDEB no exercício da arrecadação; II- determinar, nos termos da fundamentação, que o Município de Cruzeiro do Sul aplique o valor faltante de recursos do FUNDEB, até o final do exercício de 2023; e III- após o […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade com ressalva das contas do Município de Cruzeiro do Sul, referentes ao exercício financeiro de 2021, em razão dos apontamentos concernentes ao resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS, ao pagamento de aportes para cobertura do déficit atuarial e à falta de aplicação de no mínimo 90% dos recursos do FUNDEB no exercício da arrecadação;",
+    "conclusao": "Parecer Prévio recomendando a regularidade com ressalva",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Cruzeiro do Sul não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-8-00378856",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 388/2023 da Secretaria Primeira Câmara — contas do Prefeito de Cruzeiro do Sul, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "388",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 388/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "154813/2021",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2023-08-21",
+   "data_publicacao": "2023-08-30",
+   "publicacao_literal": "DETC nº 3054",
+   "entidade_literal": "MUNICÍPIO DE CRUZEIRO DO SUL",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio deste Tribunal recomendando o julgamento pela irregularidade",
+    "conclusao_literal": "Emitir com fundamento no artigo 1º, I, combinado com o art. 16, III, “b”, da Lei Complementar Estadual nº 113/2005, Parecer Prévio deste Tribunal recomendando o julgamento pela irregularidade das contas do Sr. ADEMIR MULON (falecido), prefeito do Município de Cruzeiro do Sul, relativas ao exercício de 2020, em virtude do não encaminhamento do Certificado de Regularidade Previdenciária – CRP, emitido pela Secretaria de Previdência vigente na data da prestação de contas, e da ausência de pagamento de aportes para cobertura do déficit atuarial na forma apurada no laudo Atuarial;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Cruzeiro do Sul",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 388/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/8/00378856.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "e5c85127a17e5bee2484717b9a6dc3c4b72dbe851f4cd15b017e4e63d3e3fd46",
+    "paginas_lidas": 2,
+    "total_paginas": 9,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade, em: I - Emitir com fundamento no artigo 1º, I, combinado com o art. 16, III, “b”, da Lei Complementar Estadual nº 113/2005, Parecer Prévio deste Tribunal recomendando o julgamento pela irregularidade das contas do Sr. ADEMIR MULON (falecido), prefeito do Município de Cruzeiro do Sul, relativas ao exercício de 2020, em virtude do não encaminhamento do Certificado de Regularidade Previdenciária – CRP, emitido pela Secretaria de Previdência vigente na data da prestação de contas, e da ausência de pagamento de aportes para cobertura do déficit atuarial na forma apurada no laudo Atuarial; II - ressalvar a ausência de parecer do C […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir com fundamento no artigo 1º, I, combinado com o art. 16, III, “b”, da Lei Complementar Estadual nº 113/2005, Parecer Prévio deste Tribunal recomendando o julgamento pela irregularidade das contas do Sr. ADEMIR MULON (falecido), prefeito do Município de Cruzeiro do Sul, relativas ao exercício de 2020, em virtude do não encaminhamento do Certificado de Regularidade Previdenciária – CRP, emitido pela Secretaria de Previdência vigente na data da prestação de contas, e da ausência de pagamento de aportes para cobertura do déficit atuarial na forma apurada no laudo Atuarial;",
+    "conclusao": "Parecer Prévio deste Tribunal recomendando o julgamento pela irregularidade",
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Cruzeiro do Sul não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-12-00353110",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 690/2020 da Secretaria Primeira Câmara — contas do Prefeito de Cruzeiro do Sul, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "690",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 690/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "262674/2017",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2020-11-30",
+   "data_publicacao": "2020-12-10",
+   "publicacao_literal": "DETC nº 2441",
+   "entidade_literal": "MUNICÍPIO DE CRUZEIRO DO SUL",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando o julgamento pela IRREGULARIDADE",
+    "conclusao_literal": "emitir Parecer Prévio recomendando o julgamento pela IRREGULARIDADE das contas do senhor Ademir Mulon, relativas ao exercício financeiro de 2016, em razão:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Cruzeiro do Sul",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 690/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/12/00353110.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "44af5c9c9a04d88e32198404712333ddb7b4fabd97ce8403c51f94122c5a8f1d",
+    "paginas_lidas": 2,
+    "total_paginas": 12,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I- emitir Parecer Prévio recomendando o julgamento pela IRREGULARIDADE das contas do senhor Ademir Mulon, relativas ao exercício financeiro de 2016, em razão: (i) das divergências de saldos na conta de Superávit/Déficit Financeiro do Balanço Patrimonial emitido pelo Sistema de Contabilidade da Entidade e os dados enviados pelo SIM/AM; e (ii) da ausência de pagamento de aportes para cobertura do déficit atuarial, RESSALVANDO (i) o resultado financeiro deficitário de 4,64% nas fontes não vinculadas; (ii) a ausência de pagamento de aportes para cobertura do déficit atuarial; (iii) as despesas com 5 (...) deixar de apresentar, […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando o julgamento pela IRREGULARIDADE das contas do senhor Ademir Mulon, relativas ao exercício financeiro de 2016, em razão:",
+    "conclusao": "Parecer Prévio recomendando o julgamento pela IRREGULARIDADE",
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício financeiro de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Cruzeiro do Sul não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-11-00352925",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 559/2020 da Secretaria Segunda Câmara — contas do Prefeito de Cruzeiro do Sul, exercício 2015",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "559",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 559/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "233310/2016",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2020-10-26",
+   "data_publicacao": "2020-11-06",
+   "publicacao_literal": "DETC nº 2417",
+   "entidade_literal": "MUNICÍPIO DE CRUZEIRO DO SUL",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a IRREGULARIDADE",
+    "conclusao_literal": "emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, Parecer Prévio recomendando a IRREGULARIDADE das contas do PREFEITO DO MUNICÍPIO DE CRUZEIRO DO SUL, exercício de 2015, Sr. Ademir Mulon, CPF 061.813.929-04, em decorrência da Ausência de pagamento de aportes para cobertura do déficit atuarial na forma apurada no laudo atuarial;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Cruzeiro do Sul",
+    "exercicio": "2015",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 559/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/11/00352925.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "ebe198b93e3ccefcd160d737c205fc8738bf95c8d94ad806cc92e6f67a0d2c6f",
+    "paginas_lidas": 2,
+    "total_paginas": 17,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: 1) emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, Parecer Prévio recomendando a IRREGULARIDADE das contas do PREFEITO DO MUNICÍPIO DE CRUZEIRO DO SUL, exercício de 2015, Sr. Ademir Mulon, CPF 061.813.929-04, em decorrência da Ausência de pagamento de aportes para cobertura do déficit atuarial na forma apurada no laudo atuarial; 2) apor RESSALVAS aos itens relacionados ao Resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS e a Entrega dos dados do mês 13 - encerramento do exercício do Sistema SIM-AM com atraso; 3) aplicar ao Sr. Ademir Mulon, CPF 061 […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, Parecer Prévio recomendando a IRREGULARIDADE das contas do PREFEITO DO MUNICÍPIO DE CRUZEIRO DO SUL, exercício de 2015, Sr. Ademir Mulon, CPF 061.813.929-04, em decorrência da Ausência de pagamento de aportes para cobertura do déficit atuarial na forma apurada no laudo atuarial;",
+    "conclusao": "Parecer Prévio recomendando a IRREGULARIDADE",
+    "exercicio": {
+     "ano": 2015,
+     "trecho": "exercício de 2015"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Cruzeiro do Sul não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2021-264-primeiracmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 264/2021 da Secretaria Primeira Câmara — contas do Prefeito de Cruzeiro do Sul",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "264",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 264/2021 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "167687/2020",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2021-10-18",
+   "data_publicacao": "2022-01-11",
+   "publicacao_literal": "DETC nº 2686",
+   "entidade_literal": "MUNICÍPIO DE CRUZEIRO DO SUL",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Cruzeiro do Sul",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Cruzeiro do Sul não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2021-77-segundacmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 77/2021 da Secretaria Segunda Câmara — contas do Prefeito de Cruzeiro do Sul",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "77",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 77/2021 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "235247/2018",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "NESTOR BAPTISTA",
+   "data_julgamento": "2021-03-08",
+   "data_publicacao": "2021-03-30",
+   "publicacao_literal": "DETC nº 2509",
+   "entidade_literal": "MUNICÍPIO DE CRUZEIRO DO SUL",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Cruzeiro do Sul",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Cruzeiro do Sul não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-6-00346791",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 156/2020 da Secretaria Segunda Câmara — contas do Prefeito de Cruzeiro do Sul",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "156",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 156/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "175876/2019",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2020-06-08",
+   "data_publicacao": "2020-06-24",
+   "publicacao_literal": "DETC nº 2324",
+   "entidade_literal": "MUNICÍPIO DE CRUZEIRO DO SUL",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, com fundamento nos artigos 1.º, inciso I13 e 16, inciso II14, da Lei Complementar Estadual n.º 113/2005, bem como no artigo 9 Art. 1º. Ao Tribunal de Contas do Estado, órgão constitucional de controle externo, com sede na Capital do Estado, compete, nos termos da Constituição Estadual e na forma estabelecida nesta lei:",
+    "conclusao_literal": "emitir Parecer Prévio, com fundamento nos artigos 1.º, inciso I13 e 16, inciso II14, da Lei Complementar Estadual n.º 113/2005, bem como no artigo 9 Art. 1º. Ao Tribunal de Contas do Estado, órgão constitucional de controle externo, com sede na Capital do Estado, compete, nos termos da Constituição Estadual e na forma estabelecida nesta lei:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Cruzeiro do Sul",
+    "exercicio": null,
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 156/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/6/00346791.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "794b35698053246f5e1241295934d3b808fda23e31fa5d0911b65380cf549d70",
+    "paginas_lidas": 2,
+    "total_paginas": 6,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I- emitir Parecer Prévio, com fundamento nos artigos 1.º, inciso I13 e 16, inciso II14, da Lei Complementar Estadual n.º 113/2005, bem como no artigo 9 Art. 1º. Ao Tribunal de Contas do Estado, órgão constitucional de controle externo, com sede na Capital do Estado, compete, nos termos da Constituição Estadual e na forma estabelecida nesta lei: I – apreciar as contas prestadas anualmente pelo Governador do Estado e pelos Prefeitos Municipais, mediante parecer prévio, que deverá ser elaborado nos prazos gerais previstos na Constituição Estadual, na Lei de Responsabilidade Fiscal, e nos prazos específicos previstos nesta lei; 10 A […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, com fundamento nos artigos 1.º, inciso I13 e 16, inciso II14, da Lei Complementar Estadual n.º 113/2005, bem como no artigo 9 Art. 1º. Ao Tribunal de Contas do Estado, órgão constitucional de controle externo, com sede na Capital do Estado, compete, nos termos da Constituição Estadual e na forma estabelecida nesta lei:",
+    "conclusao": null,
+    "exercicio": null
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Cruzeiro do Sul não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

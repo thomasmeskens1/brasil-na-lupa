@@ -1,0 +1,671 @@
+{
+ "atualizado_em": "2026-11-05T14:24:02.919Z",
+ "municipio": {
+  "id": "luiziana",
+  "nome": "Luiziana",
+  "uf": "PR",
+  "codigo_ibge": "4113734"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2013,
+  "fim": 2023
+ },
+ "contagens": {
+  "exercicios": 7,
+  "pareceres": 8,
+  "com_parecer_em_fonte_aberta": 7,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 8,
+  "pdf_lido": 7,
+  "sem_exercicio_na_fonte": 1
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "3b7fb76a75413d34e4541e63dccfa3cab923f7d498fc63703a156f2f00d63a4c",
+   "atualizado_na_fonte": "26/06/2025 14:58:07"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2025-2-000196440",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 50/2025 — contas do Prefeito de Luiziana, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "50",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 50/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "200875/2024",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2025-02-17",
+   "data_publicacao": "2025-02-25",
+   "publicacao_literal": "DETC nº 3393",
+   "entidade_literal": "MUNICÍPIO DE LUIZIANA",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade > Diligência",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor WILSON ANTONIO TURECK, na qualidade de prefeito do MUNICÍPIO DE LUIZIANA, relativas ao exercício de 2023;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Luiziana",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 50/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/2/000196440.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "bb68d7f6d0b4009117b2c80d2a2fe7bdb4f11155e0f7b0cdb4912eb870a531e5",
+    "paginas_lidas": 1,
+    "total_paginas": 45,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor WILSON ANTONIO TURECK, na qualidade de prefeito do MUNICÍPIO DE LUIZIANA, relativas ao exercício de 2023; b. Apor RESSALVAS em razão dos resultados da avaliação da atuação governamental nas áreas referentes à Assistência Social (5,23), Transparência e Relacionamento com o Cidadão (3,17), Administração Financeira (3,76) e Previdência Social (3,25); c. Determinar a realização de auditoria no Município de Luiziana, tendo como objetivo a verificação da atuação governamental nas áreas referentes à “Transparência e Relacionamento com o Cidadão”, “Administração F […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor WILSON ANTONIO TURECK, na qualidade de prefeito do MUNICÍPIO DE LUIZIANA, relativas ao exercício de 2023;",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Luiziana não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-5-00385592",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 236/2024 — contas do Prefeito de Luiziana, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "236",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 236/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "209097/2023",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2024-05-13",
+   "data_publicacao": "2024-05-27",
+   "publicacao_literal": "DETC nº 3217",
+   "entidade_literal": "MUNICÍPIO DE LUIZIANA",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando pela REGULARIDADE das contas do senhor WILSON ANTONIO TURECK, na qualidade de prefeito do MUNICÍPIO DE LUIZIANA, relativas ao exercício de 2022.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Luiziana",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 236/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/5/00385592.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "76942e59d7078aeb3130462ce6251e9fd1a536456c08196ee0e9ad10f8e5096d",
+    "paginas_lidas": 1,
+    "total_paginas": 36,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade: a. Emitir Parecer Prévio recomendando pela REGULARIDADE das contas do senhor WILSON ANTONIO TURECK, na qualidade de prefeito do MUNICÍPIO DE LUIZIANA, relativas ao exercício de 2022. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, §6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando pela REGULARIDADE das contas do senhor WILSON ANTONIO TURECK, na qualidade de prefeito do MUNICÍPIO DE LUIZIANA, relativas ao exercício de 2022.",
+    "conclusao": "Parecer Prévio recomendando pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Luiziana não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-4-00383546",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 42/2024 da Secretaria Primeira Câmara — contas do Prefeito de Luiziana, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "42",
+    "ano": "2024",
+    "titulo_oficial": "Acórdão de Parecer Prévio 42/2024 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "210792/2022",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2024-04-01",
+   "data_publicacao": "2024-04-15",
+   "publicacao_literal": "DETC nº 3188",
+   "entidade_literal": "MUNICÍPIO DE LUIZIANA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de LUIZIANA, Sr. Wilson Antônio Tureck, relativas ao exercício financeiro de 2021, com ressalvas em face da ausência de aplicação de no mínimo 70% dos recursos do FUNDEB na remuneração dos profissionais da educação básica, bem como à falta de aplicação de no mínimo 90% dos recursos do FUNDEB no exercício da arrecadação – saldo deixado de aplicar no primeiro quadrimestre do exercício seguinte excede a 10%;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Luiziana",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 42/2024 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/4/00383546.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "2f974710bd8dd37cdb1654b4cad0485cca697ca60750ec60d3e3a98bfe31af6b",
+    "paginas_lidas": 2,
+    "total_paginas": 4,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de LUIZIANA, Sr. Wilson Antônio Tureck, relativas ao exercício financeiro de 2021, com ressalvas em face da ausência de aplicação de no mínimo 70% dos recursos do FUNDEB na remuneração dos profissionais da educação básica, bem como à falta de aplicação de no mínimo 90% dos recursos do FUNDEB no exercício da arrecadação – saldo deixado de aplicar no primeiro quadrimestre do exercício seguinte excede a 10%;. II. Determinar, após o trânsito em julgado da decisão, as seguintes medidas: a) o encaminhamento dos autos à Co […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de LUIZIANA, Sr. Wilson Antônio Tureck, relativas ao exercício financeiro de 2021, com ressalvas em face da ausência de aplicação de no mínimo 70% dos recursos do FUNDEB na remuneração dos profissionais da educação básica, bem como à falta de aplicação de no mínimo 90% dos recursos do FUNDEB no exercício da arrecadação – saldo deixado de aplicar no primeiro quadrimestre do exercício seguinte excede a 10%;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Luiziana não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-5-00374258",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 189/2023 da Secretaria Segunda Câmara — contas do Prefeito de Luiziana, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "189",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 189/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "171483/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "AUGUSTINHO ZUCCHI",
+   "data_julgamento": "2023-05-02",
+   "data_publicacao": "2023-05-17",
+   "publicacao_literal": "DETC nº 2981",
+   "entidade_literal": "MUNICÍPIO DE LUIZIANA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a IRREGULARIDADE",
+    "conclusao_literal": "emitir Parecer Prévio recomendando a IRREGULARIDADE das contas do MUNICÍPIO DO LUIZIANIA, para o exercício de 2020, de SEGUNDA CÂMARA responsabilidade do Sr. MAURO ALBERTO SLONGO, nos termos do Art. 16, III, “b” da Lei Orgânica do TCEPR11 devido as seguintes irregularidades:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Luiziana",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 189/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/5/00374258.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "fd6fee6716043228971fced279186d4db9cfe02a220b23b19561a625e175e26f",
+    "paginas_lidas": 2,
+    "total_paginas": 8,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro AUGUSTINHO ZUCCHI, por unanimidade, em: I - emitir Parecer Prévio recomendando a IRREGULARIDADE das contas do MUNICÍPIO DO LUIZIANIA, para o exercício de 2020, de SEGUNDA CÂMARA responsabilidade do Sr. MAURO ALBERTO SLONGO, nos termos do Art. 16, III, “b” da Lei Orgânica do TCEPR11 devido as seguintes irregularidades: (i) violação aos art. 1º, VI e IX, 7º e 9º, I e IV, todos da Lei Federal nº 9717/98 devido à ausência de emissão do CRP pelo não envio de informações contábeis, orçamentárias e financeiras à Secretaria de Previdência; (ii) a infringência ao art. 19, III, “b”, da LRF devido a não redução do percentual excedente de gasto com pessoal nos prazos previsto nos […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando a IRREGULARIDADE das contas do MUNICÍPIO DO LUIZIANIA, para o exercício de 2020, de SEGUNDA CÂMARA responsabilidade do Sr. MAURO ALBERTO SLONGO, nos termos do Art. 16, III, “b” da Lei Orgânica do TCEPR11 devido as seguintes irregularidades:",
+    "conclusao": "Parecer Prévio recomendando a IRREGULARIDADE",
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Luiziana não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-7-00347449",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 172/2020 da Secretaria Primeira Câmara — contas do Prefeito de Luiziana, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "172",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 172/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "210507/2019",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2020-06-15",
+   "data_publicacao": "2020-07-01",
+   "publicacao_literal": "DETC nº 2329",
+   "entidade_literal": "MUNICÍPIO DE LUIZIANA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito Municipal de LUIZIANA, Sr. MAURO ALBERTO SLONGO (CPF 911.587.459-15), relativas ao exercício financeiro de 2018, em razão da ausência de pagamento de aportes para cobertura do déficit atuarial na forma apurada no Laudo Atuarial e da extrapolação do limite de despesas com pessoal sem retorno no prazo legal, ressalvando, ainda, o resultado deficitário das fontes não vinculadas;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Luiziana",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 172/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/7/00347449.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "c8ab75cd46c7048f86e6fd2f9e1f52fbcd2e5d2cfb718ec135d76dcdba4e51bf",
+    "paginas_lidas": 2,
+    "total_paginas": 10,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito Municipal de LUIZIANA, Sr. MAURO ALBERTO SLONGO (CPF 911.587.459-15), relativas ao exercício financeiro de 2018, em razão da ausência de pagamento de aportes para cobertura do déficit atuarial na forma apurada no Laudo Atuarial e da extrapolação do limite de despesas com pessoal sem retorno no prazo legal, ressalvando, ainda, o resultado deficitário das fontes não vinculadas; II. Aplicar a multa prevista no art. 87, IV, “g”, da Lei Orgânica deste Tribunal, por duas vezes, ao senhor Mauro Alberto Slongo (CPF 911.587.459-15), […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito Municipal de LUIZIANA, Sr. MAURO ALBERTO SLONGO (CPF 911.587.459-15), relativas ao exercício financeiro de 2018, em razão da ausência de pagamento de aportes para cobertura do déficit atuarial na forma apurada no Laudo Atuarial e da extrapolação do limite de despesas com pessoal sem retorno no prazo legal, ressalvando, ainda, o resultado deficitário das fontes não vinculadas;",
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício financeiro de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Luiziana não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-7-00347279",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 174/2020 da Secretaria Primeira Câmara — contas do Prefeito de Luiziana, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "174",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 174/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "285120/2018",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2020-06-22",
+   "data_publicacao": "2020-07-06",
+   "publicacao_literal": "DETC nº 2332",
+   "entidade_literal": "MUNICÍPIO DE LUIZIANA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio recomendando a irregularidade",
+    "conclusao_literal": "expedir parecer prévio recomendando a irregularidade das contas do Sr. Mauro Alberto Slongo como Prefeito de Luiziana no exercício de 2017, em razão de “divergências de saldos em quaisquer das classes ou grupos do Balanço Patrimonial emitido pelo Sistema de Contabilidade da Entidade e os dados enviados pelo SIM/AM” e “ausência de pagamento de aportes para cobertura do déficit atuarial na forma apurada no Laudo Atuarial”, com base no disposto no art. 16, III, “b”, da LC/PR 113/05;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Luiziana",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 174/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/7/00347279.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "c0308b7a0512b53a6da6e0d4ee8629be6aafa5efcf8edb52009b29bc230b92dc",
+    "paginas_lidas": 1,
+    "total_paginas": 8,
+    "deliberacao": "ACORDAM Os membros da PRIMEIRA CÂMARA do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: I. expedir parecer prévio recomendando a irregularidade das contas do Sr. Mauro Alberto Slongo como Prefeito de Luiziana no exercício de 2017, em razão de “divergências de saldos em quaisquer das classes ou grupos do Balanço Patrimonial emitido pelo Sistema de Contabilidade da Entidade e os dados enviados pelo SIM/AM” e “ausência de pagamento de aportes para cobertura do déficit atuarial na forma apurada no Laudo Atuarial”, com base no disposto no art. 16, III, “b”, da LC/PR 113/05; II. apor ressalvas as contas em relação a “resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações d […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "expedir parecer prévio recomendando a irregularidade das contas do Sr. Mauro Alberto Slongo como Prefeito de Luiziana no exercício de 2017, em razão de “divergências de saldos em quaisquer das classes ou grupos do Balanço Patrimonial emitido pelo Sistema de Contabilidade da Entidade e os dados enviados pelo SIM/AM” e “ausência de pagamento de aportes para cobertura do déficit atuarial na forma apurada no Laudo Atuarial”, com base no disposto no art. 16, III, “b”, da LC/PR 113/05;",
+    "conclusao": "parecer prévio recomendando a irregularidade",
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Luiziana não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-5-00336346",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 110/2019 da Secretaria Segunda Câmara — contas do Prefeito de Luiziana, exercício 2013",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "110",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 110/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "276321/2014",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2019-04-23",
+   "data_publicacao": "2019-05-03",
+   "publicacao_literal": "DETC nº 2050",
+   "entidade_literal": "MUNICÍPIO DE LUIZIANA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir parecer prévio recomendando a regularidade das contas do Sr. Mauro Alberto Slongo, Prefeito do Município de Luiziana no exercício financeiro de 2013, com a ressalva dos seguintes fatos:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Luiziana",
+    "exercicio": "2013",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 110/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/5/00336346.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "48fb7972c98fe0b4105a2b691c5fd7215456cb9085e7d6ccad82403443bf0102",
+    "paginas_lidas": 2,
+    "total_paginas": 14,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade, em: I- Emitir parecer prévio recomendando a regularidade das contas do Sr. Mauro Alberto Slongo, Prefeito do Município de Luiziana no exercício financeiro de 2013, com a ressalva dos seguintes fatos: a) existência de obras paralisadas concomitante à inclusão de novos projetos em lei orçamentária ou de créditos adicionais; b) fontes de recursos com saldos a descoberto; c) saldo maior que 5% das receitas do Fundeb deixado para aplicar no primeiro trimestre do exercício seguinte, em descumprimento ao art. 21, § 2º, da Lei Federal n° 11.494/07; II- Determinar o encaminhamento dos presentes autos à Coordenadoria-Geral de Fiscaliza […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir parecer prévio recomendando a regularidade das contas do Sr. Mauro Alberto Slongo, Prefeito do Município de Luiziana no exercício financeiro de 2013, com a ressalva dos seguintes fatos:",
+    "conclusao": "parecer prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2013,
+     "trecho": "exercício financeiro de 2013"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Luiziana não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2022-2-00364533",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 26/2022 da Secretaria Segunda Câmara — contas do Prefeito de Luiziana",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "26",
+    "ano": "2022",
+    "titulo_oficial": "Acórdão de Parecer Prévio 26/2022 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "255551/2020",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2022-02-07",
+   "data_publicacao": "2022-02-17",
+   "publicacao_literal": "DETC nº 2713",
+   "entidade_literal": "MUNICÍPIO DE LUIZIANA",
+   "resumo_literal": "EMENTA: Embargos de declaração. Pretensão de afastamento, por prescrição, das consequências previstas pelo art. 170 da Lei Orgânica para situação de julgamento pela irregularidade das contas. Consequência não afastada pelo Prejulgado nº 26. Conhecimento e não provimento do recurso.",
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Luiziana",
+    "exercicio": null,
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 26/2022 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2022/2/00364533.pdf"
+    }
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "sem_deliberacao",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "77a34809555541baff7c8753b3d3d5c96524cfa9b8fa692ca8a9e198163585a6",
+    "paginas_lidas": 2,
+    "total_paginas": 7,
+    "deliberacao": "ACORDAM 7 Inclusive, consoante recente alteração da Lei Complementar nº 64/90 pela Lei Complementar nº 184/21, foi excluída a incidência de inelegibilidade dos responsáveis que tenham tido contas julgadas irregulares sem imputação de débito e com condenação exclusiva ao pagamento de multa (art. 1º, §4ºA). OS MEMBROS DA SEGUNDA CÂMARA do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: I. conhecer dos Embargos de Declaração propostos pelo Sr. Francisco Menin contra a decisão materializada no Acórdão 3097/19-S1C e negar provimento ao mesmo; II. determinar a inversão dos autos, de modo a que volte a figurar como principal a Tomada de Contas Extraordinária nº 822957/13.",
+    "votacao": "por unanimidade",
+    "item_parecer": null,
+    "conclusao": null,
+    "exercicio": null
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2022,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo; o trecho \"Emitir Parecer Prévio…\" não foi localizado nas páginas finais do PDF",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Luiziana não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}
