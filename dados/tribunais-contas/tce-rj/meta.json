@@ -1,0 +1,118 @@
+{
+  "atualizado_em": "2026-11-05T10:56:11.754Z",
+  "ultima_execucao": "2026-11-05T10:56:11.754Z",
+  "tribunal": "tce-rj",
+  "modo": "completo",
+  "interrompido_por_orcamento": false,
+  "orcamento_min": 10,
+  "periodo": {
+    "contas_governador": {
+      "inicio": 2020,
+      "fim": 2025
+    },
+    "contas_prefeitos": {
+      "inicio": 2019,
+      "fim": 2025
+    }
+  },
+  "contagens": {
+    "exercicios_governador": 6,
+    "exercicios_governador_com_parecer": 6,
+    "municipios": 91,
+    "exercicios_prefeitos_com_parecer": 528,
+    "exercicios_prefeitos_sem_parecer": 109,
+    "registros_municipais_por_indicador": {
+      "FAVORÁVEL": 422,
+      "CONTRÁRIO": 106,
+      "EM ANALISE": 109
+    }
+  },
+  "contas_governador": [
+    {
+      "exercicio": 2020,
+      "indicador_na_fonte": "CONTRÁRIO",
+      "conclusao": "CONTRÁRIO",
+      "processo": "101104-0/2021"
+    },
+    {
+      "exercicio": 2021,
+      "indicador_na_fonte": "FAVORÁVEL",
+      "conclusao": "FAVORÁVEL",
+      "processo": "101402-2/2022"
+    },
+    {
+      "exercicio": 2022,
+      "indicador_na_fonte": "FAVORÁVEL",
+      "conclusao": "FAVORÁVEL",
+      "processo": "104095-8/2023"
+    },
+    {
+      "exercicio": 2023,
+      "indicador_na_fonte": "FAVORÁVEL",
+      "conclusao": "FAVORÁVEL",
+      "processo": "103074-9/2024"
+    },
+    {
+      "exercicio": 2024,
+      "indicador_na_fonte": "FAVORÁVEL",
+      "conclusao": "FAVORÁVEL",
+      "processo": "103291-1/2025"
+    },
+    {
+      "exercicio": 2025,
+      "indicador_na_fonte": "CONTRÁRIO",
+      "conclusao": "CONTRÁRIO",
+      "processo": "103320-0/2026"
+    }
+  ],
+  "municipios_com_grafia_conferida": [
+    "ARMACAO DE BUZIOS",
+    "SÃO FRANCISCO DO ITABAPOANA",
+    "TRAJANO DE MORAIS"
+  ],
+  "municipios_sem_correspondencia_ibge": [],
+  "erros": [],
+  "fontes": [
+    {
+      "titulo": "API de Dados Abertos do TCE-RJ — Prestação de Contas (Estado)",
+      "url": "https://dados.tcerj.tc.br/api/v1/prestacao_contas_estado",
+      "orgao": "Tribunal de Contas do Estado do Rio de Janeiro (TCE-RJ)",
+      "acessado_em": "2026-11-05",
+      "documentacao": "https://dados.tcerj.tc.br/api/v1/docs",
+      "licenca": "Open Database License (ODbL), declarada na documentação da API"
+    },
+    {
+      "titulo": "API de Dados Abertos do TCE-RJ — Prestação de Contas (Municípios)",
+      "url": "https://dados.tcerj.tc.br/api/v1/prestacao_contas_municipio",
+      "orgao": "Tribunal de Contas do Estado do Rio de Janeiro (TCE-RJ)",
+      "acessado_em": "2026-11-05",
+      "documentacao": "https://dados.tcerj.tc.br/api/v1/docs",
+      "licenca": "Open Database License (ODbL), declarada na documentação da API"
+    },
+    {
+      "titulo": "Entes da Federação — API de dados abertos do Siconfi (nome oficial e código IBGE dos municípios)",
+      "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/entes",
+      "orgao": "Tesouro Nacional",
+      "observacao": "Lido de dados/municipios/entes.json, já coletado pelo projeto"
+    }
+  ],
+  "robots_e_restricoes": [
+    "Acessado só dados.tcerj.tc.br (API de dados abertos). robots.txt lido antes de qualquer outra requisição em cada execução (HTTP 200; nada proibido).",
+    "User-Agent identificado (BrasilNaLupa-coletor/1.0), requisições em série com pausa de 1,5 s, sem chave, login nem token. Se aparecer CAPTCHA, desafio anti-robô ou login, a coleta para e registra o erro.",
+    "Não acessados: portais de consulta de processos e de jurisprudência do TCE-RJ (aplicações em JavaScript com APIs internas não documentadas como públicas)."
+  ],
+  "observacoes": [
+    "Contas do Governador e dos Prefeitos: o resultado exibido é o campo \"Indicador\" da rota \"Prestação de Contas\", reproduzido literalmente (\"FAVORÁVEL\" ou \"CONTRÁRIO\"). Outros valores (como \"EM ANALISE\") não viram conclusão e ficam registrados como lacuna.",
+    "A API não traz relator, data da sessão, ressalvas, determinações nem inteiro teor; a documentação não define o campo \"Indicador\". Aviso da fonte: os dados são \"conforme cadastrados\", com completude e consistência de responsabilidade de quem os cadastrou.",
+    "O Município do Rio de Janeiro não está na rota (é fiscalizado pelo Tribunal de Contas do Município do Rio de Janeiro, TCM-RJ).",
+    "Julgamento político (Alerj e Câmaras Municipais): não coletado."
+  ],
+  "estatisticas_http": {
+    "requisicoes": 3,
+    "retentativas": 0,
+    "bytes": 104121,
+    "falhas": []
+  },
+  "duracao_s": 13,
+  "secoes_nao_atualizadas": []
+}
