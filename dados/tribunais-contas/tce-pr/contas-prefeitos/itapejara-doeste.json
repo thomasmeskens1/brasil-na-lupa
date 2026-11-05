@@ -1,0 +1,660 @@
+{
+ "atualizado_em": "2026-11-05T14:29:01.453Z",
+ "municipio": {
+  "id": "itapejara-doeste",
+  "nome": "Itapejara d'Oeste",
+  "uf": "PR",
+  "codigo_ibge": "4111209"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2016,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 7,
+  "pareceres": 8,
+  "com_parecer_em_fonte_aberta": 7,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 7,
+  "pdf_lido": 7,
+  "sem_exercicio_na_fonte": 1
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "3b7fb76a75413d34e4541e63dccfa3cab923f7d498fc63703a156f2f00d63a4c",
+   "atualizado_na_fonte": "26/06/2025 14:58:07"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2025-12-000200213",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 404/2025 — contas do Prefeito de Itapejara d'Oeste, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "404",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 404/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "120026/2025",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2025-11-24",
+   "data_publicacao": "2025-12-04",
+   "publicacao_literal": "DETC nº 3581",
+   "entidade_literal": "MUNICÍPIO DE ITAPEJARA D OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor VILMAR SCHMOLLER, na qualidade de prefeito do MUNICÍPIO DE ITAPEJARA D OESTE, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Itapejara d'Oeste",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 404/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/12/000200213.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "6e1cf2890a51531a35b0df6e73ad741094cd0fa687fccfbec7837957010b0fe7",
+    "paginas_lidas": 1,
+    "total_paginas": 43,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor VILMAR SCHMOLLER, na qualidade de prefeito do MUNICÍPIO DE ITAPEJARA D OESTE, relativas ao exercício de 2024. Após o trânsito em julgado da deliberação, encaminhem-se os autos ao Gabinete da Presidência para as providências contidas no § 6º do artigo 217-A do Regimento Interno, à Coordenadoria de Medidas Executórias para as anotações pertinentes e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor VILMAR SCHMOLLER, na qualidade de prefeito do MUNICÍPIO DE ITAPEJARA D OESTE, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Itapejara d'Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-12-00391371",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 398/2024 — contas do Prefeito de Itapejara d'Oeste, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "398",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 398/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "127426/2024",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2024-11-25",
+   "data_publicacao": "2024-12-06",
+   "publicacao_literal": "DETC nº 3351",
+   "entidade_literal": "MUNICÍPIO DE ITAPEJARA D OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade > Diligência",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do(a) senhor(a) VILMAR SCHMOLLER, na qualidade de prefeito(a) do MUNICÍPIO DE ITAPEJARA D`OESTE, relativas ao exercício de 2023, em razão da pontuação obtida na área de Administração Financeira (2,71).",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Itapejara d'Oeste",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 398/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/12/00391371.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "9b0dc9498595b4d080cc280f7c60750f6e111d154b61a3d892647acea1acc0f8",
+    "paginas_lidas": 1,
+    "total_paginas": 43,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do(a) senhor(a) VILMAR SCHMOLLER, na qualidade de prefeito(a) do MUNICÍPIO DE ITAPEJARA D`OESTE, relativas ao exercício de 2023, em razão da pontuação obtida na área de Administração Financeira (2,71). b. Determinar a realização de auditoria no MUNICÍPIO DE ITAPEJARA D`OESTE, tendo como objetivo a verificação da atuação governamental na área referente à Administração Financeira (2,71), encaminhando-se os autos à Coordenadoria-Geral de Fiscalização para a avaliação das medidas necessárias ao cumprimento e programação, nos termos do art. 252- A do Regimento Interno Apó […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do(a) senhor(a) VILMAR SCHMOLLER, na qualidade de prefeito(a) do MUNICÍPIO DE ITAPEJARA D`OESTE, relativas ao exercício de 2023, em razão da pontuação obtida na área de Administração Financeira (2,71).",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Itapejara d'Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-3-00383026",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 80/2024 — contas do Prefeito de Itapejara d'Oeste, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "80",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 80/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "166495/2023",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "AUGUSTINHO ZUCCHI",
+   "data_julgamento": "2024-03-04",
+   "data_publicacao": "2024-03-21",
+   "publicacao_literal": "DETC nº 3173",
+   "entidade_literal": "MUNICÍPIO DE ITAPEJARA D OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor VILMAR SCHMOLLER, na qualidade de prefeito(a) do MUNICÍPIO DE ITAPEJARA D OESTE, relativas ao exercício de 2022.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Itapejara d'Oeste",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 80/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/3/00383026.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "c79262a2948cec82056c5c7ed2d98ae1634b20359233abd6c5718fd654456b12",
+    "paginas_lidas": 1,
+    "total_paginas": 30,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro AUGUSTINHO ZUCCHI, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor VILMAR SCHMOLLER, na qualidade de prefeito(a) do MUNICÍPIO DE ITAPEJARA D OESTE, relativas ao exercício de 2022. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, §6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor VILMAR SCHMOLLER, na qualidade de prefeito(a) do MUNICÍPIO DE ITAPEJARA D OESTE, relativas ao exercício de 2022.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Itapejara d'Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-1-00371610",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 344/2022 da Secretaria Segunda Câmara — contas do Prefeito de Itapejara d'Oeste, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "344",
+    "ano": "2022",
+    "titulo_oficial": "Acórdão de Parecer Prévio 344/2022 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "148256/2022",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2022-12-12",
+   "data_publicacao": "2023-01-16",
+   "publicacao_literal": "DETC nº 2901",
+   "entidade_literal": "MUNICÍPIO DE ITAPEJARA D OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de ITAPEJARA D OESTE, Sr. VILMAR SCHMOLLER (CPF 786.910.449-34), relativas ao exercício financeiro de 2021;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Itapejara d'Oeste",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 344/2022 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/1/00371610.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "75f5c98e9964697898a53a25602f1abeeaebd70945fd409fbe3cdda53ded1dd4",
+    "paginas_lidas": 1,
+    "total_paginas": 2,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de ITAPEJARA D OESTE, Sr. VILMAR SCHMOLLER (CPF 786.910.449-34), relativas ao exercício financeiro de 2021; II. Determinar, após o trânsito em julgado da decisão, as seguintes medidas: a) o encaminhamento dos autos ao Gabinete da Presidência para expedição de ofício à Câmara Municipal, comunicando a decisão, com a respectiva disponibilização do processo eletrônico, conforme §6º do art. 217-A, do Regimento Interno; b) Em seguida, à Diretoria do Protocolo para o encerramento dos autos, nos termos do art. 398 do Regime […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de ITAPEJARA D OESTE, Sr. VILMAR SCHMOLLER (CPF 786.910.449-34), relativas ao exercício financeiro de 2021;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2022,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Itapejara d'Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-10-00351001",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 502/2020 da Secretaria Primeira Câmara — contas do Prefeito de Itapejara d'Oeste, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "502",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 502/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "146515/2020",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2020-10-05",
+   "data_publicacao": "2020-10-15",
+   "publicacao_literal": "DETC nº 2402",
+   "entidade_literal": "MUNICÍPIO DE ITAPEJARA D OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio recomendado a regularidade",
+    "conclusao_literal": "emitir parecer prévio recomendado a regularidade das contas do Sr. Agilberto Lucindo Perin como Prefeito de Itapejara D’Oeste, no exercício de 2019, com base no disposto no art. 16, I, da LC/PR 113/05;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Itapejara d'Oeste",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 502/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/10/00351001.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "85d1fdb8fb7554bcbf833b80419264f1527b96dfaefbd0adc419ac856d6e7d23",
+    "paginas_lidas": 1,
+    "total_paginas": 2,
+    "deliberacao": "ACORDAM Os membros da PRIMEIRA CÂMARA do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: I. emitir parecer prévio recomendado a regularidade das contas do Sr. Agilberto Lucindo Perin como Prefeito de Itapejara D’Oeste, no exercício de 2019, com base no disposto no art. 16, I, da LC/PR 113/05; II. determinar o encerramento do Processo, após o trânsito em julgado da decisão.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir parecer prévio recomendado a regularidade das contas do Sr. Agilberto Lucindo Perin como Prefeito de Itapejara D’Oeste, no exercício de 2019, com base no disposto no art. 16, I, da LC/PR 113/05;",
+    "conclusao": "parecer prévio recomendado a regularidade",
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Itapejara d'Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-10-00341101",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 445/2019 da Secretaria Segunda Câmara — contas do Prefeito de Itapejara d'Oeste, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "445",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 445/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "169655/2019",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2019-10-22",
+   "data_publicacao": "2019-10-30",
+   "publicacao_literal": "DETC nº 2175",
+   "entidade_literal": "MUNICÍPIO DE ITAPEJARA D OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "emitir, na forma do artigo 23 da Lei Complementar n.° 113/2005, Parecer Prévio recomendando a regularidade das contas dos Prefeitos do Municipio de Itapejara D’oeste, exercício de 2018, senhor Agilberto Lucindo Perin, CPF 225.664.810-91, Gestor da Entidade no período de 01/01/2018 até 22/01/2018 e de 05/02/2018 até 31/12/2018, e do senhor Ronaldo Mazetto, CPF 030.460.829-75, Gestor no período de 23/01/18 até 04/02/2018;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Itapejara d'Oeste",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 445/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/10/00341101.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "350c3bca9179ef3455ed9f9df319c65628db9631647400ebd7d1d90362c96b74",
+    "paginas_lidas": 2,
+    "total_paginas": 4,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: I. emitir, na forma do artigo 23 da Lei Complementar n.° 113/2005, Parecer Prévio recomendando a regularidade das contas dos Prefeitos do Municipio de Itapejara D’oeste, exercício de 2018, senhor Agilberto Lucindo Perin, CPF 225.664.810-91, Gestor da Entidade no período de 01/01/2018 até 22/01/2018 e de 05/02/2018 até 31/12/2018, e do senhor Ronaldo Mazetto, CPF 030.460.829-75, Gestor no período de 23/01/18 até 04/02/2018; II. determinar ao atual Gestor do Município que comprove, no prazo de até 60 (sessenta) dias, a qualificação técnica do Controlador Interno da Entidade, nos termos que podem ser abstraídos do Acórdão n.º 4 […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir, na forma do artigo 23 da Lei Complementar n.° 113/2005, Parecer Prévio recomendando a regularidade das contas dos Prefeitos do Municipio de Itapejara D’oeste, exercício de 2018, senhor Agilberto Lucindo Perin, CPF 225.664.810-91, Gestor da Entidade no período de 01/01/2018 até 22/01/2018 e de 05/02/2018 até 31/12/2018, e do senhor Ronaldo Mazetto, CPF 030.460.829-75, Gestor no período de 23/01/18 até 04/02/2018;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Itapejara d'Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-11-00341397",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 477/2019 da Secretaria Primeira Câmara — contas do Prefeito de Itapejara d'Oeste, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "477",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 477/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "266378/2017",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2019-11-04",
+   "data_publicacao": "2019-11-08",
+   "publicacao_literal": "DETC nº 2182",
+   "entidade_literal": "MUNICÍPIO DE ITAPEJARA D OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando o julgamento pela irregularidade",
+    "conclusao_literal": "emitir Parecer Prévio recomendando o julgamento pela irregularidade das contas do Poder Executivo do Município de Itapejara d’Oeste, referente ao exercício financeiro de 2016, de responsabilidade do senhor Eliandro Luiz Pichetti, em razão das obrigações contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa do grupo “Recursos Ordinários / Livres”, ressalvando:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Itapejara d'Oeste",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 477/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/11/00341397.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "ad97e6cf3eb0d4a61228cc74511921ae7f067124f83e01ea6b091d98e21865f5",
+    "paginas_lidas": 2,
+    "total_paginas": 18,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I – emitir Parecer Prévio recomendando o julgamento pela irregularidade das contas do Poder Executivo do Município de Itapejara d’Oeste, referente ao exercício financeiro de 2016, de responsabilidade do senhor Eliandro Luiz Pichetti, em razão das obrigações contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa do grupo “Recursos Ordinários / Livres”, ressalvando: i) o resultado orçamentário/financeiro deficitário das fontes não vinculadas a programas, convênios, operações de créditos e RPPS; ii) as obrigações de despesa c […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando o julgamento pela irregularidade das contas do Poder Executivo do Município de Itapejara d’Oeste, referente ao exercício financeiro de 2016, de responsabilidade do senhor Eliandro Luiz Pichetti, em razão das obrigações contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa do grupo “Recursos Ordinários / Livres”, ressalvando:",
+    "conclusao": "Parecer Prévio recomendando o julgamento pela irregularidade",
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício financeiro de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Itapejara d'Oeste não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2021-285-primeiracmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 285/2021 da Secretaria Primeira Câmara — contas do Prefeito de Itapejara d'Oeste",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "285",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 285/2021 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "124566/2021",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2021-12-13",
+   "data_publicacao": "2022-01-14",
+   "publicacao_literal": "DETC nº 2689",
+   "entidade_literal": "MUNICÍPIO DE ITAPEJARA D OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Itapejara d'Oeste",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Itapejara d'Oeste não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

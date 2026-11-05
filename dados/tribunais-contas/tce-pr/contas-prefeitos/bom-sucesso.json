@@ -1,0 +1,729 @@
+{
+ "atualizado_em": "2026-11-05T14:29:00.892Z",
+ "municipio": {
+  "id": "bom-sucesso",
+  "nome": "Bom Sucesso",
+  "uf": "PR",
+  "codigo_ibge": "4103206"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2016,
+  "fim": 2023
+ },
+ "contagens": {
+  "exercicios": 8,
+  "pareceres": 9,
+  "com_parecer_em_fonte_aberta": 8,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 8,
+  "pdf_lido": 8,
+  "sem_exercicio_na_fonte": 1
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2025-6-000198192",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 186/2025 — contas do Prefeito de Bom Sucesso, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "186",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 186/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "216755/2024",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2025-06-09",
+   "data_publicacao": "2025-06-26",
+   "publicacao_literal": "DETC nº 3470",
+   "entidade_literal": "MUNICÍPIO DE BOM SUCESSO",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade > Aprovação",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela IRREGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela IRREGULARIDADE das contas do(a) senhor(a) JOSÉ ROBERTO DA SILVA, na qualidade de prefeito(a) do MUNICÍPIO DE BOM SUCESSO, relativas ao exercício de 2023, em razão de:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Bom Sucesso",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 186/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/6/000198192.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "dd49aec8c3344a01eb822bd20d9d947c116c7dd30245d776af128ceacc2d5da8",
+    "paginas_lidas": 1,
+    "total_paginas": 48,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: Considerando os fatos expostos no item de fundamentação, VOTO, com respaldo no artigo 1º, I, da Lei Complementar Estadual n.º 113/2005 e em observância ao artigo 217-A, caput, do Regimento Interno, no sentido de: a. Emitir Parecer Prévio pela IRREGULARIDADE das contas do(a) senhor(a) JOSÉ ROBERTO DA SILVA, na qualidade de prefeito(a) do MUNICÍPIO DE BOM SUCESSO, relativas ao exercício de 2023, em razão de: i. descumprimento dos artigos 1º, § 1º, da LRF e 48, alínea b, da Lei Federal n.º 4.320/64, conforme indicado na análise do resultado orçamentário e financeiro. ii. aportes para cobertura do déficit atuarial em monta […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela IRREGULARIDADE das contas do(a) senhor(a) JOSÉ ROBERTO DA SILVA, na qualidade de prefeito(a) do MUNICÍPIO DE BOM SUCESSO, relativas ao exercício de 2023, em razão de:",
+    "conclusao": "Parecer Prévio pela IRREGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Bom Sucesso não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-5-00384066",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 207/2024 — contas do Prefeito de Bom Sucesso, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "207",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 207/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "218010/2023",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "AUGUSTINHO ZUCCHI",
+   "data_julgamento": "2024-04-15",
+   "data_publicacao": "2024-05-03",
+   "publicacao_literal": "DETC nº 3201",
+   "entidade_literal": "MUNICÍPIO DE BOM SUCESSO",
+   "resumo_literal": null,
+   "indexacao_literal": "Irregularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela IRREGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela IRREGULARIDADE das contas do senhor JOSÉ ROBERTO DA SILVA e senhor RAIMUNDO SEVERIANO DE ALMEIDA JUNIOR, na qualidade de prefeito do MUNICÍPIO DE BOM SUCESSO, relativas ao exercício de 2022, em razão de:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Bom Sucesso",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 207/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/5/00384066.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "b95dc72289e2cc71f4aa3fe269c716c53eb4c640f489188be3a503225986ec38",
+    "paginas_lidas": 1,
+    "total_paginas": 30,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro AUGUSTINHO ZUCCHI, por unanimidade: a. Emitir Parecer Prévio pela IRREGULARIDADE das contas do senhor JOSÉ ROBERTO DA SILVA e senhor RAIMUNDO SEVERIANO DE ALMEIDA JUNIOR, na qualidade de prefeito do MUNICÍPIO DE BOM SUCESSO, relativas ao exercício de 2022, em razão de: i. descumprimento dos artigos 1º, § 1º, da LRF e 48, alínea b, da Lei Federal n.º 4.320/64, conforme indicado na análise do resultado orçamentário e financeiro. ii. aportes para cobertura do déficit atuarial em montante inferior ao previsto no resultado de avaliação atuarial, resultando em descumprimento do disposto no artigo 9º da Lei Federal n.º 9.717/1998 e nos artigos 53, § 1º, e 55, da Portaria MF n […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela IRREGULARIDADE das contas do senhor JOSÉ ROBERTO DA SILVA e senhor RAIMUNDO SEVERIANO DE ALMEIDA JUNIOR, na qualidade de prefeito do MUNICÍPIO DE BOM SUCESSO, relativas ao exercício de 2022, em razão de:",
+    "conclusao": "Parecer Prévio pela IRREGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Bom Sucesso não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-9-00379324",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 436/2023 da Secretaria Primeira Câmara — contas do Prefeito de Bom Sucesso, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "436",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 436/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "204342/2022",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2023-09-04",
+   "data_publicacao": "2023-09-18",
+   "publicacao_literal": "DETC nº 3065",
+   "entidade_literal": "MUNICÍPIO DE BOM SUCESSO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "PARECER PRÉVIO deste Tribunal recomendando o julgamento pela IRREGULARIDADE",
+    "conclusao_literal": "Emitir, na forma do art. 23 da Lei Complementar Estadual nº 113/2005, PARECER PRÉVIO deste Tribunal recomendando o julgamento pela IRREGULARIDADE das contas do prefeito do MUNICÍPIO DE BOM SUCESSO, relativas ao exercício de 2021, de responsabilidade de RAIMUNDO SEVERIANO DE ALMEIDA JUNIOR, em face do “Resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS” e “aplicação de no mínimo 70% dos recursos do FUNDEB na remuneração dos profissionais da educação básica”;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Bom Sucesso",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 436/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/9/00379324.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "8f520b443846cae7c3bc30b48e4d23c15c791589b601d368ec8e46201d9a9016",
+    "paginas_lidas": 2,
+    "total_paginas": 11,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade, em: I – Emitir, na forma do art. 23 da Lei Complementar Estadual nº 113/2005, PARECER PRÉVIO deste Tribunal recomendando o julgamento pela IRREGULARIDADE das contas do prefeito do MUNICÍPIO DE BOM SUCESSO, relativas ao exercício de 2021, de responsabilidade de RAIMUNDO SEVERIANO DE ALMEIDA JUNIOR, em face do “Resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS” e “aplicação de no mínimo 70% dos recursos do FUNDEB na remuneração dos profissionais da educação básica”; II - aplicar uma multa administrativa contida na alínea g do inciso IV do art. 87 da Lei Comp […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir, na forma do art. 23 da Lei Complementar Estadual nº 113/2005, PARECER PRÉVIO deste Tribunal recomendando o julgamento pela IRREGULARIDADE das contas do prefeito do MUNICÍPIO DE BOM SUCESSO, relativas ao exercício de 2021, de responsabilidade de RAIMUNDO SEVERIANO DE ALMEIDA JUNIOR, em face do “Resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS” e “aplicação de no mínimo 70% dos recursos do FUNDEB na remuneração dos profissionais da educação básica”;",
+    "conclusao": "PARECER PRÉVIO deste Tribunal recomendando o julgamento pela IRREGULARIDADE",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Bom Sucesso não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-9-00379218",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 410/2023 da Secretaria Segunda Câmara — contas do Prefeito de Bom Sucesso, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "410",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 410/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "190135/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2023-09-04",
+   "data_publicacao": "2023-09-13",
+   "publicacao_literal": "DETC nº 3062",
+   "entidade_literal": "MUNICÍPIO DE BOM SUCESSO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a irregularidade das contas do Prefeito Municipal de Bom Sucesso, referente ao exercício de 2020, de responsabilidade de Raimundo Severiano de Almeida Junior, em razão das seguintes impropriedades:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Bom Sucesso",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 410/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/9/00379218.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "b0fc262fa1e273d7161ea106f43ada2139a21772f8cf70c73148f88dc2db8422",
+    "paginas_lidas": 2,
+    "total_paginas": 6,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I- Emitir Parecer Prévio recomendando a irregularidade das contas do Prefeito Municipal de Bom Sucesso, referente ao exercício de 2020, de responsabilidade de Raimundo Severiano de Almeida Junior, em razão das seguintes impropriedades: (1) o Relatório do Controle Interno encaminhado não apresenta os conteúdos mínimos prescritos pelo Tribunal; (2) resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS e (3) obrigações de despesas contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem disponibilidade de caixa, conform […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a irregularidade das contas do Prefeito Municipal de Bom Sucesso, referente ao exercício de 2020, de responsabilidade de Raimundo Severiano de Almeida Junior, em razão das seguintes impropriedades:",
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Bom Sucesso não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-5-00374191",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 197/2023 da Secretaria Primeira Câmara — contas do Prefeito de Bom Sucesso, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "197",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 197/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "274068/2020",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2023-05-02",
+   "data_publicacao": "2023-05-16",
+   "publicacao_literal": "DETC nº 2980",
+   "entidade_literal": "MUNICÍPIO DE BOM SUCESSO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito do MUNICÍPIO DE BOM SUCESSO, Sr. Raimundo Severiano de Almeida Junior, relativas ao exercício financeiro de 2019, em razão de:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Bom Sucesso",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 197/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/5/00374191.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "859b19d481edd9cffc68596b485faac87ea54cd260c6fb166e93d86219548f53",
+    "paginas_lidas": 2,
+    "total_paginas": 7,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito do MUNICÍPIO DE BOM SUCESSO, Sr. Raimundo Severiano de Almeida Junior, relativas ao exercício financeiro de 2019, em razão de: (i) da demonstração da execução orçamentária e financeira, restrita às fontes não vinculadas a programas, convênios, operações de créditos e RPPS (fontes livres) ter evidenciado a ocorrência de déficit orçamentário; (ii) do município não ter atingido o índice mínimo de 25% em aplicação dos recursos em Manutenção e Desenvolvimento do Ensino Básico; (iii) de não terem sido aplicados no mínimo 60% dos […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito do MUNICÍPIO DE BOM SUCESSO, Sr. Raimundo Severiano de Almeida Junior, relativas ao exercício financeiro de 2019, em razão de:",
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício financeiro de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Bom Sucesso não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-12-00353077",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 714/2020 da Secretaria Segunda Câmara — contas do Prefeito de Bom Sucesso, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "714",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 714/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "209843/2019",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2020-11-30",
+   "data_publicacao": "2020-12-09",
+   "publicacao_literal": "DETC nº 2440",
+   "entidade_literal": "MUNICÍPIO DE BOM SUCESSO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "conclusao_literal": "emitir, com fundamento no artigo 1º, I, combinado com o art. 16, III, “b”, da Lei Complementar Estadual nº 113/2005, Parecer Prévio recomendando a irregularidade das contas do Sr. RAIMUNDO SEVERIANO DE ALMEIDA JUNIOR, prefeito do Município de Bom Sucesso, relativa ao exercício financeiro de 2018, em virtude da ausência dos pareceres do Conselho de Acompanhamento e Controle Social do FUNDEB e do Conselho Municipal de Saúde;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Bom Sucesso",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 714/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/12/00353077.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "7a6d1b2765d5003c518de61b76943a509f7bfdf8644b5307fe7cb7cd5bb05236",
+    "paginas_lidas": 2,
+    "total_paginas": 11,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade, em: 1. emitir, com fundamento no artigo 1º, I, combinado com o art. 16, III, “b”, da Lei Complementar Estadual nº 113/2005, Parecer Prévio recomendando a irregularidade das contas do Sr. RAIMUNDO SEVERIANO DE ALMEIDA JUNIOR, prefeito do Município de Bom Sucesso, relativa ao exercício financeiro de 2018, em virtude da ausência dos pareceres do Conselho de Acompanhamento e Controle Social do FUNDEB e do Conselho Municipal de Saúde; do déficit orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS (fontes livres); e da aplicação de 55,94% dos recursos do FUNDEB na remuneração do mag […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir, com fundamento no artigo 1º, I, combinado com o art. 16, III, “b”, da Lei Complementar Estadual nº 113/2005, Parecer Prévio recomendando a irregularidade das contas do Sr. RAIMUNDO SEVERIANO DE ALMEIDA JUNIOR, prefeito do Município de Bom Sucesso, relativa ao exercício financeiro de 2018, em virtude da ausência dos pareceres do Conselho de Acompanhamento e Controle Social do FUNDEB e do Conselho Municipal de Saúde;",
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício financeiro de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Bom Sucesso não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-12-00342302",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 600/2019 da Secretaria Primeira Câmara — contas do Prefeito de Bom Sucesso, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "600",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 600/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "293956/2018",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2019-12-09",
+   "data_publicacao": "2019-12-16",
+   "publicacao_literal": "DETC nº 2207",
+   "entidade_literal": "MUNICÍPIO DE BOM SUCESSO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando o julgamento pela irregularidade",
+    "conclusao_literal": "emitir Parecer Prévio recomendando o julgamento pela irregularidade das contas do senhor Raimundo Severiano de Almeida Junior, chefe do Poder Executivo do Município de Bom Sucesso, referente ao exercício financeiro de 2017, em razão do resultado orçamentário/financeiro deficitário das fontes não vinculadas a programas, convênios, operações de créditos e RPPS, ressalvando:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Bom Sucesso",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 600/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/12/00342302.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "46f76fff6635e0828aac330f99f4f6b50374ba57fd9b58390bc223a044f3bcac",
+    "paginas_lidas": 2,
+    "total_paginas": 11,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I – emitir Parecer Prévio recomendando o julgamento pela irregularidade das contas do senhor Raimundo Severiano de Almeida Junior, chefe do Poder Executivo do Município de Bom Sucesso, referente ao exercício financeiro de 2017, em razão do resultado orçamentário/financeiro deficitário das fontes não vinculadas a programas, convênios, operações de créditos e RPPS, ressalvando: i) as divergências nos registros das transferências do ICMS e IPVA; ii) a falta de aplicação do mínimo de 60% dos recursos do FUNDEB na remuneração dos profissionais do magistério da educação básica em efetivo exercício na rede pública; e iii) os atras […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando o julgamento pela irregularidade das contas do senhor Raimundo Severiano de Almeida Junior, chefe do Poder Executivo do Município de Bom Sucesso, referente ao exercício financeiro de 2017, em razão do resultado orçamentário/financeiro deficitário das fontes não vinculadas a programas, convênios, operações de créditos e RPPS, ressalvando:",
+    "conclusao": "Parecer Prévio recomendando o julgamento pela irregularidade",
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício financeiro de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Bom Sucesso não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-8-00350025",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 318/2020 da Secretaria Segunda Câmara — contas do Prefeito de Bom Sucesso, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "318",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 318/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "295769/2017",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2020-08-03",
+   "data_publicacao": "2020-08-19",
+   "publicacao_literal": "DETC nº 2364",
+   "entidade_literal": "MUNICÍPIO DE BOM SUCESSO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio, na forma do artigo 23 da Lei Complementar n° 113/2005, recomendando a irregularidade",
+    "conclusao_literal": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n° 113/2005, recomendando a irregularidade das contas do Prefeito do Município de Bom Sucesso, exercício de 2016, já falecido, Sr. Maurício Aparecido de Castro, CPF 308.682.709-20, em decorrência dos seguintes itens:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Bom Sucesso",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 318/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/8/00350025.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "600c2dfabb6aef4e89742432f9a6d56d0a9fb511721059679bd31271e7592a89",
+    "paginas_lidas": 3,
+    "total_paginas": 25,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por maioria absoluta, em: 1) emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n° 113/2005, recomendando a irregularidade das contas do Prefeito do Município de Bom Sucesso, exercício de 2016, já falecido, Sr. Maurício Aparecido de Castro, CPF 308.682.709-20, em decorrência dos seguintes itens: a. relatório do Controle Interno que apresentou ocorrência de irregularidade passível de desaprovação da gestão; b. falta de aplicação do índice mínimo de 25% em manutenção e desenvolvimento da educação básica municipal; c. ausência de encaminhamento do Certificado de Regularidade Previdenciária – CRP; d. ausência de comprovação da Publicaç […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n° 113/2005, recomendando a irregularidade das contas do Prefeito do Município de Bom Sucesso, exercício de 2016, já falecido, Sr. Maurício Aparecido de Castro, CPF 308.682.709-20, em decorrência dos seguintes itens:",
+    "conclusao": "Parecer Prévio, na forma do artigo 23 da Lei Complementar n° 113/2005, recomendando a irregularidade",
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Bom Sucesso não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2021-125-primeiracmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 125/2021 da Secretaria Primeira Câmara — contas do Prefeito de Bom Sucesso",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "125",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 125/2021 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "264378/2015",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2021-04-19",
+   "data_publicacao": "2021-05-04",
+   "publicacao_literal": "DETC nº 2531",
+   "entidade_literal": "MUNICÍPIO DE BOM SUCESSO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Bom Sucesso",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Bom Sucesso não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

@@ -1,0 +1,601 @@
+{
+ "atualizado_em": "2026-11-05T14:17:39.664Z",
+ "municipio": {
+  "id": "virmond",
+  "nome": "Virmond",
+  "uf": "PR",
+  "codigo_ibge": "4128658"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2018,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 7,
+  "pareceres": 7,
+  "com_parecer_em_fonte_aberta": 7,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 7,
+  "pdf_lido": 7,
+  "sem_exercicio_na_fonte": 0
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f68ca8a9b64d6286d5f605b923705fb7602cf450e7408d143f7545e514359bfb",
+   "atualizado_na_fonte": "05/06/2026 00:00:40"
+  },
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2026-3-000201097",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 98/2026 — contas do Prefeito de Virmond, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "98",
+    "ano": "2026",
+    "titulo_oficial": "Parecer Prévio 98/2026"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "185756/2025",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2026-03-02",
+   "data_publicacao": "2026-03-19",
+   "publicacao_literal": "DETC nº 3637",
+   "entidade_literal": "MUNICÍPIO DE VIRMOND",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor NEIMAR GRANOSKI, na qualidade de prefeito do MUNICÍPIO DE VIRMOND, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Virmond",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 98/2026 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2026/3/000201097.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "06e31055fd257090a9470296e57d8b7fb05b8cde36abfe6ad2b306465d7479c9",
+    "paginas_lidas": 1,
+    "total_paginas": 45,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por maioria absoluta: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor NEIMAR GRANOSKI, na qualidade de prefeito do MUNICÍPIO DE VIRMOND, relativas ao exercício de 2024. b. RESSALVAR as contas em virtude de: i. baixo desempenho evidenciado na avaliação da atuação governamental na área da Saúde. Após o trânsito em julgado da deliberação, encaminhar os autos ao Gabinete da Presidência para as providências contidas no § 6º do artigo 217-A do Regimento Interno, à Coordenadoria de Medidas Executórias para as anotações pertinentes e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor NEIMAR GRANOSKI, na qualidade de prefeito do MUNICÍPIO DE VIRMOND, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2026,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Virmond não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2025-2-000196627",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 24/2025 — contas do Prefeito de Virmond, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "24",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 24/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "214922/2024",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2025-02-03",
+   "data_publicacao": "2025-02-17",
+   "publicacao_literal": "DETC nº 3387",
+   "entidade_literal": "MUNICÍPIO DE VIRMOND",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do(a) senhor(a) NEIMAR GRANOSKI, na qualidade de prefeito(a) do MUNICÍPIO DE VIRMOND, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Virmond",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 24/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/2/000196627.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "d026b27e428bb0a71a6f26b8cfbb8f54e333edcd7dcddd248302784cad9f9f55",
+    "paginas_lidas": 1,
+    "total_paginas": 43,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do(a) senhor(a) NEIMAR GRANOSKI, na qualidade de prefeito(a) do MUNICÍPIO DE VIRMOND, relativas ao exercício de 2023. b. RESSALVAR as contas em virtude de: i. baixo desempenho evidenciado na avaliação da atuação governamental na área da Administração Financeira. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, § 6º do […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do(a) senhor(a) NEIMAR GRANOSKI, na qualidade de prefeito(a) do MUNICÍPIO DE VIRMOND, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Virmond não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-5-00384004",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 192/2024 — contas do Prefeito de Virmond, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "192",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 192/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "213370/2023",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2024-04-15",
+   "data_publicacao": "2024-05-02",
+   "publicacao_literal": "DETC nº 3200",
+   "entidade_literal": "MUNICÍPIO DE VIRMOND",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor NEIMAR GRANOSKI, na qualidade de prefeito do MUNICÍPIO DE VIRMOND, relativas ao exercício de 2022, em razão dos resultados da avaliação da atuação governamental nas áreas de Saúde (5,23), Assistência Social (4,20), Administração Financeira (2,80) e Transparência e Relacionamento com o Cidadão (1,53);",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Virmond",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 192/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/5/00384004.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "a9811dfa039c4c8b3d510c66e707cd4f44378bd51ae25184ebc38ca6e359995e",
+    "paginas_lidas": 1,
+    "total_paginas": 32,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor NEIMAR GRANOSKI, na qualidade de prefeito do MUNICÍPIO DE VIRMOND, relativas ao exercício de 2022, em razão dos resultados da avaliação da atuação governamental nas áreas de Saúde (5,23), Assistência Social (4,20), Administração Financeira (2,80) e Transparência e Relacionamento com o Cidadão (1,53); b. Encaminhar os autos à Coordenadoria Geral de Fiscalização - CGF para ciência e, se entender cabível, inclusão no Plano Anual de Fiscalização – PAF, nos termos do art. 151-A, inciso II, do Regimento Interno, em razão das pontuações obtidas nas áreas de Admini […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor NEIMAR GRANOSKI, na qualidade de prefeito do MUNICÍPIO DE VIRMOND, relativas ao exercício de 2022, em razão dos resultados da avaliação da atuação governamental nas áreas de Saúde (5,23), Assistência Social (4,20), Administração Financeira (2,80) e Transparência e Relacionamento com o Cidadão (1,53);",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Virmond não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-5-00374189",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 187/2023 da Secretaria Segunda Câmara — contas do Prefeito de Virmond, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "187",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 187/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "219994/2022",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2023-05-02",
+   "data_publicacao": "2023-05-16",
+   "publicacao_literal": "DETC nº 2980",
+   "entidade_literal": "MUNICÍPIO DE VIRMOND",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE",
+    "conclusao_literal": "emitir Parecer Prévio recomendando a REGULARIDADE das contas do Poder Executivo do Município de Virmond, referente ao exercício financeiro de 2021, de responsabilidade do senhor Neimar Granoski;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Virmond",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 187/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/5/00374189.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "66296107069a98638a98e922b555779028e148f0ff208c5f2b1410f462b940f0",
+    "paginas_lidas": 2,
+    "total_paginas": 5,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I - emitir Parecer Prévio recomendando a REGULARIDADE das contas do Poder Executivo do Município de Virmond, referente ao exercício financeiro de 2021, de responsabilidade do senhor Neimar Granoski; e II – determinar, depois de transitada em julgado a decisão, a remessa dos autos ao Gabinete da Presidência para comunicação ao Poder Legislativo do Município de Virmond, nos termos do art. 217-A, § 6º, do Regimento Interno8; e, na sequência, com fundamento no art. 398, § 1º, do Regimento Interno9, o encerramento do processo e o encaminhamento dos autos à Diretoria de Protocolo para arquivamento do feito10.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando a REGULARIDADE das contas do Poder Executivo do Município de Virmond, referente ao exercício financeiro de 2021, de responsabilidade do senhor Neimar Granoski;",
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Virmond não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-10-00380031",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 472/2023 da Secretaria Primeira Câmara — contas do Prefeito de Virmond, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "472",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 472/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "191646/2021",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2023-10-02",
+   "data_publicacao": "2023-10-20",
+   "publicacao_literal": "DETC nº 3087",
+   "entidade_literal": "MUNICÍPIO DE VIRMOND",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito do MUNICÍPIO DE VIRMOND, Sr. Neimar Granoski, relativas ao exercício financeiro de 2020, com ressalva em face da contabilização incorreta das despesas com publicação institucional realizadas no período que antecede as eleições;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Virmond",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 472/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/10/00380031.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "15dd17c22f2a2a2f7e83654840c335c0d1baf174a8db3afeddaedb5d22e06175",
+    "paginas_lidas": 2,
+    "total_paginas": 5,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito do MUNICÍPIO DE VIRMOND, Sr. Neimar Granoski, relativas ao exercício financeiro de 2020, com ressalva em face da contabilização incorreta das despesas com publicação institucional realizadas no período que antecede as eleições; II. Determinar, após o trânsito em julgado da decisão, as seguintes medidas: a) o encaminhamento dos autos à Coordenadoria de Monitoramento e Execuções, nos termos do artigo 175-L, I, do Regimento Interno. b) após, ao Gabinete da Presidência para expedição de ofício à Câmara Municipal, comunicando a de […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito do MUNICÍPIO DE VIRMOND, Sr. Neimar Granoski, relativas ao exercício financeiro de 2020, com ressalva em face da contabilização incorreta das despesas com publicação institucional realizadas no período que antecede as eleições;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício financeiro de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Virmond não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-12-00353120",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 711/2020 da Secretaria Segunda Câmara — contas do Prefeito de Virmond, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "711",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 711/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "271018/2020",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2020-11-30",
+   "data_publicacao": "2020-12-10",
+   "publicacao_literal": "DETC nº 2441",
+   "entidade_literal": "MUNICÍPIO DE VIRMOND",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio recomendando a regularidade",
+    "conclusao_literal": "emitir, com fundamento nos artigos 1º, inciso I, e 16, inciso I, da Lei Complementar Estadual nº 113/20056, parecer prévio recomendando a regularidade das contas do Prefeito Municipal de Virmond, do exercício de 2019, de responsabilidade do Senhor Neimar Granoski;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Virmond",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 711/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/12/00353120.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "3ba6b083302ca2808569794a84547f638c4aaf768df47435c736850bd99a8666",
+    "paginas_lidas": 2,
+    "total_paginas": 4,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I. emitir, com fundamento nos artigos 1º, inciso I, e 16, inciso I, da Lei Complementar Estadual nº 113/20056, parecer prévio recomendando a regularidade das contas do Prefeito Municipal de Virmond, do exercício de 2019, de responsabilidade do Senhor Neimar Granoski; II. encaminhar os autos, após o trânsito em julgado, ao Gabinete da Presidência para comunicação da deliberação ao Poder Legislativo Municipal7, ficando, na sequência, autorizado o encerramento do feito, em conformidade com o art. 398, § 1º, do Regimento Interno8, e seu arquivamento na Diretoria de Protocolo – DP. 5 “Art. 398. (...) § 1º Proferida a decisão monocrát […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir, com fundamento nos artigos 1º, inciso I, e 16, inciso I, da Lei Complementar Estadual nº 113/20056, parecer prévio recomendando a regularidade das contas do Prefeito Municipal de Virmond, do exercício de 2019, de responsabilidade do Senhor Neimar Granoski;",
+    "conclusao": "parecer prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Virmond não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-9-00339608",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 215/2019 da Secretaria Segunda Câmara — contas do Prefeito de Virmond, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "215",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 215/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "195869/2019",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2019-08-27",
+   "data_publicacao": "2019-09-10",
+   "publicacao_literal": "DETC nº 2140",
+   "entidade_literal": "MUNICÍPIO DE VIRMOND",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "emitir, na forma do artigo 23 da Lei Complementar n° 113/2005, Parecer Prévio recomendando a regularidade das contas do Prefeito Municipal de Virmond, exercício de 2018, senhor Neimar Granoski, CPF 777.826.319-04, Gestor da Entidade naquele exercício.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Virmond",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 215/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/9/00339608.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "4494ad2ba57bb2cac583f17346700ef2bbc9a023a97100d603cfdbd9b10763ed",
+    "paginas_lidas": 1,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: I. emitir, na forma do artigo 23 da Lei Complementar n° 113/2005, Parecer Prévio recomendando a regularidade das contas do Prefeito Municipal de Virmond, exercício de 2018, senhor Neimar Granoski, CPF 777.826.319-04, Gestor da Entidade naquele exercício. II. encaminhar à Diretoria de Protocolo, nos termos do artigo 398, § 1º, do Regimento Interno para encerramento após o trânsito em julgado do processo.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir, na forma do artigo 23 da Lei Complementar n° 113/2005, Parecer Prévio recomendando a regularidade das contas do Prefeito Municipal de Virmond, exercício de 2018, senhor Neimar Granoski, CPF 777.826.319-04, Gestor da Entidade naquele exercício.",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Virmond não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [],
+ "acordaos_relacionados": []
+}

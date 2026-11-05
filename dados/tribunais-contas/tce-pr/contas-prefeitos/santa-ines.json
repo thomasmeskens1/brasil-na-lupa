@@ -1,0 +1,657 @@
+{
+ "atualizado_em": "2026-11-05T14:29:02.134Z",
+ "municipio": {
+  "id": "santa-ines",
+  "nome": "Santa Inês",
+  "uf": "PR",
+  "codigo_ibge": "4123600"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2016,
+  "fim": 2023
+ },
+ "contagens": {
+  "exercicios": 7,
+  "pareceres": 8,
+  "com_parecer_em_fonte_aberta": 7,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 7,
+  "pdf_lido": 7,
+  "sem_exercicio_na_fonte": 1
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2025-4-000197314",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 107/2025 — contas do Prefeito de Santa Inês, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "107",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 107/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "189332/2024",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2025-03-31",
+   "data_publicacao": "2025-04-08",
+   "publicacao_literal": "DETC nº 3420",
+   "entidade_literal": "MUNICÍPIO DE SANTA INÊS",
+   "resumo_literal": null,
+   "indexacao_literal": "Determinação > Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) BRUNO VIEIRA LUVISOTTO, na qualidade de prefeito(a) do MUNICÍPIO DE SANTA INÊS, relativas ao exercício de 2023, com RESSALVAS em razão:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Inês",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 107/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/4/000197314.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "83ad32eed8a245f81347031df055a0ce63e63ea4b8ca9d120a90e94a85fc98ec",
+    "paginas_lidas": 1,
+    "total_paginas": 42,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) BRUNO VIEIRA LUVISOTTO, na qualidade de prefeito(a) do MUNICÍPIO DE SANTA INÊS, relativas ao exercício de 2023, com RESSALVAS em razão: i. dos resultados da avaliação da atuação governamental nas áreas referentes a Educação (5,54), Assistência Social (4,96), Transparência e Relacionamento com o Cidadão (3,95) e Administração Financeira (3,51); ii. do descumprimento dos artigos 1º, § 1º, da LRF e 48, alínea b, da Lei Federal n.º 4.320/64, conforme indicado na análise do resultado orçamentário e financeiro. b. Determinar a realização de auditoria no Município de Sa […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) BRUNO VIEIRA LUVISOTTO, na qualidade de prefeito(a) do MUNICÍPIO DE SANTA INÊS, relativas ao exercício de 2023, com RESSALVAS em razão:",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Inês não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-5-00384064",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 205/2024 — contas do Prefeito de Santa Inês, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "205",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 205/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "207809/2023",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "AUGUSTINHO ZUCCHI",
+   "data_julgamento": "2024-04-15",
+   "data_publicacao": "2024-05-03",
+   "publicacao_literal": "DETC nº 3201",
+   "entidade_literal": "MUNICÍPIO DE SANTA INÊS",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor BRUNO VIEIRA LUVISOTTO, na qualidade de prefeito do MUNICÍPIO DE SANTA INÊS, relativas ao exercício de 2022, em razão de:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Inês",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 205/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/5/00384064.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "4552ed361cac17cc1c37d2e4dff30a253f415db2fe72277739e06ec21227f125",
+    "paginas_lidas": 1,
+    "total_paginas": 29,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro AUGUSTINHO ZUCCHI, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor BRUNO VIEIRA LUVISOTTO, na qualidade de prefeito do MUNICÍPIO DE SANTA INÊS, relativas ao exercício de 2022, em razão de: i. descumprimento dos artigos 1º, § 1º, da LRF e 48, alínea b, da Lei Federal n.º 4.320/64, conforme indicado na análise do resultado orçamentário e financeiro. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 21 […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor BRUNO VIEIRA LUVISOTTO, na qualidade de prefeito do MUNICÍPIO DE SANTA INÊS, relativas ao exercício de 2022, em razão de:",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Inês não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-9-00379322",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 434/2023 da Secretaria Primeira Câmara — contas do Prefeito de Santa Inês, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "434",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 434/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "196366/2022",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2023-09-04",
+   "data_publicacao": "2023-09-18",
+   "publicacao_literal": "DETC nº 3065",
+   "entidade_literal": "MUNICÍPIO DE SANTA INÊS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio deste Tribunal recomendando o julgamento pela regularidade com ressalva",
+    "conclusao_literal": "Emitir, na forma do art. 23 da Lei Complementar Estadual nº 113/2005, parecer prévio deste Tribunal recomendando o julgamento pela regularidade com ressalva das contas do prefeito do MUNICÍPIO DE SANTA INÊS, relativas ao exercício de 2021, de responsabilidade de BRUNO VIEIRA LUVISOTTO;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Inês",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 434/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/9/00379322.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "4fe06d5c002732ae8fc423d3e0a14e81397e15d00b76817b647c4e0233e11cdc",
+    "paginas_lidas": 2,
+    "total_paginas": 6,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade, em: I -Emitir, na forma do art. 23 da Lei Complementar Estadual nº 113/2005, parecer prévio deste Tribunal recomendando o julgamento pela regularidade com ressalva das contas do prefeito do MUNICÍPIO DE SANTA INÊS, relativas ao exercício de 2021, de responsabilidade de BRUNO VIEIRA LUVISOTTO; II - ressalvar os itens “Resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS” e “O Relatório do Controle Interno encaminhado não apresenta os conteúdos mínimos prescritos pelo Tribunal”; III – determinar, após o trânsito em julgado da decisão, a remessa dos autos ao Gab […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir, na forma do art. 23 da Lei Complementar Estadual nº 113/2005, parecer prévio deste Tribunal recomendando o julgamento pela regularidade com ressalva das contas do prefeito do MUNICÍPIO DE SANTA INÊS, relativas ao exercício de 2021, de responsabilidade de BRUNO VIEIRA LUVISOTTO;",
+    "conclusao": "parecer prévio deste Tribunal recomendando o julgamento pela regularidade com ressalva",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Inês não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-7-00377889",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 308/2023 da Secretaria Segunda Câmara — contas do Prefeito de Santa Inês, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "308",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 308/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "166803/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2023-07-10",
+   "data_publicacao": "2023-07-24",
+   "publicacao_literal": "DETC nº 3027",
+   "entidade_literal": "MUNICÍPIO DE SANTA INÊS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE COM RESSALVAS",
+    "conclusao_literal": "emitir Parecer Prévio recomendando a REGULARIDADE COM RESSALVAS das contas do MUNICÍPIO DE SANTA INÊS, referentes ao exercício financeiro de 2020, de responsabilidade de BRUNO VIEIRA LUVISOTTO , em razão dos seguintes apontamentos:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Inês",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 308/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/7/00377889.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "d3b415dc02984422011108a905d9efefe2196f580360d6362629f6d6ece3596a",
+    "paginas_lidas": 2,
+    "total_paginas": 13,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por maioria absoluta, em: I – emitir Parecer Prévio recomendando a REGULARIDADE COM RESSALVAS das contas do MUNICÍPIO DE SANTA INÊS, referentes ao exercício financeiro de 2020, de responsabilidade de BRUNO VIEIRA LUVISOTTO , em razão dos seguintes apontamentos: 1) obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa, conforme critérios fixados no Prejulgado 15; 2) despesas com publicidade institucional realizadas até 15 de agosto de 2020 em montante superior a média dos gastos nos 2 (dois) primeiros quadrimestres dos 3 ( […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "emitir Parecer Prévio recomendando a REGULARIDADE COM RESSALVAS das contas do MUNICÍPIO DE SANTA INÊS, referentes ao exercício financeiro de 2020, de responsabilidade de BRUNO VIEIRA LUVISOTTO , em razão dos seguintes apontamentos:",
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE COM RESSALVAS",
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício financeiro de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Inês não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-10-00340456",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 359/2019 da Secretaria Primeira Câmara — contas do Prefeito de Santa Inês, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "359",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 359/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "170890/2019",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2019-09-30",
+   "data_publicacao": "2019-10-04",
+   "publicacao_literal": "DETC nº 2158",
+   "entidade_literal": "MUNICÍPIO DE SANTA INÊS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de SANTA INÊS, Sr. BRUNO VIEIRA LUVISOTTO, relativas ao exercício financeiro de 2018;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Inês",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 359/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/10/00340456.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "bff95f32d10119dba3c1541f993d31728a0df914b7683e37075fe79307fd8678",
+    "paginas_lidas": 2,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: 1 Art. 398. Todos os processos autuados no Tribunal permanecerão no sistema, segundo as regras de gestão documental para a sua guarda e disponibilização. § 1º Proferida a decisão monocrática ou do órgão colegiado, com o respectivo trânsito em julgado e certificado seu integral cumprimento, o processo será encerrado, mediante despacho do relator. I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de SANTA INÊS, Sr. BRUNO VIEIRA LUVISOTTO, relativas ao exercício financeiro de 2018; II. Determinar, após o trânsito em julgado da decisão, as seguintes medidas: a) a exped […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de SANTA INÊS, Sr. BRUNO VIEIRA LUVISOTTO, relativas ao exercício financeiro de 2018;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício financeiro de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Inês não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-10-00341109",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 457/2019 da Secretaria Segunda Câmara — contas do Prefeito de Santa Inês, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "457",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 457/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "266835/2018",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2019-10-22",
+   "data_publicacao": "2019-10-30",
+   "publicacao_literal": "DETC nº 2175",
+   "entidade_literal": "MUNICÍPIO DE SANTA INÊS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, com fundamento nos artigos 1.º, inciso I, e 16, inciso III, alínea “b”6, ambos da Lei Complementar Estadual n.º 113/2005, recomendando a irregularidade das contas do Prefeito Municipal de Santa Inês, do exercício financeiro de 2017, em razão de déficit nas fontes não vinculadas;",
+    "conclusao_literal": "emitir Parecer Prévio, com fundamento nos artigos 1.º, inciso I, e 16, inciso III, alínea “b”6, ambos da Lei Complementar Estadual n.º 113/2005, recomendando a irregularidade das contas do Prefeito Municipal de Santa Inês, do exercício financeiro de 2017, em razão de déficit nas fontes não vinculadas;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Inês",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 457/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/10/00341109.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "d2dd96097ce9160fa15358765fdc6803d9389da43ad35b5339d64e2dcd30bb39",
+    "paginas_lidas": 2,
+    "total_paginas": 4,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: 2 Art. 87. As multas administrativas serão devidas independentemente de apuração de dano ao erário e de sanções institucionais, em razão da presunção de lesividade à ordem legal, aplicadas em razão dos seguintes fatos: IV - No valor de 40 (quarenta) vezes a Unidade Padrão Fiscal do Estado do Paraná – UPFPR: g) praticar ato administrativo, não tipificado em outro dispositivo deste artigo, do qual resulte contrariedade ou ofensa à norma legal, independentemente da caracterização de dano ao erário; 3 Art. 16. As contas serão julgadas: III – irregulares, quando comprovada qualquer das seguintes ocorrências: b) infração à norma legal […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, com fundamento nos artigos 1.º, inciso I, e 16, inciso III, alínea “b”6, ambos da Lei Complementar Estadual n.º 113/2005, recomendando a irregularidade das contas do Prefeito Municipal de Santa Inês, do exercício financeiro de 2017, em razão de déficit nas fontes não vinculadas;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício financeiro de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Inês não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-8-00350009",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 302/2020 da Secretaria Primeira Câmara — contas do Prefeito de Santa Inês, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "302",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 302/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "232643/2017",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2020-08-03",
+   "data_publicacao": "2020-08-12",
+   "publicacao_literal": "DETC nº 2359",
+   "entidade_literal": "MUNICÍPIO DE SANTA INÊS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando o julgamento pela irregularidade",
+    "conclusao_literal": "emitir Parecer Prévio recomendando o julgamento pela irregularidade das contas do senhor Marcel André Regovichi, chefe do Poder Executivo do Município de Santa Inês, referente ao exercício financeiro de 2016, em razão da falta de aplicação do mínimo de 15% em ações e serviços públicos de saúde, ressalvando a ausência das notas explicativas do Balanço Patrimonial e a divergência nos registros das transferências do ICMS;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Inês",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 302/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/8/00350009.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "4679df5179eb4e6725848c435d37b0ddcee4a8c812888ed25ec9389a8c351c5e",
+    "paginas_lidas": 2,
+    "total_paginas": 11,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I – emitir Parecer Prévio recomendando o julgamento pela irregularidade das contas do senhor Marcel André Regovichi, chefe do Poder Executivo do Município de Santa Inês, referente ao exercício financeiro de 2016, em razão da falta de aplicação do mínimo de 15% em ações e serviços públicos de saúde, ressalvando a ausência das notas explicativas do Balanço Patrimonial e a divergência nos registros das transferências do ICMS; II – aplicar uma multa do art. 87, IV, “g”, da Lei Complementar n° 113/2005, ao senhor Marcel André Regovichi, em razão da divergência nos registros das transferências do ICMS; e II – determinar, depois d […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando o julgamento pela irregularidade das contas do senhor Marcel André Regovichi, chefe do Poder Executivo do Município de Santa Inês, referente ao exercício financeiro de 2016, em razão da falta de aplicação do mínimo de 15% em ações e serviços públicos de saúde, ressalvando a ausência das notas explicativas do Balanço Patrimonial e a divergência nos registros das transferências do ICMS;",
+    "conclusao": "Parecer Prévio recomendando o julgamento pela irregularidade",
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício financeiro de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Inês não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2021-205-segundacmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 205/2021 da Secretaria Segunda Câmara — contas do Prefeito de Santa Inês",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "205",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 205/2021 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "189010/2020",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2021-06-28",
+   "data_publicacao": "2021-07-16",
+   "publicacao_literal": "DETC nº 2582",
+   "entidade_literal": "MUNICÍPIO DE SANTA INÊS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Inês",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Inês não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

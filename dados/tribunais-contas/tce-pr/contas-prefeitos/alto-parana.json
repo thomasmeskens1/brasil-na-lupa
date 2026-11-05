@@ -1,0 +1,732 @@
+{
+ "atualizado_em": "2026-11-05T14:29:00.703Z",
+ "municipio": {
+  "id": "alto-parana",
+  "nome": "Alto Paraná",
+  "uf": "PR",
+  "codigo_ibge": "4100608"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2016,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 8,
+  "pareceres": 9,
+  "com_parecer_em_fonte_aberta": 8,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 8,
+  "pdf_lido": 8,
+  "sem_exercicio_na_fonte": 1
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "3b7fb76a75413d34e4541e63dccfa3cab923f7d498fc63703a156f2f00d63a4c",
+   "atualizado_na_fonte": "26/06/2025 14:58:07"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2025-12-000200262",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 415/2025 — contas do Prefeito de Alto Paraná, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "415",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 415/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "178130/2025",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2025-11-24",
+   "data_publicacao": "2025-12-03",
+   "publicacao_literal": "DETC nº 3580",
+   "entidade_literal": "MUNICÍPIO DE ALTO PARANÁ",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor CLAUDEMIR JOIA PEREIRA, na qualidade de prefeito do MUNICÍPIO DE ALTO PARANÁ, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Alto Paraná",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 415/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/12/000200262.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "dcb9fcd6792f53ae94316bfa7171d67e71fd8a8f4593834b75977ab5933befa0",
+    "paginas_lidas": 1,
+    "total_paginas": 49,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor CLAUDEMIR JOIA PEREIRA, na qualidade de prefeito do MUNICÍPIO DE ALTO PARANÁ, relativas ao exercício de 2024. b. RESSALVAR as contas em virtude de: i. baixo desempenho evidenciado na avaliação da atuação governamental na área da Saúde. ii. baixo desempenho evidenciado na avaliação da atuação governamental na área da Educação. iii. baixo desempenho evidenciado na avaliação da atuação governamental na área da Transparência e Relacionamento. c. DETERMINAR, com fundamento §1º-C do art. 217-A do Regimento Interno, a instauração, em autos apartado […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor CLAUDEMIR JOIA PEREIRA, na qualidade de prefeito do MUNICÍPIO DE ALTO PARANÁ, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Alto Paraná não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2025-4-000197415",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 103/2025 — contas do Prefeito de Alto Paraná, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "103",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 103/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "130729/2024",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "AUGUSTINHO ZUCCHI",
+   "data_julgamento": "2025-03-31",
+   "data_publicacao": "2025-04-14",
+   "publicacao_literal": "DETC nº 3424",
+   "entidade_literal": "MUNICÍPIO DE ALTO PARANÁ",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor CLAUDEMIR JOIA PEREIRA, na qualidade de prefeito do MUNICÍPIO DE ALTO PARANÁ, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Alto Paraná",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 103/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/4/000197415.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "17dab2105637395714dc41d7f27b2c12dab14c506760c0ccc7a8088557712cbf",
+    "paginas_lidas": 1,
+    "total_paginas": 43,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro AUGUSTINHO ZUCCHI, por unanimidade: Considerando os fatos expostos no item de fundamentação, em consonância com o posicionamento da unidade de instrução técnica, ousando divergir do entendimento do Parquet, VOTO, com respaldo no artigo 1º, I, da Lei Complementar Estadual n.º 113/2005 e em observância ao artigo 217-A, caput, do Regimento Interno, no sentido de: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor CLAUDEMIR JOIA PEREIRA, na qualidade de prefeito do MUNICÍPIO DE ALTO PARANÁ, relativas ao exercício de 2023. b. RESSALVAR as contas em virtude de: i. Pagamento de Aportes para Cobertura do Déficit Atuarial na forma apurada no Laudo Atuarial”, consid […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor CLAUDEMIR JOIA PEREIRA, na qualidade de prefeito do MUNICÍPIO DE ALTO PARANÁ, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Alto Paraná não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-6-00386261",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 246/2024 — contas do Prefeito de Alto Paraná, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "246",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 246/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "153776/2023",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2024-06-10",
+   "data_publicacao": "2024-06-26",
+   "publicacao_literal": "DETC nº 3237",
+   "entidade_literal": "MUNICÍPIO DE ALTO PARANÁ",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVAS",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do senhor CLAUDEMIR JOIA PEREIRA, na qualidade de prefeito do MUNICÍPIO DE ALTO PARANÁ, relativas ao exercício de 2022, em razão de:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Alto Paraná",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 246/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/6/00386261.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "ba5ba82a2d1d571ce0475895761ac69513d7394979a1e1fe1ba2f5d635482ead",
+    "paginas_lidas": 1,
+    "total_paginas": 36,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do senhor CLAUDEMIR JOIA PEREIRA, na qualidade de prefeito do MUNICÍPIO DE ALTO PARANÁ, relativas ao exercício de 2022, em razão de: i. Ressalva quanto à aplicação mínima dos recursos transferidos a título de complementação VAAT na educação infantil. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, §6º do Regimento Interno desta […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do senhor CLAUDEMIR JOIA PEREIRA, na qualidade de prefeito do MUNICÍPIO DE ALTO PARANÁ, relativas ao exercício de 2022, em razão de:",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVAS",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Alto Paraná não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-3-00383160",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 25/2024 da Secretaria Primeira Câmara — contas do Prefeito de Alto Paraná, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "25",
+    "ano": "2024",
+    "titulo_oficial": "Acórdão de Parecer Prévio 25/2024 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "210261/2022",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2024-03-04",
+   "data_publicacao": "2024-03-25",
+   "publicacao_literal": "DETC nº 3175",
+   "entidade_literal": "MUNICÍPIO DE ALTO PARANÁ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito do MUNICÍPIO DE ALTO PARANÁ, Sr. Claudemir Joia Pereira, relativas ao exercício financeiro de 2021, com ressalvas, em caráter excepcional, em razão da ausência de aplicação de no mínimo 70% dos recursos do FUNDEB na remuneração dos profissionais da educação básica, a ausência de aplicação de no mínimo 15% do valor da complementação do Valor Anual Total por Aluno (VAAT) em despesas de capital, e o Pagamento de aportes para cobertura do déficit atuarial na forma apurada no Laudo Atuarial, em virtude de parte dos repasses terem ocorrido em exercício seguinte ao da competência;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Alto Paraná",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 25/2024 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/3/00383160.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "20c3d871ce80169850d7400ac3a61a58d67fb0166b419d353408738633c6b7eb",
+    "paginas_lidas": 1,
+    "total_paginas": 9,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito do MUNICÍPIO DE ALTO PARANÁ, Sr. Claudemir Joia Pereira, relativas ao exercício financeiro de 2021, com ressalvas, em caráter excepcional, em razão da ausência de aplicação de no mínimo 70% dos recursos do FUNDEB na remuneração dos profissionais da educação básica, a ausência de aplicação de no mínimo 15% do valor da complementação do Valor Anual Total por Aluno (VAAT) em despesas de capital, e o Pagamento de aportes para cobertura do déficit atuarial na forma apurada no Laudo Atuarial, em virtude de parte dos repasses terem […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito do MUNICÍPIO DE ALTO PARANÁ, Sr. Claudemir Joia Pereira, relativas ao exercício financeiro de 2021, com ressalvas, em caráter excepcional, em razão da ausência de aplicação de no mínimo 70% dos recursos do FUNDEB na remuneração dos profissionais da educação básica, a ausência de aplicação de no mínimo 15% do valor da complementação do Valor Anual Total por Aluno (VAAT) em despesas de capital, e o Pagamento de aportes para cobertura do déficit atuarial na forma apurada no Laudo Atuarial, em virtude de parte dos repasses terem ocorrido em exercício seguinte ao da competência;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Alto Paraná não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2022-5-00366708",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 126/2022 da Secretaria Segunda Câmara — contas do Prefeito de Alto Paraná, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "126",
+    "ano": "2022",
+    "titulo_oficial": "Acórdão de Parecer Prévio 126/2022 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "154210/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "NESTOR BAPTISTA",
+   "data_julgamento": "2022-05-02",
+   "data_publicacao": "2022-05-13",
+   "publicacao_literal": "DETC nº 2767",
+   "entidade_literal": "MUNICÍPIO DE ALTO PARANÁ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Emitir Parecer Prévio deste Tribunal, recomendando o julgamento pela REGULARIDADE com RESSALVAS das contas do MUNICÍPIO DE ALTO PARANÁ, para o exercício de 2020, de responsabilidade do Sr. ALTAMIRO SEGUNDA CÂMARA PEREIRA SANTANA, CPF Nº 522.579.409-20, nos termos do art. 16, II, da Lei Orgânica do TCEPR, devido a inobservância das prescrições da Nota SIM-AM nº 003/2020 emitida por este Tribunal;",
+    "conclusao_literal": "Emitir Parecer Prévio deste Tribunal, recomendando o julgamento pela REGULARIDADE com RESSALVAS das contas do MUNICÍPIO DE ALTO PARANÁ, para o exercício de 2020, de responsabilidade do Sr. ALTAMIRO SEGUNDA CÂMARA PEREIRA SANTANA, CPF Nº 522.579.409-20, nos termos do art. 16, II, da Lei Orgânica do TCEPR, devido a inobservância das prescrições da Nota SIM-AM nº 003/2020 emitida por este Tribunal;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Alto Paraná",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 126/2022 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2022/5/00366708.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "9e26bcf896ab682372c67fb0c5b92ab7f31ddb8f674be04959915d627fcb0345",
+    "paginas_lidas": 2,
+    "total_paginas": 5,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro NESTOR BAPTISTA, por unanimidade, em: I – Emitir Parecer Prévio deste Tribunal, recomendando o julgamento pela REGULARIDADE com RESSALVAS das contas do MUNICÍPIO DE ALTO PARANÁ, para o exercício de 2020, de responsabilidade do Sr. ALTAMIRO SEGUNDA CÂMARA PEREIRA SANTANA, CPF Nº 522.579.409-20, nos termos do art. 16, II, da Lei Orgânica do TCEPR, devido a inobservância das prescrições da Nota SIM-AM nº 003/2020 emitida por este Tribunal; II – determinar, após o trânsito em julgado do presente, a remessa dos autos à Coordenadoria de Monitoramento e Execuções (CMEX) para anotações e providências necessárias; III – encaminhar ao Gabinete da Presidência (GP) para comunicaçã […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio deste Tribunal, recomendando o julgamento pela REGULARIDADE com RESSALVAS das contas do MUNICÍPIO DE ALTO PARANÁ, para o exercício de 2020, de responsabilidade do Sr. ALTAMIRO SEGUNDA CÂMARA PEREIRA SANTANA, CPF Nº 522.579.409-20, nos termos do art. 16, II, da Lei Orgânica do TCEPR, devido a inobservância das prescrições da Nota SIM-AM nº 003/2020 emitida por este Tribunal;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2022,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Alto Paraná não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-6-00345645",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 115/2020 da Secretaria Primeira Câmara — contas do Prefeito de Alto Paraná, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "115",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 115/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "170530/2019",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2020-05-18",
+   "data_publicacao": "2020-06-01",
+   "publicacao_literal": "DETC nº 2309",
+   "entidade_literal": "MUNICÍPIO DE ALTO PARANÁ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de ALTO PARANÁ, Sr. Altamiro Pereira Santana, CPF n.º 522.579.409-20, relativas ao exercício financeiro de 2018;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Alto Paraná",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 115/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/6/00345645.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "c52c4fa1f0f0e57039be9a11b7228186772917c08fe98223ea589dd33a03b16f",
+    "paginas_lidas": 1,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de ALTO PARANÁ, Sr. Altamiro Pereira Santana, CPF n.º 522.579.409-20, relativas ao exercício financeiro de 2018; II. Determinar, após o trânsito em julgado da decisão, as seguintes medidas: a) a expedição de ofício à Câmara Municipal, comunicando a decisão, com a respectiva disponibilização do processo eletrônico; b) o encerramento dos autos, nos termos do art. 398 do Regimento Interno do TCE-PR.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de ALTO PARANÁ, Sr. Altamiro Pereira Santana, CPF n.º 522.579.409-20, relativas ao exercício financeiro de 2018;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício financeiro de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Alto Paraná não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-7-00347490",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 214/2020 da Secretaria Segunda Câmara — contas do Prefeito de Alto Paraná, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "214",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 214/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "270425/2018",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2020-06-29",
+   "data_publicacao": "2020-07-09",
+   "publicacao_literal": "DETC nº 2335",
+   "entidade_literal": "MUNICÍPIO DE ALTO PARANÁ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, recomendando a regularidade com ressalvas das contas do Município de Alto Paraná, referentes ao exercício de 2017, sob responsabilidade do Prefeito Municipal, senhor Altamiro Pereira Santana, nos termos dos artigos 1.º, inciso I,13 e 16, inciso II,14 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise:",
+    "conclusao_literal": "emitir Parecer Prévio, recomendando a regularidade com ressalvas das contas do Município de Alto Paraná, referentes ao exercício de 2017, sob responsabilidade do Prefeito Municipal, senhor Altamiro Pereira Santana, nos termos dos artigos 1.º, inciso I,13 e 16, inciso II,14 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Alto Paraná",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 214/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/7/00347490.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "412201a3b88e8db4cfab8ce0a77a65a7562cdcfc83486264562d18125367fb9a",
+    "paginas_lidas": 2,
+    "total_paginas": 10,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I- emitir Parecer Prévio, recomendando a regularidade com ressalvas das contas do Município de Alto Paraná, referentes ao exercício de 2017, sob responsabilidade do Prefeito Municipal, senhor Altamiro Pereira Santana, nos termos dos artigos 1.º, inciso I,13 e 16, inciso II,14 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise: (i) déficit das fontes livres; (ii) ausência de Pagamento de aportes para cobertura do déficit atuarial na forma apurada no Laudo Atuarial; (iii) ausência de comprovação da Publicação do Relatório Resumido da Execução Orçamentária - RREO do Sex […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, recomendando a regularidade com ressalvas das contas do Município de Alto Paraná, referentes ao exercício de 2017, sob responsabilidade do Prefeito Municipal, senhor Altamiro Pereira Santana, nos termos dos artigos 1.º, inciso I,13 e 16, inciso II,14 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise:",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Alto Paraná não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-3-00335385",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 49/2019 da Secretaria Segunda Câmara — contas do Prefeito de Alto Paraná, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "49",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 49/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "295645/2017",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2019-03-12",
+   "data_publicacao": "2019-03-26",
+   "publicacao_literal": "DETC nº 2025",
+   "entidade_literal": "MUNICÍPIO DE ALTO PARANÁ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "PARECER PRÉVIO recomendando o julgamento pela regularidade com ressalva",
+    "conclusao_literal": "Emitir, na forma do artigo 23 da Lei Complementar n° 113/2005, PARECER PRÉVIO recomendando o julgamento pela regularidade com ressalva das contas do Município de Alto Paraná, referentes ao exercício de 2016, em razão do saneamento de impropriedades no curso da instrução processual e da entrega com atraso dos dados do SIM-AM, com fundamento nos artigos 1º, inciso I20 e 16, 19 Art.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Alto Paraná",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 49/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/3/00335385.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "7c8992084a43a2f80b76a0ead757c36d88f05cbf0425b0dbc1e9de20f00e6b38",
+    "paginas_lidas": 2,
+    "total_paginas": 8,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I. Emitir, na forma do artigo 23 da Lei Complementar n° 113/2005, PARECER PRÉVIO recomendando o julgamento pela regularidade com ressalva das contas do Município de Alto Paraná, referentes ao exercício de 2016, em razão do saneamento de impropriedades no curso da instrução processual e da entrega com atraso dos dados do SIM-AM, com fundamento nos artigos 1º, inciso I20 e 16, 19 Art. 87. As multas administrativas serão devidas independentemente de apuração de dano ao erário e de sanções institucionais, em razão da presunção de lesividade à ordem legal, aplicadas em razão dos seguintes fatos: III - No valor de 30 (trinta) vezes a […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir, na forma do artigo 23 da Lei Complementar n° 113/2005, PARECER PRÉVIO recomendando o julgamento pela regularidade com ressalva das contas do Município de Alto Paraná, referentes ao exercício de 2016, em razão do saneamento de impropriedades no curso da instrução processual e da entrega com atraso dos dados do SIM-AM, com fundamento nos artigos 1º, inciso I20 e 16, 19 Art.",
+    "conclusao": "PARECER PRÉVIO recomendando o julgamento pela regularidade com ressalva",
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Alto Paraná não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2021-185-primeiracmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 185/2021 da Secretaria Primeira Câmara — contas do Prefeito de Alto Paraná",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "185",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 185/2021 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "184468/2020",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2021-05-31",
+   "data_publicacao": "2021-06-16",
+   "publicacao_literal": "DETC nº 2560",
+   "entidade_literal": "MUNICÍPIO DE ALTO PARANÁ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Alto Paraná",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Alto Paraná não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

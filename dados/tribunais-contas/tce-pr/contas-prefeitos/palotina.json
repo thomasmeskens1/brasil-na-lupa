@@ -1,0 +1,657 @@
+{
+ "atualizado_em": "2026-11-05T14:29:01.849Z",
+ "municipio": {
+  "id": "palotina",
+  "nome": "Palotina",
+  "uf": "PR",
+  "codigo_ibge": "4117909"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2016,
+  "fim": 2023
+ },
+ "contagens": {
+  "exercicios": 7,
+  "pareceres": 8,
+  "com_parecer_em_fonte_aberta": 7,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 7,
+  "pdf_lido": 7,
+  "sem_exercicio_na_fonte": 1
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "3b7fb76a75413d34e4541e63dccfa3cab923f7d498fc63703a156f2f00d63a4c",
+   "atualizado_na_fonte": "26/06/2025 14:58:07"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2024-12-00391867",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 465/2024 — contas do Prefeito de Palotina, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "465",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 465/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "187240/2024",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2024-12-09",
+   "data_publicacao": "2024-12-19",
+   "publicacao_literal": "DETC nº 3360",
+   "entidade_literal": "MUNICÍPIO DE PALOTINA",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor LUIZ ERNESTO DE GIACOMETTI, na qualidade de prefeito do MUNICÍPIO DE PALOTINA, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Palotina",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 465/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/12/00391867.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "b602b059f2bf0a85b63764c2662183163c9a36ba0c4ebcc839c6d1f37211e066",
+    "paginas_lidas": 1,
+    "total_paginas": 47,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade: Considerando os fatos expostos no item de fundamentação, VOTO, com respaldo no artigo 1º, I, da Lei Complementar Estadual n.º 113/2005 e em observância ao artigo 217-A, caput, do Regimento Interno, no sentido de: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor LUIZ ERNESTO DE GIACOMETTI, na qualidade de prefeito do MUNICÍPIO DE PALOTINA, relativas ao exercício de 2023. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legisla […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor LUIZ ERNESTO DE GIACOMETTI, na qualidade de prefeito do MUNICÍPIO DE PALOTINA, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Palotina não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-3-00382730",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 68/2024 — contas do Prefeito de Palotina, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "68",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 68/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "177500/2023",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2024-02-19",
+   "data_publicacao": "2024-03-08",
+   "publicacao_literal": "DETC nº 3166",
+   "entidade_literal": "MUNICÍPIO DE PALOTINA",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor LUIZ ERNESTO DE GIACOMETTI, na qualidade de prefeito do MUNICÍPIO DE PALOTINA, relativas ao exercício de 2022.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Palotina",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 68/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/3/00382730.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "89cd87bbbefb46dc87e0b339f61cc72bac3a11a1365ade933c9901d859340588",
+    "paginas_lidas": 1,
+    "total_paginas": 34,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor LUIZ ERNESTO DE GIACOMETTI, na qualidade de prefeito do MUNICÍPIO DE PALOTINA, relativas ao exercício de 2022. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, §6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor LUIZ ERNESTO DE GIACOMETTI, na qualidade de prefeito do MUNICÍPIO DE PALOTINA, relativas ao exercício de 2022.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Palotina não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-3-00372738",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 55/2023 da Secretaria Primeira Câmara — contas do Prefeito de Palotina, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "55",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 55/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "176853/2022",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2023-03-06",
+   "data_publicacao": "2023-03-21",
+   "publicacao_literal": "DETC nº 2944",
+   "entidade_literal": "MUNICÍPIO DE PALOTINA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Emitir, acompanhando a Coordenadoria de Gestão Municipal e o Ministério Público de Contas, na forma do artigo 23, da Lei Complementar n° 113/2005, PARECER PRÉVIO deste Tribunal, recomendando o julgamento pela REGULARIDADE das contas do PREFEITO MUNICIPAL DE PALOTINA, relativas ao exercício de 2021, de responsabilidade do Sr. LUIZ ERNESTO DE GIACOMETTI (gestão 2021);",
+    "conclusao_literal": "Emitir, acompanhando a Coordenadoria de Gestão Municipal e o Ministério Público de Contas, na forma do artigo 23, da Lei Complementar n° 113/2005, PARECER PRÉVIO deste Tribunal, recomendando o julgamento pela REGULARIDADE das contas do PREFEITO MUNICIPAL DE PALOTINA, relativas ao exercício de 2021, de responsabilidade do Sr. LUIZ ERNESTO DE GIACOMETTI (gestão 2021);",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Palotina",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 55/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/3/00372738.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "c7efca069970fa7a09d9fc4fde3416605e8381827249d68a432457ed2141ece0",
+    "paginas_lidas": 2,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade, em: I - Emitir, acompanhando a Coordenadoria de Gestão Municipal e o Ministério Público de Contas, na forma do artigo 23, da Lei Complementar n° 113/2005, PARECER PRÉVIO deste Tribunal, recomendando o julgamento pela REGULARIDADE das contas do PREFEITO MUNICIPAL DE PALOTINA, relativas ao exercício de 2021, de responsabilidade do Sr. LUIZ ERNESTO DE GIACOMETTI (gestão 2021); II – determinar, após o trânsito em julgado, a remessa dos autos ao Gabinete da Presidência, para as providências contidas no §6º do art. 217-A do Regimento Interno; III – encaminhar à Diretoria de Protocolo, para encerramento e arquivamento, nos […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir, acompanhando a Coordenadoria de Gestão Municipal e o Ministério Público de Contas, na forma do artigo 23, da Lei Complementar n° 113/2005, PARECER PRÉVIO deste Tribunal, recomendando o julgamento pela REGULARIDADE das contas do PREFEITO MUNICIPAL DE PALOTINA, relativas ao exercício de 2021, de responsabilidade do Sr. LUIZ ERNESTO DE GIACOMETTI (gestão 2021);",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Palotina não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2022-3-00364935",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 39/2022 da Secretaria Segunda Câmara — contas do Prefeito de Palotina, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "39",
+    "ano": "2022",
+    "titulo_oficial": "Acórdão de Parecer Prévio 39/2022 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "159211/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "NESTOR BAPTISTA",
+   "data_julgamento": "2022-02-21",
+   "data_publicacao": "2022-03-08",
+   "publicacao_literal": "DETC nº 2723",
+   "entidade_literal": "MUNICÍPIO DE PALOTINA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio deste Tribunal recomendando o julgamento pela REGULARIDADE",
+    "conclusao_literal": "Emitir, nos termos do Art. 16, I da Lei Orgânica do TCE, Parecer Prévio deste Tribunal recomendando o julgamento pela REGULARIDADE das contas do Município de Palotina, exercício de 2020, de responsabilidade do Sr. Jucenir Leandro Stentzler, CPF nº. 778.829.031-91, Prefeito Municipal no período de 01/01/2013 a 31/12/2020;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Palotina",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 39/2022 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2022/3/00364935.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "7eb1283539bc9ae9bb524386a907ca5914994ee820bf87719ef42bf0fac417a6",
+    "paginas_lidas": 1,
+    "total_paginas": 3,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro NESTOR BAPTISTA, por unanimidade, em: I – Emitir, nos termos do Art. 16, I da Lei Orgânica do TCE, Parecer Prévio deste Tribunal recomendando o julgamento pela REGULARIDADE das contas do Município de Palotina, exercício de 2020, de responsabilidade do Sr. Jucenir Leandro Stentzler, CPF nº. 778.829.031-91, Prefeito Municipal no período de 01/01/2013 a 31/12/2020; II – determinar, após o trânsito em julgado, a remessa do feito ao Gabinete da Presidência, para as providências contidas no §6º, do art. 217-A, do Regimento Interno; III – encaminhar à Diretoria de Protocolo, para encerramento e arquivamento, nos termos do art. 398 §1º e art. 168, inciso VII, do mesmo diploma.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir, nos termos do Art. 16, I da Lei Orgânica do TCE, Parecer Prévio deste Tribunal recomendando o julgamento pela REGULARIDADE das contas do Município de Palotina, exercício de 2020, de responsabilidade do Sr. Jucenir Leandro Stentzler, CPF nº. 778.829.031-91, Prefeito Municipal no período de 01/01/2013 a 31/12/2020;",
+    "conclusao": "Parecer Prévio deste Tribunal recomendando o julgamento pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2022,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Palotina não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-9-00349939",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 401/2020 da Secretaria Primeira Câmara — contas do Prefeito de Palotina, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "401",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 401/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "204213/2020",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2020-08-24",
+   "data_publicacao": "2020-09-04",
+   "publicacao_literal": "DETC nº 2376",
+   "entidade_literal": "MUNICÍPIO DE PALOTINA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de PALOTINA, Sr. JUCENIR LEANDRO STENTZLER (CPF 778.829.031-91), relativas ao exercício financeiro de 2019;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Palotina",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 401/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/9/00349939.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "fa72b9b758d2074853e408145a38fceb8305ea02685a2b4b6573f1df4ea66b93",
+    "paginas_lidas": 2,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de PALOTINA, Sr. JUCENIR LEANDRO STENTZLER (CPF 778.829.031-91), relativas ao exercício financeiro de 2019; II. Determinar, após o trânsito em julgado da decisão, as seguintes medidas: a) o encaminhamento dos autos ao Gabinete da Presidência para expedição de ofício à Câmara Municipal, comunicando a decisão, com a respectiva disponibilização do processo eletrônico, conforme §6º do art. 217-A, do Regimento Interno; b) Em seguida, à Diretoria do Protocolo para o encerramento dos autos, nos termos do art. 398 do Regime […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de PALOTINA, Sr. JUCENIR LEANDRO STENTZLER (CPF 778.829.031-91), relativas ao exercício financeiro de 2019;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício financeiro de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Palotina não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-10-00340463",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 347/2019 da Secretaria Segunda Câmara — contas do Prefeito de Palotina, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "347",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 347/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "187009/2019",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2019-09-24",
+   "data_publicacao": "2019-10-04",
+   "publicacao_literal": "DETC nº 2158",
+   "entidade_literal": "MUNICÍPIO DE PALOTINA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, com fundamento no artigo 1.º, inciso I5 e artigo 16, inciso I6, da Lei Complementar Estadual n.º 113/2005, recomendando a regularidade das contas do Município de Palotina, referentes ao exercício de 2018;",
+    "conclusao_literal": "emitir Parecer Prévio, com fundamento no artigo 1.º, inciso I5 e artigo 16, inciso I6, da Lei Complementar Estadual n.º 113/2005, recomendando a regularidade das contas do Município de Palotina, referentes ao exercício de 2018;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Palotina",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 347/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/10/00340463.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "7144060ffcb6cbb2ccfbd41e26974d6be6d30b7e25ec14c2f9cf5ae39f72e237",
+    "paginas_lidas": 1,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I- emitir Parecer Prévio, com fundamento no artigo 1.º, inciso I5 e artigo 16, inciso I6, da Lei Complementar Estadual n.º 113/2005, recomendando a regularidade das contas do Município de Palotina, referentes ao exercício de 2018; II- encaminhar os autos, após o trânsito em julgado, ao Gabinete da Presidência para comunicação da deliberação ao Poder Legislativo Municipal7; III- autorizar o encerramento do feito, em conformidade com o artigo 398, § 1.º, do Regimento Interno8, e seu arquivamento na Diretoria de Protocolo.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, com fundamento no artigo 1.º, inciso I5 e artigo 16, inciso I6, da Lei Complementar Estadual n.º 113/2005, recomendando a regularidade das contas do Município de Palotina, referentes ao exercício de 2018;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Palotina não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-2-00343158",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 16/2020 da Secretaria Segunda Câmara — contas do Prefeito de Palotina, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "16",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 16/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "252253/2017",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2020-01-28",
+   "data_publicacao": "2020-02-04",
+   "publicacao_literal": "DETC nº 2233",
+   "entidade_literal": "MUNICÍPIO DE PALOTINA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.° 113/2005, recomendando a regularidade das contas do Prefeito do Município de Palotina, exercício de 2016, senhor Jucenir Leandro Stentzler, CPF 778.829.031-91 com ressalva em decorrência da entrega dos dados do SIM- AM com atraso e, também, das obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa, conforme critérios fixados no Prejulgado 15;",
+    "conclusao_literal": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.° 113/2005, recomendando a regularidade das contas do Prefeito do Município de Palotina, exercício de 2016, senhor Jucenir Leandro Stentzler, CPF 778.829.031-91 com ressalva em decorrência da entrega dos dados do SIM- AM com atraso e, também, das obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa, conforme critérios fixados no Prejulgado 15;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Palotina",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 16/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/2/00343158.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "23b310d158b93d6b5730a7c56a4bb7672b9200258fab8255a539461c57259d36",
+    "paginas_lidas": 1,
+    "total_paginas": 8,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: I- emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.° 113/2005, recomendando a regularidade das contas do Prefeito do Município de Palotina, exercício de 2016, senhor Jucenir Leandro Stentzler, CPF 778.829.031-91 com ressalva em decorrência da entrega dos dados do SIM- AM com atraso e, também, das obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa, conforme critérios fixados no Prejulgado 15; II- remeter os autos, após o trânsito em julgado, à Coordenadoria de Monitoramento e Exec […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.° 113/2005, recomendando a regularidade das contas do Prefeito do Município de Palotina, exercício de 2016, senhor Jucenir Leandro Stentzler, CPF 778.829.031-91 com ressalva em decorrência da entrega dos dados do SIM- AM com atraso e, também, das obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa, conforme critérios fixados no Prejulgado 15;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Palotina não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2021-221-segundacmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 221/2021 da Secretaria Segunda Câmara — contas do Prefeito de Palotina",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "221",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 221/2021 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "343659/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2021-07-12",
+   "data_publicacao": "2021-08-10",
+   "publicacao_literal": "DETC nº 2599",
+   "entidade_literal": "MUNICÍPIO DE PALOTINA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Palotina",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Palotina não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

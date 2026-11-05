@@ -1,0 +1,804 @@
+{
+ "atualizado_em": "2026-11-05T14:30:28.082Z",
+ "municipio": {
+  "id": "abatia",
+  "nome": "Abatiá",
+  "uf": "PR",
+  "codigo_ibge": "4100103"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2015,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 9,
+  "pareceres": 10,
+  "com_parecer_em_fonte_aberta": 9,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 9,
+  "pdf_lido": 9,
+  "sem_exercicio_na_fonte": 1
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2025-11-000200085",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 366/2025 — contas do Prefeito de Abatiá, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "366",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 366/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "165674/2025",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2025-11-10",
+   "data_publicacao": "2025-11-24",
+   "publicacao_literal": "DETC nº 3573",
+   "entidade_literal": "MUNICÍPIO DE ABATIÁ",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVAS",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do senhor NELSON GARCIA JUNIOR, na qualidade de prefeito do MUNICÍPIO DE ABATIÁ, relativas ao exercício de 2024, sendo as ressalvas referentes ao baixo desempenho evidenciado na avaliação da atuação governamental nas áreas de transparência e relacionamento com o cidadão (2,58), educação (4,91), saúde (5,53), assistência social (3,57) e administração financeira (2,69), nos termos da fundamentação.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Abatiá",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 366/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/11/000200085.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "b760140b393d3e197f8158ce351b96273530899d762530be3da663fa9ced95a8",
+    "paginas_lidas": 1,
+    "total_paginas": 46,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do senhor NELSON GARCIA JUNIOR, na qualidade de prefeito do MUNICÍPIO DE ABATIÁ, relativas ao exercício de 2024, sendo as ressalvas referentes ao baixo desempenho evidenciado na avaliação da atuação governamental nas áreas de transparência e relacionamento com o cidadão (2,58), educação (4,91), saúde (5,53), assistência social (3,57) e administração financeira (2,69), nos termos da fundamentação. Após o trânsito em julgado da deliberação, encaminhem-se os autos ao Gabinete da Presidência para as providências contidas no § 6º do artigo 217-A do Regimento Interno, à Coo […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do senhor NELSON GARCIA JUNIOR, na qualidade de prefeito do MUNICÍPIO DE ABATIÁ, relativas ao exercício de 2024, sendo as ressalvas referentes ao baixo desempenho evidenciado na avaliação da atuação governamental nas áreas de transparência e relacionamento com o cidadão (2,58), educação (4,91), saúde (5,53), assistência social (3,57) e administração financeira (2,69), nos termos da fundamentação.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVAS",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Abatiá não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2025-2-000196533",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 33/2025 — contas do Prefeito de Abatiá, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "33",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 33/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "207381/2024",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2025-02-03",
+   "data_publicacao": "2025-02-20",
+   "publicacao_literal": "DETC nº 3390",
+   "entidade_literal": "MUNICÍPIO DE ABATIÁ",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor NELSON GARCIA JUNIOR, na qualidade de prefeito do MUNICÍPIO DE ABATIÁ, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Abatiá",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 33/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/2/000196533.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "9e166ae2939ecef9626d2707c2047eea472a3f098af549600b01b784cd594ff5",
+    "paginas_lidas": 1,
+    "total_paginas": 43,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade: Considerando os fatos expostos no item de fundamentação, VOTO, com respaldo no artigo 1º, I, da Lei Complementar Estadual n.º 113/2005 e em observância ao artigo 217-A, caput, do Regimento Interno, no sentido de: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor NELSON GARCIA JUNIOR, na qualidade de prefeito do MUNICÍPIO DE ABATIÁ, relativas ao exercício de 2023. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municip […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor NELSON GARCIA JUNIOR, na qualidade de prefeito do MUNICÍPIO DE ABATIÁ, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Abatiá não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2025-1-000196887",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 472/2024 — contas do Prefeito de Abatiá, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "472",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 472/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "177209/2023",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2024-12-09",
+   "data_publicacao": "2025-01-17",
+   "publicacao_literal": "DETC nº 3366",
+   "entidade_literal": "MUNICÍPIO DE ABATIÁ",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Irregularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela IRREGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela IRREGULARIDADE das contas do senhor NELSON GARCIA JUNIOR, na qualidade de prefeito do MUNICÍPIO DE ABATIÁ, relativas ao exercício de 2022, em razão da aplicação inferior a 25% da receita proveniente de impostos e transferências em manutenção e desenvolvimento do ensino, conforme exigido pela norma constitucional, e pela RESSALVA das contas em virtude do não cumprimento da aplicação mínima dos recursos transferidos a título de complementação do VAAT na educação infantil.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Abatiá",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 472/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/1/000196887.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "eba57d46171d2543a546b92c6b94c1f70fe01b6c48328718ef7c294441875dc2",
+    "paginas_lidas": 1,
+    "total_paginas": 33,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade: Considerando os fatos expostos no item de fundamentação, VOTO, com respaldo no artigo 1º, I, da Lei Complementar Estadual n.º 113/2005 e em observância ao artigo 217- A, caput, do Regimento Interno, no sentido de: a. Emitir Parecer Prévio pela IRREGULARIDADE das contas do senhor NELSON GARCIA JUNIOR, na qualidade de prefeito do MUNICÍPIO DE ABATIÁ, relativas ao exercício de 2022, em razão da aplicação inferior a 25% da receita proveniente de impostos e transferências em manutenção e desenvolvimento do ensino, conforme exigido pela norma constitucional, e pela RESSALVA das contas em virtude do não cumprimento da aplicação […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela IRREGULARIDADE das contas do senhor NELSON GARCIA JUNIOR, na qualidade de prefeito do MUNICÍPIO DE ABATIÁ, relativas ao exercício de 2022, em razão da aplicação inferior a 25% da receita proveniente de impostos e transferências em manutenção e desenvolvimento do ensino, conforme exigido pela norma constitucional, e pela RESSALVA das contas em virtude do não cumprimento da aplicação mínima dos recursos transferidos a título de complementação do VAAT na educação infantil.",
+    "conclusao": "Parecer Prévio pela IRREGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Abatiá não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-10-00379912",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 468/2023 da Secretaria Primeira Câmara — contas do Prefeito de Abatiá, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "468",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 468/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "210091/2022",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2023-10-02",
+   "data_publicacao": "2023-10-18",
+   "publicacao_literal": "DETC nº 3085",
+   "entidade_literal": "MUNICÍPIO DE ABATIÁ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio deste Tribunal recomendando o julgamento pela regularidade",
+    "conclusao_literal": "Emitir, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, parecer prévio deste Tribunal recomendando o julgamento pela regularidade das contas do Sr. NELSON GARCIA JUNIOR, prefeito do Município de Abatiá, relativas ao exercício financeiro de 2021, ressalvando-se, excepcionalmente, o não atingimento do índice mínimo de 70% dos recursos do FUNDEB na remuneração dos profissionais da educação básica e a não aplicação de no mínimo 90% dos recursos do FUNDEB no exercício da arrecadação;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Abatiá",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 468/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/10/00379912.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "366cc37074d2103c01e18788a5e5218945c100a67b2c658f3f742996f7d0b8c2",
+    "paginas_lidas": 2,
+    "total_paginas": 8,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade, em: I – Emitir, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, parecer prévio deste Tribunal recomendando o julgamento pela regularidade das contas do Sr. NELSON GARCIA JUNIOR, prefeito do Município de Abatiá, relativas ao exercício financeiro de 2021, ressalvando-se, excepcionalmente, o não atingimento do índice mínimo de 70% dos recursos do FUNDEB na remuneração dos profissionais da educação básica e a não aplicação de no mínimo 90% dos recursos do FUNDEB no exercício da arrecadação; II – determinar, após o trânsito em julgado, a remessa dos autos à Coordenadoria de Moni […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, parecer prévio deste Tribunal recomendando o julgamento pela regularidade das contas do Sr. NELSON GARCIA JUNIOR, prefeito do Município de Abatiá, relativas ao exercício financeiro de 2021, ressalvando-se, excepcionalmente, o não atingimento do índice mínimo de 70% dos recursos do FUNDEB na remuneração dos profissionais da educação básica e a não aplicação de no mínimo 90% dos recursos do FUNDEB no exercício da arrecadação;",
+    "conclusao": "parecer prévio deste Tribunal recomendando o julgamento pela regularidade",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Abatiá não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-8-00349993",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 352/2020 da Secretaria Primeira Câmara — contas do Prefeito de Abatiá, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "352",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 352/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "264747/2020",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2020-08-10",
+   "data_publicacao": "2020-08-21",
+   "publicacao_literal": "DETC nº 2366",
+   "entidade_literal": "MUNICÍPIO DE ABATIÁ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio recomendado a regularidade",
+    "conclusao_literal": "emitir parecer prévio recomendado a regularidade das contas do Sr. Nelson Garcia Junior, como Prefeito de Abatiá, no exercício de 2019, com base no disposto no art. 16, I, da LC/PR 113/05;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Abatiá",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 352/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/8/00349993.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "54542cac6038314bcd2459ad49a51f5da4595531b6d2508b51a0dd5079167a55",
+    "paginas_lidas": 1,
+    "total_paginas": 2,
+    "deliberacao": "ACORDAM Os membros da PRIMEIRA CÂMARA do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: I. emitir parecer prévio recomendado a regularidade das contas do Sr. Nelson Garcia Junior, como Prefeito de Abatiá, no exercício de 2019, com base no disposto no art. 16, I, da LC/PR 113/05; II. determinar o encerramento do Processo, após o trânsito em julgado da decisão.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir parecer prévio recomendado a regularidade das contas do Sr. Nelson Garcia Junior, como Prefeito de Abatiá, no exercício de 2019, com base no disposto no art. 16, I, da LC/PR 113/05;",
+    "conclusao": "parecer prévio recomendado a regularidade",
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Abatiá não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-12-00342430",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 621/2019 da Secretaria Segunda Câmara — contas do Prefeito de Abatiá, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "621",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 621/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "197268/2019",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2019-12-10",
+   "data_publicacao": "2019-12-18",
+   "publicacao_literal": "DETC nº 2209",
+   "entidade_literal": "MUNICÍPIO DE ABATIÁ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, Parecer Prévio recomendando a regularidade das contas do Prefeito Municipal de Abatiá, exercício de 2018, Nelson Garcia Júnior, CPF n.º 367.148.529-91, Gestor da Entidade no exercício;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Abatiá",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 621/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/12/00342430.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "7d72e7817ca45d0331bdb59504f9c955f40a6ef080d5394dfccd589b002b6e88",
+    "paginas_lidas": 2,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: I. emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, Parecer Prévio recomendando a regularidade das contas do Prefeito Municipal de Abatiá, exercício de 2018, Nelson Garcia Júnior, CPF n.º 367.148.529-91, Gestor da Entidade no exercício; II. encaminhar os autos ao Gabinete da Presidência para comunicação da deliberação ao Poder Legislativo Municipal após o trânsito em julgado. Autorizar, na sequência, o encerramento do feito, em conformidade com o artigo 398, § 1.º, do Regimento Interno e seu arquivamento na Diretoria de Protocolo.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, Parecer Prévio recomendando a regularidade das contas do Prefeito Municipal de Abatiá, exercício de 2018, Nelson Garcia Júnior, CPF n.º 367.148.529-91, Gestor da Entidade no exercício;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Abatiá não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-7-00338152",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 148/2019 da Secretaria Primeira Câmara — contas do Prefeito de Abatiá, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "148",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 148/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "303234/2018",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2019-07-08",
+   "data_publicacao": "2019-07-16",
+   "publicacao_literal": "DETC nº 2100",
+   "entidade_literal": "MUNICÍPIO DE ABATIÁ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio pela regularidade com ressalva",
+    "conclusao_literal": "emitir Parecer Prévio pela regularidade com ressalva das contas do Município de Abatiá, relativa ao exercício financeiro de 2017, de responsabilidade do Sr. Nelson Garcia Junior, com base no disposto no art. 16, II, da LC/PR 113/05, tendo em vista os atrasos nas publicações dos relatórios resumidos das execuções orçamentárias – RREO do sexto bimestre do exercício de 2016 e do primeiro bimestre do exercício de 2017, além do atraso na publicação do relatório de gestão fiscal - RGF do terceiro quadrimestre ou segundo semestre do exercício de 2016, porém, sem indícios de dano ou prejuízos ao erário;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Abatiá",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 148/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/7/00338152.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "13c4e83ea71ca1c5e96234523c5da926346fc034cd5dcb16984c3ddf58f8a804",
+    "paginas_lidas": 2,
+    "total_paginas": 5,
+    "deliberacao": "ACORDAM Os membros da SEGUNDA CÂMARA do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: I. emitir Parecer Prévio pela regularidade com ressalva das contas do Município de Abatiá, relativa ao exercício financeiro de 2017, de responsabilidade do Sr. Nelson Garcia Junior, com base no disposto no art. 16, II, da LC/PR 113/05, tendo em vista os atrasos nas publicações dos relatórios resumidos das execuções orçamentárias – RREO do sexto bimestre do exercício de 2016 e do primeiro bimestre do exercício de 2017, além do atraso na publicação do relatório de gestão fiscal - RGF do terceiro quadrimestre ou segundo semestre do exercício de 2016, porém, sem indícios de dano ou prejuízos ao erário; II. aplicar multa ad […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio pela regularidade com ressalva das contas do Município de Abatiá, relativa ao exercício financeiro de 2017, de responsabilidade do Sr. Nelson Garcia Junior, com base no disposto no art. 16, II, da LC/PR 113/05, tendo em vista os atrasos nas publicações dos relatórios resumidos das execuções orçamentárias – RREO do sexto bimestre do exercício de 2016 e do primeiro bimestre do exercício de 2017, além do atraso na publicação do relatório de gestão fiscal - RGF do terceiro quadrimestre ou segundo semestre do exercício de 2016, porém, sem indícios de dano ou prejuízos ao erário;",
+    "conclusao": "Parecer Prévio pela regularidade com ressalva",
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício financeiro de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Abatiá não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-2-00334268",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 2/2019 da Secretaria Primeira Câmara — contas do Prefeito de Abatiá, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "2",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 2/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "309808/2017",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2019-01-28",
+   "data_publicacao": "2019-02-04",
+   "publicacao_literal": "DETC nº 1992",
+   "entidade_literal": "MUNICÍPIO DE ABATIÁ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio recomendando a irregularidade",
+    "conclusao_literal": "expedir parecer prévio recomendando a irregularidade das contas da Sra. Maria de Lourdes Ferraz Yamagami como Prefeita de Abatiá no exercício de 2016, com base no disposto no art. 16, III, “b”, da LC/PR 113/05, em razão de “divergências de dados entre o Balanço Patrimonial do SIM-AM e o da contabilidade” e “não comprovação de atendimento dos comandos da LC 101/00 em relação à extrapolação das despesas com pessoal”;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Abatiá",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 2/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/2/00334268.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "6b04c231f7e86e172c89eaed65c11088e34aeff632859f6298ec13ca3a1215c2",
+    "paginas_lidas": 1,
+    "total_paginas": 5,
+    "deliberacao": "ACORDAM Os membros da PRIMEIRA CÂMARA do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: i. expedir parecer prévio recomendando a irregularidade das contas da Sra. Maria de Lourdes Ferraz Yamagami como Prefeita de Abatiá no exercício de 2016, com base no disposto no art. 16, III, “b”, da LC/PR 113/05, em razão de “divergências de dados entre o Balanço Patrimonial do SIM-AM e o da contabilidade” e “não comprovação de atendimento dos comandos da LC 101/00 em relação à extrapolação das despesas com pessoal”; II. apor ressalva às contas tocante a “atraso na publicação de Relatório Resumido de Execução Orçamentária”; III. aplicar a multa prevista no art. 87, III, “b”, da LC/PR 113/05, à Sra. Maria de Lourdes F […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "expedir parecer prévio recomendando a irregularidade das contas da Sra. Maria de Lourdes Ferraz Yamagami como Prefeita de Abatiá no exercício de 2016, com base no disposto no art. 16, III, “b”, da LC/PR 113/05, em razão de “divergências de dados entre o Balanço Patrimonial do SIM-AM e o da contabilidade” e “não comprovação de atendimento dos comandos da LC 101/00 em relação à extrapolação das despesas com pessoal”;",
+    "conclusao": "parecer prévio recomendando a irregularidade",
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Abatiá não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-9-00339782",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 276/2019 da Secretaria Primeira Câmara — contas do Prefeito de Abatiá, exercício 2015",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "276",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 276/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "260775/2016",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2019-09-09",
+   "data_publicacao": "2019-09-13",
+   "publicacao_literal": "DETC nº 2143",
+   "entidade_literal": "MUNICÍPIO DE ABATIÁ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de ABATIÁ, Sra. Maria de Lourdes Ferraz Yamagami, relativas ao exercício financeiro de 2015, com ressalva em face do atraso no envio dos dados de encerramento do exercício do sistema SIM-AM;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Abatiá",
+    "exercicio": "2015",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 276/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/9/00339782.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "1e6df158eca6c445edfeaf66c1a5263170e4cf1f99b171f3113a8055a3aa19c4",
+    "paginas_lidas": 2,
+    "total_paginas": 8,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de ABATIÁ, Sra. Maria de Lourdes Ferraz Yamagami, relativas ao exercício financeiro de 2015, com ressalva em face do atraso no envio dos dados de encerramento do exercício do sistema SIM-AM; II. Aplicar a multa prevista no art. 87, III, “b”, da Lei Complementar Estadual n.° 113/05 à Sra. Maria de Lourdes Ferraz Yamagami, inscrita no CPF/MF sob n.° 990.665.649-20, em razão do encerramento do exercício do Sistema SIM- AM com atraso; III. Determinar, após o trânsito em julgado da decisão, as seguintes medidas: a) o enc […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de ABATIÁ, Sra. Maria de Lourdes Ferraz Yamagami, relativas ao exercício financeiro de 2015, com ressalva em face do atraso no envio dos dados de encerramento do exercício do sistema SIM-AM;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2015,
+     "trecho": "exercício financeiro de 2015"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Abatiá não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2021-302-segundacmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 302/2021 da Secretaria Segunda Câmara — contas do Prefeito de Abatiá",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "302",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 302/2021 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "182817/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "NESTOR BAPTISTA",
+   "data_julgamento": "2021-12-13",
+   "data_publicacao": "2022-01-13",
+   "publicacao_literal": "DETC nº 2688",
+   "entidade_literal": "MUNICÍPIO DE ABATIÁ",
+   "resumo_literal": "EMENTA: Relatório de Auditoria. Avaliação da qualidade da gestão municipal acerca dos serviços de saúde de média e alta complexidade no âmbito da contratação de serviços com hospitais privados. Adoção de providências destinadas à regularização dos achados. Encerramento.",
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Abatiá",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Abatiá não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

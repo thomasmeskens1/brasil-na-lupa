@@ -1,0 +1,732 @@
+{
+ "atualizado_em": "2026-11-05T14:12:08.111Z",
+ "municipio": {
+  "id": "santa-fe",
+  "nome": "Santa Fé",
+  "uf": "PR",
+  "codigo_ibge": "4123402"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2016,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 8,
+  "pareceres": 9,
+  "com_parecer_em_fonte_aberta": 8,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 8,
+  "pdf_lido": 8,
+  "sem_exercicio_na_fonte": 1
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f68ca8a9b64d6286d5f605b923705fb7602cf450e7408d143f7545e514359bfb",
+   "atualizado_na_fonte": "05/06/2026 00:00:40"
+  },
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2026-2-000200572",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 5/2026 — contas do Prefeito de Santa Fé, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "5",
+    "ano": "2026",
+    "titulo_oficial": "Parecer Prévio 5/2026"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "169955/2025",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2026-01-26",
+   "data_publicacao": "2026-02-06",
+   "publicacao_literal": "DETC nº 3611",
+   "entidade_literal": "MUNICÍPIO DE SANTA FÉ",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVAS",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do senhor FERNANDO BRAMBILLA, na qualidade de prefeito do MUNICÍPIO DE SANTA FÉ, relativas ao exercício de 2024, em razão do baixo desempenho nas áreas da Assistência Social (5,60)26, Administração Financeira (5,59)27 e Previdência Social (2,30)28.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Fé",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 5/2026 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2026/2/000200572.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "7b35c4f142eb19d4a13a7b845ba7fc594f40e1f065feef8d3900e6252d01778e",
+    "paginas_lidas": 1,
+    "total_paginas": 48,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: Considerando os fatos expostos no item de fundamentação, voto, com respaldo no artigo 1º, I, da Lei Complementar Estadual n.º 113/2005 e em observância ao artigo 217-A, caput, do Regimento Interno, no sentido de: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do senhor FERNANDO BRAMBILLA, na qualidade de prefeito do MUNICÍPIO DE SANTA FÉ, relativas ao exercício de 2024, em razão do baixo desempenho nas áreas da Assistência Social (5,60)26, Administração Financeira (5,59)27 e Previdência Social (2,30)28. Após o trânsito em julgado da deliberação, encaminhem-se os autos ao Gabinete da Presidência para as providên […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do senhor FERNANDO BRAMBILLA, na qualidade de prefeito do MUNICÍPIO DE SANTA FÉ, relativas ao exercício de 2024, em razão do baixo desempenho nas áreas da Assistência Social (5,60)26, Administração Financeira (5,59)27 e Previdência Social (2,30)28.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVAS",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2026,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Fé não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2025-6-000198196",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 190/2025 — contas do Prefeito de Santa Fé, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "190",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 190/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "191337/2024",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "AUGUSTINHO ZUCCHI",
+   "data_julgamento": "2025-06-09",
+   "data_publicacao": "2025-06-26",
+   "publicacao_literal": "DETC nº 3470",
+   "entidade_literal": "MUNICÍPIO DE SANTA FÉ",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade > Aprovação",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor FERNANDO BRAMBILLA, na qualidade de prefeito do MUNICÍPIO DE SANTA FÉ, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Fé",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 190/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/6/000198196.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "50e1661352b62f06cf44701fc63f1959076b5f8451a0e6a80a05d1da5bd739f8",
+    "paginas_lidas": 1,
+    "total_paginas": 45,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro AUGUSTINHO ZUCCHI, por maioria absoluta: Considerando os fatos expostos no item de fundamentação, VOTO, com respaldo no artigo 1º, I, da Lei Complementar Estadual n.º 113/2005 e em observância ao artigo 217-A, caput, do Regimento Interno, no sentido de: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor FERNANDO BRAMBILLA, na qualidade de prefeito do MUNICÍPIO DE SANTA FÉ, relativas ao exercício de 2023. b. RESSALVAR as contas em virtude de: i. baixo desempenho evidenciado na avaliação da atuação governamental na área da Previdência Social. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para a […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor FERNANDO BRAMBILLA, na qualidade de prefeito do MUNICÍPIO DE SANTA FÉ, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Fé não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-5-00384006",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 194/2024 — contas do Prefeito de Santa Fé, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "194",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 194/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "215143/2023",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2024-04-15",
+   "data_publicacao": "2024-05-02",
+   "publicacao_literal": "DETC nº 3200",
+   "entidade_literal": "MUNICÍPIO DE SANTA FÉ",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor FERNANDO BRAMBILLA, na qualidade de prefeito do MUNICÍPIO DE SANTA FÉ, relativas ao exercício de 2022, sendo a ressalva devida ao resultado da avaliação da atuação governamental nas áreas de Assistência Social (4,49), Administração Financeira (4,06), Transparência e Relacionamento com o Cidadão (5,5) e Previdência Social (2,82);",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Fé",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 194/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/5/00384006.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "a5a6f4316d56b86c024cb73eeca100c40f53c8b4966080bd087845d3291bcbfd",
+    "paginas_lidas": 1,
+    "total_paginas": 35,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor FERNANDO BRAMBILLA, na qualidade de prefeito do MUNICÍPIO DE SANTA FÉ, relativas ao exercício de 2022, sendo a ressalva devida ao resultado da avaliação da atuação governamental nas áreas de Assistência Social (4,49), Administração Financeira (4,06), Transparência e Relacionamento com o Cidadão (5,5) e Previdência Social (2,82); b. Encaminhar os autos à Coordenadoria Geral de Fiscalização - CGF para ciência e, se entender cabível, inclusão no Plano Anual de Fiscalização – PAF, nos termos do art. 151-A, inciso II, do Regimento Interno, em razão da pontuação […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor FERNANDO BRAMBILLA, na qualidade de prefeito do MUNICÍPIO DE SANTA FÉ, relativas ao exercício de 2022, sendo a ressalva devida ao resultado da avaliação da atuação governamental nas áreas de Assistência Social (4,49), Administração Financeira (4,06), Transparência e Relacionamento com o Cidadão (5,5) e Previdência Social (2,82);",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Fé não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-5-00373714",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 144/2023 da Secretaria Segunda Câmara — contas do Prefeito de Santa Fé, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "144",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 144/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "185704/2022",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2023-04-17",
+   "data_publicacao": "2023-05-03",
+   "publicacao_literal": "DETC nº 2971",
+   "entidade_literal": "MUNICÍPIO DE SANTA FÉ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a REGULARIDADE das contas do poder executivo do Município de Santa Fé, relativa ao exercício financeiro de 2021, de responsabilidade do Sr. Fernando Brambilla;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Fé",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 144/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/5/00373714.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "4033d806731a229a8973b55de6263c714953a2e81cb07e66d58bf195c06f177d",
+    "paginas_lidas": 2,
+    "total_paginas": 5,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I- Emitir Parecer Prévio recomendando a REGULARIDADE das contas do poder executivo do Município de Santa Fé, relativa ao exercício financeiro de 2021, de responsabilidade do Sr. Fernando Brambilla; 2 Art. 10. Compete às Câmaras: I - apreciar as contas prestadas anualmente pelos Prefeitos Municipais, mediante emissão de parecer prévio. 3 Art. 217-A § 6º Após o trânsito em julgado, a decisão será comunicada ao Poder Legislativo competente para o julgamento das contas, ficando o parecer prévio e demais documentos constantes do processo disponíveis para a consulta pública no sítio do Tribunal na internet. (Incluído pela Resoluçã […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a REGULARIDADE das contas do poder executivo do Município de Santa Fé, relativa ao exercício financeiro de 2021, de responsabilidade do Sr. Fernando Brambilla;",
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Fé não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-4-00373338",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 128/2023 da Secretaria Segunda Câmara — contas do Prefeito de Santa Fé, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "128",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 128/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "183830/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "AUGUSTINHO ZUCCHI",
+   "data_julgamento": "2023-04-03",
+   "data_publicacao": "2023-04-17",
+   "publicacao_literal": "DETC nº 2961",
+   "entidade_literal": "MUNICÍPIO DE SANTA FÉ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a REGULARIDADE da Prestação de Contas de Prefeito Municipal do Município de Santa Fé, referente ao SEGUNDA CÂMARA exercício financeiro de 2020, de responsabilidade do Sr. Fernando Brambilla, RESSALVANDO-SE a ausência de encaminhamento do Certificado de Regularidade Previdenciária (CRP), assim como a existência de obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Fé",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 128/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/4/00373338.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "d0a1b8d484681fe8c4dcfd13a648cd1321ac845033e9c90f3f996b1071402aeb",
+    "paginas_lidas": 2,
+    "total_paginas": 8,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro AUGUSTINHO ZUCCHI, por unanimidade, em: I- Emitir Parecer Prévio recomendando a REGULARIDADE da Prestação de Contas de Prefeito Municipal do Município de Santa Fé, referente ao SEGUNDA CÂMARA exercício financeiro de 2020, de responsabilidade do Sr. Fernando Brambilla, RESSALVANDO-SE a ausência de encaminhamento do Certificado de Regularidade Previdenciária (CRP), assim como a existência de obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa; II- encaminhar, após o trânsito em julgado do presente, os autos à Coordenadoria de Monitoramento e Exe […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a REGULARIDADE da Prestação de Contas de Prefeito Municipal do Município de Santa Fé, referente ao SEGUNDA CÂMARA exercício financeiro de 2020, de responsabilidade do Sr. Fernando Brambilla, RESSALVANDO-SE a ausência de encaminhamento do Certificado de Regularidade Previdenciária (CRP), assim como a existência de obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa;",
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE",
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício financeiro de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Fé não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-11-00341430",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 486/2019 da Secretaria Segunda Câmara — contas do Prefeito de Santa Fé, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "486",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 486/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "172451/2019",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2019-11-05",
+   "data_publicacao": "2019-11-11",
+   "publicacao_literal": "DETC nº 2183",
+   "entidade_literal": "MUNICÍPIO DE SANTA FÉ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.° 113/2005, recomendando a regularidade das contas dos Prefeitos Municipais de Santa Fé, exercício de 2018, senhor Fernando Brambilla, CPF 025.792.829-47, Gestor no período de 01/01/2018 até 21/01/18 e de 21/02/18 até 31/12/18 e, também, do senhor Valdo Margutti, CPF 276.989.989-91, Gestor no período de 22/01/18 até 20/02/18;",
+    "conclusao_literal": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.° 113/2005, recomendando a regularidade das contas dos Prefeitos Municipais de Santa Fé, exercício de 2018, senhor Fernando Brambilla, CPF 025.792.829-47, Gestor no período de 01/01/2018 até 21/01/18 e de 21/02/18 até 31/12/18 e, também, do senhor Valdo Margutti, CPF 276.989.989-91, Gestor no período de 22/01/18 até 20/02/18;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Fé",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 486/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/11/00341430.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "3477cf6073ff176924ba7807fcb1ba0d27fe2e21f9bbc390690ae34759f6373f",
+    "paginas_lidas": 1,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: I- emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.° 113/2005, recomendando a regularidade das contas dos Prefeitos Municipais de Santa Fé, exercício de 2018, senhor Fernando Brambilla, CPF 025.792.829-47, Gestor no período de 01/01/2018 até 21/01/18 e de 21/02/18 até 31/12/18 e, também, do senhor Valdo Margutti, CPF 276.989.989-91, Gestor no período de 22/01/18 até 20/02/18; II- encaminhar os autos, após o trânsito em julgado, ao Gabinete da Presidência para comunicação da deliberação ao Poder Legislativo Municipal. Autorizar, na sequência, o encerramento do feito, em conformidade com o artigo 398, § 1.º, […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.° 113/2005, recomendando a regularidade das contas dos Prefeitos Municipais de Santa Fé, exercício de 2018, senhor Fernando Brambilla, CPF 025.792.829-47, Gestor no período de 01/01/2018 até 21/01/18 e de 21/02/18 até 31/12/18 e, também, do senhor Valdo Margutti, CPF 276.989.989-91, Gestor no período de 22/01/18 até 20/02/18;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Fé não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-9-00340006",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 300/2019 da Secretaria Primeira Câmara — contas do Prefeito de Santa Fé, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "300",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 300/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "263410/2018",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2019-09-16",
+   "data_publicacao": "2019-09-19",
+   "publicacao_literal": "DETC nº 2147",
+   "entidade_literal": "MUNICÍPIO DE SANTA FÉ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando o julgamento pela REGULARIDADE",
+    "conclusao_literal": "emitir Parecer Prévio recomendando o julgamento pela REGULARIDADE das contas do Poder Executivo do Município de Santa Fé, referente ao exercício financeiro de 2017, de responsabilidade do senhor Fernando Brambilla, RESSALVANDO:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Fé",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 300/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/9/00340006.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "abd8e6f6b27eb0724c12d11eef37ad92ebb752a1005457a0385b3c21833956b9",
+    "paginas_lidas": 2,
+    "total_paginas": 5,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I – emitir Parecer Prévio recomendando o julgamento pela REGULARIDADE das contas do Poder Executivo do Município de Santa Fé, referente ao exercício financeiro de 2017, de responsabilidade do senhor Fernando Brambilla, RESSALVANDO: (i) divergências nos registros de transferências constitucionais dos repasses do FUNDEB (ii) entrega dos dados do SIM-AM com atraso; II – determinar, depois de transitada em julgado a decisão, o encaminhamento dos autos ao Gabinete da Presidência para comunicação do Poder Legislativo do Município de Santa Fé, nos termos do art. 217-A, § 6º do Regimento Interno TC/PR, em seguida, à Coordenadoria d […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando o julgamento pela REGULARIDADE das contas do Poder Executivo do Município de Santa Fé, referente ao exercício financeiro de 2017, de responsabilidade do senhor Fernando Brambilla, RESSALVANDO:",
+    "conclusao": "Parecer Prévio recomendando o julgamento pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício financeiro de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Fé não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-11-00341396",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 476/2019 da Secretaria Primeira Câmara — contas do Prefeito de Santa Fé, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "476",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 476/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "248930/2017",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2019-11-04",
+   "data_publicacao": "2019-11-08",
+   "publicacao_literal": "DETC nº 2182",
+   "entidade_literal": "MUNICÍPIO DE SANTA FÉ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando o julgamento pela regularidade",
+    "conclusao_literal": "emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do Poder Executivo do Município de Santa Fé, referente ao exercício financeiro de 2016, de responsabilidade do senhor Edson Palotta Netto, RESSALVANDO:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Fé",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 476/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/11/00341396.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "34781b14358e1571b628a1e39516045e02482cad4bb8d140201e8bc15c5b8d87",
+    "paginas_lidas": 2,
+    "total_paginas": 7,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I - emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do Poder Executivo do Município de Santa Fé, referente ao exercício financeiro de 2016, de responsabilidade do senhor Edson Palotta Netto, RESSALVANDO: i) as obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja disponibilidade suficiente no caixa, ii) atrasos na entrega dos dados do SIM-AM; II - aplicar, em razão do atraso do SIM-AM, a multa do art. 87, III, “b” da Lei Complementar Estadual nº 113/2005, ao senhor Fernando Brambilla em face do atraso de 46 […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do Poder Executivo do Município de Santa Fé, referente ao exercício financeiro de 2016, de responsabilidade do senhor Edson Palotta Netto, RESSALVANDO:",
+    "conclusao": "Parecer Prévio recomendando o julgamento pela regularidade",
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício financeiro de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Fé não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2021-132-primeiracmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 132/2021 da Secretaria Primeira Câmara — contas do Prefeito de Santa Fé",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "132",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 132/2021 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "169086/2020",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2021-04-19",
+   "data_publicacao": "2021-05-03",
+   "publicacao_literal": "DETC nº 2530",
+   "entidade_literal": "MUNICÍPIO DE SANTA FÉ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Fé",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Fé não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

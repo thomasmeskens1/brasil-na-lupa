@@ -1,0 +1,658 @@
+{
+ "atualizado_em": "2026-11-05T14:29:02.008Z",
+ "municipio": {
+  "id": "primeiro-de-maio",
+  "nome": "Primeiro de Maio",
+  "uf": "PR",
+  "codigo_ibge": "4120507"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2018,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 6,
+  "pareceres": 8,
+  "com_parecer_em_fonte_aberta": 6,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 7,
+  "pdf_lido": 7,
+  "sem_exercicio_na_fonte": 2
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f68ca8a9b64d6286d5f605b923705fb7602cf450e7408d143f7545e514359bfb",
+   "atualizado_na_fonte": "05/06/2026 00:00:40"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2026-5-000201640",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 152/2026 — contas do Prefeito de Primeiro de Maio, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "152",
+    "ano": "2026",
+    "titulo_oficial": "Parecer Prévio 152/2026"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "130650/2025",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2026-05-04",
+   "data_publicacao": "2026-05-18",
+   "publicacao_literal": "DETC nº 3674",
+   "entidade_literal": "MUNICÍPIO DE PRIMEIRO DE MAIO",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas da senhora BRUNA DE OLIVEIRA CASANOVA, na qualidade de prefeita do MUNICÍPIO DE PRIMEIRO DE MAIO, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Primeiro de Maio",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 152/2026 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2026/5/000201640.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "8946af26845d2fbafae6b8d5a31dfba6e45325a0720af48199ac76cdb87214cc",
+    "paginas_lidas": 1,
+    "total_paginas": 46,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, adaptado pelo voto parcialmente divergente do Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por maioria absoluta: a. Emitir Parecer Prévio pela REGULARIDADE das contas da senhora BRUNA DE OLIVEIRA CASANOVA, na qualidade de prefeita do MUNICÍPIO DE PRIMEIRO DE MAIO, relativas ao exercício de 2024. b. RESSALVAR as contas em virtude de: i. baixo desempenho evidenciado na avaliação da atuação governamental nas áreas da Educação e da Administração Financeira. Após o trânsito em julgado da deliberação, encaminhar os autos ao Gabinete da Presidência para as providências contidas no § 6º do artigo 217-A do Regimento Interno, à Coordenadoria de Medidas E […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas da senhora BRUNA DE OLIVEIRA CASANOVA, na qualidade de prefeita do MUNICÍPIO DE PRIMEIRO DE MAIO, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2026,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Primeiro de Maio não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-10-00388883",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 361/2024 — contas do Prefeito de Primeiro de Maio, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "361",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 361/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "216917/2024",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2024-09-30",
+   "data_publicacao": "2024-10-08",
+   "publicacao_literal": "DETC nº 3311",
+   "entidade_literal": "MUNICÍPIO DE PRIMEIRO DE MAIO",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas da senhora BRUNA DE OLIVEIRA CASANOVA, na qualidade de prefeita do MUNICÍPIO DE PRIMEIRO DE MAIO, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Primeiro de Maio",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 361/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/10/00388883.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "3036cf76615d1c46074a0dde7c55ade4c8080ba9909daecf13b60a272b4ad5e9",
+    "paginas_lidas": 1,
+    "total_paginas": 42,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas da senhora BRUNA DE OLIVEIRA CASANOVA, na qualidade de prefeita do MUNICÍPIO DE PRIMEIRO DE MAIO, relativas ao exercício de 2023. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, § 6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas da senhora BRUNA DE OLIVEIRA CASANOVA, na qualidade de prefeita do MUNICÍPIO DE PRIMEIRO DE MAIO, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Primeiro de Maio não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-4-00383649",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 150/2024 — contas do Prefeito de Primeiro de Maio, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "150",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 150/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "222395/2023",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2024-04-01",
+   "data_publicacao": "2024-04-17",
+   "publicacao_literal": "DETC nº 3190",
+   "entidade_literal": "MUNICÍPIO DE PRIMEIRO DE MAIO",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) BRUNA DE OLIVEIRA CASANOVA, na qualidade de prefeito(a) do MUNICÍPIO DE PRIMEIRO DE MAIO, relativas ao exercício de 2022.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Primeiro de Maio",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 150/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/4/00383649.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "7023f1774634c15e40ecf36bb8ebec59a20bb04e55e4c27c693d18bb41ef8eb0",
+    "paginas_lidas": 1,
+    "total_paginas": 33,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade: Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) BRUNA DE OLIVEIRA CASANOVA, na qualidade de prefeito(a) do MUNICÍPIO DE PRIMEIRO DE MAIO, relativas ao exercício de 2022. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, § 6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) BRUNA DE OLIVEIRA CASANOVA, na qualidade de prefeito(a) do MUNICÍPIO DE PRIMEIRO DE MAIO, relativas ao exercício de 2022.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Primeiro de Maio não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-4-00373336",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 119/2023 da Secretaria Segunda Câmara — contas do Prefeito de Primeiro de Maio, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "119",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 119/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "217428/2022",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2023-04-03",
+   "data_publicacao": "2023-04-17",
+   "publicacao_literal": "DETC nº 2961",
+   "entidade_literal": "MUNICÍPIO DE PRIMEIRO DE MAIO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade das contas do Município de Primeiro de Maio, referentes ao exercício financeiro de 2021;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Primeiro de Maio",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 119/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/4/00373336.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "7928d5f00f0603b8ee90dde864217ff11f2a49c023ef929cdf18be9aadd40ea0",
+    "paginas_lidas": 1,
+    "total_paginas": 3,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I- Emitir Parecer Prévio recomendando a regularidade das contas do Município de Primeiro de Maio, referentes ao exercício financeiro de 2021; e II- após o trânsito em julgado, realizar os registros pertinentes, com as devidas comunicações, ficando autorizado, depois das providências, o encerramento do feito e seu arquivamento junto à Diretoria de Protocolo.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade das contas do Município de Primeiro de Maio, referentes ao exercício financeiro de 2021;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Primeiro de Maio não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-11-00352919",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 607/2020 da Secretaria Segunda Câmara — contas do Prefeito de Primeiro de Maio, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "607",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 607/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "228015/2020",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2020-11-03",
+   "data_publicacao": "2020-11-16",
+   "publicacao_literal": "DETC nº 2423",
+   "entidade_literal": "MUNICÍPIO DE PRIMEIRO DE MAIO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio, com fundamento nos artigos 1º, inciso I, e 16, inciso I6, ambos da Lei Complementar Estadual nº 113/2005, recomendando a regularidade",
+    "conclusao_literal": "emitir Parecer Prévio, com fundamento nos artigos 1º, inciso I, e 16, inciso I6, ambos da Lei Complementar Estadual nº 113/2005, recomendando a regularidade das contas da Prefeita Municipal de Primeiro de Maio, Senhora Bruna de Oliveira Casanova, referentes ao exercício de 2019, com ressalva, em relação a regularização de impropriedade no curso da instrução, referente à documentação comprobatória da formação do responsável pelo Controle Interno, bem como cópia dos atos de nomeação dos membros dos Conselhos Municipais de Saúde e de Acompanhamento e Controle Social do FUNDEB;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Primeiro de Maio",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 607/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/11/00352919.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "dd1ae262b219b42a0e94e2333156cf6ec188bc15ffc2ae2d6e1a8da7a98a8e57",
+    "paginas_lidas": 2,
+    "total_paginas": 5,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I- emitir Parecer Prévio, com fundamento nos artigos 1º, inciso I, e 16, inciso I6, ambos da Lei Complementar Estadual nº 113/2005, recomendando a regularidade das contas da Prefeita Municipal de Primeiro de Maio, Senhora Bruna de Oliveira Casanova, referentes ao exercício de 2019, com ressalva, em relação a regularização de impropriedade no curso da instrução, referente à documentação comprobatória da formação do responsável pelo Controle Interno, bem como cópia dos atos de nomeação dos membros dos Conselhos Municipais de Saúde e de Acompanhamento e Controle Social do FUNDEB; II- encaminhar os autos, após o trânsito em julgado, […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, com fundamento nos artigos 1º, inciso I, e 16, inciso I6, ambos da Lei Complementar Estadual nº 113/2005, recomendando a regularidade das contas da Prefeita Municipal de Primeiro de Maio, Senhora Bruna de Oliveira Casanova, referentes ao exercício de 2019, com ressalva, em relação a regularização de impropriedade no curso da instrução, referente à documentação comprobatória da formação do responsável pelo Controle Interno, bem como cópia dos atos de nomeação dos membros dos Conselhos Municipais de Saúde e de Acompanhamento e Controle Social do FUNDEB;",
+    "conclusao": "Parecer Prévio, com fundamento nos artigos 1º, inciso I, e 16, inciso I6, ambos da Lei Complementar Estadual nº 113/2005, recomendando a regularidade",
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Primeiro de Maio não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-9-00340054",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 303/2019 da Secretaria Primeira Câmara — contas do Prefeito de Primeiro de Maio, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "303",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 303/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "183828/2019",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2019-09-16",
+   "data_publicacao": "2019-09-20",
+   "publicacao_literal": "DETC nº 2148",
+   "entidade_literal": "MUNICÍPIO DE PRIMEIRO DE MAIO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando o julgamento pela regularidade",
+    "conclusao_literal": "emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do Poder Executivo do Município de Primeiro de Maio, referente ao exercício financeiro de 2018, de responsabilidade da senhora Bruna de Oliveira Casanova;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Primeiro de Maio",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 303/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/9/00340054.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "4659cf800a0fd4b51fb620d102c4b859ba1422a54bc2103f2fdfb23246f6184c",
+    "paginas_lidas": 2,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I – emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do Poder Executivo do Município de Primeiro de Maio, referente ao exercício financeiro de 2018, de responsabilidade da senhora Bruna de Oliveira Casanova; II – determinar, depois de transitada em julgado a decisão, o encaminhamento dos autos ao Gabinete da Presidência para comunicação ao respectivo Poder Legislativo, nos termos do art. 217-A, § 6º do Regimento Interno1. Na sequência, à Coordenadoria de Monitoramento e Execuções; e III – determinar, depois de adotadas as providências pertinentes, com fundamento no art. 398, § 1° do Regimento Int […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do Poder Executivo do Município de Primeiro de Maio, referente ao exercício financeiro de 2018, de responsabilidade da senhora Bruna de Oliveira Casanova;",
+    "conclusao": "Parecer Prévio recomendando o julgamento pela regularidade",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício financeiro de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Primeiro de Maio não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2021-308-segundacmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 308/2021 da Secretaria Segunda Câmara — contas do Prefeito de Primeiro de Maio",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "308",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 308/2021 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "185743/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2021-12-13",
+   "data_publicacao": "2022-01-13",
+   "publicacao_literal": "DETC nº 2688",
+   "entidade_literal": "MUNICÍPIO DE PRIMEIRO DE MAIO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Primeiro de Maio",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Primeiro de Maio não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-4-00336004",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 96/2019 da Secretaria Primeira Câmara — contas do Prefeito de Primeiro de Maio",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "96",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 96/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "258182/2018",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2019-04-15",
+   "data_publicacao": "2019-04-25",
+   "publicacao_literal": "DETC nº 2045",
+   "entidade_literal": "MUNICÍPIO DE PRIMEIRO DE MAIO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Sr. PAULO TEODORO FERNANDES JUNIOR (CPF 031.179.299-59), gestor no período de 01/01/2017 a 31/08/2017;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Primeiro de Maio",
+    "exercicio": null,
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 96/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/4/00336004.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "b751513c7ca36144d7c4e808d01f4ff3783d1cd1ff2ea7a5dcfd3945f6e01a80",
+    "paginas_lidas": 2,
+    "total_paginas": 4,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Sr. PAULO TEODORO FERNANDES JUNIOR (CPF 031.179.299-59), gestor no período de 01/01/2017 a 31/08/2017; e da Sra. BRUNA DE OLIVEIRA CASANOVA (CPF 053.332.629-00), gestora no período de 01/09/2017 a 31/12/2020, responsáveis pela prestação de contas do Município de PRIMEIRO DE MAIO, relativas ao exercício financeiro de 2017, ressalvando os atrasos evidenciados no encaminhamento mensal dos dados eletrônicos do SIM-AM relativos aos meses de junho (1 dia), julho (3 dias) e setembro (1 dia). II. Recomendar ao Município de Primeiro de Maio, n […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Sr. PAULO TEODORO FERNANDES JUNIOR (CPF 031.179.299-59), gestor no período de 01/01/2017 a 31/08/2017;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": null
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Primeiro de Maio não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

@@ -1,0 +1,804 @@
+{
+ "atualizado_em": "2026-11-05T14:30:28.443Z",
+ "municipio": {
+  "id": "general-carneiro",
+  "nome": "General Carneiro",
+  "uf": "PR",
+  "codigo_ibge": "4108502"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2016,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 9,
+  "pareceres": 10,
+  "com_parecer_em_fonte_aberta": 9,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 9,
+  "pdf_lido": 9,
+  "sem_exercicio_na_fonte": 1
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2025-10-000199723",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 314/2025 — contas do Prefeito de General Carneiro, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "314",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 314/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "145754/2025",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2025-10-13",
+   "data_publicacao": "2025-10-22",
+   "publicacao_literal": "DETC nº 3553",
+   "entidade_literal": "MUNICÍPIO DE GENERAL CARNEIRO",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JOEL RICARDO MARTINS FERREIRA, na qualidade de prefeito do MUNICÍPIO DE GENERAL CARNEIRO, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de General Carneiro",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 314/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/10/000199723.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "015ee1b86fcb6a23d442c02d3af46ea0910649c9bcbfba24b43597634db7c093",
+    "paginas_lidas": 1,
+    "total_paginas": 45,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JOEL RICARDO MARTINS FERREIRA, na qualidade de prefeito do MUNICÍPIO DE GENERAL CARNEIRO, relativas ao exercício de 2024. b. Apor RESSALVAS em razão da Avaliação da Atuação Governamental na área da Administração Financeira (5,29)21. Após o trânsito em julgado da deliberação, encaminhem-se os autos ao Gabinete da Presidência para as providências contidas no § 6º do artigo 217-A do Regimento Interno, à Coordenadoria de Medidas Executórias para as anotações pertinentes e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JOEL RICARDO MARTINS FERREIRA, na qualidade de prefeito do MUNICÍPIO DE GENERAL CARNEIRO, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de General Carneiro não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-12-00391368",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 429/2024 — contas do Prefeito de General Carneiro, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "429",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 429/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "208574/2024",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2024-11-25",
+   "data_publicacao": "2024-12-09",
+   "publicacao_literal": "DETC nº 3352",
+   "entidade_literal": "MUNICÍPIO DE GENERAL CARNEIRO",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) JOEL RICARDO MARTINS FERREIRA, na qualidade de prefeito(a) do MUNICÍPIO DE GENERAL CARNEIRO, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de General Carneiro",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 429/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/12/00391368.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "9072cc77143cca0464cf150f50a888f5fe603866df3a3069b5002848c9e8b01d",
+    "paginas_lidas": 1,
+    "total_paginas": 43,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) JOEL RICARDO MARTINS FERREIRA, na qualidade de prefeito(a) do MUNICÍPIO DE GENERAL CARNEIRO, relativas ao exercício de 2023. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, § 6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) JOEL RICARDO MARTINS FERREIRA, na qualidade de prefeito(a) do MUNICÍPIO DE GENERAL CARNEIRO, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de General Carneiro não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-1-00381607",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 67/2023 — contas do Prefeito de General Carneiro, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "67",
+    "ano": "2023",
+    "titulo_oficial": "Parecer Prévio 67/2023"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "206691/2023",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2023-12-11",
+   "data_publicacao": "2024-01-17",
+   "publicacao_literal": "DETC nº 3132",
+   "entidade_literal": "MUNICÍPIO DE GENERAL CARNEIRO",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JOEL RICARDO MARTINS FERREIRA, na qualidade de prefeito do MUNICÍPIO DE GENERAL CARNEIRO, relativas ao exercício de 2022.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de General Carneiro",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 67/2023 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/1/00381607.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "e1ad368e603ccdcdfff7c6a0464b0786cabc6b3dc63cfcdea1b5cb55ce73bcba",
+    "paginas_lidas": 1,
+    "total_paginas": 34,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSÉ DURVAL MATTOS DO AMARAL, por unanimidade: Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JOEL RICARDO MARTINS FERREIRA, na qualidade de prefeito do MUNICÍPIO DE GENERAL CARNEIRO, relativas ao exercício de 2022. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, §6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JOEL RICARDO MARTINS FERREIRA, na qualidade de prefeito do MUNICÍPIO DE GENERAL CARNEIRO, relativas ao exercício de 2022.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de General Carneiro não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-5-00373716",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 146/2023 da Secretaria Segunda Câmara — contas do Prefeito de General Carneiro, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "146",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 146/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "211977/2022",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2023-04-17",
+   "data_publicacao": "2023-05-03",
+   "publicacao_literal": "DETC nº 2971",
+   "entidade_literal": "MUNICÍPIO DE GENERAL CARNEIRO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade das contas do poder executivo do Município de General Carneiro, relativa ao exercício financeiro de 2021, de responsabilidade do Sr. Joel Ricardo Martins Ferreira, com fundamento no artigo 16, inciso I, da Lei Complementar nº 113/20059;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de General Carneiro",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 146/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/5/00373716.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "eeb61b5a7d4f31e48c68f94450b5f89b823e4f98b33d7d46a5381c57d722cd38",
+    "paginas_lidas": 2,
+    "total_paginas": 4,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: 5 Art. 16. As contas serão julgadas: I – regulares, quando expressarem, de forma clara e objetiva, a exatidão dos demonstrativos contábeis, financeiros, a legalidade, a legitimidade, a eficácia e a economicidade dos atos de gestão do responsável, bem como, o atendimento das metas e objetivos; 6 § 6º Após o trânsito em julgado, a decisão será comunicada ao Poder Legislativo competente para o julgamento das contas, ficando o parecer prévio e demais documentos constantes do processo disponíveis para a consulta pública no sítio do Tribunal na internet. 7 Art. 398. Todos os processos autuados no Tribunal permanecerão no sistema, […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade das contas do poder executivo do Município de General Carneiro, relativa ao exercício financeiro de 2021, de responsabilidade do Sr. Joel Ricardo Martins Ferreira, com fundamento no artigo 16, inciso I, da Lei Complementar nº 113/20059;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de General Carneiro não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-7-00377998",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 317/2023 da Secretaria Primeira Câmara — contas do Prefeito de General Carneiro, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "317",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 317/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "176248/2021",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2023-07-10",
+   "data_publicacao": "2023-07-26",
+   "publicacao_literal": "DETC nº 3029",
+   "entidade_literal": "MUNICÍPIO DE GENERAL CARNEIRO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio deste Tribunal recomendando o julgamento pela regularidade",
+    "conclusao_literal": "Emitir com fulcro no art. 16, II, da Lei Complementar Estadual nº 113/2005, Parecer Prévio deste Tribunal recomendando o julgamento pela regularidade das contas alusivas ao exercício financeiro de 2020, de responsabilidade de Luís Otávio Geller Saraiva, Chefe do Poder Executivo de General Carneiro, com aposição de ressalva à existência de obrigações de despesa contraídas nos últimos dois quadrimestres do mandato com parcelas a serem pagas no exercício seguinte sem suficiente disponibilidade de caixa, conforme critérios fixados no Prejulgado 15;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de General Carneiro",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 317/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/7/00377998.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "89bdd33988282cd677743da8e9b57ff6c6d8e1215f247af5914d67d96aca3f30",
+    "paginas_lidas": 2,
+    "total_paginas": 4,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I – Emitir com fulcro no art. 16, II, da Lei Complementar Estadual nº 113/2005, Parecer Prévio deste Tribunal recomendando o julgamento pela regularidade das contas alusivas ao exercício financeiro de 2020, de responsabilidade de Luís Otávio Geller Saraiva, Chefe do Poder Executivo de General Carneiro, com aposição de ressalva à existência de obrigações de despesa contraídas nos últimos dois quadrimestres do mandato com parcelas a serem pagas no exercício seguinte sem suficiente disponibilidade de caixa, conforme critérios fixados no Prejulgado 15; II - determinar, após o trânsito em julgado, a remessa dos autos à Coo […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir com fulcro no art. 16, II, da Lei Complementar Estadual nº 113/2005, Parecer Prévio deste Tribunal recomendando o julgamento pela regularidade das contas alusivas ao exercício financeiro de 2020, de responsabilidade de Luís Otávio Geller Saraiva, Chefe do Poder Executivo de General Carneiro, com aposição de ressalva à existência de obrigações de despesa contraídas nos últimos dois quadrimestres do mandato com parcelas a serem pagas no exercício seguinte sem suficiente disponibilidade de caixa, conforme critérios fixados no Prejulgado 15;",
+    "conclusao": "Parecer Prévio deste Tribunal recomendando o julgamento pela regularidade",
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício financeiro de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de General Carneiro não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-11-00352877",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 636/2020 da Secretaria Segunda Câmara — contas do Prefeito de General Carneiro, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "636",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 636/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "180357/2020",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2020-11-16",
+   "data_publicacao": "2020-11-26",
+   "publicacao_literal": "DETC nº 2431",
+   "entidade_literal": "MUNICÍPIO DE GENERAL CARNEIRO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a IRREGULARIDADE",
+    "conclusao_literal": "emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, Parecer Prévio recomendando a IRREGULARIDADE das contas do PREFEITO DO MUNICÍPIO DE GENERAL CARNEIRO, exercício de 2019, Sr. Luis Otavio Geller Saraiva, CPF 467.176.840-20, em decorrência do Limite de Despesas com Pessoal - Não Retorno ao Limite no prazo legal – Análise do 1º Quadrimestre do exercício de 2019, e, também, Análise do Segundo Quadrimestre do exercício de 2019, ambos com baixo crescimento do PIB;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de General Carneiro",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 636/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/11/00352877.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "8e245cef4958719825dc61480c426c366cce366bf9bed45c454880f21be6c8d6",
+    "paginas_lidas": 2,
+    "total_paginas": 10,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: 1) emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, Parecer Prévio recomendando a IRREGULARIDADE das contas do PREFEITO DO MUNICÍPIO DE GENERAL CARNEIRO, exercício de 2019, Sr. Luis Otavio Geller Saraiva, CPF 467.176.840-20, em decorrência do Limite de Despesas com Pessoal - Não Retorno ao Limite no prazo legal – Análise do 1º Quadrimestre do exercício de 2019, e, também, Análise do Segundo Quadrimestre do exercício de 2019, ambos com baixo crescimento do PIB; 2) aplicar ao Sr. Luis Otavio Geller Saraiva, CPF 467.176.840-20, uma única vez, a MULTA prevista no art. 87, IV, “g”, da L.C.E. 113/05 em razão do Limi […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, Parecer Prévio recomendando a IRREGULARIDADE das contas do PREFEITO DO MUNICÍPIO DE GENERAL CARNEIRO, exercício de 2019, Sr. Luis Otavio Geller Saraiva, CPF 467.176.840-20, em decorrência do Limite de Despesas com Pessoal - Não Retorno ao Limite no prazo legal – Análise do 1º Quadrimestre do exercício de 2019, e, também, Análise do Segundo Quadrimestre do exercício de 2019, ambos com baixo crescimento do PIB;",
+    "conclusao": "Parecer Prévio recomendando a IRREGULARIDADE",
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de General Carneiro não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-8-00350058",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 289/2020 da Secretaria Primeira Câmara — contas do Prefeito de General Carneiro, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "289",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 289/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "202490/2019",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2020-07-27",
+   "data_publicacao": "2020-08-11",
+   "publicacao_literal": "DETC nº 2358",
+   "entidade_literal": "MUNICÍPIO DE GENERAL CARNEIRO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito Municipal de GENERAL CARNEIRO, Sr. Luís Otávio Geller Saraiva, relativas ao exercício financeiro de 2018, diante da existência de despesa com pessoal acima dos limites estabelecidos nos artigos 19 e 20 da LRF;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de General Carneiro",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 289/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/8/00350058.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "65611de1d58b5aef42ba9fb8874ed195515e51da3b33de7073f72110fe36e2d8",
+    "paginas_lidas": 2,
+    "total_paginas": 9,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito Municipal de GENERAL CARNEIRO, Sr. Luís Otávio Geller Saraiva, relativas ao exercício financeiro de 2018, diante da existência de despesa com pessoal acima dos limites estabelecidos nos artigos 19 e 20 da LRF; II. Ressalvar o déficit orçamentário e a ausência do número de assinaturas necessárias nos pareceres do Conselho de Saúde e do FUNDEB, em contrariedade ao exigido na Instrução Normativa n.º 148/2019-TCE/PR; III. Aplicar, por duas vezes, a multa prevista no artigo 87, IV, g, da LC n.º 113/05, ao Sr. Luís Otávio Geller […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito Municipal de GENERAL CARNEIRO, Sr. Luís Otávio Geller Saraiva, relativas ao exercício financeiro de 2018, diante da existência de despesa com pessoal acima dos limites estabelecidos nos artigos 19 e 20 da LRF;",
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício financeiro de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de General Carneiro não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-2-00334779",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 23/2019 da Secretaria Primeira Câmara — contas do Prefeito de General Carneiro, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "23",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 23/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "288588/2018",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2019-02-18",
+   "data_publicacao": "2019-02-26",
+   "publicacao_literal": "DETC nº 2008",
+   "entidade_literal": "MUNICÍPIO DE GENERAL CARNEIRO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando o julgamento pela regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do Poder Executivo do Município de General Carneiro, referente ao exercício financeiro de 2017, de responsabilidade do senhor Luis Otavio Geller Saraiva, ressalvando:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de General Carneiro",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 23/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/2/00334779.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "5705e010498e879e9f7a5e0ecac678936d7ebb3a0d758642a50bdb8a55d7a264",
+    "paginas_lidas": 2,
+    "total_paginas": 6,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I – Emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do Poder Executivo do Município de General Carneiro, referente ao exercício financeiro de 2017, de responsabilidade do senhor Luis Otavio Geller Saraiva, ressalvando: (i) a ausência da comprovação da qualificação técnica do Controlador Interno; (ii) o atraso na Publicação do Relatório Resumido da Execução Orçamentária do segundo bimestre do exercício de 2017 (iii) e os atrasos na entrega dos dados do SIM-AM; II – aplicar a multa do artigo 87, III, “b” da Lei Complementar n.º 113/2005, ao senhor Luis Otavio Geller Saraiva, em razão dos atrasos d […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do Poder Executivo do Município de General Carneiro, referente ao exercício financeiro de 2017, de responsabilidade do senhor Luis Otavio Geller Saraiva, ressalvando:",
+    "conclusao": "Parecer Prévio recomendando o julgamento pela regularidade",
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício financeiro de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de General Carneiro não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-3-00344253",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 89/2020 da Secretaria Segunda Câmara — contas do Prefeito de General Carneiro, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "89",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 89/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "297826/2017",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2020-03-17",
+   "data_publicacao": "2020-03-25",
+   "publicacao_literal": "DETC nº 2266",
+   "entidade_literal": "MUNICÍPIO DE GENERAL CARNEIRO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "conclusao_literal": "emitir, com fundamento no artigo 1.º, I, combinado com o artigo 16, III, “b”, da Lei Complementar Estadual n.º 113/2005, Parecer Prévio recomendando a irregularidade das contas do senhor Joel Ricardo Martins Ferreira, prefeito do Município de General Carneiro, relativas ao exercício de 2016, em virtude do déficit orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS (fontes livres), de obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa, e da falta de reconhecimento de Despesa Previdenciária;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de General Carneiro",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 89/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/3/00344253.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "6d72a68ac2a2c42ff2030b26d7672b92cba8d50ff5153abe71b53a5df8995833",
+    "paginas_lidas": 2,
+    "total_paginas": 20,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade, em: I. emitir, com fundamento no artigo 1.º, I, combinado com o artigo 16, III, “b”, da Lei Complementar Estadual n.º 113/2005, Parecer Prévio recomendando a irregularidade das contas do senhor Joel Ricardo Martins Ferreira, prefeito do Município de General Carneiro, relativas ao exercício de 2016, em virtude do déficit orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS (fontes livres), de obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa, e da fal […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir, com fundamento no artigo 1.º, I, combinado com o artigo 16, III, “b”, da Lei Complementar Estadual n.º 113/2005, Parecer Prévio recomendando a irregularidade das contas do senhor Joel Ricardo Martins Ferreira, prefeito do Município de General Carneiro, relativas ao exercício de 2016, em virtude do déficit orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS (fontes livres), de obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa, e da falta de reconhecimento de Despesa Previdenciária;",
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de General Carneiro não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2021-173-segundacmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 173/2021 da Secretaria Segunda Câmara — contas do Prefeito de General Carneiro",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "173",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 173/2021 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "261778/2015",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2021-05-31",
+   "data_publicacao": "2021-06-25",
+   "publicacao_literal": "DETC nº 2567",
+   "entidade_literal": "MUNICÍPIO DE GENERAL CARNEIRO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de General Carneiro",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de General Carneiro não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

@@ -1,0 +1,732 @@
+{
+ "atualizado_em": "2026-11-05T14:24:58.956Z",
+ "municipio": {
+  "id": "ribeirao-do-pinhal",
+  "nome": "Ribeirão do Pinhal",
+  "uf": "PR",
+  "codigo_ibge": "4121901"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2016,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 8,
+  "pareceres": 9,
+  "com_parecer_em_fonte_aberta": 8,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 8,
+  "pdf_lido": 8,
+  "sem_exercicio_na_fonte": 1
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2025-8-000199066",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 255/2025 — contas do Prefeito de Ribeirão do Pinhal, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "255",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 255/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "190415/2025",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2025-08-18",
+   "data_publicacao": "2025-08-29",
+   "publicacao_literal": "DETC nº 3516",
+   "entidade_literal": "MUNICÍPIO DE RIBEIRÃO DO PINHAL",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor DARTAGNAN CALIXTO FRAIZ, na qualidade de prefeito do MUNICÍPIO DE RIBEIRÃO DO PINHAL, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Ribeirão do Pinhal",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 255/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/8/000199066.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "c9c70ae55d73103e7812405c0bb9006039588ff55157b1e3278a24103e30d332",
+    "paginas_lidas": 1,
+    "total_paginas": 45,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade: Considerando os fatos expostos no item de fundamentação, voto, com respaldo no artigo 1º, I, da Lei Complementar Estadual n.º 113/2005 e em observância ao artigo 217-A, caput, do Regimento Interno, no sentido de: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor DARTAGNAN CALIXTO FRAIZ, na qualidade de prefeito do MUNICÍPIO DE RIBEIRÃO DO PINHAL, relativas ao exercício de 2024. Após o trânsito em julgado da deliberação, encaminhem-se os autos ao Gabinete da Presidência para as providências contidas no § 6º do artigo 217-A do Regimento Interno, à Coordenadoria de Medidas Executórias para as anotações per […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor DARTAGNAN CALIXTO FRAIZ, na qualidade de prefeito do MUNICÍPIO DE RIBEIRÃO DO PINHAL, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Ribeirão do Pinhal não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-12-00391384",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 411/2024 — contas do Prefeito de Ribeirão do Pinhal, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "411",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 411/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "214655/2024",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2024-11-25",
+   "data_publicacao": "2024-12-10",
+   "publicacao_literal": "DETC nº 3353",
+   "entidade_literal": "MUNICÍPIO DE RIBEIRÃO DO PINHAL",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade > Diligência",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) DARTAGNAN CALIXTO FRAIZ, na qualidade de prefeito(a) do MUNICÍPIO DE RIBEIRÃO DO PINHAL, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Ribeirão do Pinhal",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 411/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/12/00391384.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "7b8e2e64e4852ca859bc33c84044501cf96d79af59963e6ec720688c3ed77a8d",
+    "paginas_lidas": 1,
+    "total_paginas": 42,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) DARTAGNAN CALIXTO FRAIZ, na qualidade de prefeito(a) do MUNICÍPIO DE RIBEIRÃO DO PINHAL, relativas ao exercício de 2023. b. RESSALVAR as contas em virtude de: i. baixo desempenho evidenciado na avaliação da atuação governamental nas áreas de Transparência e Relacionamento com o Cidadão e de Administração Financeira. c. Determinar a realização de Auditoria no Município de Ribeirão do Pinhal, tendo como objetivo a verificação da atuação governamental nas áreas referentes à Administração Financeira (3), encaminhando-se os autos à Coordenadoria-Geral de Fiscalização p […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) DARTAGNAN CALIXTO FRAIZ, na qualidade de prefeito(a) do MUNICÍPIO DE RIBEIRÃO DO PINHAL, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Ribeirão do Pinhal não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-2-00382093",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 39/2024 — contas do Prefeito de Ribeirão do Pinhal, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "39",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 39/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "221569/2023",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2024-01-29",
+   "data_publicacao": "2024-02-09",
+   "publicacao_literal": "DETC nº 3149",
+   "entidade_literal": "MUNICÍPIO DE RIBEIRÃO DO PINHAL",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) DARTAGNAN CALIXTO FRAIZ, na qualidade de prefeito(a) do MUNICÍPIO DE RIBEIRÃO DO PINHAL, relativas ao exercício de 2022.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Ribeirão do Pinhal",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 39/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/2/00382093.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "8365e8fa5973d70eb885866cffee312e8388fe7a98185c66283986e8d1cf1ddb",
+    "paginas_lidas": 1,
+    "total_paginas": 33,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade: Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) DARTAGNAN CALIXTO FRAIZ, na qualidade de prefeito(a) do MUNICÍPIO DE RIBEIRÃO DO PINHAL, relativas ao exercício de 2022. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, §6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) DARTAGNAN CALIXTO FRAIZ, na qualidade de prefeito(a) do MUNICÍPIO DE RIBEIRÃO DO PINHAL, relativas ao exercício de 2022.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Ribeirão do Pinhal não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-10-00379674",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 451/2023 da Secretaria Segunda Câmara — contas do Prefeito de Ribeirão do Pinhal, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "451",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 451/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "219773/2022",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2023-09-18",
+   "data_publicacao": "2023-10-04",
+   "publicacao_literal": "DETC nº 3077",
+   "entidade_literal": "MUNICÍPIO DE RIBEIRÃO DO PINHAL",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do Poder Executivo do Município de Ribeirão do Pinhal, referentes ao exercício financeiro de 2021, de responsabilidade de Dartagnan Calixto Fraiz;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Ribeirão do Pinhal",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 451/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/10/00379674.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "ffc2eb016d45357c11d8a4552a88bb0a30b4e35cb49fad41b726b67b60e602fa",
+    "paginas_lidas": 2,
+    "total_paginas": 9,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: SEGUNDA CÂMARA I- Emitir Parecer Prévio pela REGULARIDADE das contas do Poder Executivo do Município de Ribeirão do Pinhal, referentes ao exercício financeiro de 2021, de responsabilidade de Dartagnan Calixto Fraiz; II- determinar, após o trânsito em julgado, o encaminhamento dos autos ao Gabinete da Presidência para as providências contidas no § 6º do artigo 217-A do Regimento Interno; e III- determinar, após adotadas as providências de estilo, com fundamento no artigo 398, § 1º do Regimento Interno, o encerramento do feito e o envio dos autos à Diretoria de Protocolo para arquivo.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do Poder Executivo do Município de Ribeirão do Pinhal, referentes ao exercício financeiro de 2021, de responsabilidade de Dartagnan Calixto Fraiz;",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Ribeirão do Pinhal não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-9-00379132",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 401/2023 da Secretaria Primeira Câmara — contas do Prefeito de Ribeirão do Pinhal, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "401",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 401/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "262713/2021",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2023-08-21",
+   "data_publicacao": "2023-09-11",
+   "publicacao_literal": "DETC nº 3060",
+   "entidade_literal": "MUNICÍPIO DE RIBEIRÃO DO PINHAL",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Emitir, acompanhando a Coordenadoria de Gestão Municipal e o Ministério Público de Contas, na forma do art. 23 da Lei Complementar Estadual nº 113/2005, parecer prévio deste Tribunal, recomendando o julgamento pela irregularidade das contas do prefeito do MUNICÍPIO DE RIBEIRÃO DO PINHAL, relativas ao exercício de 2020, de responsabilidade de WAGNER LUIZ OLIVEIRA, em face do “Limite de Despesas com Pessoal – Não Retorno ao Limite no prazo legal – Análise do 1º Quadrimestre do exercício de 2020, com baixo crescimento do PIB”;",
+    "conclusao_literal": "Emitir, acompanhando a Coordenadoria de Gestão Municipal e o Ministério Público de Contas, na forma do art. 23 da Lei Complementar Estadual nº 113/2005, parecer prévio deste Tribunal, recomendando o julgamento pela irregularidade das contas do prefeito do MUNICÍPIO DE RIBEIRÃO DO PINHAL, relativas ao exercício de 2020, de responsabilidade de WAGNER LUIZ OLIVEIRA, em face do “Limite de Despesas com Pessoal – Não Retorno ao Limite no prazo legal – Análise do 1º Quadrimestre do exercício de 2020, com baixo crescimento do PIB”;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Ribeirão do Pinhal",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 401/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/9/00379132.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "58a6750690ae1420735429db0b63b575e250d442df0c3f6eb8165cb9c346db98",
+    "paginas_lidas": 2,
+    "total_paginas": 7,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade, em: I – Emitir, acompanhando a Coordenadoria de Gestão Municipal e o Ministério Público de Contas, na forma do art. 23 da Lei Complementar Estadual nº 113/2005, parecer prévio deste Tribunal, recomendando o julgamento pela irregularidade das contas do prefeito do MUNICÍPIO DE RIBEIRÃO DO PINHAL, relativas ao exercício de 2020, de responsabilidade de WAGNER LUIZ OLIVEIRA, em face do “Limite de Despesas com Pessoal – Não Retorno ao Limite no prazo legal – Análise do 1º Quadrimestre do exercício de 2020, com baixo crescimento do PIB”; II - aplicar a multa administrativa contida na alínea g do inciso IV do art. 87 da Lei […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir, acompanhando a Coordenadoria de Gestão Municipal e o Ministério Público de Contas, na forma do art. 23 da Lei Complementar Estadual nº 113/2005, parecer prévio deste Tribunal, recomendando o julgamento pela irregularidade das contas do prefeito do MUNICÍPIO DE RIBEIRÃO DO PINHAL, relativas ao exercício de 2020, de responsabilidade de WAGNER LUIZ OLIVEIRA, em face do “Limite de Despesas com Pessoal – Não Retorno ao Limite no prazo legal – Análise do 1º Quadrimestre do exercício de 2020, com baixo crescimento do PIB”;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Ribeirão do Pinhal não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-8-00350012",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 305/2020 da Secretaria Primeira Câmara — contas do Prefeito de Ribeirão do Pinhal, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "305",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 305/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "198060/2019",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2020-08-03",
+   "data_publicacao": "2020-08-12",
+   "publicacao_literal": "DETC nº 2359",
+   "entidade_literal": "MUNICÍPIO DE RIBEIRÃO DO PINHAL",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio recomendando a irregularidade",
+    "conclusao_literal": "expedir parecer prévio recomendando a irregularidade das contas do Sr. Wagner Luiz Oliveira Martins como Prefeito de Ribeirão do Pinhal no exercício de 2018, em razão de “resultado orçamentário negativo das fontes não vinculada (- 9,57%)”, com base no disposto no art. 16, III, “b”, da LC/PR 113/05;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Ribeirão do Pinhal",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 305/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/8/00350012.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "5ded8b47ba3a6fe0700064d47308a37bc8ccdc024b3f5688ec1c94f3808a63f2",
+    "paginas_lidas": 2,
+    "total_paginas": 6,
+    "deliberacao": "ACORDAM Os membros da PRIMEIRA CÂMARA do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: I. expedir parecer prévio recomendando a irregularidade das contas do Sr. Wagner Luiz Oliveira Martins como Prefeito de Ribeirão do Pinhal no exercício de 2018, em razão de “resultado orçamentário negativo das fontes não vinculada (- 9,57%)”, com base no disposto no art. 16, III, “b”, da LC/PR 113/05; II. determinar que o item “divergências de saldos em quaisquer das classes ou grupos do Balanço Patrimonial emitido pelo Sistema de Contabilidade da Entidade e os dados enviados pelo SIM/AM” seja retirado do escopo das contas, em razão de ser de responsabilidade do responsável técnico contábil, Sr. Marcelo Corinth, com e […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "expedir parecer prévio recomendando a irregularidade das contas do Sr. Wagner Luiz Oliveira Martins como Prefeito de Ribeirão do Pinhal no exercício de 2018, em razão de “resultado orçamentário negativo das fontes não vinculada (- 9,57%)”, com base no disposto no art. 16, III, “b”, da LC/PR 113/05;",
+    "conclusao": "parecer prévio recomendando a irregularidade",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Ribeirão do Pinhal não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-4-00336007",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 87/2019 da Secretaria Segunda Câmara — contas do Prefeito de Ribeirão do Pinhal, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "87",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 87/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "304117/2018",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2019-04-09",
+   "data_publicacao": "2019-04-25",
+   "publicacao_literal": "DETC nº 2045",
+   "entidade_literal": "MUNICÍPIO DE RIBEIRÃO DO PINHAL",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Emitir Parecer Prévio, com fundamento no art. 16, inciso II, da Lei Complementar Estadual n° 113/20055, recomendando a regularidade das contas apresentadas pelo Prefeito do Município de Ribeirão do Pinhal, referente ao exercício de 2017, com ressalva em razão da regularização tardia da divergência entre saldos do balanço patrimonial e os dados enviados pelo SIM-AM, atraso na publicação do Relatório de Gestão Fiscal, bem como ao atraso na entrega dos dados do SIM-AM.",
+    "conclusao_literal": "Emitir Parecer Prévio, com fundamento no art. 16, inciso II, da Lei Complementar Estadual n° 113/20055, recomendando a regularidade das contas apresentadas pelo Prefeito do Município de Ribeirão do Pinhal, referente ao exercício de 2017, com ressalva em razão da regularização tardia da divergência entre saldos do balanço patrimonial e os dados enviados pelo SIM-AM, atraso na publicação do Relatório de Gestão Fiscal, bem como ao atraso na entrega dos dados do SIM-AM.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Ribeirão do Pinhal",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 87/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/4/00336007.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "27c67055da704bfcf251009c31ceafc345ae82308d87cf78b7070557b6f1ab93",
+    "paginas_lidas": 3,
+    "total_paginas": 6,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: II – regulares com ressalva, quando evidenciarem impropriedade ou qualquer outra falta de natureza formal, da qual não resulte dano ao erário ou à execução do programa, ato ou gestão;” I- Emitir Parecer Prévio, com fundamento no art. 16, inciso II, da Lei Complementar Estadual n° 113/20055, recomendando a regularidade das contas apresentadas pelo Prefeito do Município de Ribeirão do Pinhal, referente ao exercício de 2017, com ressalva em razão da regularização tardia da divergência entre saldos do balanço patrimonial e os dados enviados pelo SIM-AM, atraso na publicação do Relatório de Gestão Fiscal, bem como ao atraso na entreg […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio, com fundamento no art. 16, inciso II, da Lei Complementar Estadual n° 113/20055, recomendando a regularidade das contas apresentadas pelo Prefeito do Município de Ribeirão do Pinhal, referente ao exercício de 2017, com ressalva em razão da regularização tardia da divergência entre saldos do balanço patrimonial e os dados enviados pelo SIM-AM, atraso na publicação do Relatório de Gestão Fiscal, bem como ao atraso na entrega dos dados do SIM-AM.",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Ribeirão do Pinhal não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-7-00338445",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 160/2019 da Secretaria Segunda Câmara — contas do Prefeito de Ribeirão do Pinhal, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "160",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 160/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "311047/2017",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2019-07-23",
+   "data_publicacao": "2019-07-30",
+   "publicacao_literal": "DETC nº 2110",
+   "entidade_literal": "MUNICÍPIO DE RIBEIRÃO DO PINHAL",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio recomendando a irregularidade",
+    "conclusao_literal": "emitir parecer prévio recomendando a irregularidade das contas do Município de Ribeirão do Pinhal, referentes ao exercício de 2016, sob responsabilidade de Dartagnan Calixto Fraiz, nos termos dos artigos 1º, inciso I,19 e 16, inciso III, alínea “b”,20 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise da prestação de contas:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Ribeirão do Pinhal",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 160/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/7/00338445.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "28bac9a99127088333dcfa15271a7495579ca69bb32624036a734ae245eab0a2",
+    "paginas_lidas": 3,
+    "total_paginas": 14,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por maioria absoluta, em: I. emitir parecer prévio recomendando a irregularidade das contas do Município de Ribeirão do Pinhal, referentes ao exercício de 2016, sob responsabilidade de Dartagnan Calixto Fraiz, nos termos dos artigos 1º, inciso I,19 e 16, inciso III, alínea “b”,20 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise da prestação de contas: (a) ausência publicação dos RREOs dos 1° e 2° bimestres de 2016, (b) ausência de publicação do Relatório de Gestão Fiscal - RGF do Primeiro Semestre do exercício de 2016, (c) divergências de saldos do balanço patrimonial entre os 18 Art. […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "emitir parecer prévio recomendando a irregularidade das contas do Município de Ribeirão do Pinhal, referentes ao exercício de 2016, sob responsabilidade de Dartagnan Calixto Fraiz, nos termos dos artigos 1º, inciso I,19 e 16, inciso III, alínea “b”,20 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise da prestação de contas:",
+    "conclusao": "parecer prévio recomendando a irregularidade",
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Ribeirão do Pinhal não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2021-165-primeiracmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 165/2021 da Secretaria Primeira Câmara — contas do Prefeito de Ribeirão do Pinhal",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "165",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 165/2021 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "265670/2020",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2021-05-17",
+   "data_publicacao": "2021-05-31",
+   "publicacao_literal": "DETC nº 2550",
+   "entidade_literal": "MUNICÍPIO DE RIBEIRÃO DO PINHAL",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Ribeirão do Pinhal",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Ribeirão do Pinhal não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

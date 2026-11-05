@@ -1,0 +1,673 @@
+{
+ "atualizado_em": "2026-11-05T13:56:47.833Z",
+ "municipio": {
+  "id": "santa-izabel-do-oeste",
+  "nome": "Santa Izabel do Oeste",
+  "uf": "PR",
+  "codigo_ibge": "4123808"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2016,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 8,
+  "pareceres": 8,
+  "com_parecer_em_fonte_aberta": 8,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 8,
+  "pdf_lido": 8,
+  "sem_exercicio_na_fonte": 0
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f68ca8a9b64d6286d5f605b923705fb7602cf450e7408d143f7545e514359bfb",
+   "atualizado_na_fonte": "05/06/2026 00:00:40"
+  },
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "3b7fb76a75413d34e4541e63dccfa3cab923f7d498fc63703a156f2f00d63a4c",
+   "atualizado_na_fonte": "26/06/2025 14:58:07"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2026-3-000201093",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 95/2026 — contas do Prefeito de Santa Izabel do Oeste, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "95",
+    "ano": "2026",
+    "titulo_oficial": "Parecer Prévio 95/2026"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "183397/2025",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2026-03-02",
+   "data_publicacao": "2026-03-19",
+   "publicacao_literal": "DETC nº 3637",
+   "entidade_literal": "MUNICÍPIO DE SANTA IZABEL DO OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JEAN PIERR CATTO, na qualidade de prefeito do MUNICÍPIO DE SANTA IZABEL DO OESTE, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Izabel do Oeste",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 95/2026 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2026/3/000201093.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "6b903d583337bfea7d0c8b2d5228c66f39018ad50f2ce4b4f298528f23c7df54",
+    "paginas_lidas": 1,
+    "total_paginas": 49,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por maioria absoluta: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JEAN PIERR CATTO, na qualidade de prefeito do MUNICÍPIO DE SANTA IZABEL DO OESTE, relativas ao exercício de 2024. b. RESSALVAR as contas em virtude de: i. aportes para cobertura do déficit atuarial em montante inferior ao previsto no resultado de avaliação atuarial, resultando em descumprimento do disposto no artigo 9º da Lei Federal n.º 9.717/1998 e nos artigos 53, § 1º, e 55, da Portaria MF n.º 464/2018. ii. baixo desempenho evidenciado na avaliação da atuação governamental na área da Administração Financeira. c. Autorizar a alteração extemporânea de resposta […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JEAN PIERR CATTO, na qualidade de prefeito do MUNICÍPIO DE SANTA IZABEL DO OESTE, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2026,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Izabel do Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2025-7-000198500",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 210/2025 — contas do Prefeito de Santa Izabel do Oeste, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "210",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 210/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "225029/2024",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2025-07-07",
+   "data_publicacao": "2025-07-18",
+   "publicacao_literal": "DETC nº 3486",
+   "entidade_literal": "MUNICÍPIO DE SANTA IZABEL DO OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor JEAN PIERR CATTO, na qualidade de prefeito do MUNICÍPIO DE SANTA IZABEL DO OESTE, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Izabel do Oeste",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 210/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/7/000198500.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "22d7d456e75d796c125155373517e96ef9f06497ab62c149be3f40ef097731eb",
+    "paginas_lidas": 1,
+    "total_paginas": 46,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor JEAN PIERR CATTO, na qualidade de prefeito do MUNICÍPIO DE SANTA IZABEL DO OESTE, relativas ao exercício de 2023. b. RESSALVAR as contas em virtude de: i. baixo desempenho evidenciado na avaliação da atuação governamental na área da Transparência e Relacionamento com o Cidadão. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos term […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor JEAN PIERR CATTO, na qualidade de prefeito do MUNICÍPIO DE SANTA IZABEL DO OESTE, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Izabel do Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-5-00385594",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 238/2024 — contas do Prefeito de Santa Izabel do Oeste, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "238",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 238/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "222875/2023",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2024-05-13",
+   "data_publicacao": "2024-05-27",
+   "publicacao_literal": "DETC nº 3217",
+   "entidade_literal": "MUNICÍPIO DE SANTA IZABEL DO OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) JEAN PIERR CATTO, na qualidade de prefeito(a) do MUNICÍPIO DE SANTA IZABEL DO OESTE, relativas ao exercício de 2022.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Izabel do Oeste",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 238/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/5/00385594.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "7711e8585c5ce654617d6ef0bdd0693c2feb3b43acdcaf550fa0c2ecd2e9c5f2",
+    "paginas_lidas": 1,
+    "total_paginas": 36,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) JEAN PIERR CATTO, na qualidade de prefeito(a) do MUNICÍPIO DE SANTA IZABEL DO OESTE, relativas ao exercício de 2022. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, §6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) JEAN PIERR CATTO, na qualidade de prefeito(a) do MUNICÍPIO DE SANTA IZABEL DO OESTE, relativas ao exercício de 2022.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Izabel do Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-6-00385671",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 60/2024 da Secretaria Primeira Câmara — contas do Prefeito de Santa Izabel do Oeste, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "60",
+    "ano": "2024",
+    "titulo_oficial": "Acórdão de Parecer Prévio 60/2024 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "222405/2022",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2024-05-13",
+   "data_publicacao": "2024-06-03",
+   "publicacao_literal": "DETC nº 3220",
+   "entidade_literal": "MUNICÍPIO DE SANTA IZABEL DO OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de SANTA IZABEL DO OESTE, Sr. Jean Pierr Catto, relativas ao exercício financeiro de 2021, com ressalvas em face da ausência de aplicação de no mínimo 70% dos recursos do FUNDEB na remuneração dos profissionais da educação básica e a ausência de aplicação de no mínimo 90% dos recursos do FUNDEB no exercício da arrecadação.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Izabel do Oeste",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 60/2024 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/6/00385671.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "f535d6052bc84506fbade168c89dcc4680bbeda7a6d808f231dea3d98d4dd255",
+    "paginas_lidas": 2,
+    "total_paginas": 9,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de SANTA IZABEL DO OESTE, Sr. Jean Pierr Catto, relativas ao exercício financeiro de 2021, com ressalvas em face da ausência de aplicação de no mínimo 70% dos recursos do FUNDEB na remuneração dos profissionais da educação básica e a ausência de aplicação de no mínimo 90% dos recursos do FUNDEB no exercício da arrecadação. II. Determinar, após o trânsito em julgado da decisão, as seguintes medidas: a) o encaminhamento dos autos à Coordenadoria de Monitoramento e Execuções, nos termos do artigo 175-L, I, do Regimento […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de SANTA IZABEL DO OESTE, Sr. Jean Pierr Catto, relativas ao exercício financeiro de 2021, com ressalvas em face da ausência de aplicação de no mínimo 70% dos recursos do FUNDEB na remuneração dos profissionais da educação básica e a ausência de aplicação de no mínimo 90% dos recursos do FUNDEB no exercício da arrecadação.",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Izabel do Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2022-2-00364056",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 16/2022 da Secretaria Segunda Câmara — contas do Prefeito de Santa Izabel do Oeste, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "16",
+    "ano": "2022",
+    "titulo_oficial": "Acórdão de Parecer Prévio 16/2022 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "191506/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2022-01-24",
+   "data_publicacao": "2022-02-04",
+   "publicacao_literal": "DETC nº 2704",
+   "entidade_literal": "MUNICÍPIO DE SANTA IZABEL DO OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Emitir Parecer Prévio deste Tribunal, recomendando o julgamento pela regularidade das contas do Sr. Moacir Fiamoncini (gestor nos períodos de 01.01.2017 a 09.09.2020 e 10.10.2020 a 31.12.2020) e do Sr. Luiz Carlos Chichocki (gestor no período de 10.09.2020 a 09.10.2020), ambos prefeitos do Município de Santa Izabel do Oeste, relativas ao exercício financeiro de 2020, com fundamento no art. 1º, I, combinado com o art. 16, I, da Lei Complementar Estadual nº 113/2005;",
+    "conclusao_literal": "Emitir Parecer Prévio deste Tribunal, recomendando o julgamento pela regularidade das contas do Sr. Moacir Fiamoncini (gestor nos períodos de 01.01.2017 a 09.09.2020 e 10.10.2020 a 31.12.2020) e do Sr. Luiz Carlos Chichocki (gestor no período de 10.09.2020 a 09.10.2020), ambos prefeitos do Município de Santa Izabel do Oeste, relativas ao exercício financeiro de 2020, com fundamento no art. 1º, I, combinado com o art. 16, I, da Lei Complementar Estadual nº 113/2005;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Izabel do Oeste",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 16/2022 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2022/2/00364056.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "651fec931a08ad7a72a2adbd171953781a504ba87b0a9bd0b5ea38f722836c93",
+    "paginas_lidas": 2,
+    "total_paginas": 3,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade, em: I – Emitir Parecer Prévio deste Tribunal, recomendando o julgamento pela regularidade das contas do Sr. Moacir Fiamoncini (gestor nos períodos de 01.01.2017 a 09.09.2020 e 10.10.2020 a 31.12.2020) e do Sr. Luiz Carlos Chichocki (gestor no período de 10.09.2020 a 09.10.2020), ambos prefeitos do Município de Santa Izabel do Oeste, relativas ao exercício financeiro de 2020, com fundamento no art. 1º, I, combinado com o art. 16, I, da Lei Complementar Estadual nº 113/2005; II – determinar, após o trânsito em julgado, a remessa dos autos ao Gabinete da Presidência, para as providências contidas no §6º do art. 217-A do Regiment […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio deste Tribunal, recomendando o julgamento pela regularidade das contas do Sr. Moacir Fiamoncini (gestor nos períodos de 01.01.2017 a 09.09.2020 e 10.10.2020 a 31.12.2020) e do Sr. Luiz Carlos Chichocki (gestor no período de 10.09.2020 a 09.10.2020), ambos prefeitos do Município de Santa Izabel do Oeste, relativas ao exercício financeiro de 2020, com fundamento no art. 1º, I, combinado com o art. 16, I, da Lei Complementar Estadual nº 113/2005;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício financeiro de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2022,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Izabel do Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-10-00350726",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 492/2020 da Secretaria Primeira Câmara — contas do Prefeito de Santa Izabel do Oeste, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "492",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 492/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "256795/2020",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2020-09-28",
+   "data_publicacao": "2020-10-08",
+   "publicacao_literal": "DETC nº 2398",
+   "entidade_literal": "MUNICÍPIO DE SANTA IZABEL DO OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de SANTA IZABEL DO OESTE, Sr. MOACIR FIAMONCINI (CPF 031.907.239-82), relativas ao exercício financeiro de 2019;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Izabel do Oeste",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 492/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/10/00350726.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "c5860eb2027193e59f64bca53188485f13749b55b4005f7bea9bae2f6927182e",
+    "paginas_lidas": 2,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de SANTA IZABEL DO OESTE, Sr. MOACIR FIAMONCINI (CPF 031.907.239-82), relativas ao exercício financeiro de 2019; II. Determinar, após o trânsito em julgado da decisão, as seguintes medidas: a) o encaminhamento dos autos ao Gabinete da Presidência para expedição de ofício à Câmara Municipal, comunicando a decisão, com a respectiva disponibilização do processo eletrônico, conforme §6º do art. 217-A, do Regimento Interno; b) Em seguida, à Diretoria do Protocolo para o encerramento dos autos, nos termos do art. 398 do R […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de SANTA IZABEL DO OESTE, Sr. MOACIR FIAMONCINI (CPF 031.907.239-82), relativas ao exercício financeiro de 2019;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício financeiro de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Izabel do Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-1-00342939",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 642/2019 da Secretaria Segunda Câmara — contas do Prefeito de Santa Izabel do Oeste, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "642",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 642/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "200790/2019",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2019-12-17",
+   "data_publicacao": "2020-01-22",
+   "publicacao_literal": "DETC nº 2224",
+   "entidade_literal": "MUNICÍPIO DE SANTA IZABEL DO OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.º 113/2005, recomendando a regularidade das contas do Prefeito Municipal de Santa Izabel do Oeste, exercício de 2018, senhor Moacir Fiamoncini, CPF n.º 031.907.239-82, Gestor da Entidade no exercício;",
+    "conclusao_literal": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.º 113/2005, recomendando a regularidade das contas do Prefeito Municipal de Santa Izabel do Oeste, exercício de 2018, senhor Moacir Fiamoncini, CPF n.º 031.907.239-82, Gestor da Entidade no exercício;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Izabel do Oeste",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 642/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/1/00342939.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "14d75b0f9948141ef97e8d1e21b9c3400bbf5d5500448546ff032951925b1a30",
+    "paginas_lidas": 1,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: I- emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.º 113/2005, recomendando a regularidade das contas do Prefeito Municipal de Santa Izabel do Oeste, exercício de 2018, senhor Moacir Fiamoncini, CPF n.º 031.907.239-82, Gestor da Entidade no exercício; II- encaminhar os autos, após o trânsito em julgado, ao Gabinete da Presidência para comunicação da deliberação ao Poder Legislativo Municipal. Autorizar, na sequência, o encerramento do feito, em conformidade com o artigo 398, § 1.º, do Regimento Interno e seu arquivamento na Diretoria de Protocolo.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.º 113/2005, recomendando a regularidade das contas do Prefeito Municipal de Santa Izabel do Oeste, exercício de 2018, senhor Moacir Fiamoncini, CPF n.º 031.907.239-82, Gestor da Entidade no exercício;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Izabel do Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-12-00342083",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 571/2019 da Secretaria Primeira Câmara — contas do Prefeito de Santa Izabel do Oeste, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "571",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 571/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "254698/2017",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2019-12-02",
+   "data_publicacao": "2019-12-09",
+   "publicacao_literal": "DETC nº 2202",
+   "entidade_literal": "MUNICÍPIO DE SANTA IZABEL DO OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio pela regularidade",
+    "conclusao_literal": "emitir parecer prévio pela regularidade das contas do MUNICÍPIO DE SANTA IZABEL DO OESTE, CNPJ 76.205.715/0001-42, relativa ao exercício financeiro de 2016, de responsabilidade do Sr. MOACIR FIAMONCINI, CPF 031.907.239-82, com base no disposto no art. 16, I, da LC/PR 113/05;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Santa Izabel do Oeste",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 571/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/12/00342083.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "899a62f78cff6f0690a9f1809869850f627241a541e6bc8d0b5e7ee86a5d01f9",
+    "paginas_lidas": 2,
+    "total_paginas": 4,
+    "deliberacao": "ACORDAM Os membros da PRIMEIRA CÂMARA do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: I. emitir parecer prévio pela regularidade das contas do MUNICÍPIO DE SANTA IZABEL DO OESTE, CNPJ 76.205.715/0001-42, relativa ao exercício financeiro de 2016, de responsabilidade do Sr. MOACIR FIAMONCINI, CPF 031.907.239-82, com base no disposto no art. 16, I, da LC/PR 113/05; II. determinar a expedição de recomendação ao Jurisdicionado, para que observe as normativas legais, visando implementar medidas para que os atrasos ora observados não venham a se repetir em futuras prestações de contas; III. determinar, após o trânsito em julgado da decisão, o encaminhamento à Coordenadoria de Monitoramento e Execuções para as […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir parecer prévio pela regularidade das contas do MUNICÍPIO DE SANTA IZABEL DO OESTE, CNPJ 76.205.715/0001-42, relativa ao exercício financeiro de 2016, de responsabilidade do Sr. MOACIR FIAMONCINI, CPF 031.907.239-82, com base no disposto no art. 16, I, da LC/PR 113/05;",
+    "conclusao": "parecer prévio pela regularidade",
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício financeiro de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Santa Izabel do Oeste não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [],
+ "acordaos_relacionados": []
+}

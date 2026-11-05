@@ -1,0 +1,732 @@
+{
+ "atualizado_em": "2026-11-05T14:30:28.406Z",
+ "municipio": {
+  "id": "figueira",
+  "nome": "Figueira",
+  "uf": "PR",
+  "codigo_ibge": "4107751"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2013,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 8,
+  "pareceres": 9,
+  "com_parecer_em_fonte_aberta": 8,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 8,
+  "pdf_lido": 8,
+  "sem_exercicio_na_fonte": 1
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "3b7fb76a75413d34e4541e63dccfa3cab923f7d498fc63703a156f2f00d63a4c",
+   "atualizado_na_fonte": "26/06/2025 14:58:07"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2025-11-000200122",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 371/2025 — contas do Prefeito de Figueira, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "371",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 371/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "171070/2025",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2025-11-10",
+   "data_publicacao": "2025-11-25",
+   "publicacao_literal": "DETC nº 3574",
+   "entidade_literal": "MUNICÍPIO DE FIGUEIRA",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JOSE CARLOS CONTIERO, na qualidade de prefeito do MUNICÍPIO DE FIGUEIRA, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Figueira",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 371/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/11/000200122.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "fc96b84168f79ca532a506dd9bc48240e3c9a096f6994c29cff3d402a72f1604",
+    "paginas_lidas": 1,
+    "total_paginas": 45,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JOSE CARLOS CONTIERO, na qualidade de prefeito do MUNICÍPIO DE FIGUEIRA, relativas ao exercício de 2024. b. RESSALVAR as contas em virtude do: i. desempenho evidenciado na avaliação da atuação governamental na área da Saúde. ii. desempenho evidenciado na avaliação da atuação governamental na área da Assistência Social. iii. desempenho evidenciado na avaliação da atuação governamental na área da Transparência e Relacionamento com o Cidadão. iv. desempenho evidenciado na avaliação da atuação governamental na área da Administração Financeira. Após o trânsito em […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JOSE CARLOS CONTIERO, na qualidade de prefeito do MUNICÍPIO DE FIGUEIRA, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Figueira não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-10-00388879",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 356/2024 — contas do Prefeito de Figueira, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "356",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 356/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "193046/2024",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2024-09-30",
+   "data_publicacao": "2024-10-08",
+   "publicacao_literal": "DETC nº 3311",
+   "entidade_literal": "MUNICÍPIO DE FIGUEIRA",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JOSE CARLOS CONTIERO, na qualidade de prefeito do MUNICÍPIO DE FIGUEIRA, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Figueira",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 356/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/10/00388879.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "b8311c23a39a2f348b3018a69a4ab1495eb97ee18c3339fedbca0f8542ff8a48",
+    "paginas_lidas": 1,
+    "total_paginas": 44,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JOSE CARLOS CONTIERO, na qualidade de prefeito do MUNICÍPIO DE FIGUEIRA, relativas ao exercício de 2023. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, § 6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JOSE CARLOS CONTIERO, na qualidade de prefeito do MUNICÍPIO DE FIGUEIRA, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Figueira não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-3-00382547",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 25/2024 — contas do Prefeito de Figueira, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "25",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 25/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "154276/2023",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "AUGUSTINHO ZUCCHI",
+   "data_julgamento": "2024-01-29",
+   "data_publicacao": "2024-03-04",
+   "publicacao_literal": "DETC nº 3162",
+   "entidade_literal": "MUNICÍPIO DE FIGUEIRA",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JOSE CARLOS CONTIERO, na qualidade de prefeito do MUNICÍPIO DE FIGUEIRA, relativas ao exercício de 2022.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Figueira",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 25/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/3/00382547.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "c2b51c9e890acaea3d2a3718ac96a4332455265e28249fa46bfcb141ce45e5b2",
+    "paginas_lidas": 1,
+    "total_paginas": 30,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro AUGUSTINHO ZUCCHI, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JOSE CARLOS CONTIERO, na qualidade de prefeito do MUNICÍPIO DE FIGUEIRA, relativas ao exercício de 2022. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, §6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor JOSE CARLOS CONTIERO, na qualidade de prefeito do MUNICÍPIO DE FIGUEIRA, relativas ao exercício de 2022.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Figueira não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-5-00374490",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 217/2023 da Secretaria Segunda Câmara — contas do Prefeito de Figueira, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "217",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 217/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "204105/2022",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2023-05-15",
+   "data_publicacao": "2023-05-26",
+   "publicacao_literal": "DETC nº 2988",
+   "entidade_literal": "MUNICÍPIO DE FIGUEIRA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade das contas do Município de Figueira, referentes ao exercício financeiro de 2021;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Figueira",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 217/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/5/00374490.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "61a9d29812a6b49fc3854c4018eb988357f89e95a0dc9261e09df6b1133871de",
+    "paginas_lidas": 1,
+    "total_paginas": 3,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I- Emitir Parecer Prévio recomendando a regularidade das contas do Município de Figueira, referentes ao exercício financeiro de 2021; e II- realizar, após o trânsito em julgado, os registros pertinentes, com as devidas comunicações, ficando autorizado, depois das providências, o encerramento do feito e seu arquivamento junto à Diretoria de Protocolo.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade das contas do Município de Figueira, referentes ao exercício financeiro de 2021;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Figueira não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2022-8-00368376",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 138/2022 da Secretaria Segunda Câmara — contas do Prefeito de Figueira, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "138",
+    "ano": "2022",
+    "titulo_oficial": "Acórdão de Parecer Prévio 138/2022 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "146420/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "NESTOR BAPTISTA",
+   "data_julgamento": "2022-07-25",
+   "data_publicacao": "2022-08-03",
+   "publicacao_literal": "DETC nº 2806",
+   "entidade_literal": "MUNICÍPIO DE FIGUEIRA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Emitir, com fundamento no art. 1º, I, c/c art. 16, I, todos da Lei Complementar Estadual nº 113/2005, Parecer Prévio deste Tribunal, recomendando o julgamento pela REGULARIDADE das contas do Município de Figueira relativas ao exercício financeiro de 2020, de responsabilidade do Sr. Valdir Garcia;",
+    "conclusao_literal": "Emitir, com fundamento no art. 1º, I, c/c art. 16, I, todos da Lei Complementar Estadual nº 113/2005, Parecer Prévio deste Tribunal, recomendando o julgamento pela REGULARIDADE das contas do Município de Figueira relativas ao exercício financeiro de 2020, de responsabilidade do Sr. Valdir Garcia;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Figueira",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 138/2022 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2022/8/00368376.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "7bf43f4f5aa0ec50b0e8c8744b398e8650d1846eb5b0a23628f7291a52cb7b5f",
+    "paginas_lidas": 1,
+    "total_paginas": 4,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro NESTOR BAPTISTA, por unanimidade, em: I - Emitir, com fundamento no art. 1º, I, c/c art. 16, I, todos da Lei Complementar Estadual nº 113/2005, Parecer Prévio deste Tribunal, recomendando o julgamento pela REGULARIDADE das contas do Município de Figueira relativas ao exercício financeiro de 2020, de responsabilidade do Sr. Valdir Garcia; II – determinar, após o trânsito em julgado do presente, a remessa dos autos ao Gabinete da Presidência (GP) para comunicação ao Poder Legislativo do Município, nos termos do artigo 217-A, §6° do Regimento Interno; III – encaminhar à Diretoria de Protocolo (DP) para encerramento e arquivamento dos autos.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir, com fundamento no art. 1º, I, c/c art. 16, I, todos da Lei Complementar Estadual nº 113/2005, Parecer Prévio deste Tribunal, recomendando o julgamento pela REGULARIDADE das contas do Município de Figueira relativas ao exercício financeiro de 2020, de responsabilidade do Sr. Valdir Garcia;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício financeiro de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2022,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Figueira não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-10-00340458",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 361/2019 da Secretaria Primeira Câmara — contas do Prefeito de Figueira, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "361",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 361/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "190832/2019",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2019-09-30",
+   "data_publicacao": "2019-10-04",
+   "publicacao_literal": "DETC nº 2158",
+   "entidade_literal": "MUNICÍPIO DE FIGUEIRA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de FIGUEIRA, Sr. Valdir Garcia, relativas ao exercício financeiro de 2018.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Figueira",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 361/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/10/00340458.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "33b889f9d51c182d4cb95fe2111293666c2c6fe2593633a793d4426e458ff1e0",
+    "paginas_lidas": 2,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de FIGUEIRA, Sr. Valdir Garcia, relativas ao exercício financeiro de 2018. II. Determinar, após o trânsito em julgado da decisão, as seguintes medidas: a) a expedição de ofício à Câmara Municipal, comunicando a decisão, com a respectiva disponibilização do processo eletrônico; b) o encerramento dos autos, nos termos do art. 398 do Regimento Interno do TCE-PR.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de FIGUEIRA, Sr. Valdir Garcia, relativas ao exercício financeiro de 2018.",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício financeiro de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Figueira não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-2-00334543",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 19/2019 da Secretaria Primeira Câmara — contas do Prefeito de Figueira, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "19",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 19/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "273610/2018",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2019-02-11",
+   "data_publicacao": "2019-02-14",
+   "publicacao_literal": "DETC nº 2000",
+   "entidade_literal": "MUNICÍPIO DE FIGUEIRA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando o julgamento pela regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do Poder Executivo do Município de Figueira, referente ao exercício financeiro de 2017, de responsabilidade do senhor Valdir Garcia, ressalvando:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Figueira",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 19/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/2/00334543.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "39393604c0a7c461e58e598db1349cb9dbcda4c5020f72a0a774152ce470d8f2",
+    "paginas_lidas": 2,
+    "total_paginas": 4,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: 2 Art. 398. Todos os processos autuados no Tribunal permanecerão no sistema, segundo as regras de gestão documental para a sua guarda e disponibilização. (...) § 4º Os processos julgados regulares com ressalvas, ou contendo determinações e recomendações, após as devidas anotações e cumprimento das eventuais comunicações, serão encerrados, mediante despacho do Relator. I – Emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do Poder Executivo do Município de Figueira, referente ao exercício financeiro de 2017, de responsabilidade do senhor Valdir Garcia, ressalvando: (i) o atraso na publicação do Rel […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do Poder Executivo do Município de Figueira, referente ao exercício financeiro de 2017, de responsabilidade do senhor Valdir Garcia, ressalvando:",
+    "conclusao": "Parecer Prévio recomendando o julgamento pela regularidade",
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício financeiro de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Figueira não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-2-00334345",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 4/2019 da Secretaria Segunda Câmara — contas do Prefeito de Figueira, exercício 2013",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "4",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 4/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "263238/2014",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2019-01-29",
+   "data_publicacao": "2019-02-05",
+   "publicacao_literal": "DETC nº 1993",
+   "entidade_literal": "MUNICÍPIO DE FIGUEIRA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "PARECER PRÉVIO recomendando o julgamento pela REGULARIDADE",
+    "conclusao_literal": "EMITIR, na forma do artigo 23, da Lei Complementar n° 113/2005, PARECER PRÉVIO recomendando o julgamento pela REGULARIDADE das contas do PREFEITO MUNICIPAL DE FIGUEIRA, exercício de 2013, Sr. Valdir Garcia, CPF 983.076.739-68, com RESSALVAS em decorrência das Contas bancárias com saldos a descoberto e, também, em razão do Não atingimento do índice mínimo de 60% dos Recursos do FUNDEB na remuneração do Magistério.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Figueira",
+    "exercicio": "2013",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 4/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/2/00334345.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "1f5b2412bcd49ebad10cd74852e8b1b87a993ae2b394879c3d992eb2b658194c",
+    "paginas_lidas": 1,
+    "total_paginas": 9,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: 1) EMITIR, na forma do artigo 23, da Lei Complementar n° 113/2005, PARECER PRÉVIO recomendando o julgamento pela REGULARIDADE das contas do PREFEITO MUNICIPAL DE FIGUEIRA, exercício de 2013, Sr. Valdir Garcia, CPF 983.076.739-68, com RESSALVAS em decorrência das Contas bancárias com saldos a descoberto e, também, em razão do Não atingimento do índice mínimo de 60% dos Recursos do FUNDEB na remuneração do Magistério. 2) Encaminhar os autos à Coordenadoria de Monitoramento e Execuções (CMEX) para providências, nos termos do artigo 301 [parágrafo único] do Regimento Interno, tendo em vista o artigo 28 da Lei Orgânica e os artig […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "EMITIR, na forma do artigo 23, da Lei Complementar n° 113/2005, PARECER PRÉVIO recomendando o julgamento pela REGULARIDADE das contas do PREFEITO MUNICIPAL DE FIGUEIRA, exercício de 2013, Sr. Valdir Garcia, CPF 983.076.739-68, com RESSALVAS em decorrência das Contas bancárias com saldos a descoberto e, também, em razão do Não atingimento do índice mínimo de 60% dos Recursos do FUNDEB na remuneração do Magistério.",
+    "conclusao": "PARECER PRÉVIO recomendando o julgamento pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2013,
+     "trecho": "exercício de 2013"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Figueira não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2021-17-segundacmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 17/2021 da Secretaria Segunda Câmara — contas do Prefeito de Figueira",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "17",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 17/2021 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "255403/2020",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2021-02-08",
+   "data_publicacao": "2021-02-23",
+   "publicacao_literal": "DETC nº 2484",
+   "entidade_literal": "MUNICÍPIO DE FIGUEIRA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Figueira",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Figueira não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

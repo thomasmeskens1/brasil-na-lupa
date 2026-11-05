@@ -1,0 +1,743 @@
+{
+ "atualizado_em": "2026-11-05T14:29:01.596Z",
+ "municipio": {
+  "id": "lindoeste",
+  "nome": "Lindoeste",
+  "uf": "PR",
+  "codigo_ibge": "4113452"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2017,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 8,
+  "pareceres": 9,
+  "com_parecer_em_fonte_aberta": 8,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 8,
+  "pdf_lido": 8,
+  "sem_exercicio_na_fonte": 1
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f68ca8a9b64d6286d5f605b923705fb7602cf450e7408d143f7545e514359bfb",
+   "atualizado_na_fonte": "05/06/2026 00:00:40"
+  },
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2026-3-000201015",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 78/2026 — contas do Prefeito de Lindoeste, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "78",
+    "ano": "2026",
+    "titulo_oficial": "Parecer Prévio 78/2026"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "158449/2025",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2026-03-02",
+   "data_publicacao": "2026-03-12",
+   "publicacao_literal": "DETC nº 3632",
+   "entidade_literal": "MUNICÍPIO DE LINDOESTE",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor SILVIO DE SOUZA, na qualidade de prefeito do MUNICÍPIO DE LINDOESTE, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Lindoeste",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 78/2026 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2026/3/000201015.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "1c6f61e78b151c55d5f5d6579064076d9f05f5f7a9f1fb3007615e684d87a463",
+    "paginas_lidas": 1,
+    "total_paginas": 47,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor SILVIO DE SOUZA, na qualidade de prefeito do MUNICÍPIO DE LINDOESTE, relativas ao exercício de 2024. b. RESSALVAR, nesse momento, as contas em virtude do: i. desempenho evidenciado na avaliação da atuação governamental na área da Transparência e Relacionamento com o Cidadão, e ii. desempenho evidenciado na avaliação da atuação governamental na área da Administração Financeira. Após o trânsito em julgado da deliberação, encaminhem-se os autos ao Gabinete da Presidência para as providências contidas no § 6º do artigo 217-A do Regimento Interno, à Coordenadoria […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor SILVIO DE SOUZA, na qualidade de prefeito do MUNICÍPIO DE LINDOESTE, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2026,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Lindoeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2025-5-000197773",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 158/2025 — contas do Prefeito de Lindoeste, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "158",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 158/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "201227/2024",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2025-05-12",
+   "data_publicacao": "2025-05-21",
+   "publicacao_literal": "DETC nº 3446",
+   "entidade_literal": "MUNICÍPIO DE LINDOESTE",
+   "resumo_literal": null,
+   "indexacao_literal": "Irregularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela IRREGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela IRREGULARIDADE das contas do(a) senhor(a) SILVIO DE SOUZA, na qualidade de prefeito(a) do MUNICÍPIO DE LINDOESTE, relativas ao exercício de 2023, em razão de:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Lindoeste",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 158/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/5/000197773.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "e53128c89ac126afb7cc11ba8decbb7322ec56122434cb8cad85e37a322ed1bd",
+    "paginas_lidas": 1,
+    "total_paginas": 45,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: a. Emitir Parecer Prévio pela IRREGULARIDADE das contas do(a) senhor(a) SILVIO DE SOUZA, na qualidade de prefeito(a) do MUNICÍPIO DE LINDOESTE, relativas ao exercício de 2023, em razão de: i. descumprimento dos artigos 1º, § 1º, da LRF e 48, alínea b, da Lei Federal n.º 4.320/64, conforme indicado na análise do resultado orçamentário e financeiro. ii. a despesa total com pessoal superar os limites estabelecidos nos artigos 19 e 20 da Lei Complementar nº 101/2000 caracterizando a situação prevista no artigo 23 da mesma Lei. iii. descumprimento da Lei Federal n.º 14.113, de 2020, art. 27, pois não atingiu a aplicação de no mínimo 15% […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela IRREGULARIDADE das contas do(a) senhor(a) SILVIO DE SOUZA, na qualidade de prefeito(a) do MUNICÍPIO DE LINDOESTE, relativas ao exercício de 2023, em razão de:",
+    "conclusao": "Parecer Prévio pela IRREGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Lindoeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-4-00383849",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 151/2024 — contas do Prefeito de Lindoeste, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "151",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 151/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "134526/2023",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2024-04-15",
+   "data_publicacao": "2024-04-26",
+   "publicacao_literal": "DETC nº 3197",
+   "entidade_literal": "MUNICÍPIO DE LINDOESTE",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) SILVIO DE SOUZA, na qualidade de prefeito(a) do MUNICÍPIO DE LINDOESTE, relativas ao exercício de 2022, RESSALVANDO o déficit acumulado de 5,07% do resultado orçamentário e financeiro de fontes não vinculadas a programas, convênios, operações de crédito e ao Regime Próprio de Previdência Social.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Lindoeste",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 151/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/4/00383849.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "89a2572d3d2372f6412ebb2d0dbd9d2f1fc943b91456181631e9a95b05e2c1bb",
+    "paginas_lidas": 1,
+    "total_paginas": 34,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade: Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) SILVIO DE SOUZA, na qualidade de prefeito(a) do MUNICÍPIO DE LINDOESTE, relativas ao exercício de 2022, RESSALVANDO o déficit acumulado de 5,07% do resultado orçamentário e financeiro de fontes não vinculadas a programas, convênios, operações de crédito e ao Regime Próprio de Previdência Social. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos term […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) SILVIO DE SOUZA, na qualidade de prefeito(a) do MUNICÍPIO DE LINDOESTE, relativas ao exercício de 2022, RESSALVANDO o déficit acumulado de 5,07% do resultado orçamentário e financeiro de fontes não vinculadas a programas, convênios, operações de crédito e ao Regime Próprio de Previdência Social.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Lindoeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-8-00378247",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 337/2023 da Secretaria Segunda Câmara — contas do Prefeito de Lindoeste, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "337",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 337/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "171258/2022",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2023-07-24",
+   "data_publicacao": "2023-08-07",
+   "publicacao_literal": "DETC nº 3037",
+   "entidade_literal": "MUNICÍPIO DE LINDOESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a REGULARIDADE das contas do MUNICÍPIO DE LINDOESTE, exercício de 2021, de responsabilidade do Sr. SÍLVIO DA SILVA, CPF 913.358.179-72;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Lindoeste",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 337/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/8/00378247.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "0cf02342a4f1281cf87dec5ac8a6cbc0a0c5ba9c6c226ae568195f55168b1cad",
+    "paginas_lidas": 2,
+    "total_paginas": 9,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: 3 Art. 217-A. (...) § 6º Após o trânsito em julgado, a decisão será comunicada ao Poder Legislativo competente para o julgamento das contas, ficando o parecer prévio e demais documentos constantes do processo disponíveis para a consulta pública no sítio do Tribunal na internet. 4 Art. 398. Todos os processos autuados no Tribunal permanecerão no sistema, segundo as regras de gestão documental para a sua guarda e disponibilização. § 1º Proferida a decisão monocrática ou do órgão colegiado, com o respectivo trânsito em julgado e certificado seu integral cumprimento, o processo será encerrado, mediante despacho do relator. 5 Art […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a REGULARIDADE das contas do MUNICÍPIO DE LINDOESTE, exercício de 2021, de responsabilidade do Sr. SÍLVIO DA SILVA, CPF 913.358.179-72;",
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Lindoeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-9-00378926",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 375/2023 da Secretaria Segunda Câmara — contas do Prefeito de Lindoeste, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "375",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 375/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "177872/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2023-08-21",
+   "data_publicacao": "2023-09-01",
+   "publicacao_literal": "DETC nº 3056",
+   "entidade_literal": "MUNICÍPIO DE LINDOESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE",
+    "conclusao_literal": "emitir Parecer Prévio recomendando a REGULARIDADE das contas do MUNICÍPIO DE LINDOESTE, exercício de 2020, de responsabilidade de JOSÉ ROMUALDO PEDRO.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Lindoeste",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 375/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/9/00378926.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "b56b80b83710d9b7b4ba10fd4d03db587ea4b724d4b29848743cca9c4b5e74f1",
+    "paginas_lidas": 1,
+    "total_paginas": 9,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por maioria absoluta, em: - emitir Parecer Prévio recomendando a REGULARIDADE das contas do MUNICÍPIO DE LINDOESTE, exercício de 2020, de responsabilidade de JOSÉ ROMUALDO PEDRO.",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "emitir Parecer Prévio recomendando a REGULARIDADE das contas do MUNICÍPIO DE LINDOESTE, exercício de 2020, de responsabilidade de JOSÉ ROMUALDO PEDRO.",
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE",
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Lindoeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-11-00380597",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 490/2023 da Secretaria Primeira Câmara — contas do Prefeito de Lindoeste, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "490",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 490/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "269013/2020",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2023-10-30",
+   "data_publicacao": "2023-11-10",
+   "publicacao_literal": "DETC nº 3100",
+   "entidade_literal": "MUNICÍPIO DE LINDOESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio deste Tribunal recomendando o julgamento pela irregularidade",
+    "conclusao_literal": "Emitir com fundamento no artigo 1º, I, combinado com o art. 16, III, “b”, da Lei Complementar Estadual nº 113/2005, Parecer Prévio deste Tribunal recomendando o julgamento pela irregularidade das contas do Sr. JOSÉ ROMUALDO PEDRO, prefeito do Município de Lindoeste, relativas ao exercício de 2019, em virtude do déficit orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS (fontes livres), acumulado em 7,00%;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Lindoeste",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 490/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/11/00380597.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "9f67d509bbde86d89d642da94c3e30f201de31cc3497f762927f0ccb99eaf4c2",
+    "paginas_lidas": 2,
+    "total_paginas": 17,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade, em: I – Emitir com fundamento no artigo 1º, I, combinado com o art. 16, III, “b”, da Lei Complementar Estadual nº 113/2005, Parecer Prévio deste Tribunal recomendando o julgamento pela irregularidade das contas do Sr. JOSÉ ROMUALDO PEDRO, prefeito do Município de Lindoeste, relativas ao exercício de 2019, em virtude do déficit orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS (fontes livres), acumulado em 7,00%; II - aplicar contra o Sr. JOSÉ ROMUALDO PEDRO, a multa do art. 87, IV, “g”, da Lei Orgânica deste Tribunal; III – determinar, após o trânsito em julgado, a remessa […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir com fundamento no artigo 1º, I, combinado com o art. 16, III, “b”, da Lei Complementar Estadual nº 113/2005, Parecer Prévio deste Tribunal recomendando o julgamento pela irregularidade das contas do Sr. JOSÉ ROMUALDO PEDRO, prefeito do Município de Lindoeste, relativas ao exercício de 2019, em virtude do déficit orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS (fontes livres), acumulado em 7,00%;",
+    "conclusao": "Parecer Prévio deste Tribunal recomendando o julgamento pela irregularidade",
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Lindoeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-8-00349999",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 358/2020 da Secretaria Primeira Câmara — contas do Prefeito de Lindoeste, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "358",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 358/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "210370/2019",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2020-08-10",
+   "data_publicacao": "2020-08-24",
+   "publicacao_literal": "DETC nº 2367",
+   "entidade_literal": "MUNICÍPIO DE LINDOESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de LINDOESTE, Sr. José Romualdo Pedro, relativas ao exercício financeiro de 2018, com ressalva em face do resultado deficitário no exercício de -4,45%;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Lindoeste",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 358/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/8/00349999.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "ab45752cc419476ae1288908fba10e01e72d6c35d43a1266c9e888cda7d71e9c",
+    "paginas_lidas": 2,
+    "total_paginas": 5,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por maioria absoluta, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de LINDOESTE, Sr. José Romualdo Pedro, relativas ao exercício financeiro de 2018, com ressalva em face do resultado deficitário no exercício de -4,45%; II. Recomendar ao Município de Lindoeste, na pessoa de seu atual gestor, que observe os mecanismos previstos na Lei de Responsabilidade Fiscal voltados à efetividade da gestão fiscal responsável, notadamente em seu artigo 9°; III. Determinar, após o trânsito em julgado da decisão, as seguintes medidas: a) o encaminhamento dos autos à Coordenadoria de Monitoramen […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de LINDOESTE, Sr. José Romualdo Pedro, relativas ao exercício financeiro de 2018, com ressalva em face do resultado deficitário no exercício de -4,45%;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício financeiro de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Lindoeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-3-00343836",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 51/2020 da Secretaria Primeira Câmara — contas do Prefeito de Lindoeste, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "51",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 51/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "266959/2018",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2020-03-02",
+   "data_publicacao": "2020-03-06",
+   "publicacao_literal": "DETC nº 2253",
+   "entidade_literal": "MUNICÍPIO DE LINDOESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando o julgamento pela regularidade",
+    "conclusao_literal": "emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do senhor José Romualdo Pedro, chefe do Poder Executivo do Município de Lindoeste, referente ao exercício financeiro de 2017, ressalvando:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Lindoeste",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 51/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/3/00343836.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "999dfd09540a12288bb568bb1648abfdbadbee5338f47d3bdaba0be514c2f356",
+    "paginas_lidas": 2,
+    "total_paginas": 13,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I – emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do senhor José Romualdo Pedro, chefe do Poder Executivo do Município de Lindoeste, referente ao exercício financeiro de 2017, ressalvando: i) o resultado orçamentário/financeiro deficitário das fontes não vinculadas a programas, convênios, operações de créditos e RPPS; ii) o repasse de recursos financeiros ao Poder Legislativo acima do previsto constitucionalmente; iii) os atrasos nas publicações do Relatório Resumido da Execução Orçamentária – RREO do 5º bimestres do exercício de 2017 e do 6º bimestre do exercício de 2016; iv) o atraso na publ […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do senhor José Romualdo Pedro, chefe do Poder Executivo do Município de Lindoeste, referente ao exercício financeiro de 2017, ressalvando:",
+    "conclusao": "Parecer Prévio recomendando o julgamento pela regularidade",
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício financeiro de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Lindoeste não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2021-258-primeiracmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 258/2021 da Secretaria Primeira Câmara — contas do Prefeito de Lindoeste",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "258",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 258/2021 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "288533/2017",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2021-10-04",
+   "data_publicacao": "2021-10-26",
+   "publicacao_literal": "DETC nº 2649",
+   "entidade_literal": "MUNICÍPIO DE LINDOESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Lindoeste",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Lindoeste não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": [
+  {
+   "titulo": "Acórdão 1502/2021 da Secretaria Segunda Câmara",
+   "tipo": "Acórdão",
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_sessao": "2021-06-28",
+   "resumo_literal": "Prestação de Contas de Prefeito Municipal. Preliminar para reabertura do contraditório, para manifestação do gestor acerca do resultado financeiro negativo acumulado no exercício de - 7%, com encaminhamento à CGF e CGM, para providências.",
+   "url": null,
+   "ano_arquivo_fonte": 2021
+  }
+ ]
+}

@@ -1,0 +1,745 @@
+{
+ "atualizado_em": "2026-11-05T14:07:22.994Z",
+ "municipio": {
+  "id": "apucarana",
+  "nome": "Apucarana",
+  "uf": "PR",
+  "codigo_ibge": "4101408"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2016,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 9,
+  "pareceres": 9,
+  "com_parecer_em_fonte_aberta": 9,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 9,
+  "pdf_lido": 9,
+  "sem_exercicio_na_fonte": 0
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f68ca8a9b64d6286d5f605b923705fb7602cf450e7408d143f7545e514359bfb",
+   "atualizado_na_fonte": "05/06/2026 00:00:40"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "3b7fb76a75413d34e4541e63dccfa3cab923f7d498fc63703a156f2f00d63a4c",
+   "atualizado_na_fonte": "26/06/2025 14:58:07"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2026-2-000200530",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 12/2026 — contas do Prefeito de Apucarana, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "12",
+    "ano": "2026",
+    "titulo_oficial": "Parecer Prévio 12/2026"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "198912/2025",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2026-01-26",
+   "data_publicacao": "2026-02-05",
+   "publicacao_literal": "DETC nº 3610",
+   "entidade_literal": "MUNICÍPIO DE APUCARANA",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) SEBASTIAO FERREIRA MARTINS JUNIOR, na qualidade de prefeito(a) do MUNICÍPIO DE APUCARANA, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Apucarana",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 12/2026 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2026/2/000200530.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "a8eb8a08dffbf2cd750ced472f7d2b0836e5cdb759fcc08682f9c25e096d54c6",
+    "paginas_lidas": 1,
+    "total_paginas": 44,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: Considerando os fatos expostos no item de fundamentação, voto, com respaldo no artigo 1º, I, da Lei Complementar Estadual n.º 113/2005 e em observância ao artigo 217-A, caput, do Regimento Interno, no sentido de: a. Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) SEBASTIAO FERREIRA MARTINS JUNIOR, na qualidade de prefeito(a) do MUNICÍPIO DE APUCARANA, relativas ao exercício de 2024. b. RESSALVAR as contas em virtude de: i. baixo desempenho evidenciado na avaliação da atuação governamental na área da Assistência Social. ii. baixo desempenho evidenciado na avaliação da atuação governamental na área da Transparência […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) SEBASTIAO FERREIRA MARTINS JUNIOR, na qualidade de prefeito(a) do MUNICÍPIO DE APUCARANA, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2026,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Apucarana não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-12-00391369",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 430/2024 — contas do Prefeito de Apucarana, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "430",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 430/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "210455/2024",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2024-11-25",
+   "data_publicacao": "2024-12-09",
+   "publicacao_literal": "DETC nº 3352",
+   "entidade_literal": "MUNICÍPIO DE APUCARANA",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) SEBASTIAO FERREIRA MARTINS JUNIOR, na qualidade de prefeito(a) do MUNICÍPIO DE APUCARANA, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Apucarana",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 430/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/12/00391369.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "659388044b61fb1ff3e88db697b9e3d5480f3cb36e8d0da2429b79b14d0c388a",
+    "paginas_lidas": 1,
+    "total_paginas": 41,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) SEBASTIAO FERREIRA MARTINS JUNIOR, na qualidade de prefeito(a) do MUNICÍPIO DE APUCARANA, relativas ao exercício de 2023. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, § 6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) SEBASTIAO FERREIRA MARTINS JUNIOR, na qualidade de prefeito(a) do MUNICÍPIO DE APUCARANA, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Apucarana não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-3-00382737",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 76/2024 — contas do Prefeito de Apucarana, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "76",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 76/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "222948/2023",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "AUGUSTINHO ZUCCHI",
+   "data_julgamento": "2024-02-19",
+   "data_publicacao": "2024-03-08",
+   "publicacao_literal": "DETC nº 3166",
+   "entidade_literal": "MUNICÍPIO DE APUCARANA",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor SEBASTIAO FERREIRA MARTINS JUNIOR, na qualidade de prefeito do MUNICÍPIO DE APUCARANA, relativas ao exercício de 2022.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Apucarana",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 76/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/3/00382737.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "7ec3fa42a56131e0f6bfc2dd6701c6bc7d80530a6218cf59570700a5872a142d",
+    "paginas_lidas": 1,
+    "total_paginas": 29,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro AUGUSTINHO ZUCCHI, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor SEBASTIAO FERREIRA MARTINS JUNIOR, na qualidade de prefeito do MUNICÍPIO DE APUCARANA, relativas ao exercício de 2022. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, §6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor SEBASTIAO FERREIRA MARTINS JUNIOR, na qualidade de prefeito do MUNICÍPIO DE APUCARANA, relativas ao exercício de 2022.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Apucarana não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2022-12-00371217",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 223/2022 da Secretaria Primeira Câmara — contas do Prefeito de Apucarana, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "223",
+    "ano": "2022",
+    "titulo_oficial": "Acórdão de Parecer Prévio 223/2022 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "192727/2022",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2022-11-28",
+   "data_publicacao": "2022-12-13",
+   "publicacao_literal": "DETC nº 2891",
+   "entidade_literal": "MUNICÍPIO DE APUCARANA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "emitir Parecer Prévio recomendando a regularidade das contas do Prefeito Municipal de Apucarana, referentes ao exercício de 2021;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Apucarana",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 223/2022 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2022/12/00371217.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "f2f544ebe39927793be87136fabc25479d9fc26727b103c7fc1e2fdb2ed2e64b",
+    "paginas_lidas": 1,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: - emitir Parecer Prévio recomendando a regularidade das contas do Prefeito Municipal de Apucarana, referentes ao exercício de 2021; Após o trânsito em julgado, encaminhar os autos ao Gabinete da Presidência para comunicação da deliberação ao Poder Legislativo Municipal; Na sequência, determinar o encerramento do feito, em conformidade com o art. 398, § 1º, do Regimento Interno, e seu arquivamento junto à Diretoria de Protocolo.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando a regularidade das contas do Prefeito Municipal de Apucarana, referentes ao exercício de 2021;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2022,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Apucarana não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-3-00372788",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 43/2023 da Secretaria Segunda Câmara — contas do Prefeito de Apucarana, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "43",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 43/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "188688/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "AUGUSTINHO ZUCCHI",
+   "data_julgamento": "2023-03-06",
+   "data_publicacao": "2023-03-22",
+   "publicacao_literal": "DETC nº 2945",
+   "entidade_literal": "MUNICÍPIO DE APUCARANA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Emitir Parecer Prévio deste Tribunal, recomendando a REGULARIDADE (Art. 16, II, da Lei Complementar n.º 113/2005), com RESSALVA da prestação de contas do Município de Apucarana, relativa ao exercício de 2020, SEGUNDA CÂMARA de responsabilidade do Sr. SEBASTIÃO FERREIRA MARTINS JUNIOR, em razão do lançamento contábil incorreto das despesas com publicidade institucional;",
+    "conclusao_literal": "Emitir Parecer Prévio deste Tribunal, recomendando a REGULARIDADE (Art. 16, II, da Lei Complementar n.º 113/2005), com RESSALVA da prestação de contas do Município de Apucarana, relativa ao exercício de 2020, SEGUNDA CÂMARA de responsabilidade do Sr. SEBASTIÃO FERREIRA MARTINS JUNIOR, em razão do lançamento contábil incorreto das despesas com publicidade institucional;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Apucarana",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 43/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/3/00372788.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "04597180f7d2afe1f5c3331bf24d841562e672306a4069521deecbd4d65c9684",
+    "paginas_lidas": 2,
+    "total_paginas": 4,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro AUGUSTINHO ZUCCHI, por unanimidade, em: I- Emitir Parecer Prévio deste Tribunal, recomendando a REGULARIDADE (Art. 16, II, da Lei Complementar n.º 113/2005), com RESSALVA da prestação de contas do Município de Apucarana, relativa ao exercício de 2020, SEGUNDA CÂMARA de responsabilidade do Sr. SEBASTIÃO FERREIRA MARTINS JUNIOR, em razão do lançamento contábil incorreto das despesas com publicidade institucional; II- encaminhar, após o trânsito em julgado do presente, os autos à Coordenadoria de Monitoramento e Execuções (CMEX) para anotações e providências necessárias. e III- encaminhar, após, ao Gabinete da Presidência (GP) para comunicação ao Poder Legislativo do Muni […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio deste Tribunal, recomendando a REGULARIDADE (Art. 16, II, da Lei Complementar n.º 113/2005), com RESSALVA da prestação de contas do Município de Apucarana, relativa ao exercício de 2020, SEGUNDA CÂMARA de responsabilidade do Sr. SEBASTIÃO FERREIRA MARTINS JUNIOR, em razão do lançamento contábil incorreto das despesas com publicidade institucional;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Apucarana não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-9-00349942",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 404/2020 da Secretaria Primeira Câmara — contas do Prefeito de Apucarana, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "404",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 404/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "269200/2020",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2020-08-24",
+   "data_publicacao": "2020-09-04",
+   "publicacao_literal": "DETC nº 2376",
+   "entidade_literal": "MUNICÍPIO DE APUCARANA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do MUNICÍPIO DE APUCARANA, dos gestores senhores CARLOS ALBERTO GEBRIM PRETO (CPF 573.820.509-04) e SEBASTIÃO FERREIRA MARTINS JUNIOR (CPF 878.239.349-49) Prefeitos do Município de Apucarana durante o exercício financeiro de 2019;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Apucarana",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 404/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/9/00349942.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "e183cd34a0d484aae0ad7662971bfd3846225c1876001a8d687c8963b726073e",
+    "paginas_lidas": 2,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do MUNICÍPIO DE APUCARANA, dos gestores senhores CARLOS ALBERTO GEBRIM PRETO (CPF 573.820.509-04) e SEBASTIÃO FERREIRA MARTINS JUNIOR (CPF 878.239.349-49) Prefeitos do Município de Apucarana durante o exercício financeiro de 2019; II. Determinar, após o trânsito em julgado da decisão, as seguintes medidas: a) o encaminhamento dos autos ao Gabinete da Presidência para expedição de ofício à Câmara Municipal, comunicando a decisão, com a respectiva disponibilização do processo eletrônico, conforme §6º do art. 217-A, do Regimento Interno; b) […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do MUNICÍPIO DE APUCARANA, dos gestores senhores CARLOS ALBERTO GEBRIM PRETO (CPF 573.820.509-04) e SEBASTIÃO FERREIRA MARTINS JUNIOR (CPF 878.239.349-49) Prefeitos do Município de Apucarana durante o exercício financeiro de 2019;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício financeiro de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Apucarana não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-12-00342435",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 626/2019 da Secretaria Segunda Câmara — contas do Prefeito de Apucarana, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "626",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 626/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "187491/2019",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2019-12-10",
+   "data_publicacao": "2019-12-18",
+   "publicacao_literal": "DETC nº 2209",
+   "entidade_literal": "MUNICÍPIO DE APUCARANA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "emitir, com fundamento nos artigos 1º, inciso I, e 16, inciso II, ambos da Lei Complementar Estadual n.° 113/20054 e na Súmula n.º 8 deste Tribunal, Parecer Prévio recomendando a regularidade das contas do Prefeito do Município de Apucarana, do exercício de 2018, senhor Carlos Alberto Gebrim Preto, com ressalva em relação à regularização na fase de instrução do processo do apontamento de divergências de saldos em quaisquer das classes ou grupos do Balanço Patrimonial emitido pelo Sistema de Contabilidade da Entidade e os dados enviados pelo SIM/AM;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Apucarana",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 626/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/12/00342435.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "3ece3e8c453bd7e5382e72a9566a466780bf3c2d2fc3a6de6d46830533d9c76e",
+    "paginas_lidas": 2,
+    "total_paginas": 4,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I. emitir, com fundamento nos artigos 1º, inciso I, e 16, inciso II, ambos da Lei Complementar Estadual n.° 113/20054 e na Súmula n.º 8 deste Tribunal, Parecer Prévio recomendando a regularidade das contas do Prefeito do Município de Apucarana, do exercício de 2018, senhor Carlos Alberto Gebrim Preto, com ressalva em relação à regularização na fase de instrução do processo do apontamento de divergências de saldos em quaisquer das classes ou grupos do Balanço Patrimonial emitido pelo Sistema de Contabilidade da Entidade e os dados enviados pelo SIM/AM; II. encaminhar os autos, após o trânsito em julgado, à Coordenadoria de Monito […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir, com fundamento nos artigos 1º, inciso I, e 16, inciso II, ambos da Lei Complementar Estadual n.° 113/20054 e na Súmula n.º 8 deste Tribunal, Parecer Prévio recomendando a regularidade das contas do Prefeito do Município de Apucarana, do exercício de 2018, senhor Carlos Alberto Gebrim Preto, com ressalva em relação à regularização na fase de instrução do processo do apontamento de divergências de saldos em quaisquer das classes ou grupos do Balanço Patrimonial emitido pelo Sistema de Contabilidade da Entidade e os dados enviados pelo SIM/AM;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Apucarana não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-10-00340626",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 383/2019 da Secretaria Primeira Câmara — contas do Prefeito de Apucarana, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "383",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 383/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "275265/2018",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2019-10-07",
+   "data_publicacao": "2019-10-11",
+   "publicacao_literal": "DETC nº 2163",
+   "entidade_literal": "MUNICÍPIO DE APUCARANA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio pela regularidade com ressalva",
+    "conclusao_literal": "emitir Parecer Prévio pela regularidade com ressalva das contas do MUNICÍPIO DE APUCARANA, CNPJ 75.771.253/0001-68, relativa ao exercício financeiro de 2017, de responsabilidade do Sr. CARLOS ALBERTO GEBRIM PRETO, CPF 573.820.509-04, com base no disposto no art. 16, II, da LC/PR 113/05, tendo em vista as falhas na realização de Audiência Pública para avaliação das metas fiscais, bem como divergências nos registros de transferências dos repasses ICMS e IPVA, porém, sem indícios de dano ou prejuízos ao erário;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Apucarana",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 383/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/10/00340626.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "1292ff35d5bb98b40bee88ef7f0bbae249f2793f67490e99513cdca8cceefb8e",
+    "paginas_lidas": 2,
+    "total_paginas": 6,
+    "deliberacao": "ACORDAM Os membros da PRIMEIRA CÂMARA do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: I. emitir Parecer Prévio pela regularidade com ressalva das contas do MUNICÍPIO DE APUCARANA, CNPJ 75.771.253/0001-68, relativa ao exercício financeiro de 2017, de responsabilidade do Sr. CARLOS ALBERTO GEBRIM PRETO, CPF 573.820.509-04, com base no disposto no art. 16, II, da LC/PR 113/05, tendo em vista as falhas na realização de Audiência Pública para avaliação das metas fiscais, bem como divergências nos registros de transferências dos repasses ICMS e IPVA, porém, sem indícios de dano ou prejuízos ao erário; II. determinar a expedição de recomendação ao Jurisdicionado, para que observe as normativas legais, visando […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio pela regularidade com ressalva das contas do MUNICÍPIO DE APUCARANA, CNPJ 75.771.253/0001-68, relativa ao exercício financeiro de 2017, de responsabilidade do Sr. CARLOS ALBERTO GEBRIM PRETO, CPF 573.820.509-04, com base no disposto no art. 16, II, da LC/PR 113/05, tendo em vista as falhas na realização de Audiência Pública para avaliação das metas fiscais, bem como divergências nos registros de transferências dos repasses ICMS e IPVA, porém, sem indícios de dano ou prejuízos ao erário;",
+    "conclusao": "Parecer Prévio pela regularidade com ressalva",
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício financeiro de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Apucarana não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-11-00341398",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 478/2019 da Secretaria Primeira Câmara — contas do Prefeito de Apucarana, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "478",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 478/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "293170/2017",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2019-11-04",
+   "data_publicacao": "2019-11-08",
+   "publicacao_literal": "DETC nº 2182",
+   "entidade_literal": "MUNICÍPIO DE APUCARANA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando o julgamento pela regularidade",
+    "conclusao_literal": "emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do Poder Executivo do Município de Apucarana, referente ao exercício financeiro de 2016, de responsabilidade do senhor Carlos Alberto Gebrim Preto, ressalvando i) as obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa do grupo “Operações de Crédito”;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Apucarana",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 478/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/11/00341398.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "1cb355f00058c474f30224a1638112daab43101c65e4f29b82111a5c4a5a297b",
+    "paginas_lidas": 2,
+    "total_paginas": 8,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I – emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do Poder Executivo do Município de Apucarana, referente ao exercício financeiro de 2016, de responsabilidade do senhor Carlos Alberto Gebrim Preto, ressalvando i) as obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa do grupo “Operações de Crédito”; e ii) os atrasos nos envios dos dados do SIM-AM; II - aplicar, em razão dos atrasos superiores a 30 (trinta) dias nos envios dos dados do SIM-AM, uma multa do artigo 87, I […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do Poder Executivo do Município de Apucarana, referente ao exercício financeiro de 2016, de responsabilidade do senhor Carlos Alberto Gebrim Preto, ressalvando i) as obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa do grupo “Operações de Crédito”;",
+    "conclusao": "Parecer Prévio recomendando o julgamento pela regularidade",
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício financeiro de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Apucarana não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [],
+ "acordaos_relacionados": []
+}

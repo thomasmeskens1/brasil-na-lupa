@@ -1,0 +1,921 @@
+{
+ "atualizado_em": "2026-11-05T13:52:22.577Z",
+ "municipio": {
+  "id": "fazenda-rio-grande",
+  "nome": "Fazenda Rio Grande",
+  "uf": "PR",
+  "codigo_ibge": "4107652"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2015,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 9,
+  "pareceres": 12,
+  "com_parecer_em_fonte_aberta": 9,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 9,
+  "pdf_lido": 9,
+  "sem_exercicio_na_fonte": 3
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f68ca8a9b64d6286d5f605b923705fb7602cf450e7408d143f7545e514359bfb",
+   "atualizado_na_fonte": "05/06/2026 00:00:40"
+  },
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2025-10-000199784",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 333/2025 — contas do Prefeito de Fazenda Rio Grande, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "333",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 333/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "192477/2025",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2025-10-13",
+   "data_publicacao": "2025-10-24",
+   "publicacao_literal": "DETC nº 3555",
+   "entidade_literal": "MUNICÍPIO DE FAZENDA RIO GRANDE",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) MARCO ANTONIO MARCONDES SILVA, na qualidade de prefeito(a) do MUNICÍPIO DE FAZENDA RIO GRANDE, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Fazenda Rio Grande",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 333/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/10/000199784.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "91ddefa9b0b2cd56052e347b0ae7c1e63b0dbff6134a3a90e000c949730e4914",
+    "paginas_lidas": 1,
+    "total_paginas": 47,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) MARCO ANTONIO MARCONDES SILVA, na qualidade de prefeito(a) do MUNICÍPIO DE FAZENDA RIO GRANDE, relativas ao exercício de 2024. Após o trânsito em julgado da deliberação, encaminhem-se os autos ao Gabinete da Presidência para as providências contidas no § 6º do artigo 217-A do Regimento Interno, à Coordenadoria de Medidas Executórias para as anotações pertinentes e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) MARCO ANTONIO MARCONDES SILVA, na qualidade de prefeito(a) do MUNICÍPIO DE FAZENDA RIO GRANDE, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Fazenda Rio Grande não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2026-2-000200748",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 47/2026 — contas do Prefeito de Fazenda Rio Grande, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "47",
+    "ano": "2026",
+    "titulo_oficial": "Parecer Prévio 47/2026"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "211672/2024",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2026-02-09",
+   "data_publicacao": "2026-02-23",
+   "publicacao_literal": "DETC nº 3619",
+   "entidade_literal": "MUNICÍPIO DE FAZENDA RIO GRANDE",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do Sr. MARCO ANTONIO MARCONDES SILVA, na qualidade de Prefeito do MUNICÍPIO DE FAZENDA RIO GRANDE, relativas ao exercício de 2023;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Fazenda Rio Grande",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 47/2026 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2026/2/000200748.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "35562b4a05fa52060b0fe24ffb5c5d178aee502459d7b4ffc379aacf3d78c632",
+    "paginas_lidas": 1,
+    "total_paginas": 46,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do Sr. MARCO ANTONIO MARCONDES SILVA, na qualidade de Prefeito do MUNICÍPIO DE FAZENDA RIO GRANDE, relativas ao exercício de 2023; b. Apor ressalvas em razão: i. dos resultados da Avaliação da Atuação Governamental nas áreas referentes à Administração Financeira (5,95) e Previdência Social (5,65); ii. da despesa total com pessoal superar os limites estabelecidos nos artigos 19 e 20 da Lei Complementar nº 101/2000, caracterizando a situação prevista no artigo 23 da mesma lei. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Medidas […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do Sr. MARCO ANTONIO MARCONDES SILVA, na qualidade de Prefeito do MUNICÍPIO DE FAZENDA RIO GRANDE, relativas ao exercício de 2023;",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2026,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "O conjunto de dados indica o exercício 2024 (\"exercício de 2024\"), mas a deliberação do PDF diz \"exercício de 2023\"; foi usado o texto do PDF",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Fazenda Rio Grande não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-4-00383554",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 128/2024 — contas do Prefeito de Fazenda Rio Grande, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "128",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 128/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "135018/2023",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2024-04-01",
+   "data_publicacao": "2024-04-15",
+   "publicacao_literal": "DETC nº 3188",
+   "entidade_literal": "MUNICÍPIO DE FAZENDA RIO GRANDE",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor MARCO ANTONIO MARCONDES SILVA e senhor NASSIB KASSEM HAMMAD, na qualidade de prefeito do MUNICÍPIO DE FAZENDA RIO GRANDE, relativas ao exercício de 2022.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Fazenda Rio Grande",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 128/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/4/00383554.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "1c6b88f92a9c49106feaea4e7d191d844fe5372ca5df67bd391eff99c3be7399",
+    "paginas_lidas": 1,
+    "total_paginas": 35,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade: Emitir Parecer Prévio pela REGULARIDADE das contas do senhor MARCO ANTONIO MARCONDES SILVA e senhor NASSIB KASSEM HAMMAD, na qualidade de prefeito do MUNICÍPIO DE FAZENDA RIO GRANDE, relativas ao exercício de 2022. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, § 6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor MARCO ANTONIO MARCONDES SILVA e senhor NASSIB KASSEM HAMMAD, na qualidade de prefeito do MUNICÍPIO DE FAZENDA RIO GRANDE, relativas ao exercício de 2022.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Fazenda Rio Grande não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-11-00380903",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 512/2023 da Secretaria Segunda Câmara — contas do Prefeito de Fazenda Rio Grande, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "512",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 512/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "216006/2022",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2023-11-13",
+   "data_publicacao": "2023-11-22",
+   "publicacao_literal": "DETC nº 3107",
+   "entidade_literal": "MUNICÍPIO DE FAZENDA RIO GRANDE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a irregularidade das contas do Prefeito do Município de Fazenda Rio Grande, exercício financeiro de 2021, em razão das seguintes impropriedades:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Fazenda Rio Grande",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 512/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/11/00380903.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "46cda993f816bb048fe5edb0c486c91f8d11ae175b526473a2b921fcb2eaa146",
+    "paginas_lidas": 2,
+    "total_paginas": 9,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I- Emitir Parecer Prévio recomendando a irregularidade das contas do Prefeito do Município de Fazenda Rio Grande, exercício financeiro de 2021, em razão das seguintes impropriedades: (i) não aplicação de no mínimo 15% do valor da complementação do Valor Anual Total por Aluno (VAAT) em despesas de capital e (ii) não aplicação de no mínimo 50% da complementação do Valor Anual Total por Aluno (VAAT) na educação infantil, em ofensa à Lei Federal nº 14.113/2020, arts. 27 e 28, aplicando-se ao Senhor Nassib Kassem Hammad a multa administrativa prevista no art. 87, inciso IV, alínea “g”, da Lei Complementar Estadual nº 113/2005; II- ap […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a irregularidade das contas do Prefeito do Município de Fazenda Rio Grande, exercício financeiro de 2021, em razão das seguintes impropriedades:",
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Fazenda Rio Grande não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-7-00377891",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 310/2023 da Secretaria Segunda Câmara — contas do Prefeito de Fazenda Rio Grande, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "310",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 310/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "192707/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2023-07-10",
+   "data_publicacao": "2023-07-24",
+   "publicacao_literal": "DETC nº 3027",
+   "entidade_literal": "MUNICÍPIO DE FAZENDA RIO GRANDE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE COM RESSALVA",
+    "conclusao_literal": "emitir Parecer Prévio recomendando a REGULARIDADE COM RESSALVA das contas do MUNICÍPIO DE FAZENDA RIO GRANDE, exercício de 2020, de responsabilidade do Sr. MÁRCIO CLAUDIO WOZNIACK, CPF 837.346.439-53, em decorrência da classificação equivocada como publicidade e propaganda de despesas com publicidade legal, em período que antecede as eleições;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Fazenda Rio Grande",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 310/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/7/00377891.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "6251eec9ea9066da5fcdec80a4f3a76c90fe7a60276c5276569ede0368420e07",
+    "paginas_lidas": 2,
+    "total_paginas": 9,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por maioria absoluta, em: I – emitir Parecer Prévio recomendando a REGULARIDADE COM RESSALVA das contas do MUNICÍPIO DE FAZENDA RIO GRANDE, exercício de 2020, de responsabilidade do Sr. MÁRCIO CLAUDIO WOZNIACK, CPF 837.346.439-53, em decorrência da classificação equivocada como publicidade e propaganda de despesas com publicidade legal, em período que antecede as eleições; SEGUNDA CÂMARA II – determinar, depois de transitada em julgado a decisão, a remessa dos autos ao Gabinete da Presidência para comunicação ao Poder Legislativo do Município de Fazenda Rio Grande, nos termos do art. 217-A, § 6º, do Regimento Interno4. Após, à Coordenadoria de M […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "emitir Parecer Prévio recomendando a REGULARIDADE COM RESSALVA das contas do MUNICÍPIO DE FAZENDA RIO GRANDE, exercício de 2020, de responsabilidade do Sr. MÁRCIO CLAUDIO WOZNIACK, CPF 837.346.439-53, em decorrência da classificação equivocada como publicidade e propaganda de despesas com publicidade legal, em período que antecede as eleições;",
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE COM RESSALVA",
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Fazenda Rio Grande não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2021-1-00353519",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 735/2020 da Secretaria Segunda Câmara — contas do Prefeito de Fazenda Rio Grande, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "735",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 735/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "267258/2020",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2020-12-07",
+   "data_publicacao": "2021-01-05",
+   "publicacao_literal": "DETC nº 2449",
+   "entidade_literal": "MUNICÍPIO DE FAZENDA RIO GRANDE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE",
+    "conclusao_literal": "emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, Parecer Prévio recomendando a REGULARIDADE das contas do PREFEITO DO MUNICÍPIO DE FAZENDA RIO GRANDE, exercício de 2019, Sr. Márcio Claudio Wozniack, CPF 837.346.439-53, com RESSALVA em decorrência do Limite de Despesas com Pessoal - Não Retorno ao Limite no prazo legal – Análise do 1º Quadrimestre do exercício de 2019, com baixo crescimento do PIB;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Fazenda Rio Grande",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 735/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2021/1/00353519.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "3d1df5029d992e92b669eb6b8cd2adad850af1ebb5fb9041209e136f722b6352",
+    "paginas_lidas": 2,
+    "total_paginas": 6,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: 1) emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, Parecer Prévio recomendando a REGULARIDADE das contas do PREFEITO DO MUNICÍPIO DE FAZENDA RIO GRANDE, exercício de 2019, Sr. Márcio Claudio Wozniack, CPF 837.346.439-53, com RESSALVA em decorrência do Limite de Despesas com Pessoal - Não Retorno ao Limite no prazo legal – Análise do 1º Quadrimestre do exercício de 2019, com baixo crescimento do PIB; 2) remeter os autos, após o trânsito em julgado, à Coordenadoria de Monitoramento e Execuções (CMEX) para registros, nos termos do artigo 301, parágrafo único, do Regimento Interno, tendo em vista o artigo 28 da L […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, Parecer Prévio recomendando a REGULARIDADE das contas do PREFEITO DO MUNICÍPIO DE FAZENDA RIO GRANDE, exercício de 2019, Sr. Márcio Claudio Wozniack, CPF 837.346.439-53, com RESSALVA em decorrência do Limite de Despesas com Pessoal - Não Retorno ao Limite no prazo legal – Análise do 1º Quadrimestre do exercício de 2019, com baixo crescimento do PIB;",
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE",
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Fazenda Rio Grande não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-4-00344358",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 80/2020 da Secretaria Primeira Câmara — contas do Prefeito de Fazenda Rio Grande, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "80",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 80/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "207107/2019",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2020-03-16",
+   "data_publicacao": "2020-04-06",
+   "publicacao_literal": "DETC nº 2274",
+   "entidade_literal": "MUNICÍPIO DE FAZENDA RIO GRANDE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de FAZENDA RIO GRANDE, Sr. Márcio Claudio Wozniack, relativas ao exercício financeiro de 2018, com ressalva em face da extrapolação de despesas com pessoal e não retorno ao limite dentro do prazo legal quando da análise dos 1º, 2º e 3º quadrimestres do exercício;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Fazenda Rio Grande",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 80/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/4/00344358.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "8fe1cbc180e900231993992c5162e13073b16f49e471c79cee3fac1596f7d6ae",
+    "paginas_lidas": 2,
+    "total_paginas": 4,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de FAZENDA RIO GRANDE, Sr. Márcio Claudio Wozniack, relativas ao exercício financeiro de 2018, com ressalva em face da extrapolação de despesas com pessoal e não retorno ao limite dentro do prazo legal quando da análise dos 1º, 2º e 3º quadrimestres do exercício; II. Determinar, após o trânsito em julgado da decisão, as seguintes medidas: a) o encaminhamento dos autos à Coordenadoria de Monitoramento e Execuções, nos termos do artigo 175-L, I, da LC n.º 113/05. b) após, ao Gabinete da Presidência para expedição de o […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de FAZENDA RIO GRANDE, Sr. Márcio Claudio Wozniack, relativas ao exercício financeiro de 2018, com ressalva em face da extrapolação de despesas com pessoal e não retorno ao limite dentro do prazo legal quando da análise dos 1º, 2º e 3º quadrimestres do exercício;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício financeiro de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Fazenda Rio Grande não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-2-00343269",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 9/2020 da Secretaria Primeira Câmara — contas do Prefeito de Fazenda Rio Grande, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "9",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 9/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "195733/2018",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2020-01-27",
+   "data_publicacao": "2020-02-05",
+   "publicacao_literal": "DETC nº 2234",
+   "entidade_literal": "MUNICÍPIO DE FAZENDA RIO GRANDE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio pela regularidade com ressalva",
+    "conclusao_literal": "emitir Parecer Prévio pela regularidade com ressalva das contas do MUNICÍPIO DE FAZENDA RIO GRANDE, CNPJ 95.422.986/0001-02, relativa ao exercício financeiro de 2017, de responsabilidade do Sr. MÁRCIO CLAUDIO WOZNIACK, CPF 837.346.439-53, com base no disposto no art. 16, II, da LC/PR 113/05, tendo em vista o limite de despesas com pessoal não haver retornado ao limite no prazo legal - Análise do 1º, 2º e 3º Quadrimestre do exercício de 2017, com baixo crescimento do PIB;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Fazenda Rio Grande",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 9/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/2/00343269.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "82f7c3b96eca6d1f8661c052a3b5542e2e384787e8b4d6edd10ae5498036f853",
+    "paginas_lidas": 2,
+    "total_paginas": 7,
+    "deliberacao": "ACORDAM Os membros da PRIMEIRA CÂMARA do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: I. emitir Parecer Prévio pela regularidade com ressalva das contas do MUNICÍPIO DE FAZENDA RIO GRANDE, CNPJ 95.422.986/0001-02, relativa ao exercício financeiro de 2017, de responsabilidade do Sr. MÁRCIO CLAUDIO WOZNIACK, CPF 837.346.439-53, com base no disposto no art. 16, II, da LC/PR 113/05, tendo em vista o limite de despesas com pessoal não haver retornado ao limite no prazo legal - Análise do 1º, 2º e 3º Quadrimestre do exercício de 2017, com baixo crescimento do PIB; II. determinar, após o trânsito em julgado da decisão, o encaminhamento à Coordenadoria de Monitoramento e Execuções para as anotações nos registr […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio pela regularidade com ressalva das contas do MUNICÍPIO DE FAZENDA RIO GRANDE, CNPJ 95.422.986/0001-02, relativa ao exercício financeiro de 2017, de responsabilidade do Sr. MÁRCIO CLAUDIO WOZNIACK, CPF 837.346.439-53, com base no disposto no art. 16, II, da LC/PR 113/05, tendo em vista o limite de despesas com pessoal não haver retornado ao limite no prazo legal - Análise do 1º, 2º e 3º Quadrimestre do exercício de 2017, com baixo crescimento do PIB;",
+    "conclusao": "Parecer Prévio pela regularidade com ressalva",
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício financeiro de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Fazenda Rio Grande não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-2-00343408",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 32/2020 da Secretaria Segunda Câmara — contas do Prefeito de Fazenda Rio Grande, exercício 2015",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "32",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 32/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "262018/2016",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2020-02-04",
+   "data_publicacao": "2020-02-11",
+   "publicacao_literal": "DETC nº 2238",
+   "entidade_literal": "MUNICÍPIO DE FAZENDA RIO GRANDE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade com ressalva",
+    "conclusao_literal": "emitir Parecer Prévio recomendando a regularidade com ressalva das contas do Município de Fazenda do Rio Grande, referentes ao exercício financeiro de 2015, de responsabilidade do Prefeito Municipal, senhor Márcio Claudio Wozniack, nos termos dos artigos 1.º, inciso I,11 e 16, inciso II,12 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Fazenda Rio Grande",
+    "exercicio": "2015",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 32/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/2/00343408.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "92b0dbb9d846f3fb3ff6e1baedd76957331ca906b4110731ce6f9a02b4e08f0f",
+    "paginas_lidas": 2,
+    "total_paginas": 7,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I- emitir Parecer Prévio recomendando a regularidade com ressalva das contas do Município de Fazenda do Rio Grande, referentes ao exercício financeiro de 2015, de responsabilidade do Prefeito Municipal, senhor Márcio Claudio Wozniack, nos termos dos artigos 1.º, inciso I,11 e 16, inciso II,12 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise: (a) resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS; (b) despesas com pessoal - redução de 1/3 - Análise do 2.º Quadrimestre; e (c) Relatório do Controle Interno e […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando a regularidade com ressalva das contas do Município de Fazenda do Rio Grande, referentes ao exercício financeiro de 2015, de responsabilidade do Prefeito Municipal, senhor Márcio Claudio Wozniack, nos termos dos artigos 1.º, inciso I,11 e 16, inciso II,12 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise:",
+    "conclusao": "Parecer Prévio recomendando a regularidade com ressalva",
+    "exercicio": {
+     "ano": 2015,
+     "trecho": "exercício financeiro de 2015"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Fazenda Rio Grande não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2021-309-segundacmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 309/2021 da Secretaria Segunda Câmara — contas do Prefeito de Fazenda Rio Grande",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "309",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 309/2021 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "236230/2014",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2021-12-13",
+   "data_publicacao": "2022-01-19",
+   "publicacao_literal": "DETC nº 2692",
+   "entidade_literal": "MUNICÍPIO DE FAZENDA RIO GRANDE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Fazenda Rio Grande",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Fazenda Rio Grande não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2021-146-primeiracmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 146/2021 da Secretaria Primeira Câmara — contas do Prefeito de Fazenda Rio Grande",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "146",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 146/2021 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "263266/2015",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2021-05-03",
+   "data_publicacao": "2021-05-25",
+   "publicacao_literal": "DETC nº 2546",
+   "entidade_literal": "MUNICÍPIO DE FAZENDA RIO GRANDE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Fazenda Rio Grande",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Fazenda Rio Grande não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2021-104-segundacmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 104/2021 da Secretaria Segunda Câmara — contas do Prefeito de Fazenda Rio Grande",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "104",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 104/2021 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "242800/2017",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2021-04-05",
+   "data_publicacao": "2021-04-22",
+   "publicacao_literal": "DETC nº 2523",
+   "entidade_literal": "MUNICÍPIO DE FAZENDA RIO GRANDE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Fazenda Rio Grande",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Fazenda Rio Grande não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

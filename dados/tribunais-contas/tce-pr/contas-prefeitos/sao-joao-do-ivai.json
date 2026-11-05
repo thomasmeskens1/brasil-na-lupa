@@ -1,0 +1,742 @@
+{
+ "atualizado_em": "2026-11-05T14:14:50.900Z",
+ "municipio": {
+  "id": "sao-joao-do-ivai",
+  "nome": "São João do Ivaí",
+  "uf": "PR",
+  "codigo_ibge": "4125001"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2014,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 9,
+  "pareceres": 9,
+  "com_parecer_em_fonte_aberta": 9,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 9,
+  "pdf_lido": 9,
+  "sem_exercicio_na_fonte": 0
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "3b7fb76a75413d34e4541e63dccfa3cab923f7d498fc63703a156f2f00d63a4c",
+   "atualizado_na_fonte": "26/06/2025 14:58:07"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2025-12-000200267",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 396/2025 — contas do Prefeito de São João do Ivaí, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "396",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 396/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "189654/2025",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2025-11-24",
+   "data_publicacao": "2025-12-03",
+   "publicacao_literal": "DETC nº 3580",
+   "entidade_literal": "MUNICÍPIO DE SÃO JOÃO DO IVAÍ",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas da senhora CARLA SUZI EMERENCIANO, na qualidade de prefeita do MUNICÍPIO DE SÃO JOÃO DO IVAÍ, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de São João do Ivaí",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 396/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/12/000200267.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "1a8a322287e0983f6eaef15c9388b0fcbdb2f9c2d8584eec4f68c32a8ebd5e99",
+    "paginas_lidas": 1,
+    "total_paginas": 51,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por maioria absoluta: a. Emitir Parecer Prévio pela REGULARIDADE das contas da senhora CARLA SUZI EMERENCIANO, na qualidade de prefeita do MUNICÍPIO DE SÃO JOÃO DO IVAÍ, relativas ao exercício de 2024. b. RESSALVAR as contas em virtude de: i. baixo desempenho evidenciado na avaliação da atuação governamental na área da Saúde (nota de 6,71, com variação negativa de -18,07%, em relação ao exercício anterior), conforme Instruções nº 535/25-CCONTAS (peça 07) e nº 1443/25-CCONTAS (peça 18) e Parecer nº 843/25-2PC (peça 20), devido à incidência do Vetor “2”, Hipótese “A” do Anexo II da Instrução Normativa n.º 172/22. ii. baixo desempenho evi […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas da senhora CARLA SUZI EMERENCIANO, na qualidade de prefeita do MUNICÍPIO DE SÃO JOÃO DO IVAÍ, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de São João do Ivaí não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-9-00388127",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 303/2024 — contas do Prefeito de São João do Ivaí, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "303",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 303/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "185060/2024",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2024-08-19",
+   "data_publicacao": "2024-09-05",
+   "publicacao_literal": "DETC nº 3288",
+   "entidade_literal": "MUNICÍPIO DE SÃO JOÃO DO IVAÍ",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas da senhora CARLA SUZI EMERENCIANO, na qualidade de prefeita do MUNICÍPIO DE SÃO JOÃO DO IVAÍ, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de São João do Ivaí",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 303/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/9/00388127.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "bd686923d76aa8335952cc1e2cc01ff3891536a0e3d24cfa06a08e2476b2bb0e",
+    "paginas_lidas": 1,
+    "total_paginas": 37,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas da senhora CARLA SUZI EMERENCIANO, na qualidade de prefeita do MUNICÍPIO DE SÃO JOÃO DO IVAÍ, relativas ao exercício de 2023. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, § 6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas da senhora CARLA SUZI EMERENCIANO, na qualidade de prefeita do MUNICÍPIO DE SÃO JOÃO DO IVAÍ, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de São João do Ivaí não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-5-00383999",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 187/2024 — contas do Prefeito de São João do Ivaí, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "187",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 187/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "208724/2023",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2024-04-15",
+   "data_publicacao": "2024-05-02",
+   "publicacao_literal": "DETC nº 3200",
+   "entidade_literal": "MUNICÍPIO DE SÃO JOÃO DO IVAÍ",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas da senhora CARLA SUZI EMERENCIANO, na qualidade de prefeita do MUNICÍPIO DE SÃO JOÃO DO IVAÍ, relativas ao exercício de 2022, em razão dos resultados da avaliação da atuação governamental nas áreas de Educação (5,41), Assistência Social (4,09) e Administração Financeira (4,10).",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de São João do Ivaí",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 187/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/5/00383999.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "a6874161b50a2136a26d0bdde5c7741d2a900ba288e4fd1443c3466140e4ec0a",
+    "paginas_lidas": 1,
+    "total_paginas": 32,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas da senhora CARLA SUZI EMERENCIANO, na qualidade de prefeita do MUNICÍPIO DE SÃO JOÃO DO IVAÍ, relativas ao exercício de 2022, em razão dos resultados da avaliação da atuação governamental nas áreas de Educação (5,41), Assistência Social (4,09) e Administração Financeira (4,10). Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, §6º do Regi […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas da senhora CARLA SUZI EMERENCIANO, na qualidade de prefeita do MUNICÍPIO DE SÃO JOÃO DO IVAÍ, relativas ao exercício de 2022, em razão dos resultados da avaliação da atuação governamental nas áreas de Educação (5,41), Assistência Social (4,09) e Administração Financeira (4,10).",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de São João do Ivaí não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-7-00377562",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 286/2023 da Secretaria Primeira Câmara — contas do Prefeito de São João do Ivaí, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "286",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 286/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "201661/2022",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2023-06-26",
+   "data_publicacao": "2023-07-11",
+   "publicacao_literal": "DETC nº 3018",
+   "entidade_literal": "MUNICÍPIO DE SÃO JOÃO DO IVAÍ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual da Prefeita Municipal de SÃO JOÃO DO IVAÍ, Sra. Carla Suzi Emerenciano, CPF n.º 006.538.469-59, relativas ao exercício financeiro de 2021;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de São João do Ivaí",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 286/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/7/00377562.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "5d1b4d03629834c88f94151d0a6621f9b284d89b45ba3d39a651a4a6f608f1d0",
+    "paginas_lidas": 1,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual da Prefeita Municipal de SÃO JOÃO DO IVAÍ, Sra. Carla Suzi Emerenciano, CPF n.º 006.538.469-59, relativas ao exercício financeiro de 2021; II. Determinar, após o trânsito em julgado da decisão, as seguintes medidas: a) o encaminhamento dos autos ao Gabinete da Presidência para expedição de ofício à Câmara Municipal, comunicando a decisão, com a respectiva disponibilização do processo eletrônico, conforme §6º do art. 217-A, do Regimento Interno; b) Em seguida, à Diretoria do Protocolo para o encerramento dos autos, nos termos do art. 398 […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual da Prefeita Municipal de SÃO JOÃO DO IVAÍ, Sra. Carla Suzi Emerenciano, CPF n.º 006.538.469-59, relativas ao exercício financeiro de 2021;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de São João do Ivaí não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2022-2-00364052",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 12/2022 da Secretaria Segunda Câmara — contas do Prefeito de São João do Ivaí, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "12",
+    "ano": "2022",
+    "titulo_oficial": "Acórdão de Parecer Prévio 12/2022 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "162638/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2022-01-24",
+   "data_publicacao": "2022-02-04",
+   "publicacao_literal": "DETC nº 2704",
+   "entidade_literal": "MUNICÍPIO DE SÃO JOÃO DO IVAÍ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Emitir Parecer Prévio deste Tribunal, recomendando o julgamento pela regularidade das contas do Sr. Fábio Hidek Miura, prefeito do Município de São João do Ivaí, relativas ao exercício financeiro de 2020, com fundamento no art. 1º, I, combinado com o art. 16, I, da Lei Complementar Estadual nº 113/2005;",
+    "conclusao_literal": "Emitir Parecer Prévio deste Tribunal, recomendando o julgamento pela regularidade das contas do Sr. Fábio Hidek Miura, prefeito do Município de São João do Ivaí, relativas ao exercício financeiro de 2020, com fundamento no art. 1º, I, combinado com o art. 16, I, da Lei Complementar Estadual nº 113/2005;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de São João do Ivaí",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 12/2022 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2022/2/00364052.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "cc08ce9ab3d460ab7cb7e4b9c3eee99951ba86c4501e731e2eea499c53c9b2dc",
+    "paginas_lidas": 1,
+    "total_paginas": 2,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade, em: I - Emitir Parecer Prévio deste Tribunal, recomendando o julgamento pela regularidade das contas do Sr. Fábio Hidek Miura, prefeito do Município de São João do Ivaí, relativas ao exercício financeiro de 2020, com fundamento no art. 1º, I, combinado com o art. 16, I, da Lei Complementar Estadual nº 113/2005; II – determinar, após o trânsito em julgado, a remessa dos autos ao Gabinete da Presidência, para as providências contidas no §6º do art. 217-A do Regimento Interno; III – encaminhar à Diretoria de Protocolo, para encerramento e arquivamento, nos termos do art. 398 §1º e art. 168, inciso VII, ambos do Regimento Interno […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio deste Tribunal, recomendando o julgamento pela regularidade das contas do Sr. Fábio Hidek Miura, prefeito do Município de São João do Ivaí, relativas ao exercício financeiro de 2020, com fundamento no art. 1º, I, combinado com o art. 16, I, da Lei Complementar Estadual nº 113/2005;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício financeiro de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2022,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de São João do Ivaí não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-10-00351256",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 512/2020 da Secretaria Segunda Câmara — contas do Prefeito de São João do Ivaí, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "512",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 512/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "267940/2020",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2020-10-05",
+   "data_publicacao": "2020-10-21",
+   "publicacao_literal": "DETC nº 2406",
+   "entidade_literal": "MUNICÍPIO DE SÃO JOÃO DO IVAÍ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.º 113/2005, recomendando a regularidade das contas do Prefeito Municipal de São João do Ivaí, exercício de 2019, Sr. Fábio Hidek Miura, CPF n.º 035.147.859-02, Gestor da Entidade no exercício;",
+    "conclusao_literal": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.º 113/2005, recomendando a regularidade das contas do Prefeito Municipal de São João do Ivaí, exercício de 2019, Sr. Fábio Hidek Miura, CPF n.º 035.147.859-02, Gestor da Entidade no exercício;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de São João do Ivaí",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 512/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/10/00351256.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "300eae7a343ca646268e389b21836990c92544004c08d67eeff14873a25bac6b",
+    "paginas_lidas": 1,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: I- emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.º 113/2005, recomendando a regularidade das contas do Prefeito Municipal de São João do Ivaí, exercício de 2019, Sr. Fábio Hidek Miura, CPF n.º 035.147.859-02, Gestor da Entidade no exercício; II- encaminhar os autos, ao Gabinete da Presidência para deliberações, nos termos do artigo 217-A, § 6.º, do Regimento Interno desta Corte de Contas. Autorizar, após o cumprimento integral da decisão, o encerramento do processo, e encaminhamento à Diretoria de Protocolo para arquivamento, nos termos do artigo 398, § 1.º do Regimento Interno.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.º 113/2005, recomendando a regularidade das contas do Prefeito Municipal de São João do Ivaí, exercício de 2019, Sr. Fábio Hidek Miura, CPF n.º 035.147.859-02, Gestor da Entidade no exercício;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de São João do Ivaí não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-9-00339912",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 260/2019 da Secretaria Segunda Câmara — contas do Prefeito de São João do Ivaí, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "260",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 260/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "204930/2019",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2019-09-03",
+   "data_publicacao": "2019-09-17",
+   "publicacao_literal": "DETC nº 2145",
+   "entidade_literal": "MUNICÍPIO DE SÃO JOÃO DO IVAÍ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, com fundamento no artigo 1.º, II, combinado com o artigo 16, I, da Lei Complementar Estadual n.º 113/2005, recomendando a regularidade das contas do senhor Fábio Hidek Miura, Prefeito do Município de São João do Ivaí, relativas ao exercício financeiro de 2018;",
+    "conclusao_literal": "emitir Parecer Prévio, com fundamento no artigo 1.º, II, combinado com o artigo 16, I, da Lei Complementar Estadual n.º 113/2005, recomendando a regularidade das contas do senhor Fábio Hidek Miura, Prefeito do Município de São João do Ivaí, relativas ao exercício financeiro de 2018;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de São João do Ivaí",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 260/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/9/00339912.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "b36717e01e1759db7fb9fc6f21b7441a6621eddcb1d8bbf92a800849b1d05031",
+    "paginas_lidas": 2,
+    "total_paginas": 5,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade, em: I- emitir Parecer Prévio, com fundamento no artigo 1.º, II, combinado com o artigo 16, I, da Lei Complementar Estadual n.º 113/2005, recomendando a regularidade das contas do senhor Fábio Hidek Miura, Prefeito do Município de São João do Ivaí, relativas ao exercício financeiro de 2018; II- remeter os autos, após o trânsito em julgado, à Coordenadoria Geral de Fiscalização para ciência e adoção das medidas que entender pertinentes em relação às sugestões contidas no Parecer Ministerial. Posteriormente, ao Gabinete da Presidência, para as providências contidas no §6º do artigo 217-A do Regimento Interno e, por fim, à Direto […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, com fundamento no artigo 1.º, II, combinado com o artigo 16, I, da Lei Complementar Estadual n.º 113/2005, recomendando a regularidade das contas do senhor Fábio Hidek Miura, Prefeito do Município de São João do Ivaí, relativas ao exercício financeiro de 2018;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício financeiro de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de São João do Ivaí não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-9-00340310",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 340/2019 da Secretaria Segunda Câmara — contas do Prefeito de São João do Ivaí, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "340",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 340/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "295084/2017",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2019-09-24",
+   "data_publicacao": "2019-09-30",
+   "publicacao_literal": "DETC nº 2154",
+   "entidade_literal": "MUNICÍPIO DE SÃO JOÃO DO IVAÍ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.° 113/2005, recomendando a regularidade das contas do Prefeito do Município de São João do Ivaí, exercício de 2016, senhor Fábio Hidek Miura, CPF 035.147.859-02, com ressalvas em decorrência dos seguintes itens:",
+    "conclusao_literal": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.° 113/2005, recomendando a regularidade das contas do Prefeito do Município de São João do Ivaí, exercício de 2016, senhor Fábio Hidek Miura, CPF 035.147.859-02, com ressalvas em decorrência dos seguintes itens:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de São João do Ivaí",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 340/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/9/00340310.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "a5840f2cc8e7a98714a23b857698a8a30da0638c2762b404720cfe0c94dee675",
+    "paginas_lidas": 2,
+    "total_paginas": 13,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por maioria absoluta, em: I- emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.° 113/2005, recomendando a regularidade das contas do Prefeito do Município de São João do Ivaí, exercício de 2016, senhor Fábio Hidek Miura, CPF 035.147.859-02, com ressalvas em decorrência dos seguintes itens: a) obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa, conforme critérios fixados no Prejulgado 15; b) divergências nos registros de transferências constitucionais dos repasses de FPM, ICMS, IPVA e FUNDEB; c) entrega […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.° 113/2005, recomendando a regularidade das contas do Prefeito do Município de São João do Ivaí, exercício de 2016, senhor Fábio Hidek Miura, CPF 035.147.859-02, com ressalvas em decorrência dos seguintes itens:",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de São João do Ivaí não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-7-00347425",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 175/2020 da Secretaria Primeira Câmara — contas do Prefeito de São João do Ivaí, exercício 2014",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "175",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 175/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "229971/2015",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2020-06-22",
+   "data_publicacao": "2020-07-03",
+   "publicacao_literal": "DETC nº 2331",
+   "entidade_literal": "MUNICÍPIO DE SÃO JOÃO DO IVAÍ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito Municipal de SÃO JOÃO DO IVAÍ, Sr. Fabio Hidek Miura, relativas ao exercício financeiro de 2014, diante da existência de contas bancárias com divergência de saldos e com saldos a descoberto, bem como das irregularidades constantes dos processos n.os 97062-3/14 e 25204-7/16, diretamente relacionadas à estruturação e ausência de atuação autônoma e imparcial do Conselho Municipal de Saúde de Acompanhamento do FUNDEB - Fundo de Manutenção e Desenvolvimento da Educação Básica e de Valorização dos Profissionais da Educação;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de São João do Ivaí",
+    "exercicio": "2014",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 175/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/7/00347425.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "f1f649226448a1a30301944ecf63f4609a3967e30c5c8d43e6a82b5a93148da1",
+    "paginas_lidas": 2,
+    "total_paginas": 9,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito Municipal de SÃO JOÃO DO IVAÍ, Sr. Fabio Hidek Miura, relativas ao exercício financeiro de 2014, diante da existência de contas bancárias com divergência de saldos e com saldos a descoberto, bem como das irregularidades constantes dos processos n.os 97062-3/14 e 25204-7/16, diretamente relacionadas à estruturação e ausência de atuação autônoma e imparcial do Conselho Municipal de Saúde de Acompanhamento do FUNDEB - Fundo de Manutenção e Desenvolvimento da Educação Básica e de Valorização dos Profissionais da Educação; II. a […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito Municipal de SÃO JOÃO DO IVAÍ, Sr. Fabio Hidek Miura, relativas ao exercício financeiro de 2014, diante da existência de contas bancárias com divergência de saldos e com saldos a descoberto, bem como das irregularidades constantes dos processos n.os 97062-3/14 e 25204-7/16, diretamente relacionadas à estruturação e ausência de atuação autônoma e imparcial do Conselho Municipal de Saúde de Acompanhamento do FUNDEB - Fundo de Manutenção e Desenvolvimento da Educação Básica e de Valorização dos Profissionais da Educação;",
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "exercicio": {
+     "ano": 2014,
+     "trecho": "exercício financeiro de 2014"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de São João do Ivaí não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [],
+ "acordaos_relacionados": []
+}

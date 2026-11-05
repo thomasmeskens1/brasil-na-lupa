@@ -1,0 +1,745 @@
+{
+ "atualizado_em": "2026-11-05T14:01:00.104Z",
+ "municipio": {
+  "id": "florestopolis",
+  "nome": "Florestópolis",
+  "uf": "PR",
+  "codigo_ibge": "4108007"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2016,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 8,
+  "pareceres": 9,
+  "com_parecer_em_fonte_aberta": 9,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 9,
+  "pdf_lido": 9,
+  "sem_exercicio_na_fonte": 0
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f68ca8a9b64d6286d5f605b923705fb7602cf450e7408d143f7545e514359bfb",
+   "atualizado_na_fonte": "05/06/2026 00:00:40"
+  },
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2026-3-000200871",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 66/2026 — contas do Prefeito de Florestópolis, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "66",
+    "ano": "2026",
+    "titulo_oficial": "Parecer Prévio 66/2026"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "170333/2025",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2026-02-09",
+   "data_publicacao": "2026-03-02",
+   "publicacao_literal": "DETC nº 3624",
+   "entidade_literal": "MUNICÍPIO DE FLORESTÓPOLIS",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor ONÍCIO DE SOUZA, na qualidade de prefeito do MUNICÍPIO DE FLORESTÓPOLIS, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Florestópolis",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 66/2026 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2026/3/000200871.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "e615eae713cff48b103a4620eb5c3798e300b28117f4a77aedb4a7fc8590d727",
+    "paginas_lidas": 1,
+    "total_paginas": 46,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por maioria absoluta: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor ONÍCIO DE SOUZA, na qualidade de prefeito do MUNICÍPIO DE FLORESTÓPOLIS, relativas ao exercício de 2024. b. RESSALVAR as contas em virtude de: i. baixo desempenho evidenciado na avaliação da atuação governamental nas áreas da Administração Financeira e da Transparência e Relacionamento com o Cidadão. Após o trânsito em julgado da deliberação, encaminhar os autos ao Gabinete da Presidência para as providências contidas no § 6º do artigo 217-A do Regimento Interno, à Coordenadoria de Medidas Executórias para as anotações pertinentes e, por fim, à Diretoria de Pro […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor ONÍCIO DE SOUZA, na qualidade de prefeito do MUNICÍPIO DE FLORESTÓPOLIS, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2026,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Florestópolis não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2025-6-000198188",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 182/2025 — contas do Prefeito de Florestópolis, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "182",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 182/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "171271/2024",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2025-06-09",
+   "data_publicacao": "2025-06-26",
+   "publicacao_literal": "DETC nº 3470",
+   "entidade_literal": "MUNICÍPIO DE FLORESTÓPOLIS",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor ONÍCIO DE SOUZA, na qualidade de prefeito do Município de FLORESTÓPOLIS, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Florestópolis",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 182/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/6/000198188.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "5a259f95b656f1b2b9302ab995fabff8403b897548dcf11a12fd1c62b099905b",
+    "paginas_lidas": 1,
+    "total_paginas": 41,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: Considerando os fatos expostos no item de fundamentação, VOTO, com respaldo no artigo 1º, I, da Lei Complementar Estadual n.º 113/2005 e em observância ao artigo 217-A, caput, do Regimento Interno, no sentido de: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor ONÍCIO DE SOUZA, na qualidade de prefeito do Município de FLORESTÓPOLIS, relativas ao exercício de 2023. b. RESSALVAR as contas em virtude de: i. resultado financeiro acumulado negativo de até -5%. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertine […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor ONÍCIO DE SOUZA, na qualidade de prefeito do Município de FLORESTÓPOLIS, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Florestópolis não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-12-00391364",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 425/2024 — contas do Prefeito de Florestópolis, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "425",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 425/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "201070/2023",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2024-11-25",
+   "data_publicacao": "2024-12-09",
+   "publicacao_literal": "DETC nº 3352",
+   "entidade_literal": "MUNICÍPIO DE FLORESTÓPOLIS",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVAS",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do(a) senhor(a) ONÍCIO DE SOUZA, na qualidade de prefeito(a) do MUNICÍPIO DE FLORESTÓPOLIS, relativas ao exercício de 2022, em razão de:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Florestópolis",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 425/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/12/00391364.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "b39b7da1e349747c3ed7c98a9221ea1757dc8eb7fcafe602845b708ac6d3b2d3",
+    "paginas_lidas": 1,
+    "total_paginas": 34,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do(a) senhor(a) ONÍCIO DE SOUZA, na qualidade de prefeito(a) do MUNICÍPIO DE FLORESTÓPOLIS, relativas ao exercício de 2022, em razão de: i. Ressalva quanto ao descumprimento dos artigos 1º, § 1º, da LRF e 48, alínea b, da Lei Federal n.º 4.320/64, conforme indicado na análise do resultado orçamentário e financeiro. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Le […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do(a) senhor(a) ONÍCIO DE SOUZA, na qualidade de prefeito(a) do MUNICÍPIO DE FLORESTÓPOLIS, relativas ao exercício de 2022, em razão de:",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVAS",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Florestópolis não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-9-00379476",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 423/2023 da Secretaria Primeira Câmara — contas do Prefeito de Florestópolis, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "423",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 423/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "175083/2022",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2023-09-04",
+   "data_publicacao": "2023-09-21",
+   "publicacao_literal": "DETC nº 3068",
+   "entidade_literal": "MUNICÍPIO DE FLORESTÓPOLIS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de FLORESTÓPOLIS, Sr. ONÍCIO DE SOUZA, relativas ao exercício financeiro de 2020, com ressalva em razão do resultado orçamentário/financeiro deficitário de fontes não vinculadas a programas, convênios, operações de créditos e RPPS;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Florestópolis",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 423/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/9/00379476.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "017aeb850d5bf3721cc76aace49e8ff9a753a234389440e572a895232b4adf67",
+    "paginas_lidas": 2,
+    "total_paginas": 5,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de FLORESTÓPOLIS, Sr. ONÍCIO DE SOUZA, relativas ao exercício financeiro de 2020, com ressalva em razão do resultado orçamentário/financeiro deficitário de fontes não vinculadas a programas, convênios, operações de créditos e RPPS; II. Determinar, após o trânsito em julgado da decisão, as seguintes medidas: a) o encaminhamento dos autos à Coordenadoria de Monitoramento e Execuções, nos termos do artigo 175-L, I, do Regimento Interno. b) após, ao Gabinete da Presidência para expedição de ofício à Câmara Municipal, co […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de FLORESTÓPOLIS, Sr. ONÍCIO DE SOUZA, relativas ao exercício financeiro de 2020, com ressalva em razão do resultado orçamentário/financeiro deficitário de fontes não vinculadas a programas, convênios, operações de créditos e RPPS;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício financeiro de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Florestópolis não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-9-00379125",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 392/2023 da Secretaria Primeira Câmara — contas do Prefeito de Florestópolis, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "392",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 392/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "179913/2021",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2023-08-21",
+   "data_publicacao": "2023-09-11",
+   "publicacao_literal": "DETC nº 3060",
+   "entidade_literal": "MUNICÍPIO DE FLORESTÓPOLIS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Emitir, na forma do art. 23 da Lei Complementar Estadual nº 113/2005, parecer prévio deste Tribunal, recomendando o julgamento pela regularidade das contas do prefeito do MUNICÍPIO DE FLORESTÓPOLIS, relativas ao exercício de 2020, de responsabilidade de NELSON CORREIA JUNIOR;",
+    "conclusao_literal": "Emitir, na forma do art. 23 da Lei Complementar Estadual nº 113/2005, parecer prévio deste Tribunal, recomendando o julgamento pela regularidade das contas do prefeito do MUNICÍPIO DE FLORESTÓPOLIS, relativas ao exercício de 2020, de responsabilidade de NELSON CORREIA JUNIOR;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Florestópolis",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 392/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/9/00379125.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "7931094bf480cd10087c2df0c2772799129f95622bc7903ff2eff8707224d32d",
+    "paginas_lidas": 2,
+    "total_paginas": 10,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade, em: I -Emitir, na forma do art. 23 da Lei Complementar Estadual nº 113/2005, parecer prévio deste Tribunal, recomendando o julgamento pela regularidade das contas do prefeito do MUNICÍPIO DE FLORESTÓPOLIS, relativas ao exercício de 2020, de responsabilidade de NELSON CORREIA JUNIOR; II - ressalvar o item “Obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa, conforme critérios fixados no Prejulgado 15” e do “Resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, op […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir, na forma do art. 23 da Lei Complementar Estadual nº 113/2005, parecer prévio deste Tribunal, recomendando o julgamento pela regularidade das contas do prefeito do MUNICÍPIO DE FLORESTÓPOLIS, relativas ao exercício de 2020, de responsabilidade de NELSON CORREIA JUNIOR;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Florestópolis não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-12-00353118",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 701/2020 da Secretaria Primeira Câmara — contas do Prefeito de Florestópolis, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "701",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 701/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "262019/2020",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2020-11-30",
+   "data_publicacao": "2020-12-10",
+   "publicacao_literal": "DETC nº 2441",
+   "entidade_literal": "MUNICÍPIO DE FLORESTÓPOLIS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de FLORESTÓPOLIS, Sr. NELSON CORREIA JUNIOR (CPF 059.328.019-99), relativas ao exercício financeiro de 2019, com ressalva em face do déficit orçamentário de fontes financeiras não vinculadas;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Florestópolis",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 701/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/12/00353118.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "caf410fac438c99243e4635f3ef8b995e9304a6e5690cb2d8fc1174494e45ca6",
+    "paginas_lidas": 2,
+    "total_paginas": 4,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de FLORESTÓPOLIS, Sr. NELSON CORREIA JUNIOR (CPF 059.328.019-99), relativas ao exercício financeiro de 2019, com ressalva em face do déficit orçamentário de fontes financeiras não vinculadas; II. Recomendar ao Município de Florestópolis, na pessoa de seu representante legal, que observe os mecanismos previstos na Lei de Responsabilidade Fiscal voltados à efetividade da gestão fiscal responsável, notadamente o seu artigo 9° e 13. III. Determinar, após o trânsito em julgado da decisão, as seguintes medidas: a) o encam […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de FLORESTÓPOLIS, Sr. NELSON CORREIA JUNIOR (CPF 059.328.019-99), relativas ao exercício financeiro de 2019, com ressalva em face do déficit orçamentário de fontes financeiras não vinculadas;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício financeiro de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Florestópolis não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-11-00341728",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 506/2019 da Secretaria Segunda Câmara — contas do Prefeito de Florestópolis, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "506",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 506/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "195141/2019",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2019-11-19",
+   "data_publicacao": "2019-11-26",
+   "publicacao_literal": "DETC nº 2193",
+   "entidade_literal": "MUNICÍPIO DE FLORESTÓPOLIS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.° 113/2005, recomendando a regularidade das contas do Prefeito Municipal de Florestópolis, exercício de 2018, senhor Nelson Correia Junior, CPF 059.328.019-99;",
+    "conclusao_literal": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.° 113/2005, recomendando a regularidade das contas do Prefeito Municipal de Florestópolis, exercício de 2018, senhor Nelson Correia Junior, CPF 059.328.019-99;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Florestópolis",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 506/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/11/00341728.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "6af91dd04c604794c2efe7352d5b41d26e184cc2d675b3a2034afed09ce04f36",
+    "paginas_lidas": 1,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: I- emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.° 113/2005, recomendando a regularidade das contas do Prefeito Municipal de Florestópolis, exercício de 2018, senhor Nelson Correia Junior, CPF 059.328.019-99; II- encaminhar os autos, após o trânsito em julgado do processo, à Diretoria de Protocolo, nos termos do artigo 398, § 1.º, do Regimento Interno, para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n.° 113/2005, recomendando a regularidade das contas do Prefeito Municipal de Florestópolis, exercício de 2018, senhor Nelson Correia Junior, CPF 059.328.019-99;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Florestópolis não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-4-00344454",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 57/2020 da Secretaria Primeira Câmara — contas do Prefeito de Florestópolis, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "57",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 57/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "281699/2018",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2020-03-02",
+   "data_publicacao": "2020-04-16",
+   "publicacao_literal": "DETC nº 2280",
+   "entidade_literal": "MUNICÍPIO DE FLORESTÓPOLIS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio pela regularidade com ressalva",
+    "conclusao_literal": "emitir parecer prévio pela regularidade com ressalva das contas do MUNICÍPIO DE FLORESTÓPOLIS, CNPJ 75.845.495/0001-59, relativa ao exercício financeiro de 2017, de responsabilidade do Sr. NELSON CORREIA JUNIOR, CPF 059.328.019-99, com base no disposto no art. 16, II, da LC/PR 113/05, tendo em vista as divergências apontadas acerca do resultado orçamentário/financeiro de fontes não vinculadas a programas, porém, sem indícios de dano ou prejuízos ao erário;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Florestópolis",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 57/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/4/00344454.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "c03b17f274ee18d6f73ff1a9e5e5adac54ddfc3c3e9ca92cd5c724410e21e7e4",
+    "paginas_lidas": 1,
+    "total_paginas": 6,
+    "deliberacao": "ACORDAM Os membros da PRIMEIRA CÂMARA do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: I. emitir parecer prévio pela regularidade com ressalva das contas do MUNICÍPIO DE FLORESTÓPOLIS, CNPJ 75.845.495/0001-59, relativa ao exercício financeiro de 2017, de responsabilidade do Sr. NELSON CORREIA JUNIOR, CPF 059.328.019-99, com base no disposto no art. 16, II, da LC/PR 113/05, tendo em vista as divergências apontadas acerca do resultado orçamentário/financeiro de fontes não vinculadas a programas, porém, sem indícios de dano ou prejuízos ao erário; II. determinar a expedição de recomendação ao Jurisdicionado, para que observe as normativas legais, visando implementar medidas para que as divergências ora obs […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir parecer prévio pela regularidade com ressalva das contas do MUNICÍPIO DE FLORESTÓPOLIS, CNPJ 75.845.495/0001-59, relativa ao exercício financeiro de 2017, de responsabilidade do Sr. NELSON CORREIA JUNIOR, CPF 059.328.019-99, com base no disposto no art. 16, II, da LC/PR 113/05, tendo em vista as divergências apontadas acerca do resultado orçamentário/financeiro de fontes não vinculadas a programas, porém, sem indícios de dano ou prejuízos ao erário;",
+    "conclusao": "parecer prévio pela regularidade com ressalva",
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício financeiro de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Florestópolis não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-10-00350661",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 475/2020 da Secretaria Segunda Câmara — contas do Prefeito de Florestópolis, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "475",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 475/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "307643/2017",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2020-09-21",
+   "data_publicacao": "2020-10-06",
+   "publicacao_literal": "DETC nº 2396",
+   "entidade_literal": "MUNICÍPIO DE FLORESTÓPOLIS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, com fundamento nos arts. 1º, inciso I, e 16, inciso II7, ambos da Lei Complementar Estadual nº 113/2005, e na Súmula nº 8 deste Tribunal de Contas, recomendando a regularidade das contas de Florestópolis, do exercício financeiro de 2016, com ressalvas em razão de (1) divergências nos registros de transferências constitucionais dos repasses de FPM, ICMS, e IPVA;",
+    "conclusao_literal": "emitir Parecer Prévio, com fundamento nos arts. 1º, inciso I, e 16, inciso II7, ambos da Lei Complementar Estadual nº 113/2005, e na Súmula nº 8 deste Tribunal de Contas, recomendando a regularidade das contas de Florestópolis, do exercício financeiro de 2016, com ressalvas em razão de (1) divergências nos registros de transferências constitucionais dos repasses de FPM, ICMS, e IPVA;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Florestópolis",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 475/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/10/00350661.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "abcf6db61d10eb20c49e5842454761ba1fe69c1f918ae300300d1506b4ad99d4",
+    "paginas_lidas": 2,
+    "total_paginas": 9,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I- emitir Parecer Prévio, com fundamento nos arts. 1º, inciso I, e 16, inciso II7, ambos da Lei Complementar Estadual nº 113/2005, e na Súmula nº 8 deste Tribunal de Contas, recomendando a regularidade das contas de Florestópolis, do exercício financeiro de 2016, com ressalvas em razão de (1) divergências nos registros de transferências constitucionais dos repasses de FPM, ICMS, e IPVA; (2) obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcela a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa, conforme Prejulgado 15; (3) despesas com publicidade instituci […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, com fundamento nos arts. 1º, inciso I, e 16, inciso II7, ambos da Lei Complementar Estadual nº 113/2005, e na Súmula nº 8 deste Tribunal de Contas, recomendando a regularidade das contas de Florestópolis, do exercício financeiro de 2016, com ressalvas em razão de (1) divergências nos registros de transferências constitucionais dos repasses de FPM, ICMS, e IPVA;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício financeiro de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Florestópolis não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [],
+ "acordaos_relacionados": []
+}

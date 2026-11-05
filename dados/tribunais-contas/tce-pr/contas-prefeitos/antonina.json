@@ -1,0 +1,655 @@
+{
+ "atualizado_em": "2026-11-05T14:29:00.759Z",
+ "municipio": {
+  "id": "antonina",
+  "nome": "Antonina",
+  "uf": "PR",
+  "codigo_ibge": "4101200"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2016,
+  "fim": 2023
+ },
+ "contagens": {
+  "exercicios": 6,
+  "pareceres": 8,
+  "com_parecer_em_fonte_aberta": 6,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 7,
+  "pdf_lido": 7,
+  "sem_exercicio_na_fonte": 2
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "3b7fb76a75413d34e4541e63dccfa3cab923f7d498fc63703a156f2f00d63a4c",
+   "atualizado_na_fonte": "26/06/2025 14:58:07"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2025-7-000198449",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 200/2025 — contas do Prefeito de Antonina, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "200",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 200/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "216526/2024",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2025-07-07",
+   "data_publicacao": "2025-07-16",
+   "publicacao_literal": "DETC nº 3484",
+   "entidade_literal": "MUNICÍPIO DE ANTONINA",
+   "resumo_literal": null,
+   "indexacao_literal": "Irregularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela IRREGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela IRREGULARIDADE das contas do(a) senhor(a) JOSE PAULO VIEIRA AZIM, na qualidade de prefeito(a) do MUNICÍPIO DE ANTONINA, relativas ao exercício de 2023, em razão de:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Antonina",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 200/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/7/000198449.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "bd4314003c384338520b9f34f76b3a14a0a2d7dc02fd188f19b91acb8898af9e",
+    "paginas_lidas": 1,
+    "total_paginas": 44,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: a. Emitir Parecer Prévio pela IRREGULARIDADE das contas do(a) senhor(a) JOSE PAULO VIEIRA AZIM, na qualidade de prefeito(a) do MUNICÍPIO DE ANTONINA, relativas ao exercício de 2023, em razão de: i. descumprimento dos artigos 1º, § 1º, da LRF e 48, alínea b, da Lei Federal n.º 4.320/64, conforme indicado na análise do resultado orçamentário e financeiro. ii. aplicação de valores totais inferiores ao mínimo exigível constitucionalmente durante o período de 2020 a 2023. b. Apor RESSALVAS em razão dos resultados da atuação governamental nas áreas referentes à Educação (5,49), Assistência Social (4,34), Transparência e Relacionamento co […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela IRREGULARIDADE das contas do(a) senhor(a) JOSE PAULO VIEIRA AZIM, na qualidade de prefeito(a) do MUNICÍPIO DE ANTONINA, relativas ao exercício de 2023, em razão de:",
+    "conclusao": "Parecer Prévio pela IRREGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Antonina não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-7-00386587",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 264/2024 — contas do Prefeito de Antonina, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "264",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 264/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "199776/2023",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "AUGUSTINHO ZUCCHI",
+   "data_julgamento": "2024-06-24",
+   "data_publicacao": "2024-07-10",
+   "publicacao_literal": "DETC nº 3247",
+   "entidade_literal": "MUNICÍPIO DE ANTONINA",
+   "resumo_literal": null,
+   "indexacao_literal": "Irregularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela IRREGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela IRREGULARIDADE das contas do(a) senhor(a) JOSE PAULO VIEIRA AZIM, na qualidade de prefeito(a) do MUNICÍPIO DE ANTONINA, relativas ao exercício de 2022, em razão de:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Antonina",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 264/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/7/00386587.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "ec8105bda043c5adf86bbafb9fc11553fea449cc4cbf7fba676167a95a6028f9",
+    "paginas_lidas": 1,
+    "total_paginas": 37,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro AUGUSTINHO ZUCCHI, por maioria absoluta: a. Emitir Parecer Prévio pela IRREGULARIDADE das contas do(a) senhor(a) JOSE PAULO VIEIRA AZIM, na qualidade de prefeito(a) do MUNICÍPIO DE ANTONINA, relativas ao exercício de 2022, em razão de: i. descumprimento dos artigos 1º, § 1º, da LRF e 48, alínea b, da Lei Federal n.º 4.320/64, conforme indicado na análise do resultado orçamentário e financeiro. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 2 […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "Emitir Parecer Prévio pela IRREGULARIDADE das contas do(a) senhor(a) JOSE PAULO VIEIRA AZIM, na qualidade de prefeito(a) do MUNICÍPIO DE ANTONINA, relativas ao exercício de 2022, em razão de:",
+    "conclusao": "Parecer Prévio pela IRREGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Antonina não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-9-00379326",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 438/2023 da Secretaria Primeira Câmara — contas do Prefeito de Antonina, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "438",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 438/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "216090/2022",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2023-09-04",
+   "data_publicacao": "2023-09-18",
+   "publicacao_literal": "DETC nº 3065",
+   "entidade_literal": "MUNICÍPIO DE ANTONINA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio deste Tribunal recomendando o julgamento pela irregularidade",
+    "conclusao_literal": "Emitir, acompanhando a Coordenadoria de Gestão Municipal e o Ministério Público de Contas, na forma do art. 23 da Lei Complementar Estadual n. 113/2005, parecer prévio deste Tribunal recomendando o julgamento pela irregularidade das contas do prefeito do MUNICÍPIO DE ANTONINA, relativas ao exercício de 2021, de responsabilidade de JOSE PAULO VIEIRA AZIM, em face do “Resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS” e “Aplicação de no mínimo 70% dos recursos do FUNDEB na remuneração dos profissionais da educação básica”;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Antonina",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 438/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/9/00379326.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "3ad6030e2af8c209095228c54513f1f246ddb524020a72e897de4ce6715a1310",
+    "paginas_lidas": 2,
+    "total_paginas": 7,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade, em: I – Emitir, acompanhando a Coordenadoria de Gestão Municipal e o Ministério Público de Contas, na forma do art. 23 da Lei Complementar Estadual n. 113/2005, parecer prévio deste Tribunal recomendando o julgamento pela irregularidade das contas do prefeito do MUNICÍPIO DE ANTONINA, relativas ao exercício de 2021, de responsabilidade de JOSE PAULO VIEIRA AZIM, em face do “Resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS” e “Aplicação de no mínimo 70% dos recursos do FUNDEB na remuneração dos profissionais da educação básica”; II - aplicar uma multa admi […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir, acompanhando a Coordenadoria de Gestão Municipal e o Ministério Público de Contas, na forma do art. 23 da Lei Complementar Estadual n. 113/2005, parecer prévio deste Tribunal recomendando o julgamento pela irregularidade das contas do prefeito do MUNICÍPIO DE ANTONINA, relativas ao exercício de 2021, de responsabilidade de JOSE PAULO VIEIRA AZIM, em face do “Resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS” e “Aplicação de no mínimo 70% dos recursos do FUNDEB na remuneração dos profissionais da educação básica”;",
+    "conclusao": "parecer prévio deste Tribunal recomendando o julgamento pela irregularidade",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Antonina não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-1-00371609",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 343/2022 da Secretaria Segunda Câmara — contas do Prefeito de Antonina, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "343",
+    "ano": "2022",
+    "titulo_oficial": "Acórdão de Parecer Prévio 343/2022 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "182582/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2022-12-12",
+   "data_publicacao": "2023-01-16",
+   "publicacao_literal": "DETC nº 2901",
+   "entidade_literal": "MUNICÍPIO DE ANTONINA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito Municipal de ANTONINA, Sr. JOSE PAULO VIEIRA AZIM (CPF 584.032.649-68), relativas ao exercício financeiro de 2020, em razão de:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Antonina",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 343/2022 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/1/00371609.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "effb3948b2be077ef61ec7e13ecf8604d3ac24724b438cd625a7cdd02358097f",
+    "paginas_lidas": 2,
+    "total_paginas": 6,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito Municipal de ANTONINA, Sr. JOSE PAULO VIEIRA AZIM (CPF 584.032.649-68), relativas ao exercício financeiro de 2020, em razão de: (a) resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de crédito e RPPS; e das (b) obrigações de despesas contraídas nos dois últimos quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa. II. Ressalvar os seguintes apontamentos: (a) o relatório do controle interno não apresentar o […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito Municipal de ANTONINA, Sr. JOSE PAULO VIEIRA AZIM (CPF 584.032.649-68), relativas ao exercício financeiro de 2020, em razão de:",
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício financeiro de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2022,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Antonina não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-10-00350656",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 469/2020 da Secretaria Segunda Câmara — contas do Prefeito de Antonina, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "469",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 469/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "301347/2018",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2020-09-21",
+   "data_publicacao": "2020-10-06",
+   "publicacao_literal": "DETC nº 2396",
+   "entidade_literal": "MUNICÍPIO DE ANTONINA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a IRREGULARIDADE",
+    "conclusao_literal": "emitir, na forma do artigo 23 da Lei Complementar n° 113/2005, Parecer Prévio recomendando a IRREGULARIDADE das contas do PREFEITO DO MUNICÍPIO DE ANTONINA, exercício de 2017, Sr. José Paulo Vieira Azim, CPF 584.032.649-68, em decorrência do seguinte item:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Antonina",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 469/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/10/00350656.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "e854a52ffc45292077442f92d75d4ed8b5b800efc5454337711b270fe28f1567",
+    "paginas_lidas": 2,
+    "total_paginas": 18,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por maioria absoluta, em: 1) emitir, na forma do artigo 23 da Lei Complementar n° 113/2005, Parecer Prévio recomendando a IRREGULARIDADE das contas do PREFEITO DO MUNICÍPIO DE ANTONINA, exercício de 2017, Sr. José Paulo Vieira Azim, CPF 584.032.649-68, em decorrência do seguinte item: a. falta de aplicação do índice mínimo de 25% em manutenção e desenvolvimento da educação básica municipal; 2) apor RESSALVAS aos seguintes apontamentos: a. resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS; b. entrega dos dados do SIM-AM com atraso; 3) aplicar ao Sr. José Paulo Vieira Azim, CPF 584.032. […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "emitir, na forma do artigo 23 da Lei Complementar n° 113/2005, Parecer Prévio recomendando a IRREGULARIDADE das contas do PREFEITO DO MUNICÍPIO DE ANTONINA, exercício de 2017, Sr. José Paulo Vieira Azim, CPF 584.032.649-68, em decorrência do seguinte item:",
+    "conclusao": "Parecer Prévio recomendando a IRREGULARIDADE",
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Antonina não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-2-00343264",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 11/2020 da Secretaria Primeira Câmara — contas do Prefeito de Antonina, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "11",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 11/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "284708/2017",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2020-01-27",
+   "data_publicacao": "2020-02-05",
+   "publicacao_literal": "DETC nº 2234",
+   "entidade_literal": "MUNICÍPIO DE ANTONINA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito Municipal de ANTONINA, Sr. João Ubirajara Lopes, CPF n.º 223.581.881-15, relativas ao exercício financeiro de 2016, em decorrência de divergência de saldos entre o balanço patrimonial emitido pela contabilidade e os dados enviados no SIM-AM;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Antonina",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 11/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/2/00343264.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "b58cf29d07aeb4849064cb7c9c051c05864b9f84cf3e0ff06b785f6c82d4cffa",
+    "paginas_lidas": 3,
+    "total_paginas": 12,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito Municipal de ANTONINA, Sr. João Ubirajara Lopes, CPF n.º 223.581.881-15, relativas ao exercício financeiro de 2016, em decorrência de divergência de saldos entre o balanço patrimonial emitido pela contabilidade e os dados enviados no SIM-AM; de obrigações de despesas contraídas nos últimos dois quadrimestres do mandato, com parcelas a serem pagas no exercício seguinte sem suficiente disponibilidade de caixa, conforme critérios fixados no Prejulgado 15; de falta de aplicação do índice mínimo de 25% em manutenção e desenvolvi […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito Municipal de ANTONINA, Sr. João Ubirajara Lopes, CPF n.º 223.581.881-15, relativas ao exercício financeiro de 2016, em decorrência de divergência de saldos entre o balanço patrimonial emitido pela contabilidade e os dados enviados no SIM-AM;",
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício financeiro de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Antonina não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2021-49-segundacmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 49/2021 da Secretaria Segunda Câmara — contas do Prefeito de Antonina",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "49",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 49/2021 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "266570/2020",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2021-02-22",
+   "data_publicacao": "2021-03-30",
+   "publicacao_literal": "DETC nº 2509",
+   "entidade_literal": "MUNICÍPIO DE ANTONINA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Antonina",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Antonina não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-8-00349998",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 357/2020 da Secretaria Primeira Câmara — contas do Prefeito de Antonina",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "357",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 357/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "198825/2019",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2020-08-10",
+   "data_publicacao": "2020-08-24",
+   "publicacao_literal": "DETC nº 2367",
+   "entidade_literal": "MUNICÍPIO DE ANTONINA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito Municipal de ANTONINA, Sr. José Paulo Vieira Azim, em decorrência do “Resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS” e da “Falta de aplicação do índice mínimo de 25% em manutenção e desenvolvimento da educação básica municipal”;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Antonina",
+    "exercicio": null,
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 357/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/8/00349998.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "809a65356bf2c7995b160e946e859a88f54ee85d6328cef7c027cc2ba0a42366",
+    "paginas_lidas": 2,
+    "total_paginas": 9,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito Municipal de ANTONINA, Sr. José Paulo Vieira Azim, em decorrência do “Resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS” e da “Falta de aplicação do índice mínimo de 25% em manutenção e desenvolvimento da educação básica municipal”; II. Aplicar a multa prevista no artigo 87, IV, “g”, da Lei Complementar Estadual n.º 113/2005, ao senhor José Paulo Vieira Azim, por duas vezes, em razão do “Resultado orçamentário/financeiro de fontes não vinculadas a programas, conv […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito Municipal de ANTONINA, Sr. José Paulo Vieira Azim, em decorrência do “Resultado orçamentário/financeiro de fontes não vinculadas a programas, convênios, operações de créditos e RPPS” e da “Falta de aplicação do índice mínimo de 25% em manutenção e desenvolvimento da educação básica municipal”;",
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "exercicio": null
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Antonina não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

@@ -1,0 +1,742 @@
+{
+ "atualizado_em": "2026-11-05T14:14:50.562Z",
+ "municipio": {
+  "id": "perola",
+  "nome": "Pérola",
+  "uf": "PR",
+  "codigo_ibge": "4118907"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2016,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 9,
+  "pareceres": 9,
+  "com_parecer_em_fonte_aberta": 9,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 9,
+  "pdf_lido": 9,
+  "sem_exercicio_na_fonte": 0
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f68ca8a9b64d6286d5f605b923705fb7602cf450e7408d143f7545e514359bfb",
+   "atualizado_na_fonte": "05/06/2026 00:00:40"
+  },
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2026-2-000200575",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 8/2026 — contas do Prefeito de Pérola, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "8",
+    "ano": "2026",
+    "titulo_oficial": "Parecer Prévio 8/2026"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "184091/2025",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2026-01-26",
+   "data_publicacao": "2026-02-06",
+   "publicacao_literal": "DETC nº 3611",
+   "entidade_literal": "MUNICÍPIO DE PÉROLA",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVAS",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas da senhora VALDETE CARLOS DE OLIVEIRA GONÇALVES DA CUNHA, na qualidade de prefeita do MUNICÍPIO DE PÉROLA, relativas ao exercício de 2024, sendo as ressalvas referentes (a) aos aportes para cobertura do déficit atuarial em montante inferior ao previsto no resultado de avaliação atuarial, tendo sido comprovado regular parcelamento (item de análise “Pagamento de Aportes para Cobertura do Déficit Atuarial na forma apurada no Laudo Atuarial”), e (b) ao baixo desempenho evidenciado na avaliação da atuação governamental nas áreas de administração financeira (5,28) e previdência social (5,08).",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Pérola",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 8/2026 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2026/2/000200575.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "e1f153df5f90bf08801453a93da833afd4edb34d7549686698cc312204fd738c",
+    "paginas_lidas": 1,
+    "total_paginas": 50,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: Considerando os fatos expostos no item de fundamentação, voto, com respaldo no artigo 1º, I, da Lei Complementar Estadual n.º 113/2005 e em observância ao artigo 217-A, caput, do Regimento Interno, no sentido de Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas da senhora VALDETE CARLOS DE OLIVEIRA GONÇALVES DA CUNHA, na qualidade de prefeita do MUNICÍPIO DE PÉROLA, relativas ao exercício de 2024, sendo as ressalvas referentes (a) aos aportes para cobertura do déficit atuarial em montante inferior ao previsto no resultado de avaliação atuarial, tendo sido comprovado regular parcelamento (item de análise “Pagamento de […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas da senhora VALDETE CARLOS DE OLIVEIRA GONÇALVES DA CUNHA, na qualidade de prefeita do MUNICÍPIO DE PÉROLA, relativas ao exercício de 2024, sendo as ressalvas referentes (a) aos aportes para cobertura do déficit atuarial em montante inferior ao previsto no resultado de avaliação atuarial, tendo sido comprovado regular parcelamento (item de análise “Pagamento de Aportes para Cobertura do Déficit Atuarial na forma apurada no Laudo Atuarial”), e (b) ao baixo desempenho evidenciado na avaliação da atuação governamental nas áreas de administração financeira (5,28) e previdência social (5,08).",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVAS",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2026,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Pérola não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2025-10-000199641",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 312/2025 — contas do Prefeito de Pérola, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "312",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 312/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "213241/2024",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2025-09-29",
+   "data_publicacao": "2025-10-14",
+   "publicacao_literal": "DETC nº 3547",
+   "entidade_literal": "MUNICÍPIO DE PÉROLA",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas da senhora VALDETE CARLOS DE OLIVEIRA GONÇALVES DA CUNHA, na qualidade de prefeita do MUNICÍPIO DE PÉROLA, relativas ao exercício de 2023;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Pérola",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 312/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/10/000199641.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "f209240c3b53c1fbd4356634558fa91cf14628cc0a518657f5ef261108f06bb6",
+    "paginas_lidas": 1,
+    "total_paginas": 49,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por maioria absoluta: a. Emitir Parecer Prévio pela REGULARIDADE das contas da senhora VALDETE CARLOS DE OLIVEIRA GONÇALVES DA CUNHA, na qualidade de prefeita do MUNICÍPIO DE PÉROLA, relativas ao exercício de 2023; b. RESSALVAR as contas em virtude de: i. resultado financeiro acumulado negativo equivalente a -1,89%; ii. ausência do oportuno pagamento dos aportes ao RPPS referentes ao exercício de 2023 para cobertura do déficit atuarial na forma apurada no laudo atuarial, cujo saldo devido está sendo recolhido mediante parcelamento, autorizado por lei municipal, que se encontra com os pagamentos devidamente em dia; iii. desempenho evidenci […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas da senhora VALDETE CARLOS DE OLIVEIRA GONÇALVES DA CUNHA, na qualidade de prefeita do MUNICÍPIO DE PÉROLA, relativas ao exercício de 2023;",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Pérola não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-2-00382499",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 54/2024 — contas do Prefeito de Pérola, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "54",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 54/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "209127/2023",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2024-02-19",
+   "data_publicacao": "2024-02-29",
+   "publicacao_literal": "DETC nº 3160",
+   "entidade_literal": "MUNICÍPIO DE PÉROLA",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) VALDETE CARLOS DE OLIVEIRA GONÇALVES DA CUNHA, na qualidade de prefeito(a) do MUNICÍPIO DE PÉROLA, relativas ao exercício de 2022.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Pérola",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 54/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/2/00382499.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "4b659c0eb01207aa5f645fac65161e4cb70ffa1fdabeb26ef9fdae1747756767",
+    "paginas_lidas": 1,
+    "total_paginas": 37,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade: Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) VALDETE CARLOS DE OLIVEIRA GONÇALVES DA CUNHA, na qualidade de prefeito(a) do MUNICÍPIO DE PÉROLA, relativas ao exercício de 2022. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, §6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) VALDETE CARLOS DE OLIVEIRA GONÇALVES DA CUNHA, na qualidade de prefeito(a) do MUNICÍPIO DE PÉROLA, relativas ao exercício de 2022.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Pérola não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-6-00374855",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 239/2023 da Secretaria Segunda Câmara — contas do Prefeito de Pérola, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "239",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 239/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "212400/2022",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2023-05-29",
+   "data_publicacao": "2023-06-14",
+   "publicacao_literal": "DETC nº 2999",
+   "entidade_literal": "MUNICÍPIO DE PÉROLA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a REGULARIDADE das contas do poder executivo do Município de Pérola, relativa ao exercício financeiro de 2021, de responsabilidade de Valdete Carlos de Oliveira Gonçalves da Cunha;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Pérola",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 239/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/6/00374855.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "301de146215919ecf9ed5eb08ef0baf437ed4b514bbc2251478089641fdc4e62",
+    "paginas_lidas": 1,
+    "total_paginas": 4,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I- Emitir Parecer Prévio recomendando a REGULARIDADE das contas do poder executivo do Município de Pérola, relativa ao exercício financeiro de 2021, de responsabilidade de Valdete Carlos de Oliveira Gonçalves da Cunha; II- encaminhar, após transitada em julgado a decisão, os autos ao Gabinete da Presidência para comunicação ao Poder Legislativo do Município de Pérola, nos termos do art. 217-A, § 6º, do Regimento Interno6; e III- determinar, após, com fundamento no art. 398, § 1º, do Regimento Interno7, o encerramento do processo e o encaminhamento dos autos à Diretoria de Protocolo para arquivamento do feito8.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a REGULARIDADE das contas do poder executivo do Município de Pérola, relativa ao exercício financeiro de 2021, de responsabilidade de Valdete Carlos de Oliveira Gonçalves da Cunha;",
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Pérola não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-10-00380030",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 471/2023 da Secretaria Primeira Câmara — contas do Prefeito de Pérola, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "471",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 471/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "177767/2021",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2023-10-02",
+   "data_publicacao": "2023-10-20",
+   "publicacao_literal": "DETC nº 3087",
+   "entidade_literal": "MUNICÍPIO DE PÉROLA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do ex-Prefeito do MUNICÍPIO DE PÉROLA, Sr. Darlan Scalco, relativas ao exercício financeiro de 2020, com ressalvas em virtude da ausência de pagamento de aportes para cobertura do déficit atuarial na forma apurada no Laudo Atuarial e das obrigações de despesas contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa, conforme critérios fixados no Prejulgado 15;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Pérola",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 471/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/10/00380030.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "21941f4872679ba7701414e0e0b88016f06992ea72b8df5327158ea8cee789aa",
+    "paginas_lidas": 1,
+    "total_paginas": 7,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do ex-Prefeito do MUNICÍPIO DE PÉROLA, Sr. Darlan Scalco, relativas ao exercício financeiro de 2020, com ressalvas em virtude da ausência de pagamento de aportes para cobertura do déficit atuarial na forma apurada no Laudo Atuarial e das obrigações de despesas contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa, conforme critérios fixados no Prejulgado 15; II. Determinar, após o trânsito em julgado da decisão, as seguintes medidas: a […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do ex-Prefeito do MUNICÍPIO DE PÉROLA, Sr. Darlan Scalco, relativas ao exercício financeiro de 2020, com ressalvas em virtude da ausência de pagamento de aportes para cobertura do déficit atuarial na forma apurada no Laudo Atuarial e das obrigações de despesas contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa, conforme critérios fixados no Prejulgado 15;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício financeiro de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Pérola não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-8-00349974",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 393/2020 da Secretaria Segunda Câmara — contas do Prefeito de Pérola, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "393",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 393/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "248768/2020",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2020-08-17",
+   "data_publicacao": "2020-08-27",
+   "publicacao_literal": "DETC nº 2370",
+   "entidade_literal": "MUNICÍPIO DE PÉROLA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, com fundamento no art. 1º, I, combinado com o art. 16, I, da Lei Complementar Estadual nº 113/2005, recomendando a regularidade das contas do Sr. Darlan Scalco, prefeito do Município de Pérola, relativas ao exercício financeiro de 2019;",
+    "conclusao_literal": "emitir Parecer Prévio, com fundamento no art. 1º, I, combinado com o art. 16, I, da Lei Complementar Estadual nº 113/2005, recomendando a regularidade das contas do Sr. Darlan Scalco, prefeito do Município de Pérola, relativas ao exercício financeiro de 2019;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Pérola",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 393/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/8/00349974.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "3c60e389355e664acdcae7a104cb8e0d3d00bc388d62c0b67cf95583ecedc4f3",
+    "paginas_lidas": 2,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade, em: I- emitir Parecer Prévio, com fundamento no art. 1º, I, combinado com o art. 16, I, da Lei Complementar Estadual nº 113/2005, recomendando a regularidade das contas do Sr. Darlan Scalco, prefeito do Município de Pérola, relativas ao exercício financeiro de 2019; II- remeter os autos, após o trânsito em julgado, ao Gabinete da Presidência, para as providências contidas no §6º do art. 217-A do Regimento Interno e, na sequência, à Diretoria de Protocolo, para encerramento e arquivamento, nos termos do art. 398 §1º e art. 168, inciso VII, ambos do Regimento Interno.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, com fundamento no art. 1º, I, combinado com o art. 16, I, da Lei Complementar Estadual nº 113/2005, recomendando a regularidade das contas do Sr. Darlan Scalco, prefeito do Município de Pérola, relativas ao exercício financeiro de 2019;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício financeiro de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Pérola não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-3-00344251",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 87/2020 da Secretaria Segunda Câmara — contas do Prefeito de Pérola, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "87",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 87/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "204302/2019",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2020-03-17",
+   "data_publicacao": "2020-03-25",
+   "publicacao_literal": "DETC nº 2266",
+   "entidade_literal": "MUNICÍPIO DE PÉROLA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, recomendando a regularidade com ressalva das contas do Município de Pérola, referentes ao exercício financeiro de 2018, de responsabilidade do Prefeito Municipal, senhor Darlan Scalco, nos termos dos artigos 1.º, inciso I,10 e 16, inciso II,11 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise:",
+    "conclusao_literal": "emitir Parecer Prévio, recomendando a regularidade com ressalva das contas do Município de Pérola, referentes ao exercício financeiro de 2018, de responsabilidade do Prefeito Municipal, senhor Darlan Scalco, nos termos dos artigos 1.º, inciso I,10 e 16, inciso II,11 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Pérola",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 87/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/3/00344251.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "e925a18878686c44047cc40b82961d0f0b24bfff60ac95627d2f3620ba8ac00c",
+    "paginas_lidas": 2,
+    "total_paginas": 6,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I- emitir Parecer Prévio, recomendando a regularidade com ressalva das contas do Município de Pérola, referentes ao exercício financeiro de 2018, de responsabilidade do Prefeito Municipal, senhor Darlan Scalco, nos termos dos artigos 1.º, inciso I,10 e 16, inciso II,11 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise: (a) o Relatório do Controle Interno apresenta ocorrência de irregularidade passível de 7 Art. 175-L. Compete à Coordenadoria de Monitoramento e Execuções: (Incluído pela Resolução n° 64/2018) I – manter o registro atualizado, o controle e o acompanham […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, recomendando a regularidade com ressalva das contas do Município de Pérola, referentes ao exercício financeiro de 2018, de responsabilidade do Prefeito Municipal, senhor Darlan Scalco, nos termos dos artigos 1.º, inciso I,10 e 16, inciso II,11 da Lei Complementar Estadual 113/2005, em razão do exposto na fundamentação quanto aos seguintes itens de análise:",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício financeiro de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Pérola não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-12-00342306",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 608/2019 da Secretaria Primeira Câmara — contas do Prefeito de Pérola, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "608",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 608/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "269044/2018",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2019-12-09",
+   "data_publicacao": "2019-12-16",
+   "publicacao_literal": "DETC nº 2207",
+   "entidade_literal": "MUNICÍPIO DE PÉROLA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio pela regularidade as contas do MUNICÍPIO DE PÉROLA",
+    "conclusao_literal": "emitir parecer prévio pela regularidade as contas do MUNICÍPIO DE PÉROLA, CNPJ 81.478.133/0001-70, relativa ao exercício financeiro de 2017, de responsabilidade do Sr. DARLAN SCALCO, CPF 005.856.939-19, com base no disposto no art. 16, I, da LC/PR 113/05;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Pérola",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 608/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/12/00342306.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "fd573f1e3e6d9e4c756028a8e12f66cfa972f4c3471df194ebe1aa40f09b3760",
+    "paginas_lidas": 2,
+    "total_paginas": 5,
+    "deliberacao": "ACORDAM Os membros da PRIMEIRA CÂMARA do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: I. emitir parecer prévio pela regularidade as contas do MUNICÍPIO DE PÉROLA, CNPJ 81.478.133/0001-70, relativa ao exercício financeiro de 2017, de responsabilidade do Sr. DARLAN SCALCO, CPF 005.856.939-19, com base no disposto no art. 16, I, da LC/PR 113/05; II. aplicar multa administrativa ao Sr. DARLAN SCALCO, CPF 005.856.939-19, representante legal do MUNICÍPIO DE PÉROLA, CNPJ 81.478.133/0001-70, nos termos do art. 87, III, b, da LC 113/2005, em face dos atrasos na alimentação dos dados do sistema SIM/AM nos meses de Março (35 dias) e Julho (55 dias) de 2017; III. determinar a expedição de recomendação ao Jurisdici […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir parecer prévio pela regularidade as contas do MUNICÍPIO DE PÉROLA, CNPJ 81.478.133/0001-70, relativa ao exercício financeiro de 2017, de responsabilidade do Sr. DARLAN SCALCO, CPF 005.856.939-19, com base no disposto no art. 16, I, da LC/PR 113/05;",
+    "conclusao": "parecer prévio pela regularidade as contas do MUNICÍPIO DE PÉROLA",
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício financeiro de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Pérola não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-9-00339778",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 265/2019 da Secretaria Primeira Câmara — contas do Prefeito de Pérola, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "265",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 265/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "278139/2017",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2019-09-09",
+   "data_publicacao": "2019-09-13",
+   "publicacao_literal": "DETC nº 2143",
+   "entidade_literal": "MUNICÍPIO DE PÉROLA",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando o julgamento pela Regularidade",
+    "conclusao_literal": "emitir Parecer Prévio recomendando o julgamento pela Regularidade das contas do Poder Executivo de Pérola, referente ao exercício financeiro de 2016, de responsabilidade do senhor Darlan Scalco, ressalvando os atrasos nas entregas dos dados do SIM-AM e as obrigações de despesas contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa, referente ao grupo “Operações de Crédito”;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Pérola",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 265/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/9/00339778.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "bbd2bf972889ec1c0796d9e9712363e6aed15f47e429ae55da916b7135f7ce03",
+    "paginas_lidas": 2,
+    "total_paginas": 13,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I – emitir Parecer Prévio recomendando o julgamento pela Regularidade das contas do Poder Executivo de Pérola, referente ao exercício financeiro de 2016, de responsabilidade do senhor Darlan Scalco, ressalvando os atrasos nas entregas dos dados do SIM-AM e as obrigações de despesas contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa, referente ao grupo “Operações de Crédito”; II – aplicar, em razão dos atrasos do SIM-AM, uma multa do artigo 87, III, “b”, da Lei Complementar 113/2005, ao senhor Darlan Scalco; e III – det […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando o julgamento pela Regularidade das contas do Poder Executivo de Pérola, referente ao exercício financeiro de 2016, de responsabilidade do senhor Darlan Scalco, ressalvando os atrasos nas entregas dos dados do SIM-AM e as obrigações de despesas contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa, referente ao grupo “Operações de Crédito”;",
+    "conclusao": "Parecer Prévio recomendando o julgamento pela Regularidade",
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício financeiro de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Pérola não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [],
+ "acordaos_relacionados": []
+}

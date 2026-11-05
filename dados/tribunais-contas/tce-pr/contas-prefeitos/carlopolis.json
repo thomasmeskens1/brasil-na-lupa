@@ -1,0 +1,886 @@
+{
+ "atualizado_em": "2026-11-05T14:29:01.019Z",
+ "municipio": {
+  "id": "carlopolis",
+  "nome": "Carlópolis",
+  "uf": "PR",
+  "codigo_ibge": "4104709"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2012,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 9,
+  "pareceres": 11,
+  "com_parecer_em_fonte_aberta": 9,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 11,
+  "pdf_lido": 11,
+  "sem_exercicio_na_fonte": 2
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f68ca8a9b64d6286d5f605b923705fb7602cf450e7408d143f7545e514359bfb",
+   "atualizado_na_fonte": "05/06/2026 00:00:40"
+  },
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2026-4-000201491",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 145/2026 — contas do Prefeito de Carlópolis, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "145",
+    "ano": "2026",
+    "titulo_oficial": "Parecer Prévio 145/2026"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "201700/2025",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2026-04-13",
+   "data_publicacao": "2026-04-29",
+   "publicacao_literal": "DETC nº 3662",
+   "entidade_literal": "MUNICÍPIO DE CARLÓPOLIS",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor HIROSHI KUBO, na qualidade de prefeito do MUNICÍPIO DE CARLÓPOLIS, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Carlópolis",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 145/2026 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2026/4/000201491.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "018fa45121c5d002957aa7c054537652ba3c5c7bc3b7a82c7942ca130c528aa7",
+    "paginas_lidas": 1,
+    "total_paginas": 50,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por maioria absoluta: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor HIROSHI KUBO, na qualidade de prefeito do MUNICÍPIO DE CARLÓPOLIS, relativas ao exercício de 2024. Após o trânsito em julgado da deliberação, encaminhar os autos ao Gabinete da Presidência para as providências contidas no § 6º do artigo 217-A do Regimento Interno, à Coordenadoria de Medidas Executórias para as anotações pertinentes e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor HIROSHI KUBO, na qualidade de prefeito do MUNICÍPIO DE CARLÓPOLIS, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2026,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Carlópolis não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2025-8-000198924",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 247/2025 — contas do Prefeito de Carlópolis, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "247",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 247/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "217050/2024",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2025-08-18",
+   "data_publicacao": "2025-08-26",
+   "publicacao_literal": "DETC nº 3513",
+   "entidade_literal": "MUNICÍPIO DE CARLÓPOLIS",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE com RESSALVA",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE com RESSALVA das contas do senhor HIROSHI KUBO, na qualidade de prefeito do MUNICÍPIO DE CARLÓPOLIS, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Carlópolis",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 247/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/8/000198924.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "b70f43990074415af426136907921a93fe21dbf09da5ebc90aca59ac46d4a049",
+    "paginas_lidas": 1,
+    "total_paginas": 42,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: Considerando os fatos expostos no item de fundamentação, VOTO, com respaldo no artigo 1º, I, da Lei Complementar Estadual n.º 113/2005 e em observância ao artigo 217-A, caput, do Regimento Interno, no sentido de: a. Emitir Parecer Prévio pela REGULARIDADE com RESSALVA das contas do senhor HIROSHI KUBO, na qualidade de prefeito do MUNICÍPIO DE CARLÓPOLIS, relativas ao exercício de 2023. b. RESSALVAR as contas em virtude de: i. baixo desempenho evidenciado na avaliação da atuação governamental na área da Saúde. ii. baixo desempenho evidenciado na avaliação da atuação governamental na área da Assistência Social. iii. baixo desempenho […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE com RESSALVA das contas do senhor HIROSHI KUBO, na qualidade de prefeito do MUNICÍPIO DE CARLÓPOLIS, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE com RESSALVA",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Carlópolis não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-3-00382546",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 30/2024 — contas do Prefeito de Carlópolis, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "30",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 30/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "223979/2023",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "AUGUSTINHO ZUCCHI",
+   "data_julgamento": "2024-01-29",
+   "data_publicacao": "2024-03-04",
+   "publicacao_literal": "DETC nº 3162",
+   "entidade_literal": "MUNICÍPIO DE CARLÓPOLIS",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor HIROSHI KUBO, na qualidade de prefeito do MUNICÍPIO DE CARLÓPOLIS, relativas ao exercício de 2022.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Carlópolis",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 30/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/3/00382546.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "a59aec272b29c14da487d4d9143a9e2d136fce2ac5e898bad9bba1a3d6110543",
+    "paginas_lidas": 1,
+    "total_paginas": 30,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro AUGUSTINHO ZUCCHI, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor HIROSHI KUBO, na qualidade de prefeito do MUNICÍPIO DE CARLÓPOLIS, relativas ao exercício de 2022. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, §6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor HIROSHI KUBO, na qualidade de prefeito do MUNICÍPIO DE CARLÓPOLIS, relativas ao exercício de 2022.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Carlópolis não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-7-00377835",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 307/2023 da Secretaria Segunda Câmara — contas do Prefeito de Carlópolis, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "307",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 307/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "222871/2022",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2023-07-10",
+   "data_publicacao": "2023-07-20",
+   "publicacao_literal": "DETC nº 3025",
+   "entidade_literal": "MUNICÍPIO DE CARLÓPOLIS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade com ressalva",
+    "conclusao_literal": "emitir Parecer Prévio recomendando a regularidade com ressalva das contas do Município de Carlópolis, referentes ao exercício financeiro de 2021, em razão do saneamento de impropriedade no curso da instrução processual;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Carlópolis",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 307/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/7/00377835.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "58a77062beaca030f5b00f6d992de14ef73414a9e7b23f427ac4d425d112b841",
+    "paginas_lidas": 2,
+    "total_paginas": 4,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I – emitir Parecer Prévio recomendando a regularidade com ressalva das contas do Município de Carlópolis, referentes ao exercício financeiro de 2021, em razão do saneamento de impropriedade no curso da instrução processual; e II – determinar, após o trânsito em julgado, realizem-se os registros pertinentes, com as devidas comunicações, ficando autorizado, depois das providências, o encerramento do feito e seu arquivamento junto à Diretoria de Protocolo.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando a regularidade com ressalva das contas do Município de Carlópolis, referentes ao exercício financeiro de 2021, em razão do saneamento de impropriedade no curso da instrução processual;",
+    "conclusao": "Parecer Prévio recomendando a regularidade com ressalva",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Carlópolis não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-7-00377892",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 311/2023 da Secretaria Segunda Câmara — contas do Prefeito de Carlópolis, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "311",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 311/2023 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "195480/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2023-07-10",
+   "data_publicacao": "2023-07-24",
+   "publicacao_literal": "DETC nº 3027",
+   "entidade_literal": "MUNICÍPIO DE CARLÓPOLIS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE COM RESSALVA",
+    "conclusao_literal": "emitir Parecer Prévio recomendando a REGULARIDADE COM RESSALVA das contas do Município de Carlópolis referentes ao exercício financeiro de 2020, ressalvando o item relacionado às obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa, conforme critérios fixados no Prejulgado 15;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Carlópolis",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 311/2023 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/7/00377892.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "cd405716c8394b09329e568c9da3b990e16df4fb324f6ac379fa012aac6d9702",
+    "paginas_lidas": 2,
+    "total_paginas": 10,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por maioria absoluta, em: I – emitir Parecer Prévio recomendando a REGULARIDADE COM RESSALVA das contas do Município de Carlópolis referentes ao exercício financeiro de 2020, ressalvando o item relacionado às obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa, conforme critérios fixados no Prejulgado 15; e II – determinar, depois de transitada em julgado a decisão, a remessa dos autos ao Gabinete da Presidência para comunicação ao Poder Legislativo do Município de Carlópolis, nos termos do art. 217-A, § 6º, do Regiment […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "emitir Parecer Prévio recomendando a REGULARIDADE COM RESSALVA das contas do Município de Carlópolis referentes ao exercício financeiro de 2020, ressalvando o item relacionado às obrigações de despesa contraídas nos últimos dois quadrimestres do mandato que tenham parcelas a serem pagas no exercício seguinte sem que haja suficiente disponibilidade de caixa, conforme critérios fixados no Prejulgado 15;",
+    "conclusao": "Parecer Prévio recomendando a REGULARIDADE COM RESSALVA",
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício financeiro de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Carlópolis não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-10-00351255",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 511/2020 da Secretaria Segunda Câmara — contas do Prefeito de Carlópolis, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "511",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 511/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "267371/2020",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2020-10-05",
+   "data_publicacao": "2020-10-21",
+   "publicacao_literal": "DETC nº 2406",
+   "entidade_literal": "MUNICÍPIO DE CARLÓPOLIS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "PARECER PRÉVIO recomendando a REGULARIDADE",
+    "conclusao_literal": "emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, PARECER PRÉVIO recomendando a REGULARIDADE das contas do PREFEITO MUNICIPAL DE CARLÓPOLIS, exercício de 2019, Sr. Hiroshi Kubo, CPF n.º 089.767.919-91, Gestor da Entidade no exercício;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Carlópolis",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 511/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/10/00351255.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "9bababee56ef2e72ec72c95455dcabce1254e482c1422dc51b8d9611e22480ed",
+    "paginas_lidas": 1,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: I. emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, PARECER PRÉVIO recomendando a REGULARIDADE das contas do PREFEITO MUNICIPAL DE CARLÓPOLIS, exercício de 2019, Sr. Hiroshi Kubo, CPF n.º 089.767.919-91, Gestor da Entidade no exercício; II. remeter os autos, após o trânsito em julgado, ao Gabinete da Presidência (GP), para comunicação da deliberação ao Poder Legislativo municipal, nos termos do artigo 217-A, § 6º, do Regimento Interno; III. encaminhar à Diretoria de Protocolo, nos termos do artigo 398, § 1º, do Regimento Interno, para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, PARECER PRÉVIO recomendando a REGULARIDADE das contas do PREFEITO MUNICIPAL DE CARLÓPOLIS, exercício de 2019, Sr. Hiroshi Kubo, CPF n.º 089.767.919-91, Gestor da Entidade no exercício;",
+    "conclusao": "PARECER PRÉVIO recomendando a REGULARIDADE",
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Carlópolis não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-8-00350073",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 262/2020 da Secretaria Segunda Câmara — contas do Prefeito de Carlópolis, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "262",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 262/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "315611/2017",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2020-07-20",
+   "data_publicacao": "2020-08-03",
+   "publicacao_literal": "DETC nº 2352",
+   "entidade_literal": "MUNICÍPIO DE CARLÓPOLIS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "emitir, com fundamento nos arts. 1º, inciso I, e 16, inciso II9, ambos da Lei Complementar Estadual nº 113/2005, e na Súmula nº 8 deste Tribunal de Contas, Parecer Prévio recomendando a regularidade das contas do Prefeito Municipal de Carlópolis, exercício financeiro de 2016, de responsabilidade do senhor II – regulares com ressalva, quando evidenciarem impropriedade ou qualquer outra falta de natureza formal, da qual não resulte dano ao erário ou à execução do programa, ato ou gestão;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Carlópolis",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 262/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/8/00350073.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "d7a213abfafa5844ef9600c38c5441d21feeccdc89e885c417b132c203bda7b0",
+    "paginas_lidas": 2,
+    "total_paginas": 6,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: 1. emitir, com fundamento nos arts. 1º, inciso I, e 16, inciso II9, ambos da Lei Complementar Estadual nº 113/2005, e na Súmula nº 8 deste Tribunal de Contas, Parecer Prévio recomendando a regularidade das contas do Prefeito Municipal de Carlópolis, exercício financeiro de 2016, de responsabilidade do senhor II – regulares com ressalva, quando evidenciarem impropriedade ou qualquer outra falta de natureza formal, da qual não resulte dano ao erário ou à execução do programa, ato ou gestão;” 8 Regimento Interno: “Art. 217-A. Pelo parecer prévio o Tribunal manifesta seu juízo acerca das contas de governo prestadas pelos Chefes do P […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir, com fundamento nos arts. 1º, inciso I, e 16, inciso II9, ambos da Lei Complementar Estadual nº 113/2005, e na Súmula nº 8 deste Tribunal de Contas, Parecer Prévio recomendando a regularidade das contas do Prefeito Municipal de Carlópolis, exercício financeiro de 2016, de responsabilidade do senhor II – regulares com ressalva, quando evidenciarem impropriedade ou qualquer outra falta de natureza formal, da qual não resulte dano ao erário ou à execução do programa, ato ou gestão;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício financeiro de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Carlópolis não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-5-00336517",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 61/2019 da Secretaria Segunda Câmara — contas do Prefeito de Carlópolis, exercício 2014",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "61",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 61/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "268900/2015",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2019-03-26",
+   "data_publicacao": "2019-05-13",
+   "publicacao_literal": "DETC nº 2056",
+   "entidade_literal": "MUNICÍPIO DE CARLÓPOLIS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio, na forma do artigo 23 da Lei Complementar n° 113/2005, recomendando a REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n° 113/2005, recomendando a REGULARIDADE das contas do PREFEITO DO MUNICÍPIO DE CARLÓPOLIS, exercício de 2014, de responsabilidade do Prefeito, Sr. Marcos Antônio David, CPF 269.681.308-66, com as seguintes RESSALVAS:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Carlópolis",
+    "exercicio": "2014",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 61/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/5/00336517.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "46ec9ae7f43544194a864bdee576e418aec6836b813a6d5ce31f4096c390cfd2",
+    "paginas_lidas": 2,
+    "total_paginas": 12,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: I- Emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n° 113/2005, recomendando a REGULARIDADE das contas do PREFEITO DO MUNICÍPIO DE CARLÓPOLIS, exercício de 2014, de responsabilidade do Prefeito, Sr. Marcos Antônio David, CPF 269.681.308-66, com as seguintes RESSALVAS: a) Falta do Parecer do Conselho Municipal de Saúde ou não apresentação de esclarecimentos pelo seu não encaminhamento, com aplicação de MULTA prevista no art. 87, IV, “g”, da L.C.E. 113/05; b) Falta de comprovação do cumprimento integral determinação contida no item V do Acórdão nº 3.613/2014 – Segunda Câmara, com aplicação de MULTA prevista no […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio, na forma do artigo 23 da Lei Complementar n° 113/2005, recomendando a REGULARIDADE das contas do PREFEITO DO MUNICÍPIO DE CARLÓPOLIS, exercício de 2014, de responsabilidade do Prefeito, Sr. Marcos Antônio David, CPF 269.681.308-66, com as seguintes RESSALVAS:",
+    "conclusao": "Parecer Prévio, na forma do artigo 23 da Lei Complementar n° 113/2005, recomendando a REGULARIDADE",
+    "exercicio": {
+     "ano": 2014,
+     "trecho": "exercício de 2014"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Carlópolis não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-3-00335260",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 47/2019 da Secretaria Segunda Câmara — contas do Prefeito de Carlópolis, exercício 2012",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "47",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 47/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "210130/2013",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2019-03-12",
+   "data_publicacao": "2019-03-21",
+   "publicacao_literal": "DETC nº 2022",
+   "entidade_literal": "MUNICÍPIO DE CARLÓPOLIS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir, com fundamento nos artigos 1º, inciso I, e 16, inciso II, da Lei Complementar Estadual nº 113/200538 e na Súmula nº 8 deste Tribunal39, parecer prévio recomendando a regularidade das contas do Prefeito Municipal de Carlópolis, do exercício de 2012, de responsabilidade do Senhor Carlos Alberto Saubier de Andrade, com ressalvas em relação a:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Carlópolis",
+    "exercicio": "2012",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 47/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/3/00335260.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "687fa3a4836559cd36614ede5fc068fa18466a5e9d59e8edd6b46d50a0ba5214",
+    "paginas_lidas": 3,
+    "total_paginas": 14,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I- Emitir, com fundamento nos artigos 1º, inciso I, e 16, inciso II, da Lei Complementar Estadual nº 113/200538 e na Súmula nº 8 deste Tribunal39, parecer prévio recomendando a regularidade das contas do Prefeito Municipal de Carlópolis, do exercício de 2012, de responsabilidade do Senhor Carlos Alberto Saubier de Andrade, com ressalvas em relação a: a) regularização de impropriedades no curso da instrução processual, quais sejam (i) valores do ativo permanente do balanço patrimonial do SIM-AM e contabilidade não conferem, (ii) valores do compensado do balanço patrimonial do SIM-AM e contabilidade não conferem, (iii) obrigações […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir, com fundamento nos artigos 1º, inciso I, e 16, inciso II, da Lei Complementar Estadual nº 113/200538 e na Súmula nº 8 deste Tribunal39, parecer prévio recomendando a regularidade das contas do Prefeito Municipal de Carlópolis, do exercício de 2012, de responsabilidade do Senhor Carlos Alberto Saubier de Andrade, com ressalvas em relação a:",
+    "conclusao": "parecer prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2012,
+     "trecho": "exercício de 2012"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Carlópolis não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2019-12-00342440",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 631/2019 da Secretaria Segunda Câmara — contas do Prefeito de Carlópolis",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "631",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 631/2019 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "206739/2019",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2019-12-10",
+   "data_publicacao": "2019-12-18",
+   "publicacao_literal": "DETC nº 2209",
+   "entidade_literal": "MUNICÍPIO DE CARLÓPOLIS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, com fundamento no artigo 1.º, I, combinado com o artigo 16, I, da Lei Complementar Estadual n.º 113/2005, recomendando a regularidade das contas do senhor Hiroshi Kubo, prefeito nos períodos de 01/01/2018 a 12/09/2018 e 13/10/2018 a 31/12/2018;",
+    "conclusao_literal": "emitir Parecer Prévio, com fundamento no artigo 1.º, I, combinado com o artigo 16, I, da Lei Complementar Estadual n.º 113/2005, recomendando a regularidade das contas do senhor Hiroshi Kubo, prefeito nos períodos de 01/01/2018 a 12/09/2018 e 13/10/2018 a 31/12/2018;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Carlópolis",
+    "exercicio": null,
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 631/2019 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/12/00342440.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "88a1626f441cf853d13aadea829e6113f8daa91ab934e866a8f13a7529d64dbe",
+    "paginas_lidas": 1,
+    "total_paginas": 4,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade, em: I- emitir Parecer Prévio, com fundamento no artigo 1.º, I, combinado com o artigo 16, I, da Lei Complementar Estadual n.º 113/2005, recomendando a regularidade das contas do senhor Hiroshi Kubo, prefeito nos períodos de 01/01/2018 a 12/09/2018 e 13/10/2018 a 31/12/2018; e da senhora Ana Lucia Moreno da Silva, prefeita no período de 13/09/2018 a 12/10/2018, ambos gestores responsáveis pelo Município de Carlópolis, relativo ao exercício financeiro de 2018; II- remeter os autos, após o trânsito em julgado, à Coordenadoria Geral de Fiscalização para ciência e adoção das medidas que entender pertinentes em relação às sugestões […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, com fundamento no artigo 1.º, I, combinado com o artigo 16, I, da Lei Complementar Estadual n.º 113/2005, recomendando a regularidade das contas do senhor Hiroshi Kubo, prefeito nos períodos de 01/01/2018 a 12/09/2018 e 13/10/2018 a 31/12/2018;",
+    "conclusao": null,
+    "exercicio": null
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Carlópolis não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-10-00341010",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 442/2019 da Secretaria Primeira Câmara — contas do Prefeito de Carlópolis",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "442",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 442/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "305245/2018",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2019-10-21",
+   "data_publicacao": "2019-10-25",
+   "publicacao_literal": "DETC nº 2173",
+   "entidade_literal": "MUNICÍPIO DE CARLÓPOLIS",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de CARLÓPOLIS, Sr. HIROSHI KUBO (CPF n.º 089.767.919-91), com ressalva em face das divergências nos registros de transferências constitucionais dos repasses de FPM, ICMS, IPVA e FUNDEB, e dos atrasos nos envios dos dados do Sistema de Informações Municipais – Acompanhamento Mensal (SIM-AM);",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Carlópolis",
+    "exercicio": null,
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 442/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/10/00341010.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "12b3efd72a1271bb3e2554f77c158e8fa6cc29b54f95dfa8c017b4bc15e95f3f",
+    "paginas_lidas": 2,
+    "total_paginas": 7,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de CARLÓPOLIS, Sr. HIROSHI KUBO (CPF n.º 089.767.919-91), com ressalva em face das divergências nos registros de transferências constitucionais dos repasses de FPM, ICMS, IPVA e FUNDEB, e dos atrasos nos envios dos dados do Sistema de Informações Municipais – Acompanhamento Mensal (SIM-AM); II. Aplicar a multa prevista no art. 87, IV, “b”, da Lei Orgânica deste Tribunal, uma única vez, ao senhor HIROSHI KUBO (CPF 089.767.919-91), em razão dos atrasos no envio dos dados do SIM-AM superiores a 30 dias; III. Transitada […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de CARLÓPOLIS, Sr. HIROSHI KUBO (CPF n.º 089.767.919-91), com ressalva em face das divergências nos registros de transferências constitucionais dos repasses de FPM, ICMS, IPVA e FUNDEB, e dos atrasos nos envios dos dados do Sistema de Informações Municipais – Acompanhamento Mensal (SIM-AM);",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": null
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Carlópolis não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

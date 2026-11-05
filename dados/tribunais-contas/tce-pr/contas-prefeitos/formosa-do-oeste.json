@@ -1,0 +1,804 @@
+{
+ "atualizado_em": "2026-11-05T14:29:01.237Z",
+ "municipio": {
+  "id": "formosa-do-oeste",
+  "nome": "Formosa do Oeste",
+  "uf": "PR",
+  "codigo_ibge": "4108205"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2014,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 9,
+  "pareceres": 10,
+  "com_parecer_em_fonte_aberta": 9,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 9,
+  "pdf_lido": 9,
+  "sem_exercicio_na_fonte": 1
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "3b7fb76a75413d34e4541e63dccfa3cab923f7d498fc63703a156f2f00d63a4c",
+   "atualizado_na_fonte": "26/06/2025 14:58:07"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2025-12-000200260",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 412/2025 — contas do Prefeito de Formosa do Oeste, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "412",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 412/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "139380/2025",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2025-11-24",
+   "data_publicacao": "2025-12-03",
+   "publicacao_literal": "DETC nº 3580",
+   "entidade_literal": "MUNICÍPIO DE FORMOSA DO OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor LUIZ ANTONIO DOMINGOS DE AGUIAR, na qualidade de prefeito do MUNICÍPIO DE FORMOSA DO OESTE, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Formosa do Oeste",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 412/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/12/000200260.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "cb318ecb9b0320a8a09c4071ce67530378d1b04c43f46157f58d72e2bdfd92e9",
+    "paginas_lidas": 1,
+    "total_paginas": 46,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor LUIZ ANTONIO DOMINGOS DE AGUIAR, na qualidade de prefeito do MUNICÍPIO DE FORMOSA DO OESTE, relativas ao exercício de 2024. b. RESSALVAR as contas em virtude de: i. baixo desempenho evidenciado na avaliação da atuação governamental na área da Transparência e Relacionamento. c. DETERMINAR com fundamento no § 1º-C do art. 217-A do Regimento Interno, a instauração, em autos apartados, de processo de homologação de recomendações, para corrigir a ausência do Relatório Anual do Controle Interno no Portal da Transparência do município. Após o trâns […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor LUIZ ANTONIO DOMINGOS DE AGUIAR, na qualidade de prefeito do MUNICÍPIO DE FORMOSA DO OESTE, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Formosa do Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-9-00388234",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 317/2024 — contas do Prefeito de Formosa do Oeste, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "317",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 317/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "174874/2024",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2024-09-02",
+   "data_publicacao": "2024-09-11",
+   "publicacao_literal": "DETC nº 3292",
+   "entidade_literal": "MUNICÍPIO DE FORMOSA DO OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor LUIZ ANTONIO DOMINGOS DE AGUIAR, na qualidade de prefeito do MUNICÍPIO DE FORMOSA DO OESTE, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Formosa do Oeste",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 317/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/9/00388234.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "45ff35f3c923cdff41e0275b9653813d3c9beb4c5e06f37b25262b6997fd2b0e",
+    "paginas_lidas": 1,
+    "total_paginas": 44,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor LUIZ ANTONIO DOMINGOS DE AGUIAR, na qualidade de prefeito do MUNICÍPIO DE FORMOSA DO OESTE, relativas ao exercício de 2023. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, § 6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor LUIZ ANTONIO DOMINGOS DE AGUIAR, na qualidade de prefeito do MUNICÍPIO DE FORMOSA DO OESTE, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Formosa do Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-3-00383083",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 100/2024 — contas do Prefeito de Formosa do Oeste, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "100",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 100/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "175109/2023",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2024-03-04",
+   "data_publicacao": "2024-03-22",
+   "publicacao_literal": "DETC nº 3174",
+   "entidade_literal": "MUNICÍPIO DE FORMOSA DO OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor LUIZ ANTONIO DOMINGOS DE AGUIAR, na qualidade de prefeito do MUNICÍPIO DE FORMOSA DO OESTE, relativas ao exercício de 2022.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Formosa do Oeste",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 100/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/3/00383083.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "9c203ad87c7d71925f8dbc949652c7f18f1d57e0bd11ca83b33f0ba0e9eb8b3a",
+    "paginas_lidas": 1,
+    "total_paginas": 33,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade: Emitir Parecer Prévio pela REGULARIDADE das contas do senhor LUIZ ANTONIO DOMINGOS DE AGUIAR, na qualidade de prefeito do MUNICÍPIO DE FORMOSA DO OESTE, relativas ao exercício de 2022. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, §6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor LUIZ ANTONIO DOMINGOS DE AGUIAR, na qualidade de prefeito do MUNICÍPIO DE FORMOSA DO OESTE, relativas ao exercício de 2022.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Formosa do Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2022-12-00371060",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 262/2022 da Secretaria Primeira Câmara — contas do Prefeito de Formosa do Oeste, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "262",
+    "ano": "2022",
+    "titulo_oficial": "Acórdão de Parecer Prévio 262/2022 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "157336/2022",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2022-11-28",
+   "data_publicacao": "2022-12-12",
+   "publicacao_literal": "DETC nº 2890",
+   "entidade_literal": "MUNICÍPIO DE FORMOSA DO OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade das contas do Sr. Luiz Antônio Domingos de Aguiar, prefeito do Município de Formosa do Oeste, relativa ao exercício financeiro de 2021, com fundamento no art. 1º, I, combinado com o art. 16, I, da Lei Complementar Estadual nº 113/2005.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Formosa do Oeste",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 262/2022 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2022/12/00371060.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "15ccc29b07b59522b232851c1b3ac1d8672a8a6accd9cc4c30073b572d555c39",
+    "paginas_lidas": 1,
+    "total_paginas": 2,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade das contas do Sr. Luiz Antônio Domingos de Aguiar, prefeito do Município de Formosa do Oeste, relativa ao exercício financeiro de 2021, com fundamento no art. 1º, I, combinado com o art. 16, I, da Lei Complementar Estadual nº 113/2005. II. Após o trânsito em julgado, remeter os autos ao Gabinete da Presidência, para as providências contidas no §6º do art. 217-A do Regimento Interno e, na sequência, à Diretoria de Protocolo, para encerramento e arquivamento, nos termos do art. 398 §1º e art. 168, inciso VII, ambos do Regimento Interno.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade das contas do Sr. Luiz Antônio Domingos de Aguiar, prefeito do Município de Formosa do Oeste, relativa ao exercício financeiro de 2021, com fundamento no art. 1º, I, combinado com o art. 16, I, da Lei Complementar Estadual nº 113/2005.",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2022,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Formosa do Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2022-5-00366709",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 127/2022 da Secretaria Segunda Câmara — contas do Prefeito de Formosa do Oeste, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "127",
+    "ano": "2022",
+    "titulo_oficial": "Acórdão de Parecer Prévio 127/2022 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "168741/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "NESTOR BAPTISTA",
+   "data_julgamento": "2022-05-02",
+   "data_publicacao": "2022-05-13",
+   "publicacao_literal": "DETC nº 2767",
+   "entidade_literal": "MUNICÍPIO DE FORMOSA DO OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio deste Tribunal recomendando o julgamento pela REGULARIDADE",
+    "conclusao_literal": "Emitir, com fundamento no art. 16, II, da Lei Complementar Estadual nº 113/2005, Parecer Prévio deste Tribunal recomendando o julgamento pela REGULARIDADE das contas do Município de Formosa do Oeste, relativas exercício de 2020, de responsabilidade do Sr. Luiz Antonio Domingos de Aguiar;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Formosa do Oeste",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 127/2022 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2022/5/00366709.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "affabed386f4502ed875979817f95d2a3554b66cbb2f2e38bd6f07b67fa9c24b",
+    "paginas_lidas": 1,
+    "total_paginas": 5,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro NESTOR BAPTISTA, por unanimidade, em: I – Emitir, com fundamento no art. 16, II, da Lei Complementar Estadual nº 113/2005, Parecer Prévio deste Tribunal recomendando o julgamento pela REGULARIDADE das contas do Município de Formosa do Oeste, relativas exercício de 2020, de responsabilidade do Sr. Luiz Antonio Domingos de Aguiar; II – ressalvar (i)a ausência de extratos bancários que comprovem o recebimento dos recursos que ensejaram restos a pagar no exercício seguinte e a (ii)ausência de prévia autorização da Justiça Eleitoral para a realização de publicidade excepcional no período que antecede as eleições; III – determinar, após o trânsito em julgado do presente, a r […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir, com fundamento no art. 16, II, da Lei Complementar Estadual nº 113/2005, Parecer Prévio deste Tribunal recomendando o julgamento pela REGULARIDADE das contas do Município de Formosa do Oeste, relativas exercício de 2020, de responsabilidade do Sr. Luiz Antonio Domingos de Aguiar;",
+    "conclusao": "Parecer Prévio deste Tribunal recomendando o julgamento pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2022,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Formosa do Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-11-00352935",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 572/2020 da Secretaria Segunda Câmara — contas do Prefeito de Formosa do Oeste, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "572",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 572/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "269080/2020",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2020-10-26",
+   "data_publicacao": "2020-11-12",
+   "publicacao_literal": "DETC nº 2421",
+   "entidade_literal": "MUNICÍPIO DE FORMOSA DO OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "PARECER PRÉVIO recomendando a REGULARIDADE",
+    "conclusao_literal": "emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, PARECER PRÉVIO recomendando a REGULARIDADE das contas do PREFEITO MUNICIPAL DE FORMOSA DO OESTE, exercício de 2019, Sr. Luiz Antônio Domingos de Aguiar, CPF n.º 870.075.259-20, Gestor da Entidade no exercício;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Formosa do Oeste",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 572/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/11/00352935.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "f729b80d2d46a2eb0abeb96111da34cf5ccc25ba760a0908fba40a9a5ab01910",
+    "paginas_lidas": 1,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro ARTAGÃO DE MATTOS LEÃO, por unanimidade, em: 1) emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, PARECER PRÉVIO recomendando a REGULARIDADE das contas do PREFEITO MUNICIPAL DE FORMOSA DO OESTE, exercício de 2019, Sr. Luiz Antônio Domingos de Aguiar, CPF n.º 870.075.259-20, Gestor da Entidade no exercício; 2) encaminhar os autos, ao Gabinete da Presidência para deliberações, nos termos do art. 217-A, § 6º, do Regimento Interno desta Corte de Contas; 3) autorizar, após o cumprimento integral da decisão, o encerramento do processo e encaminhamento à Diretoria de Protocolo para arquivamento, nos termos do artigo 398, § 1º do Regimento Interno.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir, na forma do artigo 23 da Lei Complementar n.º 113/2005, PARECER PRÉVIO recomendando a REGULARIDADE das contas do PREFEITO MUNICIPAL DE FORMOSA DO OESTE, exercício de 2019, Sr. Luiz Antônio Domingos de Aguiar, CPF n.º 870.075.259-20, Gestor da Entidade no exercício;",
+    "conclusao": "PARECER PRÉVIO recomendando a REGULARIDADE",
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Formosa do Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-12-00342090",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 578/2019 da Secretaria Primeira Câmara — contas do Prefeito de Formosa do Oeste, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "578",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 578/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "181094/2019",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2019-12-02",
+   "data_publicacao": "2019-12-09",
+   "publicacao_literal": "DETC nº 2202",
+   "entidade_literal": "MUNICÍPIO DE FORMOSA DO OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio pela regularidade",
+    "conclusao_literal": "emitir parecer prévio pela regularidade das contas do MUNICÍPIO DE FORMOSA DO OESTE, CNPJ 76.208.495/0001-00, relativa ao exercício financeiro de 2018, de responsabilidade de LUIZ ANTONIO DOMINGOS DE AGUIAR, CPF 870.075.259-20, nos termos do art. 16, I, da LC/PR 113/05;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Formosa do Oeste",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 578/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/12/00342090.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "3012f90587a04cfda7453c3f9efd70953dbbc298e32c37a4e928206bf1e6a2e7",
+    "paginas_lidas": 1,
+    "total_paginas": 2,
+    "deliberacao": "ACORDAM Os membros da PRIMEIRA CÂMARA do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: I. emitir parecer prévio pela regularidade das contas do MUNICÍPIO DE FORMOSA DO OESTE, CNPJ 76.208.495/0001-00, relativa ao exercício financeiro de 2018, de responsabilidade de LUIZ ANTONIO DOMINGOS DE AGUIAR, CPF 870.075.259-20, nos termos do art. 16, I, da LC/PR 113/05; II. determinar, posteriormente, adotadas e cumpridas todas as medidas pertinentes, com fulcro no disposto no art. 398, § 1°, do RITCE/PR, o encerramento do presente expediente e seu arquivamento junto à Diretoria de Protocolo.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir parecer prévio pela regularidade das contas do MUNICÍPIO DE FORMOSA DO OESTE, CNPJ 76.208.495/0001-00, relativa ao exercício financeiro de 2018, de responsabilidade de LUIZ ANTONIO DOMINGOS DE AGUIAR, CPF 870.075.259-20, nos termos do art. 16, I, da LC/PR 113/05;",
+    "conclusao": "parecer prévio pela regularidade",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício financeiro de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Formosa do Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-12-00342043",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 565/2019 da Secretaria Primeira Câmara — contas do Prefeito de Formosa do Oeste, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "565",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 565/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "314232/2017",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2019-12-02",
+   "data_publicacao": "2019-12-06",
+   "publicacao_literal": "DETC nº 2201",
+   "entidade_literal": "MUNICÍPIO DE FORMOSA DO OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando o julgamento pela irregularidade",
+    "conclusao_literal": "emitir Parecer Prévio recomendando o julgamento pela irregularidade das contas do senhor José Roberto Coco, chefe do Poder Executivo do Município de Formosa do Oeste, referente ao exercício financeiro de 2016, em razão da ausência de redução de 1/3 do excedente da despesa com pessoal no segundo quadrimestre do exercício de 2016, ressalvando:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Formosa do Oeste",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 565/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/12/00342043.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "1fc6463024fa22f2a0ad60e70508859061f0e811203debf3d3f3b3cce0bff334",
+    "paginas_lidas": 1,
+    "total_paginas": 15,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I – emitir Parecer Prévio recomendando o julgamento pela irregularidade das contas do senhor José Roberto Coco, chefe do Poder Executivo do Município de Formosa do Oeste, referente ao exercício financeiro de 2016, em razão da ausência de redução de 1/3 do excedente da despesa com pessoal no segundo quadrimestre do exercício de 2016, ressalvando: i) a divergência nos registros da transferência do FPM; ii) o atraso na publicação do Balanço Orçamentário do 1º bimestre do exercício de 2016; e iii) os atrasos nas entregas dos dados do SIM-AM; II - recomendar, em razão dos empenhos inscritos em restos a pagar, que podem alterar a […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando o julgamento pela irregularidade das contas do senhor José Roberto Coco, chefe do Poder Executivo do Município de Formosa do Oeste, referente ao exercício financeiro de 2016, em razão da ausência de redução de 1/3 do excedente da despesa com pessoal no segundo quadrimestre do exercício de 2016, ressalvando:",
+    "conclusao": "Parecer Prévio recomendando o julgamento pela irregularidade",
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício financeiro de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Formosa do Oeste não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2021-1-00353520",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 739/2020 da Secretaria Segunda Câmara — contas do Prefeito de Formosa do Oeste, exercício 2014",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "739",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 739/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "266010/2015",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2020-12-07",
+   "data_publicacao": "2021-01-05",
+   "publicacao_literal": "DETC nº 2449",
+   "entidade_literal": "MUNICÍPIO DE FORMOSA DO OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, com fundamento nos arts. 1º, inciso I, e 16, inciso I5, ambos da Lei Complementar Estadual nº 113/2005, recomendando a regularidade das contas do Prefeito Municipal de Formosa do Oeste, referentes ao exercício de 2014, de responsabilidade do senhor José Roberto Coco;",
+    "conclusao_literal": "emitir Parecer Prévio, com fundamento nos arts. 1º, inciso I, e 16, inciso I5, ambos da Lei Complementar Estadual nº 113/2005, recomendando a regularidade das contas do Prefeito Municipal de Formosa do Oeste, referentes ao exercício de 2014, de responsabilidade do senhor José Roberto Coco;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Formosa do Oeste",
+    "exercicio": "2014",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 739/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2021/1/00353520.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "dca28016ce248cc985b20c23070fe548caa05448046f2e45e6897cad4cc39d3d",
+    "paginas_lidas": 2,
+    "total_paginas": 6,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: I- emitir Parecer Prévio, com fundamento nos arts. 1º, inciso I, e 16, inciso I5, ambos da Lei Complementar Estadual nº 113/2005, recomendando a regularidade das contas do Prefeito Municipal de Formosa do Oeste, referentes ao exercício de 2014, de responsabilidade do senhor José Roberto Coco; 2 Art. 16. As contas serão julgadas: I – regulares, quando expressarem, de forma clara e objetiva, a exatidão dos demonstrativos contábeis, financeiros, a legalidade, a legitimidade, a eficácia e a economicidade dos atos de gestão do responsável, bem como, o atendimento das metas e objetivos; 3 Regimento Interno: “Art. 217-A. Pelo parecer p […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, com fundamento nos arts. 1º, inciso I, e 16, inciso I5, ambos da Lei Complementar Estadual nº 113/2005, recomendando a regularidade das contas do Prefeito Municipal de Formosa do Oeste, referentes ao exercício de 2014, de responsabilidade do senhor José Roberto Coco;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2014,
+     "trecho": "exercício de 2014"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Formosa do Oeste não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2021-256-primeiracmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 256/2021 da Secretaria Primeira Câmara — contas do Prefeito de Formosa do Oeste",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "256",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 256/2021 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "262193/2014",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2021-09-20",
+   "data_publicacao": "2021-10-05",
+   "publicacao_literal": "DETC nº 2636",
+   "entidade_literal": "MUNICÍPIO DE FORMOSA DO OESTE",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Formosa do Oeste",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Formosa do Oeste não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

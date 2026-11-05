@@ -1,0 +1,716 @@
+{
+ "atualizado_em": "2026-11-05T14:29:01.088Z",
+ "municipio": {
+  "id": "cornelio-procopio",
+  "nome": "Cornélio Procópio",
+  "uf": "PR",
+  "codigo_ibge": "4106407"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2018,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 6,
+  "pareceres": 9,
+  "com_parecer_em_fonte_aberta": 6,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 7,
+  "pdf_lido": 7,
+  "sem_exercicio_na_fonte": 3
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f68ca8a9b64d6286d5f605b923705fb7602cf450e7408d143f7545e514359bfb",
+   "atualizado_na_fonte": "05/06/2026 00:00:40"
+  },
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2026-4-000201313",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 129/2026 — contas do Prefeito de Cornélio Procópio, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "129",
+    "ano": "2026",
+    "titulo_oficial": "Parecer Prévio 129/2026"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "193961/2025",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2026-03-30",
+   "data_publicacao": "2026-04-08",
+   "publicacao_literal": "DETC nº 3649",
+   "entidade_literal": "MUNICÍPIO DE CORNÉLIO PROCÓPIO",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE com RESSALVAS",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE com RESSALVAS das contas do senhor AMIN JOSE HANNOUCHE, na qualidade de prefeito do MUNICÍPIO DE CORNÉLIO PROCÓPIO, relativas ao exercício de 2024, em razão dos seguintes apontamentos:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Cornélio Procópio",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 129/2026 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2026/4/000201313.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "3f3530a2d89f8ebc15f5d700d50bbb2ae06314a32283b5dff734aadbe59eb0e0",
+    "paginas_lidas": 1,
+    "total_paginas": 48,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE com RESSALVAS das contas do senhor AMIN JOSE HANNOUCHE, na qualidade de prefeito do MUNICÍPIO DE CORNÉLIO PROCÓPIO, relativas ao exercício de 2024, em razão dos seguintes apontamentos: i. Resultado Orçamentário e Financeiro deficitário em fontes não vinculadas a programas, convênios, operações de crédito e ao Regime Próprio de Previdência Social (RPPS); ii. Obrigações de despesas contraídas nos últimos dois quadrimestres do mandato (art. 42 da LRF); iii. Baixo desempenho, com notas inferiores a 6,00, na Avaliação da Atuação Governamental nas áreas da Assistência Social (5,10)36, Transparên […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE com RESSALVAS das contas do senhor AMIN JOSE HANNOUCHE, na qualidade de prefeito do MUNICÍPIO DE CORNÉLIO PROCÓPIO, relativas ao exercício de 2024, em razão dos seguintes apontamentos:",
+    "conclusao": "Parecer Prévio pela REGULARIDADE com RESSALVAS",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2026,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Cornélio Procópio não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-12-00391396",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 442/2024 — contas do Prefeito de Cornélio Procópio, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "442",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 442/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "215589/2024",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2024-11-25",
+   "data_publicacao": "2024-12-10",
+   "publicacao_literal": "DETC nº 3353",
+   "entidade_literal": "MUNICÍPIO DE CORNÉLIO PROCÓPIO",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVAS",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do(a) senhor(a) AMIN JOSE HANNOUCHE, na qualidade de prefeito(a) do MUNICÍPIO DE CORNÉLIO PROCÓPIO, relativas ao exercício de 2023, em razão de:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Cornélio Procópio",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 442/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/12/00391396.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "27b6814440de6bbe4852208a89bb1ecc43f42a3d408bbba02f56c19e2952641b",
+    "paginas_lidas": 1,
+    "total_paginas": 42,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do(a) senhor(a) AMIN JOSE HANNOUCHE, na qualidade de prefeito(a) do MUNICÍPIO DE CORNÉLIO PROCÓPIO, relativas ao exercício de 2023, em razão de: i. Resultado Orçamentário e Financeiro de fontes não vinculadas a programas, convênios, operações de crédito e ao Regime Próprio de Previdência Social (RPPS). Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVAS das contas do(a) senhor(a) AMIN JOSE HANNOUCHE, na qualidade de prefeito(a) do MUNICÍPIO DE CORNÉLIO PROCÓPIO, relativas ao exercício de 2023, em razão de:",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVAS",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Cornélio Procópio não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-5-00385590",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 234/2024 — contas do Prefeito de Cornélio Procópio, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "234",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 234/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "214279/2023",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2024-05-13",
+   "data_publicacao": "2024-05-27",
+   "publicacao_literal": "DETC nº 3217",
+   "entidade_literal": "MUNICÍPIO DE CORNÉLIO PROCÓPIO",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor AMIN JOSE HANNOUCHE, na qualidade de prefeito do MUNICÍPIO DE CORNÉLIO PROCÓPIO, relativas ao exercício de 2022, em razão:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Cornélio Procópio",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 234/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/5/00385590.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "16197a3f274f1c053ef7f042a9b6e6b22608072af99476055ad4b4d9acccb43a",
+    "paginas_lidas": 1,
+    "total_paginas": 33,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor AMIN JOSE HANNOUCHE, na qualidade de prefeito do MUNICÍPIO DE CORNÉLIO PROCÓPIO, relativas ao exercício de 2022, em razão: a) do resultado orçamentário e financeiro de fontes não vinculadas a programas, convênios, operações de crédito e ao Regime Próprio de Previdência Social; b) dos resultados da avaliação da atuação governamental nas áreas de Saúde (5,83), Assistência Social (3,34), Administração Financeira (3,00) e Transparência e Relacionamento com o Cidadão (3,07); b. Encaminhar os autos à Coordenadoria Geral de Fiscalização - CGF para ciência e, se en […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor AMIN JOSE HANNOUCHE, na qualidade de prefeito do MUNICÍPIO DE CORNÉLIO PROCÓPIO, relativas ao exercício de 2022, em razão:",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Cornélio Procópio não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-9-00379479",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 426/2023 da Secretaria Primeira Câmara — contas do Prefeito de Cornélio Procópio, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "426",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 426/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "221514/2022",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2023-09-04",
+   "data_publicacao": "2023-09-21",
+   "publicacao_literal": "DETC nº 3068",
+   "entidade_literal": "MUNICÍPIO DE CORNÉLIO PROCÓPIO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito do MUNICÍPIO DE CORNÉLIO PROCÓPIO, Sr. Amin José Hannouche, relativas ao exercício financeiro de 2021, com ressalva em face do resultado orçamentário de fontes não vinculadas a programas, convênios, operações de crédito e RPPS;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Cornélio Procópio",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 426/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/9/00379479.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "05d55f7563565e4131d7c7045d50f00155aeedc754dd83610cb693cecdc712e8",
+    "paginas_lidas": 2,
+    "total_paginas": 4,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito do MUNICÍPIO DE CORNÉLIO PROCÓPIO, Sr. Amin José Hannouche, relativas ao exercício financeiro de 2021, com ressalva em face do resultado orçamentário de fontes não vinculadas a programas, convênios, operações de crédito e RPPS; II. Recomendar ao Município de Cornélio Procópio que se atenha aos ditames da Lei de Responsabilidade Fiscal, especialmente quanto ao seu artigo 9º; e; III. Determinar, após o trânsito em julgado da decisão, as seguintes medidas: a) o encaminhamento dos autos à Coordenadoria de Monitoramento e Execuçõe […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito do MUNICÍPIO DE CORNÉLIO PROCÓPIO, Sr. Amin José Hannouche, relativas ao exercício financeiro de 2021, com ressalva em face do resultado orçamentário de fontes não vinculadas a programas, convênios, operações de crédito e RPPS;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Cornélio Procópio não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2025-2-000196405",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 4/2025 da Secretaria Segunda Câmara — contas do Prefeito de Cornélio Procópio, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "4",
+    "ano": "2025",
+    "titulo_oficial": "Acórdão de Parecer Prévio 4/2025 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "233012/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "AUGUSTINHO ZUCCHI",
+   "data_julgamento": "2025-02-17",
+   "data_publicacao": "2025-02-26",
+   "publicacao_literal": "DETC nº 3394",
+   "entidade_literal": "MUNICÍPIO DE CORNÉLIO PROCÓPIO",
+   "resumo_literal": "Prefeitura Municipal de Cornélio Procópio. Exercício 2020. Responsabilidade do Sr. Amin José Hannouche. Apontamentos iniciais de irregularidades no Relatório do Controle Interno e gastos com publicidade institucional com violação à legislação sanados durante a instrução processual. Instrução da CGM e parecer do MPC pela regularidade com ressalva das contas. Pela emissão de Parecer Prévio pela regularidade com ressalva das contas.",
+   "indexacao_literal": null,
+   "exercicio_fonte": {
+    "campo": "DsResumo",
+    "trecho": "Exercício 2020"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA da Prestação de Contas de Prefeito Municipal do Município de Cornélio Procópio, referente ao exercício financeiro de 2020, cujo responsável é o Sr. Amin José Hannouche, consistindo as ressalvas no descumprimento quanto ao Relatório do Controle Interno encaminhado por não apresentar os conteúdos mínimos prescritos pelo Tribunal, e quanto ao registro contábil inadequado de despesas com publicidade;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Cornélio Procópio",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 4/2025 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/2/000196405.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "abdceec84f1f7ee13d28e5b68212698307c10d26590ea0dfba1b0484b90447b9",
+    "paginas_lidas": 1,
+    "total_paginas": 9,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro AUGUSTINHO ZUCCHI, por unanimidade, em: I - Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA da Prestação de Contas de Prefeito Municipal do Município de Cornélio Procópio, referente ao exercício financeiro de 2020, cujo responsável é o Sr. Amin José Hannouche, consistindo as ressalvas no descumprimento quanto ao Relatório do Controle Interno encaminhado por não apresentar os conteúdos mínimos prescritos pelo Tribunal, e quanto ao registro contábil inadequado de despesas com publicidade; II - após o trânsito em julgado, determinar a remessa do feito à Coordenadoria de Monitoramento e Execuções para anotações e providências necessárias, ao Gabinete da Presidência, p […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA da Prestação de Contas de Prefeito Municipal do Município de Cornélio Procópio, referente ao exercício financeiro de 2020, cujo responsável é o Sr. Amin José Hannouche, consistindo as ressalvas no descumprimento quanto ao Relatório do Controle Interno encaminhado por não apresentar os conteúdos mínimos prescritos pelo Tribunal, e quanto ao registro contábil inadequado de despesas com publicidade;",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício financeiro de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Cornélio Procópio não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-12-00342231",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 601/2019 da Secretaria Primeira Câmara — contas do Prefeito de Cornélio Procópio, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "601",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 601/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "207077/2019",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2019-12-09",
+   "data_publicacao": "2019-12-12",
+   "publicacao_literal": "DETC nº 2205",
+   "entidade_literal": "MUNICÍPIO DE CORNÉLIO PROCÓPIO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendado o julgamento pela regularidade",
+    "conclusao_literal": "emitir Parecer Prévio recomendado o julgamento pela regularidade das contas dos senhores Amin Jose Hannouche e Angélica Carvalho Olchaneski de Mello, gestores do Poder Executivo do Município de Cornélio Procópio, referente ao exercício financeiro de 2018, ressalvando:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Cornélio Procópio",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 601/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/12/00342231.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "1fd0fdf4df8907a793629a5bd57d936a21b7a55436390d481047941f6856e943",
+    "paginas_lidas": 2,
+    "total_paginas": 4,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I – emitir Parecer Prévio recomendado o julgamento pela regularidade das contas dos senhores Amin Jose Hannouche e Angélica Carvalho Olchaneski de Mello, gestores do Poder Executivo do Município de Cornélio Procópio, referente ao exercício financeiro de 2018, ressalvando: i) o resultado financeiro deficitário das fontes não vinculadas a programas, convênios, operações de créditos e RPPS. II – determinar, depois de transitada em julgado a decisão, o encaminhamento dos autos ao Gabinete da Presidência para comunicação ao respectivo Poder Legislativo, nos termos do art. 217-A, § 6º do Regimento Interno2. Na sequência, à Coorde […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendado o julgamento pela regularidade das contas dos senhores Amin Jose Hannouche e Angélica Carvalho Olchaneski de Mello, gestores do Poder Executivo do Município de Cornélio Procópio, referente ao exercício financeiro de 2018, ressalvando:",
+    "conclusao": "Parecer Prévio recomendado o julgamento pela regularidade",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício financeiro de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Cornélio Procópio não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2024-6-00385890",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 62/2024 da Secretaria Segunda Câmara — contas do Prefeito de Cornélio Procópio",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "62",
+    "ano": "2024",
+    "titulo_oficial": "Acórdão de Parecer Prévio 62/2024 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "309930/2017",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2024-05-27",
+   "data_publicacao": "2024-06-11",
+   "publicacao_literal": "DETC nº 3226",
+   "entidade_literal": "MUNICÍPIO DE CORNÉLIO PROCÓPIO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade com ressalvas",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade com ressalvas das contas do Prefeito Municipal de Cornélio Procópio, incluindo-se às ressalvas já constantes do voto condutor a ausência de comprovação da realização da Audiência Pública para avaliação das Metas Fiscais, sem a aplicação de multas.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Cornélio Procópio",
+    "exercicio": null,
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 62/2024 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/6/00385890.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "5b932f48509d30980c337eec875b4621d4e07e5056eb65c1c45527f6b056f854",
+    "paginas_lidas": 1,
+    "total_paginas": 17,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por maioria absoluta, em: Emitir Parecer Prévio recomendando a regularidade com ressalvas das contas do Prefeito Municipal de Cornélio Procópio, incluindo-se às ressalvas já constantes do voto condutor a ausência de comprovação da realização da Audiência Pública para avaliação das Metas Fiscais, sem a aplicação de multas.",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade com ressalvas das contas do Prefeito Municipal de Cornélio Procópio, incluindo-se às ressalvas já constantes do voto condutor a ausência de comprovação da realização da Audiência Pública para avaliação das Metas Fiscais, sem a aplicação de multas.",
+    "conclusao": "Parecer Prévio recomendando a regularidade com ressalvas",
+    "exercicio": null
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Cornélio Procópio não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2021-123-segundacmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 123/2021 da Secretaria Segunda Câmara — contas do Prefeito de Cornélio Procópio",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "123",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 123/2021 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "276554/2015",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2021-04-19",
+   "data_publicacao": "2021-04-30",
+   "publicacao_literal": "DETC nº 2529",
+   "entidade_literal": "MUNICÍPIO DE CORNÉLIO PROCÓPIO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Cornélio Procópio",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Cornélio Procópio não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2021-13-segundacmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 13/2021 da Secretaria Segunda Câmara — contas do Prefeito de Cornélio Procópio",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "13",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 13/2021 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "263791/2020",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2021-02-08",
+   "data_publicacao": "2021-02-23",
+   "publicacao_literal": "DETC nº 2484",
+   "entidade_literal": "MUNICÍPIO DE CORNÉLIO PROCÓPIO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Cornélio Procópio",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Cornélio Procópio não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

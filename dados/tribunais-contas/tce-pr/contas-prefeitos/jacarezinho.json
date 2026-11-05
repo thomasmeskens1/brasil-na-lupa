@@ -1,0 +1,674 @@
+{
+ "atualizado_em": "2026-11-05T14:29:01.493Z",
+ "municipio": {
+  "id": "jacarezinho",
+  "nome": "Jacarezinho",
+  "uf": "PR",
+  "codigo_ibge": "4111803"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2016,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 8,
+  "pareceres": 8,
+  "com_parecer_em_fonte_aberta": 8,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 8,
+  "pdf_lido": 8,
+  "sem_exercicio_na_fonte": 0
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "3b7fb76a75413d34e4541e63dccfa3cab923f7d498fc63703a156f2f00d63a4c",
+   "atualizado_na_fonte": "26/06/2025 14:58:07"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2025-8-000199064",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 252/2025 — contas do Prefeito de Jacarezinho, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "252",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 252/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "178644/2025",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "MAURÍCIO REQUIÃO DE MELLO E SILVA",
+   "data_julgamento": "2025-08-18",
+   "data_publicacao": "2025-08-29",
+   "publicacao_literal": "DETC nº 3516",
+   "entidade_literal": "MUNICÍPIO DE JACAREZINHO",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor MARCELO JOSE BERNARDELI PALHARES, na qualidade de prefeito do MUNICÍPIO DE JACAREZINHO, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Jacarezinho",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 252/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/8/000199064.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "399fca81f969651b0f7ec7043d6606f6a576a06fbb3ae45260d7ffe1aad13ef1",
+    "paginas_lidas": 1,
+    "total_paginas": 44,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro MAURÍCIO REQUIÃO DE MELLO E SILVA, por unanimidade: Considerando os fatos expostos no item de fundamentação, voto, com respaldo no artigo 1º, I, da Lei Complementar Estadual n.º 113/2005 e em observância ao artigo 217-A, caput, do Regimento Interno, no sentido de: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor MARCELO JOSE BERNARDELI PALHARES, na qualidade de prefeito do MUNICÍPIO DE JACAREZINHO, relativas ao exercício de 2024. Após o trânsito em julgado da deliberação, encaminhem-se os autos ao Gabinete da Presidência para as providências contidas no § 6º do artigo 217-A do Regimento Interno, à Coordenadoria de Medidas Executórias para as anotações p […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor MARCELO JOSE BERNARDELI PALHARES, na qualidade de prefeito do MUNICÍPIO DE JACAREZINHO, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Jacarezinho não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2025-5-000197673",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 147/2025 — contas do Prefeito de Jacarezinho, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "147",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 147/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "207934/2024",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2025-04-28",
+   "data_publicacao": "2025-05-12",
+   "publicacao_literal": "DETC nº 3439",
+   "entidade_literal": "MUNICÍPIO DE JACAREZINHO",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) MARCELO JOSE BERNARDELI PALHARES, na qualidade de prefeito(a) do MUNICÍPIO DE JACAREZINHO, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Jacarezinho",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 147/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/5/000197673.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "78671f9dd5fa862cec4c763db608f757f3da63217e61c58229f847821ae25941",
+    "paginas_lidas": 1,
+    "total_paginas": 44,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por maioria absoluta: Considerando os fatos expostos no item de fundamentação, VOTO, com respaldo no artigo 1º, I, da Lei Complementar Estadual n.º 113/2005 e em observância ao artigo 217-A, caput, do Regimento Interno, no sentido de: a. Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) MARCELO JOSE BERNARDELI PALHARES, na qualidade de prefeito(a) do MUNICÍPIO DE JACAREZINHO, relativas ao exercício de 2023. b. RESSALVAR as contas em virtude de: i. baixo desempenho evidenciado na avaliação da atuação governamental na área da Transparência e Relacionamento com o Cidadão. Após o trânsito em julgado da deliberação, encamin […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor(a) MARCELO JOSE BERNARDELI PALHARES, na qualidade de prefeito(a) do MUNICÍPIO DE JACAREZINHO, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "O conjunto de dados indica o exercício 2022 (\"exercício de 2022\"), mas a deliberação do PDF diz \"exercício de 2023\"; foi usado o texto do PDF",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Jacarezinho não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-5-00383998",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 186/2024 — contas do Prefeito de Jacarezinho, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "186",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 186/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "206063/2023",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2024-04-15",
+   "data_publicacao": "2024-05-02",
+   "publicacao_literal": "DETC nº 3200",
+   "entidade_literal": "MUNICÍPIO DE JACAREZINHO",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor MARCELO JOSE BERNARDELI PALHARES, na qualidade de prefeito do MUNICÍPIO DE JACAREZINHO, relativas ao exercício de 2022, em razão dos resultados da avaliação da atuação governamental nas áreas da Saúde (5,20), Assistência Social (2,29), Administração Financeira (2,43) e Transparência e Relacionamento com o Cidadão (5,27);",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Jacarezinho",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 186/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/5/00383998.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "b3aae2b2395f7d1de4dc60be48120ce9253379d700ef8e322d4b4eed2ec233c2",
+    "paginas_lidas": 1,
+    "total_paginas": 33,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor MARCELO JOSE BERNARDELI PALHARES, na qualidade de prefeito do MUNICÍPIO DE JACAREZINHO, relativas ao exercício de 2022, em razão dos resultados da avaliação da atuação governamental nas áreas da Saúde (5,20), Assistência Social (2,29), Administração Financeira (2,43) e Transparência e Relacionamento com o Cidadão (5,27); b. Encaminhar os autos à Coordenadoria Geral de Fiscalização - CGF para ciência e, se entender cabível, inclusão no Plano Anual de Fiscalização – PAF, nos termos do art. 151-A, inciso II, do Regimento Interno, em razão das pontuações obtida […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor MARCELO JOSE BERNARDELI PALHARES, na qualidade de prefeito do MUNICÍPIO DE JACAREZINHO, relativas ao exercício de 2022, em razão dos resultados da avaliação da atuação governamental nas áreas da Saúde (5,20), Assistência Social (2,29), Administração Financeira (2,43) e Transparência e Relacionamento com o Cidadão (5,27);",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Jacarezinho não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2022-12-00371228",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 249/2022 da Secretaria Primeira Câmara — contas do Prefeito de Jacarezinho, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "249",
+    "ano": "2022",
+    "titulo_oficial": "Acórdão de Parecer Prévio 249/2022 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "212043/2022",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2022-11-28",
+   "data_publicacao": "2022-12-13",
+   "publicacao_literal": "DETC nº 2891",
+   "entidade_literal": "MUNICÍPIO DE JACAREZINHO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio recomendado a regularidade",
+    "conclusao_literal": "emitir parecer prévio recomendado a regularidade das contas do Sr. Marcelo José Bernardeli Palhares como Prefeito de Jacarezinho, no exercício de 2021, com base no disposto no art. 16, I, da LC/PR 113/05;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Jacarezinho",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 249/2022 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2022/12/00371228.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "2fa26dc3a2efdcdd6e89132083edaed03cd7cab607c7697ccfc975efdbc318d5",
+    "paginas_lidas": 2,
+    "total_paginas": 2,
+    "deliberacao": "ACORDAM Os membros da PRIMEIRA CÂMARA do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: I - emitir parecer prévio recomendado a regularidade das contas do Sr. Marcelo José Bernardeli Palhares como Prefeito de Jacarezinho, no exercício de 2021, com base no disposto no art. 16, I, da LC/PR 113/05; II - determinar o encerramento do Processo, após o trânsito em julgado da decisão.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir parecer prévio recomendado a regularidade das contas do Sr. Marcelo José Bernardeli Palhares como Prefeito de Jacarezinho, no exercício de 2021, com base no disposto no art. 16, I, da LC/PR 113/05;",
+    "conclusao": "parecer prévio recomendado a regularidade",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2022,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Jacarezinho não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-4-00373400",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 101/2023 da Secretaria Primeira Câmara — contas do Prefeito de Jacarezinho, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "101",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 101/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "185298/2021",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2023-04-03",
+   "data_publicacao": "2023-04-19",
+   "publicacao_literal": "DETC nº 2963",
+   "entidade_literal": "MUNICÍPIO DE JACAREZINHO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio deste Tribunal recomendando o julgamento pela regularidade",
+    "conclusao_literal": "Emitir, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, parecer prévio deste Tribunal recomendando o julgamento pela regularidade das contas do Sr. SERGIO EDUARDO EMYGDIO DE FARIA, prefeito do Município de Jacarezinho, relativas ao exercício financeiro de 2020, ressalvando-se o não encaminhamento do parecer do Conselho Municipal de Saúde, devidamente assinado pela maioria dos seus membros;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Jacarezinho",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 101/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/4/00373400.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "2f80c6e8c397b2c347ad8cdbdd8115cf23780d579af52a41ac5ee09117981ffe",
+    "paginas_lidas": 2,
+    "total_paginas": 4,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade, em: I – Emitir, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, parecer prévio deste Tribunal recomendando o julgamento pela regularidade das contas do Sr. SERGIO EDUARDO EMYGDIO DE FARIA, prefeito do Município de Jacarezinho, relativas ao exercício financeiro de 2020, ressalvando-se o não encaminhamento do parecer do Conselho Municipal de Saúde, devidamente assinado pela maioria dos seus membros; II – encaminhar, após o trânsito em julgado, a remessa dos autos à Coordenadoria de Monitoramento e Execuções para registro, e, posteriormente, ao Gabinete da Presidência, para as […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, parecer prévio deste Tribunal recomendando o julgamento pela regularidade das contas do Sr. SERGIO EDUARDO EMYGDIO DE FARIA, prefeito do Município de Jacarezinho, relativas ao exercício financeiro de 2020, ressalvando-se o não encaminhamento do parecer do Conselho Municipal de Saúde, devidamente assinado pela maioria dos seus membros;",
+    "conclusao": "parecer prévio deste Tribunal recomendando o julgamento pela regularidade",
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício financeiro de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Jacarezinho não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2022-5-00366718",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 118/2022 da Secretaria Segunda Câmara — contas do Prefeito de Jacarezinho, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "118",
+    "ano": "2022",
+    "titulo_oficial": "Acórdão de Parecer Prévio 118/2022 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "205171/2020",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "NESTOR BAPTISTA",
+   "data_julgamento": "2022-04-18",
+   "data_publicacao": "2022-05-04",
+   "publicacao_literal": "DETC nº 2760",
+   "entidade_literal": "MUNICÍPIO DE JACAREZINHO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Emitir Parecer Prévio deste Tribunal, recomendando o julgamento pela IRREGULARIDADE das contas do MUNICÍPIO DE JACAREZINHO, exercício de 2019, de responsabilidade do Sr. SÉRGIO EDUARDO EMYGDIO DE FARIA, CPF Nº 298.689.479-87, nos termos do Art. 16, III, “b” da Lei Orgânica do TCEPR;",
+    "conclusao_literal": "Emitir Parecer Prévio deste Tribunal, recomendando o julgamento pela IRREGULARIDADE das contas do MUNICÍPIO DE JACAREZINHO, exercício de 2019, de responsabilidade do Sr. SÉRGIO EDUARDO EMYGDIO DE FARIA, CPF Nº 298.689.479-87, nos termos do Art. 16, III, “b” da Lei Orgânica do TCEPR;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Jacarezinho",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 118/2022 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2022/5/00366718.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "1914d33abd51031664cfdf416c564d31ca0166d46fb82e412a25a385847370c9",
+    "paginas_lidas": 1,
+    "total_paginas": 8,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro NESTOR BAPTISTA, por unanimidade, em: I – Emitir Parecer Prévio deste Tribunal, recomendando o julgamento pela IRREGULARIDADE das contas do MUNICÍPIO DE JACAREZINHO, exercício de 2019, de responsabilidade do Sr. SÉRGIO EDUARDO EMYGDIO DE FARIA, CPF Nº 298.689.479-87, nos termos do Art. 16, III, “b” da Lei Orgânica do TCEPR; II – aplicar 01 (uma) multa prevista na alínea “g” do inciso III do artigo 87 da Lei Complementar nº 113/2005 em decorrência do não reenquadramento dos índices despesas com pessoal aos limites previstos no inciso III do artigo 19 c/c com a alínea “b” do inciso III do artigo 20, todos, da Lei Complementar nº 101/2000 dentro do prazo previsto no artig […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio deste Tribunal, recomendando o julgamento pela IRREGULARIDADE das contas do MUNICÍPIO DE JACAREZINHO, exercício de 2019, de responsabilidade do Sr. SÉRGIO EDUARDO EMYGDIO DE FARIA, CPF Nº 298.689.479-87, nos termos do Art. 16, III, “b” da Lei Orgânica do TCEPR;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2022,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Jacarezinho não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-7-00347965",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 248/2020 da Secretaria Primeira Câmara — contas do Prefeito de Jacarezinho, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "248",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 248/2020 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "193912/2019",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2020-07-13",
+   "data_publicacao": "2020-07-24",
+   "publicacao_literal": "DETC nº 2346",
+   "entidade_literal": "MUNICÍPIO DE JACAREZINHO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito Municipal de JACAREZINHO, Sr. Sérgio Eduardo Emygdio de Faria, relativas ao exercício financeiro de 2018, diante da existência de despesa com pessoal acima dos limites estabelecidos nos artigos 19 e 20 da LRF;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Jacarezinho",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 248/2020 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/7/00347965.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "560a9d139bf528370cd27fc38533add5086a1e9cbfb46bd8240e510b11086ba6",
+    "paginas_lidas": 2,
+    "total_paginas": 6,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por maioria absoluta, em: I. Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito Municipal de JACAREZINHO, Sr. Sérgio Eduardo Emygdio de Faria, relativas ao exercício financeiro de 2018, diante da existência de despesa com pessoal acima dos limites estabelecidos nos artigos 19 e 20 da LRF; II. Apor ressalva ao erro de digitação do exercício a que dizem respeito as contas aprovadas no parecer do Conselho do FUNDEB; III. Aplicar a multa prevista no artigo 87, IV, g, da LC n.º 113/05 ao Sr. Sérgio Eduardo Emygdio de Faria, CPF n.º 298.689.479-87, em decorrência da irregularidade mencionada no item I; […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "Emitir Parecer Prévio recomendando a irregularidade da Prestação de Contas Anual do Prefeito Municipal de JACAREZINHO, Sr. Sérgio Eduardo Emygdio de Faria, relativas ao exercício financeiro de 2018, diante da existência de despesa com pessoal acima dos limites estabelecidos nos artigos 19 e 20 da LRF;",
+    "conclusao": "Parecer Prévio recomendando a irregularidade",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício financeiro de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Jacarezinho não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-7-00338253",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 154/2019 da Secretaria Primeira Câmara — contas do Prefeito de Jacarezinho, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "154",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 154/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "287723/2017",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2019-07-15",
+   "data_publicacao": "2019-07-23",
+   "publicacao_literal": "DETC nº 2105",
+   "entidade_literal": "MUNICÍPIO DE JACAREZINHO",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio recomendando o julgamento pela REGULARIDADE",
+    "conclusao_literal": "emitir parecer prévio recomendando o julgamento pela REGULARIDADE das contas do Poder Executivo do Município de Jacarezinho, referente ao exercício financeiro de 2016, de responsabilidade do senhor Sérgio Eduardo Emygdio de Faria, RESSALVANDO os atrasos no envio dos dados do SIM- AM;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Jacarezinho",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 154/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/7/00338253.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "cb56d3b85aeb6c2d6ca5b1ec0fe6ac4524d946bffd7714bb588b40b89ea54748",
+    "paginas_lidas": 2,
+    "total_paginas": 6,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por unanimidade, em: I – emitir parecer prévio recomendando o julgamento pela REGULARIDADE das contas do Poder Executivo do Município de Jacarezinho, referente ao exercício financeiro de 2016, de responsabilidade do senhor Sérgio Eduardo Emygdio de Faria, RESSALVANDO os atrasos no envio dos dados do SIM- AM; II – aplicar, em razão dos atrasos do SIM-AM, uma multa do art. 87, III, “b” da Lei Complementar Estadual n.º 113/2005, ao senhor Sérgio Eduardo Emygdio de Faria; III – determinar, após transitada em julgado esta decisão, o encaminhamento dos autos à Coordenadoria de Monitoramento e Execuções para o registro pertinente; IV – determinar o en […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir parecer prévio recomendando o julgamento pela REGULARIDADE das contas do Poder Executivo do Município de Jacarezinho, referente ao exercício financeiro de 2016, de responsabilidade do senhor Sérgio Eduardo Emygdio de Faria, RESSALVANDO os atrasos no envio dos dados do SIM- AM;",
+    "conclusao": "parecer prévio recomendando o julgamento pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício financeiro de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Jacarezinho não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [],
+ "acordaos_relacionados": []
+}

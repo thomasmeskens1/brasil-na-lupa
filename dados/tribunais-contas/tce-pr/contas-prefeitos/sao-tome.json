@@ -1,0 +1,732 @@
+{
+ "atualizado_em": "2026-11-05T13:54:42.747Z",
+ "municipio": {
+  "id": "sao-tome",
+  "nome": "São Tomé",
+  "uf": "PR",
+  "codigo_ibge": "4126108"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2016,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 8,
+  "pareceres": 9,
+  "com_parecer_em_fonte_aberta": 8,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 8,
+  "pdf_lido": 8,
+  "sem_exercicio_na_fonte": 1
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f68ca8a9b64d6286d5f605b923705fb7602cf450e7408d143f7545e514359bfb",
+   "atualizado_na_fonte": "05/06/2026 00:00:40"
+  },
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "3b7fb76a75413d34e4541e63dccfa3cab923f7d498fc63703a156f2f00d63a4c",
+   "atualizado_na_fonte": "26/06/2025 14:58:07"
+  },
+  {
+   "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "32c57654dbfbc5f3f9491fa56b75213efef6dbf63a05d1b9a3988599f2e0e524",
+   "atualizado_na_fonte": "24/06/2025 12:12:43"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2026-2-000200585",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 31/2026 — contas do Prefeito de São Tomé, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "31",
+    "ano": "2026",
+    "titulo_oficial": "Parecer Prévio 31/2026"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "166883/2025",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "FABIO DE SOUZA CAMARGO",
+   "data_julgamento": "2026-01-26",
+   "data_publicacao": "2026-02-06",
+   "publicacao_literal": "DETC nº 3611",
+   "entidade_literal": "MUNICÍPIO DE SÃO TOMÉ",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor OCELIO CESAR FERREIRA LEITE, na qualidade de prefeito do MUNICÍPIO DE SÃO TOMÉ, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de São Tomé",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 31/2026 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2026/2/000200585.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "28a2c2cb5b6f5d961e97551a56a9803efb230a9f9a50dce7b352e91b20b96112",
+    "paginas_lidas": 1,
+    "total_paginas": 49,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FABIO DE SOUZA CAMARGO, por maioria absoluta: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor OCELIO CESAR FERREIRA LEITE, na qualidade de prefeito do MUNICÍPIO DE SÃO TOMÉ, relativas ao exercício de 2024. b. Ressalvar as contas em virtude de: i. Obrigações de despesas contraídas nos últimos dois quadrimestres do mandato (art. 42 da LRF). Após o trânsito em julgado da deliberação, encaminhar os autos ao Gabinete da Presidência para as providências contidas no § 6º do artigo 217-A do Regimento Interno, à Coordenadoria de Medidas Executórias para as anotações pertinentes e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor OCELIO CESAR FERREIRA LEITE, na qualidade de prefeito do MUNICÍPIO DE SÃO TOMÉ, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2026,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2026 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2026_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de São Tomé não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2025-2-000196539",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 11/2025 — contas do Prefeito de São Tomé, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "11",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 11/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "216690/2024",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2025-02-03",
+   "data_publicacao": "2025-02-20",
+   "publicacao_literal": "DETC nº 3390",
+   "entidade_literal": "MUNICÍPIO DE SÃO TOMÉ",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do(a) senhor(a) OCELIO CESAR FERREIRA LEITE, na qualidade de prefeito(a) do MUNICÍPIO DE SÃO TOMÉ, relativas ao exercício de 2023, em virtude do resultado financeiro acumulado negativo equivalente a -2,12% e do erro formal quanto à legislação utilizada para fins de instituir o Plano de Equacionamento do Déficit Atuarial.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de São Tomé",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 11/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/2/000196539.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "9b5be51d06d1caf665e39238268ff01cca4758951c8e2a889815546219e281ed",
+    "paginas_lidas": 1,
+    "total_paginas": 44,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do(a) senhor(a) OCELIO CESAR FERREIRA LEITE, na qualidade de prefeito(a) do MUNICÍPIO DE SÃO TOMÉ, relativas ao exercício de 2023, em virtude do resultado financeiro acumulado negativo equivalente a -2,12% e do erro formal quanto à legislação utilizada para fins de instituir o Plano de Equacionamento do Déficit Atuarial. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Le […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do(a) senhor(a) OCELIO CESAR FERREIRA LEITE, na qualidade de prefeito(a) do MUNICÍPIO DE SÃO TOMÉ, relativas ao exercício de 2023, em virtude do resultado financeiro acumulado negativo equivalente a -2,12% e do erro formal quanto à legislação utilizada para fins de instituir o Plano de Equacionamento do Déficit Atuarial.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de São Tomé não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-5-00385585",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 229/2024 — contas do Prefeito de São Tomé, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "229",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 229/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "160063/2023",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2024-05-13",
+   "data_publicacao": "2024-05-27",
+   "publicacao_literal": "DETC nº 3217",
+   "entidade_literal": "MUNICÍPIO DE SÃO TOMÉ",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor OCELIO CESAR FERREIRA LEITE, na qualidade de prefeito do MUNICÍPIO DE SÃO TOMÉ, relativas ao exercício de 2022, em razão dos resultados da avaliação da atuaçao governamental nas áreas de Administração Financeira (3,54), Transparência e Relacionamento com o Cidadão (2,92) e Previdência Social (3,68);",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de São Tomé",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 229/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/5/00385585.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "0e529ea0a4ff3d45c76ee45f7a23dd327dad6a3aa68ec883152d7185a66600d5",
+    "paginas_lidas": 1,
+    "total_paginas": 37,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor OCELIO CESAR FERREIRA LEITE, na qualidade de prefeito do MUNICÍPIO DE SÃO TOMÉ, relativas ao exercício de 2022, em razão dos resultados da avaliação da atuaçao governamental nas áreas de Administração Financeira (3,54), Transparência e Relacionamento com o Cidadão (2,92) e Previdência Social (3,68); b. Encaminhar os autos à Coordenadoria Geral de Fiscalização - CGF para ciência e, se entender cabível, inclusão no Plano Anual de Fiscalização - PAF, nos termos do artigo 151-A, II, do Regimento Interno, em razão das pontuações obtidas nas áreas de Administraçã […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE COM RESSALVA das contas do senhor OCELIO CESAR FERREIRA LEITE, na qualidade de prefeito do MUNICÍPIO DE SÃO TOMÉ, relativas ao exercício de 2022, em razão dos resultados da avaliação da atuaçao governamental nas áreas de Administração Financeira (3,54), Transparência e Relacionamento com o Cidadão (2,92) e Previdência Social (3,68);",
+    "conclusao": "Parecer Prévio pela REGULARIDADE COM RESSALVA",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de São Tomé não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-1-00371704",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 330/2022 da Secretaria Primeira Câmara — contas do Prefeito de São Tomé, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "330",
+    "ano": "2022",
+    "titulo_oficial": "Acórdão de Parecer Prévio 330/2022 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "213198/2022",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2022-12-12",
+   "data_publicacao": "2023-01-18",
+   "publicacao_literal": "DETC nº 2903",
+   "entidade_literal": "MUNICÍPIO DE SÃO TOMÉ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando o julgamento pela regularidade",
+    "conclusao_literal": "emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do Sr. Ocelio Cesar Ferreira Leite, prefeito do Município de São Tomé, relativa ao exercício financeiro de 2021, com fundamento no art. 1º, I, combinado com o art. 16, I, da Lei Complementar Estadual nº 113/2005;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de São Tomé",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 330/2022 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/1/00371704.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "e421b5f152d869e61cf5bab6ae970c6038269935f77a6ab41a6a871b4af6df1c",
+    "paginas_lidas": 1,
+    "total_paginas": 2,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade, em: I - emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do Sr. Ocelio Cesar Ferreira Leite, prefeito do Município de São Tomé, relativa ao exercício financeiro de 2021, com fundamento no art. 1º, I, combinado com o art. 16, I, da Lei Complementar Estadual nº 113/2005; e II – determinar, após o trânsito em julgado, a remessa dos autos ao Gabinete da Presidência, para as providências contidas no §6º do art. 217-A do Regimento Interno e, na sequência, à Diretoria de Protocolo, para encerramento e arquivamento, nos termos do art. 398 §1º e art. 168, inciso VII, ambos do Regimento Interno.",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio recomendando o julgamento pela regularidade das contas do Sr. Ocelio Cesar Ferreira Leite, prefeito do Município de São Tomé, relativa ao exercício financeiro de 2021, com fundamento no art. 1º, I, combinado com o art. 16, I, da Lei Complementar Estadual nº 113/2005;",
+    "conclusao": "Parecer Prévio recomendando o julgamento pela regularidade",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2022,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de São Tomé não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2022-10-00369696",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 187/2022 da Secretaria Segunda Câmara — contas do Prefeito de São Tomé, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "187",
+    "ano": "2022",
+    "titulo_oficial": "Acórdão de Parecer Prévio 187/2022 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "184917/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "NESTOR BAPTISTA",
+   "data_julgamento": "2022-10-03",
+   "data_publicacao": "2022-10-18",
+   "publicacao_literal": "DETC nº 2856",
+   "entidade_literal": "MUNICÍPIO DE SÃO TOMÉ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Emitir Parecer Prévio deste Tribunal, com fundamento no art. 16, II, da Lei Complementar Estadual nº 113/2005, recomendando o julgamento pela REGULARIDADE COM RESSALVA das contas do Município de São Tomé, relativas exercício de 2020, de responsabilidade do Sr. Océlio Cesar Ferreira Leite, em razão da irregularidade no processo de aporte do déficit atuarial ao Regime de Previdência, nos termos acima;",
+    "conclusao_literal": "Emitir Parecer Prévio deste Tribunal, com fundamento no art. 16, II, da Lei Complementar Estadual nº 113/2005, recomendando o julgamento pela REGULARIDADE COM RESSALVA das contas do Município de São Tomé, relativas exercício de 2020, de responsabilidade do Sr. Océlio Cesar Ferreira Leite, em razão da irregularidade no processo de aporte do déficit atuarial ao Regime de Previdência, nos termos acima;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de São Tomé",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 187/2022 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2022/10/00369696.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "c63e2b5d9664ae59095d57c088be43aa6ca8dd8182a0770c6c3768c246b8fc91",
+    "paginas_lidas": 2,
+    "total_paginas": 5,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro NESTOR BAPTISTA, por unanimidade, em: I – Emitir Parecer Prévio deste Tribunal, com fundamento no art. 16, II, da Lei Complementar Estadual nº 113/2005, recomendando o julgamento pela REGULARIDADE COM RESSALVA das contas do Município de São Tomé, relativas exercício de 2020, de responsabilidade do Sr. Océlio Cesar Ferreira Leite, em razão da irregularidade no processo de aporte do déficit atuarial ao Regime de Previdência, nos termos acima; II – determinar, após o trânsito em julgado a remessa do feito à Coordenadoria de Monitoramento e Execuções (CMEX) para anotações e providências necessárias e ao Gabinete da Presidência (GP), para as providências contidas no §6º, do […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio deste Tribunal, com fundamento no art. 16, II, da Lei Complementar Estadual nº 113/2005, recomendando o julgamento pela REGULARIDADE COM RESSALVA das contas do Município de São Tomé, relativas exercício de 2020, de responsabilidade do Sr. Océlio Cesar Ferreira Leite, em razão da irregularidade no processo de aporte do déficit atuarial ao Regime de Previdência, nos termos acima;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2022,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de São Tomé não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-9-00349932",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 440/2020 da Secretaria Segunda Câmara — contas do Prefeito de São Tomé, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "440",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 440/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "207484/2019",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2020-08-31",
+   "data_publicacao": "2020-09-18",
+   "publicacao_literal": "DETC nº 2384",
+   "entidade_literal": "MUNICÍPIO DE SÃO TOMÉ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "emitir Parecer Prévio, com fundamento no artigo 1º, I, combinado com o art. 16, III, “b”, da Lei Complementar Estadual nº 113/2005, recomendando a irregularidade das contas do Sr. OCELIO CESAR FERREIRA LEITE, prefeito do Município de São Tomé, relativas ao exercício de 2018, em virtude da não observância dos preceitos legais em relação ao procedimento de dação em pagamento para complementação do aporte para cobertura do déficit atuarial, conforme indicado pela Coordenadoria de Gestão Municipal;",
+    "conclusao_literal": "emitir Parecer Prévio, com fundamento no artigo 1º, I, combinado com o art. 16, III, “b”, da Lei Complementar Estadual nº 113/2005, recomendando a irregularidade das contas do Sr. OCELIO CESAR FERREIRA LEITE, prefeito do Município de São Tomé, relativas ao exercício de 2018, em virtude da não observância dos preceitos legais em relação ao procedimento de dação em pagamento para complementação do aporte para cobertura do déficit atuarial, conforme indicado pela Coordenadoria de Gestão Municipal;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de São Tomé",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 440/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/9/00349932.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "3b1f435e70ac4301f925e29bc233911c41e5d16a3cdbc41d5be9f0b0a3ff17d0",
+    "paginas_lidas": 1,
+    "total_paginas": 8,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade, em: I- emitir Parecer Prévio, com fundamento no artigo 1º, I, combinado com o art. 16, III, “b”, da Lei Complementar Estadual nº 113/2005, recomendando a irregularidade das contas do Sr. OCELIO CESAR FERREIRA LEITE, prefeito do Município de São Tomé, relativas ao exercício de 2018, em virtude da não observância dos preceitos legais em relação ao procedimento de dação em pagamento para complementação do aporte para cobertura do déficit atuarial, conforme indicado pela Coordenadoria de Gestão Municipal; e II- aplicar, contra o Sr. OCELIO CESAR FERREIRA LEITE, a multa do art. 87, IV, “g”, da Lei Orgânica deste Tribunal; III- rem […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir Parecer Prévio, com fundamento no artigo 1º, I, combinado com o art. 16, III, “b”, da Lei Complementar Estadual nº 113/2005, recomendando a irregularidade das contas do Sr. OCELIO CESAR FERREIRA LEITE, prefeito do Município de São Tomé, relativas ao exercício de 2018, em virtude da não observância dos preceitos legais em relação ao procedimento de dação em pagamento para complementação do aporte para cobertura do déficit atuarial, conforme indicado pela Coordenadoria de Gestão Municipal;",
+    "conclusao": null,
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de São Tomé não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-8-00349962",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 381/2020 da Secretaria Segunda Câmara — contas do Prefeito de São Tomé, exercício 2017",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "381",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 381/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "302343/2018",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2020-08-17",
+   "data_publicacao": "2020-08-31",
+   "publicacao_literal": "DETC nº 2372",
+   "entidade_literal": "MUNICÍPIO DE SÃO TOMÉ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade com ressalva",
+    "conclusao_literal": "emitir, com fundamento nos artigos 1º, inciso I13 e 16, inciso II14, da Lei Complementar Estadual nº 113/2005, bem como no artigo 21515 do Regimento Interno, Parecer Prévio recomendando a regularidade com ressalva das contas do Município de São Tomé, de responsabilidade do Sr. Océlio Cesar Ferreira Leite, referentes ao exercício de 2017, em razão do déficit orçamentário de fontes livres, das inconformidades quanto ao procedimento de aportes para cobertura do déficit atuarial e da entrega dos dados do SIM-AM com atraso;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de São Tomé",
+    "exercicio": "2017",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 381/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/8/00349962.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "6c0b09c84c7436d41f8300f52cfa4b16b12a421dc1746ff9adc0c0d692093201",
+    "paginas_lidas": 2,
+    "total_paginas": 9,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por maioria absoluta, em: I. emitir, com fundamento nos artigos 1º, inciso I13 e 16, inciso II14, da Lei Complementar Estadual nº 113/2005, bem como no artigo 21515 do Regimento Interno, Parecer Prévio recomendando a regularidade com ressalva das contas do Município de São Tomé, de responsabilidade do Sr. Océlio Cesar Ferreira Leite, referentes ao exercício de 2017, em razão do déficit orçamentário de fontes livres, das inconformidades quanto ao procedimento de aportes para cobertura do déficit atuarial e da entrega dos dados do SIM-AM com atraso; II. expedir recomendação ao Município para que, nos próximos procedimentos que envolvam dação de bens p […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "emitir, com fundamento nos artigos 1º, inciso I13 e 16, inciso II14, da Lei Complementar Estadual nº 113/2005, bem como no artigo 21515 do Regimento Interno, Parecer Prévio recomendando a regularidade com ressalva das contas do Município de São Tomé, de responsabilidade do Sr. Océlio Cesar Ferreira Leite, referentes ao exercício de 2017, em razão do déficit orçamentário de fontes livres, das inconformidades quanto ao procedimento de aportes para cobertura do déficit atuarial e da entrega dos dados do SIM-AM com atraso;",
+    "conclusao": "Parecer Prévio recomendando a regularidade com ressalva",
+    "exercicio": {
+     "ano": 2017,
+     "trecho": "exercício de 2017"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de São Tomé não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-2-00343271",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 1/2020 da Secretaria Segunda Câmara — contas do Prefeito de São Tomé, exercício 2016",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "1",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 1/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "314291/2017",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2020-01-21",
+   "data_publicacao": "2020-02-05",
+   "publicacao_literal": "DETC nº 2234",
+   "entidade_literal": "MUNICÍPIO DE SÃO TOMÉ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "emitir Parecer Prévio recomendando a regularidade das contas do Município de São Tomé, referentes ao exercício de 2016, de responsabilidade do senhor Arlei Hernandes de Biazzi, ressalvando a ausência de documentos referentes à dação em pagamento de imóveis para pagamento de aportes para cobertura do déficit atuarial na forma apurada no laudo atuarial;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de São Tomé",
+    "exercicio": "2016",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 1/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/2/00343271.pdf"
+    }
+   },
+   "votacao_literal": "por maioria absoluta",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "b026b3403ccc86ce1a174dc0cf6fa8b985d86a2906de7613b10cb2dd399e8de9",
+    "paginas_lidas": 2,
+    "total_paginas": 17,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por maioria absoluta, em: I- emitir Parecer Prévio recomendando a regularidade das contas do Município de São Tomé, referentes ao exercício de 2016, de responsabilidade do senhor Arlei Hernandes de Biazzi, ressalvando a ausência de documentos referentes à dação em pagamento de imóveis para pagamento de aportes para cobertura do déficit atuarial na forma apurada no laudo atuarial; o encerramento do mandato com disponibilidade financeira negativa, para efeito do que dispõe o artigo 42 da LRF; e os atrasos no encaminhamento das informações do SIM-AM, de janeiro a outubro; II – aplicar a multa do artigo 87, III, “b”, da Lei Complementar n.° 113, […]",
+    "votacao": "por maioria absoluta",
+    "item_parecer": "emitir Parecer Prévio recomendando a regularidade das contas do Município de São Tomé, referentes ao exercício de 2016, de responsabilidade do senhor Arlei Hernandes de Biazzi, ressalvando a ausência de documentos referentes à dação em pagamento de imóveis para pagamento de aportes para cobertura do déficit atuarial na forma apurada no laudo atuarial;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2016,
+     "trecho": "exercício de 2016"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de São Tomé não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2021-207-primeiracmara",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 207/2021 da Secretaria Primeira Câmara — contas do Prefeito de São Tomé",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "207",
+    "ano": "2021",
+    "titulo_oficial": "Acórdão de Parecer Prévio 207/2021 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "209657/2020",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "ARTAGÃO DE MATTOS LEÃO",
+   "data_julgamento": "2021-06-28",
+   "data_publicacao": "2021-07-14",
+   "publicacao_literal": "DETC nº 2580",
+   "entidade_literal": "MUNICÍPIO DE SÃO TOMÉ",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": null,
+    "conclusao_literal": null,
+    "conclusao_fonte": null,
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de São Tomé",
+    "exercicio": null,
+    "documento": null
+   },
+   "votacao_literal": null,
+   "julgamento_politico": null,
+   "leitura_pdf": null,
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2021,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2021 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2021_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Conclusão do parecer não consta no resumo do conjunto de dados; está no inteiro teor (PDF), ainda não lido pelo coletor",
+    "Resultado da votação (unanimidade ou maioria) não consta nos dados coletados",
+    "Endereço do PDF ausente ou fora do padrão no conjunto de dados",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de São Tomé não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}

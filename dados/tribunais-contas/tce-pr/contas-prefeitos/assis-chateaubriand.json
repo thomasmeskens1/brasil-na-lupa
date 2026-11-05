@@ -1,0 +1,672 @@
+{
+ "atualizado_em": "2026-11-05T14:29:00.812Z",
+ "municipio": {
+  "id": "assis-chateaubriand",
+  "nome": "Assis Chateaubriand",
+  "uf": "PR",
+  "codigo_ibge": "4102000"
+ },
+ "tribunal": "tce-pr",
+ "periodo": {
+  "inicio": 2018,
+  "fim": 2024
+ },
+ "contagens": {
+  "exercicios": 7,
+  "pareceres": 8,
+  "com_parecer_em_fonte_aberta": 7,
+  "sem_fonte_aberta": 0,
+  "com_pdf": 8,
+  "pdf_lido": 8,
+  "sem_exercicio_na_fonte": 1
+ },
+ "fontes": [
+  {
+   "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "7dd1b50d4c3e61086b7cccf008a2406aa146503d5687fff7065073510af7e822",
+   "atualizado_na_fonte": "26/12/2025 00:02:35"
+  },
+  {
+   "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "f65d38a9c8faa59c334640f30c551b3735226d0aa6dd5c915a254ab4118db527",
+   "atualizado_na_fonte": "26/06/2025 14:52:26"
+  },
+  {
+   "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "5d970e3a1d215158d15245ba818ef93edb4d6810c11d7122141f8660a8f047e2",
+   "atualizado_na_fonte": "26/06/2025 14:57:20"
+  },
+  {
+   "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "3b7fb76a75413d34e4541e63dccfa3cab923f7d498fc63703a156f2f00d63a4c",
+   "atualizado_na_fonte": "26/06/2025 14:58:07"
+  },
+  {
+   "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "e9d165defea0784292b5736d7a9ef490189a314fed8b1175b6296ca8fe81be0f",
+   "atualizado_na_fonte": "26/06/2025 14:59:28"
+  },
+  {
+   "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+   "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+   "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+   "acessado_em": "2026-11-05",
+   "pagina": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+   "sha256": "6291bf7a95135be9a99982c03df835bf9e1075a5744ac14cdc7dcccd49622425",
+   "atualizado_na_fonte": "26/06/2025 15:01:51"
+  }
+ ],
+ "observacoes": [
+  "Fonte: arquivos anuais de acórdãos do portal de dados abertos do TCE-PR (Viajuris), atos \"Parecer Prévio\" e \"Acórdão de Parecer Prévio\" da classe \"Prestação de contas do prefeito municipal\". Um item por ato; um mesmo exercício pode ter mais de um parecer quando a fonte assim registra.",
+  "A conclusão é copiada literalmente da deliberação do inteiro teor (PDF) ou, na falta, do resumo do conjunto de dados; quando nenhum dos dois traz a conclusão, ela fica vazia. O campo \"indexacao_literal\" reproduz os termos de indexação do TCE-PR e não é o texto do parecer.",
+  "O exercício das contas vem do texto da deliberação do PDF ou dos campos \"DsTema\"/\"DsResumo\" do conjunto de dados; sem ele, o ato fica em \"itens_sem_exercicio\"."
+ ],
+ "itens": [
+  {
+   "id": "tce-pr-parecer-2025-11-000200042",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 369/2025 — contas do Prefeito de Assis Chateaubriand, exercício 2024",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "369",
+    "ano": "2025",
+    "titulo_oficial": "Parecer Prévio 369/2025"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "190431/2025",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2025-11-10",
+   "data_publicacao": "2025-11-19",
+   "publicacao_literal": "DETC nº 3572",
+   "entidade_literal": "MUNICÍPIO DE ASSIS CHATEAUBRIAND",
+   "resumo_literal": null,
+   "indexacao_literal": "Ressalva > Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2024"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas dos senhores CLOVES LUIZ ANGELELI (01/01/24 – 28/01/24) e VALTER APARECIDO SOUZA CORREIA (29/01/24 – 31/12/24), cada um na qualidade de prefeito do MUNICÍPIO DE ASSIS CHATEAUBRIAND, nos respectivos períodos, relativas ao exercício de 2024.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Assis Chateaubriand",
+    "exercicio": "2024",
+    "documento": {
+     "titulo": "Parecer Prévio 369/2025 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2025/11/000200042.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "c2080f04faa1b84d3aaf2caa9791af264138deac572ce2b13a10fad7ac70e144",
+    "paginas_lidas": 1,
+    "total_paginas": 45,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas dos senhores CLOVES LUIZ ANGELELI (01/01/24 – 28/01/24) e VALTER APARECIDO SOUZA CORREIA (29/01/24 – 31/12/24), cada um na qualidade de prefeito do MUNICÍPIO DE ASSIS CHATEAUBRIAND, nos respectivos períodos, relativas ao exercício de 2024. b. Apor RESSALVAS às contas em razão do desempenho inferior a 6,00 pontos nas áreas de Assistência Social (5,01)21, Transparência e Relacionamento com o Cidadão (5,78)22 e Administração Financeira (3,48)23. Após o trânsito em julgado da deliberação, encaminhem-se os autos ao Gabinete da Presidência para as providências contidas no § 6º do arti […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas dos senhores CLOVES LUIZ ANGELELI (01/01/24 – 28/01/24) e VALTER APARECIDO SOUZA CORREIA (29/01/24 – 31/12/24), cada um na qualidade de prefeito do MUNICÍPIO DE ASSIS CHATEAUBRIAND, nos respectivos períodos, relativas ao exercício de 2024.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2024,
+     "trecho": "exercício de 2024"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2025,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2025 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2025_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Assis Chateaubriand não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2024-9-00388653",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 331/2024 — contas do Prefeito de Assis Chateaubriand, exercício 2023",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "331",
+    "ano": "2024",
+    "titulo_oficial": "Parecer Prévio 331/2024"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "204242/2024",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "AUGUSTINHO ZUCCHI",
+   "data_julgamento": "2024-09-16",
+   "data_publicacao": "2024-09-27",
+   "publicacao_literal": "DETC nº 3304",
+   "entidade_literal": "MUNICÍPIO DE ASSIS CHATEAUBRIAND",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2023"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor VALTER APARECIDO SOUZA CORREIA, na qualidade de prefeito do MUNICÍPIO DE ASSIS CHATEAUBRIAND, relativas ao exercício de 2023.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Assis Chateaubriand",
+    "exercicio": "2023",
+    "documento": {
+     "titulo": "Parecer Prévio 331/2024 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2024/9/00388653.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "e3aeca67f375361813e46b1f475b5a13cabeedc71aa76f25f5347bc833622c59",
+    "paginas_lidas": 1,
+    "total_paginas": 35,
+    "deliberacao": "Decidem os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro AUGUSTINHO ZUCCHI, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do senhor VALTER APARECIDO SOUZA CORREIA, na qualidade de prefeito do MUNICÍPIO DE ASSIS CHATEAUBRIAND, relativas ao exercício de 2023. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, § 6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do senhor VALTER APARECIDO SOUZA CORREIA, na qualidade de prefeito do MUNICÍPIO DE ASSIS CHATEAUBRIAND, relativas ao exercício de 2023.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2023,
+     "trecho": "exercício de 2023"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2024,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2024 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2024_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Assis Chateaubriand não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-11-00380733",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Parecer Prévio 30/2023 — contas do Prefeito de Assis Chateaubriand, exercício 2022",
+   "ato": {
+    "tipo": "Acórdão de Parecer Prévio",
+    "numero": "30",
+    "ano": "2023",
+    "titulo_oficial": "Parecer Prévio 30/2023"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "224240/2023",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2023-10-30",
+   "data_publicacao": "2023-11-16",
+   "publicacao_literal": "DETC nº 3103",
+   "entidade_literal": "MUNICÍPIO DE ASSIS CHATEAUBRIAND",
+   "resumo_literal": null,
+   "indexacao_literal": "Regularidade",
+   "exercicio_fonte": {
+    "campo": "DsTema",
+    "trecho": "exercício de 2022"
+   },
+   "parecer": {
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "conclusao_literal": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor VALTER APARECIDO SOUZA CORREIA, na qualidade de prefeito do MUNICÍPIO DE ASSIS CHATEAUBRIAND, relativas ao exercício de 2022.",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Assis Chateaubriand",
+    "exercicio": "2022",
+    "documento": {
+     "titulo": "Parecer Prévio 30/2023 — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/11/00380733.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "c56afa0a13a41f70097a3c18f83177940a7ff929e9b84eb7b6f7309b514239fb",
+    "paginas_lidas": 1,
+    "total_paginas": 34,
+    "deliberacao": "Decidem os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade: a. Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor VALTER APARECIDO SOUZA CORREIA, na qualidade de prefeito do MUNICÍPIO DE ASSIS CHATEAUBRIAND, relativas ao exercício de 2022. Após o trânsito em julgado da deliberação, encaminhem-se os autos à Coordenadoria de Monitoramento e Execuções para as anotações e providências pertinentes, em seguida para o Gabinete da Presidência para o devido encaminhamento ao Poder Legislativo Municipal, nos termos do art. 217-A, §6º do Regimento Interno desta Corte de Contas e, por fim, à Diretoria de Protocolo para encerramento.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio pela REGULARIDADE das contas do(a) senhor VALTER APARECIDO SOUZA CORREIA, na qualidade de prefeito do MUNICÍPIO DE ASSIS CHATEAUBRIAND, relativas ao exercício de 2022.",
+    "conclusao": "Parecer Prévio pela REGULARIDADE",
+    "exercicio": {
+     "ano": 2022,
+     "trecho": "exercício de 2022"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Assis Chateaubriand não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2023-2-00372284",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 19/2023 da Secretaria Primeira Câmara — contas do Prefeito de Assis Chateaubriand, exercício 2021",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "19",
+    "ano": "2023",
+    "titulo_oficial": "Acórdão de Parecer Prévio 19/2023 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "202935/2022",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2023-02-06",
+   "data_publicacao": "2023-02-24",
+   "publicacao_literal": "DETC nº 2927",
+   "entidade_literal": "MUNICÍPIO DE ASSIS CHATEAUBRIAND",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de ASSIS CHATEAUBRIAND, Sr. Valter Aparecido Souza Correia, CPF n.º 039.968.899-41, relativas ao exercício financeiro de 2021;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Assis Chateaubriand",
+    "exercicio": "2021",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 19/2023 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2023/2/00372284.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "fe1189866d48d232702c097744be920a64556df1696760d1d3c6c9eb755bda86",
+    "paginas_lidas": 1,
+    "total_paginas": 2,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de ASSIS CHATEAUBRIAND, Sr. Valter Aparecido Souza Correia, CPF n.º 039.968.899-41, relativas ao exercício financeiro de 2021; II. Determinar, após o trânsito em julgado da decisão, as seguintes medidas: a) o encaminhamento dos autos ao Gabinete da Presidência para expedição de ofício à Câmara Municipal, comunicando a decisão, com a respectiva disponibilização do processo eletrônico, conforme §6º do art. 217-A, do Regimento Interno; b) Em seguida, à Diretoria do Protocolo para o encerramento dos autos, nos termos do […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de ASSIS CHATEAUBRIAND, Sr. Valter Aparecido Souza Correia, CPF n.º 039.968.899-41, relativas ao exercício financeiro de 2021;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2021,
+     "trecho": "exercício financeiro de 2021"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2023,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2023 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2023_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Assis Chateaubriand não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2022-3-00366761",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 75/2022 da Secretaria Segunda Câmara — contas do Prefeito de Assis Chateaubriand, exercício 2020",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "75",
+    "ano": "2022",
+    "titulo_oficial": "Acórdão de Parecer Prévio 75/2022 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "176000/2021",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVENS ZSCHOERPER LINHARES",
+   "data_julgamento": "2022-03-07",
+   "data_publicacao": "2022-03-18",
+   "publicacao_literal": "DETC nº 2731",
+   "entidade_literal": "MUNICÍPIO DE ASSIS CHATEAUBRIAND",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio deste Tribunal recomendando o julgamento pela regularidade",
+    "conclusao_literal": "Emitir parecer prévio deste Tribunal recomendando o julgamento pela regularidade das contas do Sr. JOÃO APARECIDO PEGORARO, prefeito do Município de Assis Chateaubriand, relativas ao exercício financeiro de 2020, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, ressalvando-se a ausência de medidas necessárias para obtenção dos recursos com finalidade específica nos prazos pactuados com vistas a evitar, no exercício, os déficits nas respectivas fontes;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Assis Chateaubriand",
+    "exercicio": "2020",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 75/2022 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2022/3/00366761.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "73bad3bf3b08f95bcdd88e744c89c4e845ddc7dd8b7796ea2ae4b05217ccd193",
+    "paginas_lidas": 2,
+    "total_paginas": 11,
+    "deliberacao": "Acordam os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVENS ZSCHOERPER LINHARES, por unanimidade, em: I – Emitir parecer prévio deste Tribunal recomendando o julgamento pela regularidade das contas do Sr. JOÃO APARECIDO PEGORARO, prefeito do Município de Assis Chateaubriand, relativas ao exercício financeiro de 2020, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, ressalvando-se a ausência de medidas necessárias para obtenção dos recursos com finalidade específica nos prazos pactuados com vistas a evitar, no exercício, os déficits nas respectivas fontes; II – determinar, após o trânsito em julgado, a remessa dos autos à Coordenadoria de Monitoramento e Execuções para reg […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir parecer prévio deste Tribunal recomendando o julgamento pela regularidade das contas do Sr. JOÃO APARECIDO PEGORARO, prefeito do Município de Assis Chateaubriand, relativas ao exercício financeiro de 2020, com fundamento no art. 1º, I, combinado com o art. 16, II da Lei Complementar Estadual nº 113/2005, ressalvando-se a ausência de medidas necessárias para obtenção dos recursos com finalidade específica nos prazos pactuados com vistas a evitar, no exercício, os déficits nas respectivas fontes;",
+    "conclusao": "parecer prévio deste Tribunal recomendando o julgamento pela regularidade",
+    "exercicio": {
+     "ano": 2020,
+     "trecho": "exercício financeiro de 2020"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2022,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2022 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2022_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Assis Chateaubriand não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2020-8-00349964",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 383/2020 da Secretaria Segunda Câmara — contas do Prefeito de Assis Chateaubriand, exercício 2019",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "383",
+    "ano": "2020",
+    "titulo_oficial": "Acórdão de Parecer Prévio 383/2020 da Secretaria Segunda Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "191588/2020",
+    "url": null
+   },
+   "orgao": "Segunda Câmara",
+   "relator": "IVAN LELIS BONILHA",
+   "data_julgamento": "2020-08-17",
+   "data_publicacao": "2020-08-31",
+   "publicacao_literal": "DETC nº 2372",
+   "entidade_literal": "MUNICÍPIO DE ASSIS CHATEAUBRIAND",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "emitir, com fundamento nos artigos 1º, inciso I4, e art. 16, inciso I, da Lei Complementar Estadual n° 113/20055, Parecer Prévio recomendando a regularidade das contas do município de Assis Chateaubriand, sob responsabilidade do Senhor João Aparecido Pegoraro, referente ao exercício de 2019 ;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Assis Chateaubriand",
+    "exercicio": "2019",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 383/2020 da Secretaria Segunda Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2020/8/00349964.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "73a92da7e9099cf1a6b3be9a0321f05b422a531cc7dc9696cdb54286079f31d2",
+    "paginas_lidas": 2,
+    "total_paginas": 4,
+    "deliberacao": "ACORDAM Os membros da Segunda Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro IVAN LELIS BONILHA, por unanimidade, em: 1. emitir, com fundamento nos artigos 1º, inciso I4, e art. 16, inciso I, da Lei Complementar Estadual n° 113/20055, Parecer Prévio recomendando a regularidade das contas do município de Assis Chateaubriand, sob responsabilidade do Senhor João Aparecido Pegoraro, referente ao exercício de 2019 ; 2. remeter os autos, após o trânsito em julgado, ao Gabinete da Presidência (GP), para comunicação da deliberação ao Poder Legislativo municipal, nos termos do artigo 217-A, § 6º, do Regimento Interno.6 3 Art. 217-A. Pelo parecer prévio o Tribunal manifesta seu juízo acerca das contas de governo prestadas pelos Chefes do Poder Executivo […]",
+    "votacao": "por unanimidade",
+    "item_parecer": "emitir, com fundamento nos artigos 1º, inciso I4, e art. 16, inciso I, da Lei Complementar Estadual n° 113/20055, Parecer Prévio recomendando a regularidade das contas do município de Assis Chateaubriand, sob responsabilidade do Senhor João Aparecido Pegoraro, referente ao exercício de 2019 ;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2019,
+     "trecho": "exercício de 2019"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2020,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2020 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2020_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Assis Chateaubriand não localizado nos dados coletados"
+   ]
+  },
+  {
+   "id": "tce-pr-parecer-2019-8-00338999",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 200/2019 da Secretaria Primeira Câmara — contas do Prefeito de Assis Chateaubriand, exercício 2018",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "200",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 200/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "193351/2019",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "JOSE DURVAL MATTOS DO AMARAL",
+   "data_julgamento": "2019-08-19",
+   "data_publicacao": "2019-08-23",
+   "publicacao_literal": "DETC nº 2128",
+   "entidade_literal": "MUNICÍPIO DE ASSIS CHATEAUBRIAND",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "conclusao_literal": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de ASSIS CHATEAUBRIAND, Sr. João Aparecido Pegoraro, relativas ao exercício financeiro de 2018;",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Assis Chateaubriand",
+    "exercicio": "2018",
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 200/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/8/00338999.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "df2116e5b3eec12bda3ba7b62383375f9da4a8dac8ca1b841dedecd491d0f665",
+    "paginas_lidas": 2,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da Primeira Câmara do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro JOSE DURVAL MATTOS DO AMARAL, por unanimidade, em: I. Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de ASSIS CHATEAUBRIAND, Sr. João Aparecido Pegoraro, relativas ao exercício financeiro de 2018; II. Determinar, após o trânsito em julgado da decisão, as seguintes medidas: a) a expedição de ofício à Câmara Municipal, comunicando a decisão, com a respectiva disponibilização do processo eletrônico; b) o encerramento dos autos, nos termos do art. 398 do Regimento Interno do TCE-PR.",
+    "votacao": "por unanimidade",
+    "item_parecer": "Emitir Parecer Prévio recomendando a regularidade da Prestação de Contas Anual do Prefeito Municipal de ASSIS CHATEAUBRIAND, Sr. João Aparecido Pegoraro, relativas ao exercício financeiro de 2018;",
+    "conclusao": "Parecer Prévio recomendando a regularidade",
+    "exercicio": {
+     "ano": 2018,
+     "trecho": "exercício financeiro de 2018"
+    }
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Assis Chateaubriand não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "itens_sem_exercicio": [
+  {
+   "id": "tce-pr-parecer-2019-9-00339909",
+   "tribunal": "tce-pr",
+   "natureza": "parecer-previo",
+   "titulo": "Acórdão de Parecer Prévio 275/2019 da Secretaria Primeira Câmara — contas do Prefeito de Assis Chateaubriand",
+   "ato": {
+    "tipo": "Parecer Prévio",
+    "numero": "275",
+    "ano": "2019",
+    "titulo_oficial": "Acórdão de Parecer Prévio 275/2019 da Secretaria Primeira Câmara"
+   },
+   "processo": {
+    "classe": "PRESTAÇÃO DE CONTAS DO PREFEITO MUNICIPAL",
+    "numero": "234380/2018",
+    "url": null
+   },
+   "orgao": "Primeira Câmara",
+   "relator": "FERNANDO AUGUSTO MELLO GUIMARÃES",
+   "data_julgamento": "2019-09-09",
+   "data_publicacao": "2019-09-17",
+   "publicacao_literal": "DETC nº 2145",
+   "entidade_literal": "MUNICÍPIO DE ASSIS CHATEAUBRIAND",
+   "resumo_literal": null,
+   "indexacao_literal": null,
+   "exercicio_fonte": null,
+   "parecer": {
+    "conclusao": "parecer prévio recomendando a regularidade com ressalva (atinente à erro no registro da cota-parte do ICMS)",
+    "conclusao_literal": "expedir parecer prévio recomendando a regularidade com ressalva (atinente à erro no registro da cota-parte do ICMS) das contas do Sr. Marcel Henrique Micheletto (CPF:",
+    "conclusao_fonte": "Deliberação no inteiro teor (PDF)",
+    "com_ressalvas": null,
+    "ressalvas": [],
+    "alertas": [],
+    "contas_de": "Prefeito de Assis Chateaubriand",
+    "exercicio": null,
+    "documento": {
+     "titulo": "Acórdão de Parecer Prévio 275/2019 da Secretaria Primeira Câmara — inteiro teor (PDF)",
+     "url": "https://viajuris.tce.pr.gov.br/Arquivos/2019/9/00339909.pdf"
+    }
+   },
+   "votacao_literal": "por unanimidade",
+   "julgamento_politico": null,
+   "leitura_pdf": {
+    "situacao": "lido",
+    "versao": 1,
+    "lido_em": "2026-11-05",
+    "sha256": "babfc743a114fefc7f49998a47ea8735e1d27fde5e2325eb8c944a1ea2769d43",
+    "paginas_lidas": 1,
+    "total_paginas": 3,
+    "deliberacao": "ACORDAM Os membros da PRIMEIRA CÂMARA do TRIBUNAL DE CONTAS DO ESTADO DO PARANÁ, nos termos do voto do Relator, Conselheiro FERNANDO AUGUSTO MELLO GUIMARÃES, por unanimidade: I. expedir parecer prévio recomendando a regularidade com ressalva (atinente à erro no registro da cota-parte do ICMS) das contas do Sr. Marcel Henrique Micheletto (CPF: 004.420.409-46) como Prefeito de Assis Chateaubriand, em referência ao exercício de 2017, com base no disposto no art. 16, II, da LC/PR 113/05; II. determinar o encerramento do Processo, após o trânsito em julgado da decisão.",
+    "votacao": "por unanimidade",
+    "item_parecer": "expedir parecer prévio recomendando a regularidade com ressalva (atinente à erro no registro da cota-parte do ICMS) das contas do Sr. Marcel Henrique Micheletto (CPF:",
+    "conclusao": "parecer prévio recomendando a regularidade com ressalva (atinente à erro no registro da cota-parte do ICMS)",
+    "exercicio": null
+   },
+   "situacao_conferencia": "automatico-estruturado",
+   "ano_arquivo_fonte": 2019,
+   "fontes": [
+    {
+     "titulo": "Acórdãos 2019 — base de dados aberta do TCE-PR (arquivo CSV anual)",
+     "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/DownloadArquivo?nomeArquivo=2019_acordaos_base_de_dados.csv",
+     "orgao": "Tribunal de Contas do Estado do Paraná (TCE-PR)",
+     "acessado_em": "2026-11-05"
+    }
+   ],
+   "lacunas": [
+    "Exercício das contas não consta nos campos do conjunto de dados nem no trecho lido do PDF",
+    "Ressalvas, determinações e recomendações não foram copiadas para os dados; ver o inteiro teor (PDF)",
+    "Julgamento das contas pela Câmara Municipal de Assis Chateaubriand não localizado nos dados coletados"
+   ]
+  }
+ ],
+ "acordaos_relacionados": []
+}
