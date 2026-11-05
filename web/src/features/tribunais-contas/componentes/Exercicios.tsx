@@ -19,6 +19,7 @@ import { Fontes, Ficha, Lacunas, Literal, Recolhivel } from "./Basicos";
 import { JulgamentoAlespBloco, JulgamentoCongressoBloco } from "./JulgamentoPolitico";
 import { ListaLiteral, RegistrosRelator } from "./Literais";
 import { tituloSimplesTc } from "../dados";
+import { getUf } from "@/features/estados/ufs";
 
 export { tituloGovernador, tituloPrefeito, tituloPresidente };
 
@@ -162,11 +163,14 @@ export function ExercicioGovernadorItem({ p, o }: { p: ParecerPrevioTce; o: Orga
   const det = p.determinacoes_e_recomendacoes;
   const votacao = p.votacoes?.[0];
   const docs = p.documentos ?? [];
-  const casa = o.uf === "SP" ? "Assembleia Legislativa do Estado de São Paulo (ALESP)" : "Assembleia Legislativa";
+  // Nome e sigla da Assembleia (ou da Câmara Legislativa do DF) pelo cadastro das UFs.
+  const legislativo = getUf(o.uf)?.casa;
+  const casa = legislativo?.nome ?? "Assembleia Legislativa";
+  const siglaCasa = legislativo?.sigla ?? "Assembleia Legislativa";
   const contasDe = `do Governador${o.uf ? ` ${deUf(o.uf)}` : ""}`;
   const cartoes = [
     { ...cartaoParecerTce(p, o, tituloGovernador(p, o), contasDe), simples: tituloSimplesTc(p.id) },
-    cartaoJulgamentoAlesp(par.exercicio, p.julgamento_politico, casa, o.uf === "SP" ? "ALESP" : "Assembleia"),
+    cartaoJulgamentoAlesp(par.exercicio, p.julgamento_politico, casa, siglaCasa),
   ];
   if (!p.data_julgamento && !par.conclusao) {
     // Parecer ainda não publicado: só o que a fonte registra, sem ficha vazia.
@@ -239,7 +243,7 @@ export function ExercicioGovernadorItem({ p, o }: { p: ParecerPrevioTce; o: Orga
       </Sub>
       <Sub
         id={`exercicio-${par.exercicio}-julgamento`}
-        titulo={`Detalhes do julgamento político na ${o.uf === "SP" ? "ALESP" : "Assembleia Legislativa"}`}
+        titulo={`Detalhes do julgamento político na ${siglaCasa}`}
       >
         <JulgamentoAlespBloco jp={p.julgamento_politico} />
       </Sub>

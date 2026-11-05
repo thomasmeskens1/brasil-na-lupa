@@ -1,10 +1,10 @@
 {
-  "atualizado_em": "2026-11-02",
+  "atualizado_em": "2026-11-05",
   "descricao": "Registro dos tribunais de contas acompanhados ou planejados. Cada órgão ativo tem um coletor em scripts/coleta/tribunais-contas/<id>/ e uma pasta em dados/tribunais-contas/<id>/, no mesmo formato.",
   "contagens": {
     "total": 33,
-    "ativa": 2,
-    "planejada": 31
+    "ativa": 3,
+    "planejada": 30
   },
   "itens": [
     {
@@ -437,7 +437,7 @@
       "nome": "Tribunal de Contas do Estado do Rio de Janeiro",
       "esfera": "estadual",
       "uf": "RJ",
-      "jurisdiciona": null,
+      "jurisdiciona": "Estado do Rio de Janeiro e municípios fluminenses (o Município do Rio de Janeiro tem tribunal próprio, o TCM-RJ)",
       "site_oficial": "https://www.tcerj.tc.br/portalnovo/",
       "fontes": [
         {
@@ -445,12 +445,36 @@
           "url": "https://www.tcerj.tc.br/portalnovo/",
           "orgao": "Tribunal de Contas do Estado do Rio de Janeiro",
           "acessado_em": "2026-11-02"
+        },
+        {
+          "titulo": "API de Dados Abertos do TCE-RJ — Prestação de Contas (Estado)",
+          "url": "https://dados.tcerj.tc.br/api/v1/prestacao_contas_estado",
+          "orgao": "Tribunal de Contas do Estado do Rio de Janeiro (TCE-RJ)",
+          "acessado_em": "2026-11-05"
+        },
+        {
+          "titulo": "API de Dados Abertos do TCE-RJ — Prestação de Contas (Municípios)",
+          "url": "https://dados.tcerj.tc.br/api/v1/prestacao_contas_municipio",
+          "orgao": "Tribunal de Contas do Estado do Rio de Janeiro (TCE-RJ)",
+          "acessado_em": "2026-11-05"
+        },
+        {
+          "titulo": "Documentação da API de Dados Abertos (licença ODbL)",
+          "url": "https://dados.tcerj.tc.br/api/v1/docs",
+          "orgao": "Tribunal de Contas do Estado do Rio de Janeiro (TCE-RJ)",
+          "acessado_em": "2026-11-05"
         }
       ],
-      "situacao_coleta": "planejada",
-      "robots_e_restricoes": null,
+      "situacao_coleta": "ativa",
+      "robots_e_restricoes": "Acessado só dados.tcerj.tc.br (API de dados abertos, sem chave, licença ODbL); robots.txt de dados.tcerj.tc.br e de www.tcerj.tc.br: \"User-agent: *\" com \"Disallow:\" vazio (nada proibido), lido em 05/11/2026 e a cada execução. Não acessados: portais de consulta de processos e de jurisprudência (aplicações em JavaScript com APIs internas não documentadas como públicas).",
       "conferencia": "Endereço conferido pelo título da página (\"Portal TCE-RJ\"). O nome por extenso não aparece no texto da página inicial (montada por JavaScript); aparece apenas no endereço de um link da página para a Lei Orgânica do tribunal.",
-      "lacunas": []
+      "lacunas": [
+        "A API não informa relator, data da sessão, ressalvas, determinações nem inteiro teor dos pareceres; a documentação não define o campo \"Indicador\"",
+        "Pareceres com indicador \"EM ANALISE\" (109 registros municipais em 05/11/2026) não são exibidos como conclusão",
+        "Julgamento político das contas (Alerj e Câmaras Municipais) não coletado"
+      ],
+      "coletor": "scripts/coleta/tribunais-contas/tce-rj/coletar.mjs",
+      "dados": "dados/tribunais-contas/tce-rj/"
     },
     {
       "id": "tce-rn",
