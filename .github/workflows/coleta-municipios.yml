@@ -5,13 +5,15 @@ name: Coleta dos Municípios (Câmaras SAPL e Siconfi)
 
 on:
   schedule:
+    # Duas execuções por dia até completar os 5.570 municípios (14:47 e 02:17 de Brasília).
     - cron: "47 17 * * *"
+    - cron: "17 5 * * *"
   workflow_dispatch:
     inputs:
       orcamento:
-        description: "Minutos de coleta por execução (25 diário)"
+        description: "Minutos de coleta por execução (60 por padrão)"
         type: number
-        default: 25
+        default: 60
 
 permissions:
   contents: write
@@ -33,12 +35,12 @@ jobs:
       - name: Testes dos coletores
         run: node scripts/coleta/municipios/testes.mjs
       - name: Registro das Câmaras (verifica robots.txt e API)
-        run: node scripts/coleta/municipios/registro.mjs --amostra todas --max 40
+        run: node scripts/coleta/municipios/registro.mjs --amostra todas --max 120
       - name: Coleta (SAPL das Câmaras e Siconfi, em paralelo)
         env:
-          COLETA_ORCAMENTO_MIN: ${{ inputs.orcamento || 25 }}
+          COLETA_ORCAMENTO_MIN: ${{ inputs.orcamento || 60 }}
         run: |
-          node scripts/coleta/municipios/sapl.mjs --max 12 & a=$!
+          node scripts/coleta/municipios/sapl.mjs --max 40 & a=$!
           node scripts/coleta/municipios/siconfi.mjs & b=$!
           falhou=0
           for p in $a $b; do wait $p || falhou=1; done
