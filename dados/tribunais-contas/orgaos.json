@@ -3,8 +3,8 @@
   "descricao": "Registro dos tribunais de contas acompanhados ou planejados. Cada órgão ativo tem um coletor em scripts/coleta/tribunais-contas/<id>/ e uma pasta em dados/tribunais-contas/<id>/, no mesmo formato.",
   "contagens": {
     "total": 33,
-    "ativa": 5,
-    "planejada": 28
+    "ativa": 6,
+    "planejada": 27
   },
   "itens": [
     {
@@ -391,9 +391,15 @@
       "nome": "Tribunal de Contas do Estado do Paraná",
       "esfera": "estadual",
       "uf": "PR",
-      "jurisdiciona": null,
+      "jurisdiciona": "Estado do Paraná e seus 399 municípios",
       "site_oficial": "https://www1.tce.pr.gov.br/",
       "fontes": [
+        {
+          "titulo": "Base de Dados — Dados Abertos do TCE-PR (acórdãos, CSV anuais)",
+          "url": "https://viajuris.tce.pr.gov.br/DadosAbertos/DadosAbertos/BaseDados",
+          "orgao": "Tribunal de Contas do Estado do Paraná",
+          "acessado_em": "2026-11-05"
+        },
         {
           "titulo": "Página inicial — Tribunal de Contas do Estado do Paraná",
           "url": "https://www1.tce.pr.gov.br/",
@@ -401,10 +407,16 @@
           "acessado_em": "2026-11-02"
         }
       ],
-      "situacao_coleta": "planejada",
-      "robots_e_restricoes": null,
+      "situacao_coleta": "ativa",
+      "robots_e_restricoes": "viajuris.tce.pr.gov.br/robots.txt libera tudo (\"User-agent: *\" / \"Disallow:\" vazio) e é lido a cada execução. Coleta só nesse host, uma requisição por vez, pausa de no mínimo 1 s; sem CAPTCHA ou login. Interessados e advogados (nomes de particulares) não são republicados.",
       "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
-      "lacunas": []
+      "lacunas": [
+        "Julgamento das contas pelas Câmaras Municipais e pela Assembleia Legislativa do Paraná ainda não coletado",
+        "Pareceres sem exercício escrito na fonte (331) não são exibidos",
+        "Contas do Governador: os atos 493/2019, 183/2022 e 271/2021 (este sem PDF) não trazem o exercício no trecho literal; por isso não há página para os exercícios 2018, 2020 e 2021"
+      ],
+      "coletor": "scripts/coleta/tribunais-contas/tce-pr/coletar.mjs",
+      "dados": "dados/tribunais-contas/tce-pr/"
     },
     {
       "id": "tce-pe",
