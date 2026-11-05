@@ -1,0 +1,516 @@
+{
+  "atualizado_em": "2026-11-05T11:30:55.121Z",
+  "municipio": {
+    "id": "manaus",
+    "nome": "Manaus",
+    "uf": "AM",
+    "codigo_ibge": "1302603"
+  },
+  "tribunal": "tce-am",
+  "periodo": {
+    "inicio": 2017,
+    "fim": 2023
+  },
+  "contagens": {
+    "exercicios": 6,
+    "pareceres": 6,
+    "com_parecer_em_fonte_aberta": 6,
+    "sem_fonte_aberta": 0
+  },
+  "fontes": [
+    {
+      "titulo": "Banco de Jurisprudência do TCE-AM (API JSON usada pelo site oficial; não documentada oficialmente)",
+      "url": "https://jurisprudencia.tce.am.gov.br",
+      "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+      "acessado_em": "2026-11-05",
+      "observacao": "Consulta: https://jurisprudencia-api.tce.am.gov.br/decisorios/byManyFields?strConteudo=PREVIO&strAnoProcesso=null&strNumeroProcesso=null&strAnoDecisorio=AAAA&strNumeroDecisorio=null&strRelatorDecisorio=null&strOrgaoJulgador=null&strDataSessaoInicio=null&strDataSessaoFim=null&strNatureza=Presta%C3%A7%C3%A3o%20de%20Contas%20Anual"
+    }
+  ],
+  "observacoes": [
+    "Só aparecem os exercícios com parecer prévio publicado no Banco de Jurisprudência do TCE-AM (tipo \"Parecer Prévio\", natureza \"Prestação de Contas Anual\"). Exercício ausente aqui não quer dizer que as contas não foram julgadas.",
+    "\"Conclusão\" resume a fórmula escrita no parecer (\"recomendando … a aprovação\", \"a desaprovação\"); o trecho literal está em conclusao_literal. Sem fórmula reconhecida, a conclusão fica vazia.",
+    "O município é identificado pelo nome exato do órgão na API (\"Prefeitura Municipal de …\"), comparado sem acentos com a lista oficial de municípios do Siconfi (Tesouro Nacional)."
+  ],
+  "itens": [
+    {
+      "id": "tce-am-contas-prefeito-manaus-2017",
+      "tribunal": "tce-am",
+      "natureza": "parecer-previo",
+      "titulo": "Parecer Prévio nº 53/2018 do Tribunal de Contas do Estado do Amazonas sobre as contas do Prefeito de Manaus — exercício 2017",
+      "decisorio": {
+        "tipo": "Parecer Prévio",
+        "numero": "53/2018",
+        "numero_literal": null
+      },
+      "processo": {
+        "classe": "Prestação de Contas Anual",
+        "numero": "11571/2018",
+        "incidente_ou_registro": null,
+        "url": "https://jurisprudencia.tce.am.gov.br/decisoriosByProcesso?processo=11571&anoProcesso=2018"
+      },
+      "orgao": "Tribunal Pleno",
+      "sessao": null,
+      "sessao_literal": "2ª Sessão Especial",
+      "relator": "Mario Manoel Coelho de Mello",
+      "relator_registros": [
+        {
+          "texto": "Conselheiro Mario Manoel Coelho de Mello",
+          "documento": "Parecer Prévio nº 53/2018 – TCE – Tribunal Pleno (texto integral, item \"Relator\")",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/11571_2018_PARECER PREVIO_53_2018_1695618.pdf"
+        },
+        {
+          "texto": "Mario Manoel Coelho de Mello",
+          "documento": "API do Banco de Jurisprudência do TCE-AM (campo \"relator\")",
+          "url": null
+        }
+      ],
+      "data_julgamento": "2018-12-12",
+      "data_publicacao": null,
+      "responsavel_literal": "Arthur Virgilio do Carmo Ribeiro Neto(Ordenador de Despesa)",
+      "parecer": {
+        "conclusao": "pela aprovação",
+        "com_ressalvas": false,
+        "conclusao_literal": "Emite Parecer Previo recomendando a Camara Municipal a aprovacao com recomendacoes da Prestacao de Contas do Prefeito do Municipio de Manaus, relativa ao exercicio financeiro de 2017, de responsabilidade do Excelentissimo Senhor ARTHUR VIRGILIO DO CARMO RIBEIRO NETO, na funcao de Agente Politico",
+        "ementa_literal": "Emissao de Parecer Previo recomendando a aprovacao das contas anuais",
+        "ressalvas": [],
+        "alertas": [],
+        "contas_de": "Prefeito de Manaus",
+        "exercicio": "2017",
+        "documento": {
+          "titulo": "Parecer Prévio nº 53/2018 – TCE – Tribunal Pleno (PDF)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/11571_2018_PARECER PREVIO_53_2018_1695618.pdf",
+          "tamanho": "342 KB"
+        }
+      },
+      "votacoes": [],
+      "julgamento_politico": null,
+      "situacao_conferencia": "automatico-estruturado",
+      "fontes": [
+        {
+          "titulo": "Parecer Prévio nº 53/2018 – TCE – Tribunal Pleno (PDF oficial)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/11571_2018_PARECER PREVIO_53_2018_1695618.pdf",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        },
+        {
+          "titulo": "Banco de Jurisprudência do TCE-AM — decisórios do processo 11571/2018 (API JSON não documentada oficialmente)",
+          "url": "https://jurisprudencia-api.tce.am.gov.br/decisorios/byManyFields?strConteudo=null&strAnoProcesso=2018&strNumeroProcesso=11571&strAnoDecisorio=null&strNumeroDecisorio=null&strRelatorDecisorio=null&strOrgaoJulgador=null&strDataSessaoInicio=null&strDataSessaoFim=null&strNatureza=null",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        }
+      ],
+      "lacunas": [
+        "Ressalvas, determinações e multas do parecer não foram copiadas para este arquivo; ver o texto integral no PDF oficial",
+        "Data de publicação no Diário Oficial Eletrônico do TCE-AM não informada pela API",
+        "O texto integral publicado pela API de jurisprudência vem sem acentos; os trechos literais estão reproduzidos como na fonte",
+        "Recursos contra o parecer (natureza \"Recurso\") não foram consultados; uma eventual reforma da decisão não aparece aqui",
+        "Julgamento das contas pela Câmara Municipal de Manaus não localizado nos dados coletados"
+      ]
+    },
+    {
+      "id": "tce-am-contas-prefeito-manaus-2018",
+      "tribunal": "tce-am",
+      "natureza": "parecer-previo",
+      "titulo": "Parecer Prévio nº 52/2019 do Tribunal de Contas do Estado do Amazonas sobre as contas do Prefeito de Manaus — exercício 2018",
+      "decisorio": {
+        "tipo": "Parecer Prévio",
+        "numero": "52/2019",
+        "numero_literal": "PARECER PREVIO Nº 52/2019 – TCE – TRIBUNAL PLENO"
+      },
+      "processo": {
+        "classe": "Prestação de Contas Anual",
+        "numero": "11493/2019",
+        "incidente_ou_registro": null,
+        "url": "https://jurisprudencia.tce.am.gov.br/decisoriosByProcesso?processo=11493&anoProcesso=2019"
+      },
+      "orgao": "Tribunal Pleno",
+      "sessao": null,
+      "sessao_literal": "2ª Sessão Especial",
+      "relator": "Ari Jorge Moutinho da Costa Júnior",
+      "relator_registros": [
+        {
+          "texto": "Conselheiro Ari Jorge Moutinho da Costa Junior",
+          "documento": "Parecer Prévio nº 52/2019 – TCE – Tribunal Pleno (texto integral, item \"Relator\")",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/11493_2019_PARECER PREVIO_52_2019_1998455.pdf"
+        },
+        {
+          "texto": "Ari Jorge Moutinho da Costa Júnior",
+          "documento": "API do Banco de Jurisprudência do TCE-AM (campo \"relator\")",
+          "url": null
+        }
+      ],
+      "data_julgamento": "2019-12-10",
+      "data_publicacao": null,
+      "responsavel_literal": "Arthur Virgilio do Carmo Ribeiro Neto (Prefeito Municipal)",
+      "parecer": {
+        "conclusao": "pela aprovação",
+        "com_ressalvas": true,
+        "conclusao_literal": "Emite Parecer Previo recomendando a Camara Municipal a aprovacao com ressalvas da Prestacao de Contas do Prefeito do Municipio de Manaus, relativa ao exercicio financeiro de 2018, de responsabilidade do Excelentissimo Senhor Arthur Virgilio do Carmo Ribeiro Neto, na funcao de Agente Politico, em razao de parte das recomendacoes descritas no Parecer Previo do exercicio de 2017 nao terem sido saneadas",
+        "ementa_literal": "Emissao de Parecer Previo recomendando a aprovacao com ressalvas das contas anuais",
+        "ressalvas": [],
+        "alertas": [],
+        "contas_de": "Prefeito de Manaus",
+        "exercicio": "2018",
+        "documento": {
+          "titulo": "Parecer Prévio nº 52/2019 – TCE – Tribunal Pleno (PDF)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/11493_2019_PARECER PREVIO_52_2019_1998455.pdf",
+          "tamanho": "325 KB"
+        }
+      },
+      "votacoes": [
+        {
+          "parte": "mérito",
+          "resultado": "unanimidade",
+          "resultado_literal": "acolhido, a unanimidade, o voto do Excelentissimo Senhor Conselheiro-Relator, que passa a ser parte integrante do Parecer Previo, em divergencia com o pronunciamento do Ministerio Pub"
+        }
+      ],
+      "julgamento_politico": null,
+      "situacao_conferencia": "automatico-estruturado",
+      "fontes": [
+        {
+          "titulo": "Parecer Prévio nº 52/2019 – TCE – Tribunal Pleno (PDF oficial)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/11493_2019_PARECER PREVIO_52_2019_1998455.pdf",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        },
+        {
+          "titulo": "Banco de Jurisprudência do TCE-AM — decisórios do processo 11493/2019 (API JSON não documentada oficialmente)",
+          "url": "https://jurisprudencia-api.tce.am.gov.br/decisorios/byManyFields?strConteudo=null&strAnoProcesso=2019&strNumeroProcesso=11493&strAnoDecisorio=null&strNumeroDecisorio=null&strRelatorDecisorio=null&strOrgaoJulgador=null&strDataSessaoInicio=null&strDataSessaoFim=null&strNatureza=null",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        }
+      ],
+      "lacunas": [
+        "Ressalvas, determinações e multas do parecer não foram copiadas para este arquivo; ver o texto integral no PDF oficial",
+        "Data de publicação no Diário Oficial Eletrônico do TCE-AM não informada pela API",
+        "O texto integral publicado pela API de jurisprudência vem sem acentos; os trechos literais estão reproduzidos como na fonte",
+        "Recursos contra o parecer (natureza \"Recurso\") não foram consultados; uma eventual reforma da decisão não aparece aqui",
+        "Julgamento das contas pela Câmara Municipal de Manaus não localizado nos dados coletados"
+      ]
+    },
+    {
+      "id": "tce-am-contas-prefeito-manaus-2019",
+      "tribunal": "tce-am",
+      "natureza": "parecer-previo",
+      "titulo": "Parecer Prévio nº 24/2020 do Tribunal de Contas do Estado do Amazonas sobre as contas do Prefeito de Manaus — exercício 2019",
+      "decisorio": {
+        "tipo": "Parecer Prévio",
+        "numero": "24/2020",
+        "numero_literal": "PARECER PREVIO Nº 24/2020 – TCE – TRIBUNAL PLENO"
+      },
+      "processo": {
+        "classe": "Prestação de Contas Anual",
+        "numero": "12189/2020",
+        "incidente_ou_registro": null,
+        "url": "https://jurisprudencia.tce.am.gov.br/decisoriosByProcesso?processo=12189&anoProcesso=2020"
+      },
+      "orgao": "Tribunal Pleno",
+      "sessao": null,
+      "sessao_literal": "2ª Sessão Especial",
+      "relator": "Josué Cláudio de Souza Filho",
+      "relator_registros": [
+        {
+          "texto": "Conselheiro Josue Claudio de Souza Filho",
+          "documento": "Parecer Prévio nº 24/2020 – TCE – Tribunal Pleno (texto integral, item \"Relator\")",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/12189_2020_PARECER PREVIO_24_2020_2174081.pdf"
+        },
+        {
+          "texto": "Josué Cláudio de Souza Filho",
+          "documento": "API do Banco de Jurisprudência do TCE-AM (campo \"relator\")",
+          "url": null
+        }
+      ],
+      "data_julgamento": "2020-09-23",
+      "data_publicacao": null,
+      "responsavel_literal": "Arthur Virgilio do Carmo Ribeiro Neto (Prefeito Municipal)",
+      "parecer": {
+        "conclusao": "pela aprovação",
+        "com_ressalvas": false,
+        "conclusao_literal": "Emite Parecer Previo recomendando a Camara Municipal a aprovacao, com recomendacoes, da Prestacao de Contas do Prefeito do Municipio de Manaus, relativa ao exercicio financeiro de 2019, de responsabilidade do Excelentissimo Senhor Arthur Virgilio do Carmo Ribeiro Neto, na funcao de Agente Politico, nos termos do Acordao anexo",
+        "ementa_literal": "Emissao de Parecer Previo recomendando a aprovacao das contas anuais",
+        "ressalvas": [],
+        "alertas": [],
+        "contas_de": "Prefeito de Manaus",
+        "exercicio": "2019",
+        "documento": {
+          "titulo": "Parecer Prévio nº 24/2020 – TCE – Tribunal Pleno (PDF)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/12189_2020_PARECER PREVIO_24_2020_2174081.pdf",
+          "tamanho": "303 KB"
+        }
+      },
+      "votacoes": [
+        {
+          "parte": "mérito",
+          "resultado": "unanimidade",
+          "resultado_literal": "acolhido, a unanimidade, o voto do Excelentissimo Senhor Conselheiro-Relator, que passa a ser parte integrante do Parecer Previo, em consonancia com o pronunciamento do Ministerio Pub"
+        }
+      ],
+      "julgamento_politico": null,
+      "situacao_conferencia": "automatico-estruturado",
+      "fontes": [
+        {
+          "titulo": "Parecer Prévio nº 24/2020 – TCE – Tribunal Pleno (PDF oficial)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/12189_2020_PARECER PREVIO_24_2020_2174081.pdf",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        },
+        {
+          "titulo": "Banco de Jurisprudência do TCE-AM — decisórios do processo 12189/2020 (API JSON não documentada oficialmente)",
+          "url": "https://jurisprudencia-api.tce.am.gov.br/decisorios/byManyFields?strConteudo=null&strAnoProcesso=2020&strNumeroProcesso=12189&strAnoDecisorio=null&strNumeroDecisorio=null&strRelatorDecisorio=null&strOrgaoJulgador=null&strDataSessaoInicio=null&strDataSessaoFim=null&strNatureza=null",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        }
+      ],
+      "lacunas": [
+        "Ressalvas, determinações e multas do parecer não foram copiadas para este arquivo; ver o texto integral no PDF oficial",
+        "Data de publicação no Diário Oficial Eletrônico do TCE-AM não informada pela API",
+        "O texto integral publicado pela API de jurisprudência vem sem acentos; os trechos literais estão reproduzidos como na fonte",
+        "Recursos contra o parecer (natureza \"Recurso\") não foram consultados; uma eventual reforma da decisão não aparece aqui",
+        "Julgamento das contas pela Câmara Municipal de Manaus não localizado nos dados coletados"
+      ]
+    },
+    {
+      "id": "tce-am-contas-prefeito-manaus-2021",
+      "tribunal": "tce-am",
+      "natureza": "parecer-previo",
+      "titulo": "Parecer Prévio nº 105/2022 do Tribunal de Contas do Estado do Amazonas sobre as contas do Prefeito de Manaus — exercício 2021",
+      "decisorio": {
+        "tipo": "Parecer Prévio",
+        "numero": "105/2022",
+        "numero_literal": "PARECER PREVIO Nº 105/2022 – TCE – TRIBUNAL PLENO"
+      },
+      "processo": {
+        "classe": "Prestação de Contas Anual",
+        "numero": "12080/2022",
+        "incidente_ou_registro": null,
+        "url": "https://jurisprudencia.tce.am.gov.br/decisoriosByProcesso?processo=12080&anoProcesso=2022"
+      },
+      "orgao": "Tribunal Pleno",
+      "sessao": null,
+      "sessao_literal": "3ª Sessão Especial",
+      "relator": "Júlio Assis Corrêa Pinheiro",
+      "relator_registros": [
+        {
+          "texto": "Conselheiro Julio Assis Correa Pinheiro",
+          "documento": "Parecer Prévio nº 105/2022 – TCE – Tribunal Pleno (texto integral, item \"Relator\")",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/12080_2022_PARECER-PREVIO_105_2022_2850636.pdf"
+        },
+        {
+          "texto": "Júlio Assis Corrêa Pinheiro",
+          "documento": "API do Banco de Jurisprudência do TCE-AM (campo \"relator\")",
+          "url": null
+        }
+      ],
+      "data_julgamento": "2022-12-20",
+      "data_publicacao": null,
+      "responsavel_literal": "David Antonio Abisai Pereira de Almeida (Prefeito Municipal)",
+      "parecer": {
+        "conclusao": "pela aprovação",
+        "com_ressalvas": true,
+        "conclusao_literal": "Emite Parecer Previo recomendando a Camara Municipal a aprovacao com ressalvas das contas do Sr. David Antonio Abisai Pereira de Almeida, na funcao de Agente Politico, alertando a Prefeitura do Municipio de Manaus que a nao execucao das medidas especificadas a seguir, ou outras de efeitos equivalentes, poderao conduzir a emissao de parecer desfavoravel no proximo exercicio financeiro, referente aos seguintes itens: a) Pessoal: Promova a realizacao de concurso publico de provas ou provas e titulos para a formacao de Quadros de Pessoal permanente administrativo e tecnico, na Administracao Direta e Indireta Municipal, em especial, naquelas Secretarias em que o numero de temporarios e muito […]",
+        "ementa_literal": "Emissao de Parecer Previo recomendando a aprovacao com ressalvas das contas anuais",
+        "ressalvas": [],
+        "alertas": [],
+        "contas_de": "Prefeito de Manaus",
+        "exercicio": "2021",
+        "documento": {
+          "titulo": "Parecer Prévio nº 105/2022 – TCE – Tribunal Pleno (PDF)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/12080_2022_PARECER-PREVIO_105_2022_2850636.pdf",
+          "tamanho": "210 KB"
+        }
+      },
+      "votacoes": [
+        {
+          "parte": "mérito",
+          "resultado": "unanimidade",
+          "resultado_literal": "acolhido, a unanimidade, o voto do Excelentissimo Senhor Conselheiro-Relator, em consonancia com o pronunciamento do Ministerio Publico junto a este Tribunal"
+        }
+      ],
+      "julgamento_politico": null,
+      "situacao_conferencia": "automatico-estruturado",
+      "fontes": [
+        {
+          "titulo": "Parecer Prévio nº 105/2022 – TCE – Tribunal Pleno (PDF oficial)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/12080_2022_PARECER-PREVIO_105_2022_2850636.pdf",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        },
+        {
+          "titulo": "Banco de Jurisprudência do TCE-AM — decisórios do processo 12080/2022 (API JSON não documentada oficialmente)",
+          "url": "https://jurisprudencia-api.tce.am.gov.br/decisorios/byManyFields?strConteudo=null&strAnoProcesso=2022&strNumeroProcesso=12080&strAnoDecisorio=null&strNumeroDecisorio=null&strRelatorDecisorio=null&strOrgaoJulgador=null&strDataSessaoInicio=null&strDataSessaoFim=null&strNatureza=null",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        }
+      ],
+      "lacunas": [
+        "Ressalvas, determinações e multas do parecer não foram copiadas para este arquivo; ver o texto integral no PDF oficial",
+        "Data de publicação no Diário Oficial Eletrônico do TCE-AM não informada pela API",
+        "O texto integral publicado pela API de jurisprudência vem sem acentos; os trechos literais estão reproduzidos como na fonte",
+        "Recursos contra o parecer (natureza \"Recurso\") não foram consultados; uma eventual reforma da decisão não aparece aqui",
+        "Julgamento das contas pela Câmara Municipal de Manaus não localizado nos dados coletados"
+      ]
+    },
+    {
+      "id": "tce-am-contas-prefeito-manaus-2022",
+      "tribunal": "tce-am",
+      "natureza": "parecer-previo",
+      "titulo": "Parecer Prévio nº 43/2025 do Tribunal de Contas do Estado do Amazonas sobre as contas do Prefeito de Manaus — exercício 2022",
+      "decisorio": {
+        "tipo": "Parecer Prévio",
+        "numero": "43/2025",
+        "numero_literal": "PARECER PREVIO Nº 43/2025 – TCE – TRIBUNAL PLENO"
+      },
+      "processo": {
+        "classe": "Prestação de Contas Anual",
+        "numero": "12112/2023",
+        "incidente_ou_registro": null,
+        "url": "https://jurisprudencia.tce.am.gov.br/decisoriosByProcesso?processo=12112&anoProcesso=2023"
+      },
+      "orgao": "Tribunal Pleno",
+      "sessao": null,
+      "sessao_literal": "1ª Sessão Especial",
+      "relator": "Josué Cláudio de Souza Neto",
+      "relator_registros": [
+        {
+          "texto": "Conselheiro Josue Claudio de Souza Neto",
+          "documento": "Parecer Prévio nº 43/2025 – TCE – Tribunal Pleno (texto integral, item \"Relator\")",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/12112_2023_PARECER-PREVIO_43_2025_3879773.pdf"
+        },
+        {
+          "texto": "Josué Cláudio de Souza Neto",
+          "documento": "API do Banco de Jurisprudência do TCE-AM (campo \"relator\")",
+          "url": null
+        }
+      ],
+      "data_julgamento": "2025-09-01",
+      "data_publicacao": null,
+      "responsavel_literal": "David Antonio Abisai Pereira de Almeida (Prefeito Municipal)",
+      "parecer": {
+        "conclusao": "pela aprovação",
+        "com_ressalvas": true,
+        "conclusao_literal": "Emitir Parecer Previo recomendando a Camara Municipal a aprovacao com ressalvas das contas da Prefeitura Municipal de Manaus - PMM, relativa ao Exercicio financeiro de 2022, de responsabilidade do Excelentissimo Sr. David Antonio Abisai Pereira de Almeida",
+        "ementa_literal": "Emissao de Parecer Previo recomendando a aprovacao com ressalvas das contas anuais",
+        "ressalvas": [],
+        "alertas": [],
+        "contas_de": "Prefeito de Manaus",
+        "exercicio": "2022",
+        "documento": {
+          "titulo": "Parecer Prévio nº 43/2025 – TCE – Tribunal Pleno (PDF)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/12112_2023_PARECER-PREVIO_43_2025_3879773.pdf",
+          "tamanho": "597 KB"
+        }
+      },
+      "votacoes": [
+        {
+          "parte": "mérito",
+          "resultado": "unanimidade",
+          "resultado_literal": "acolhido, por unanimidade, o voto do Excelentissimo Senhor Conselheiro-Relator , em consonancia com o pronunciamento do Ministerio Publico junto a este Tribunal"
+        }
+      ],
+      "julgamento_politico": null,
+      "situacao_conferencia": "automatico-estruturado",
+      "fontes": [
+        {
+          "titulo": "Parecer Prévio nº 43/2025 – TCE – Tribunal Pleno (PDF oficial)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/12112_2023_PARECER-PREVIO_43_2025_3879773.pdf",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        },
+        {
+          "titulo": "Banco de Jurisprudência do TCE-AM — decisórios do processo 12112/2023 (API JSON não documentada oficialmente)",
+          "url": "https://jurisprudencia-api.tce.am.gov.br/decisorios/byManyFields?strConteudo=null&strAnoProcesso=2023&strNumeroProcesso=12112&strAnoDecisorio=null&strNumeroDecisorio=null&strRelatorDecisorio=null&strOrgaoJulgador=null&strDataSessaoInicio=null&strDataSessaoFim=null&strNatureza=null",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        }
+      ],
+      "lacunas": [
+        "Ressalvas, determinações e multas do parecer não foram copiadas para este arquivo; ver o texto integral no PDF oficial",
+        "Data de publicação no Diário Oficial Eletrônico do TCE-AM não informada pela API",
+        "O texto integral publicado pela API de jurisprudência vem sem acentos; os trechos literais estão reproduzidos como na fonte",
+        "Recursos contra o parecer (natureza \"Recurso\") não foram consultados; uma eventual reforma da decisão não aparece aqui",
+        "Julgamento das contas pela Câmara Municipal de Manaus não localizado nos dados coletados"
+      ]
+    },
+    {
+      "id": "tce-am-contas-prefeito-manaus-2023",
+      "tribunal": "tce-am",
+      "natureza": "parecer-previo",
+      "titulo": "Parecer Prévio nº 44/2025 do Tribunal de Contas do Estado do Amazonas sobre as contas do Prefeito de Manaus — exercício 2023",
+      "decisorio": {
+        "tipo": "Parecer Prévio",
+        "numero": "44/2025",
+        "numero_literal": "PARECER PREVIO Nº 44/2025 – TCE – TRIBUNAL PLENO"
+      },
+      "processo": {
+        "classe": "Prestação de Contas Anual",
+        "numero": "12217/2024",
+        "incidente_ou_registro": null,
+        "url": "https://jurisprudencia.tce.am.gov.br/decisoriosByProcesso?processo=12217&anoProcesso=2024"
+      },
+      "orgao": "Tribunal Pleno",
+      "sessao": null,
+      "sessao_literal": "2ª Sessão Especial",
+      "relator": "Luis Fabian Pereira Barbosa",
+      "relator_registros": [
+        {
+          "texto": "Conselheiro Luis Fabian Pereira Barbosa",
+          "documento": "Parecer Prévio nº 44/2025 – TCE – Tribunal Pleno (texto integral, item \"Relator\")",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/12217_2024_PARECER-PREVIO_44_2025_3879985.pdf"
+        },
+        {
+          "texto": "Luis Fabian Pereira Barbosa",
+          "documento": "API do Banco de Jurisprudência do TCE-AM (campo \"relator\")",
+          "url": null
+        }
+      ],
+      "data_julgamento": "2025-09-01",
+      "data_publicacao": null,
+      "responsavel_literal": "David Antonio Abisai Pereira de Almeida (Prefeito Municipal)",
+      "parecer": {
+        "conclusao": "pela aprovação",
+        "com_ressalvas": true,
+        "conclusao_literal": "Emite Parecer Previo recomendando a Camara Municipal a aprovacao com ressalvas das Contas de Governo da Prefeitura do Municipio de Manaus, relativas ao exercicio de 2023, de responsabilidade do Sr. David Antonio Abisai Pereira de Almeida – Prefeito Municipal -, conforme fundamentado no Relatorio e Voto, em observancia ao art. 71, I, da Constituicao Federal e do art. 40, inciso I, e art. 127, cabeca e paragrafos segundo e quarto, da Constituicao do Estado do Amazonas",
+        "ementa_literal": "Emissao de Parecer Previo recomendando a aprovacao com ressalvas das contas anuais",
+        "ressalvas": [],
+        "alertas": [],
+        "contas_de": "Prefeito de Manaus",
+        "exercicio": "2023",
+        "documento": {
+          "titulo": "Parecer Prévio nº 44/2025 – TCE – Tribunal Pleno (PDF)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/12217_2024_PARECER-PREVIO_44_2025_3879985.pdf",
+          "tamanho": "525 KB"
+        }
+      },
+      "votacoes": [
+        {
+          "parte": "mérito",
+          "resultado": "unanimidade",
+          "resultado_literal": "acolhido, por unanimidade, o voto do Excelentissimo Senhor Conselheiro-Relator , em consonancia com o pronunciamento do Ministerio Publico junto a este Tribunal"
+        }
+      ],
+      "julgamento_politico": null,
+      "situacao_conferencia": "automatico-estruturado",
+      "fontes": [
+        {
+          "titulo": "Parecer Prévio nº 44/2025 – TCE – Tribunal Pleno (PDF oficial)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/12217_2024_PARECER-PREVIO_44_2025_3879985.pdf",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        },
+        {
+          "titulo": "Banco de Jurisprudência do TCE-AM — decisórios do processo 12217/2024 (API JSON não documentada oficialmente)",
+          "url": "https://jurisprudencia-api.tce.am.gov.br/decisorios/byManyFields?strConteudo=null&strAnoProcesso=2024&strNumeroProcesso=12217&strAnoDecisorio=null&strNumeroDecisorio=null&strRelatorDecisorio=null&strOrgaoJulgador=null&strDataSessaoInicio=null&strDataSessaoFim=null&strNatureza=null",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        }
+      ],
+      "lacunas": [
+        "Ressalvas, determinações e multas do parecer não foram copiadas para este arquivo; ver o texto integral no PDF oficial",
+        "Data de publicação no Diário Oficial Eletrônico do TCE-AM não informada pela API",
+        "O texto integral publicado pela API de jurisprudência vem sem acentos; os trechos literais estão reproduzidos como na fonte",
+        "Recursos contra o parecer (natureza \"Recurso\") não foram consultados; uma eventual reforma da decisão não aparece aqui",
+        "Julgamento das contas pela Câmara Municipal de Manaus não localizado nos dados coletados"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,766 @@
+{
+  "atualizado_em": "2026-11-05T11:30:55.067Z",
+  "municipio": {
+    "id": "eirunepe",
+    "nome": "Eirunepé",
+    "uf": "AM",
+    "codigo_ibge": "1301407"
+  },
+  "tribunal": "tce-am",
+  "periodo": {
+    "inicio": 2008,
+    "fim": 2022
+  },
+  "contagens": {
+    "exercicios": 9,
+    "pareceres": 9,
+    "com_parecer_em_fonte_aberta": 9,
+    "sem_fonte_aberta": 0
+  },
+  "fontes": [
+    {
+      "titulo": "Banco de Jurisprudência do TCE-AM (API JSON usada pelo site oficial; não documentada oficialmente)",
+      "url": "https://jurisprudencia.tce.am.gov.br",
+      "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+      "acessado_em": "2026-11-05",
+      "observacao": "Consulta: https://jurisprudencia-api.tce.am.gov.br/decisorios/byManyFields?strConteudo=PREVIO&strAnoProcesso=null&strNumeroProcesso=null&strAnoDecisorio=AAAA&strNumeroDecisorio=null&strRelatorDecisorio=null&strOrgaoJulgador=null&strDataSessaoInicio=null&strDataSessaoFim=null&strNatureza=Presta%C3%A7%C3%A3o%20de%20Contas%20Anual"
+    }
+  ],
+  "observacoes": [
+    "Só aparecem os exercícios com parecer prévio publicado no Banco de Jurisprudência do TCE-AM (tipo \"Parecer Prévio\", natureza \"Prestação de Contas Anual\"). Exercício ausente aqui não quer dizer que as contas não foram julgadas.",
+    "\"Conclusão\" resume a fórmula escrita no parecer (\"recomendando … a aprovação\", \"a desaprovação\"); o trecho literal está em conclusao_literal. Sem fórmula reconhecida, a conclusão fica vazia.",
+    "O município é identificado pelo nome exato do órgão na API (\"Prefeitura Municipal de …\"), comparado sem acentos com a lista oficial de municípios do Siconfi (Tesouro Nacional)."
+  ],
+  "itens": [
+    {
+      "id": "tce-am-contas-prefeito-eirunepe-2008",
+      "tribunal": "tce-am",
+      "natureza": "parecer-previo",
+      "titulo": "Parecer Prévio nº 22/2013 do Tribunal de Contas do Estado do Amazonas sobre as contas do Prefeito de Eirunepé — exercício 2008",
+      "decisorio": {
+        "tipo": "Parecer Prévio",
+        "numero": "22/2013",
+        "numero_literal": "PARECER PREVIO Nº 022/2013 –– TCE – TRIBUNAL PLENO"
+      },
+      "processo": {
+        "classe": "Prestação de Contas Anual",
+        "numero": "3921/2009",
+        "incidente_ou_registro": null,
+        "url": "https://jurisprudencia.tce.am.gov.br/decisoriosByProcesso?processo=3921&anoProcesso=2009"
+      },
+      "orgao": "Tribunal Pleno",
+      "sessao": null,
+      "sessao_literal": null,
+      "relator": "Júlio Assis Corrêa Pinheiro",
+      "relator_registros": [
+        {
+          "texto": "Conselheiro Julio Assis Correa Pinheiro",
+          "documento": "Parecer Prévio nº 22/2013 – TCE – Tribunal Pleno (texto integral, item \"Relator\")",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/3921_2009_PARECER PREVIO_22_2013_220241.pdf"
+        },
+        {
+          "texto": "Júlio Assis Corrêa Pinheiro",
+          "documento": "API do Banco de Jurisprudência do TCE-AM (campo \"relator\")",
+          "url": null
+        }
+      ],
+      "data_julgamento": "2013-11-06",
+      "data_publicacao": null,
+      "responsavel_literal": "Sr. Francisco das Chagas Dissica Valerio Tomaz, Prefeito Municipal, a epoca",
+      "parecer": {
+        "conclusao": "pela desaprovação",
+        "com_ressalvas": false,
+        "conclusao_literal": "EMITE PARECER PREVIO recomendando a DESAPROVACAO das contas anuais da Prefeitura Municipal de Eirunepe, exercicio 2008, de responsabilidade do SR",
+        "ementa_literal": "Emissao de Parecer Previo recomendando a Desaprovacao das Contas Anuais",
+        "ressalvas": [],
+        "alertas": [],
+        "contas_de": "Prefeito de Eirunepé",
+        "exercicio": "2008",
+        "documento": {
+          "titulo": "Parecer Prévio nº 22/2013 – TCE – Tribunal Pleno (PDF)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/3921_2009_PARECER PREVIO_22_2013_220241.pdf",
+          "tamanho": "239 KB"
+        }
+      },
+      "votacoes": [
+        {
+          "parte": "mérito",
+          "resultado": "unanimidade",
+          "resultado_literal": "acolhido, a unanimidade, o voto do Excelentissimo Senhor Conselheiro-Relator, que passa a ser parte integrante deste Parecer Previo, em consonancia, com o pronunciamento do Ministerio"
+        }
+      ],
+      "julgamento_politico": null,
+      "situacao_conferencia": "automatico-estruturado",
+      "registro_sem_metadados": true,
+      "fontes": [
+        {
+          "titulo": "Parecer Prévio nº 22/2013 – TCE – Tribunal Pleno (PDF oficial)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/3921_2009_PARECER PREVIO_22_2013_220241.pdf",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        },
+        {
+          "titulo": "Banco de Jurisprudência do TCE-AM — decisórios do processo 3921/2009 (API JSON não documentada oficialmente)",
+          "url": "https://jurisprudencia-api.tce.am.gov.br/decisorios/byManyFields?strConteudo=null&strAnoProcesso=2009&strNumeroProcesso=3921&strAnoDecisorio=null&strNumeroDecisorio=null&strRelatorDecisorio=null&strOrgaoJulgador=null&strDataSessaoInicio=null&strDataSessaoFim=null&strNatureza=null",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        }
+      ],
+      "lacunas": [
+        "Ressalvas, determinações e multas do parecer não foram copiadas para este arquivo; ver o texto integral no PDF oficial",
+        "Registro da API sem metadados (tipo da sessão, colegiado e número vazios): número e colegiado lidos do cabeçalho do texto integral",
+        "Data da sessão ausente na API; lida do item \"Data da Sessao\" do texto integral (\"06 de novembro de 2013\")",
+        "Data de publicação no Diário Oficial Eletrônico do TCE-AM não informada pela API",
+        "O texto integral publicado pela API de jurisprudência vem sem acentos; os trechos literais estão reproduzidos como na fonte",
+        "Recursos contra o parecer (natureza \"Recurso\") não foram consultados; uma eventual reforma da decisão não aparece aqui",
+        "Julgamento das contas pela Câmara Municipal de Eirunepé não localizado nos dados coletados"
+      ]
+    },
+    {
+      "id": "tce-am-contas-prefeito-eirunepe-2011",
+      "tribunal": "tce-am",
+      "natureza": "parecer-previo",
+      "titulo": "Parecer Prévio nº 14/2013 do Tribunal de Contas do Estado do Amazonas sobre as contas do Prefeito de Eirunepé — exercício 2011",
+      "decisorio": {
+        "tipo": "Parecer Prévio",
+        "numero": "14/2013",
+        "numero_literal": "PARECER PREVIO Nº 014/2013 –– TCE – TRIBUNAL PLENO"
+      },
+      "processo": {
+        "classe": "Prestação de Contas Anual",
+        "numero": "10045/2012",
+        "incidente_ou_registro": null,
+        "url": "https://jurisprudencia.tce.am.gov.br/decisoriosByProcesso?processo=10045&anoProcesso=2012"
+      },
+      "orgao": "Tribunal Pleno",
+      "sessao": null,
+      "sessao_literal": null,
+      "relator": "Lúcio Alberto de Lima Albuquerque",
+      "relator_registros": [
+        {
+          "texto": "Conselheiro Lucio Alberto de Lima Albuquerque",
+          "documento": "Parecer Prévio nº 14/2013 – TCE – Tribunal Pleno (texto integral, item \"Relator\")",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/10045_2012_PARECER PREVIO_14_2013_209302.pdf"
+        },
+        {
+          "texto": "Lúcio Alberto de Lima Albuquerque",
+          "documento": "API do Banco de Jurisprudência do TCE-AM (campo \"relator\")",
+          "url": null
+        }
+      ],
+      "data_julgamento": "2013-10-02",
+      "data_publicacao": null,
+      "responsavel_literal": "Sr. Francisco das Chagas Dissica Valerio Tomas, Prefeito Municipal, a epoca",
+      "parecer": {
+        "conclusao": "pela desaprovação",
+        "com_ressalvas": false,
+        "conclusao_literal": "EMITE PARECER PREVIO recomendando a DESAPRO VAC AO das Contas Anuais da Prefeitura Municipal de Eirunepe, exercicio de 2011, de responsabilidade Sr. Francisco das Chagas Dissica Valerio Tomas, na condicao de Chefe do Poder Executivo Municipal a epoca, com fulcro no art. 31, §§ 11º e 2º, da CF/1988 c/c art. 127, da CE/1989 (com redacao dada pela EC nº 15/1995), art. 18, I, da Lei Complementar 6/1991, arts.1º, I, e 29, da Lei Estadual 2.423/96, art. 5º, I, da Resolucao 4/2002-TCE/AM e art. 3º, III, da Resolucao 9/1997-TCE/AM",
+        "ementa_literal": "Emissao de Parecer Previo recomendando a Desaprovacao das Contas Anuais",
+        "ressalvas": [],
+        "alertas": [],
+        "contas_de": "Prefeito de Eirunepé",
+        "exercicio": "2011",
+        "documento": {
+          "titulo": "Parecer Prévio nº 14/2013 – TCE – Tribunal Pleno (PDF)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/10045_2012_PARECER PREVIO_14_2013_209302.pdf",
+          "tamanho": "261 KB"
+        }
+      },
+      "votacoes": [
+        {
+          "parte": "mérito",
+          "resultado": "unanimidade",
+          "resultado_literal": "acolhido, a unanimidade, os termos do voto do Excelentissimo Senhor Conselheiro-Relator, que passa a ser parte integrante deste Parecer Previo, em consonancia com o pronunciamento do "
+        }
+      ],
+      "julgamento_politico": null,
+      "situacao_conferencia": "automatico-estruturado",
+      "registro_sem_metadados": true,
+      "fontes": [
+        {
+          "titulo": "Parecer Prévio nº 14/2013 – TCE – Tribunal Pleno (PDF oficial)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/10045_2012_PARECER PREVIO_14_2013_209302.pdf",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        },
+        {
+          "titulo": "Banco de Jurisprudência do TCE-AM — decisórios do processo 10045/2012 (API JSON não documentada oficialmente)",
+          "url": "https://jurisprudencia-api.tce.am.gov.br/decisorios/byManyFields?strConteudo=null&strAnoProcesso=2012&strNumeroProcesso=10045&strAnoDecisorio=null&strNumeroDecisorio=null&strRelatorDecisorio=null&strOrgaoJulgador=null&strDataSessaoInicio=null&strDataSessaoFim=null&strNatureza=null",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        }
+      ],
+      "lacunas": [
+        "Ressalvas, determinações e multas do parecer não foram copiadas para este arquivo; ver o texto integral no PDF oficial",
+        "Registro da API sem metadados (tipo da sessão, colegiado e número vazios): número e colegiado lidos do cabeçalho do texto integral",
+        "Data da sessão ausente na API; lida do item \"Data da Sessao\" do texto integral (\"02 de outubro de 2013\")",
+        "Data de publicação no Diário Oficial Eletrônico do TCE-AM não informada pela API",
+        "O texto integral publicado pela API de jurisprudência vem sem acentos; os trechos literais estão reproduzidos como na fonte",
+        "Recursos contra o parecer (natureza \"Recurso\") não foram consultados; uma eventual reforma da decisão não aparece aqui",
+        "Julgamento das contas pela Câmara Municipal de Eirunepé não localizado nos dados coletados"
+      ]
+    },
+    {
+      "id": "tce-am-contas-prefeito-eirunepe-2015",
+      "tribunal": "tce-am",
+      "natureza": "parecer-previo",
+      "titulo": "Parecer Prévio nº 58/2018 do Tribunal de Contas do Estado do Amazonas sobre as contas do Prefeito de Eirunepé — exercício 2015",
+      "decisorio": {
+        "tipo": "Parecer Prévio",
+        "numero": "58/2018",
+        "numero_literal": "PARECER PREVIO Nº 58/2018 – TCE – TRIBUNAL PLENO"
+      },
+      "processo": {
+        "classe": "Prestação de Contas Anual",
+        "numero": "11536/2016",
+        "incidente_ou_registro": null,
+        "url": "https://jurisprudencia.tce.am.gov.br/decisoriosByProcesso?processo=11536&anoProcesso=2016"
+      },
+      "orgao": "Tribunal Pleno",
+      "sessao": null,
+      "sessao_literal": "42ª Sessão Ordinária",
+      "relator": "Conselheiro Josue Claudio de Souza Filho",
+      "relator_registros": [
+        {
+          "texto": "Conselheiro Josue Claudio de Souza Filho",
+          "documento": "Parecer Prévio nº 58/2018 – TCE – Tribunal Pleno (texto integral, item \"Relator\")",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/11536_2016_PARECER PREVIO_58_2018_1698657.pdf"
+        },
+        {
+          "texto": "Josué Cláudio de Souza Neto",
+          "documento": "API do Banco de Jurisprudência do TCE-AM (campo \"relator\")",
+          "url": null
+        }
+      ],
+      "data_julgamento": "2018-12-12",
+      "data_publicacao": null,
+      "responsavel_literal": "Joaquim Neto Cavalcante Monteiro (Prefeito Municipal)",
+      "parecer": {
+        "conclusao": "pela desaprovação",
+        "com_ressalvas": false,
+        "conclusao_literal": "Emite Parecer Previo recomendando a Camara Municipal a desaprovacao das contas do Sr. Joaquim Neto Cavalcante Monteiro da Prefeitura do Municipio de Eirunepe, referente ao exercicio de 2015, Prefeito, a epoca, nos termos do art. 1°, inciso I, c/c o art. 58, alinea “c”, da Lei n° 2.423/96 e art. 11, inciso III, alinea “a”, item 1, da Resolucao n° 04/2002-TCE/AM",
+        "ementa_literal": "Emissao de Parecer Previo recomendando a desaprovacao das contas anuais",
+        "ressalvas": [],
+        "alertas": [],
+        "contas_de": "Prefeito de Eirunepé",
+        "exercicio": "2015",
+        "documento": {
+          "titulo": "Parecer Prévio nº 58/2018 – TCE – Tribunal Pleno (PDF)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/11536_2016_PARECER PREVIO_58_2018_1698657.pdf",
+          "tamanho": "329 KB"
+        }
+      },
+      "votacoes": [
+        {
+          "parte": "mérito",
+          "resultado": "unanimidade",
+          "resultado_literal": "acolhido, a unanimidade, o voto do Excelentissimo Senhor Conselheiro-Relator, que passa a ser parte integrante do Parecer Previo, em consonancia com o pronunciamento do Ministerio Pub"
+        }
+      ],
+      "julgamento_politico": null,
+      "situacao_conferencia": "automatico-estruturado",
+      "fontes": [
+        {
+          "titulo": "Parecer Prévio nº 58/2018 – TCE – Tribunal Pleno (PDF oficial)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/11536_2016_PARECER PREVIO_58_2018_1698657.pdf",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        },
+        {
+          "titulo": "Banco de Jurisprudência do TCE-AM — decisórios do processo 11536/2016 (API JSON não documentada oficialmente)",
+          "url": "https://jurisprudencia-api.tce.am.gov.br/decisorios/byManyFields?strConteudo=null&strAnoProcesso=2016&strNumeroProcesso=11536&strAnoDecisorio=null&strNumeroDecisorio=null&strRelatorDecisorio=null&strOrgaoJulgador=null&strDataSessaoInicio=null&strDataSessaoFim=null&strNatureza=null",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        }
+      ],
+      "lacunas": [
+        "Ressalvas, determinações e multas do parecer não foram copiadas para este arquivo; ver o texto integral no PDF oficial",
+        "Os registros oficiais divergem sobre o relator: \"Conselheiro Josue Claudio de Souza Filho\" no texto do parecer e \"Josué Cláudio de Souza Neto\" no campo relator da API",
+        "Data de publicação no Diário Oficial Eletrônico do TCE-AM não informada pela API",
+        "O texto integral publicado pela API de jurisprudência vem sem acentos; os trechos literais estão reproduzidos como na fonte",
+        "Recursos contra o parecer (natureza \"Recurso\") não foram consultados; uma eventual reforma da decisão não aparece aqui",
+        "Julgamento das contas pela Câmara Municipal de Eirunepé não localizado nos dados coletados"
+      ]
+    },
+    {
+      "id": "tce-am-contas-prefeito-eirunepe-2017",
+      "tribunal": "tce-am",
+      "natureza": "parecer-previo",
+      "titulo": "Parecer Prévio nº 44/2019 do Tribunal de Contas do Estado do Amazonas sobre as contas do Prefeito de Eirunepé — exercício 2017",
+      "decisorio": {
+        "tipo": "Parecer Prévio",
+        "numero": "44/2019",
+        "numero_literal": "PARECER PREVIO Nº 44/2019 – TCE – TRIBUNAL PLENO"
+      },
+      "processo": {
+        "classe": "Prestação de Contas Anual",
+        "numero": "11471/2018",
+        "incidente_ou_registro": null,
+        "url": "https://jurisprudencia.tce.am.gov.br/decisoriosByProcesso?processo=11471&anoProcesso=2018"
+      },
+      "orgao": "Tribunal Pleno",
+      "sessao": null,
+      "sessao_literal": "34ª Sessão Ordinária",
+      "relator": "Érico Xavier Desterro e Silva",
+      "relator_registros": [
+        {
+          "texto": "Conselheiro Erico Xavier Desterro e Silva",
+          "documento": "Parecer Prévio nº 44/2019 – TCE – Tribunal Pleno (texto integral, item \"Relator\")",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/11471_2018_PARECER PREVIO_44_2019_1949030.pdf"
+        },
+        {
+          "texto": "Érico Xavier Desterro e Silva",
+          "documento": "API do Banco de Jurisprudência do TCE-AM (campo \"relator\")",
+          "url": null
+        }
+      ],
+      "data_julgamento": "2019-10-08",
+      "data_publicacao": null,
+      "responsavel_literal": "Raylan Barroso de Alencar (Prefeito Municipal)",
+      "parecer": {
+        "conclusao": "pela aprovação",
+        "com_ressalvas": true,
+        "conclusao_literal": "Emite Parecer Previo recomendando a Camara Municipal a aprovacao com ressalvas das contas do Prefeito do Municipio de Eirunepe, Sr. Raylan Barroso de Alencar, relativas ao exercicio financeiro de 2017, tendo em vista a configuracao de irregularidades de cunho formal, que nao maculam a totalidade da gestao, tal como constante na fundamentacao supra",
+        "ementa_literal": "Emissao de Parecer Previo recomendando a aprovacao com ressalvas das contas anuais",
+        "ressalvas": [],
+        "alertas": [],
+        "contas_de": "Prefeito de Eirunepé",
+        "exercicio": "2017",
+        "documento": {
+          "titulo": "Parecer Prévio nº 44/2019 – TCE – Tribunal Pleno (PDF)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/11471_2018_PARECER PREVIO_44_2019_1949030.pdf",
+          "tamanho": "307 KB"
+        }
+      },
+      "votacoes": [
+        {
+          "parte": "mérito",
+          "resultado": "unanimidade",
+          "resultado_literal": "acolhido, a unanimidade, o voto do Excelentissimo Senhor Conselheiro-Relator, que passa a ser parte integrante do Parecer Previo, em consonancia com o pronunciamento do Ministerio Pub"
+        }
+      ],
+      "julgamento_politico": null,
+      "situacao_conferencia": "automatico-estruturado",
+      "fontes": [
+        {
+          "titulo": "Parecer Prévio nº 44/2019 – TCE – Tribunal Pleno (PDF oficial)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/11471_2018_PARECER PREVIO_44_2019_1949030.pdf",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        },
+        {
+          "titulo": "Banco de Jurisprudência do TCE-AM — decisórios do processo 11471/2018 (API JSON não documentada oficialmente)",
+          "url": "https://jurisprudencia-api.tce.am.gov.br/decisorios/byManyFields?strConteudo=null&strAnoProcesso=2018&strNumeroProcesso=11471&strAnoDecisorio=null&strNumeroDecisorio=null&strRelatorDecisorio=null&strOrgaoJulgador=null&strDataSessaoInicio=null&strDataSessaoFim=null&strNatureza=null",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        }
+      ],
+      "lacunas": [
+        "Ressalvas, determinações e multas do parecer não foram copiadas para este arquivo; ver o texto integral no PDF oficial",
+        "Data de publicação no Diário Oficial Eletrônico do TCE-AM não informada pela API",
+        "O texto integral publicado pela API de jurisprudência vem sem acentos; os trechos literais estão reproduzidos como na fonte",
+        "Recursos contra o parecer (natureza \"Recurso\") não foram consultados; uma eventual reforma da decisão não aparece aqui",
+        "Julgamento das contas pela Câmara Municipal de Eirunepé não localizado nos dados coletados"
+      ]
+    },
+    {
+      "id": "tce-am-contas-prefeito-eirunepe-2018",
+      "tribunal": "tce-am",
+      "natureza": "parecer-previo",
+      "titulo": "Parecer Prévio nº 33/2022 do Tribunal de Contas do Estado do Amazonas sobre as contas do Prefeito de Eirunepé — exercício 2018",
+      "decisorio": {
+        "tipo": "Parecer Prévio",
+        "numero": "33/2022",
+        "numero_literal": "PARECER PREVIO Nº 33/2022 – TCE – TRIBUNAL PLENO"
+      },
+      "processo": {
+        "classe": "Prestação de Contas Anual",
+        "numero": "11484/2019",
+        "incidente_ou_registro": null,
+        "url": "https://jurisprudencia.tce.am.gov.br/decisoriosByProcesso?processo=11484&anoProcesso=2019"
+      },
+      "orgao": "Tribunal Pleno",
+      "sessao": null,
+      "sessao_literal": "23ª Sessão Ordinária",
+      "relator": "Josué Cláudio de Souza Neto",
+      "relator_registros": [
+        {
+          "texto": "Conselheiro Josue Claudio de Souza Neto",
+          "documento": "Parecer Prévio nº 33/2022 – TCE – Tribunal Pleno (texto integral, item \"Relator\")",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/11484_2019_PARECER-PREVIO_33_2022_2711063.pdf"
+        },
+        {
+          "texto": "Josué Cláudio de Souza Neto",
+          "documento": "API do Banco de Jurisprudência do TCE-AM (campo \"relator\")",
+          "url": null
+        }
+      ],
+      "data_julgamento": "2022-06-30",
+      "data_publicacao": null,
+      "responsavel_literal": "Raylan Barroso de Alencar (Prefeito Municipal)",
+      "parecer": {
+        "conclusao": "pela aprovação",
+        "com_ressalvas": true,
+        "conclusao_literal": "Emite Parecer Previo recomendando a Camara Municipal a aprovacao com ressalvas das Contas Gerais da Prefeitura do Municipio de Eirunepe, referente ao exercicio de 2018, de responsabilidade do Sr. Raylan Barroso de Alencar - Prefeito Municipal, nos termos do art. 1°, inciso I, c/c o art. 58, alinea “c”, da Lei n° 2.423/96 e art. 11, inciso III, alinea “a”, item 1, da Resolucao n° 04/2002-TCE/AM, c/c art. 22, II, alinea “b\" e o art. 24, ambos da Lei n° 2.423/96-TCE. Vencido o voto-destaque do Conselheiro Convocado Luiz Henrique Pereira Mendes, pela Desaprovacao das Contas",
+        "ementa_literal": "Emissao de Parecer Previo recomendando a aprovacao com ressalvas das contas anuais",
+        "ressalvas": [],
+        "alertas": [],
+        "contas_de": "Prefeito de Eirunepé",
+        "exercicio": "2018",
+        "documento": {
+          "titulo": "Parecer Prévio nº 33/2022 – TCE – Tribunal Pleno (PDF)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/11484_2019_PARECER-PREVIO_33_2022_2711063.pdf",
+          "tamanho": "199 KB"
+        }
+      },
+      "votacoes": [],
+      "julgamento_politico": null,
+      "situacao_conferencia": "automatico-estruturado",
+      "fontes": [
+        {
+          "titulo": "Parecer Prévio nº 33/2022 – TCE – Tribunal Pleno (PDF oficial)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/11484_2019_PARECER-PREVIO_33_2022_2711063.pdf",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        },
+        {
+          "titulo": "Banco de Jurisprudência do TCE-AM — decisórios do processo 11484/2019 (API JSON não documentada oficialmente)",
+          "url": "https://jurisprudencia-api.tce.am.gov.br/decisorios/byManyFields?strConteudo=null&strAnoProcesso=2019&strNumeroProcesso=11484&strAnoDecisorio=null&strNumeroDecisorio=null&strRelatorDecisorio=null&strOrgaoJulgador=null&strDataSessaoInicio=null&strDataSessaoFim=null&strNatureza=null",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        }
+      ],
+      "lacunas": [
+        "Ressalvas, determinações e multas do parecer não foram copiadas para este arquivo; ver o texto integral no PDF oficial",
+        "Data de publicação no Diário Oficial Eletrônico do TCE-AM não informada pela API",
+        "O texto integral publicado pela API de jurisprudência vem sem acentos; os trechos literais estão reproduzidos como na fonte",
+        "Recursos contra o parecer (natureza \"Recurso\") não foram consultados; uma eventual reforma da decisão não aparece aqui",
+        "Julgamento das contas pela Câmara Municipal de Eirunepé não localizado nos dados coletados"
+      ]
+    },
+    {
+      "id": "tce-am-contas-prefeito-eirunepe-2019",
+      "tribunal": "tce-am",
+      "natureza": "parecer-previo",
+      "titulo": "Parecer Prévio nº 43/2024 do Tribunal de Contas do Estado do Amazonas sobre as contas do Prefeito de Eirunepé — exercício 2019",
+      "decisorio": {
+        "tipo": "Parecer Prévio",
+        "numero": "43/2024",
+        "numero_literal": "PARECER PREVIO Nº 43/2024 – TCE – TRIBUNAL PLENO"
+      },
+      "processo": {
+        "classe": "Prestação de Contas Anual",
+        "numero": "12070/2020",
+        "incidente_ou_registro": null,
+        "url": "https://jurisprudencia.tce.am.gov.br/decisoriosByProcesso?processo=12070&anoProcesso=2020"
+      },
+      "orgao": "Tribunal Pleno",
+      "sessao": null,
+      "sessao_literal": "17ª Sessão Ordinária",
+      "relator": "Josué Cláudio de Souza Neto",
+      "relator_registros": [
+        {
+          "texto": "Conselheiro Josue Claudio de Souza Neto",
+          "documento": "Parecer Prévio nº 43/2024 – TCE – Tribunal Pleno (texto integral, item \"Relator\")",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/12070_2020_PARECER-PREVIO_43_2024_3378825.pdf"
+        },
+        {
+          "texto": "Josué Cláudio de Souza Neto",
+          "documento": "API do Banco de Jurisprudência do TCE-AM (campo \"relator\")",
+          "url": null
+        }
+      ],
+      "data_julgamento": "2024-05-20",
+      "data_publicacao": null,
+      "responsavel_literal": "Raylan Barroso de Alencar (Prefeito Municipal)",
+      "parecer": {
+        "conclusao": "pela aprovação",
+        "com_ressalvas": true,
+        "conclusao_literal": "Emite Parecer Previo recomendando a Camara Municipal a aprovacao com ressalvas das contas do Sr. Raylan Barroso de Alencar, na prefeitura de Eirunepe, no exercicio de 2019, pela permanencia do achado de auditoria n° 1, identificado no Relatorio Conclusivo n° 242/2023-DICAMI, nos termos do art. 1°, inciso I, c/c o art. 58, alinea “c”, da Lei n° 2.423/96 e art. 11, inciso III, alinea “a”, item 1, da Resolucao n° 04/2002-TCE/AM, c/c art. 22, II, alinea “b\" e o art. 24, ambos da Lei n° 2.423/96-TCE",
+        "ementa_literal": "Emissao de Parecer Previo recomendando a aprovacao com ressalvas das contas anuais",
+        "ressalvas": [],
+        "alertas": [],
+        "contas_de": "Prefeito de Eirunepé",
+        "exercicio": "2019",
+        "documento": {
+          "titulo": "Parecer Prévio nº 43/2024 – TCE – Tribunal Pleno (PDF)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/12070_2020_PARECER-PREVIO_43_2024_3378825.pdf",
+          "tamanho": "188 KB"
+        }
+      },
+      "votacoes": [
+        {
+          "parte": "mérito",
+          "resultado": "unanimidade",
+          "resultado_literal": "acolhido, a unanimidade, o voto do Excelentissimo Senhor Conselheiro-Relator, em divergencia com o pronunciamento do Ministerio Publico junto a este Tribunal"
+        }
+      ],
+      "julgamento_politico": null,
+      "situacao_conferencia": "automatico-estruturado",
+      "fontes": [
+        {
+          "titulo": "Parecer Prévio nº 43/2024 – TCE – Tribunal Pleno (PDF oficial)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/12070_2020_PARECER-PREVIO_43_2024_3378825.pdf",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        },
+        {
+          "titulo": "Banco de Jurisprudência do TCE-AM — decisórios do processo 12070/2020 (API JSON não documentada oficialmente)",
+          "url": "https://jurisprudencia-api.tce.am.gov.br/decisorios/byManyFields?strConteudo=null&strAnoProcesso=2020&strNumeroProcesso=12070&strAnoDecisorio=null&strNumeroDecisorio=null&strRelatorDecisorio=null&strOrgaoJulgador=null&strDataSessaoInicio=null&strDataSessaoFim=null&strNatureza=null",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        }
+      ],
+      "lacunas": [
+        "Ressalvas, determinações e multas do parecer não foram copiadas para este arquivo; ver o texto integral no PDF oficial",
+        "Data de publicação no Diário Oficial Eletrônico do TCE-AM não informada pela API",
+        "O texto integral publicado pela API de jurisprudência vem sem acentos; os trechos literais estão reproduzidos como na fonte",
+        "Recursos contra o parecer (natureza \"Recurso\") não foram consultados; uma eventual reforma da decisão não aparece aqui",
+        "Julgamento das contas pela Câmara Municipal de Eirunepé não localizado nos dados coletados"
+      ]
+    },
+    {
+      "id": "tce-am-contas-prefeito-eirunepe-2020",
+      "tribunal": "tce-am",
+      "natureza": "parecer-previo",
+      "titulo": "Parecer Prévio nº 89/2022 do Tribunal de Contas do Estado do Amazonas sobre as contas do Prefeito de Eirunepé — exercício 2020",
+      "decisorio": {
+        "tipo": "Parecer Prévio",
+        "numero": "89/2022",
+        "numero_literal": "PARECER PREVIO Nº 89/2022 – TCE – TRIBUNAL PLENO"
+      },
+      "processo": {
+        "classe": "Prestação de Contas Anual",
+        "numero": "12868/2021",
+        "incidente_ou_registro": null,
+        "url": "https://jurisprudencia.tce.am.gov.br/decisoriosByProcesso?processo=12868&anoProcesso=2021"
+      },
+      "orgao": "Tribunal Pleno",
+      "sessao": null,
+      "sessao_literal": "42ª Sessão Ordinária",
+      "relator": "Yara Amazônia Lins Rodrigues",
+      "relator_registros": [
+        {
+          "texto": "Conselheira Yara Amazonia Lins Rodrigues dos Santos",
+          "documento": "Parecer Prévio nº 89/2022 – TCE – Tribunal Pleno (texto integral, item \"Relator\")",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/12868_2021_PARECER-PREVIO_89_2022_2833810.pdf"
+        },
+        {
+          "texto": "Yara Amazônia Lins Rodrigues",
+          "documento": "API do Banco de Jurisprudência do TCE-AM (campo \"relator\")",
+          "url": null
+        }
+      ],
+      "data_julgamento": "2022-11-22",
+      "data_publicacao": null,
+      "responsavel_literal": "Raylan Barroso de Alencar (Prefeito Municipal)",
+      "parecer": {
+        "conclusao": "pela aprovação",
+        "com_ressalvas": true,
+        "conclusao_literal": "Emite Parecer Previo recomendando a Camara Municipal a aprovacao com ressalvas das contas Anuais da Prefeitura Municipal de Eirunepe, referente ao exercicio de 2020, de responsabilidade do Senhor Raylan Barroso de Alencar, Prefeito Municipal de Eirunepe e Ordenador de Despesas, a epoca, nos termos do art. 31, §§ 1º e 2º, da CR/1988, c/c o artigo 127 da Constituicao Estadual/1989, com redacao da EC nº. 15/1995, art. 18, I, da LC nº. 06/1991, artigos 1º, inciso I, e 29 da Lei nº. 2423/1996 – LOTCE/AM, e artigo 5º, inciso I, da Resolucao nº. 04/2002 – RITCE/AM, e artigo 3º, inciso III, da Resolucao nº. 09/1997",
+        "ementa_literal": "Emissao de Parecer Previo recomendando a aprovacao com ressalvas das contas anuais",
+        "ressalvas": [],
+        "alertas": [],
+        "contas_de": "Prefeito de Eirunepé",
+        "exercicio": "2020",
+        "documento": {
+          "titulo": "Parecer Prévio nº 89/2022 – TCE – Tribunal Pleno (PDF)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/12868_2021_PARECER-PREVIO_89_2022_2833810.pdf",
+          "tamanho": "185 KB"
+        }
+      },
+      "votacoes": [
+        {
+          "parte": "mérito",
+          "resultado": "unanimidade",
+          "resultado_literal": "acolhido, a unanimidade, o voto da Excelentissima Senhora Conselheira-Relatora, em divergencia com o pronunciamento do Ministerio Publico junto a este Tribunal"
+        }
+      ],
+      "julgamento_politico": null,
+      "situacao_conferencia": "automatico-estruturado",
+      "fontes": [
+        {
+          "titulo": "Parecer Prévio nº 89/2022 – TCE – Tribunal Pleno (PDF oficial)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/12868_2021_PARECER-PREVIO_89_2022_2833810.pdf",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        },
+        {
+          "titulo": "Banco de Jurisprudência do TCE-AM — decisórios do processo 12868/2021 (API JSON não documentada oficialmente)",
+          "url": "https://jurisprudencia-api.tce.am.gov.br/decisorios/byManyFields?strConteudo=null&strAnoProcesso=2021&strNumeroProcesso=12868&strAnoDecisorio=null&strNumeroDecisorio=null&strRelatorDecisorio=null&strOrgaoJulgador=null&strDataSessaoInicio=null&strDataSessaoFim=null&strNatureza=null",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        }
+      ],
+      "lacunas": [
+        "Ressalvas, determinações e multas do parecer não foram copiadas para este arquivo; ver o texto integral no PDF oficial",
+        "Data de publicação no Diário Oficial Eletrônico do TCE-AM não informada pela API",
+        "O texto integral publicado pela API de jurisprudência vem sem acentos; os trechos literais estão reproduzidos como na fonte",
+        "Recursos contra o parecer (natureza \"Recurso\") não foram consultados; uma eventual reforma da decisão não aparece aqui",
+        "Julgamento das contas pela Câmara Municipal de Eirunepé não localizado nos dados coletados"
+      ]
+    },
+    {
+      "id": "tce-am-contas-prefeito-eirunepe-2021",
+      "tribunal": "tce-am",
+      "natureza": "parecer-previo",
+      "titulo": "Parecer Prévio nº 90/2022 do Tribunal de Contas do Estado do Amazonas sobre as contas do Prefeito de Eirunepé — exercício 2021",
+      "decisorio": {
+        "tipo": "Parecer Prévio",
+        "numero": "90/2022",
+        "numero_literal": "PARECER PREVIO Nº 90/2022 – TCE – TRIBUNAL PLENO"
+      },
+      "processo": {
+        "classe": "Prestação de Contas Anual",
+        "numero": "11875/2022",
+        "incidente_ou_registro": null,
+        "url": "https://jurisprudencia.tce.am.gov.br/decisoriosByProcesso?processo=11875&anoProcesso=2022"
+      },
+      "orgao": "Tribunal Pleno",
+      "sessao": null,
+      "sessao_literal": "42ª Sessão Ordinária",
+      "relator": "Yara Amazônia Lins Rodrigues",
+      "relator_registros": [
+        {
+          "texto": "Conselheira Yara Amazonia Lins Rodrigues dos Santos",
+          "documento": "Parecer Prévio nº 90/2022 – TCE – Tribunal Pleno (texto integral, item \"Relator\")",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/11875_2022_PARECER-PREVIO_90_2022_2833813.pdf"
+        },
+        {
+          "texto": "Yara Amazônia Lins Rodrigues",
+          "documento": "API do Banco de Jurisprudência do TCE-AM (campo \"relator\")",
+          "url": null
+        }
+      ],
+      "data_julgamento": "2022-11-22",
+      "data_publicacao": null,
+      "responsavel_literal": "Raylan Barroso de Alencar (Prefeito Municipal)",
+      "parecer": {
+        "conclusao": "pela aprovação",
+        "com_ressalvas": true,
+        "conclusao_literal": "Emite Parecer Previo recomendando a Camara Municipal a aprovacao com ressalvas a Prestacao de Contas Anuais da Prefeitura Municipal de Eirunepe, referente ao exercicio de 2021 de responsabilidade do Senhor Raylan Barroso de Alencar, Prefeito Municipal de Eirunepe e Ordenador de Despesas, a epoca, nos termos do artigo 31, §§ 1º e 2º, da CR/1988, c/c o artigo 127 da Constituicao Estadual/1989, com redacao da Emenda Constitucional nº. 15/1995, artigo 18, inciso I, da Lei Complementar nº. 06/1991, artigos 1º, inciso I, e 29 da Lei nº. 2423/1996 – LOTCE/AM, e artigo 5º, inciso I, da Resolucao nº. 04/2002 – RITCE/AM, e artigo 3º, inciso III, da Resolucao nº. 09/1997",
+        "ementa_literal": "Emissao de Parecer Previo recomendando a aprovacao com ressalvas das contas anuais",
+        "ressalvas": [],
+        "alertas": [],
+        "contas_de": "Prefeito de Eirunepé",
+        "exercicio": "2021",
+        "documento": {
+          "titulo": "Parecer Prévio nº 90/2022 – TCE – Tribunal Pleno (PDF)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/11875_2022_PARECER-PREVIO_90_2022_2833813.pdf",
+          "tamanho": "185 KB"
+        }
+      },
+      "votacoes": [
+        {
+          "parte": "mérito",
+          "resultado": "unanimidade",
+          "resultado_literal": "acolhido, a unanimidade, o voto da Excelentissima Senhora Conselheira-Relatora, em parcial consonancia com o pronunciamento do Ministerio Publico junto a este Tribunal"
+        }
+      ],
+      "julgamento_politico": null,
+      "situacao_conferencia": "automatico-estruturado",
+      "fontes": [
+        {
+          "titulo": "Parecer Prévio nº 90/2022 – TCE – Tribunal Pleno (PDF oficial)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/11875_2022_PARECER-PREVIO_90_2022_2833813.pdf",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        },
+        {
+          "titulo": "Banco de Jurisprudência do TCE-AM — decisórios do processo 11875/2022 (API JSON não documentada oficialmente)",
+          "url": "https://jurisprudencia-api.tce.am.gov.br/decisorios/byManyFields?strConteudo=null&strAnoProcesso=2022&strNumeroProcesso=11875&strAnoDecisorio=null&strNumeroDecisorio=null&strRelatorDecisorio=null&strOrgaoJulgador=null&strDataSessaoInicio=null&strDataSessaoFim=null&strNatureza=null",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        }
+      ],
+      "lacunas": [
+        "Ressalvas, determinações e multas do parecer não foram copiadas para este arquivo; ver o texto integral no PDF oficial",
+        "Data de publicação no Diário Oficial Eletrônico do TCE-AM não informada pela API",
+        "O texto integral publicado pela API de jurisprudência vem sem acentos; os trechos literais estão reproduzidos como na fonte",
+        "Recursos contra o parecer (natureza \"Recurso\") não foram consultados; uma eventual reforma da decisão não aparece aqui",
+        "Julgamento das contas pela Câmara Municipal de Eirunepé não localizado nos dados coletados"
+      ]
+    },
+    {
+      "id": "tce-am-contas-prefeito-eirunepe-2022",
+      "tribunal": "tce-am",
+      "natureza": "parecer-previo",
+      "titulo": "Parecer Prévio nº 35/2025 do Tribunal de Contas do Estado do Amazonas sobre as contas do Prefeito de Eirunepé — exercício 2022",
+      "decisorio": {
+        "tipo": "Parecer Prévio",
+        "numero": "35/2025",
+        "numero_literal": "PARECER PREVIO Nº 35/2025 – TCE – TRIBUNAL PLENO"
+      },
+      "processo": {
+        "classe": "Prestação de Contas Anual",
+        "numero": "11696/2023",
+        "incidente_ou_registro": null,
+        "url": "https://jurisprudencia.tce.am.gov.br/decisoriosByProcesso?processo=11696&anoProcesso=2023"
+      },
+      "orgao": "Tribunal Pleno",
+      "sessao": null,
+      "sessao_literal": "19ª Sessão Ordinária",
+      "relator": "Luis Fabian Pereira Barbosa",
+      "relator_registros": [
+        {
+          "texto": "Conselheiro Luis Fabian Pereira Barbosa",
+          "documento": "Parecer Prévio nº 35/2025 – TCE – Tribunal Pleno (texto integral, item \"Relator\")",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/11696_2023_PARECER-PREVIO_35_2025_3795209.pdf"
+        },
+        {
+          "texto": "Luis Fabian Pereira Barbosa",
+          "documento": "API do Banco de Jurisprudência do TCE-AM (campo \"relator\")",
+          "url": null
+        }
+      ],
+      "data_julgamento": "2025-06-24",
+      "data_publicacao": null,
+      "responsavel_literal": "Raylan Barroso de Alencar (Prefeito Municipal)",
+      "parecer": {
+        "conclusao": "pela desaprovação",
+        "com_ressalvas": false,
+        "conclusao_literal": "Emite Parecer Previo recomendando a Camara Municipal a desaprovacao das Contas de Governo da Prefeitura do Municipio de Eirunepe, relativas ao exercicio de 2022, de responsabilidade do Sr. Raylan Barroso de Alencar – Prefeito do Municipio -, conforme fundamentado no Relatorio-Voto, em observancia ao art. 71, I, da Constituicao Federal e ao art. 40, inciso I, e art. 127, cabeca e paragrafos segundo e quarto, da Constituicao do Estado do Amazonas, informando ainda ao Poder Legislativo que as Contas de Gestao do citado exercicio foram consideradas irregulares pelo Tribunal de Contas, em razao da manutencao de 12 impropriedades, sendo que 11 delas se caracterizam como atos de grave infracao a […]",
+        "ementa_literal": "Emissao de Parecer Previo recomendando a desaprovacao das contas anuais",
+        "ressalvas": [],
+        "alertas": [],
+        "contas_de": "Prefeito de Eirunepé",
+        "exercicio": "2022",
+        "documento": {
+          "titulo": "Parecer Prévio nº 35/2025 – TCE – Tribunal Pleno (PDF)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/11696_2023_PARECER-PREVIO_35_2025_3795209.pdf",
+          "tamanho": "544 KB"
+        }
+      },
+      "votacoes": [
+        {
+          "parte": "mérito",
+          "resultado": "unanimidade",
+          "resultado_literal": "acolhido, por unanimidade, o voto do Excelentissimo Senhor Conselheiro-Relator, em consonancia com o pronunciamento do Ministerio Publico junto a este Tribunal"
+        }
+      ],
+      "julgamento_politico": null,
+      "situacao_conferencia": "automatico-estruturado",
+      "fontes": [
+        {
+          "titulo": "Parecer Prévio nº 35/2025 – TCE – Tribunal Pleno (PDF oficial)",
+          "url": "https://jurisprudencia-fs.tce.am.gov.br/documents/11696_2023_PARECER-PREVIO_35_2025_3795209.pdf",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        },
+        {
+          "titulo": "Banco de Jurisprudência do TCE-AM — decisórios do processo 11696/2023 (API JSON não documentada oficialmente)",
+          "url": "https://jurisprudencia-api.tce.am.gov.br/decisorios/byManyFields?strConteudo=null&strAnoProcesso=2023&strNumeroProcesso=11696&strAnoDecisorio=null&strNumeroDecisorio=null&strRelatorDecisorio=null&strOrgaoJulgador=null&strDataSessaoInicio=null&strDataSessaoFim=null&strNatureza=null",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        }
+      ],
+      "lacunas": [
+        "Ressalvas, determinações e multas do parecer não foram copiadas para este arquivo; ver o texto integral no PDF oficial",
+        "Data de publicação no Diário Oficial Eletrônico do TCE-AM não informada pela API",
+        "O texto integral publicado pela API de jurisprudência vem sem acentos; os trechos literais estão reproduzidos como na fonte",
+        "Recursos contra o parecer (natureza \"Recurso\") não foram consultados; uma eventual reforma da decisão não aparece aqui",
+        "Julgamento das contas pela Câmara Municipal de Eirunepé não localizado nos dados coletados"
+      ]
+    }
+  ]
+}
