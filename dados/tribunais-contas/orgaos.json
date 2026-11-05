@@ -3,8 +3,8 @@
   "descricao": "Registro dos tribunais de contas acompanhados ou planejados. Cada órgão ativo tem um coletor em scripts/coleta/tribunais-contas/<id>/ e uma pasta em dados/tribunais-contas/<id>/, no mesmo formato.",
   "contagens": {
     "total": 33,
-    "ativa": 3,
-    "planejada": 30
+    "ativa": 4,
+    "planejada": 29
   },
   "itens": [
     {
@@ -137,20 +137,34 @@
       "nome": "Tribunal de Contas do Estado do Amazonas",
       "esfera": "estadual",
       "uf": "AM",
-      "jurisdiciona": null,
+      "jurisdiciona": "Estado do Amazonas e municípios amazonenses",
       "site_oficial": "https://www.tceam.tc.br/",
       "fontes": [
         {
-          "titulo": "Página inicial — Tribunal de Contas do Estado do Amazonas",
-          "url": "https://www.tceam.tc.br/",
-          "orgao": "Tribunal de Contas do Estado do Amazonas",
-          "acessado_em": "2026-11-02"
+          "titulo": "Banco de Jurisprudência do TCE-AM (pareceres prévios, texto integral e PDF)",
+          "url": "https://jurisprudencia.tce.am.gov.br",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
+        },
+        {
+          "titulo": "API JSON do Banco de Jurisprudência — consulta por campos (não documentada oficialmente)",
+          "url": "https://jurisprudencia-api.tce.am.gov.br/decisorios/byManyFields",
+          "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
+          "acessado_em": "2026-11-05"
         }
       ],
-      "situacao_coleta": "planejada",
-      "robots_e_restricoes": null,
+      "situacao_coleta": "ativa",
+      "robots_e_restricoes": "Acessado só jurisprudencia-api.tce.am.gov.br (robots.txt inexistente, HTTP 404; lido antes de cada execução). A API JSON é a usada pelo próprio site de jurisprudência, não é documentada oficialmente e pode mudar sem aviso. Sem CAPTCHA, login ou token. Consultas sempre filtradas (ano, natureza \"Prestação de Contas Anual\", palavra \"PREVIO\"), porque uma consulta sem filtro devolve dezenas de MB. Os PDFs (jurisprudencia-fs.tce.am.gov.br) são só linkados. O texto integral não é republicado.",
       "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
-      "lacunas": []
+      "lacunas": [
+        "Texto integral da API sem acentos (trechos literais reproduzidos como na fonte)",
+        "Registros migrados sem metadados (data, colegiado, número) em processos até cerca de 2016: dados lidos do texto; parte sem data da sessão",
+        "Recursos contra os pareceres e pareceres de outras naturezas (ex.: Fiscalização de Atos de Gestão) não coletados",
+        "Julgamento das contas pela ALEAM e pelas Câmaras Municipais não coletado",
+        "Uso automatizado da API ainda não confirmado com o TCE-AM"
+      ],
+      "coletor": "scripts/coleta/tribunais-contas/tce-am/coletar.mjs",
+      "dados": "dados/tribunais-contas/tce-am/"
     },
     {
       "id": "tce-ba",

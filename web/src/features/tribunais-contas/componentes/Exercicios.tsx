@@ -259,8 +259,24 @@ export function ExercicioGovernadorItem({ p, o }: { p: ParecerPrevioTce; o: Orga
 
 /* ---------- Parecer sobre as contas do Prefeito ---------- */
 
-export function ExercicioPrefeitoItem({ p, o, municipio }: { p: ParecerPrevioTce; o: OrgaoTc; municipio: string }) {
+/**
+ * Âncora de cada parecer na página do município. Quando dois pareceres dividem o exercício
+ * (vários responsáveis ou novo julgamento), o segundo ganha sufixo: exercicio-2020-2.
+ */
+export function ancorasExercicio(itens: ParecerPrevioTce[]): Map<string, string> {
+  const vistos = new Map<string, number>();
+  const ancoras = new Map<string, string>();
+  for (const p of itens) {
+    const n = (vistos.get(p.parecer.exercicio) ?? 0) + 1;
+    vistos.set(p.parecer.exercicio, n);
+    ancoras.set(p.id, `exercicio-${p.parecer.exercicio}${n > 1 ? `-${n}` : ""}`);
+  }
+  return ancoras;
+}
+
+export function ExercicioPrefeitoItem({ p, o, municipio, ancora }: { p: ParecerPrevioTce; o: OrgaoTc; municipio: string; ancora?: string }) {
   const par = p.parecer;
+  const id = ancora ?? `exercicio-${par.exercicio}`;
   const nLac = new Set(p.lacunas).size;
   const lacunasEFontes = (
     <Recolhivel resumo={`O que a fonte oficial não informa (${nLac}) e fontes`}>
@@ -275,7 +291,7 @@ export function ExercicioPrefeitoItem({ p, o, municipio }: { p: ParecerPrevioTce
     const motivo = p.lacunas.find((l): l is string => typeof l === "string");
     return (
       <ItemLinha
-        id={`exercicio-${par.exercicio}`}
+        id={id}
         titulo={`Exercício de ${par.exercicio}`}
         cartoes={[cartaoParecerTce(p, o, tituloPrefeito(p, municipio), `do Prefeito de ${municipio}`)]}
       >
@@ -286,14 +302,14 @@ export function ExercicioPrefeitoItem({ p, o, municipio }: { p: ParecerPrevioTce
   }
   return (
     <ItemLinha
-      id={`exercicio-${par.exercicio}`}
+      id={id}
       titulo={`Exercício de ${par.exercicio}`}
       cartoes={[cartaoParecerTce(p, o, tituloPrefeito(p, municipio), `do Prefeito de ${municipio}`)]}
     >
-      <Sub id={`exercicio-${par.exercicio}-parecer`} titulo="Detalhes do parecer: processo, relator e ressalvas">
+      <Sub id={`${id}-parecer`} titulo="Detalhes do parecer: processo, relator e ressalvas">
         <Ficha
           itens={[
-            ["Parecer (texto do conjunto de dados oficial)", par.conclusao],
+            ["Parecer (texto da fonte oficial)", par.conclusao],
             ["Processo", p.processo?.numero ?? NAO_DISPONIVEL],
             ["Data do julgamento", formatarDataTc(p.data_julgamento)],
             ["Trânsito em julgado", formatarDataTc(p.data_transito_em_julgado)],
@@ -304,7 +320,7 @@ export function ExercicioPrefeitoItem({ p, o, municipio }: { p: ParecerPrevioTce
         <ListaLiteral itens={par.ressalvas} um="ressalva" varios="ressalvas" />
         {p.link_voto_na_fonte ? (
           <p className="text-base text-[var(--cor-secundaria)]">
-            Link do voto informado pelo conjunto de dados oficial:{" "}
+            Link do voto informado pela fonte oficial:{" "}
             <FonteLink href={p.link_voto_na_fonte} tipo="pdf" className="text-base!">
               voto do relator
             </FonteLink>

@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { Secao } from "@/components/Secao";
 import { textoLegivel } from "@/features/comum/texto";
 import { Fontes, Termos, Trilha } from "@/features/tribunais-contas/componentes/Basicos";
-import { ExercicioPrefeitoItem, tituloPrefeito } from "@/features/tribunais-contas/componentes/Exercicios";
+import { ExercicioPrefeitoItem, ancorasExercicio, tituloPrefeito } from "@/features/tribunais-contas/componentes/Exercicios";
 import { getContasPrefeitos, getOrgao, getOrgaos, municipiosComContas, ouMarcador } from "@/features/tribunais-contas/dados";
 import { BASE_TC, TERMOS_TC, formatarDataTc } from "@/features/tribunais-contas/rotulos";
 import { Figurinha } from "@/components/marca/Figurinhas";
@@ -38,6 +38,7 @@ export default async function ContasPrefeitoPage({ params }: PageProps<"/tribuna
   if (!o || !d) notFound();
   const nome = d.municipio.nome;
   const comParecer = d.itens.filter((p) => p.parecer.conclusao);
+  const ancoras = ancorasExercicio(d.itens);
   const semParecer = d.itens.filter((p) => !p.parecer.conclusao);
   const anos = (l: typeof d.itens) => l.map((p) => p.parecer.exercicio).sort();
   const faixa = (l: string[]) => (l.length ? (l.length > 1 ? `${l[0]} a ${l[l.length - 1]}` : l[0]) : "nenhum");
@@ -81,7 +82,7 @@ export default async function ContasPrefeitoPage({ params }: PageProps<"/tribuna
         <ul className="mt-2 grid grid-cols-1 gap-x-6 md:grid-cols-2">
           {d.itens.map((p) => (
             <li key={p.id}>
-              <Link href={`#exercicio-${p.parecer.exercicio}`} className="lk inline-flex min-h-11 items-center text-base">
+              <Link href={`#${ancoras.get(p.id)}`} className="lk inline-flex min-h-11 items-center text-base">
                 {tituloPrefeito(p, nome).replace(`Contas do Prefeito de ${nome} de `, "")}
               </Link>
             </li>
@@ -91,7 +92,7 @@ export default async function ContasPrefeitoPage({ params }: PageProps<"/tribuna
 
       <ol className="space-y-10" aria-label={`Linha do tempo das contas do Prefeito de ${nome}`}>
         {d.itens.map((p) => (
-          <ExercicioPrefeitoItem key={p.id} p={p} o={o} municipio={nome} />
+          <ExercicioPrefeitoItem key={p.id} p={p} o={o} municipio={nome} ancora={ancoras.get(p.id)} />
         ))}
       </ol>
 
