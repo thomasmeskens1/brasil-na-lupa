@@ -160,15 +160,16 @@ export function BotoesReacao({ proposta, compacto = false, nome }: { proposta: s
         <p className="leading-relaxed text-foreground">
           <strong>Curtir ou não curtir uma proposta pode revelar a sua opinião política</strong>, que é dado pessoal sensível
           pela Lei Geral de Proteção de Dados Pessoais (LGPD — Lei nº 13.709/2018, art. 5º, II, e art. 11, I). Guardamos só
-          qual proposta e qual reação, ligadas à sua conta, para mostrar e contar a sua reação. Os contadores mostram apenas
-          totais: ninguém vê quem reagiu. Você pode apagar as reações ou revogar este consentimento a qualquer momento em
-          Minha conta.
+          qual proposta e qual reação, ligadas à sua conta, para mostrar e contar a sua reação. Quem tem conta vê apenas
+          totais: o de cada proposta, o por estado (se você informar o estado onde vota) e a lista de propostas com mais
+          manifestações, sempre a partir de 10 pessoas. Ninguém vê quem reagiu. Você pode apagar as reações ou revogar
+          este consentimento a qualquer momento em Minha conta.
         </p>
         <div className="flex items-start gap-3">
           <input id={`${id}-ac`} name="aceito" type="checkbox" value="sim" className="mt-1 h-5 w-5 shrink-0" data-foco-inicial />
           <label htmlFor={`${id}-ac`} className="font-medium text-foreground">
-            Concordo que o Brasil na Lupa guarde as minhas reações, que podem revelar opinião política, somente para essa
-            finalidade.
+            Concordo que o Brasil na Lupa guarde as minhas reações, que podem revelar opinião política, somente para essas
+            finalidades.
           </label>
         </div>
         {compacto && aviso ? (

@@ -15,6 +15,7 @@ import { cabecalhoVeto, resumosDispositivos } from "@/features/executivo/detalhe
 import { SITUACAO_DISPOSITIVO, TERMOS_EXECUTIVO, URL_CONSTITUICAO, explicarSigla, rotuloTipoVeto } from "@/features/executivo/rotulos";
 import { BlocoParticipacao } from "@/features/participacao/BlocoParticipacao";
 import { FaleComParlamentares } from "@/features/participacao/FaleComParlamentares";
+import { ManifestacoesPorEstado } from "@/features/participacao/ManifestacoesPorEstado";
 import { AcoesProposta } from "@/components/reacoes";
 import { idExecutivo } from "@/features/conta/ids";
 
@@ -135,6 +136,8 @@ export default async function VetoPage({ params }: PageProps<"/executivo/vetos/[
       <BlocoParticipacao senado={v.ids_oficiais?.senado_materia} />
 
       <FaleComParlamentares casas={["camara", "senado"]} assunto={v.identificacao ?? "este veto"} />
+
+      <ManifestacoesPorEstado proposta={idExecutivo(v.id)} />
 
       <TermosRecolhidos termos={termos} />
 

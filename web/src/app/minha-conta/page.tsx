@@ -8,10 +8,12 @@ import {
   apagarFavoritosAcao,
   apagarReacoesAcao,
   revogarConsentimentoAcao,
+  removerUfEleitoralAcao,
   revogarConsentimentoReacoesAcao,
   sairAcao,
 } from "@/features/conta/acoes";
 import { BOTAO_SECUNDARIO } from "@/features/conta/componentes/estilos";
+import { FormEstadoEleitoral } from "@/features/conta/componentes/FormEstadoEleitoral";
 import { FormPreferencias } from "@/features/conta/componentes/FormPreferencias";
 import { FormTrocaEmail } from "@/features/conta/componentes/FormTrocaEmail";
 import { MeusFavoritos } from "@/features/conta/componentes/MeusFavoritos";
@@ -20,7 +22,8 @@ import { TelaConsentimento } from "@/features/conta/componentes/TelaConsentiment
 import { cadastroAtivo } from "@/features/conta/config";
 import { listarReacoes, obterEstado } from "@/features/conta/dados";
 import { obterSql } from "@/features/conta/db";
-import { VERSAO_POLITICA } from "@/features/conta/regras";
+import { obterUfEleitoral } from "@/features/conta/manifestacoes";
+import { UFS, VERSAO_POLITICA } from "@/features/conta/regras";
 import { usuarioAtual } from "@/features/conta/sessao";
 
 export const metadata: Metadata = {
@@ -36,6 +39,7 @@ const FEITO: Record<string, string> = {
   "favoritos-apagados": "Todos os seus favoritos foram apagados.",
   "reacoes-apagadas": "Todas as suas reações foram apagadas.",
   "reacoes-revogado": "Consentimento das reações revogado. Suas reações foram apagadas.",
+  "uf-removida": "O estado onde você vota foi apagado e não entra mais nas contagens por estado.",
 };
 
 /** Bloco de seção no visual dos atalhos da página inicial. */
@@ -73,7 +77,12 @@ async function Painel({ searchParams }: { searchParams: PageProps<"/minha-conta"
   const usuario = await usuarioAtual();
   if (!usuario) redirect("/entrar");
   const sql = obterSql();
-  const [estado, reacoes] = await Promise.all([obterEstado(sql, usuario.id), listarReacoes(sql, usuario.id)]);
+  const [estado, reacoes, ufEleitoral] = await Promise.all([
+    obterEstado(sql, usuario.id),
+    listarReacoes(sql, usuario.id),
+    // Banco ainda sem a migração 003: sem estado guardado.
+    obterUfEleitoral(sql, usuario.id).catch(() => null),
+  ]);
   if (!estado) redirect("/entrar");
 
   const { feito } = await searchParams;
@@ -248,6 +257,31 @@ async function Painel({ searchParams }: { searchParams: PageProps<"/minha-conta"
             não curtir uma proposta.
           </p>
         )}
+      </Bloco>
+
+      <Bloco id="estado-eleitoral" titulo="Estado onde você vota" figurinha="pino">
+        <p className="text-sm text-[var(--cor-secundaria)]">
+          Opcional. Com ele, as suas reações entram nos totais por estado das propostas e na lista do seu estado em{" "}
+          <Link href="/participar/mais-manifestacoes" className="lk">
+            Propostas com mais manifestações
+          </Link>
+          . O estado é declarado por você e não é conferido com nenhuma outra base. Os totais só aparecem somados e a
+          partir de 10 pessoas: ninguém vê quem reagiu.
+        </p>
+        {ufEleitoral ? (
+          <p className="text-sm">
+            Guardado: <strong>{UFS.find((u) => u.sigla === ufEleitoral.uf)?.nome ?? ufEleitoral.uf}</strong>, desde{" "}
+            {dataHoraBr(ufEleitoral.aceitoEm)}.
+          </p>
+        ) : null}
+        <FormEstadoEleitoral inicial={ufEleitoral?.uf ?? null} />
+        {ufEleitoral ? (
+          <form action={removerUfEleitoralAcao} className="border-t border-borda pt-4">
+            <button type="submit" className={BOTAO_SECUNDARIO}>
+              Apagar o estado e revogar este consentimento
+            </button>
+          </form>
+        ) : null}
       </Bloco>
 
       {dados}

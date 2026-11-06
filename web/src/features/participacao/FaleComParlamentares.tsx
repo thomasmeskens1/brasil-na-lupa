@@ -8,7 +8,7 @@
  * escolhido fica só neste aparelho. Lista em ordem alfabética (mesmo critério para todos).
  */
 import Link from "next/link";
-import { useEffect, useId, useState } from "react";
+import { useEffect, useId, useState, useSyncExternalStore } from "react";
 import { UFS } from "@/features/conta/regras";
 
 type Casa = "camara" | "senado";
@@ -30,7 +30,10 @@ function carregar(): Promise<Contatos | null> {
   return promessa;
 }
 
+/** Cópia em memória: vale mesmo quando o navegador bloqueia o armazenamento. */
+let memoria: string | null = null;
 function lerUf(): string {
+  if (memoria !== null) return memoria;
   try {
     return localStorage.getItem(CHAVE) ?? "";
   } catch {
@@ -38,13 +41,21 @@ function lerUf(): string {
   }
 }
 
+const ouvintes = new Set<() => void>();
+function assinar(fn: () => void) {
+  ouvintes.add(fn);
+  return () => ouvintes.delete(fn);
+}
+
 function gravarUf(uf: string) {
+  memoria = uf;
   try {
     if (uf) localStorage.setItem(CHAVE, uf);
     else localStorage.removeItem(CHAVE);
   } catch {
     /* sem armazenamento: só não lembra a escolha */
   }
+  ouvintes.forEach((fn) => fn());
 }
 
 function mailto(c: Contato, casa: Casa, assunto: string, ufNome: string): string {
@@ -72,14 +83,10 @@ export interface FaleComParlamentaresProps {
 
 export function FaleComParlamentares({ casas, assunto, votos }: FaleComParlamentaresProps) {
   const id = useId();
-  const [uf, setUf] = useState("");
+  // Estado lembrado neste aparelho (no servidor, nenhum).
+  const uf = useSyncExternalStore(assinar, lerUf, () => "");
   const [dados, setDados] = useState<Contatos | null>(null);
   const [falhou, setFalhou] = useState(false);
-
-  useEffect(() => {
-    const salvo = lerUf();
-    if (salvo) setUf(salvo);
-  }, []);
 
   useEffect(() => {
     if (!uf || dados) return;
@@ -104,10 +111,7 @@ export function FaleComParlamentares({ casas, assunto, votos }: FaleComParlament
       <select
         id={`${id}-uf`}
         value={uf}
-        onChange={(e) => {
-          setUf(e.target.value);
-          gravarUf(e.target.value);
-        }}
+        onChange={(e) => gravarUf(e.target.value)}
         className="mt-1 min-h-11 w-full max-w-xs rounded-md border border-[var(--cor-borda-forte)] bg-white px-3 text-base"
       >
         <option value="">Escolha…</option>

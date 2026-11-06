@@ -18,12 +18,13 @@ export const VERSAO_1 = { numero: "1", data: "02/11/2026" } as const;
 export const VERSAO_2 = { numero: "2", data: "02/11/2026" } as const;
 export const VERSAO_3 = { numero: "3", data: "03/11/2026" } as const;
 export const VERSAO_4 = { numero: "4", data: "03/11/2026" } as const;
+export const VERSAO_5 = { numero: "5", data: "06/11/2026" } as const;
 
 const EMAIL = "thomas.meskense@gmail.com";
 
 export function Politica({ comCadastro, arquivada = false }: { comCadastro: boolean; arquivada?: boolean }) {
   // Arquivada = versão 1. Em vigor: 4 com o cadastro ligado, 3 sem ele.
-  const versao = arquivada ? VERSAO_1 : comCadastro ? VERSAO_4 : VERSAO_3;
+  const versao = arquivada ? VERSAO_1 : comCadastro ? VERSAO_5 : VERSAO_3;
   const atual = !arquivada;
   return (
     <article className="max-w-3xl space-y-8">
@@ -47,7 +48,7 @@ export function Politica({ comCadastro, arquivada = false }: { comCadastro: bool
           <p className="meta mt-2">
             Versão {versao.numero}, de {versao.data}.{" "}
             {comCadastro
-              ? "Novidades: cadastro opcional com favoritos e reações (item 9) e a lista de cookies (item 4)."
+              ? "Novidades: totais das reações por estado, lista de propostas com mais manifestações e o estado onde você vota, opcional e com consentimento próprio (itens 9.1 a 9.3)."
               : "Novidades: a lista de cookies e o aviso do rodapé (item 4) e o encarregado de dados (item 1)."}{" "}
             Veja o <a href="#historico" className="lk">histórico de versões</a>.
           </p>
@@ -254,7 +255,14 @@ export function Politica({ comCadastro, arquivada = false }: { comCadastro: bool
             </li>
             <li>
               Versão {VERSAO_4.numero}, de {VERSAO_4.data}: versão {VERSAO_3.numero} mais o cadastro opcional com
-              favoritos e reações (item 9). Vale quando o cadastro está disponível.
+              favoritos e reações (item 9). Valeu até 06/11/2026.
+            </li>
+            <li>
+              Versão {VERSAO_5.numero}, de {VERSAO_5.data}: as reações passam a entrar, só para quem tem conta e só a
+              partir de 10 pessoas, nos totais por estado e na lista de propostas com mais manifestações; o estado onde
+              você vota passa a ser um dado opcional, com consentimento próprio. Reações dadas sob a versão{" "}
+              {VERSAO_4.numero} só entram nesses totais se você der de novo o consentimento das reações. Vale quando o
+              cadastro está disponível.
             </li>
             <li>
               Atualização de 04/11/2026 (versões {VERSAO_3.numero} e {VERSAO_4.numero}): inclusão da medição de

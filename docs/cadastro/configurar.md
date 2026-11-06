@@ -120,8 +120,8 @@ npx vercel env pull .env.local --environment=production   # baixa DATABASE_URL e
 npm run db:migrar
 ```
 
-A saída esperada é `aplicada: 001_cadastro.sql` e `aplicada: 002_favoritos_reacoes.sql` (num banco que já
-tinha a 001, só a 002). Rodar de novo mostra "Banco já está atualizado".
+A saída esperada é `aplicada: 001_cadastro.sql`, `aplicada: 002_favoritos_reacoes.sql` e
+`aplicada: 003_estado_eleitoral.sql` (num banco que já tinha as anteriores, só a nova). Rodar de novo mostra "Banco já está atualizado".
 O arquivo `.env.local` fica fora do Git (está no `.gitignore`); apague-o se não precisar mais.
 
 Rode `npm run db:migrar` de novo sempre que surgir uma migração nova, **antes** do deploy que a usa.
@@ -181,7 +181,7 @@ encerrado de vez — avise os usuários antes, por e-mail, conforme a política.
 | `contas_externas` | vínculo com o Google (provedor e identificador; **sem** tokens) |
 | `sessoes` | token da sessão e validade |
 | `tokens_verificacao` | hash do código (o mesmo do link), validade (10 minutos) e tentativas erradas (máx. 5) |
-| `consentimentos` | versão da política aceita e data, declaração de 18 anos ou mais, data do consentimento das reações |
+| `consentimentos` | versão da política aceita e data, declaração de 18 anos ou mais, data do consentimento das reações, estado onde vota (opcional) e data desse consentimento |
 | `preferencias` | municípios e alertas por e-mail |
 | `favoritos` | tipo (estado, tema, político, proposta) e o identificador do site |
 | `reacoes` | proposta e reação (1 curti, -1 não curti), uma por conta por proposta |

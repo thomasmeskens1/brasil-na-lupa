@@ -7,6 +7,7 @@
  */
 import type { Preferencias } from "./regras";
 import type { Sql } from "./sql";
+import { obterUfEleitoral } from "./manifestacoes";
 
 /** Prazos de retenção (também descritos na Política de Privacidade). */
 export const RETENCAO = {
@@ -88,7 +89,10 @@ export async function registrarConsentimento(sql: Sql, usuarioId: string, versao
       INSERT INTO consentimentos (usuario_id, versao_politica, aceito_em, declarou_maioridade)
       VALUES (${usuarioId}, ${versao}, now(), true)
       ON CONFLICT (usuario_id) DO UPDATE
-        SET versao_politica = EXCLUDED.versao_politica, aceito_em = now(), declarou_maioridade = true
+        SET versao_politica = EXCLUDED.versao_politica, aceito_em = now(), declarou_maioridade = true,
+            -- Nova versão da política: o consentimento das reações é pedido de novo (a versão 5 mudou os usos).
+            reacoes_aceito_em = CASE WHEN consentimentos.versao_politica = EXCLUDED.versao_politica
+                                     THEN consentimentos.reacoes_aceito_em ELSE NULL END
       RETURNING usuario_id
     ), p AS (
       INSERT INTO preferencias (usuario_id) SELECT usuario_id FROM c
@@ -254,6 +258,7 @@ export async function exportarDados(sql: Sql, usuarioId: string) {
   const reacoes = await sql<{ proposta: string; valor: number }>`
     SELECT proposta, valor FROM reacoes WHERE usuario_id = ${usuarioId} ORDER BY proposta`;
   const iso = (v: Date | string | null | undefined) => (v ? d(v).toISOString() : null);
+  const ufEleitoral = await obterUfEleitoral(sql, usuarioId).catch(() => null);
   const p = estado.preferencias;
   return {
     geradoEm: new Date().toISOString(),
@@ -272,6 +277,7 @@ export async function exportarDados(sql: Sql, usuarioId: string) {
           aceitoEm: estado.consentimento.aceitoEm.toISOString(),
           declarouTer18AnosOuMais: true,
           reacoesAceitoEm: estado.consentimento.reacoesAceitoEm?.toISOString() ?? null,
+          estadoOndeVota: ufEleitoral ? { uf: ufEleitoral.uf, consentimentoEm: ufEleitoral.aceitoEm.toISOString() } : null,
         }
       : null,
     preferencias: p ? { municipios: p.municipios, alertasEmail: p.alertasEmail } : null,

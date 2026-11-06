@@ -19,14 +19,21 @@ const TRATAMENTOS: { finalidade: string; dados: string; base: string; prazo: str
     prazo: "Enquanto a conta existir ou até você apagar ou revogar",
   },
   {
-    finalidade: "Registrar suas reações (curtir e não curtir) e mostrar os totais a quem tem conta",
+    finalidade:
+      "Registrar suas reações (curtir e não curtir) e mostrar, a quem tem conta, os totais de cada proposta, os totais por estado e a lista de propostas com mais manifestações",
     dados: "Proposta e reação, ligadas à conta",
     base: "Consentimento específico e destacado, pedido na primeira reação (art. 11, I)",
     prazo: "Até você trocar, retirar, apagar as reações ou revogar o consentimento delas",
   },
   {
+    finalidade: "Contar as reações por estado (opcional)",
+    dados: "Sigla do estado onde você vota, declarada por você, e a data do consentimento",
+    base: "Consentimento específico e destacado, dado em Minha conta (art. 11, I)",
+    prazo: "Até você apagar o estado, revogar o consentimento geral ou excluir a conta",
+  },
+  {
     finalidade: "Provar o consentimento e a declaração de idade",
-    dados: "Data, versão da política aceita, declaração de 18 anos ou mais, data do consentimento das reações",
+    dados: "Data, versão da política aceita, declaração de 18 anos ou mais, datas dos consentimentos das reações e do estado",
     base: "Cumprimento de obrigação legal (art. 7º, II, e art. 8º, § 2º)",
     prazo: "Enquanto a conta existir",
   },
@@ -44,7 +51,7 @@ const TRATAMENTOS: { finalidade: string; dados: string; base: string; prazo: str
   },
 ];
 
-/** Item 9 da Política de Privacidade (versão 4): cadastro opcional, favoritos e reações. */
+/** Item 9 da Política de Privacidade (versão 5): cadastro opcional, favoritos, reações e estado onde vota. */
 export function SecaoCadastro({ versao }: { versao: string }) {
   return (
     <Bloco id="cadastro" titulo="9. Cadastro (opcional), favoritos e reações">
@@ -92,18 +99,35 @@ export function SecaoCadastro({ versao }: { versao: string }) {
 
       <h3 className="pt-2 font-semibold text-gray-900">9.2 Reações: só totais, nunca quem reagiu</h3>
       <p>
-        Cada conta tem no máximo uma reação por proposta, que pode ser trocada ou retirada. O site guarda os totais de
-        cada proposta de forma agregada e mostra só esses totais, e só a quem tem conta, sempre com o aviso de que são
-        opinião de usuários do site, não pesquisa nem dado oficial. Nenhuma tela, arquivo ou pessoa externa vê quem
-        reagiu. Os totais nunca entram em listas, notas, ordenações ou comparações de políticos.
+        Cada conta tem no máximo uma reação por proposta, que pode ser trocada ou retirada. O site mostra só totais, e só
+        a quem tem conta, sempre com o aviso de que são opinião de usuários do site, não pesquisa nem dado oficial.
+        Nenhuma tela, arquivo ou pessoa externa vê quem reagiu. Os totais aparecem de três formas:
+      </p>
+      <ul className="list-disc space-y-1 pl-5">
+        <li>o total de cada proposta, na página dela;</li>
+        <li>
+          o total por estado, só com as reações de quem informou o estado onde vota (item 9.1) e só nos estados com 10
+          pessoas ou mais naquela proposta;
+        </li>
+        <li>
+          a lista “Propostas com mais manifestações”, no Brasil ou num estado, ordenada por um critério único e público:
+          o número de reações (curtir e não curtir somados, sem peso para um lado); só entram propostas com 10 pessoas ou
+          mais.
+        </li>
+      </ul>
+      <p>
+        Os totais por estado e a lista usam só as reações de quem deu o consentimento das reações nesta versão da
+        política. Os totais nunca são usados para dar notas ou comparar políticos.
       </p>
 
       <h3 className="pt-2 font-semibold text-gray-900">9.3 Consentimento</h3>
       <p>
-        Há dois consentimentos, específicos e destacados, sem caixa pré-marcada: o dos favoritos e preferências, numa tela
-        própria no primeiro acesso, e o das reações, pedido na primeira vez que você curtir ou não curtir uma proposta.
+        Há três consentimentos, específicos e destacados, sem caixa pré-marcada: o dos favoritos e preferências, numa
+        tela própria no primeiro acesso; o das reações, pedido na primeira vez que você curtir ou não curtir uma proposta
+        (e de novo na primeira reação depois desta versão); e o do estado onde você vota, em Minha conta, opcional.
         Antes deles nada é guardado além do e-mail. Você pode revogar cada um a qualquer momento, sem custo (art. 8º,
-        § 5º): revogar o das reações apaga as reações; revogar o geral apaga favoritos, preferências e reações. Se não
+        § 5º): revogar o das reações apaga as reações; apagar o estado o tira das contagens; revogar o geral apaga
+        favoritos, preferências, reações e o estado. Se não
         der o consentimento, a única consequência é não poder usar esses recursos: todo o conteúdo continua disponível.
       </p>
 
@@ -192,8 +216,8 @@ export function SecaoCadastro({ versao }: { versao: string }) {
         <li>confirmar que tratamos seus dados e ver o que está guardado;</li>
         <li>baixar todos os seus dados num arquivo (formato JSON), para acesso e portabilidade;</li>
         <li>corrigir o e-mail (com código enviado ao endereço novo) e editar favoritos e preferências;</li>
-        <li>apagar só os favoritos, só as reações, ou cada favorito separadamente;</li>
-        <li>revogar o consentimento das reações ou o consentimento geral;</li>
+        <li>apagar só os favoritos, só as reações, só o estado onde vota, ou cada favorito separadamente;</li>
+        <li>revogar o consentimento das reações, o do estado ou o consentimento geral;</li>
         <li>excluir a conta inteira, com exclusão real e imediata do banco de dados;</li>
         <li>saber com quem os dados são compartilhados (as operadoras do item 9.5, e mais ninguém).</li>
       </ul>

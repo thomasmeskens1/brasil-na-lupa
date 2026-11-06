@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import type { ReactNode } from "react";
 import { FonteLink } from "@/components/FonteLink";
 
@@ -60,6 +61,20 @@ export default function ParticiparPage() {
           publicados pelo próprio Congresso.
         </p>
       </header>
+
+      <Bloco id="no-site" titulo="No Brasil na Lupa: reações, estados e contatos">
+        <p>
+          Nas páginas de votações, medidas provisórias e vetos, além dos canais oficiais abaixo, você encontra o bloco
+          “Fale com seus parlamentares”, com o e-mail institucional de cada deputado e senador do seu estado, e, se tiver
+          conta, os totais das reações de curtir e não curtir por estado. Esses totais são opinião de usuários do site,
+          não pesquisa nem dado oficial.
+        </p>
+        <p>
+          <Link href="/participar/mais-manifestacoes" className="botao">
+            Ver as propostas com mais manifestações
+          </Link>
+        </p>
+      </Bloco>
 
       <Bloco id="ideia" titulo="Tem uma ideia de lei? Ideia Legislativa (Senado)">
         <p>

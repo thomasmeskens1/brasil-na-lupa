@@ -4,7 +4,7 @@
 import { ehIdPolitico, ehIdProposta } from "./ids";
 
 /** Versão da Política de Privacidade que o consentimento registra. */
-export const VERSAO_POLITICA = "4 (03/11/2026)";
+export const VERSAO_POLITICA = "5 (06/11/2026)";
 
 export const UFS: ReadonlyArray<{ sigla: string; nome: string }> = [
   { sigla: "AC", nome: "Acre" },

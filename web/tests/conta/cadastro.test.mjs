@@ -55,7 +55,7 @@ before(async () => {
   pg = new PGlite();
   const db = { exec: (t) => pg.exec(t), query: (t, p) => pg.query(t, p) };
   const aplicadas = await aplicarMigracoes(db, pastaMigracoes);
-  assert.deepEqual(aplicadas, ["001_cadastro.sql", "002_favoritos_reacoes.sql"]);
+  assert.deepEqual(aplicadas, ["001_cadastro.sql", "002_favoritos_reacoes.sql", "003_estado_eleitoral.sql"]);
   // Idempotente: rodar de novo não aplica nada.
   assert.deepEqual(await aplicarMigracoes(db, pastaMigracoes), []);
   sql = sqlDe(pg);

@@ -21,6 +21,7 @@ import { obterSql } from "./db";
 import { codigoLegivel, enviarEmail, htmlCodigo } from "./email";
 import { caminhoDeVolta } from "./ids";
 import { consumirLimite, dentroDoLimite, ipDaRequisicao } from "./limite";
+import { ehSiglaUf, salvarUfEleitoral } from "./manifestacoes";
 import { normalizarEmail, validarPreferencias, VERSAO_POLITICA } from "./regras";
 import { usuarioAtual } from "./sessao";
 
@@ -204,4 +205,35 @@ export async function confirmarTrocaEmailAcao(_: EstadoFormulario, form: FormDat
     return { erro: "Este e-mail já está ligado a outra conta." };
   }
   return { ok: `E-mail da conta trocado para ${novo}.` };
+}
+
+/** "Estado onde você vota" (opcional, consentimento próprio; Política de Privacidade, item 9.2). */
+export async function salvarUfEleitoralAcao(_: EstadoFormulario, form: FormData): Promise<EstadoFormulario> {
+  if (!cadastroAtivo()) return DESATIVADO;
+  const usuario = await usuarioAtual();
+  if (!usuario) redirect("/entrar");
+  const uf = form.get("uf");
+  if (!ehSiglaUf(uf)) return { erro: "Escolha o estado onde você vota." };
+  if (form.get("aceito") !== "sim") return { erro: "Para usar o estado nas contagens, marque a caixa de consentimento." };
+  let gravou: boolean;
+  try {
+    gravou = await salvarUfEleitoral(obterSql(), usuario.id, VERSAO_POLITICA, uf);
+  } catch {
+    return { erro: "Não foi possível salvar agora. Tente de novo mais tarde." };
+  }
+  // Sem o consentimento geral na versão atual: volta para Minha conta, que pede o aceite.
+  if (!gravou) redirect("/minha-conta");
+  return { ok: "Estado salvo." };
+}
+
+export async function removerUfEleitoralAcao(): Promise<void> {
+  if (!cadastroAtivo()) redirect("/");
+  const usuario = await usuarioAtual();
+  if (!usuario) redirect("/entrar");
+  try {
+    await salvarUfEleitoral(obterSql(), usuario.id, VERSAO_POLITICA, null);
+  } catch {
+    /* banco sem a migração 003: não há estado guardado */
+  }
+  redirect("/minha-conta?feito=uf-removida");
 }
