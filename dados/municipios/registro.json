@@ -1,17 +1,17 @@
 {
-  "atualizado_em": "2026-11-05",
+  "atualizado_em": "2026-11-06",
   "fontes": [
     {
       "titulo": "Serviços prestados pelo Interlegis às Casas Legislativas (SAPL) — API de dados abertos do SIGI",
       "url": "https://sigi.interlegis.leg.br/api/servicos/?tipo_servico=SAPL",
       "orgao": "Senado Federal — Secretaria Especial do Interlegis",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-06"
     },
     {
       "titulo": "Entes da Federação — API de dados abertos do Siconfi",
       "url": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/entes",
       "orgao": "Tesouro Nacional",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-06"
     }
   ],
   "robots": {
@@ -101,7 +101,27 @@
       "url": "https://sapl.cruzeirodosul.ac.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-21",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 0,
+          "normajuridica": 0
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 1200302,
@@ -113,7 +133,25 @@
       "url": "https://sapl.feijo.ac.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2016-07-21",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 1200328,
@@ -265,7 +303,27 @@
       "url": "https://sapl.craibas.al.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2023-03-08",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 1270,
+          "materialegislativa": 201,
+          "normajuridica": 561
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 2703106,
@@ -277,7 +335,25 @@
       "url": "https://sapl.igaci.al.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2025-02-28",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2703601,
@@ -661,7 +737,28 @@
       "url": "https://sapl.envira.am.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2025-04-16",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 2451,
+          "materialegislativa": 338
+        },
+        "votos_nominais_publicados": true,
+        "erros": [
+          "normajuridica: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 1301704,
@@ -673,7 +770,25 @@
       "url": "https://sapl.humaita.am.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-06-30",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 1301803,
@@ -685,7 +800,25 @@
       "url": "https://sapl.ipixuna.am.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-01-16",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 1301852,
@@ -697,7 +830,25 @@
       "url": "https://sapl.iranduba.am.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-05-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 1301902,
@@ -709,7 +860,25 @@
       "url": "https://sapl.itacoatiara.am.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-05-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 1302405,
@@ -937,7 +1106,25 @@
       "url": "https://sapl.ferreiragomes.ap.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2023-03-28",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 1600279,
@@ -1608,7 +1795,27 @@
       "url": "https://sapl.conceicaodocoite.ba.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2014-04-09",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 180,
+          "materialegislativa": 3410,
+          "normajuridica": 1150
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 2909901,
@@ -1620,7 +1827,27 @@
       "url": "https://sapl.curaca.ba.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-21",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 0,
+          "normajuridica": 0
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 2910008,
@@ -1632,7 +1859,27 @@
       "url": "https://sapl.dariomeira.ba.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2022-09-23",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 6,
+          "normajuridica": 0
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 2910057,
@@ -1644,7 +1891,27 @@
       "url": "https://sapl.diasdavila.ba.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2022-08-01",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 0,
+          "normajuridica": 0
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 2911402,
@@ -1656,7 +1923,25 @@
       "url": "https://sapl.gloria.ba.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-07-20",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2911659,
@@ -1668,7 +1953,25 @@
       "url": "https://sapl.guajeru.ba.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2025-09-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2911857,
@@ -1680,7 +1983,25 @@
       "url": "https://sapl.heliopolis.ba.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2024-05-07",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2913002,
@@ -1692,7 +2013,25 @@
       "url": "https://sapl.ibitiara.ba.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2025-09-18",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2913200,
@@ -1704,7 +2043,25 @@
       "url": "https://sapl.ibotirama.ba.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2023-07-10",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2913457,
@@ -1716,7 +2073,25 @@
       "url": "https://sapl.igrapiuna.ba.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-02-05",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2913606,
@@ -1728,7 +2103,25 @@
       "url": "https://sapl.ilheus.ba.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-07-06",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2914703,
@@ -1740,7 +2133,25 @@
       "url": "https://sapl.itaberaba.ba.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2012-12-06",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2914802,
@@ -1752,7 +2163,25 @@
       "url": "https://sapl.itabuna.ba.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2017-11-08",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2914901,
@@ -1764,7 +2193,25 @@
       "url": "https://sapl.itacare.ba.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2023-09-29",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2915205,
@@ -1776,7 +2223,25 @@
       "url": "https://sapl.itagiba.ba.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2022-01-21",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2915700,
@@ -1788,7 +2253,25 @@
       "url": "https://sapl.itamari.ba.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-05-06",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2916005,
@@ -1800,7 +2283,25 @@
       "url": "https://sapl.itanhem.ba.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2023-11-24",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2916401,
@@ -1812,7 +2313,25 @@
       "url": "https://sapl.itapetinga.ba.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2023-01-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2918001,
@@ -2374,7 +2893,25 @@
       "url": "https://sapl.eusebio.ce.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-21",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2304301,
@@ -2386,7 +2923,25 @@
       "url": "https://sapl.fariasbrito.ce.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-04-14",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2304400,
@@ -2430,7 +2985,25 @@
       "url": "https://sapl.fortim.ce.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-10-20",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2305233,
@@ -2442,7 +3015,25 @@
       "url": "https://sapl.horizonte.ce.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2019-03-13",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2305357,
@@ -2454,7 +3045,25 @@
       "url": "https://sapl.icapui.ce.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-03-22",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2305902,
@@ -2466,7 +3075,25 @@
       "url": "https://sapl.ipueiras.ce.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-29",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2306108,
@@ -2478,7 +3105,25 @@
       "url": "https://sapl.iraucuba.ce.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2022-05-10",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2306207,
@@ -2490,7 +3135,25 @@
       "url": "https://sapl.itaicaba.ce.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2019-01-03",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2306256,
@@ -2502,7 +3165,25 @@
       "url": "https://sapl.itaitinga.ce.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2025-11-12",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2307650,
@@ -2820,7 +3501,27 @@
       "url": "https://sapl.conceicaodabarra.es.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2017-11-23",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 264,
+          "materialegislativa": 2722,
+          "normajuridica": 1299
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 3201902,
@@ -2832,7 +3533,27 @@
       "url": "https://sapl.domingosmartins.es.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 625,
+          "materialegislativa": 13418,
+          "normajuridica": 8972
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 3202454,
@@ -2844,7 +3565,25 @@
       "url": "https://sapl.ibatiba.es.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-07-18",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3202553,
@@ -2856,7 +3595,25 @@
       "url": "https://sapl.ibitirama.es.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2013-11-06",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3202603,
@@ -2868,7 +3625,25 @@
       "url": "https://sapl.iconha.es.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2019-10-21",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3203007,
@@ -3302,7 +4077,27 @@
       "url": "https://sapl.cristalina.go.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2024-02-23",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 0,
+          "normajuridica": 0
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 5206305,
@@ -3314,7 +4109,17 @@
       "url": "https://sapl.cristianopolis.go.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2022-04-22",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": null,
+        "api_permitida": null,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "robots.txt: fetch failed"
+        ]
+      }
     },
     {
       "cod_ibge": 5206404,
@@ -3326,7 +4131,27 @@
       "url": "https://sapl.crixas.go.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-10-20",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 1195,
+          "normajuridica": 1925
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 5206701,
@@ -3338,7 +4163,27 @@
       "url": "https://sapl.damianopolis.go.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2024-03-19",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 2,
+          "normajuridica": 0
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 5208004,
@@ -3350,7 +4195,25 @@
       "url": "https://sapl.formosa.go.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2013-02-22",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 5210109,
@@ -3362,7 +4225,25 @@
       "url": "https://sapl.ipameri.go.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 5212501,
@@ -3723,7 +4604,28 @@
       "url": "https://sapl.duquebacelar.ma.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2023-06-16",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 18,
+          "materialegislativa": 6
+        },
+        "votos_nominais_publicados": true,
+        "erros": [
+          "normajuridica: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2105153,
@@ -3735,7 +4637,25 @@
       "url": "https://sapl.igarapedomeio.ma.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2024-12-05",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2105948,
@@ -5515,7 +6435,27 @@
       "url": "https://sapl.congonhal.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-04-25",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 18,
+          "materialegislativa": 459,
+          "normajuridica": 1092
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 3118007,
@@ -5527,7 +6467,27 @@
       "url": "https://sapl.congonhas.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-04",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 249,
+          "materialegislativa": 19867,
+          "normajuridica": 9362
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 3118205,
@@ -5539,7 +6499,27 @@
       "url": "https://sapl.conquista.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2025-07-17",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 0,
+          "normajuridica": 0
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 3118304,
@@ -5551,7 +6531,27 @@
       "url": "https://sapl.conselheirolafaiete.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-04",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 2017,
+          "materialegislativa": 29270,
+          "normajuridica": 8459
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 3119104,
@@ -5563,7 +6563,27 @@
       "url": "https://sapl.corinto.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2024-08-09",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 0,
+          "normajuridica": 0
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 3119302,
@@ -5575,7 +6595,27 @@
       "url": "https://sapl.coromandel.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2025-09-30",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 0,
+          "normajuridica": 0
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 3119401,
@@ -5587,7 +6627,27 @@
       "url": "https://sapl.coronelfabriciano.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2020-10-29",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 2849,
+          "normajuridica": 4510
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 3121100,
@@ -5599,7 +6659,27 @@
       "url": "https://sapl.delfimmoreira.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2020-05-20",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 2334,
+          "normajuridica": 2126
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 3121209,
@@ -5611,7 +6691,27 @@
       "url": "https://sapl.delfinopolis.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2017-10-02",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 4718,
+          "materialegislativa": 4848,
+          "normajuridica": 0
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 3122306,
@@ -5623,7 +6723,27 @@
       "url": "https://sapl.divinopolis.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-05-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 61993,
+          "materialegislativa": 45206,
+          "normajuridica": 20823
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 3122470,
@@ -5635,7 +6755,27 @@
       "url": "https://sapl.dombosco.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2013-03-05",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 79,
+          "materialegislativa": 1337,
+          "normajuridica": 594
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 3122702,
@@ -5647,7 +6787,27 @@
       "url": "https://sapl.domsilverio.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-03-19",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 0,
+          "normajuridica": 0
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 3123007,
@@ -5659,7 +6819,27 @@
       "url": "https://sapl.doresdecampos.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2022-06-23",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 0,
+          "normajuridica": 0
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 3123205,
@@ -5671,7 +6851,27 @@
       "url": "https://sapl.doresdoindaia.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-05-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 2747,
+          "normajuridica": 2841
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 3123528,
@@ -5683,7 +6883,28 @@
       "url": "https://sapl.durande.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2022-07-28",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 35,
+          "materialegislativa": 232
+        },
+        "votos_nominais_publicados": true,
+        "erros": [
+          "normajuridica: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3123908,
@@ -5695,7 +6916,28 @@
       "url": "https://sapl.entreriosdeminas.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 805,
+          "materialegislativa": 3423
+        },
+        "votos_nominais_publicados": true,
+        "erros": [
+          "normajuridica: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3124104,
@@ -5707,7 +6949,28 @@
       "url": "https://sapl.esmeraldas.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2025-08-13",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 0
+        },
+        "votos_nominais_publicados": false,
+        "erros": [
+          "normajuridica: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3124203,
@@ -5719,7 +6982,25 @@
       "url": "https://sapl.esperafeliz.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2011-08-31",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3124500,
@@ -5731,7 +7012,25 @@
       "url": "https://sapl.estiva.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2016-05-04",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3125309,
@@ -5743,7 +7042,25 @@
       "url": "https://sapl.farialemos.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2023-06-13",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3125408,
@@ -5755,7 +7072,25 @@
       "url": "https://sapl.feliciodossantos.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-21",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3126000,
@@ -5767,7 +7102,25 @@
       "url": "https://sapl.florestal.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-21",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3126109,
@@ -5779,7 +7132,25 @@
       "url": "https://sapl.formiga.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2020-11-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3126208,
@@ -5791,7 +7162,25 @@
       "url": "https://sapl.formoso.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2016-02-03",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3127107,
@@ -5803,7 +7192,25 @@
       "url": "https://sapl.frutal.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2017-06-01",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3127388,
@@ -5815,7 +7222,25 @@
       "url": "https://sapl.goiana.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-10-21",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3127800,
@@ -5827,7 +7252,25 @@
       "url": "https://sapl.graomogol.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-07-22",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3128105,
@@ -5839,7 +7282,25 @@
       "url": "https://sapl.guape.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-03-17",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3128303,
@@ -5851,7 +7312,25 @@
       "url": "https://sapl.guaranesia.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-04-24",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3129202,
@@ -5863,7 +7342,25 @@
       "url": "https://sapl.heliodora.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2010-11-26",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3129509,
@@ -5875,7 +7372,25 @@
       "url": "https://sapl.ibia.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-25",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3130408,
@@ -5887,7 +7402,25 @@
       "url": "https://sapl.ijaci.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3130606,
@@ -5899,7 +7432,25 @@
       "url": "https://sapl.inconfidentes.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2024-12-04",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3130705,
@@ -5911,7 +7462,25 @@
       "url": "https://sapl.indianopolis.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2017-10-09",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3131208,
@@ -5923,7 +7492,25 @@
       "url": "https://sapl.ipanema.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2023-04-24",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3131901,
@@ -5935,7 +7522,25 @@
       "url": "https://sapl.itabirito.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2016-05-04",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3132206,
@@ -5947,7 +7552,25 @@
       "url": "https://sapl.itaguara.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2024-09-27",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3132503,
@@ -5959,7 +7582,25 @@
       "url": "https://sapl.itamarandiba.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2022-10-24",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3132701,
@@ -5971,7 +7612,25 @@
       "url": "https://sapl.itambacuri.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2025-07-09",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3132909,
@@ -5983,7 +7642,25 @@
       "url": "https://sapl.itamogi.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2013-09-18",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3133600,
@@ -5995,7 +7672,25 @@
       "url": "https://sapl.itapeva.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2010-10-18",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3133709,
@@ -6007,7 +7702,25 @@
       "url": "https://sapl.itatiaiucu.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2025-05-15",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3133758,
@@ -6019,7 +7732,25 @@
       "url": "https://sapl.itaudeminas.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2019-02-07",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3133808,
@@ -6031,7 +7762,25 @@
       "url": "https://sapl.itauna.mg.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2022-05-31",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3134400,
@@ -7489,7 +9238,27 @@
       "url": "https://sapl.dourados.ms.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2025-09-29",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 1060,
+          "materialegislativa": 2819,
+          "normajuridica": 0
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 5005681,
@@ -8087,7 +9856,27 @@
       "url": "https://sapl.conquistadoeste.mt.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-10-13",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 2115,
+          "materialegislativa": 1004,
+          "normajuridica": 232
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 5103379,
@@ -8099,7 +9888,27 @@
       "url": "https://sapl.cotriguacu.mt.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-07",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 1559,
+          "normajuridica": 1582
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 5103502,
@@ -8111,7 +9920,27 @@
       "url": "https://sapl.diamantino.mt.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2020-11-13",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 13760,
+          "materialegislativa": 14226,
+          "normajuridica": 5777
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 5103700,
@@ -8123,7 +9952,25 @@
       "url": "https://sapl.feliznatal.mt.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2017-06-09",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 5103858,
@@ -8135,7 +9982,25 @@
       "url": "https://sapl.gauchadonorte.mt.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-07-03",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 5104104,
@@ -8147,7 +10012,25 @@
       "url": "https://sapl.guarantadonorte.mt.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2017-09-27",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 5104526,
@@ -8159,7 +10042,25 @@
       "url": "https://sapl.ipirangadonorte.mt.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 5104609,
@@ -8604,7 +10505,28 @@
       "url": "https://sapl.eldoradodocarajas.pa.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-05-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 349,
+          "materialegislativa": 859
+        },
+        "votos_nominais_publicados": true,
+        "erros": [
+          "normajuridica: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 1503093,
@@ -8616,7 +10538,25 @@
       "url": "https://sapl.goianesiadopara.pa.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-05",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 1503606,
@@ -8628,7 +10568,25 @@
       "url": "https://sapl.itaituba.pa.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-07-22",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 1503804,
@@ -9284,7 +11242,27 @@
       "url": "https://sapl.conde.pb.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2023-03-22",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 394,
+          "normajuridica": 1525
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 2505006,
@@ -9296,7 +11274,27 @@
       "url": "https://sapl.cubati.pb.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-03-17",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 273,
+          "materialegislativa": 38,
+          "normajuridica": 0
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 2505204,
@@ -9308,7 +11306,27 @@
       "url": "https://sapl.cuitegi.pb.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2023-12-19",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 18,
+          "materialegislativa": 429,
+          "normajuridica": 817
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 2505709,
@@ -9320,7 +11338,27 @@
       "url": "https://sapl.donaines.pb.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-05",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 7555,
+          "materialegislativa": 3965,
+          "normajuridica": 1155
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 2506301,
@@ -9332,7 +11370,25 @@
       "url": "https://sapl.guarabira.pb.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2025-12-12",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2506608,
@@ -9344,7 +11400,25 @@
       "url": "https://sapl.ibiara.pb.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-02-10",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2506905,
@@ -9356,7 +11430,25 @@
       "url": "https://sapl.itabaiana.pb.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2011-06-08",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2507200,
@@ -9368,7 +11460,25 @@
       "url": "https://sapl.itatuba.pb.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2022-01-27",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2507507,
@@ -10106,7 +12216,27 @@
       "url": "https://sapl.custodia.pe.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 729,
+          "materialegislativa": 312,
+          "normajuridica": 518
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 2605608,
@@ -10118,7 +12248,25 @@
       "url": "https://sapl.flores.pe.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2025-11-14",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2605707,
@@ -10130,7 +12278,25 @@
       "url": "https://sapl.floresta.pe.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2015-04-16",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2606200,
@@ -10142,7 +12308,25 @@
       "url": "https://sapl.goiana.pe.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-12-02",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2606309,
@@ -10154,7 +12338,25 @@
       "url": "https://sapl.granito.pe.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2023-04-05",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2606408,
@@ -10166,7 +12368,25 @@
       "url": "https://sapl.gravata.pe.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2022-02-08",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2606705,
@@ -10178,7 +12398,25 @@
       "url": "https://sapl.ibirajuba.pe.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-08-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2606804,
@@ -10190,7 +12428,25 @@
       "url": "https://sapl.igarassu.pe.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-03-16",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2607604,
@@ -10202,7 +12458,25 @@
       "url": "https://sapl.ilhadeitamaraca.pe.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-07-09",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2607307,
@@ -10214,7 +12488,25 @@
       "url": "https://sapl.ipubi.pe.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2024-12-20",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2607901,
@@ -11162,7 +13454,27 @@
       "url": "https://sapl.corrente.pi.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-20",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 1610,
+          "normajuridica": 72
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 2203107,
@@ -11174,7 +13486,27 @@
       "url": "https://sapl.cristinocastro.pi.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2025-04-23",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 0,
+          "normajuridica": 0
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 2203206,
@@ -11186,7 +13518,27 @@
       "url": "https://sapl.curimata.pi.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2012-11-29",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 111,
+          "materialegislativa": 290,
+          "normajuridica": 9
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 2203271,
@@ -11198,7 +13550,27 @@
       "url": "https://sapl.curralnovodopiaui.pi.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-08-12",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 0,
+          "normajuridica": 0
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 2203305,
@@ -11210,7 +13582,27 @@
       "url": "https://sapl.demervallobao.pi.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2015-08-18",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 836,
+          "materialegislativa": 1196,
+          "normajuridica": 596
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 2203404,
@@ -11222,7 +13614,27 @@
       "url": "https://sapl.domexpeditolopes.pi.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-10-20",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 114,
+          "materialegislativa": 246,
+          "normajuridica": 105
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 2203701,
@@ -11234,7 +13646,25 @@
       "url": "https://sapl.esperantina.pi.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-07-20",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2204501,
@@ -11246,7 +13676,25 @@
       "url": "https://sapl.guadalupe.pi.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2017-10-03",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2204659,
@@ -11258,7 +13706,25 @@
       "url": "https://sapl.ilhagrande.pi.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2022-03-09",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2205151,
@@ -12591,7 +15057,27 @@
       "url": "https://sapl.contenda.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-07-08",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 0,
+          "normajuridica": 0
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 4106308,
@@ -12603,7 +15089,27 @@
       "url": "https://sapl.corbelia.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2016-07-27",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 10319,
+          "materialegislativa": 2338,
+          "normajuridica": 1577
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 4106407,
@@ -12615,7 +15121,27 @@
       "url": "https://sapl.cornelioprocopio.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-04-22",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 1649,
+          "materialegislativa": 353,
+          "normajuridica": 44
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 4106456,
@@ -12627,7 +15153,27 @@
       "url": "https://sapl.coroneldomingossoares.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2023-03-09",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 1463,
+          "materialegislativa": 717,
+          "normajuridica": 123
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 4106571,
@@ -12639,7 +15185,27 @@
       "url": "https://sapl.cruzeirodoiguacu.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-03-27",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 0,
+          "normajuridica": 0
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 4106852,
@@ -12651,7 +15217,27 @@
       "url": "https://sapl.cruzmaltina.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2012-12-06",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 3548,
+          "materialegislativa": 760,
+          "normajuridica": 1302
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 4107538,
@@ -12663,7 +15249,28 @@
       "url": "https://sapl.entreriosdooeste.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-12-07",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 2173
+        },
+        "votos_nominais_publicados": false,
+        "erros": [
+          "normajuridica: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4107652,
@@ -12675,7 +15282,25 @@
       "url": "https://sapl.fazendariogrande.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-07-18",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4107702,
@@ -12687,7 +15312,25 @@
       "url": "https://sapl.fenix.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2016-11-07",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4108106,
@@ -12699,7 +15342,25 @@
       "url": "https://sapl.florida.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-06-30",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4108205,
@@ -12711,7 +15372,25 @@
       "url": "https://sapl.formosadooeste.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2012-12-26",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4108304,
@@ -12723,7 +15402,25 @@
       "url": "https://sapl.fozdoiguacu.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2017-08-09",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4108403,
@@ -12735,7 +15432,25 @@
       "url": "https://sapl.franciscobeltrao.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-05-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4108650,
@@ -12747,7 +15462,25 @@
       "url": "https://sapl.goioxim.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-06-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4108809,
@@ -12759,7 +15492,25 @@
       "url": "https://sapl.guaira.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2022-07-15",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4109104,
@@ -12771,7 +15522,25 @@
       "url": "https://sapl.guaporema.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-06-30",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4109203,
@@ -12783,7 +15552,25 @@
       "url": "https://sapl.guaraci.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-07-01",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4109658,
@@ -12795,7 +15582,25 @@
       "url": "https://sapl.honorioserpa.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-05-25",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4109906,
@@ -12807,7 +15612,25 @@
       "url": "https://sapl.icaraima.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-07-19",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4110078,
@@ -12819,7 +15642,25 @@
       "url": "https://sapl.imbau.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2023-04-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4110102,
@@ -12831,7 +15672,25 @@
       "url": "https://sapl.imbituva.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2025-09-23",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4110508,
@@ -12843,7 +15702,25 @@
       "url": "https://sapl.ipiranga.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-06-15",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4110706,
@@ -12855,7 +15732,25 @@
       "url": "https://sapl.irati.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4110805,
@@ -12867,7 +15762,25 @@
       "url": "https://sapl.iretama.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-06-15",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4111209,
@@ -12879,7 +15792,25 @@
       "url": "https://sapl.itapejaradoeste.pr.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2023-04-26",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4111308,
@@ -14457,7 +17388,27 @@
       "url": "https://sapl.conceicaodemacabu.rj.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2017-02-17",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 65,
+          "materialegislativa": 3125,
+          "normajuridica": 4385
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 3301603,
@@ -14469,7 +17420,28 @@
       "url": "https://sapl.duasbarras.rj.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2024-07-15",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 4435,
+          "materialegislativa": 623
+        },
+        "votos_nominais_publicados": true,
+        "erros": [
+          "normajuridica: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3301801,
@@ -14481,7 +17453,28 @@
       "url": "https://sapl.engenheiropaulodefrontin.rj.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2014-04-09",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 4264,
+          "materialegislativa": 2719
+        },
+        "votos_nominais_publicados": true,
+        "erros": [
+          "normajuridica: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3302007,
@@ -14493,7 +17486,25 @@
       "url": "https://sapl.itaguai.rj.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-06-30",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3302106,
@@ -14505,7 +17516,25 @@
       "url": "https://sapl.itaocara.rj.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-02-27",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 3302403,
@@ -15212,7 +18241,27 @@
       "url": "https://sapl.coronelezequiel.rn.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-10-20",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 1057,
+          "materialegislativa": 281,
+          "normajuridica": 25
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 2403004,
@@ -15224,7 +18273,27 @@
       "url": "https://sapl.cruzeta.rn.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-03-01",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 2991,
+          "materialegislativa": 838,
+          "normajuridica": 0
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 2403103,
@@ -15236,7 +18305,27 @@
       "url": "https://sapl.curraisnovos.rn.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2022-08-16",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 2716,
+          "materialegislativa": 9824,
+          "normajuridica": 4622
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 2403400,
@@ -15248,7 +18337,28 @@
       "url": "https://sapl.equador.rn.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2024-05-02",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 2076,
+          "materialegislativa": 634
+        },
+        "votos_nominais_publicados": true,
+        "erros": [
+          "normajuridica: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2403608,
@@ -15260,7 +18370,25 @@
       "url": "https://sapl.extremoz.rn.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-21",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2404309,
@@ -15272,7 +18400,25 @@
       "url": "https://sapl.governadordixseptrosado.rn.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-02-05",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2404408,
@@ -15284,7 +18430,25 @@
       "url": "https://sapl.grossos.rn.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2023-04-24",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2405009,
@@ -16008,7 +19172,27 @@
       "url": "https://sapl.corumbiara.ro.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-07",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 567,
+          "materialegislativa": 1265,
+          "normajuridica": 2118
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 1100080,
@@ -16020,7 +19204,27 @@
       "url": "https://sapl.costamarques.ro.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2017-07-10",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 2811,
+          "materialegislativa": 836,
+          "normajuridica": 3
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 1100940,
@@ -16032,7 +19236,27 @@
       "url": "https://sapl.cujubim.ro.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2025-09-08",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 910,
+          "materialegislativa": 541,
+          "normajuridica": 8
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 1100098,
@@ -16044,7 +19268,25 @@
       "url": "https://sapl.espigaodoeste.ro.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2025-05-13",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 1100106,
@@ -16056,7 +19298,25 @@
       "url": "https://sapl.guajaramirim.ro.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-25",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 1101104,
@@ -16068,7 +19328,25 @@
       "url": "https://sapl.itapuadooeste.ro.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2019-05-30",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 1100114,
@@ -16950,7 +20228,27 @@
       "url": "https://sapl.constantina.rs.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-07",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 8346,
+          "materialegislativa": 2224,
+          "normajuridica": 4659
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 4305871,
@@ -16962,7 +20260,27 @@
       "url": "https://sapl.coronelbarros.rs.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2026-01-19",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 156,
+          "normajuridica": 115
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 4306379,
@@ -16974,7 +20292,27 @@
       "url": "https://sapl.dilermandodeaguiar.rs.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2014-10-22",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 367,
+          "materialegislativa": 2391,
+          "normajuridica": 212
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 4306403,
@@ -16986,7 +20324,27 @@
       "url": "https://sapl.doisirmaos.rs.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 9,
+          "materialegislativa": 5437,
+          "normajuridica": 5715
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 4306924,
@@ -16998,7 +20356,28 @@
       "url": "https://sapl.engenhovelho.rs.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-10-20",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 78
+        },
+        "votos_nominais_publicados": false,
+        "erros": [
+          "normajuridica: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4307005,
@@ -17010,7 +20389,28 @@
       "url": "https://sapl.erechim.rs.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-03-28",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 46048,
+          "materialegislativa": 23336
+        },
+        "votos_nominais_publicados": true,
+        "erros": [
+          "normajuridica: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4307609,
@@ -17022,7 +20422,25 @@
       "url": "https://sapl.estanciavelha.rs.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2014-04-10",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4307708,
@@ -17034,7 +20452,25 @@
       "url": "https://sapl.esteio.rs.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-04",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4308805,
@@ -17046,7 +20482,25 @@
       "url": "https://sapl.generalcamara.rs.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-21",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4309100,
@@ -17058,7 +20512,25 @@
       "url": "https://sapl.gramado.rs.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-07",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4311106,
@@ -17646,7 +21118,25 @@
       "url": "https://sapl.garopaba.sc.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2023-09-15",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4206207,
@@ -17658,7 +21148,25 @@
       "url": "https://sapl.gravatal.sc.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-22",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4206603,
@@ -17670,7 +21178,25 @@
       "url": "https://sapl.guarujadosul.sc.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2017-08-30",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4207403,
@@ -17682,7 +21208,25 @@
       "url": "https://sapl.imbuia.sc.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-29",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4207601,
@@ -17694,7 +21238,25 @@
       "url": "https://sapl.ipira.sc.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2025-06-12",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4208450,
@@ -17706,7 +21268,25 @@
       "url": "https://sapl.itapoa.sc.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-07",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 4210001,
@@ -17910,7 +21490,25 @@
       "url": "https://sapl.estancia.se.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2025-05-22",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2802403,
@@ -17922,7 +21520,25 @@
       "url": "https://sapl.gararu.se.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-21",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 2803500,
@@ -19936,7 +23552,27 @@
       "url": "https://sapl.crixasdotocantins.to.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-04",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 133,
+          "normajuridica": 353
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 1707108,
@@ -19948,7 +23584,27 @@
       "url": "https://sapl.divinopolisdotocantins.to.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2023-01-26",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 1894,
+          "materialegislativa": 601,
+          "normajuridica": 157
+        },
+        "votos_nominais_publicados": true,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 1707207,
@@ -19960,7 +23616,27 @@
       "url": "https://sapl.doisirmaosdotocantins.to.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-05-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": true,
+        "totais": {
+          "votoparlamentar": 0,
+          "materialegislativa": 235,
+          "normajuridica": 203
+        },
+        "votos_nominais_publicados": false,
+        "erros": []
+      }
     },
     {
       "cod_ibge": 1707553,
@@ -19972,7 +23648,25 @@
       "url": "https://sapl.fatima.to.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-07-20",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 1707652,
@@ -19984,7 +23678,25 @@
       "url": "https://sapl.figueiropolis.to.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-21",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 1708205,
@@ -19996,7 +23708,25 @@
       "url": "https://sapl.formosodoaraguaia.to.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2018-06-21",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 1709500,
@@ -20008,7 +23738,25 @@
       "url": "https://sapl.gurupi.to.leg.br/",
       "hospedagem_interlegis": true,
       "data_ativacao": "2021-05-11",
-      "verificacao": null
+      "verificacao": {
+        "em": "2026-11-06",
+        "robots": {
+          "status": 200,
+          "crawl_delay_s": 60,
+          "intervalo_usado_s": 61,
+          "disallow": [
+            "/materia/docacessorio/pdf/*",
+            "/materia/docacessorio/zip/*"
+          ]
+        },
+        "api_permitida": true,
+        "api_responde": null,
+        "totais": {},
+        "votos_nominais_publicados": null,
+        "erros": [
+          "votoparlamentar: orçamento acabou antes da consulta"
+        ]
+      }
     },
     {
       "cod_ibge": 1711902,
@@ -20274,8 +24022,8 @@
   "sem_municipio": [],
   "resumo": {
     "camaras_com_sapl": 1155,
-    "verificadas": 328,
-    "api_responde": 232,
-    "com_votos_nominais": 153
+    "verificadas": 528,
+    "api_responde": 304,
+    "com_votos_nominais": 197
   }
 }
