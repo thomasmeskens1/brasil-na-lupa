@@ -3,8 +3,8 @@
   "descricao": "Registro dos tribunais de contas acompanhados ou planejados. Cada órgão ativo tem um coletor em scripts/coleta/tribunais-contas/<id>/ e uma pasta em dados/tribunais-contas/<id>/, no mesmo formato.",
   "contagens": {
     "total": 33,
-    "ativa": 7,
-    "planejada": 26
+    "ativa": 8,
+    "planejada": 25
   },
   "itens": [
     {
@@ -546,9 +546,27 @@
       "nome": "Tribunal de Contas do Estado do Rio Grande do Sul",
       "esfera": "estadual",
       "uf": "RS",
-      "jurisdiciona": null,
+      "jurisdiciona": "Estado do Rio Grande do Sul e seus 497 municípios",
       "site_oficial": "https://tcers.tc.br/",
       "fontes": [
+        {
+          "titulo": "Portal de Dados Abertos do TCE-RS — Decisões (arquivos anuais desde 2011)",
+          "url": "https://dados.tce.rs.gov.br/dataset/decisoes-2026",
+          "orgao": "Tribunal de Contas do Estado do Rio Grande do Sul (TCE-RS)",
+          "acessado_em": "2026-11-06"
+        },
+        {
+          "titulo": "Pesquisa de Jurisprudência do TCE-RS (base Decisões)",
+          "url": "https://portal.tce.rs.gov.br/app/pesquisa/jurisprudencia/pesquisa",
+          "orgao": "Tribunal de Contas do Estado do Rio Grande do Sul (TCE-RS)",
+          "acessado_em": "2026-11-06"
+        },
+        {
+          "titulo": "Contas do Governador — página Parecer Prévio do TCE-RS",
+          "url": "https://tcers.tc.br/parecer-previo/",
+          "orgao": "Tribunal de Contas do Estado do Rio Grande do Sul (TCE-RS)",
+          "acessado_em": "2026-11-06"
+        },
         {
           "titulo": "Página inicial — Tribunal de Contas do Estado do Rio Grande do Sul",
           "url": "https://tcers.tc.br/",
@@ -556,10 +574,18 @@
           "acessado_em": "2026-11-02"
         }
       ],
-      "situacao_coleta": "planejada",
-      "robots_e_restricoes": null,
-      "conferencia": "Nome conferido no texto da página inicial (grafado em maiúsculas). Observação: uma das requisições de teste recebeu a página de verificação anti-robô do serviço de proteção do site; ela não foi contornada.",
-      "lacunas": []
+      "situacao_coleta": "ativa",
+      "robots_e_restricoes": "robots.txt de dados.tce.rs.gov.br, portal.tce.rs.gov.br e tcers.tc.br lido a cada execução. No portal de dados abertos só os arquivos de /dados/ (o /api/ é proibido e não é usado), com o Crawl-delay de 10 s; na pesquisa de jurisprudência só o serviço público de busca, sem login (/aplicprod/ é proibido e não é usado), pausa de 3 s. Os PDFs do parecer do Governador não são baixados; só o link oficial é guardado. A lista de contas irregulares (traz CPF) não é usada. Em 06/11/2026 a página tcers.tc.br/parecer-previo/ recusou o coletor (HTTP 403 do serviço de proteção do site); não foi contornado.",
+      "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
+      "lacunas": [
+        "Decisões sem exercício na pesquisa de jurisprudência não são exibidas (2025: 228; 2026: 160; sessões de 2011 a 2024: 114, em 06/11/2026)",
+        "Santana do Livramento: os dados abertos grafam \"SANTANA DO LIVRAMENTO\" e a lista oficial \"Sant'Ana do Livramento\"; sem casamento exato, os pareceres desse município não são exibidos",
+        "Contas do Governador: a página oficial do parecer prévio recusou o coletor (HTTP 403); só os exercícios com decisão do Tribunal Pleno nos dados abertos e exercício na pesquisa de jurisprudência são exibidos (2016 e 2018 a 2022), sem os PDFs",
+        "Ressalvas, votação e trânsito em julgado não constam nos dados abertos de decisões",
+        "Julgamento das contas pela Assembleia Legislativa e pelas Câmaras Municipais ainda não coletado"
+      ],
+      "coletor": "scripts/coleta/tribunais-contas/tce-rs/coletar.mjs",
+      "dados": "dados/tribunais-contas/tce-rs/"
     },
     {
       "id": "tce-ro",
