@@ -1,0 +1,131 @@
+{
+  "atualizado_em": "2026-11-06T10:37:22.964Z",
+  "ultima_execucao": "2026-11-06T10:37:12.619Z",
+  "uf": "BA",
+  "casa": "cm-antas",
+  "orgao": "Câmara Municipal de Antas",
+  "host": "sapl.antas.ba.leg.br",
+  "periodo": {
+    "inicio": null,
+    "fim": "2026-11-06"
+  },
+  "modo": "incremental",
+  "fontes": [
+    {
+      "titulo": "SAPL — Câmara Municipal de Antas (API REST pública)",
+      "url": "https://sapl.antas.ba.leg.br/api/",
+      "orgao": "Câmara Municipal de Antas",
+      "acessado_em": "2026-11-06"
+    }
+  ],
+  "robots": {
+    "sapl.antas.ba.leg.br": null
+  },
+  "execucao": {
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
+  },
+  "cobertura": {
+    "registrovotacao": {
+      "desde": null,
+      "concluida": false
+    },
+    "votoparlamentar": {
+      "desde": null,
+      "concluida": false
+    },
+    "ordemdia": {
+      "desde": null,
+      "concluida": false
+    },
+    "expedientemateria": {
+      "desde": null,
+      "concluida": false
+    },
+    "sessaoplenaria": {
+      "desde": null,
+      "concluida": false
+    },
+    "materialegislativa": {
+      "desde": null,
+      "concluida": false
+    },
+    "normajuridica": {
+      "desde": null,
+      "concluida": false
+    },
+    "tramitacao": {
+      "desde": null,
+      "concluida": false
+    }
+  },
+  "observacoes": [
+    "Fonte: API REST pública do SAPL 3 (Interlegis) da Câmara Municipal. robots.txt lido antes de qualquer outra requisição; no máximo 1 requisição a cada 61 s (ou Crawl-delay + 1 s) por host, inclusive entre execuções; /materia/docacessorio/ nunca é acessado; nenhum PDF é baixado.",
+    "Carga incremental e retomável: cada rota é lida do registro mais novo para o mais antigo (o=-id); o cursor guarda as faixas de ids já lidas e a cobertura (data mais antiga contígua). Prioridade: o que é novo; depois retroage até o início da legislatura atual.",
+    "Tipo de votação vem do item da pauta (Ordem do Dia ou Expediente): 1 Simbólica, 2 Nominal, 3 Secreta. Voto individual só a partir do registro oficial por parlamentar (votoparlamentar), com o rótulo literal da fonte (\"Não Votou\" não é voto contrário). Nunca deduzido de \"unanimidade\" nem dos totais.",
+    "Votação nominal sem voto por parlamentar na fonte: \"Informação não disponível em fonte oficial\", só depois que a coleta dos votos já passou da data da votação; antes disso a situação é \"em-coleta\".",
+    "Votação simbólica: placar null e votos vazios; os números lançados no registro ficam em \"totais_registrados\" e não são votos.",
+    "Partido no voto: filiação registrada no SAPL vigente na data da votação; sem filiação registrada ou com mais de uma, null.",
+    "Sem CPF, RG, telefone, endereço, data de nascimento, IP ou usuário do sistema; e-mail só do domínio institucional da Casa. Ementas, observações e tramitações passam pelo mascaramento de nomes de particulares (diretriz 12); trechos em dúvida ficam marcados até a curadoria (revisao/mascaras.json).",
+    "Datas impossíveis ou posteriores à coleta (ex.: erros de digitação) ficam null, com o valor bruto anotado em lacunas; nada é corrigido."
+  ],
+  "contagens": {
+    "proposicoes": 0,
+    "normas": 0,
+    "sessoes": 0,
+    "itens_pauta": 0,
+    "votacoes": 0,
+    "votacoes_por_situacao_dos_votos": {},
+    "votos_individuais": 0
+  },
+  "cursor": {
+    "fluxos": {
+      "registrovotacao": {
+        "faixas": [],
+        "concluido": false,
+        "tamanho_pagina": null
+      },
+      "votoparlamentar": {
+        "faixas": [],
+        "concluido": false,
+        "tamanho_pagina": null
+      },
+      "ordemdia": {
+        "faixas": [],
+        "concluido": false,
+        "tamanho_pagina": null
+      },
+      "expedientemateria": {
+        "faixas": [],
+        "concluido": false,
+        "tamanho_pagina": null
+      },
+      "sessaoplenaria": {
+        "faixas": [],
+        "concluido": false,
+        "tamanho_pagina": null
+      },
+      "materialegislativa": {
+        "faixas": [],
+        "concluido": false,
+        "tamanho_pagina": null
+      },
+      "normajuridica": {
+        "faixas": [],
+        "concluido": false,
+        "tamanho_pagina": null
+      },
+      "tramitacao": {
+        "faixas": [],
+        "concluido": false,
+        "tamanho_pagina": null
+      }
+    },
+    "tabelas_em": {},
+    "ultima_requisicao": "2026-11-06T10:37:12.619Z",
+    "pendencias_inexistentes": [],
+    "page_size_solicitado": 1000
+  }
+}
