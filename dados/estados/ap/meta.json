@@ -1,0 +1,141 @@
+{
+  "atualizado_em": "2026-11-06T11:01:31.977Z",
+  "ultima_execucao": "2026-11-06T10:58:48.384Z",
+  "uf": "AP",
+  "casa": "alap",
+  "orgao": "Assembleia Legislativa do Estado do Amapá (ALAP)",
+  "periodo": {
+    "anos": [
+      2026
+    ],
+    "fim": "2026-11-06"
+  },
+  "modo": "incremental",
+  "fontes": [
+    {
+      "titulo": "Proposições — eLegis da ALAP",
+      "url": "https://elegis.al.ap.leg.br/portal/proposicoes",
+      "orgao": "Assembleia Legislativa do Estado do Amapá (ALAP)",
+      "acessado_em": "2026-11-06"
+    },
+    {
+      "titulo": "Sessões — eLegis da ALAP",
+      "url": "https://elegis.al.ap.leg.br/portal/sessoes",
+      "orgao": "Assembleia Legislativa do Estado do Amapá (ALAP)",
+      "acessado_em": "2026-11-06"
+    },
+    {
+      "titulo": "Legislação — eLegis da ALAP",
+      "url": "https://elegis.al.ap.leg.br/portal/legislacao",
+      "orgao": "Assembleia Legislativa do Estado do Amapá (ALAP)",
+      "acessado_em": "2026-11-06"
+    },
+    {
+      "titulo": "Deputados — portal da ALAP",
+      "url": "https://al.ap.leg.br/pagina.php?pg=exibir_legislatura",
+      "orgao": "Assembleia Legislativa do Estado do Amapá (ALAP)",
+      "acessado_em": "2026-11-06"
+    }
+  ],
+  "robots": {
+    "al.ap.leg.br": {
+      "url": "https://al.ap.leg.br/robots.txt",
+      "status": 403,
+      "lido_em": "2026-11-06T10:58:48.395Z",
+      "crawl_delay_s": null,
+      "intervalo_usado_s": 3,
+      "disallow": [],
+      "observacao": "sem robots.txt (HTTP 403): nenhuma restrição declarada (RFC 9309)"
+    },
+    "elegis.al.ap.leg.br": {
+      "url": "https://elegis.al.ap.leg.br/robots.txt",
+      "status": 200,
+      "lido_em": "2026-11-06T10:58:51.574Z",
+      "crawl_delay_s": null,
+      "intervalo_usado_s": 3,
+      "disallow": [],
+      "observacao": "robots.txt lido e obedecido"
+    }
+  },
+  "execucao": {
+    "requisicoes": 56,
+    "falhas": []
+  },
+  "contagens": {
+    "parlamentares": 24,
+    "proposicoes_por_ano": {
+      "2026": 773
+    },
+    "normas_por_ano": {
+      "2026": 534
+    },
+    "votacoes_por_ano": {
+      "2026": 50
+    },
+    "listas_proposicoes": {
+      "2026 PLO": {
+        "informado": 224,
+        "lidos": 224
+      },
+      "2026 PLC": {
+        "informado": 7,
+        "lidos": 7
+      },
+      "2026 PEC": {
+        "informado": 0,
+        "lidos": 0
+      },
+      "2026 PR": {
+        "informado": 7,
+        "lidos": 7
+      },
+      "2026 VET": {
+        "informado": 12,
+        "lidos": 12
+      },
+      "2026 PDL": {
+        "informado": 523,
+        "lidos": 523
+      }
+    },
+    "listas_legislacao": {
+      "2026 Lei": {
+        "informado": 70,
+        "lidos": 70
+      },
+      "2026 Lei Complementar": {
+        "informado": 6,
+        "lidos": 6
+      },
+      "2026 Emenda Constitucional": {
+        "informado": 0,
+        "lidos": 0
+      },
+      "2026 Resolução": {
+        "informado": 7,
+        "lidos": 7
+      },
+      "2026 Decreto Legislativo": {
+        "informado": 451,
+        "lidos": 451
+      }
+    },
+    "sessoes_na_lista_oficial": 119,
+    "fichas_lidas_nesta_execucao": 1,
+    "proposicoes_sem_ficha": 612,
+    "proposicoes_com_pagina_de_votacao": 50,
+    "paginas_de_votacao_lidas_nesta_execucao": 1,
+    "votacoes_nao_conferidas": 0,
+    "votacoes_sem_data": 0,
+    "votos_sem_ligacao_com_deputado": 10
+  },
+  "observacoes": [
+    "Fontes: eLegis da Assembleia Legislativa do Amapá (páginas HTML e CSV; robots.txt \"User-agent: * / Disallow:\", tudo liberado) e portal institucional da ALAP (lista de deputados; o robots.txt responde HTTP 403, sem regra declarada). Intervalo mínimo de 3 s entre requisições ao mesmo host. O próprio eLegis avisa que está em implantação e que as informações podem não aparecer em tempo real.",
+    "Deputados: página \"Deputados\" da legislatura atual (nome parlamentar e partido, como escritos na página). As páginas de perfil não são acessadas. O voto é ligado ao deputado só quando o nome da lista de votação é idêntico ao da página (sem acentos e maiúsculas).",
+    "Proposições: projetos de lei ordinária e complementar, propostas de emenda à Constituição, projetos de resolução e de decreto legislativo e vetos do Governador, com data de protocolo, origem e ementa da lista do eLegis. Indicações, moções e requerimentos não são coletados. A ficha de cada proposição (regime, texto original e \"Movimentação\") é lida aos poucos; a ficha não mostra a situação, e o site mostra o último registro da movimentação.",
+    "Votações: quando a ficha tem o botão \"Votação\", a página traz o nome de cada deputado com o voto (Favorável, Contra, Abstenção, Sem voto) e os totais. A votação só é gravada quando o número de nomes confere com os totais. A página não escreve o resultado nem o partido; a data vem da lista oficial de sessões, só quando o nome da sessão é único e confere com a movimentação. Deputados que não aparecem na lista não têm voto registrado (\"Informação não disponível em fonte oficial\").",
+    "Atas das sessões: trazem em texto corrido o resultado das matérias e os ausentes; não são lidas nesta etapa.",
+    "Normas: lista \"Legislação\" do eLegis (leis, leis complementares, emendas constitucionais, resoluções e decretos legislativos), com número e data do Diário Oficial do Estado, projeto de origem e texto integral.",
+    "Decretos do Governador: publicados só no Diário Oficial do Estado (DIOFE, PDF). Não são coletados: o servidor diofe.portal.ap.gov.br não respondeu em 06/11/2026."
+  ]
+}

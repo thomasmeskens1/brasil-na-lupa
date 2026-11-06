@@ -52,7 +52,12 @@ Situação em **04/11/2026** (PA e SC entraram no ar nesta data). O site já aco
 
 ### Amapá (AP)
 - **O que a fonte tem:** o sistema eLegis da Assembleia mostra projetos, atas e leis em páginas HTML, sem API (o sistema se diz "em implantação"). A ata traz o resultado ("unanimidade dos presentes") e a lista de ausentes, sem voto nominal. O Diário Oficial usa a mesma plataforma do Amazonas, com lista em JSON e PDF.
-- **O que falta:** escrever um raspador do eLegis (projetos, atas e leis) e um coletor do Diário Oficial para os decretos. O voto de cada deputado fica "Informação não disponível em fonte oficial". Esforço médio.
+- **Conferido em 06/11/2026:** a ficha de parte das proposições no eLegis tem o botão "Votação" (`/portal/proposicao/{id}/votacao`, também em CSV), com o nome de cada deputado, o voto (Favorável, Contra, Abstenção, Sem voto) e os totais. A página não escreve o resultado nem o partido.
+- **Feito:** coletor novo (`scripts/coleta/estados/ap/`) para o eLegis (proposições, ficha com movimentação, página "Votação", lista de sessões em CSV e legislação) e a lista de deputados do portal da ALAP. Coleta real gravada em `dados/estados/ap/` (ver `meta.json` → `contagens`). A votação só é gravada quando os nomes conferem com os totais da página; a data vem da lista oficial de sessões, só quando o nome da sessão é único e confere com a movimentação.
+- **O que falta:**
+  1. Incluir no workflow diário. Esforço baixo.
+  2. Resultado das votações: está só nas atas, em texto corrido. Esforço médio.
+  3. Decretos do Governador: só no Diário Oficial (DIOFE, PDF); o servidor não respondeu em 06/11/2026. Esforço médio.
 
 ### Ceará (CE)
 - **O que a fonte tem:** projetos em páginas HTML do sistema antigo (`www2`), com andamento e número da lei. Há 60 votações nominais publicadas entre 2023 e 2026, cada uma em PDF, com um índice em CSV no Portal da Transparência. O Diário Oficial sai em PDF com endereço previsível.
