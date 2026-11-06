@@ -35,12 +35,12 @@ jobs:
       - name: Testes dos coletores
         run: node scripts/coleta/municipios/testes.mjs
       - name: Registro das Câmaras (verifica robots.txt e API)
-        run: node scripts/coleta/municipios/registro.mjs --amostra todas --max 120
+        run: node scripts/coleta/municipios/registro.mjs --amostra todas --max 200
       - name: Coleta (SAPL das Câmaras e Siconfi, em paralelo)
         env:
           COLETA_ORCAMENTO_MIN: ${{ inputs.orcamento || 60 }}
         run: |
-          node scripts/coleta/municipios/sapl.mjs --max 40 & a=$!
+          node scripts/coleta/municipios/sapl.mjs --max 120 & a=$!
           node scripts/coleta/municipios/siconfi.mjs & b=$!
           falhou=0
           for p in $a $b; do wait $p || falhou=1; done

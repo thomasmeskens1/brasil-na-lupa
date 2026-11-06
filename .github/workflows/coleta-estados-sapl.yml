@@ -51,7 +51,10 @@ jobs:
           node scripts/coleta/estados/rs/coletar.mjs & b=$!
           node scripts/coleta/estados/mg/coletar.mjs & c=$!
           falhou=0
-          for p in $a $b $c; do wait $p || falhou=1; done
+          for p in $a $c; do wait $p || falhou=1; done
+          # RS: servidor da Assembleia às vezes inacessível a partir do GitHub; mantém os dados anteriores
+          # e não derruba a coleta dos outros estados (fica registrado como aviso na execução).
+          wait $b || echo "::warning::Assembleia do RS indisponível nesta execução; mantidos os dados da última coleta."
           exit $falhou
       - name: Registrar mudanças (inclui o cursor em meta.json, para continuar de onde parou)
         if: always()
