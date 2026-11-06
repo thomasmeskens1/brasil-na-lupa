@@ -1,6 +1,6 @@
 {
-  "atualizado_em": "2026-11-06T11:01:31.977Z",
-  "ultima_execucao": "2026-11-06T10:58:48.384Z",
+  "atualizado_em": "2026-11-06T19:40:26.295Z",
+  "ultima_execucao": "2026-11-06T19:31:42.244Z",
   "uf": "AP",
   "casa": "alap",
   "orgao": "Assembleia Legislativa do Estado do Amapá (ALAP)",
@@ -40,17 +40,17 @@
   "robots": {
     "al.ap.leg.br": {
       "url": "https://al.ap.leg.br/robots.txt",
-      "status": 403,
-      "lido_em": "2026-11-06T10:58:48.395Z",
+      "status": null,
+      "lido_em": "2026-11-06T19:31:42.246Z",
       "crawl_delay_s": null,
       "intervalo_usado_s": 3,
       "disallow": [],
-      "observacao": "sem robots.txt (HTTP 403): nenhuma restrição declarada (RFC 9309)"
+      "observacao": "robots.txt inacessível (fetch failed); host não coletado nesta execução"
     },
     "elegis.al.ap.leg.br": {
       "url": "https://elegis.al.ap.leg.br/robots.txt",
       "status": 200,
-      "lido_em": "2026-11-06T10:58:51.574Z",
+      "lido_em": "2026-11-06T19:31:52.766Z",
       "crawl_delay_s": null,
       "intervalo_usado_s": 3,
       "disallow": [],
@@ -58,8 +58,10 @@
     }
   },
   "execucao": {
-    "requisicoes": 56,
-    "falhas": []
+    "requisicoes": 173,
+    "falhas": [
+      "deputados: bloqueado pelo robots.txt de al.ap.leg.br: /pagina.php"
+    ]
   },
   "contagens": {
     "parlamentares": 24,
@@ -70,7 +72,8 @@
       "2026": 534
     },
     "votacoes_por_ano": {
-      "2026": 50
+      "2026": 89,
+      "sem-data": 1
     },
     "listas_proposicoes": {
       "2026 PLO": {
@@ -121,13 +124,13 @@
       }
     },
     "sessoes_na_lista_oficial": 119,
-    "fichas_lidas_nesta_execucao": 1,
-    "proposicoes_sem_ficha": 612,
-    "proposicoes_com_pagina_de_votacao": 50,
-    "paginas_de_votacao_lidas_nesta_execucao": 1,
+    "fichas_lidas_nesta_execucao": 80,
+    "proposicoes_sem_ficha": 532,
+    "proposicoes_com_pagina_de_votacao": 96,
+    "paginas_de_votacao_lidas_nesta_execucao": 40,
     "votacoes_nao_conferidas": 0,
-    "votacoes_sem_data": 0,
-    "votos_sem_ligacao_com_deputado": 10
+    "votacoes_sem_data": 1,
+    "votos_sem_ligacao_com_deputado": 21
   },
   "observacoes": [
     "Fontes: eLegis da Assembleia Legislativa do Amapá (páginas HTML e CSV; robots.txt \"User-agent: * / Disallow:\", tudo liberado) e portal institucional da ALAP (lista de deputados; o robots.txt responde HTTP 403, sem regra declarada). Intervalo mínimo de 3 s entre requisições ao mesmo host. O próprio eLegis avisa que está em implantação e que as informações podem não aparecer em tempo real.",

@@ -1,11 +1,11 @@
 {
-  "atualizado_em": "2026-11-06T11:06:15.294Z",
-  "ultima_execucao": "2026-11-06T11:06:15.294Z",
+  "atualizado_em": "2026-11-06T18:52:27.955Z",
+  "ultima_execucao": "2026-11-06T18:52:27.955Z",
   "tribunal": "tce-rr",
   "modo": "incremental",
   "interrompido_por_orcamento": false,
   "contagens": {
-    "pareceres_na_serie": 471,
+    "pareceres_na_serie": null,
     "pareceres_lidos_nesta_execucao": 0,
     "pareceres_pendentes_de_leitura": 0,
     "pareceres_com_erro_de_leitura": 0,
@@ -468,7 +468,7 @@
     }
   ],
   "robots_e_restricoes": [
-    "robots.txt de transparencia.tcerr.tc.br (HTTP 404, sem regras) e de sei.tcerr.tc.br (HTTP 404, sem regras) lidos no início de cada execução; robots inacessível bloqueia o host.",
+    "robots.txt de transparencia.tcerr.tc.br (HTTP sem resposta: robots.txt inacessível (fetch failed)) e de sei.tcerr.tc.br (HTTP sem resposta: robots.txt inacessível (fetch failed)) lidos no início de cada execução; robots inacessível bloqueia o host.",
     "Uma requisição por vez, pausa mínima de 2 s (ou o Crawl-delay, se maior), User-Agent identificado; sem login, token ou CAPTCHA.",
     "Cada parecer é lido uma única vez (índice em pareceres.json); documentos grandes são lidos só até 900 KB, onde ficam cabeçalho, ementa e decisão.",
     "Nomes de advogados, procuradores e servidores do cabeçalho não são copiados; só o campo “Responsável” (gestores das contas)."
@@ -486,12 +486,14 @@
     "Pareceres sobre contas de gestão, tomadas de contas e tomadas de contas especiais ficam guardados em “outros_pareceres” e ainda não são exibidos"
   ],
   "removidos": [],
-  "erros": [],
+  "erros": [
+    "Lista da série Parecer Prévio: caminho proibido pelo robots.txt: /api/sessoes/deliberacao"
+  ],
   "estatisticas_http": {
-    "requisicoes": 8,
+    "requisicoes": 2,
     "retentativas": 0,
-    "bytes": 214416,
+    "bytes": 0,
     "falhas": []
   },
-  "duracao_s": 18
+  "duracao_s": 21
 }

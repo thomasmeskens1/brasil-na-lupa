@@ -1,6 +1,6 @@
 {
  "atualizado_em": "2026-11-06T11:12:16.347Z",
- "ultima_execucao": "2026-11-06T11:12:16.347Z",
+ "ultima_execucao": "2026-11-06T18:52:52.248Z",
  "tribunal": "tce-rs",
  "modo": "completo",
  "interrompido_por_orcamento": false,
@@ -430,21 +430,10 @@
  ],
  "robots": {
   "dados.tce.rs.gov.br": {
-   "status": 200,
-   "disallow": [
-    "/dataset/rate/",
-    "/revision/",
-    "/dataset/*/history",
-    "/api/"
-   ],
-   "crawl_delay_s": 10
+   "bloqueado": "robots.txt de dados.tce.rs.gov.br inacessível (UND_ERR_CONNECT_TIMEOUT)"
   },
   "portal.tce.rs.gov.br": {
-   "status": 200,
-   "disallow": [
-    "/aplicprod/"
-   ],
-   "crawl_delay_s": null
+   "bloqueado": "robots.txt de portal.tce.rs.gov.br inacessível (UND_ERR_CONNECT_TIMEOUT)"
   },
   "tcers.tc.br": {
    "status": 200,
@@ -466,6 +455,8 @@
   "Julgamento político (Assembleia Legislativa e Câmaras Municipais) ainda não coletado."
  ],
  "bloqueios": [
+  "robots.txt de dados.tce.rs.gov.br inacessível (UND_ERR_CONNECT_TIMEOUT)",
+  "robots.txt de portal.tce.rs.gov.br inacessível (UND_ERR_CONNECT_TIMEOUT)",
   "HTTP 403 em https://tcers.tc.br/parecer-previo/: acesso recusado pelo servidor; não contornado"
  ],
  "erros": [
