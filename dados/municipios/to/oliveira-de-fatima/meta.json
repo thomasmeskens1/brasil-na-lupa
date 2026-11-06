@@ -1,0 +1,174 @@
+{
+  "atualizado_em": "2026-11-06T23:08:35.625Z",
+  "ultima_execucao": "2026-11-06T22:45:00.900Z",
+  "uf": "TO",
+  "casa": "cm-oliveira-de-fatima",
+  "orgao": "Câmara Municipal de Oliveira de Fátima",
+  "host": "sapl.oliveiradefatima.to.leg.br",
+  "periodo": {
+    "inicio": "2025-01-01",
+    "fim": "2026-11-06"
+  },
+  "modo": "incremental",
+  "fontes": [
+    {
+      "titulo": "SAPL — Câmara Municipal de Oliveira de Fátima (API REST pública)",
+      "url": "https://sapl.oliveiradefatima.to.leg.br/api/",
+      "orgao": "Câmara Municipal de Oliveira de Fátima",
+      "acessado_em": "2026-11-06"
+    }
+  ],
+  "robots": {
+    "sapl.oliveiradefatima.to.leg.br": {
+      "lido_em": "2026-11-06T22:45:00.900Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
+  },
+  "execucao": {
+    "requisicoes": 24,
+    "falhas": []
+  },
+  "cobertura": {
+    "registrovotacao": {
+      "desde": null,
+      "concluida": true
+    },
+    "votoparlamentar": {
+      "desde": null,
+      "concluida": true
+    },
+    "ordemdia": {
+      "desde": null,
+      "concluida": true
+    },
+    "expedientemateria": {
+      "desde": null,
+      "concluida": true
+    },
+    "sessaoplenaria": {
+      "desde": null,
+      "concluida": true
+    },
+    "materialegislativa": {
+      "desde": "0000-00-00",
+      "concluida": true
+    },
+    "normajuridica": {
+      "desde": "0000-00-00",
+      "concluida": true
+    },
+    "tramitacao": {
+      "desde": null,
+      "concluida": true
+    }
+  },
+  "observacoes": [
+    "Fonte: API REST pública do SAPL 3 (Interlegis) da Câmara Municipal. robots.txt lido antes de qualquer outra requisição; no máximo 1 requisição a cada 61 s (ou Crawl-delay + 1 s) por host, inclusive entre execuções; /materia/docacessorio/ nunca é acessado; nenhum PDF é baixado.",
+    "Carga incremental e retomável: cada rota é lida do registro mais novo para o mais antigo (o=-id); o cursor guarda as faixas de ids já lidas e a cobertura (data mais antiga contígua). Prioridade: o que é novo; depois retroage até o início da legislatura atual.",
+    "Tipo de votação vem do item da pauta (Ordem do Dia ou Expediente): 1 Simbólica, 2 Nominal, 3 Secreta. Voto individual só a partir do registro oficial por parlamentar (votoparlamentar), com o rótulo literal da fonte (\"Não Votou\" não é voto contrário). Nunca deduzido de \"unanimidade\" nem dos totais.",
+    "Votação nominal sem voto por parlamentar na fonte: \"Informação não disponível em fonte oficial\", só depois que a coleta dos votos já passou da data da votação; antes disso a situação é \"em-coleta\".",
+    "Votação simbólica: placar null e votos vazios; os números lançados no registro ficam em \"totais_registrados\" e não são votos.",
+    "Partido no voto: filiação registrada no SAPL vigente na data da votação; sem filiação registrada ou com mais de uma, null.",
+    "Sem CPF, RG, telefone, endereço, data de nascimento, IP ou usuário do sistema; e-mail só do domínio institucional da Casa. Ementas, observações e tramitações passam pelo mascaramento de nomes de particulares (diretriz 12); trechos em dúvida ficam marcados até a curadoria (revisao/mascaras.json).",
+    "Datas impossíveis ou posteriores à coleta (ex.: erros de digitação) ficam null, com o valor bruto anotado em lacunas; nada é corrigido."
+  ],
+  "contagens": {
+    "parlamentares": 9,
+    "parlamentares_em_exercicio": 9,
+    "proposicoes": 136,
+    "normas": 74,
+    "sessoes": 0,
+    "itens_pauta": 0,
+    "votacoes": 0,
+    "votacoes_por_situacao_dos_votos": {},
+    "votos_individuais": 0
+  },
+  "cursor": {
+    "fluxos": {
+      "registrovotacao": {
+        "faixas": [],
+        "concluido": true,
+        "tamanho_pagina": null,
+        "total_fonte": 0
+      },
+      "votoparlamentar": {
+        "faixas": [],
+        "concluido": true,
+        "tamanho_pagina": null,
+        "total_fonte": 0
+      },
+      "ordemdia": {
+        "faixas": [],
+        "concluido": true,
+        "tamanho_pagina": null,
+        "total_fonte": 0
+      },
+      "expedientemateria": {
+        "faixas": [],
+        "concluido": true,
+        "tamanho_pagina": null,
+        "total_fonte": 0
+      },
+      "sessaoplenaria": {
+        "faixas": [],
+        "concluido": true,
+        "tamanho_pagina": null,
+        "total_fonte": 0
+      },
+      "materialegislativa": {
+        "faixas": [
+          {
+            "hi": 139,
+            "lo": 2,
+            "n": 136,
+            "lo_data": "2015-02-03"
+          }
+        ],
+        "concluido": true,
+        "tamanho_pagina": 100,
+        "total_fonte": 136
+      },
+      "normajuridica": {
+        "faixas": [
+          {
+            "hi": 75,
+            "lo": 2,
+            "n": 74,
+            "lo_data": "2015-02-06"
+          }
+        ],
+        "concluido": true,
+        "tamanho_pagina": null,
+        "total_fonte": 74
+      },
+      "tramitacao": {
+        "faixas": [],
+        "concluido": true,
+        "tamanho_pagina": null,
+        "total_fonte": 0
+      }
+    },
+    "tabelas_em": {
+      "legislaturas": "2026-11-06T22:46:17.889Z",
+      "tipos_resultado": "2026-11-06T22:47:19.162Z",
+      "tipos_materia": "2026-11-06T22:48:20.170Z",
+      "mandatos": "2026-11-06T22:49:22.202Z",
+      "tipos_norma": "2026-11-06T22:58:31.773Z",
+      "tipos_sessao": "2026-11-06T22:59:34.621Z",
+      "partidos": "2026-11-06T23:00:32.630Z",
+      "filiacoes": "2026-11-06T23:01:32.861Z",
+      "parlamentares": "2026-11-06T23:02:35.488Z",
+      "status_tramitacao": "2026-11-06T23:03:34.443Z",
+      "autores": "2026-11-06T23:04:34.475Z"
+    },
+    "ultima_requisicao": "2026-11-06T23:08:23.910Z",
+    "pendencias_inexistentes": [],
+    "page_size_solicitado": 1000
+  }
+}

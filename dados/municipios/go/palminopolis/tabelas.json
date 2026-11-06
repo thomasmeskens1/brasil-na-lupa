@@ -1,0 +1,855 @@
+{
+  "legislaturas": [
+    {
+      "id": 1,
+      "numero": 15,
+      "inicio": "2021-01-01",
+      "fim": "2024-12-31"
+    },
+    {
+      "id": 2,
+      "numero": 14,
+      "inicio": "2017-01-01",
+      "fim": "2020-12-31"
+    },
+    {
+      "id": 3,
+      "numero": 13,
+      "inicio": "2013-01-01",
+      "fim": "2016-12-31"
+    },
+    {
+      "id": 4,
+      "numero": 12,
+      "inicio": "2009-01-01",
+      "fim": "2012-12-31"
+    },
+    {
+      "id": 5,
+      "numero": 11,
+      "inicio": "2005-01-01",
+      "fim": "2008-12-31"
+    },
+    {
+      "id": 6,
+      "numero": 10,
+      "inicio": "2001-01-01",
+      "fim": "2004-12-31"
+    },
+    {
+      "id": 7,
+      "numero": 9,
+      "inicio": "1997-01-01",
+      "fim": "2000-12-31"
+    },
+    {
+      "id": 8,
+      "numero": 8,
+      "inicio": "1993-01-01",
+      "fim": "1996-12-31"
+    },
+    {
+      "id": 9,
+      "numero": 7,
+      "inicio": "1989-01-01",
+      "fim": "1992-12-31"
+    },
+    {
+      "id": 10,
+      "numero": 6,
+      "inicio": "1983-01-31",
+      "fim": "1988-12-31"
+    },
+    {
+      "id": 11,
+      "numero": 5,
+      "inicio": "1977-02-01",
+      "fim": "1982-12-31"
+    },
+    {
+      "id": 12,
+      "numero": 4,
+      "inicio": "1973-01-31",
+      "fim": "1976-12-31"
+    },
+    {
+      "id": 13,
+      "numero": 3,
+      "inicio": "1971-01-31",
+      "fim": "1972-12-31"
+    },
+    {
+      "id": 14,
+      "numero": 2,
+      "inicio": "1967-01-31",
+      "fim": "1970-12-31"
+    },
+    {
+      "id": 15,
+      "numero": 1,
+      "inicio": "1966-01-31",
+      "fim": "1966-12-31"
+    }
+  ],
+  "legislatura_atual": null,
+  "tipos_resultado": [
+    {
+      "id": 1,
+      "nome": "Proposição aprovada em única votação",
+      "natureza": "A"
+    },
+    {
+      "id": 2,
+      "nome": "Proposição rejeitada em única votação",
+      "natureza": "R"
+    },
+    {
+      "id": 3,
+      "nome": "Proposição aprovada em primeira votação",
+      "natureza": "A"
+    },
+    {
+      "id": 4,
+      "nome": "Proposição aprovada em segunda votação",
+      "natureza": "A"
+    },
+    {
+      "id": 5,
+      "nome": "Proposição aprovada em terceira votação",
+      "natureza": "A"
+    },
+    {
+      "id": 6,
+      "nome": "Proposição rejeitada em primeira votação",
+      "natureza": "R"
+    },
+    {
+      "id": 7,
+      "nome": "Proposição rejeitada em segunda votação",
+      "natureza": "R"
+    },
+    {
+      "id": 8,
+      "nome": "Proposição rejeitada em terceira votação",
+      "natureza": "R"
+    }
+  ],
+  "tipos_materia": [
+    {
+      "id": 1,
+      "sigla": "PELOM",
+      "descricao": "Projeto de Emenda à Lei Orgânica"
+    },
+    {
+      "id": 2,
+      "sigla": "PLC",
+      "descricao": "Projeto de Lei Complementar"
+    },
+    {
+      "id": 3,
+      "sigla": "PLO",
+      "descricao": "Projeto de Lei Ordinária"
+    },
+    {
+      "id": 4,
+      "sigla": "PR",
+      "descricao": "Projeto de Resolução"
+    },
+    {
+      "id": 5,
+      "sigla": "PDL",
+      "descricao": "Projeto de Decreto Legislativo"
+    },
+    {
+      "id": 6,
+      "sigla": "SUBST",
+      "descricao": "Substitutivo"
+    },
+    {
+      "id": 7,
+      "sigla": "EMD",
+      "descricao": "Emenda"
+    },
+    {
+      "id": 8,
+      "sigla": "SEMD",
+      "descricao": "Subemenda"
+    },
+    {
+      "id": 9,
+      "sigla": "VETO",
+      "descricao": "Veto"
+    },
+    {
+      "id": 10,
+      "sigla": "REC",
+      "descricao": "Recurso"
+    },
+    {
+      "id": 11,
+      "sigla": "RQ",
+      "descricao": "Requerimento"
+    },
+    {
+      "id": 12,
+      "sigla": "IND",
+      "descricao": "Indicação"
+    },
+    {
+      "id": 13,
+      "sigla": "MOC",
+      "descricao": "Moção"
+    },
+    {
+      "id": 14,
+      "sigla": "PC",
+      "descricao": "Processo de Contas"
+    }
+  ],
+  "tipos_norma": [
+    {
+      "id": 3,
+      "sigla": "DL",
+      "descricao": "Decreto Legislativo"
+    },
+    {
+      "id": 6,
+      "sigla": "ELO",
+      "descricao": "Emenda à Lei Orgânica"
+    },
+    {
+      "id": 8,
+      "sigla": "EST",
+      "descricao": "Estatuto dos Servidores Públicos Municipais"
+    },
+    {
+      "id": 7,
+      "sigla": "LC",
+      "descricao": "Lei Complementar"
+    },
+    {
+      "id": 1,
+      "sigla": "LO",
+      "descricao": "Lei Ordinária"
+    },
+    {
+      "id": 4,
+      "sigla": "LOM",
+      "descricao": "Lei Orgânica Municipal"
+    },
+    {
+      "id": 5,
+      "sigla": "RI",
+      "descricao": "Regimento Interno"
+    },
+    {
+      "id": 2,
+      "sigla": "RES",
+      "descricao": "Resolução"
+    }
+  ],
+  "tipos_sessao": [
+    {
+      "id": 3,
+      "nome": "Sessão Especial"
+    },
+    {
+      "id": 2,
+      "nome": "Sessão Extraordinária"
+    },
+    {
+      "id": 1,
+      "nome": "Sessão Ordinária"
+    },
+    {
+      "id": 4,
+      "nome": "Sessão Solene"
+    }
+  ],
+  "partidos": [
+    {
+      "id": 5,
+      "sigla": "DEM",
+      "nome": "DEMOCRATAS"
+    },
+    {
+      "id": 33,
+      "sigla": "NOVO",
+      "nome": "PARTIDO NOVO"
+    },
+    {
+      "id": 18,
+      "sigla": "PCB",
+      "nome": "PARTIDO COMUNISTA BRASILEIRO"
+    },
+    {
+      "id": 6,
+      "sigla": "PCdoB",
+      "nome": "PARTIDO COMUNISTA DO BRASIL"
+    },
+    {
+      "id": 22,
+      "sigla": "PCO",
+      "nome": "PARTIDO DA CAUSA OPERÁRIA"
+    },
+    {
+      "id": 3,
+      "sigla": "PDT",
+      "nome": "PARTIDO DEMOCRÁTICO TRABALHISTA"
+    },
+    {
+      "id": 30,
+      "sigla": "PEN",
+      "nome": "PARTIDO ECOLÓGICO NACIONAL"
+    },
+    {
+      "id": 20,
+      "sigla": "PHS",
+      "nome": "PARTIDO HUMANISTA DA SOLIDARIEDADE"
+    },
+    {
+      "id": 35,
+      "sigla": "PMB",
+      "nome": "PARTIDO DA MULHER BRASILEIRA"
+    },
+    {
+      "id": 1,
+      "sigla": "PMDB",
+      "nome": "PARTIDO DO MOVIMENTO DEMOCRÁTICO BRASILEIRO"
+    },
+    {
+      "id": 11,
+      "sigla": "PMN",
+      "nome": "PARTIDO DA MOBILIZAÇÃO NACIONAL"
+    },
+    {
+      "id": 23,
+      "sigla": "PODE",
+      "nome": "PODEMOS"
+    },
+    {
+      "id": 16,
+      "sigla": "PP",
+      "nome": "PARTIDO PROGRESSISTA"
+    },
+    {
+      "id": 29,
+      "sigla": "PPL",
+      "nome": "PARTIDO PÁTRIA LIVRE"
+    },
+    {
+      "id": 13,
+      "sigla": "PPS",
+      "nome": "PARTIDO POPULAR SOCIALISTA"
+    },
+    {
+      "id": 27,
+      "sigla": "PR",
+      "nome": "PARTIDO DA REPÚBLICA"
+    },
+    {
+      "id": 25,
+      "sigla": "PRB",
+      "nome": "PARTIDO REPUBLICANO BRASILEIRO"
+    },
+    {
+      "id": 31,
+      "sigla": "PROS",
+      "nome": "PARTIDO REPUBLICANO DA ORDEM SOCIAL"
+    },
+    {
+      "id": 12,
+      "sigla": "PRP",
+      "nome": "PARTIDO REPUBLICANO PROGRESSISTA"
+    },
+    {
+      "id": 19,
+      "sigla": "PRTB",
+      "nome": "PARTIDO RENOVADOR TRABALHISTA BRASILEIRO"
+    },
+    {
+      "id": 7,
+      "sigla": "PSB",
+      "nome": "PARTIDO SOCIALISTA BRASILEIRO"
+    },
+    {
+      "id": 10,
+      "sigla": "PSC",
+      "nome": "PARTIDO SOCIAL CRISTÃO"
+    },
+    {
+      "id": 28,
+      "sigla": "PSD",
+      "nome": "PARTIDO SOCIAL DEMOCRÁTICO"
+    },
+    {
+      "id": 8,
+      "sigla": "PSDB",
+      "nome": "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA"
+    },
+    {
+      "id": 21,
+      "sigla": "PSDC",
+      "nome": "PARTIDO SOCIAL DEMOCRATA CRISTÃO"
+    },
+    {
+      "id": 24,
+      "sigla": "PSL",
+      "nome": "PARTIDO SOCIAL LIBERAL"
+    },
+    {
+      "id": 26,
+      "sigla": "PSOL",
+      "nome": "PARTIDO SOCIALISMO E LIBERDADE"
+    },
+    {
+      "id": 17,
+      "sigla": "PSTU",
+      "nome": "PARTIDO SOCIALISTA DOS TRABALHADORES UNIFICADO"
+    },
+    {
+      "id": 4,
+      "sigla": "PT",
+      "nome": "PARTIDO DOS TRABALHADORES"
+    },
+    {
+      "id": 2,
+      "sigla": "PTB",
+      "nome": "PARTIDO TRABALHISTA BRASILEIRO"
+    },
+    {
+      "id": 9,
+      "sigla": "PTC",
+      "nome": "PARTIDO TRABALHISTA CRISTÃO"
+    },
+    {
+      "id": 15,
+      "sigla": "PTdoB",
+      "nome": "PARTIDO TRABALHISTA DO BRASIL"
+    },
+    {
+      "id": 14,
+      "sigla": "PV",
+      "nome": "PARTIDO VERDE"
+    },
+    {
+      "id": 34,
+      "sigla": "REDE",
+      "nome": "REDE SUSTENTABILIDADE"
+    },
+    {
+      "id": 32,
+      "sigla": "SD",
+      "nome": "SOLIDARIEDADE"
+    },
+    {
+      "id": 36,
+      "sigla": "UNIÃO",
+      "nome": "UNIÃO BRASIL"
+    }
+  ],
+  "filiacoes": [
+    {
+      "id": 1,
+      "parlamentar_id": 1,
+      "partido_id": 16,
+      "inicio": "2020-03-05",
+      "fim": null
+    },
+    {
+      "id": 2,
+      "parlamentar_id": 2,
+      "partido_id": 3,
+      "inicio": "2020-03-16",
+      "fim": null
+    },
+    {
+      "id": 3,
+      "parlamentar_id": 3,
+      "partido_id": 3,
+      "inicio": "2003-04-15",
+      "fim": null
+    },
+    {
+      "id": 4,
+      "parlamentar_id": 4,
+      "partido_id": 16,
+      "inicio": "2020-03-16",
+      "fim": null
+    },
+    {
+      "id": 5,
+      "parlamentar_id": 5,
+      "partido_id": 16,
+      "inicio": "2020-03-05",
+      "fim": null
+    },
+    {
+      "id": 6,
+      "parlamentar_id": 6,
+      "partido_id": 3,
+      "inicio": "2020-03-30",
+      "fim": null
+    },
+    {
+      "id": 7,
+      "parlamentar_id": 7,
+      "partido_id": 3,
+      "inicio": "2020-04-04",
+      "fim": null
+    },
+    {
+      "id": 8,
+      "parlamentar_id": 8,
+      "partido_id": 16,
+      "inicio": "2020-03-05",
+      "fim": null
+    },
+    {
+      "id": 9,
+      "parlamentar_id": 9,
+      "partido_id": 3,
+      "inicio": "2020-03-16",
+      "fim": null
+    }
+  ],
+  "parlamentares": [
+    {
+      "id": 1,
+      "nome": "Anizio Paulino dos Santos Netto",
+      "nome_civil": "Anizio Paulino dos Santos Netto",
+      "ativo": true,
+      "foto": "http://sapl.palminopolis.go.leg.br/media/sapl/public/parlamentar/1/anzio.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 2,
+      "nome": "Argemiro Santos da Cruz",
+      "nome_civil": "Argemiro Santos da Cruz",
+      "ativo": true,
+      "foto": "http://sapl.palminopolis.go.leg.br/media/sapl/public/parlamentar/2/argemiro.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 10,
+      "nome": "Clarindo Alves Costa",
+      "nome_civil": "Clarindo Alves Costa",
+      "ativo": false,
+      "foto": null,
+      "email_institucional": null
+    },
+    {
+      "id": 3,
+      "nome": "Cleber Reges dos Santos",
+      "nome_civil": "Cleber Reges dos Santos",
+      "ativo": true,
+      "foto": "http://sapl.palminopolis.go.leg.br/media/sapl/public/parlamentar/3/cleber.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 11,
+      "nome": "Dirceu Vaz da Rosa",
+      "nome_civil": "Dirceu Vaz da Rosa",
+      "ativo": false,
+      "foto": null,
+      "email_institucional": null
+    },
+    {
+      "id": 4,
+      "nome": "Fernando Alves da Cunha Filho",
+      "nome_civil": "Fernando Alves da Cunha Filho",
+      "ativo": true,
+      "foto": "http://sapl.palminopolis.go.leg.br/media/sapl/public/parlamentar/4/fernando.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 5,
+      "nome": "Graziane Vitorino Santana",
+      "nome_civil": "Graziane Vitorino Santana",
+      "ativo": true,
+      "foto": "http://sapl.palminopolis.go.leg.br/media/sapl/public/parlamentar/5/graziane.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 6,
+      "nome": "Heudillan Cassio Franco Vieira",
+      "nome_civil": "Heudillan Cassio Franco Vieira",
+      "ativo": true,
+      "foto": "http://sapl.palminopolis.go.leg.br/media/sapl/public/parlamentar/6/heudillan.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 12,
+      "nome": "Honório Bomtempo de Souza",
+      "nome_civil": "Honório Bomtempo de Souza",
+      "ativo": false,
+      "foto": null,
+      "email_institucional": null
+    },
+    {
+      "id": 13,
+      "nome": "Joaquim Antônio Cardoso",
+      "nome_civil": "Joaquim Antônio Cardoso",
+      "ativo": false,
+      "foto": null,
+      "email_institucional": null
+    },
+    {
+      "id": 14,
+      "nome": "Lauriston Custódio da Silva",
+      "nome_civil": "Lauriston Custódio da Silva",
+      "ativo": false,
+      "foto": null,
+      "email_institucional": null
+    },
+    {
+      "id": 7,
+      "nome": "Leumar Eterno Torres",
+      "nome_civil": "Leumar Eterno Torres",
+      "ativo": true,
+      "foto": "http://sapl.palminopolis.go.leg.br/media/sapl/public/parlamentar/7/leumar.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 15,
+      "nome": "Livertino Pereira de Morais",
+      "nome_civil": "Livertino Pereira de Morais",
+      "ativo": false,
+      "foto": null,
+      "email_institucional": null
+    },
+    {
+      "id": 8,
+      "nome": "Luciano Bomtempo Gonçalves",
+      "nome_civil": "Luciano Bomtempo Gonçalves",
+      "ativo": true,
+      "foto": "http://sapl.palminopolis.go.leg.br/media/sapl/public/parlamentar/8/luciano.jpeg",
+      "email_institucional": null
+    },
+    {
+      "id": 16,
+      "nome": "Pedro Rufino Lopes",
+      "nome_civil": "Pedro Rufino Lopes",
+      "ativo": false,
+      "foto": null,
+      "email_institucional": null
+    },
+    {
+      "id": 9,
+      "nome": "Sirley Martins Alves do Prado",
+      "nome_civil": "Sirley Martins Alves do Prado",
+      "ativo": true,
+      "foto": "http://sapl.palminopolis.go.leg.br/media/sapl/public/parlamentar/9/sirley.jpg",
+      "email_institucional": null
+    }
+  ],
+  "status_tramitacao": [
+    {
+      "id": 55,
+      "sigla": "ABREVISTA",
+      "descricao": "Abertura de vista"
+    },
+    {
+      "id": 1,
+      "sigla": "ADIAVOTAC",
+      "descricao": "Adiada discussão e votação."
+    },
+    {
+      "id": 4,
+      "sigla": "AGORDIA",
+      "descricao": "Aguardando a inclusão na ordem do dia"
+    },
+    {
+      "id": 5,
+      "sigla": "AGPARECER",
+      "descricao": "Aguardando emissão de parecer da comissão"
+    },
+    {
+      "id": 42,
+      "sigla": "AGINCEX",
+      "descricao": "Aguardando inclusão em expediente"
+    },
+    {
+      "id": 53,
+      "sigla": "ENCVOTA1",
+      "descricao": "Encaminhamento para 1ª votação"
+    },
+    {
+      "id": 48,
+      "sigla": "ENCVOTA2",
+      "descricao": "Encaminhamento para 2ª votação"
+    },
+    {
+      "id": 49,
+      "sigla": "ENCVOTA3",
+      "descricao": "Encaminhamento para 3ª votação"
+    },
+    {
+      "id": 54,
+      "sigla": "ENCPE",
+      "descricao": "Encaminhamento para o Poder Executivo"
+    },
+    {
+      "id": 50,
+      "sigla": "AUTOGRAFO",
+      "descricao": "Encaminhamento para sanção do Prefeito"
+    },
+    {
+      "id": 56,
+      "sigla": "EMAV",
+      "descricao": "Entrega de matéria após abertura de vista"
+    },
+    {
+      "id": 57,
+      "sigla": "DL",
+      "descricao": "Matéria transformada em Decreto Legislativo"
+    },
+    {
+      "id": 22,
+      "sigla": "MTLEI",
+      "descricao": "Matéria transformada em lei"
+    },
+    {
+      "id": 58,
+      "sigla": "RL",
+      "descricao": "Matéria transformada em Resolução"
+    },
+    {
+      "id": 23,
+      "sigla": "PARECCONTR",
+      "descricao": "Parecer contrário da comissão de mérito"
+    },
+    {
+      "id": 52,
+      "sigla": "PARECFAV",
+      "descricao": "Pareceres favoráveis das comissões"
+    },
+    {
+      "id": 13,
+      "sigla": "APROVADA",
+      "descricao": "Proposição aprovada"
+    },
+    {
+      "id": 45,
+      "sigla": "VOTA1",
+      "descricao": "Proposição aprovada em 1ª votação"
+    },
+    {
+      "id": 46,
+      "sigla": "VOTA2",
+      "descricao": "Proposição aprovada em 2ª votação"
+    },
+    {
+      "id": 47,
+      "sigla": "VOTA3",
+      "descricao": "Proposição aprovada em 3ª votação"
+    },
+    {
+      "id": 14,
+      "sigla": "ARQUIVADA",
+      "descricao": "Proposição arquivada"
+    },
+    {
+      "id": 16,
+      "sigla": "DESARQUIV",
+      "descricao": "Proposição desarquivada pelo Autor"
+    },
+    {
+      "id": 17,
+      "sigla": "DISTRCOMIS",
+      "descricao": "Proposição distribuída às comissões"
+    },
+    {
+      "id": 18,
+      "sigla": "INCLORDIA",
+      "descricao": "Proposição inclusa na Ordem do Dia"
+    },
+    {
+      "id": 51,
+      "sigla": "PROPEXP",
+      "descricao": "Proposição inclusa no Expediente"
+    },
+    {
+      "id": 27,
+      "sigla": "PREJUD",
+      "descricao": "Proposição prejudicada"
+    },
+    {
+      "id": 29,
+      "sigla": "REJEITADA",
+      "descricao": "Proposição rejeitada pelo Plenário"
+    },
+    {
+      "id": 32,
+      "sigla": "RETORDIA",
+      "descricao": "Proposição retirada da Ordem do Dia"
+    },
+    {
+      "id": 31,
+      "sigla": "RETAUTOR",
+      "descricao": "Proposição retirada pelo autor"
+    },
+    {
+      "id": 38,
+      "sigla": "VETOPAUTA",
+      "descricao": "Veto autuado e incluso em pauta"
+    },
+    {
+      "id": 34,
+      "sigla": "VETODISTR",
+      "descricao": "Veto distribuído para emissão de parecer"
+    },
+    {
+      "id": 37,
+      "sigla": "VETOORDIA",
+      "descricao": "Veto incluso na ordem do dia"
+    },
+    {
+      "id": 35,
+      "sigla": "VETOLIDO",
+      "descricao": "Veto sobre a proposição lido em sessão plenária"
+    },
+    {
+      "id": 36,
+      "sigla": "VETOMANT",
+      "descricao": "Veto sobre a proposição mantido"
+    },
+    {
+      "id": 39,
+      "sigla": "VETOREJEI",
+      "descricao": "Veto sobre a proposição rejeitado"
+    }
+  ],
+  "autores": [
+    {"id":13,"nome":"Anizio Paulino dos Santos Netto","parlamentar_id":1},
+    {"id":14,"nome":"Argemiro Santos da Cruz","parlamentar_id":2},
+    {"id":30,"nome":"Assessoria Jurídica da Câmara Municipal - AJC","parlamentar_id":null},
+    {"id":9,"nome":"Câmara Municipal de Palminópolis - CMP","parlamentar_id":null},
+    {"id":5,"nome":"CCJ - Comissão de Constituição Justiça e Redação","parlamentar_id":null},
+    {"id":8,"nome":"CESAS - Comissão de Educação, Saúde e Assistência Social","parlamentar_id":null},
+    {"id":6,"nome":"CFO - Comissão de Finanças e Orçamentos","parlamentar_id":null},
+    {"id":15,"nome":"Cleber Reges dos Santos","parlamentar_id":3},
+    {"id":32,"nome":"Comissões Permanentes - CP","parlamentar_id":null},
+    {"id":7,"nome":"COSP - Comissão de Obras e Serviços Públicos","parlamentar_id":null},
+    {"id":33,"nome":"CP - Comissões Permanentes","parlamentar_id":null},
+    {"id":28,"nome":"Departamento Administrativo e Legislativo - DALE","parlamentar_id":null},
+    {"id":29,"nome":"Departamento Contábil e Financeiro - DCOFI","parlamentar_id":null},
+    {"id":16,"nome":"Fernando Alves da Cunha Filho","parlamentar_id":4},
+    {"id":27,"nome":"Gabinete do Presidente - GAB","parlamentar_id":null},
+    {"id":17,"nome":"Graziane Vitorino Santana","parlamentar_id":5},
+    {"id":18,"nome":"Heudillan Cassio Franco Vieira","parlamentar_id":6},
+    {"id":19,"nome":"Leumar Eterno Torres","parlamentar_id":7},
+    {"id":20,"nome":"Luciano Bomtempo Gonçalves","parlamentar_id":8},
+    {"id":34,"nome":"Mesa Diretora - MD","parlamentar_id":null},
+    {"id":35,"nome":"Órgão Central de Controle Interno - OCI","parlamentar_id":null},
+    {"id":12,"nome":"Partido Democrático Trabalhista","parlamentar_id":null},
+    {"id":11,"nome":"Partido Progressista","parlamentar_id":null},
+    {"id":31,"nome":"Plenário - PLEN","parlamentar_id":null},
+    {"id":10,"nome":"Prefeitura Municipal de Palminópolis - PMP","parlamentar_id":null},
+    {"id":21,"nome":"Sirley Martins Alves do Prado","parlamentar_id":9}
+  ],
+  "atualizado_em": "2026-11-06",
+  "uf": "GO",
+  "casa": "cm-palminopolis",
+  "observacao": "Tabelas de apoio do SAPL usadas pelo coletor (sem CPF, telefone, endereço ou data de nascimento)."
+}
