@@ -202,11 +202,22 @@ jobs:
         run: |
           node scripts/coleta/estados/sc/testes.mjs
           node scripts/coleta/estados/sc/coletar.mjs
+      - name: Assembleia do Ceará (portal e proposições da ALECE, votações nominais em PDF e Diário Oficial)
+        continue-on-error: true
+        timeout-minutes: 20
+        env:
+          COLETA_ORCAMENTO_MIN: "15"
+          CE_PYTHON: scripts/coleta/estados/ce/.venv/bin/python
+        run: |
+          python -m venv scripts/coleta/estados/ce/.venv
+          scripts/coleta/estados/ce/.venv/bin/pip install --quiet -r scripts/coleta/estados/ce/requirements.txt
+          node scripts/coleta/estados/ce/testes.mjs
+          node scripts/coleta/estados/ce/coletar.mjs
       - name: Registrar mudanças
         run: |
           git config user.name "coleta-diaria"
           git config user.email "coleta-diaria@users.noreply.github.com"
-          git add dados/camara dados/senado dados/agenda dados/stj dados/stf dados/executivo dados/alesp dados/governo-sp dados/atibaia dados/tribunais-contas dados/eleitos dados/titulos dados/estados/se dados/estados/ba dados/estados/rn dados/estados/es dados/estados/pe dados/estados/df dados/estados/ma dados/participacao dados/autoria dados/fotos dados/estados/go dados/estados/pr dados/estados/pa dados/estados/sc
+          git add dados/camara dados/senado dados/agenda dados/stj dados/stf dados/executivo dados/alesp dados/governo-sp dados/atibaia dados/tribunais-contas dados/eleitos dados/titulos dados/estados/se dados/estados/ba dados/estados/rn dados/estados/es dados/estados/pe dados/estados/df dados/estados/ma dados/participacao dados/autoria dados/fotos dados/estados/go dados/estados/pr dados/estados/pa dados/estados/sc dados/estados/ce
           # meta.json muda a cada execução; só publica se algum dado de fato mudou.
           if git diff --cached --name-only | grep -qv '/meta\.json$'; then
             git commit -m "Coleta diária: dados oficiais ($(date -u +%F))"
