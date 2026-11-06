@@ -1,0 +1,453 @@
+{
+  "atualizado_em": "2026-11-06T10:53:33.401Z",
+  "ultima_execucao": "2026-11-06T10:52:33.748Z",
+  "uf": "CE",
+  "casa": "alece",
+  "orgao": "Assembleia Legislativa do Estado do Ceará (ALECE)",
+  "periodo": {
+    "anos": [
+      2026
+    ],
+    "fim": "2026-11-06"
+  },
+  "modo": "incremental",
+  "fontes": [
+    {
+      "titulo": "Votação nominal — Portal da Transparência da ALECE",
+      "url": "https://transparencia.al.ce.gov.br/consultas-gerais/votacao-nominal",
+      "orgao": "Assembleia Legislativa do Estado do Ceará (ALECE)",
+      "acessado_em": "2026-11-06"
+    },
+    {
+      "titulo": "Proposições — sistema de proposições da ALECE",
+      "url": "https://www.al.ce.gov.br/paginas/proposicoes?menu=96",
+      "orgao": "Assembleia Legislativa do Estado do Ceará (ALECE)",
+      "acessado_em": "2026-11-06"
+    },
+    {
+      "titulo": "Deputados — portal da ALECE",
+      "url": "https://www.al.ce.gov.br/deputados",
+      "orgao": "Assembleia Legislativa do Estado do Ceará (ALECE)",
+      "acessado_em": "2026-11-06"
+    },
+    {
+      "titulo": "Diário Oficial do Estado do Ceará (PDF por edição)",
+      "url": "https://imagens.seplag.ce.gov.br/PDF/",
+      "orgao": "Diário Oficial do Estado do Ceará (DOE-CE)",
+      "acessado_em": "2026-11-06"
+    }
+  ],
+  "robots": {
+    "www.al.ce.gov.br": {
+      "url": "https://www.al.ce.gov.br/robots.txt",
+      "status": 200,
+      "lido_em": "2026-11-06T10:52:38.942Z",
+      "crawl_delay_s": null,
+      "intervalo_usado_s": 2,
+      "disallow": [
+        "/banco-de-imagens/download/"
+      ],
+      "observacao": "robots.txt lido e obedecido"
+    },
+    "imagens.seplag.ce.gov.br": {
+      "url": "https://imagens.seplag.ce.gov.br/robots.txt",
+      "status": 404,
+      "lido_em": "2026-11-06T10:52:37.958Z",
+      "crawl_delay_s": null,
+      "intervalo_usado_s": 2,
+      "disallow": [],
+      "observacao": "sem robots.txt (HTTP 404): nenhuma restrição declarada (RFC 9309)"
+    },
+    "transparencia.al.ce.gov.br": {
+      "url": "https://transparencia.al.ce.gov.br/robots.txt",
+      "status": 200,
+      "lido_em": "2026-11-06T10:52:40.680Z",
+      "crawl_delay_s": null,
+      "intervalo_usado_s": 2,
+      "disallow": [],
+      "observacao": "robots.txt lido e obedecido"
+    },
+    "www2.al.ce.gov.br": {
+      "url": "https://www2.al.ce.gov.br/robots.txt",
+      "status": 404,
+      "lido_em": "2026-11-06T10:52:40.686Z",
+      "crawl_delay_s": null,
+      "intervalo_usado_s": 2,
+      "disallow": [],
+      "observacao": "sem robots.txt (HTTP 404): nenhuma restrição declarada (RFC 9309)"
+    },
+    "www.ce.gov.br": {
+      "status": 403,
+      "observacao": "robots.txt respondeu HTTP 403 no levantamento de 2026-11-02: tratado como bloqueio total; o domínio não é acessado"
+    }
+  },
+  "execucao": {
+    "requisicoes": 33,
+    "python": true,
+    "falhas": []
+  },
+  "contagens": {
+    "parlamentares": 54,
+    "proposicoes_por_ano": {
+      "2026": 736
+    },
+    "normas_por_ano": {
+      "2026": 68
+    },
+    "normas_por_tipo": {
+      "2026 Decreto": 39,
+      "2026 Lei": 29
+    },
+    "votacoes_por_ano": {
+      "2023": 16,
+      "2024": 17,
+      "2025": 13,
+      "2026": 10
+    },
+    "votacoes_no_indice_oficial": 61,
+    "votacoes_publicadas": 56,
+    "votacoes_em_revisao": 3,
+    "votacoes_pdf_sem_texto": 2,
+    "votacoes_lidas_nesta_execucao": 0,
+    "votacoes_ligadas_a_projeto": 9,
+    "votos_sem_ligacao_com_deputado": 379,
+    "proposicoes_sem_ficha": 616,
+    "fichas_lidas_nesta_execucao": 0,
+    "listas_de_proposicoes_lidas": 12,
+    "listas_de_proposicoes_com_falha": 0,
+    "edicoes_doe_lidas": 35,
+    "edicoes_doe_lidas_nesta_execucao": 4,
+    "dias_sem_edicao_doe": 18,
+    "edicoes_doe_sem_texto": 0,
+    "leis_ligadas_a_projeto": 16
+  },
+  "observacoes": [
+    "Fontes: portal da Assembleia Legislativa do Ceará (deputados), sistema de proposições da ALECE (www2, páginas HTML antigas), Portal da Transparência da ALECE (índice das votações nominais em CSV e um PDF por votação) e Diário Oficial do Estado (PDF por edição em imagens.seplag.ce.gov.br). O portal www.ce.gov.br não é acessado: o robots.txt respondeu HTTP 403. Intervalo mínimo de 2 s entre requisições ao mesmo host.",
+    "Votações: a própria ALECE informa que a votação nominal é pouco frequente e que a prática predominante no Plenário é a votação simbólica. Só as votações nominais têm o voto de cada deputado; nas demais, o voto individual não existe na fonte (\"Informação não disponível em fonte oficial\").",
+    "Leitura dos relatórios de votação (PDF): as colunas são localizadas pelas bordas da tabela e pelo cabeçalho; o voto escrito em cada célula precisa ser igual ao título da coluna, e as quantidades de cada coluna precisam ser iguais às da linha \"Apuração\" do PDF. Se algo não conferir, a votação não é publicada e vai para revisao-votacoes.json, para conferência humana. PDF sem texto não passa por reconhecimento de imagem: fica registrado como lacuna.",
+    "\"Sem voto registrado\": o deputado aparece no relatório sem marcação em nenhuma coluna; o relatório não diz o motivo. \"(P)\" e \"(V)\" no PDF indicam voto presencial ou virtual. Partido como impresso no relatório (nos relatórios de 2023 vem com o nome por extenso).",
+    "Deputados: página de deputados da ALECE (em exercício, licenciados e suplentes em exercício). O voto é ligado ao deputado só quando o nome do relatório é idêntico ao da página (sem acentos e maiúsculas); os demais aparecem na votação sem ligação com o perfil.",
+    "Proposições: projetos de lei (PL), projetos de lei oriundos de mensagem do Executivo e de outros Poderes (numeração própria da ALECE, aqui \"PLM\"), projetos de lei complementar, propostas de emenda à Constituição, projetos de decreto legislativo e de resolução da 31ª legislatura, pela busca por ano do sistema da ALECE. Indicações não entram. A ficha com o andamento é lida aos poucos (CE_MAX_FICHAS por execução). Uma votação é ligada ao projeto só quando o relatório traz o tipo, o número e o ano, e há exatamente um projeto com esses dados (e com o mesmo número de mensagem, quando citado).",
+    "Normas: leis, leis complementares, emendas constitucionais e decretos numerados do Governador, lidos no caderno do Poder Executivo do Diário Oficial (PDF com texto), das edições mais recentes para as mais antigas (CE_MAX_EDICOES por execução). Um ato só entra quando o cabeçalho ocupa a linha inteira e é seguido da fórmula do Governador; citações a outros atos ficam de fora. Edições extras e outros cadernos não são lidos.",
+    "Vetos e razões de veto: publicados no Diário Oficial como mensagens; ainda não separados (\"Informação não disponível em fonte oficial\" nesta coleta)."
+  ],
+  "edicoes_doe": {
+    "2026-11-05": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 2,
+      "atos": 0,
+      "sha256": "a004d6e711fe92ac27d1e31acfb362d04244fb58aff51292a86a0046bb2ebda6"
+    },
+    "2026-11-04": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 3,
+      "atos": 9,
+      "sha256": "050abf1e341a9023c723440afdc1d2f5bf554684ddfaad6f84dc98417fb6a86b"
+    },
+    "2026-11-03": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 3,
+      "atos": 22,
+      "sha256": "a68d7a86284948bbc56a02732cd73c8d0a24b36bcde5ae105ebb4e4db0b000d6"
+    },
+    "2026-11-02": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-06"
+    },
+    "2026-11-01": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-06"
+    },
+    "2026-10-29": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 2,
+      "atos": 1,
+      "sha256": "696427a0bc5c6fac29d1e0bb2e6e4c1c74412400ca5de3f3530936634c646773"
+    },
+    "2026-10-28": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 2,
+      "atos": 2,
+      "sha256": "6bd5449d3269716780f7a87ab1a5a7240fe64bdfedbb5adf07bd02b18ff69817"
+    },
+    "2026-10-27": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 3,
+      "atos": 0,
+      "sha256": "5255ed99a6515d2ac2776e4b5696e7fc1c5926d58486821d7762de79e8ddd45d"
+    },
+    "2026-10-26": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 3,
+      "atos": 3,
+      "sha256": "95d7af251d13ac971b8d320994d92e250dc4a1e5e841ec51b074de1c6064adb4"
+    },
+    "2026-10-25": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-06"
+    },
+    "2026-10-24": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-06"
+    },
+    "2026-10-23": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 3,
+      "atos": 1,
+      "sha256": "0ad43bf1686632867dd61593def7d90c45553483ef541f0db1a0a4557c522cd6"
+    },
+    "2026-10-22": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 2,
+      "atos": 1,
+      "sha256": "86435e10eb4e4fecd7f795b847c97d28a2a38f18d71c76523531d17fcdfef6ad"
+    },
+    "2026-10-21": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 3,
+      "atos": 0,
+      "sha256": "7f98b63c3f8234b9892fe5918f6e365d9b503a4a2dc09702e85d871246e2ca7c"
+    },
+    "2026-10-20": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 3,
+      "atos": 1,
+      "sha256": "aed2118264a864226f7dc3669b804d6d64a82a4fa868c2a7ad8efb7dafd52372"
+    },
+    "2026-10-19": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 3,
+      "atos": 4,
+      "sha256": "93a695e7f5e091f779ded67017c6c72608cbe64f659b0975e57e8c186b54e3d7"
+    },
+    "2026-10-18": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-06"
+    },
+    "2026-10-17": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-06"
+    },
+    "2026-10-16": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 2,
+      "atos": 1,
+      "sha256": "7b6c468a18226ccd6a49cb5dd5a11b39691800e8133fca8b6368cba150acda6b"
+    },
+    "2026-10-15": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 3,
+      "atos": 1,
+      "sha256": "a5283993d8858ef821632b6618bb543a7d0a6ae9860cba276e0a4a89800bec27"
+    },
+    "2026-10-14": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 4,
+      "atos": 0,
+      "sha256": "2d2416b6388a3262d96c8eaab9dac7338bd3d03c6ea2dd7d3819ae6ca0298a75"
+    },
+    "2026-10-13": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 3,
+      "atos": 5,
+      "sha256": "b1797156d3b06fb9f557c26226999860507f159c1f182aadf7b27d23057a242f"
+    },
+    "2026-10-12": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-06"
+    },
+    "2026-10-11": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-06"
+    },
+    "2026-10-09": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 2,
+      "atos": 4,
+      "sha256": "c05a4771b084c23fbf1276a1b7baaaae8623bb7ee351c94e31d05053adea1313"
+    },
+    "2026-10-08": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 3,
+      "atos": 0,
+      "sha256": "375f37a145f392df29c4130bd5cd02aa6abe17ff95a4bfbf63d4b8fc2ce63a02"
+    },
+    "2026-10-07": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 3,
+      "atos": 1,
+      "sha256": "0f0502c01e823e0958886ba07e49ae23274cb93fba803660268d1eaa4f1b679d"
+    },
+    "2026-10-06": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 2,
+      "atos": 0,
+      "sha256": "5c17ee1b5198b7d5afd48cab67a9b977dfd57cbcdff629dedc4c72be5b5b1c89"
+    },
+    "2026-10-05": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 2,
+      "atos": 1,
+      "sha256": "8c5104454d41a54dceb30832f53c60f0f1de02d4bf61ad1f5152b1f6f8431e26"
+    },
+    "2026-10-04": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-06"
+    },
+    "2026-10-03": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-06"
+    },
+    "2026-10-02": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 3,
+      "atos": 3,
+      "sha256": "f3769f2f2bc7f330b7367b896c1dddee83ac0c4f11c9e0cefa49dd73ab481468"
+    },
+    "2026-10-01": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 2,
+      "atos": 0,
+      "sha256": "11ceb8999b2857c64c3f3ea0cc1bced7cd69c55b8789536003a53d9a24828b6d"
+    },
+    "2026-09-30": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 3,
+      "atos": 0,
+      "sha256": "d2b52d18556951a60d75368bc2617b524c7c81fb2a741d3224897ff511555c13"
+    },
+    "2026-09-29": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 2,
+      "atos": 0,
+      "sha256": "c932b7fef20808f8101ac17286dab60a3d6bf7e73faab8b7397992bd0d715856"
+    },
+    "2026-09-28": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 2,
+      "atos": 4,
+      "sha256": "af1e81cfaca94c95c9c1403a0475de753097ee5adacdd5c4e7ecdf59203b2729"
+    },
+    "2026-09-27": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-06"
+    },
+    "2026-09-26": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-06"
+    },
+    "2026-09-25": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 2,
+      "atos": 0,
+      "sha256": "4ff807c72fb758074691d157df0bb2942d5c09033170b431e0f3d62f5de38e0f"
+    },
+    "2026-09-24": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 2,
+      "atos": 1,
+      "sha256": "b86c40c8a500987fa6ada1d2891332c6b110c87c9a2234cb3dcd8d252dc857d6"
+    },
+    "2026-09-23": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 2,
+      "atos": 0,
+      "sha256": "35fb86086122d72e1db49dd2ddf0771d3e5a47ce66aa2a1a117abcffda77875a"
+    },
+    "2026-09-22": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 2,
+      "atos": 0,
+      "sha256": "2f465ae250b7197e7d5676a0933edf6e0763371837de7ba187ac0842faeee1a8"
+    },
+    "2026-09-21": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 2,
+      "atos": 1,
+      "sha256": "80eaffbc2fd113669cbef85d4c4c8c045d1885231c039618bb96c9047642f9ee"
+    },
+    "2026-11-06": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-06"
+    },
+    "2026-10-31": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-06"
+    },
+    "2026-10-30": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-06"
+    },
+    "2026-10-10": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-06"
+    },
+    "2026-09-20": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-06"
+    },
+    "2026-09-19": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-06"
+    },
+    "2026-09-18": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 2,
+      "atos": 0,
+      "sha256": "3bc17bb97fced246b3a13cbdb38783a4b632a872e942601372d87775a8f43f9d"
+    },
+    "2026-09-17": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 6,
+      "atos": 0,
+      "sha256": "f1a651d3807fa3403d5d4052548b989aa2fd40585936fdeb16f07a17bbc35ed9"
+    },
+    "2026-09-16": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 2,
+      "atos": 1,
+      "sha256": "ce078c0c5783ef89c933dafe4a856e826ffc880f3671ddaedb0e57abfd3044a8"
+    },
+    "2026-09-15": {
+      "situacao": "lida",
+      "lida_em": "2026-11-06",
+      "cadernos": 3,
+      "atos": 1,
+      "sha256": "5a0766dcbcbc8ccd29a6e0bbbd54e3da4214ed57be594075af6bacac05076b19"
+    }
+  }
+}

@@ -19,7 +19,7 @@ Situação em **04/11/2026** (PA e SC entraram no ar nesta data). O site já aco
 | **AC** | Coletor pronto (SAPL) | Sim | Sim | Resultado: sim. Voto nominal: só em vetos | Leis: não (o SAPL não tem as de 2026). Decretos: bloqueados pelo robots.txt | Ligar no workflow; leis e decretos por curadoria ou LAI | baixo + depende de terceiros |
 | **AL** | Coletor pronto (SAPL) | Sim | Sim | O SAPL parou em 2019: só registros de 2019, nenhum da legislatura atual | Leis: sim. Decretos: só no Diário Oficial | Ligar no workflow; coletor do Diário Oficial; votos por LAI | baixo + médio |
 | **AP** | Falta coletor | Página HTML | Página HTML (eLegis) | Resultado na ata em texto; sem voto nominal | Leis no eLegis; decretos no Diário Oficial (JSON) | Raspador do eLegis e do Diário Oficial | médio |
-| **CE** | Falta coletor | Página HTML | Página HTML (sistema antigo) | 60 votações nominais em PDF (2023–2026) | Diário Oficial em PDF | Raspador de projetos; leitor dos PDFs de votação com conferência | médio a alto |
+| **CE** | Coletor pronto (`scripts/coleta/estados/ce/`) | Página HTML | Página HTML (sistema antigo), com andamento e lei gerada | 61 votações nominais em PDF (2023–2026): 56 conferidas e publicadas, 3 em revisão humana, 2 sem texto | Leis e decretos do Diário Oficial (PDF), edições já lidas | Ligar no workflow; revisar 3 votações; vetos | baixo + médio |
 | **DF** | Coletor pronto (API do PLe) | Sim (sem partido) | Sim | Só nas atas (PDF); a API não traz | Sim, leis e decretos com publicação no Diário Oficial | Ligar no workflow; votos dependem da LAI já redigida | baixo + depende de terceiros |
 | **GO** | No ar só com o governador (coletor da Casa Civil, no workflow) | Não coletado (Assembleia não acessada) | **Bloqueado** (robots.txt proíbe tudo) | Bloqueado | Sim: leis, decretos e vetos com as razões (API da Casa Civil) | Legislativo depende da LAI já redigida | depende de terceiros |
 | **MA** | Coletor pronto (API do ALEMALEGIS) | Sim (42, com partido) | Sim, com situação e andamento | Votação simbólica; a API não publica votos (rota vazia) | Leis, leis complementares e resoluções: sim. Decretos: só no Diário Oficial | Coletor do Diário Oficial para decretos; votos só se a Assembleia passar a registrá-los | baixo + médio |
@@ -56,10 +56,11 @@ Situação em **04/11/2026** (PA e SC entraram no ar nesta data). O site já aco
 
 ### Ceará (CE)
 - **O que a fonte tem:** projetos em páginas HTML do sistema antigo (`www2`), com andamento e número da lei. Há 60 votações nominais publicadas entre 2023 e 2026, cada uma em PDF, com um índice em CSV no Portal da Transparência. O Diário Oficial sai em PDF com endereço previsível.
+- **Feito (06/11/2026):** coletor novo (`scripts/coleta/estados/ce/`, Node + leitor de PDF em Python com pdfplumber). Coleta real em `dados/estados/ce/`: 54 deputados (em exercício, licenciados e suplentes em exercício), 736 projetos de 2026 (busca por ano em cada tipo; a ficha com o andamento é lida aos poucos, 60 por execução), 56 das 61 votações nominais do índice com o voto de cada deputado e 68 leis e decretos do Governador lidos no Diário Oficial (edições de setembro a novembro de 2026). Cada relatório de votação só é publicado quando a leitura pela posição na tabela confere com a linha "Apuração" do próprio PDF.
 - **O que falta:**
-  1. Raspador dos projetos. Esforço médio.
-  2. Leitor dos 60 PDFs de votação, conferindo cada lista de nomes com os totais antes de publicar. Como são poucas, cabe conferência humana. Esforço médio a alto.
-  3. Decretos: separar os atos no PDF do Diário Oficial. Esforço médio.
+  1. Incluir no workflow. Esforço baixo.
+  2. Revisão humana de 3 votações em que o próprio PDF é inconsistente (voto escrito numa coluna diferente, ou marcado em duas colunas); 2 relatórios (PEC 10/2023, 1º e 2º turnos) são PDF sem texto e ficam como lacuna, sem OCR. Lista em `dados/estados/ce/revisao-votacoes.json`.
+  3. Vetos e razões de veto: saem como mensagens no Diário Oficial; ainda não separados. Esforço médio.
 - **Cuidado:** o robots.txt de `www.ce.gov.br` respondeu 403 e não pôde ser lido. Esse domínio deve ser evitado; usar só os PDFs em `imagens.seplag.ce.gov.br`.
 
 ### Distrito Federal (DF)
