@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-05T21:30:26.941Z",
-  "ultima_execucao": "2026-11-05T21:06:33.590Z",
+  "atualizado_em": "2026-11-06T20:51:30.582Z",
+  "ultima_execucao": "2026-11-06T20:28:05.719Z",
   "uf": "AM",
   "casa": "aleam",
   "orgao": "Assembleia Legislativa do Estado do Amazonas (ALEAM)",
   "host": "sapl.al.am.leg.br",
   "periodo": {
     "inicio": "2023-02-01",
-    "fim": "2026-11-05"
+    "fim": "2026-11-06"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,12 +15,12 @@
       "titulo": "SAPL — Assembleia Legislativa do Estado do Amazonas (ALEAM) (API REST pública)",
       "url": "https://sapl.al.am.leg.br/api/",
       "orgao": "Assembleia Legislativa do Estado do Amazonas (ALEAM)",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-06"
     }
   ],
   "robots": {
     "sapl.al.am.leg.br": {
-      "lido_em": "2026-11-05T21:06:33.591Z",
+      "lido_em": "2026-11-06T20:28:05.719Z",
       "status": 200,
       "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
@@ -32,11 +32,7 @@
   },
   "execucao": {
     "requisicoes": 24,
-    "falhas": [
-      "fluxo-votoparlamentar: HTTP 504 em /api/sessao/votoparlamentar/?o=-id&page=9&page_size=100",
-      "/api/sessao/votoparlamentar/?o=-id&page=9&page_size=100: HTTP 504",
-      "/api/sessao/votoparlamentar/?o=-id&page=9&page_size=100: HTTP 504"
-    ]
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -85,57 +81,57 @@
   "contagens": {
     "parlamentares": 26,
     "parlamentares_em_exercicio": 24,
-    "proposicoes": 229,
+    "proposicoes": 256,
     "normas": 126,
     "sessoes": 104,
-    "itens_pauta": 248,
-    "votacoes": 132,
+    "itens_pauta": 251,
+    "votacoes": 151,
     "votacoes_por_situacao_dos_votos": {
-      "em-coleta": 84,
-      "coletados": 48
+      "em-coleta": 81,
+      "coletados": 70
     },
-    "votos_individuais": 801
+    "votos_individuais": 1209
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 6904,
+            "hi": 6924,
             "lo": 6773,
-            "n": 132,
+            "n": 151,
             "lo_data": "2026-09-10"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 6682
+        "total_fonte": 6701
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 137991,
-            "lo": 137191,
-            "n": 801,
+            "hi": 138331,
+            "lo": 137106,
+            "n": 1209,
             "lo_data": "2026-10-28"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 134030
+        "total_fonte": 134353
       },
       "ordemdia": {
         "faixas": [
           {
-            "hi": 7225,
+            "hi": 7228,
             "lo": 7078,
-            "n": 148,
+            "n": 151,
             "lo_data": "2026-09-16"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 7031
+        "total_fonte": 7034
       },
       "expedientemateria": {
         "faixas": [
@@ -166,15 +162,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 185116,
+            "hi": 185117,
             "lo": 184989,
-            "n": 127,
+            "n": 128,
             "lo_data": "2026-10-20"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 79370
+        "total_fonte": 79371
       },
       "normajuridica": {
         "faixas": [
@@ -192,15 +188,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 182746,
+            "hi": 182870,
             "lo": 182406,
-            "n": 316,
+            "n": 438,
             "lo_data": "2026-10-28"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 175930
+        "total_fonte": 176052
       }
     },
     "tabelas_em": {
@@ -216,7 +212,7 @@
       "status_tramitacao": "2026-11-03T20:19:54.457Z",
       "autores": "2026-11-03T20:21:56.520Z"
     },
-    "ultima_requisicao": "2026-11-05T21:29:56.666Z",
+    "ultima_requisicao": "2026-11-06T20:51:28.777Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
