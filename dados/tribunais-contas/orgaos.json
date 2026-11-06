@@ -3,8 +3,8 @@
   "descricao": "Registro dos tribunais de contas acompanhados ou planejados. Cada órgão ativo tem um coletor em scripts/coleta/tribunais-contas/<id>/ e uma pasta em dados/tribunais-contas/<id>/, no mesmo formato.",
   "contagens": {
     "total": 33,
-    "ativa": 9,
-    "planejada": 24
+    "ativa": 10,
+    "planejada": 23
   },
   "itens": [
     {
@@ -802,9 +802,21 @@
       "nome": "Tribunal de Contas dos Municípios do Estado do Pará",
       "esfera": "estadual",
       "uf": "PA",
-      "jurisdiciona": null,
+      "jurisdiciona": "Os 144 municípios do Pará (as contas do Governador são do TCE-PA)",
       "site_oficial": "https://www.tcmpa.tc.br/",
       "fontes": [
+        {
+          "titulo": "Diário Oficial Eletrônico do TCM-PA — edições em PDF com as resoluções de parecer prévio",
+          "url": "https://www.tcmpa.tc.br/diario-oficial-eletronico/",
+          "orgao": "Tribunal de Contas dos Municípios do Estado do Pará",
+          "acessado_em": "2026-11-06"
+        },
+        {
+          "titulo": "Calendário DOE TCM-PA — lista de edições",
+          "url": "https://www.tcmpa.tc.br/doe/doe/doe",
+          "orgao": "Tribunal de Contas dos Municípios do Estado do Pará",
+          "acessado_em": "2026-11-06"
+        },
         {
           "titulo": "Página inicial — Tribunal de Contas dos Municípios do Estado do Pará",
           "url": "https://www.tcmpa.tc.br/",
@@ -812,10 +824,20 @@
           "acessado_em": "2026-11-02"
         }
       ],
-      "situacao_coleta": "planejada",
-      "robots_e_restricoes": null,
+      "situacao_coleta": "ativa",
+      "robots_e_restricoes": "www.tcmpa.tc.br/robots.txt é lido a cada execução (inacessível = nada é coletado): o grupo \"User-agent: *\" permite tudo (\"Allow: /\", com \"Content-Signal: search=yes,ai-train=no,use=reference\"); o coletor se identifica como BrasilNaLupa-coletor e só republica informação oficial com link para a fonte. Coleta só nesse host, uma requisição por vez, pausa de no mínimo 1,5 s. A consulta de processos (SPE, com reCAPTCHA) e o atosoficiais.com.br (desafio anti-robô) não são acessados. CPFs citados nas resoluções são retirados.",
       "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
-      "lacunas": []
+      "lacunas": [
+        "O site lista as edições oficiais do Diário Oficial Eletrônico de 18/01/2019 (nº 469) a 23/03/2026 (nº 2150); as edições anteriores (a versão oficial começa em 12/12/2016) não aparecem na lista",
+        "Nenhuma edição na lista do site entre 12/07/2022 e 06/01/2026; pareceres publicados nesse período não foram lidos",
+        "Resoluções sem exercício escrito, ou com exercícios diferentes no mesmo texto (5), não são exibidas",
+        "Resoluções com nome de município diferente do nome oficial (8) não são exibidas",
+        "10 municípios sem nenhuma resolução de parecer prévio nas edições lidas",
+        "Ressalvas, multas e determinações não são separadas do texto da resolução",
+        "Julgamento das contas pelas Câmaras Municipais ainda não coletado"
+      ],
+      "coletor": "scripts/coleta/tribunais-contas/tcm-pa/coletar.mjs",
+      "dados": "dados/tribunais-contas/tcm-pa/"
     }
   ]
 }
