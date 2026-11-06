@@ -1,10 +1,10 @@
 {
-  "atualizado_em": "2026-11-05",
+  "atualizado_em": "2026-11-06",
   "descricao": "Registro dos tribunais de contas acompanhados ou planejados. Cada órgão ativo tem um coletor em scripts/coleta/tribunais-contas/<id>/ e uma pasta em dados/tribunais-contas/<id>/, no mesmo formato.",
   "contagens": {
     "total": 33,
-    "ativa": 6,
-    "planejada": 27
+    "ativa": 7,
+    "planejada": 26
   },
   "itens": [
     {
@@ -586,9 +586,15 @@
       "nome": "Tribunal de Contas do Estado de Roraima",
       "esfera": "estadual",
       "uf": "RR",
-      "jurisdiciona": null,
+      "jurisdiciona": "Estado de Roraima e seus 15 municípios",
       "site_oficial": "https://www.tcerr.tc.br/",
       "fontes": [
+        {
+          "titulo": "Portal da Transparência do TCE-RR — Decisões e Acórdãos (série “Parecer Prévio”)",
+          "url": "https://transparencia.tcerr.tc.br/sessoes/decisoes-e-acordaos",
+          "orgao": "Tribunal de Contas do Estado de Roraima",
+          "acessado_em": "2026-11-06"
+        },
         {
           "titulo": "Página inicial — Tribunal de Contas do Estado de Roraima",
           "url": "https://www.tcerr.tc.br/",
@@ -596,10 +602,20 @@
           "acessado_em": "2026-11-02"
         }
       ],
-      "situacao_coleta": "planejada",
-      "robots_e_restricoes": null,
+      "situacao_coleta": "ativa",
+      "robots_e_restricoes": "transparencia.tcerr.tc.br/robots.txt e sei.tcerr.tc.br/robots.txt não existem (HTTP 404 em 06/11/2026) e são lidos a cada execução; robots inacessível bloqueia o host. A lista vem da API usada pela própria página “Decisões e Acórdãos” (não documentada como dados abertos); o texto de cada parecer vem do link público do SEI com código de verificação. Uma requisição por vez, pausa mínima de 2 s (ou o Crawl-delay, se houver), sem CAPTCHA, login ou token. Cada parecer é lido uma vez e só até 900 KB. Advogados, procuradores e servidores citados no cabeçalho não são republicados.",
       "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
-      "lacunas": []
+      "lacunas": [
+        "Julgamento das contas pela Assembleia Legislativa e pelas Câmaras Municipais não coletado",
+        "Contas do Governador: exercícios 2013, 2015, 2022, 2024 e 2025 sem parecer prévio sobre contas de governo na série",
+        "21 pareceres dos anos 1990 estão no SEI só como imagem digitalizada, sem texto; não foram lidos",
+        "19 pareceres escrevem “São Luiz do Anauá”, nome diferente do oficial (São Luiz); não foram ligados ao município",
+        "Pareceres sobre contas de gestão, tomadas de contas e tomadas de contas especiais (87 municipais e 1 do Governo do Estado) guardados, mas ainda não exibidos",
+        "Conclusão não reconhecida em 33 dos 340 pareceres exibidos (texto sem fórmula clara ou com duas fórmulas diferentes)",
+        "Ressalvas, determinações e votação não copiadas; estão no texto oficial de cada parecer"
+      ],
+      "coletor": "scripts/coleta/tribunais-contas/tce-rr/coletar.mjs",
+      "dados": "dados/tribunais-contas/tce-rr/"
     },
     {
       "id": "tce-sc",
