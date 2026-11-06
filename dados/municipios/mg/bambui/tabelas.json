@@ -1,0 +1,815 @@
+{
+  "legislaturas": [
+    {
+      "id": 1,
+      "numero": 1,
+      "inicio": "2021-01-01",
+      "fim": "2024-12-31"
+    }
+  ],
+  "legislatura_atual": null,
+  "tipos_resultado": [
+    {
+      "id": 1,
+      "nome": "Aprovada por unanimidade",
+      "natureza": ""
+    },
+    {
+      "id": 2,
+      "nome": "Aprovada por maioria simples",
+      "natureza": ""
+    },
+    {
+      "id": 3,
+      "nome": "Aprovada por maioria absoluta",
+      "natureza": ""
+    },
+    {
+      "id": 4,
+      "nome": "Aprovada por quórum qualificado",
+      "natureza": ""
+    },
+    {
+      "id": 5,
+      "nome": "Reprovada",
+      "natureza": ""
+    }
+  ],
+  "tipos_materia": [
+    {
+      "id": 1,
+      "sigla": "PL",
+      "descricao": "Projeto de Lei"
+    },
+    {
+      "id": 2,
+      "sigla": "PLC",
+      "descricao": "Projeto de Lei Complementar"
+    },
+    {
+      "id": 3,
+      "sigla": "PR",
+      "descricao": "Projeto de Resolução"
+    },
+    {
+      "id": 4,
+      "sigla": "ELOM",
+      "descricao": "Proposta de Emenda a Lei Orgânica"
+    },
+    {
+      "id": 5,
+      "sigla": "MOÇÃO",
+      "descricao": "Moção de Congratulação e Aplausos"
+    },
+    {
+      "id": 6,
+      "sigla": "REQ",
+      "descricao": "Requerimento"
+    },
+    {
+      "id": 7,
+      "sigla": "IND",
+      "descricao": "Indicação"
+    },
+    {
+      "id": 8,
+      "sigla": "VETO",
+      "descricao": "Veto Total"
+    },
+    {
+      "id": 9,
+      "sigla": "VP",
+      "descricao": "Veto parcial"
+    },
+    {
+      "id": 10,
+      "sigla": "EM",
+      "descricao": "Emenda Modificativa"
+    },
+    {
+      "id": 11,
+      "sigla": "EADIT",
+      "descricao": "Emenda Aditiva"
+    },
+    {
+      "id": 12,
+      "sigla": "EDMOD",
+      "descricao": "Emenda Aditiva e Modificativa"
+    },
+    {
+      "id": 13,
+      "sigla": "EI",
+      "descricao": "Emenda Impositiva"
+    },
+    {
+      "id": 14,
+      "sigla": "ES",
+      "descricao": "Emenda Supressiva"
+    },
+    {
+      "id": 15,
+      "sigla": "PLOR",
+      "descricao": "Projeto de Lei Ordinária"
+    },
+    {
+      "id": 16,
+      "sigla": "PDL",
+      "descricao": "Projeto de Decreto Legislativo"
+    },
+    {
+      "id": 17,
+      "sigla": "ESUBS",
+      "descricao": "Emenda Substitutiva"
+    },
+    {
+      "id": 18,
+      "sigla": "PROP",
+      "descricao": "Proposta de Decreto Legislativo"
+    },
+    {
+      "id": 19,
+      "sigla": "ATA",
+      "descricao": "ATA DA REUNIÃO ANTERIOR PARA APROVAÇÃO"
+    },
+    {
+      "id": 20,
+      "sigla": "ATA",
+      "descricao": "ATA DA REUNIÃO ANTERIOR PARA APROVAÇÃO"
+    }
+  ],
+  "tipos_norma": [
+    {
+      "id": 2,
+      "sigla": "PDL",
+      "descricao": "Decreto Legislativo"
+    },
+    {
+      "id": 4,
+      "sigla": "LOM",
+      "descricao": "Emenda a LOM"
+    },
+    {
+      "id": 1,
+      "sigla": "PL",
+      "descricao": "Lei"
+    },
+    {
+      "id": 3,
+      "sigla": "RES",
+      "descricao": "Resolução"
+    }
+  ],
+  "tipos_sessao": [
+    {
+      "id": 2,
+      "nome": "Extraordinária"
+    },
+    {
+      "id": 1,
+      "nome": "Ordinária"
+    },
+    {
+      "id": 3,
+      "nome": "Solene"
+    }
+  ],
+  "partidos": [
+    {
+      "id": 40,
+      "sigla": "AVANTE",
+      "nome": "AVANTE"
+    },
+    {
+      "id": 5,
+      "sigla": "DEM",
+      "nome": "DEMOCRATAS"
+    },
+    {
+      "id": 33,
+      "sigla": "NOVO",
+      "nome": "PARTIDO NOVO"
+    },
+    {
+      "id": 18,
+      "sigla": "PCB",
+      "nome": "PARTIDO COMUNISTA BRASILEIRO"
+    },
+    {
+      "id": 6,
+      "sigla": "PCdoB",
+      "nome": "PARTIDO COMUNISTA DO BRASIL"
+    },
+    {
+      "id": 22,
+      "sigla": "PCO",
+      "nome": "PARTIDO DA CAUSA OPERÁRIA"
+    },
+    {
+      "id": 3,
+      "sigla": "PDT",
+      "nome": "PARTIDO DEMOCRÁTICO TRABALHISTA"
+    },
+    {
+      "id": 30,
+      "sigla": "PEN",
+      "nome": "PARTIDO ECOLÓGICO NACIONAL"
+    },
+    {
+      "id": 20,
+      "sigla": "PHS",
+      "nome": "PARTIDO HUMANISTA DA SOLIDARIEDADE"
+    },
+    {
+      "id": 35,
+      "sigla": "PMB",
+      "nome": "PARTIDO DA MULHER BRASILEIRA"
+    },
+    {
+      "id": 1,
+      "sigla": "PMDB",
+      "nome": "PARTIDO DO MOVIMENTO DEMOCRÁTICO BRASILEIRO"
+    },
+    {
+      "id": 11,
+      "sigla": "PMN",
+      "nome": "PARTIDO DA MOBILIZAÇÃO NACIONAL"
+    },
+    {
+      "id": 38,
+      "sigla": "PODE",
+      "nome": "Podemos"
+    },
+    {
+      "id": 23,
+      "sigla": "PODE",
+      "nome": "PODEMOS"
+    },
+    {
+      "id": 16,
+      "sigla": "PP",
+      "nome": "PARTIDO PROGRESSISTA"
+    },
+    {
+      "id": 36,
+      "sigla": "PP",
+      "nome": "Progressistas"
+    },
+    {
+      "id": 39,
+      "sigla": "PP",
+      "nome": "Progressistas"
+    },
+    {
+      "id": 29,
+      "sigla": "PPL",
+      "nome": "PARTIDO PÁTRIA LIVRE"
+    },
+    {
+      "id": 13,
+      "sigla": "PPS",
+      "nome": "PARTIDO POPULAR SOCIALISTA"
+    },
+    {
+      "id": 27,
+      "sigla": "PR",
+      "nome": "PARTIDO DA REPÚBLICA"
+    },
+    {
+      "id": 25,
+      "sigla": "PRB",
+      "nome": "PARTIDO REPUBLICANO BRASILEIRO"
+    },
+    {
+      "id": 31,
+      "sigla": "PROS",
+      "nome": "PARTIDO REPUBLICANO DA ORDEM SOCIAL"
+    },
+    {
+      "id": 12,
+      "sigla": "PRP",
+      "nome": "PARTIDO REPUBLICANO PROGRESSISTA"
+    },
+    {
+      "id": 19,
+      "sigla": "PRTB",
+      "nome": "PARTIDO RENOVADOR TRABALHISTA BRASILEIRO"
+    },
+    {
+      "id": 7,
+      "sigla": "PSB",
+      "nome": "PARTIDO SOCIALISTA BRASILEIRO"
+    },
+    {
+      "id": 10,
+      "sigla": "PSC",
+      "nome": "PARTIDO SOCIAL CRISTÃO"
+    },
+    {
+      "id": 28,
+      "sigla": "PSD",
+      "nome": "PARTIDO SOCIAL DEMOCRÁTICO"
+    },
+    {
+      "id": 8,
+      "sigla": "PSDB",
+      "nome": "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA"
+    },
+    {
+      "id": 21,
+      "sigla": "PSDC",
+      "nome": "PARTIDO SOCIAL DEMOCRATA CRISTÃO"
+    },
+    {
+      "id": 24,
+      "sigla": "PSL",
+      "nome": "PARTIDO SOCIAL LIBERAL"
+    },
+    {
+      "id": 26,
+      "sigla": "PSOL",
+      "nome": "PARTIDO SOCIALISMO E LIBERDADE"
+    },
+    {
+      "id": 17,
+      "sigla": "PSTU",
+      "nome": "PARTIDO SOCIALISTA DOS TRABALHADORES UNIFICADO"
+    },
+    {
+      "id": 4,
+      "sigla": "PT",
+      "nome": "PARTIDO DOS TRABALHADORES"
+    },
+    {
+      "id": 37,
+      "sigla": "PTB",
+      "nome": "Partido Trabalhista Brasileiro"
+    },
+    {
+      "id": 2,
+      "sigla": "PTB",
+      "nome": "PARTIDO TRABALHISTA BRASILEIRO"
+    },
+    {
+      "id": 9,
+      "sigla": "PTC",
+      "nome": "PARTIDO TRABALHISTA CRISTÃO"
+    },
+    {
+      "id": 15,
+      "sigla": "PTdoB",
+      "nome": "PARTIDO TRABALHISTA DO BRASIL"
+    },
+    {
+      "id": 14,
+      "sigla": "PV",
+      "nome": "PARTIDO VERDE"
+    },
+    {
+      "id": 34,
+      "sigla": "REDE",
+      "nome": "REDE SUSTENTABILIDADE"
+    },
+    {
+      "id": 32,
+      "sigla": "SD",
+      "nome": "SOLIDARIEDADE"
+    }
+  ],
+  "filiacoes": [
+    {
+      "id": 2,
+      "parlamentar_id": 2,
+      "partido_id": 16,
+      "inicio": "2020-01-01",
+      "fim": null
+    },
+    {
+      "id": 3,
+      "parlamentar_id": 3,
+      "partido_id": 37,
+      "inicio": "2020-01-01",
+      "fim": null
+    },
+    {
+      "id": 5,
+      "parlamentar_id": 4,
+      "partido_id": 23,
+      "inicio": "2020-01-01",
+      "fim": null
+    },
+    {
+      "id": 11,
+      "parlamentar_id": 11,
+      "partido_id": 16,
+      "inicio": "2020-01-01",
+      "fim": null
+    },
+    {
+      "id": 6,
+      "parlamentar_id": 6,
+      "partido_id": 9,
+      "inicio": "2020-01-01",
+      "fim": null
+    },
+    {
+      "id": 7,
+      "parlamentar_id": 5,
+      "partido_id": 5,
+      "inicio": "2020-01-01",
+      "fim": null
+    },
+    {
+      "id": 1,
+      "parlamentar_id": 1,
+      "partido_id": 7,
+      "inicio": "2020-01-01",
+      "fim": null
+    },
+    {
+      "id": 8,
+      "parlamentar_id": 7,
+      "partido_id": 40,
+      "inicio": "2020-01-01",
+      "fim": null
+    },
+    {
+      "id": 4,
+      "parlamentar_id": 8,
+      "partido_id": 7,
+      "inicio": "2020-01-01",
+      "fim": null
+    },
+    {
+      "id": 9,
+      "parlamentar_id": 9,
+      "partido_id": 37,
+      "inicio": "2020-01-01",
+      "fim": null
+    },
+    {
+      "id": 10,
+      "parlamentar_id": 10,
+      "partido_id": 40,
+      "inicio": "2020-01-01",
+      "fim": null
+    }
+  ],
+  "parlamentares": [
+    {
+      "id": 2,
+      "nome": "Anderson Miguel",
+      "nome_civil": "Anderson Miguel Leite  Santos",
+      "ativo": true,
+      "foto": "http://sapl.bambui.mg.leg.br/media/sapl/public/parlamentar/2/vereador-anderson-miguel-rec-742x1024.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 3,
+      "nome": "Augusto da Farmácia",
+      "nome_civil": "Augusto Antônio de Faria Neto",
+      "ativo": true,
+      "foto": "http://sapl.bambui.mg.leg.br/media/sapl/public/parlamentar/3/of-vereador-augusto-683x1024.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 4,
+      "nome": "Deone Advogado",
+      "nome_civil": "Deone Custódio de Toledo",
+      "ativo": true,
+      "foto": "http://sapl.bambui.mg.leg.br/media/sapl/public/parlamentar/4/of-vereador-deone-683x1024.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 11,
+      "nome": "Gordinho da Usina",
+      "nome_civil": "Werner Aparecido de Carvalho",
+      "ativo": true,
+      "foto": "http://sapl.bambui.mg.leg.br/media/sapl/public/parlamentar/11/of-vereador-werner-683x1024.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 6,
+      "nome": "Lécio do Coqueiro",
+      "nome_civil": "Lécio José da Silva",
+      "ativo": true,
+      "foto": "http://sapl.bambui.mg.leg.br/media/sapl/public/parlamentar/6/lecio.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 5,
+      "nome": "Nego Leiteiro",
+      "nome_civil": "Elair Henrique Alves",
+      "ativo": true,
+      "foto": "http://sapl.bambui.mg.leg.br/media/sapl/public/parlamentar/5/pf-vereador-elair-683x1024.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 1,
+      "nome": "Priscila da Saúde",
+      "nome_civil": "Priscila Cristina Pedro de Oliveira Cardoso",
+      "ativo": true,
+      "foto": "http://sapl.bambui.mg.leg.br/media/sapl/public/parlamentar/1/of-vereadora-priscila-683x1024.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 7,
+      "nome": "Robinho",
+      "nome_civil": "Robson Idelbrando Frazão",
+      "ativo": true,
+      "foto": "http://sapl.bambui.mg.leg.br/media/sapl/public/parlamentar/7/of-vereador-robson-683x1024.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 8,
+      "nome": "Serginho da Saúde",
+      "nome_civil": "Mário Sérgio Pereira",
+      "ativo": true,
+      "foto": "http://sapl.bambui.mg.leg.br/media/sapl/public/parlamentar/8/serginho1.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 9,
+      "nome": "Valdeci da Rocha",
+      "nome_civil": "Valdeci da Rocha",
+      "ativo": true,
+      "foto": "http://sapl.bambui.mg.leg.br/media/sapl/public/parlamentar/9/of-vereador-valdeci-683x1024.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 10,
+      "nome": "Valdevino Cruzado",
+      "nome_civil": "Valdevino Vaz Dias Júnior",
+      "ativo": true,
+      "foto": "http://sapl.bambui.mg.leg.br/media/sapl/public/parlamentar/10/valdevino11.jpg",
+      "email_institucional": null
+    }
+  ],
+  "status_tramitacao": [
+    {
+      "id": 1,
+      "sigla": "ADIAVOTAC",
+      "descricao": "Adiada discussão e votação."
+    },
+    {
+      "id": 4,
+      "sigla": "AGORDIA",
+      "descricao": "Aguardando a inclusão na ordem do dia"
+    },
+    {
+      "id": 3,
+      "sigla": "AGMENSVET",
+      "descricao": "Aguardando assinatura da mensagem sobre o veto"
+    },
+    {
+      "id": 2,
+      "sigla": "AGAUTOGR",
+      "descricao": "Aguardando assinatura do autógrafo"
+    },
+    {
+      "id": 41,
+      "sigla": "CP",
+      "descricao": "Aguardando distribuição para as Comissões Permanentes"
+    },
+    {
+      "id": 42,
+      "sigla": "CT",
+      "descricao": "Aguardando distribuição para as Comissões Temporárias"
+    },
+    {
+      "id": 5,
+      "sigla": "AGPARECER",
+      "descricao": "Aguardando emissão de parecer da comissão"
+    },
+    {
+      "id": 6,
+      "sigla": "AGPROMLEI",
+      "descricao": "Aguardando promulgação da lei"
+    },
+    {
+      "id": 7,
+      "sigla": "AGPROMNOR",
+      "descricao": "Aguardando promulgação da norma jurídica"
+    },
+    {
+      "id": 8,
+      "sigla": "AGPROMVET",
+      "descricao": "Aguardando promulgação de lei com veto rejeitado"
+    },
+    {
+      "id": 9,
+      "sigla": "AGSANCAO",
+      "descricao": "Aguardando sanção governamental"
+    },
+    {
+      "id": 46,
+      "sigla": "APROV",
+      "descricao": "Matéria Aprovada em Plenário"
+    },
+    {
+      "id": 45,
+      "sigla": "ENVPLEN",
+      "descricao": "Matéria encaminhada ao Plenário"
+    },
+    {
+      "id": 47,
+      "sigla": "REPROV",
+      "descricao": "Matéria reprovada em Plenário"
+    },
+    {
+      "id": 22,
+      "sigla": "NORMPROMUL",
+      "descricao": "Norma promulgada"
+    },
+    {
+      "id": 23,
+      "sigla": "PARECCONTR",
+      "descricao": "Parecer contrário da comissão de mérito"
+    },
+    {
+      "id": 44,
+      "sigla": "CONT",
+      "descricao": "Parecer Contrário das Comissões"
+    },
+    {
+      "id": 25,
+      "sigla": "PARECPLEN",
+      "descricao": "Parecer em Plenário pelas comissões pertinentes"
+    },
+    {
+      "id": 26,
+      "sigla": "PAREUCONJ",
+      "descricao": "Parecer em reunião conjunta das Comissões pertinentes"
+    },
+    {
+      "id": 24,
+      "sigla": "PARECERFAV",
+      "descricao": "Parecer favorável da comissão"
+    },
+    {
+      "id": 43,
+      "sigla": "FAV",
+      "descricao": "Parecer Favorável das Comissões"
+    },
+    {
+      "id": 21,
+      "sigla": "MANUTVETO",
+      "descricao": "Parecer pela manutenção do veto"
+    },
+    {
+      "id": 30,
+      "sigla": "REJEIVETO",
+      "descricao": "Parecer pela rejeição do veto"
+    },
+    {
+      "id": 10,
+      "sigla": "ANEXADA",
+      "descricao": "Proposição anexada à outra análoga ou conexa mais antiga"
+    },
+    {
+      "id": 11,
+      "sigla": "APRESENT",
+      "descricao": "Proposição apresentada em Plenário"
+    },
+    {
+      "id": 13,
+      "sigla": "APROVADA",
+      "descricao": "Proposição aprovada"
+    },
+    {
+      "id": 12,
+      "sigla": "APROV1TUR",
+      "descricao": "Proposição aprovada em 1º turno"
+    },
+    {
+      "id": 14,
+      "sigla": "ARQUIVADA",
+      "descricao": "Proposição arquivada"
+    },
+    {
+      "id": 15,
+      "sigla": "AUTUAPAUTA",
+      "descricao": "Proposição autuada e cumprindo prazo de pauta"
+    },
+    {
+      "id": 40,
+      "sigla": "VETOTOTAL",
+      "descricao": "Proposição com veto tota"
+    },
+    {
+      "id": 16,
+      "sigla": "DESARQUIV",
+      "descricao": "Proposição desarquivada pelo Autor"
+    },
+    {
+      "id": 17,
+      "sigla": "DISTRCOMIS",
+      "descricao": "Proposição distribuída às comissões"
+    },
+    {
+      "id": 18,
+      "sigla": "INCLORDIA",
+      "descricao": "Proposição inclusa na Ordem do Dia"
+    },
+    {
+      "id": 27,
+      "sigla": "PREJUD",
+      "descricao": "Proposição prejudicada"
+    },
+    {
+      "id": 29,
+      "sigla": "REJEITADA",
+      "descricao": "Proposição rejeitada pelo Plenário"
+    },
+    {
+      "id": 32,
+      "sigla": "RETORDIA",
+      "descricao": "Proposição retirada da Ordem do Dia"
+    },
+    {
+      "id": 31,
+      "sigla": "RETAUTOR",
+      "descricao": "Proposição retirada pelo autor"
+    },
+    {
+      "id": 33,
+      "sigla": "TRANSFLEI",
+      "descricao": "Proposição transformada em lei"
+    },
+    {
+      "id": 19,
+      "sigla": "LEIPROMUL",
+      "descricao": "Proposição transformada em lei por promulgação"
+    },
+    {
+      "id": 20,
+      "sigla": "LEIVETPAR",
+      "descricao": "Transformada em lei com veto parcial"
+    },
+    {
+      "id": 38,
+      "sigla": "VETOPAUTA",
+      "descricao": "Veto autuado e incluso em pauta"
+    },
+    {
+      "id": 34,
+      "sigla": "VETODISTR",
+      "descricao": "Veto distribuído para emissão de parecer"
+    },
+    {
+      "id": 37,
+      "sigla": "VETOORDIA",
+      "descricao": "Veto incluso na ordem do dia"
+    },
+    {
+      "id": 35,
+      "sigla": "VETOLIDO",
+      "descricao": "Veto sobre a proposição lido em sessão plenária"
+    },
+    {
+      "id": 36,
+      "sigla": "VETOMANT",
+      "descricao": "Veto sobre a proposição mantido"
+    },
+    {
+      "id": 39,
+      "sigla": "VETOREJEI",
+      "descricao": "Veto sobre a proposição rejeitado"
+    },
+    {
+      "id": 28,
+      "sigla": "PROMULVETO",
+      "descricao": "Veto total ou parcial promulgado"
+    }
+  ],
+  "autores": [
+    {"id":5,"nome":"ACH - AVALIAÇÃO DE CIDADANIA HONORÁRIA","parlamentar_id":null},
+    {"id":11,"nome":"Anderson Miguel","parlamentar_id":2},
+    {"id":12,"nome":"Augusto da Farmácia","parlamentar_id":3},
+    {"id":1,"nome":"CCJ - CONSTITUIÇÃO, LEGISLAÇÃO, JUSTIÇA E REDAÇÃO","parlamentar_id":null},
+    {"id":25,"nome":"Comissões Permanentes - COM PERM","parlamentar_id":null},
+    {"id":13,"nome":"Deone Advogado","parlamentar_id":4},
+    {"id":2,"nome":"DHASBESSP - DIREITOS HUMANOS, ASSISTÊNCIA SOCIAL, BEM ESTAR...","parlamentar_id":null},
+    {"id":4,"nome":"ESCD - EDUCAÇÃO, SAÚDE, CULTURA E DESPORTOS","parlamentar_id":null},
+    {"id":21,"nome":"Gordinho da Usina","parlamentar_id":11},
+    {"id":15,"nome":"Lécio do Coqueiro","parlamentar_id":6},
+    {"id":6,"nome":"MAAEM - MEIO AMBIENTE, AGRICULTURA, ENERGIA E MINERAÇÃO","parlamentar_id":null},
+    {"id":14,"nome":"Nego Leiteiro","parlamentar_id":5},
+    {"id":3,"nome":"OBSP - OBRAS, BENS E SERVIÇOS PÚBLICOS","parlamentar_id":null},
+    {"id":8,"nome":"OFP - ORÇAMENTO E FINANÇAS PÚBLICAS","parlamentar_id":null},
+    {"id":10,"nome":"Olívio José Teixeira","parlamentar_id":null},
+    {"id":9,"nome":"Plenário - PLEN","parlamentar_id":null},
+    {"id":7,"nome":"PP - PARTICIPAÇÃO POPULAR E CIDADANIA","parlamentar_id":null},
+    {"id":23,"nome":"Presidência - PRESGAB","parlamentar_id":null},
+    {"id":17,"nome":"Priscila da Saúde","parlamentar_id":1},
+    {"id":18,"nome":"Robinho","parlamentar_id":7},
+    {"id":24,"nome":"Secretaria das Comissões - SECCOM","parlamentar_id":null},
+    {"id":22,"nome":"Secretaria - SEC","parlamentar_id":null},
+    {"id":16,"nome":"Serginho da Saúde","parlamentar_id":8},
+    {"id":19,"nome":"Valdeci da Rocha","parlamentar_id":9},
+    {"id":20,"nome":"Valdevino Cruzado","parlamentar_id":10}
+  ],
+  "atualizado_em": "2026-11-05",
+  "uf": "MG",
+  "casa": "cm-bambui",
+  "observacao": "Tabelas de apoio do SAPL usadas pelo coletor (sem CPF, telefone, endereço ou data de nascimento)."
+}
