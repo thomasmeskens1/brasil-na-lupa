@@ -1,0 +1,979 @@
+{
+  "legislaturas": [
+    {
+      "id": 1,
+      "numero": 16,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31"
+    },
+    {
+      "id": 2,
+      "numero": 15,
+      "inicio": "2021-01-01",
+      "fim": "2024-12-31"
+    },
+    {
+      "id": 3,
+      "numero": 14,
+      "inicio": "2017-01-01",
+      "fim": "2020-12-31"
+    },
+    {
+      "id": 4,
+      "numero": 13,
+      "inicio": "2013-01-01",
+      "fim": "2016-12-31"
+    },
+    {
+      "id": 5,
+      "numero": 12,
+      "inicio": "2009-01-01",
+      "fim": "2012-12-31"
+    },
+    {
+      "id": 6,
+      "numero": 11,
+      "inicio": "2005-01-01",
+      "fim": "2008-12-31"
+    }
+  ],
+  "legislatura_atual": {
+    "id": 1,
+    "numero": 16,
+    "inicio": "2025-01-01",
+    "fim": "2028-12-31"
+  },
+  "tipos_resultado": [
+    {
+      "id": 1,
+      "nome": "Aprovado por Maioria Simples (ou Maioria Relativa)",
+      "natureza": "A"
+    },
+    {
+      "id": 2,
+      "nome": "Aprovado por Maioria Absoluta",
+      "natureza": "A"
+    },
+    {
+      "id": 3,
+      "nome": "Aprovado por Maioria Qualificada (Dois Terços)",
+      "natureza": "A"
+    },
+    {
+      "id": 4,
+      "nome": "Aprovado por Unanimidade",
+      "natureza": "A"
+    },
+    {
+      "id": 5,
+      "nome": "Rejeitado",
+      "natureza": "R"
+    },
+    {
+      "id": 6,
+      "nome": "Empate (Voto de Minerva)",
+      "natureza": ""
+    }
+  ],
+  "tipos_materia": [
+    {
+      "id": 1,
+      "sigla": "Req",
+      "descricao": "Requerimento"
+    },
+    {
+      "id": 3,
+      "sigla": "Pro",
+      "descricao": "Projetos de Lei"
+    },
+    {
+      "id": 4,
+      "sigla": "PRO",
+      "descricao": "Projeto de Lei Complementar"
+    },
+    {
+      "id": 5,
+      "sigla": "Pro",
+      "descricao": "Projetos de Lei do Poder Executivo"
+    },
+    {
+      "id": 6,
+      "sigla": "Pro",
+      "descricao": "Projeto de Lei Legislativo"
+    },
+    {
+      "id": 7,
+      "sigla": "PR",
+      "descricao": "Projeto de Resolução"
+    },
+    {
+      "id": 8,
+      "sigla": "RV",
+      "descricao": "Requerimento Verbal"
+    }
+  ],
+  "mandatos": [
+    {
+      "id": 4,
+      "parlamentar_id": 5,
+      "legislatura_id": 1,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 8,
+      "parlamentar_id": 8,
+      "legislatura_id": 1,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 1,
+      "parlamentar_id": 1,
+      "legislatura_id": 1,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 9,
+      "parlamentar_id": 9,
+      "legislatura_id": 1,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 6,
+      "parlamentar_id": 6,
+      "legislatura_id": 1,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 7,
+      "parlamentar_id": 7,
+      "legislatura_id": 1,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 5,
+      "parlamentar_id": 4,
+      "legislatura_id": 1,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 3,
+      "parlamentar_id": 3,
+      "legislatura_id": 1,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    },
+    {
+      "id": 2,
+      "parlamentar_id": 2,
+      "legislatura_id": 1,
+      "titular": true,
+      "inicio": "2025-01-01",
+      "fim": "2028-12-31",
+      "afastado": false,
+      "fim_causa": false
+    }
+  ],
+  "tipos_norma": [
+    {
+      "id": 5,
+      "sigla": "DL",
+      "descricao": "Decreto Legislativo"
+    },
+    {
+      "id": 2,
+      "sigla": "ELO",
+      "descricao": "Emenda a Lei Orgânica"
+    },
+    {
+      "id": 3,
+      "sigla": "LC",
+      "descricao": "Lei Complementar"
+    },
+    {
+      "id": 4,
+      "sigla": "LOD",
+      "descricao": "Lei Ordinária"
+    },
+    {
+      "id": 1,
+      "sigla": "LO",
+      "descricao": "Lei Orgânica"
+    },
+    {
+      "id": 7,
+      "sigla": "MP",
+      "descricao": "Medida Provisória"
+    },
+    {
+      "id": 6,
+      "sigla": "RES",
+      "descricao": "Resoluções"
+    }
+  ],
+  "tipos_sessao": [
+    {
+      "id": 2,
+      "nome": "Sessão Extraordinária"
+    },
+    {
+      "id": 1,
+      "nome": "Sessão Ordinária"
+    }
+  ],
+  "partidos": [
+    {
+      "id": 5,
+      "sigla": "DEM",
+      "nome": "DEMOCRATAS"
+    },
+    {
+      "id": 33,
+      "sigla": "NOVO",
+      "nome": "PARTIDO NOVO"
+    },
+    {
+      "id": 18,
+      "sigla": "PCB",
+      "nome": "PARTIDO COMUNISTA BRASILEIRO"
+    },
+    {
+      "id": 6,
+      "sigla": "PCdoB",
+      "nome": "PARTIDO COMUNISTA DO BRASIL"
+    },
+    {
+      "id": 22,
+      "sigla": "PCO",
+      "nome": "PARTIDO DA CAUSA OPERÁRIA"
+    },
+    {
+      "id": 3,
+      "sigla": "PDT",
+      "nome": "PARTIDO DEMOCRÁTICO TRABALHISTA"
+    },
+    {
+      "id": 30,
+      "sigla": "PEN",
+      "nome": "PARTIDO ECOLÓGICO NACIONAL"
+    },
+    {
+      "id": 20,
+      "sigla": "PHS",
+      "nome": "PARTIDO HUMANISTA DA SOLIDARIEDADE"
+    },
+    {
+      "id": 35,
+      "sigla": "PMB",
+      "nome": "PARTIDO DA MULHER BRASILEIRA"
+    },
+    {
+      "id": 1,
+      "sigla": "PMDB",
+      "nome": "PARTIDO DO MOVIMENTO DEMOCRÁTICO BRASILEIRO"
+    },
+    {
+      "id": 11,
+      "sigla": "PMN",
+      "nome": "PARTIDO DA MOBILIZAÇÃO NACIONAL"
+    },
+    {
+      "id": 23,
+      "sigla": "PODE",
+      "nome": "PODEMOS"
+    },
+    {
+      "id": 16,
+      "sigla": "PP",
+      "nome": "PARTIDO PROGRESSISTA"
+    },
+    {
+      "id": 29,
+      "sigla": "PPL",
+      "nome": "PARTIDO PÁTRIA LIVRE"
+    },
+    {
+      "id": 13,
+      "sigla": "PPS",
+      "nome": "PARTIDO POPULAR SOCIALISTA"
+    },
+    {
+      "id": 27,
+      "sigla": "PR",
+      "nome": "PARTIDO DA REPÚBLICA"
+    },
+    {
+      "id": 25,
+      "sigla": "PRB",
+      "nome": "PARTIDO REPUBLICANO BRASILEIRO"
+    },
+    {
+      "id": 31,
+      "sigla": "PROS",
+      "nome": "PARTIDO REPUBLICANO DA ORDEM SOCIAL"
+    },
+    {
+      "id": 12,
+      "sigla": "PRP",
+      "nome": "PARTIDO REPUBLICANO PROGRESSISTA"
+    },
+    {
+      "id": 19,
+      "sigla": "PRTB",
+      "nome": "PARTIDO RENOVADOR TRABALHISTA BRASILEIRO"
+    },
+    {
+      "id": 7,
+      "sigla": "PSB",
+      "nome": "PARTIDO SOCIALISTA BRASILEIRO"
+    },
+    {
+      "id": 10,
+      "sigla": "PSC",
+      "nome": "PARTIDO SOCIAL CRISTÃO"
+    },
+    {
+      "id": 28,
+      "sigla": "PSD",
+      "nome": "PARTIDO SOCIAL DEMOCRÁTICO"
+    },
+    {
+      "id": 8,
+      "sigla": "PSDB",
+      "nome": "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA"
+    },
+    {
+      "id": 21,
+      "sigla": "PSDC",
+      "nome": "PARTIDO SOCIAL DEMOCRATA CRISTÃO"
+    },
+    {
+      "id": 24,
+      "sigla": "PSL",
+      "nome": "PARTIDO SOCIAL LIBERAL"
+    },
+    {
+      "id": 26,
+      "sigla": "PSOL",
+      "nome": "PARTIDO SOCIALISMO E LIBERDADE"
+    },
+    {
+      "id": 17,
+      "sigla": "PSTU",
+      "nome": "PARTIDO SOCIALISTA DOS TRABALHADORES UNIFICADO"
+    },
+    {
+      "id": 4,
+      "sigla": "PT",
+      "nome": "PARTIDO DOS TRABALHADORES"
+    },
+    {
+      "id": 2,
+      "sigla": "PTB",
+      "nome": "PARTIDO TRABALHISTA BRASILEIRO"
+    },
+    {
+      "id": 9,
+      "sigla": "PTC",
+      "nome": "PARTIDO TRABALHISTA CRISTÃO"
+    },
+    {
+      "id": 15,
+      "sigla": "PTdoB",
+      "nome": "PARTIDO TRABALHISTA DO BRASIL"
+    },
+    {
+      "id": 14,
+      "sigla": "PV",
+      "nome": "PARTIDO VERDE"
+    },
+    {
+      "id": 34,
+      "sigla": "REDE",
+      "nome": "REDE SUSTENTABILIDADE"
+    },
+    {
+      "id": 32,
+      "sigla": "SD",
+      "nome": "SOLIDARIEDADE"
+    },
+    {
+      "id": 36,
+      "sigla": "UNIÃO",
+      "nome": "UNIÃO BRASIL"
+    }
+  ],
+  "filiacoes": [
+    {
+      "id": 4,
+      "parlamentar_id": 5,
+      "partido_id": 36,
+      "inicio": "2024-01-01",
+      "fim": null
+    },
+    {
+      "id": 16,
+      "parlamentar_id": 5,
+      "partido_id": 16,
+      "inicio": "2020-01-01",
+      "fim": "2023-12-31"
+    },
+    {
+      "id": 17,
+      "parlamentar_id": 5,
+      "partido_id": 27,
+      "inicio": "2008-01-01",
+      "fim": "2020-01-01"
+    },
+    {
+      "id": 8,
+      "parlamentar_id": 8,
+      "partido_id": 23,
+      "inicio": "2024-01-01",
+      "fim": null
+    },
+    {
+      "id": 1,
+      "parlamentar_id": 1,
+      "partido_id": 36,
+      "inicio": "2024-01-01",
+      "fim": null
+    },
+    {
+      "id": 18,
+      "parlamentar_id": 19,
+      "partido_id": 27,
+      "inicio": "2012-01-01",
+      "fim": null
+    },
+    {
+      "id": 9,
+      "parlamentar_id": 9,
+      "partido_id": 23,
+      "inicio": "2024-01-01",
+      "fim": null
+    },
+    {
+      "id": 15,
+      "parlamentar_id": 13,
+      "partido_id": 1,
+      "inicio": "2012-01-01",
+      "fim": null
+    },
+    {
+      "id": 14,
+      "parlamentar_id": 13,
+      "partido_id": 2,
+      "inicio": "2008-01-01",
+      "fim": "2012-01-01"
+    },
+    {
+      "id": 6,
+      "parlamentar_id": 6,
+      "partido_id": 7,
+      "inicio": "2024-01-01",
+      "fim": null
+    },
+    {
+      "id": 7,
+      "parlamentar_id": 7,
+      "partido_id": 7,
+      "inicio": "2025-01-01",
+      "fim": null
+    },
+    {
+      "id": 12,
+      "parlamentar_id": 16,
+      "partido_id": 8,
+      "inicio": "2020-01-01",
+      "fim": null
+    },
+    {
+      "id": 19,
+      "parlamentar_id": 20,
+      "partido_id": 28,
+      "inicio": "2012-01-01",
+      "fim": null
+    },
+    {
+      "id": 10,
+      "parlamentar_id": 10,
+      "partido_id": 26,
+      "inicio": "2016-01-01",
+      "fim": null
+    },
+    {
+      "id": 11,
+      "parlamentar_id": 15,
+      "partido_id": 16,
+      "inicio": "2020-01-01",
+      "fim": "2024-12-31"
+    },
+    {
+      "id": 20,
+      "parlamentar_id": 15,
+      "partido_id": 27,
+      "inicio": "2012-01-01",
+      "fim": "2020-01-01"
+    },
+    {
+      "id": 21,
+      "parlamentar_id": 14,
+      "partido_id": 5,
+      "inicio": "2012-01-01",
+      "fim": "2020-01-01"
+    },
+    {
+      "id": 5,
+      "parlamentar_id": 4,
+      "partido_id": 36,
+      "inicio": "2024-01-01",
+      "fim": null
+    },
+    {
+      "id": 13,
+      "parlamentar_id": 17,
+      "partido_id": 26,
+      "inicio": "2020-01-01",
+      "fim": null
+    },
+    {
+      "id": 3,
+      "parlamentar_id": 3,
+      "partido_id": 36,
+      "inicio": "2024-01-01",
+      "fim": null
+    },
+    {
+      "id": 2,
+      "parlamentar_id": 2,
+      "partido_id": 23,
+      "inicio": "2024-01-01",
+      "fim": null
+    }
+  ],
+  "parlamentares": [
+    {
+      "id": 5,
+      "nome": "Antônio Justino",
+      "nome_civil": "Antônio Firmino de Souto",
+      "ativo": true,
+      "foto": "http://sapl.jacana.rn.leg.br/media/sapl/public/parlamentar/5/c7d96db0-dade-4aaf-8171-e98df73bb82d.png",
+      "email_institucional": null
+    },
+    {
+      "id": 18,
+      "nome": "Beto",
+      "nome_civil": "Gilberto Silva",
+      "ativo": false,
+      "foto": "http://sapl.jacana.rn.leg.br/media/sapl/public/parlamentar/18/foto.png",
+      "email_institucional": null
+    },
+    {
+      "id": 8,
+      "nome": "Donezete",
+      "nome_civil": "Francisco Donezete de Oliveira",
+      "ativo": true,
+      "foto": "http://sapl.jacana.rn.leg.br/media/sapl/public/parlamentar/8/d9ff546d-cc26-4cf5-8375-a9a54f4ce285.png",
+      "email_institucional": null
+    },
+    {
+      "id": 1,
+      "nome": "Esdras",
+      "nome_civil": "Esdras Fernandes Farias",
+      "ativo": true,
+      "foto": "http://sapl.jacana.rn.leg.br/media/sapl/public/parlamentar/1/2936e618-9020-46e1-b6b8-efd7433988b5.png",
+      "email_institucional": null
+    },
+    {
+      "id": 19,
+      "nome": "Fabinho",
+      "nome_civil": "João Fabiano de Medeiros",
+      "ativo": false,
+      "foto": "http://sapl.jacana.rn.leg.br/media/sapl/public/parlamentar/19/foto.png",
+      "email_institucional": null
+    },
+    {
+      "id": 11,
+      "nome": "Francisquinho",
+      "nome_civil": "Francisco de Assis Candido da Silva",
+      "ativo": false,
+      "foto": "http://sapl.jacana.rn.leg.br/media/sapl/public/parlamentar/11/francisquinho.png",
+      "email_institucional": null
+    },
+    {
+      "id": 9,
+      "nome": "Galego de Geraldo Bento",
+      "nome_civil": "José Edilson de Oliveira",
+      "ativo": true,
+      "foto": "http://sapl.jacana.rn.leg.br/media/sapl/public/parlamentar/9/957a4e29-da83-41c4-8781-4af364a2864f.png",
+      "email_institucional": null
+    },
+    {
+      "id": 12,
+      "nome": "Gel Abdias",
+      "nome_civil": "Geraldo Abdias da Silva Filho",
+      "ativo": false,
+      "foto": "http://sapl.jacana.rn.leg.br/media/sapl/public/parlamentar/12/81a0d20a-e4f2-4987-a195-0e10721dfd19.png",
+      "email_institucional": null
+    },
+    {
+      "id": 13,
+      "nome": "Gelzo",
+      "nome_civil": "Jose Gelzo Nascimento dos Santos",
+      "ativo": false,
+      "foto": "http://sapl.jacana.rn.leg.br/media/sapl/public/parlamentar/13/39b614d8-9b91-4948-9cce-df29c82cd9bd.png",
+      "email_institucional": null
+    },
+    {
+      "id": 6,
+      "nome": "Irmão Aldemir",
+      "nome_civil": "Aldemir dos Santos",
+      "ativo": true,
+      "foto": "http://sapl.jacana.rn.leg.br/media/sapl/public/parlamentar/6/3ae84677-731e-420b-a4cc-090bb2b6c958.png",
+      "email_institucional": null
+    },
+    {
+      "id": 7,
+      "nome": "Ismael Romão",
+      "nome_civil": "Ismael Romão dos Santos",
+      "ativo": true,
+      "foto": "http://sapl.jacana.rn.leg.br/media/sapl/public/parlamentar/7/d1b64559-1c9c-4abf-8518-54a8f9d0542c.png",
+      "email_institucional": null
+    },
+    {
+      "id": 16,
+      "nome": "Júnior",
+      "nome_civil": "Francisco Batista de Moura Júnior",
+      "ativo": false,
+      "foto": "http://sapl.jacana.rn.leg.br/media/sapl/public/parlamentar/16/d651cd11-06c0-4314-ac18-2a9030692e37.png",
+      "email_institucional": null
+    },
+    {
+      "id": 20,
+      "nome": "Leo",
+      "nome_civil": "Leonardo de Lima Candido",
+      "ativo": false,
+      "foto": "http://sapl.jacana.rn.leg.br/media/sapl/public/parlamentar/20/foto_1.png",
+      "email_institucional": null
+    },
+    {
+      "id": 10,
+      "nome": "Naldo do Maracujá",
+      "nome_civil": "Edinaldo Martins de Oliveira",
+      "ativo": true,
+      "foto": "http://sapl.jacana.rn.leg.br/media/sapl/public/parlamentar/10/naldo_do_maracuja.png",
+      "email_institucional": null
+    },
+    {
+      "id": 15,
+      "nome": "Neguinho de Chicó",
+      "nome_civil": "Reginaldo Silva de Araujo",
+      "ativo": false,
+      "foto": "http://sapl.jacana.rn.leg.br/media/sapl/public/parlamentar/15/0c63f5d5-e04c-4a3c-84b7-b36e31cca604.png",
+      "email_institucional": null
+    },
+    {
+      "id": 14,
+      "nome": "Riane",
+      "nome_civil": "Riane Guedes de Oliveira",
+      "ativo": false,
+      "foto": "http://sapl.jacana.rn.leg.br/media/sapl/public/parlamentar/14/e1d613e4-28d8-40a2-9688-dd72ecfdd0c0.png",
+      "email_institucional": null
+    },
+    {
+      "id": 4,
+      "nome": "Rodela",
+      "nome_civil": "Robério José da Costa",
+      "ativo": true,
+      "foto": "http://sapl.jacana.rn.leg.br/media/sapl/public/parlamentar/4/35e3cea3-4e80-4fc1-bc37-2c97f5d7c550.png",
+      "email_institucional": null
+    },
+    {
+      "id": 17,
+      "nome": "Salatemberg",
+      "nome_civil": "Jose Salatemberg Santos",
+      "ativo": true,
+      "foto": "http://sapl.jacana.rn.leg.br/media/sapl/public/parlamentar/17/fd5cad1a-55e3-4ac8-8044-d98576322d5d.png",
+      "email_institucional": null
+    },
+    {
+      "id": 3,
+      "nome": "Victor Nascimento",
+      "nome_civil": "Victor Nascimento dos Santos",
+      "ativo": true,
+      "foto": "http://sapl.jacana.rn.leg.br/media/sapl/public/parlamentar/3/f5992b38-f235-44ea-99e0-1fc45be7c9ac.png",
+      "email_institucional": null
+    },
+    {
+      "id": 2,
+      "nome": "Zagaia",
+      "nome_civil": "Ednaldo da Silva Araújo",
+      "ativo": true,
+      "foto": "http://sapl.jacana.rn.leg.br/media/sapl/public/parlamentar/2/de8b39f2-910a-43cd-a71c-66e8bdd09650.png",
+      "email_institucional": null
+    }
+  ],
+  "status_tramitacao": [
+    {
+      "id": 1,
+      "sigla": "ADIAVOTAC",
+      "descricao": "Adiada discussão e votação."
+    },
+    {
+      "id": 4,
+      "sigla": "AGORDIA",
+      "descricao": "Aguardando a inclusão na ordem do dia"
+    },
+    {
+      "id": 3,
+      "sigla": "AGMENSVET",
+      "descricao": "Aguardando assinatura da mensagem sobre o veto"
+    },
+    {
+      "id": 2,
+      "sigla": "AGAUTOGR",
+      "descricao": "Aguardando assinatura do autógrafo"
+    },
+    {
+      "id": 5,
+      "sigla": "AGPARECER",
+      "descricao": "Aguardando emissão de parecer da comissão"
+    },
+    {
+      "id": 6,
+      "sigla": "AGPROMLEI",
+      "descricao": "Aguardando promulgação da lei"
+    },
+    {
+      "id": 7,
+      "sigla": "AGPROMNOR",
+      "descricao": "Aguardando promulgação da norma jurídica"
+    },
+    {
+      "id": 8,
+      "sigla": "AGPROMVET",
+      "descricao": "Aguardando promulgação de lei com veto rejeitado"
+    },
+    {
+      "id": 9,
+      "sigla": "AGSANCAO",
+      "descricao": "Aguardando sanção governamental"
+    },
+    {
+      "id": 22,
+      "sigla": "NORMPROMUL",
+      "descricao": "Norma promulgada"
+    },
+    {
+      "id": 23,
+      "sigla": "PARECCONTR",
+      "descricao": "Parecer contrário da comissão de mérito"
+    },
+    {
+      "id": 25,
+      "sigla": "PARECPLEN",
+      "descricao": "Parecer em Plenário pelas comissões pertinentes"
+    },
+    {
+      "id": 26,
+      "sigla": "PAREUCONJ",
+      "descricao": "Parecer em reunião conjunta das Comissões pertinentes"
+    },
+    {
+      "id": 24,
+      "sigla": "PARECERFAV",
+      "descricao": "Parecer favorável da comissão"
+    },
+    {
+      "id": 21,
+      "sigla": "MANUTVETO",
+      "descricao": "Parecer pela manutenção do veto"
+    },
+    {
+      "id": 30,
+      "sigla": "REJEIVETO",
+      "descricao": "Parecer pela rejeição do veto"
+    },
+    {
+      "id": 10,
+      "sigla": "ANEXADA",
+      "descricao": "Proposição anexada à outra análoga ou conexa mais antiga"
+    },
+    {
+      "id": 11,
+      "sigla": "APRESENT",
+      "descricao": "Proposição apresentada em Plenário"
+    },
+    {
+      "id": 13,
+      "sigla": "APROVADA",
+      "descricao": "Proposição aprovada"
+    },
+    {
+      "id": 12,
+      "sigla": "APROV1TUR",
+      "descricao": "Proposição aprovada em 1º turno"
+    },
+    {
+      "id": 14,
+      "sigla": "ARQUIVADA",
+      "descricao": "Proposição arquivada"
+    },
+    {
+      "id": 15,
+      "sigla": "AUTUAPAUTA",
+      "descricao": "Proposição autuada e cumprindo prazo de pauta"
+    },
+    {
+      "id": 40,
+      "sigla": "VETOTOTAL",
+      "descricao": "Proposição com veto tota"
+    },
+    {
+      "id": 16,
+      "sigla": "DESARQUIV",
+      "descricao": "Proposição desarquivada pelo Autor"
+    },
+    {
+      "id": 17,
+      "sigla": "DISTRCOMIS",
+      "descricao": "Proposição distribuída às comissões"
+    },
+    {
+      "id": 18,
+      "sigla": "INCLORDIA",
+      "descricao": "Proposição inclusa na Ordem do Dia"
+    },
+    {
+      "id": 27,
+      "sigla": "PREJUD",
+      "descricao": "Proposição prejudicada"
+    },
+    {
+      "id": 29,
+      "sigla": "REJEITADA",
+      "descricao": "Proposição rejeitada pelo Plenário"
+    },
+    {
+      "id": 32,
+      "sigla": "RETORDIA",
+      "descricao": "Proposição retirada da Ordem do Dia"
+    },
+    {
+      "id": 31,
+      "sigla": "RETAUTOR",
+      "descricao": "Proposição retirada pelo autor"
+    },
+    {
+      "id": 33,
+      "sigla": "TRANSFLEI",
+      "descricao": "Proposição transformada em lei"
+    },
+    {
+      "id": 19,
+      "sigla": "LEIPROMUL",
+      "descricao": "Proposição transformada em lei por promulgação"
+    },
+    {
+      "id": 20,
+      "sigla": "LEIVETPAR",
+      "descricao": "Transformada em lei com veto parcial"
+    },
+    {
+      "id": 38,
+      "sigla": "VETOPAUTA",
+      "descricao": "Veto autuado e incluso em pauta"
+    },
+    {
+      "id": 34,
+      "sigla": "VETODISTR",
+      "descricao": "Veto distribuído para emissão de parecer"
+    },
+    {
+      "id": 37,
+      "sigla": "VETOORDIA",
+      "descricao": "Veto incluso na ordem do dia"
+    },
+    {
+      "id": 35,
+      "sigla": "VETOLIDO",
+      "descricao": "Veto sobre a proposição lido em sessão plenária"
+    },
+    {
+      "id": 36,
+      "sigla": "VETOMANT",
+      "descricao": "Veto sobre a proposição mantido"
+    },
+    {
+      "id": 39,
+      "sigla": "VETOREJEI",
+      "descricao": "Veto sobre a proposição rejeitado"
+    },
+    {
+      "id": 28,
+      "sigla": "PROMULVETO",
+      "descricao": "Veto total ou parcial promulgado"
+    }
+  ],
+  "autores": [
+    {"id":2,"nome":"Antônio Justino","parlamentar_id":5},
+    {"id":11,"nome":"CCFO - Comissão de Contabilidade, Finanças e Orçamentos","parlamentar_id":null},
+    {"id":12,"nome":"CERSAS - Comissão de Educação, Recreação, Saúde e Assistência Social","parlamentar_id":null},
+    {"id":10,"nome":"CLJRF - Comissão de Legislação, Justiça e Redação Final","parlamentar_id":null},
+    {"id":23,"nome":"Conselhos Municipais - CM","parlamentar_id":null},
+    {"id":21,"nome":"Controladoria-Geral do Município - CGM","parlamentar_id":null},
+    {"id":5,"nome":"Donezete","parlamentar_id":8},
+    {"id":4,"nome":"Esdras","parlamentar_id":1},
+    {"id":24,"nome":"Gabinete da Presidência da Câmara Municipal - GP","parlamentar_id":null},
+    {"id":13,"nome":"Gabinete do Prefeito - GP","parlamentar_id":null},
+    {"id":7,"nome":"Galego de Geraldo Bento","parlamentar_id":9},
+    {"id":1,"nome":"Irmão Aldemir","parlamentar_id":6},
+    {"id":6,"nome":"Ismael Romão","parlamentar_id":7},
+    {"id":22,"nome":"Ouvidoria Geral Municipal - OGM","parlamentar_id":null},
+    {"id":20,"nome":"Procuradoria-Geral do Município - PGM","parlamentar_id":null},
+    {"id":8,"nome":"Rodela","parlamentar_id":4},
+    {"id":19,"nome":"Secretaria de Agricultura - SA","parlamentar_id":null},
+    {"id":18,"nome":"Secretaria de Assistência Social - SAS","parlamentar_id":null},
+    {"id":15,"nome":"Secretaria de Educação - SE","parlamentar_id":null},
+    {"id":16,"nome":"Secretaria de Finanças / Tributação / Administração - SF","parlamentar_id":null},
+    {"id":17,"nome":"Secretaria de Obras / Infraestrutura / Urbanismo - SOIU","parlamentar_id":null},
+    {"id":14,"nome":"Secretaria de Saúde - SS","parlamentar_id":null},
+    {"id":9,"nome":"Victor Nascimento","parlamentar_id":3},
+    {"id":3,"nome":"Zagaia","parlamentar_id":2}
+  ],
+  "atualizado_em": "2026-11-06",
+  "uf": "RN",
+  "casa": "cm-jacana",
+  "observacao": "Tabelas de apoio do SAPL usadas pelo coletor (sem CPF, telefone, endereço ou data de nascimento)."
+}

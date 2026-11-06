@@ -1,0 +1,925 @@
+{
+  "legislaturas": [
+    {
+      "id": 3,
+      "numero": 8,
+      "inicio": "2021-01-01",
+      "fim": "2024-12-31"
+    },
+    {
+      "id": 1,
+      "numero": 7,
+      "inicio": "2017-01-01",
+      "fim": "2020-12-31"
+    },
+    {
+      "id": 2,
+      "numero": 6,
+      "inicio": "2013-01-01",
+      "fim": "2016-12-31"
+    }
+  ],
+  "legislatura_atual": null,
+  "tipos_resultado": [
+    {
+      "id": 2,
+      "nome": "Aprovado por Maioria",
+      "natureza": "A"
+    },
+    {
+      "id": 3,
+      "nome": "Aprovado por Unanimidade",
+      "natureza": "A"
+    },
+    {
+      "id": 4,
+      "nome": "Rejeitado por Maioria",
+      "natureza": "R"
+    },
+    {
+      "id": 5,
+      "nome": "Rejeitado por Unanimidade",
+      "natureza": "R"
+    }
+  ],
+  "tipos_materia": [
+    {
+      "id": 1,
+      "sigla": "EMD",
+      "descricao": "Emenda"
+    },
+    {
+      "id": 2,
+      "sigla": "IND",
+      "descricao": "Indicação"
+    },
+    {
+      "id": 11,
+      "sigla": "MOC",
+      "descricao": "Moção"
+    },
+    {
+      "id": 10,
+      "sigla": "PAR",
+      "descricao": "Parecer"
+    },
+    {
+      "id": 4,
+      "sigla": "PI",
+      "descricao": "Pedido de Informação"
+    },
+    {
+      "id": 6,
+      "sigla": "PDL",
+      "descricao": "Projeto de Decreto Legislativo"
+    },
+    {
+      "id": 8,
+      "sigla": "PLC",
+      "descricao": "Projeto de Lei Complementar"
+    },
+    {
+      "id": 5,
+      "sigla": "PLO",
+      "descricao": "Projeto de Lei Ordinária"
+    },
+    {
+      "id": 7,
+      "sigla": "PRE",
+      "descricao": "Projeto de Resolução"
+    },
+    {
+      "id": 9,
+      "sigla": "VETO",
+      "descricao": "Razões do Veto"
+    },
+    {
+      "id": 3,
+      "sigla": "REQ",
+      "descricao": "Requerimento"
+    },
+    {
+      "id": 12,
+      "sigla": "PELO",
+      "descricao": "Proposta de emenda da lei orgânica"
+    },
+    {
+      "id": 13,
+      "sigla": "PLCL",
+      "descricao": "Projeto de lei complementar legislativo"
+    }
+  ],
+  "tipos_norma": [
+    {
+      "id": 1,
+      "sigla": "DL",
+      "descricao": "Decreto Legislativo"
+    },
+    {
+      "id": 3,
+      "sigla": "LC",
+      "descricao": "Lei Complementar"
+    },
+    {
+      "id": 2,
+      "sigla": "LEI",
+      "descricao": "Lei Ordinária"
+    },
+    {
+      "id": 4,
+      "sigla": "LOM",
+      "descricao": "Lei Orgânica Municipal"
+    },
+    {
+      "id": 6,
+      "sigla": "RI",
+      "descricao": "Regimento Interno"
+    },
+    {
+      "id": 5,
+      "sigla": "RES",
+      "descricao": "Resolução"
+    }
+  ],
+  "tipos_sessao": [
+    {
+      "id": 3,
+      "nome": "Extraordinária"
+    },
+    {
+      "id": 2,
+      "nome": "Ordinária"
+    },
+    {
+      "id": 4,
+      "nome": "Solene"
+    }
+  ],
+  "partidos": [
+    {
+      "id": 5,
+      "sigla": "DEM",
+      "nome": "DEMOCRATAS"
+    },
+    {
+      "id": 33,
+      "sigla": "NOVO",
+      "nome": "PARTIDO NOVO"
+    },
+    {
+      "id": 18,
+      "sigla": "PCB",
+      "nome": "PARTIDO COMUNISTA BRASILEIRO"
+    },
+    {
+      "id": 6,
+      "sigla": "PCdoB",
+      "nome": "PARTIDO COMUNISTA DO BRASIL"
+    },
+    {
+      "id": 22,
+      "sigla": "PCO",
+      "nome": "PARTIDO DA CAUSA OPERÁRIA"
+    },
+    {
+      "id": 3,
+      "sigla": "PDT",
+      "nome": "PARTIDO DEMOCRÁTICO TRABALHISTA"
+    },
+    {
+      "id": 30,
+      "sigla": "PEN",
+      "nome": "PARTIDO ECOLÓGICO NACIONAL"
+    },
+    {
+      "id": 20,
+      "sigla": "PHS",
+      "nome": "PARTIDO HUMANISTA DA SOLIDARIEDADE"
+    },
+    {
+      "id": 35,
+      "sigla": "PMB",
+      "nome": "PARTIDO DA MULHER BRASILEIRA"
+    },
+    {
+      "id": 1,
+      "sigla": "PMDB",
+      "nome": "PARTIDO DO MOVIMENTO DEMOCRÁTICO BRASILEIRO"
+    },
+    {
+      "id": 11,
+      "sigla": "PMN",
+      "nome": "PARTIDO DA MOBILIZAÇÃO NACIONAL"
+    },
+    {
+      "id": 23,
+      "sigla": "PODE",
+      "nome": "PODEMOS"
+    },
+    {
+      "id": 16,
+      "sigla": "PP",
+      "nome": "PARTIDO PROGRESSISTA"
+    },
+    {
+      "id": 29,
+      "sigla": "PPL",
+      "nome": "PARTIDO PÁTRIA LIVRE"
+    },
+    {
+      "id": 13,
+      "sigla": "PPS",
+      "nome": "PARTIDO POPULAR SOCIALISTA"
+    },
+    {
+      "id": 27,
+      "sigla": "PR",
+      "nome": "PARTIDO DA REPÚBLICA"
+    },
+    {
+      "id": 25,
+      "sigla": "PRB",
+      "nome": "PARTIDO REPUBLICANO BRASILEIRO"
+    },
+    {
+      "id": 31,
+      "sigla": "PROS",
+      "nome": "PARTIDO REPUBLICANO DA ORDEM SOCIAL"
+    },
+    {
+      "id": 12,
+      "sigla": "PRP",
+      "nome": "PARTIDO REPUBLICANO PROGRESSISTA"
+    },
+    {
+      "id": 19,
+      "sigla": "PRTB",
+      "nome": "PARTIDO RENOVADOR TRABALHISTA BRASILEIRO"
+    },
+    {
+      "id": 7,
+      "sigla": "PSB",
+      "nome": "PARTIDO SOCIALISTA BRASILEIRO"
+    },
+    {
+      "id": 10,
+      "sigla": "PSC",
+      "nome": "PARTIDO SOCIAL CRISTÃO"
+    },
+    {
+      "id": 28,
+      "sigla": "PSD",
+      "nome": "PARTIDO SOCIAL DEMOCRÁTICO"
+    },
+    {
+      "id": 8,
+      "sigla": "PSDB",
+      "nome": "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA"
+    },
+    {
+      "id": 21,
+      "sigla": "PSDC",
+      "nome": "PARTIDO SOCIAL DEMOCRATA CRISTÃO"
+    },
+    {
+      "id": 24,
+      "sigla": "PSL",
+      "nome": "PARTIDO SOCIAL LIBERAL"
+    },
+    {
+      "id": 26,
+      "sigla": "PSOL",
+      "nome": "PARTIDO SOCIALISMO E LIBERDADE"
+    },
+    {
+      "id": 17,
+      "sigla": "PSTU",
+      "nome": "PARTIDO SOCIALISTA DOS TRABALHADORES UNIFICADO"
+    },
+    {
+      "id": 4,
+      "sigla": "PT",
+      "nome": "PARTIDO DOS TRABALHADORES"
+    },
+    {
+      "id": 2,
+      "sigla": "PTB",
+      "nome": "PARTIDO TRABALHISTA BRASILEIRO"
+    },
+    {
+      "id": 9,
+      "sigla": "PTC",
+      "nome": "PARTIDO TRABALHISTA CRISTÃO"
+    },
+    {
+      "id": 15,
+      "sigla": "PTdoB",
+      "nome": "PARTIDO TRABALHISTA DO BRASIL"
+    },
+    {
+      "id": 14,
+      "sigla": "PV",
+      "nome": "PARTIDO VERDE"
+    },
+    {
+      "id": 34,
+      "sigla": "REDE",
+      "nome": "REDE SUSTENTABILIDADE"
+    },
+    {
+      "id": 32,
+      "sigla": "SD",
+      "nome": "SOLIDARIEDADE"
+    }
+  ],
+  "filiacoes": [
+    {
+      "id": 11,
+      "parlamentar_id": 3,
+      "partido_id": 3,
+      "inicio": "2020-04-03",
+      "fim": null
+    },
+    {
+      "id": 1,
+      "parlamentar_id": 3,
+      "partido_id": 25,
+      "inicio": "2016-03-18",
+      "fim": "2020-04-03"
+    },
+    {
+      "id": 10,
+      "parlamentar_id": 16,
+      "partido_id": 27,
+      "inicio": "2011-10-03",
+      "fim": null
+    },
+    {
+      "id": 2,
+      "parlamentar_id": 4,
+      "partido_id": 32,
+      "inicio": "2015-09-01",
+      "fim": null
+    },
+    {
+      "id": 17,
+      "parlamentar_id": 7,
+      "partido_id": 28,
+      "inicio": "2021-01-01",
+      "fim": null
+    },
+    {
+      "id": 20,
+      "parlamentar_id": 23,
+      "partido_id": 28,
+      "inicio": "0101-01-01",
+      "fim": null
+    },
+    {
+      "id": 4,
+      "parlamentar_id": 5,
+      "partido_id": 2,
+      "inicio": "2011-09-30",
+      "fim": null
+    },
+    {
+      "id": 13,
+      "parlamentar_id": 18,
+      "partido_id": 3,
+      "inicio": "2020-04-03",
+      "fim": null
+    },
+    {
+      "id": 5,
+      "parlamentar_id": 9,
+      "partido_id": 8,
+      "inicio": "2015-04-14",
+      "fim": null
+    },
+    {
+      "id": 6,
+      "parlamentar_id": 2,
+      "partido_id": 2,
+      "inicio": "1999-09-10",
+      "fim": null
+    },
+    {
+      "id": 7,
+      "parlamentar_id": 1,
+      "partido_id": 8,
+      "inicio": "2015-09-11",
+      "fim": null
+    },
+    {
+      "id": 14,
+      "parlamentar_id": 22,
+      "partido_id": 28,
+      "inicio": "2020-03-25",
+      "fim": null
+    },
+    {
+      "id": 8,
+      "parlamentar_id": 8,
+      "partido_id": 3,
+      "inicio": "2020-01-01",
+      "fim": null
+    },
+    {
+      "id": 18,
+      "parlamentar_id": 20,
+      "partido_id": 28,
+      "inicio": "2020-01-01",
+      "fim": "2021-03-20"
+    },
+    {
+      "id": 12,
+      "parlamentar_id": 17,
+      "partido_id": 2,
+      "inicio": "2020-04-01",
+      "fim": null
+    },
+    {
+      "id": 9,
+      "parlamentar_id": 6,
+      "partido_id": 3,
+      "inicio": "2016-03-06",
+      "fim": null
+    },
+    {
+      "id": 19,
+      "parlamentar_id": 19,
+      "partido_id": 24,
+      "inicio": "2021-11-16",
+      "fim": null
+    },
+    {
+      "id": 15,
+      "parlamentar_id": 19,
+      "partido_id": 5,
+      "inicio": "2020-04-03",
+      "fim": "2021-11-16"
+    },
+    {
+      "id": 16,
+      "parlamentar_id": 21,
+      "partido_id": 3,
+      "inicio": "2020-04-03",
+      "fim": null
+    }
+  ],
+  "parlamentares": [
+    {
+      "id": 12,
+      "nome": "Ci da 10",
+      "nome_civil": "Claudecir Alexandre Alves",
+      "ativo": true,
+      "foto": null,
+      "email_institucional": null
+    },
+    {
+      "id": 3,
+      "nome": "Ci da 10",
+      "nome_civil": "Claudecir Alexandre Alves",
+      "ativo": true,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/3/dsc-7899.jpg",
+      "email_institucional": "claudecir@camponovoderondonia.ro.leg.br"
+    },
+    {
+      "id": 14,
+      "nome": "Cleia",
+      "nome_civil": "Cleia Nogueira Cordeiro",
+      "ativo": false,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/14/cleia-22222.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 16,
+      "nome": "Cléia Nogueira Cordeiro",
+      "nome_civil": "Cléia Nogueira Cordeiro",
+      "ativo": false,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/16/cleia_nogueira_.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 4,
+      "nome": "Cutia",
+      "nome_civil": "Sidelvan da Siva Teixeira",
+      "ativo": true,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/4/escolhida-4-.jpg",
+      "email_institucional": "vereador.sidelvan@camponovoderondonia.ro.leg.br"
+    },
+    {
+      "id": 7,
+      "nome": "Gerson do Rio Branco",
+      "nome_civil": "Gerson de Souza Lima",
+      "ativo": false,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/7/escolhida.jpg",
+      "email_institucional": "gerson@camponovoderondonia.ro.leg.br"
+    },
+    {
+      "id": 23,
+      "nome": "GILMÁRIO",
+      "nome_civil": "GILMÁRIO SILVA DE GOES",
+      "ativo": true,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/23/gilmario.jpeg",
+      "email_institucional": null
+    },
+    {
+      "id": 5,
+      "nome": "Jucão",
+      "nome_civil": "Josué Rodrigues Moreira",
+      "ativo": true,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/5/josu-.jpg",
+      "email_institucional": "vereador.josue@camponovoderondonia.ro.leg.br"
+    },
+    {
+      "id": 13,
+      "nome": "Kika do Gueco",
+      "nome_civil": "Leoneci  Brum de Lara",
+      "ativo": false,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/13/kika-do-gueco-11222.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 18,
+      "nome": "Marciel Motorista",
+      "nome_civil": "Marciel Dimas Lopes",
+      "ativo": true,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/18/whatsapp_image_2021-01-05_at_11.43.53_1.jpeg",
+      "email_institucional": "marciel@camponovoderondonia.ro.leg.br"
+    },
+    {
+      "id": 9,
+      "nome": "Mazinho da Vila União",
+      "nome_civil": "Osmar Ribeiro da Silva",
+      "ativo": true,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/9/escolhida-2-.jpg",
+      "email_institucional": "vereador.osmar@camponovoderondonia.ro.leg.br"
+    },
+    {
+      "id": 2,
+      "nome": "Miro",
+      "nome_civil": "Ademir Borher",
+      "ativo": true,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/2/dsc-7909-1-.jpg",
+      "email_institucional": "vereador.ademir@camponovoderondonia.ro.leg.br"
+    },
+    {
+      "id": 1,
+      "nome": "Naiara Saraiva",
+      "nome_civil": "Naiara Saraiva Silva",
+      "ativo": true,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/1/dsc-7895_mLAUssK.jpg",
+      "email_institucional": "vereadora.naiara@camponovoderondonia.ro.leg.br"
+    },
+    {
+      "id": 22,
+      "nome": "Patrick",
+      "nome_civil": "Patrick Rondover Hellmann",
+      "ativo": true,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/22/whatsapp_image_2021-01-12_at_10.12.12.jpeg",
+      "email_institucional": "patrick@camponovoderondonia.ro.leg.br"
+    },
+    {
+      "id": 11,
+      "nome": "Professor Emanoel",
+      "nome_civil": "Emanoel Sena de Souza",
+      "ativo": false,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/11/professor_emanoel.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 8,
+      "nome": "Professor Marco Aurélio",
+      "nome_civil": "Marco Aurélio Pereira de Oliveira",
+      "ativo": true,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/8/dsc-7858-1-.jpg",
+      "email_institucional": "marco@camponovoderondonia.ro.leg.br"
+    },
+    {
+      "id": 20,
+      "nome": "Prof Zezinho",
+      "nome_civil": "Jose Gomes da Silva",
+      "ativo": false,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/20/whatsapp_image_2021-01-05_at_11.43.54_4.jpeg",
+      "email_institucional": "josegomes@camponovoderondonia.ro.leg.br"
+    },
+    {
+      "id": 17,
+      "nome": "Rodrigo do Rio Branco",
+      "nome_civil": "Rodrigo da Rocha Cordeiro",
+      "ativo": false,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/17/whatsapp_image_2021-01-05_at_11.43.54_2.jpeg",
+      "email_institucional": "rodrigo@camponovoderondonia.ro.leg.br"
+    },
+    {
+      "id": 6,
+      "nome": "Roni do Ônibus",
+      "nome_civil": "Rondinério Pascoal Casula",
+      "ativo": true,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/6/escolhida-3-.jpg",
+      "email_institucional": "vereador.rondinerio@camponovoderondonia.ro.leg.br"
+    },
+    {
+      "id": 15,
+      "nome": "Sabá",
+      "nome_civil": "Sebastião Nascimento Lopes",
+      "ativo": false,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/15/saba-11111.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 10,
+      "nome": "Sueli do Hotel",
+      "nome_civil": "Sueli Clara de Moraes",
+      "ativo": false,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/10/sueli_clara_de_morais.jpg",
+      "email_institucional": null
+    },
+    {
+      "id": 19,
+      "nome": "Thiago do Três Coqueiro",
+      "nome_civil": "Thiago Onofre",
+      "ativo": true,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/19/whatsapp_image_2021-01-05_at_11.43.53.jpeg",
+      "email_institucional": "thiago@camponovoderondonia.ro.leg.br"
+    },
+    {
+      "id": 21,
+      "nome": "Walcir Almeida",
+      "nome_civil": "Walcir Almeida",
+      "ativo": true,
+      "foto": "http://sapl.camponovoderondonia.ro.leg.br/media/sapl/public/parlamentar/21/whatsapp_image_2021-01-05_at_11.43.54_5.jpeg",
+      "email_institucional": "walcir@camponovoderondonia.ro.leg.br"
+    }
+  ],
+  "status_tramitacao": [
+    {
+      "id": 1,
+      "sigla": "ADIAVOTAC",
+      "descricao": "Adiada discussão e votação."
+    },
+    {
+      "id": 4,
+      "sigla": "AGORDIA",
+      "descricao": "Aguardando a inclusão na ordem do dia"
+    },
+    {
+      "id": 3,
+      "sigla": "AGMENSVET",
+      "descricao": "Aguardando assinatura da mensagem sobre o veto"
+    },
+    {
+      "id": 2,
+      "sigla": "AGAUTOGR",
+      "descricao": "Aguardando assinatura do autógrafo"
+    },
+    {
+      "id": 5,
+      "sigla": "AGPARECER",
+      "descricao": "Aguardando emissão de parecer da comissão"
+    },
+    {
+      "id": 44,
+      "sigla": "AGPJURID",
+      "descricao": "Aguardando emissão de parecer jurídico"
+    },
+    {
+      "id": 6,
+      "sigla": "AGPROMLEI",
+      "descricao": "Aguardando promulgação da lei"
+    },
+    {
+      "id": 7,
+      "sigla": "AGPROMNOR",
+      "descricao": "Aguardando promulgação da norma jurídica"
+    },
+    {
+      "id": 8,
+      "sigla": "AGPROMVET",
+      "descricao": "Aguardando promulgação de lei com veto rejeitado"
+    },
+    {
+      "id": 45,
+      "sigla": "AGRESPO",
+      "descricao": "Aguardando resposta"
+    },
+    {
+      "id": 9,
+      "sigla": "AGSANCAO",
+      "descricao": "Aguardando sanção governamental"
+    },
+    {
+      "id": 22,
+      "sigla": "NORMPROMUL",
+      "descricao": "Norma promulgada"
+    },
+    {
+      "id": 23,
+      "sigla": "PARECCONTR",
+      "descricao": "Parecer contrário da comissão de mérito"
+    },
+    {
+      "id": 25,
+      "sigla": "PARECPLEN",
+      "descricao": "Parecer em Plenário pelas comissões pertinentes"
+    },
+    {
+      "id": 26,
+      "sigla": "PAREUCONJ",
+      "descricao": "Parecer em reunião conjunta das Comissões pertinentes"
+    },
+    {
+      "id": 24,
+      "sigla": "PARECERFAV",
+      "descricao": "Parecer favorável da comissão"
+    },
+    {
+      "id": 42,
+      "sigla": "PAREFAVJUR",
+      "descricao": "Parecer Favorável do Jurídico"
+    },
+    {
+      "id": 21,
+      "sigla": "MANUTVETO",
+      "descricao": "Parecer pela manutenção do veto"
+    },
+    {
+      "id": 30,
+      "sigla": "REJEIVETO",
+      "descricao": "Parecer pela rejeição do veto"
+    },
+    {
+      "id": 43,
+      "sigla": "PMCNR",
+      "descricao": "Prefeitura"
+    },
+    {
+      "id": 10,
+      "sigla": "ANEXADA",
+      "descricao": "Proposição anexada à outra análoga ou conexa mais antiga"
+    },
+    {
+      "id": 11,
+      "sigla": "APRESENT",
+      "descricao": "Proposição apresentada em Plenário"
+    },
+    {
+      "id": 13,
+      "sigla": "APROVADA",
+      "descricao": "Proposição aprovada"
+    },
+    {
+      "id": 12,
+      "sigla": "APROV1TUR",
+      "descricao": "Proposição aprovada em 1º turno"
+    },
+    {
+      "id": 14,
+      "sigla": "ARQUIVADA",
+      "descricao": "Proposição arquivada"
+    },
+    {
+      "id": 15,
+      "sigla": "AUTUAPAUTA",
+      "descricao": "Proposição autuada e cumprindo prazo de pauta"
+    },
+    {
+      "id": 40,
+      "sigla": "VETOTOTAL",
+      "descricao": "Proposição com veto tota"
+    },
+    {
+      "id": 16,
+      "sigla": "DESARQUIV",
+      "descricao": "Proposição desarquivada pelo Autor"
+    },
+    {
+      "id": 17,
+      "sigla": "DISTRCOMIS",
+      "descricao": "Proposição distribuída às comissões"
+    },
+    {
+      "id": 18,
+      "sigla": "INCLORDIA",
+      "descricao": "Proposição inclusa na Ordem do Dia"
+    },
+    {
+      "id": 41,
+      "sigla": "LEITPLEN",
+      "descricao": "Proposição para leitura em Plenário"
+    },
+    {
+      "id": 27,
+      "sigla": "PREJUD",
+      "descricao": "Proposição prejudicada"
+    },
+    {
+      "id": 29,
+      "sigla": "REJEITADA",
+      "descricao": "Proposição rejeitada pelo Plenário"
+    },
+    {
+      "id": 32,
+      "sigla": "RETORDIA",
+      "descricao": "Proposição retirada da Ordem do Dia"
+    },
+    {
+      "id": 31,
+      "sigla": "RETAUTOR",
+      "descricao": "Proposição retirada pelo autor"
+    },
+    {
+      "id": 33,
+      "sigla": "TRANSFLEI",
+      "descricao": "Proposição transformada em lei"
+    },
+    {
+      "id": 19,
+      "sigla": "LEIPROMUL",
+      "descricao": "Proposição transformada em lei por promulgação"
+    },
+    {
+      "id": 20,
+      "sigla": "LEIVETPAR",
+      "descricao": "Transformada em lei com veto parcial"
+    },
+    {
+      "id": 38,
+      "sigla": "VETOPAUTA",
+      "descricao": "Veto autuado e incluso em pauta"
+    },
+    {
+      "id": 34,
+      "sigla": "VETODISTR",
+      "descricao": "Veto distribuído para emissão de parecer"
+    },
+    {
+      "id": 37,
+      "sigla": "VETOORDIA",
+      "descricao": "Veto incluso na ordem do dia"
+    },
+    {
+      "id": 35,
+      "sigla": "VETOLIDO",
+      "descricao": "Veto sobre a proposição lido em sessão plenária"
+    },
+    {
+      "id": 36,
+      "sigla": "VETOMANT",
+      "descricao": "Veto sobre a proposição mantido"
+    },
+    {
+      "id": 39,
+      "sigla": "VETOREJEI",
+      "descricao": "Veto sobre a proposição rejeitado"
+    },
+    {
+      "id": 28,
+      "sigla": "PROMULVETO",
+      "descricao": "Veto total ou parcial promulgado"
+    }
+  ],
+  "autores": [
+    {"id":36,"nome":"[trecho em dúvida 5582b7448114eae5]","parlamentar_id":null},
+    {"id":18,"nome":"Câmara municipal de Campo Novo de Rondônia - CMCNR","parlamentar_id":null},
+    {"id":37,"nome":"CEC - Comissão Especial covid","parlamentar_id":null},
+    {"id":13,"nome":"CESBES - Comissão de Educação, Saúde e Bem Estar Social","parlamentar_id":null},
+    {"id":11,"nome":"CFOF - Comissão de Finanças, Orçamentos e Fiscalização","parlamentar_id":null},
+    {"id":3,"nome":"Ci da 10","parlamentar_id":3},
+    {"id":10,"nome":"CJR - Comissão de Justiça e Redação","parlamentar_id":null},
+    {"id":27,"nome":"Cleia","parlamentar_id":14},
+    {"id":29,"nome":"Cléia Nogueira Cordeiro","parlamentar_id":16},
+    {"id":12,"nome":"CUIM - Comissão de Urbanismo e Infra-estrutura Municipal","parlamentar_id":null},
+    {"id":4,"nome":"Cutia","parlamentar_id":4},
+    {"id":25,"nome":"executivo - EXC","parlamentar_id":null},
+    {"id":22,"nome":"Gabinete da Presidência - GABPRES","parlamentar_id":null},
+    {"id":7,"nome":"Gerson do Rio Branco","parlamentar_id":7},
+    {"id":5,"nome":"Jucão","parlamentar_id":5},
+    {"id":17,"nome":"Kika do Gueco","parlamentar_id":13},
+    {"id":31,"nome":"Marciel Motorista","parlamentar_id":18},
+    {"id":9,"nome":"Mazinho da Vila União","parlamentar_id":9},
+    {"id":2,"nome":"Miro","parlamentar_id":2},
+    {"id":1,"nome":"Naiara Saraiva","parlamentar_id":1},
+    {"id":24,"nome":"Oscimar aparecido Ferreira","parlamentar_id":null},
+    {"id":35,"nome":"Patrick","parlamentar_id":22},
+    {"id":19,"nome":"Plenário - PLEN","parlamentar_id":null},
+    {"id":26,"nome":"Procuradoria Jurídica - PROJUR","parlamentar_id":null},
+    {"id":15,"nome":"Professor Emanoel","parlamentar_id":11},
+    {"id":8,"nome":"Professor Marco Aurélio","parlamentar_id":8},
+    {"id":33,"nome":"Prof Zezinho","parlamentar_id":20},
+    {"id":23,"nome":"Protocolo - PROT","parlamentar_id":null},
+    {"id":30,"nome":"Rodrigo do Rio Branco","parlamentar_id":17},
+    {"id":6,"nome":"Roni do Ônibus","parlamentar_id":6},
+    {"id":28,"nome":"Sabá","parlamentar_id":15},
+    {"id":20,"nome":"Secretaria de Comissões - SECCOM","parlamentar_id":null},
+    {"id":21,"nome":"Secretaria Legislativa - SECRLEG","parlamentar_id":null},
+    {"id":14,"nome":"Sueli do Hotel","parlamentar_id":10},
+    {"id":32,"nome":"Thiago do Três Coqueiro","parlamentar_id":19},
+    {"id":34,"nome":"Walcir Almeida","parlamentar_id":21}
+  ],
+  "atualizado_em": "2026-11-06",
+  "uf": "RO",
+  "casa": "cm-campo-novo-de-rondonia",
+  "observacao": "Tabelas de apoio do SAPL usadas pelo coletor (sem CPF, telefone, endereço ou data de nascimento)."
+}
