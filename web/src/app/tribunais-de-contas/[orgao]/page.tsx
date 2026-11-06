@@ -19,6 +19,7 @@ import {
 } from "@/features/tribunais-contas/dados";
 import { BASE_TC, NAO_DISPONIVEL, formatarDataTc, rotuloSituacao } from "@/features/tribunais-contas/rotulos";
 import { Figurinha } from "@/components/marca/Figurinhas";
+import { getUf } from "@/features/estados/ufs";
 
 export function generateStaticParams() {
   return ouMarcador(getOrgaos().itens.map((o) => ({ orgao: o.id })), { orgao: "sem-dados" });
@@ -46,7 +47,7 @@ export default async function OrgaoTcPage({ params }: PageProps<"/tribunais-de-c
     if (temContasPresidente(o.id))
       secoes.push({ href: `${BASE_TC}/${o.id}/contas-do-presidente`, titulo: "Contas do Presidente da República", texto: "Parecer prévio do tribunal e o julgamento pelo Congresso Nacional, exercício por exercício." });
     if (temContasGovernador(o.id))
-      secoes.push({ href: `${BASE_TC}/${o.id}/contas-do-governador`, titulo: `Contas do Governador${o.uf ? ` (${o.uf})` : ""}`, texto: "Parecer prévio do Tribunal Pleno, ressalvas, determinações e o julgamento pela Assembleia Legislativa." });
+      secoes.push({ href: `${BASE_TC}/${o.id}/contas-do-governador`, titulo: `Contas do Governador${o.uf ? ` (${o.uf})` : ""}`, texto: `Parecer prévio do Tribunal Pleno, ressalvas, determinações e o julgamento pela ${getUf(o.uf)?.uf === "df" ? "Câmara Legislativa" : "Assembleia Legislativa"}.` });
     for (const m of municipiosComContas(o.id))
       secoes.push({ href: `${BASE_TC}/${o.id}/prefeitos/${m.id}`, titulo: `Contas do Prefeito de ${m.nome}`, texto: "Parecer prévio de cada exercício e o que ainda não está publicado em fonte aberta." });
     if (temAcordaos(o.id)) {

@@ -9,6 +9,7 @@ import { ExercicioGovernadorItem, tituloGovernador } from "@/features/tribunais-
 import { getContasGovernador, getMetaTce, getOrgao, getOrgaos, ouMarcador, temContasGovernador } from "@/features/tribunais-contas/dados";
 import { BASE_TC, TERMOS_TC, formatarDataTc } from "@/features/tribunais-contas/rotulos";
 import { Figurinha } from "@/components/marca/Figurinhas";
+import { getUf } from "@/features/estados/ufs";
 
 export function generateStaticParams() {
   return ouMarcador(
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: PageProps<"/tribunais-de-cont
   const p = getContasGovernador(orgao).find((x) => x.parecer.conclusao);
   return metadadosCompartilhamento({
     titulo: p ? tituloGovernador(p, o) : `Contas do Governador${o.uf ? ` de ${o.uf}` : ""}`,
-    descricao: [`Parecer prévio do ${o.nome} e julgamento pela Assembleia Legislativa`, p?.coletado_em ? `coletado em ${formatarDataTc(p.coletado_em)}` : null],
+    descricao: [`Parecer prévio do ${o.nome} e julgamento pela ${getUf(o.uf)?.casa.nome ?? "Assembleia Legislativa"}`, p?.coletado_em ? `coletado em ${formatarDataTc(p.coletado_em)}` : null],
     caminho: `${BASE_TC}/${orgao}/contas-do-governador`,
   });
 }
@@ -38,6 +39,10 @@ export default async function ContasGovernadorPage({ params }: PageProps<"/tribu
   if (!o || !lista.length) notFound();
   const meta = getMetaTce(orgao);
   const sp = o.uf === "SP";
+  // Nome da casa que julga as contas (no DF, a Câmara Legislativa), pelo cadastro das UFs.
+  const casaUf = getUf(o.uf)?.casa;
+  const casa = sp ? "Assembleia Legislativa do Estado de São Paulo (ALESP)" : (casaUf?.nome ?? "Assembleia Legislativa");
+  const siglaCasa = sp ? "ALESP" : (casaUf?.sigla ?? "Assembleia Legislativa");
   const termos = [
     TERMOS_TC.parecerPrevio,
     TERMOS_TC.julgamentoPolitico,
@@ -58,7 +63,7 @@ export default async function ContasGovernadorPage({ params }: PageProps<"/tribu
         <Figurinha nome="lupa" className="heroi-figurinha figurinha-flutua" />
         <h1 className="mt-2 text-2xl font-bold text-gray-900 md:text-3xl">Contas do Governador{o.uf ? ` de ${o.uf}` : ""}</h1>
         <p className="mt-2 text-base leading-relaxed text-gray-800">
-          O parecer prévio do {o.nome} ({o.id.toUpperCase()}) e o julgamento pela {sp ? "Assembleia Legislativa do Estado de São Paulo (ALESP)" : "Assembleia Legislativa"}, exercício por exercício.
+          O parecer prévio do {o.nome} ({o.id.toUpperCase()}) e o julgamento pela {casa}, exercício por exercício.
         </p>
         <p className="mt-2 text-base text-[var(--cor-secundaria)]">
           Dados coletados em {formatarDataTc(meta?.atualizado_em ?? lista[0].coletado_em)}. Do mais recente para o mais antigo.
@@ -67,7 +72,7 @@ export default async function ContasGovernadorPage({ params }: PageProps<"/tribu
           <summary className="pr-3">Como as contas do Governador são julgadas</summary>
           <p className="border-t border-borda px-3 pb-3 pt-2 text-base leading-relaxed text-gray-800">
             O {o.nome} ({o.id.toUpperCase()}) analisa todo ano as contas do Governador e emite um parecer prévio, votado pelo
-            Tribunal Pleno. O julgamento político é feito depois pela {sp ? "ALESP" : "Assembleia Legislativa"}, que vota um Projeto de
+            Tribunal Pleno. O julgamento político é feito depois pela {siglaCasa}, que vota um Projeto de
             Decreto Legislativo (PDL) sobre as contas
             {sp ? (
               <>

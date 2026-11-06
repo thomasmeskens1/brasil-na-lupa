@@ -189,6 +189,8 @@ export interface ParecerPrevioTce {
   data_publicacao?: string | null;
   data_transito_em_julgado?: string | null;
   certidao_literal?: string | null;
+  /** "por unanimidade", "por maioria" — trecho literal da decisão, quando a fonte traz. */
+  votacao_literal?: string | null;
   parecer: ParecerTce;
   determinacoes_e_recomendacoes?: { documento: string; url: string; itens: ItemLiteral[] } | null;
   votacoes?: { votantes_literal?: string | null; presidente?: string | null }[];
