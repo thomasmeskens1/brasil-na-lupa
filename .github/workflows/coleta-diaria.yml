@@ -131,6 +131,24 @@ jobs:
         run: |
           node scripts/coleta/tribunais-contas/tce-rr/testes.mjs
           node scripts/coleta/tribunais-contas/tce-rr/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
+      - name: Tribunal de Contas do Estado do Rio Grande do Sul
+        continue-on-error: true
+        timeout-minutes: 20
+        env:
+          COLETA_ORCAMENTO_MIN: "15"
+        run: |
+          node scripts/coleta/tribunais-contas/tce-rs/testes.mjs
+          node scripts/coleta/tribunais-contas/tce-rs/coletar.mjs ${{ inputs.completo && '--completo' || '' }}
+      - name: Tribunal de Contas do Distrito Federal
+        continue-on-error: true
+        timeout-minutes: 25
+        # Lê a ata da Sessão Especial nos PDFs dos relatórios com o pdftotext (poppler-utils).
+        env:
+          COLETA_ORCAMENTO_MIN: "20"
+        run: |
+          command -v pdftotext >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils)
+          node scripts/coleta/tribunais-contas/tc-df/testes.mjs
+          node scripts/coleta/tribunais-contas/tc-df/coletar.mjs
       - name: Preparar leitor de PDF de Atibaia
         run: python -m pip install --quiet --user pdfplumber==0.11.10
       - name: Atibaia (Imprensa Oficial, Câmara e finanças pelo TCE-SP)

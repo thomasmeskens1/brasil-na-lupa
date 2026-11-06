@@ -3,8 +3,8 @@
   "descricao": "Registro dos tribunais de contas acompanhados ou planejados. Cada órgão ativo tem um coletor em scripts/coleta/tribunais-contas/<id>/ e uma pasta em dados/tribunais-contas/<id>/, no mesmo formato.",
   "contagens": {
     "total": 33,
-    "ativa": 8,
-    "planejada": 25
+    "ativa": 9,
+    "planejada": 24
   },
   "itens": [
     {
@@ -211,9 +211,15 @@
       "nome": "Tribunal de Contas do Distrito Federal",
       "esfera": "distrital",
       "uf": "DF",
-      "jurisdiciona": null,
+      "jurisdiciona": "Distrito Federal (não tem municípios)",
       "site_oficial": "https://www2.tc.df.gov.br/",
       "fontes": [
+        {
+          "titulo": "Contas de Governo — página oficial do TCDF (Relatório Analítico e Parecer Prévio de cada exercício)",
+          "url": "https://www2.tc.df.gov.br/controle-externo/contas-de-governo/",
+          "orgao": "Tribunal de Contas do Distrito Federal",
+          "acessado_em": "2026-11-06"
+        },
         {
           "titulo": "Página inicial — Tribunal de Contas do Distrito Federal",
           "url": "https://www2.tc.df.gov.br/",
@@ -221,10 +227,18 @@
           "acessado_em": "2026-11-02"
         }
       ],
-      "situacao_coleta": "planejada",
-      "robots_e_restricoes": null,
+      "situacao_coleta": "ativa",
+      "robots_e_restricoes": "www2.tc.df.gov.br/robots.txt responde 404 (sem regras) e é lido a cada execução; inacessível, nada é coletado. Coleta só nesse host (API do WordPress do site e PDFs em /wp-content/uploads/), uma requisição por vez, pausa mínima de 2 s; sem CAPTCHA, login ou chave. O servidor não envia o certificado intermediário: o coletor o busca no endereço indicado no próprio certificado (Let's Encrypt) e mantém a verificação TLS ligada. Os PDFs são lidos numa pasta temporária e não ficam no repositório.",
       "conferencia": "Nome e endereço conferidos na própria página inicial do site oficial (título ou texto da página).",
-      "lacunas": []
+      "lacunas": [
+        "Julgamento das contas pela Câmara Legislativa do Distrito Federal (CLDF) ainda não coletado",
+        "Exercício de 2014 sem página na seção \"Contas de Governo\" do site do TCDF",
+        "38 exercícios (1960 a 1997) têm só PDF digitalizado sem texto legível por máquina e não são exibidos",
+        "16 exercícios (1998 a 2002, 2004 a 2006, 2010 a 2013 e 2015 a 2018) não são exibidos: a proclamação da decisão não foi localizada no texto do PDF (em parte deles a ata está como imagem)",
+        "Contas de 2003, 2007, 2008 e 2019: a ata publicada não transcreve o texto do parecer; 2009: a conclusão vem da frase da ata que registra os votos"
+      ],
+      "coletor": "scripts/coleta/tribunais-contas/tc-df/coletar.mjs",
+      "dados": "dados/tribunais-contas/tc-df/"
     },
     {
       "id": "tce-es",
