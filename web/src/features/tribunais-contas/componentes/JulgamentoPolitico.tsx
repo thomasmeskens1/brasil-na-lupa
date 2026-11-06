@@ -147,8 +147,8 @@ function VotacaoAlesp({ v }: { v: VotacaoAlespLigada }) {
 }
 
 /** Julgamento das contas do Governador pela Assembleia Legislativa (ALESP). */
-export function JulgamentoAlespBloco({ jp }: { jp: JulgamentoAlesp | null }) {
-  if (!jp) return <p className="lacuna text-base">Julgamento pela Assembleia Legislativa: não localizado nos dados coletados.</p>;
+export function JulgamentoAlespBloco({ jp, casa = "Assembleia Legislativa" }: { jp: JulgamentoAlesp | null; casa?: string }) {
+  if (!jp) return <p className="lacuna text-base">Julgamento pela {casa}: não localizado nos dados coletados.</p>;
   const p = jp.proposicao;
   const votacoes = [...jp.votacoes].sort((a, b) => (a.data ?? "").localeCompare(b.data ?? "") || (a.orgao?.startsWith("Plenário") ? 1 : -1));
   return (

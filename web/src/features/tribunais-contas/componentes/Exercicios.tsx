@@ -164,13 +164,14 @@ export function ExercicioGovernadorItem({ p, o }: { p: ParecerPrevioTce; o: Orga
   const votacao = p.votacoes?.[0];
   const docs = p.documentos ?? [];
   // Nome e sigla da Assembleia (ou da Câmara Legislativa do DF) pelo cadastro das UFs.
-  const legislativo = getUf(o.uf)?.casa;
+  const uf = getUf(o.uf);
+  const legislativo = uf?.casa;
   const casa = legislativo?.nome ?? "Assembleia Legislativa";
   const siglaCasa = legislativo?.sigla ?? "Assembleia Legislativa";
   const contasDe = `do Governador${o.uf ? ` ${deUf(o.uf)}` : ""}`;
   const cartoes = [
     { ...cartaoParecerTce(p, o, tituloGovernador(p, o), contasDe), simples: tituloSimplesTc(p.id) },
-    cartaoJulgamentoAlesp(par.exercicio, p.julgamento_politico, casa, siglaCasa),
+    cartaoJulgamentoAlesp(par.exercicio, p.julgamento_politico, casa, siglaCasa, uf?.membros),
   ];
   if (!p.data_julgamento && !par.conclusao) {
     // Parecer ainda não publicado: só o que a fonte registra, sem ficha vazia.
@@ -195,7 +196,7 @@ export function ExercicioGovernadorItem({ p, o }: { p: ParecerPrevioTce; o: Orga
             ["Processo", p.processo?.numero ?? NAO_DISPONIVEL],
             ["Relator", p.relator ?? NAO_DISPONIVEL],
             ["Presidente da sessão", votacao?.presidente ? nomeProprio(votacao.presidente) : NAO_DISPONIVEL],
-            ["Resultado (unanimidade ou maioria)", NAO_DISPONIVEL],
+            ["Resultado (unanimidade ou maioria)", p.votacao_literal ?? NAO_DISPONIVEL],
             ["Publicação do parecer", formatarDataTc(p.data_publicacao)],
           ]}
         />
@@ -245,7 +246,7 @@ export function ExercicioGovernadorItem({ p, o }: { p: ParecerPrevioTce; o: Orga
         id={`exercicio-${par.exercicio}-julgamento`}
         titulo={`Detalhes do julgamento político na ${siglaCasa}`}
       >
-        <JulgamentoAlespBloco jp={p.julgamento_politico} />
+        <JulgamentoAlespBloco jp={p.julgamento_politico} casa={casa} />
       </Sub>
       <Sub titulo="O que a fonte oficial não informa">
         <Lacunas lacunas={[p.lacunas, p.julgamento_politico?.lacunas]} />

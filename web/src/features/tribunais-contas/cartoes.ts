@@ -138,14 +138,15 @@ export function cartaoParecerTce(p: ParecerPrevioTce, o: OrgaoTc, titulo: string
   };
 }
 
-export function cartaoJulgamentoAlesp(exercicio: string, jp: JulgamentoAlesp | null, casa: string, sigla: string): DadosCartaoTc {
+export function cartaoJulgamentoAlesp(exercicio: string, jp: JulgamentoAlesp | null, casa: string, sigla: string, membros = "deputados estaduais"): DadosCartaoTc {
+  const Membros = membros.charAt(0).toUpperCase() + membros.slice(1);
   const base = {
     chave: `julgamento-${exercicio}`,
     href: `#exercicio-${exercicio}-julgamento`,
     tituloOficial: `Julgamento das contas de ${exercicio} pela ${casa}`,
     caminho: sigla.toLowerCase(),
     rotuloCaminho: sigla,
-    quem: `Deputados estaduais (${casa})`,
+    quem: `${Membros} (${casa})`,
   };
   if (!jp) {
     return {
@@ -153,7 +154,7 @@ export function cartaoJulgamentoAlesp(exercicio: string, jp: JulgamentoAlesp | n
       subtitulo: null,
       data: null,
       forma: null,
-      dado: { tipo: "texto", rotulo: "Situação", texto: "Julgamento pela Assembleia Legislativa não localizado nos dados coletados." },
+      dado: { tipo: "texto", rotulo: "Situação", texto: `Julgamento pela ${casa} não localizado nos dados coletados.` },
       fonte: null,
     };
   }
@@ -169,7 +170,7 @@ export function cartaoJulgamentoAlesp(exercicio: string, jp: JulgamentoAlesp | n
       data: plenario.data,
       forma: "votacao-nominal",
       dado: { tipo: "placar", itens: placarOficial({ ...plenario.placar }), resultado: plenario.resultado },
-      quem: `Deputados estaduais, no ${plenario.orgao ?? "Plenário"}`,
+      quem: `${Membros}, no ${plenario.orgao ?? "Plenário"}`,
       fonte: fonteDe(plenario.url ? { url: plenario.url, titulo: "Registro oficial da votação" } : null, casa),
     };
   }
