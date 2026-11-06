@@ -124,22 +124,52 @@ function Camara({ p }: { p: ParticipacaoCamara }) {
   );
 }
 
+const valido = (id: string | number | null | undefined) => (id !== null && id !== undefined && /^\d+$/.test(String(id)) ? String(id) : null);
+
+/** Proposição ainda não visitada pelo coletor: só o link oficial (o endereço segue o código oficial). */
+function AindaNaoColetado({ titulo, url, botao }: { titulo: string; url: string; botao: string }) {
+  return (
+    <div className="rounded-xl border border-borda bg-superficie p-4">
+      <h3 className="font-semibold">{titulo}</h3>
+      <p className="mt-3">
+        <a href={url} target="_blank" rel="noopener noreferrer" className="botao botao-escuro">
+          {botao}
+          <span className="sr-only"> (abre em nova aba)</span>
+        </a>
+      </p>
+      <p className="mt-3 text-sm">O resultado desta página oficial ainda não foi coletado pelo site.</p>
+    </div>
+  );
+}
+
 export function BlocoParticipacao({ senado, camara }: BlocoParticipacaoProps) {
   const ps = getParticipacao("senado", senado);
   const pc = getParticipacao("camara", camara);
+  const idS = ps ? null : valido(senado);
+  const idC = pc ? null : valido(camara);
   return (
     <section aria-labelledby="participe-t" className="space-y-3">
       <h2 id="participe-t" className="text-lg font-bold">
         Participe pelo canal oficial
       </h2>
-      {ps || pc ? (
+      {ps || pc || idS || idC ? (
         <p className="text-sm text-[var(--cor-secundaria)]">
           Para apoiar, criticar ou sugerir mudanças, use os canais oficiais do Congresso. Os números abaixo são copiados
           das páginas oficiais e mostram só quem quis participar.
         </p>
       ) : null}
       {ps ? <Senado p={ps} /> : null}
+      {idS ? (
+        <AindaNaoColetado
+          titulo="Consulta Pública do Senado (Portal e-Cidadania)"
+          url={`https://www12.senado.leg.br/ecidadania/visualizacaomateria?id=${idS}`}
+          botao="Ver a consulta no e-Cidadania"
+        />
+      ) : null}
       {pc ? <Camara p={pc} /> : null}
+      {idC ? (
+        <AindaNaoColetado titulo="Enquete da Câmara dos Deputados" url={`https://www.camara.leg.br/enquetes/${idC}`} botao="Ver a enquete na Câmara" />
+      ) : null}
       <Link href="/participar" className="bloco-atalho">
         <span className="seta-atalho" aria-hidden="true">
           →

@@ -104,6 +104,8 @@ export interface MedidaProvisoria {
   } | null;
   comissao_mista?: string | null;
   prazos?: PrazoMpv[];
+  /** Códigos oficiais (coletor do Executivo): matéria no Senado e proposição na Câmara. */
+  ids_oficiais?: { senado_materia?: string | null; camara_proposicao?: string | null; senado_processo?: string | null } | null;
   links?: Record<string, string | null | undefined>;
   exposicao_motivos?: {
     url?: string | null;
@@ -164,6 +166,7 @@ export interface Veto {
   quantidade_dispositivos_fonte?: number | null;
   situacao_dispositivos?: Record<string, number>;
   resultado_pdfs?: { descricao?: string | null; url: string }[];
+  ids_oficiais?: { senado_materia?: string | null; congresso_veto?: string | null; senado_processo?: string | null } | null;
   links?: Record<string, string | null | undefined>;
   dispositivos: DispositivoVeto[];
   fontes?: Fonte[];

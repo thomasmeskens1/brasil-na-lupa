@@ -53,6 +53,19 @@ export function proposicoesDoSite(casa, dadosDir = DADOS) {
     if (id === null || id === undefined || !/^\d+$/.test(String(id))) continue;
     mapa.set(String(id), { id: String(id), identificacao: p.identificacao ?? p.titulo ?? null });
   }
+  // Medidas provisórias e vetos: códigos oficiais gravados pelo coletor do Executivo (ids_oficiais).
+  // Vetos só têm consulta no Senado (e-Cidadania); a enquete da Câmara é por proposição da Câmara.
+  for (const sub of casa === 'senado' ? ['medidas-provisorias', 'vetos'] : ['medidas-provisorias']) {
+    const d = path.join(dadosDir, 'executivo', sub);
+    let arqs = [];
+    try { arqs = fs.readdirSync(d).filter((n) => n.endsWith('.json') && !n.startsWith('indice')); } catch { continue; }
+    for (const n of arqs) {
+      const x = lerJson(path.join(d, n));
+      const id = casa === 'senado' ? x?.ids_oficiais?.senado_materia : x?.ids_oficiais?.camara_proposicao;
+      if (!id || !/^\d+$/.test(String(id)) || mapa.has(String(id))) continue;
+      mapa.set(String(id), { id: String(id), identificacao: x.identificacao ?? null });
+    }
+  }
   return mapa;
 }
 
@@ -138,7 +151,7 @@ async function coletarCasa(casa, opcoes, meta, { log, prazoMs }) {
   const situacoes = {};
   for (const id of props.keys()) situacoes[id] = lerJson(path.join(dir, `${id}.json`))?.situacao;
   const ids = opcoes.ids ? opcoes.ids.filter((id) => props.has(id)) : [...props.keys()];
-  const limitePadrao = casa === 'camara' ? 300 : null;
+  const limitePadrao = casa === 'camara' ? 600 : null;
   const fila = escolher(ids, { verificados, situacoes, limite: opcoes.limite ?? limitePadrao, forcar: opcoes.forcar || !!opcoes.ids });
   const host = casa === 'senado' ? 'www12.senado.leg.br' : 'www.camara.leg.br';
   const cliente = new ClienteHost(host, { prazoMs, log, pausaMs: 1000, timeoutMs: 20000 });

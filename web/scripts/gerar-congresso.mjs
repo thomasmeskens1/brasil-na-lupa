@@ -396,6 +396,19 @@ function main() {
   const kb = Math.round(fs.statSync(path.join(saidaPublica, "busca.json")).size / 1024);
   fs.writeFileSync(path.join(saidaServidor, "painel.json"), JSON.stringify(gerarPainel(linhas, listas)));
 
+  // "Fale com seus parlamentares" (navegador): só quem está em exercício, com o e-mail institucional
+  // publicado pela Câmara/Senado. [id, nome, partido, UF, e-mail]. Baixado só quando a pessoa abre o bloco.
+  const contatos = { gerado_em: new Date().toISOString() };
+  for (const casa of ["camara", "senado"]) {
+    const l = lerJson(path.join(content, casa, "parlamentares.json"));
+    const itens = Array.isArray(l) ? l : (l?.itens ?? l?.parlamentares ?? []);
+    contatos[casa] = itens
+      .filter((p) => p.em_exercicio !== false && p.email && p.uf)
+      .map((p) => [String(p.id), p.nome, p.partido ?? null, String(p.uf).toUpperCase(), p.email])
+      .sort((a, b) => a[1].localeCompare(b[1], "pt-BR"));
+  }
+  fs.writeFileSync(path.join(saidaPublica, "contatos.json"), JSON.stringify(contatos));
+
   // Módulo das imagens Open Graph: sem ementa (não aparece na imagem).
   const og = { casas, temas, p: proposicoes.map(([t, , s]) => [t, "", s]), v: v.map((l) => [...l.slice(0, 6), String(l[6]).slice(0, 200), ...l.slice(7)]), parlamentares: parlamentaresOg };
   fs.writeFileSync(

@@ -13,6 +13,8 @@ import { Migalhas, TermosRecolhidos } from "@/features/executivo/componentes/Mig
 import { getVeto, idsVetoNoBuild } from "@/features/executivo/dados";
 import { cabecalhoVeto, resumosDispositivos } from "@/features/executivo/detalhes";
 import { SITUACAO_DISPOSITIVO, TERMOS_EXECUTIVO, URL_CONSTITUICAO, explicarSigla, rotuloTipoVeto } from "@/features/executivo/rotulos";
+import { BlocoParticipacao } from "@/features/participacao/BlocoParticipacao";
+import { FaleComParlamentares } from "@/features/participacao/FaleComParlamentares";
 import { AcoesProposta } from "@/components/reacoes";
 import { idExecutivo } from "@/features/conta/ids";
 
@@ -129,6 +131,10 @@ export default async function VetoPage({ params }: PageProps<"/executivo/vetos/[
           <p className="lacuna text-sm">Trechos vetados: {NAO_DISPONIVEL}.</p>
         )}
       </Secao>
+
+      <BlocoParticipacao senado={v.ids_oficiais?.senado_materia} />
+
+      <FaleComParlamentares casas={["camara", "senado"]} assunto={v.identificacao ?? "este veto"} />
 
       <TermosRecolhidos termos={termos} />
 

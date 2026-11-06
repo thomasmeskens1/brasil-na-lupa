@@ -13,6 +13,8 @@ import { Migalhas, TermosRecolhidos } from "@/features/executivo/componentes/Mig
 import { getMpv, idsMpvNoBuild } from "@/features/executivo/dados";
 import { cabecalhoMpv } from "@/features/executivo/detalhes";
 import { TERMOS_EXECUTIVO, explicarSigla, rotuloSituacaoMpv } from "@/features/executivo/rotulos";
+import { BlocoParticipacao } from "@/features/participacao/BlocoParticipacao";
+import { FaleComParlamentares } from "@/features/participacao/FaleComParlamentares";
 import { AcoesProposta } from "@/components/reacoes";
 import { idExecutivo } from "@/features/conta/ids";
 
@@ -212,6 +214,10 @@ export default async function MpvPage({ params }: PageProps<"/executivo/medidas-
           <p className="lacuna text-sm">Nenhuma votação desta medida provisória consta dos dados coletados da Câmara e do Senado.</p>
         )}
       </Secao>
+
+      <BlocoParticipacao senado={m.ids_oficiais?.senado_materia} camara={m.ids_oficiais?.camara_proposicao} />
+
+      <FaleComParlamentares casas={["camara", "senado"]} assunto={m.identificacao ?? `a MPV ${m.numero}/${m.ano}`} />
 
       <TermosRecolhidos termos={termos} />
 
