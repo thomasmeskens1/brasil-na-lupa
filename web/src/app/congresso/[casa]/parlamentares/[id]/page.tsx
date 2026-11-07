@@ -11,6 +11,10 @@ import { ListaFontes, TermosExplicados } from "@/features/congresso/componentes/
 import { Cracha } from "@/features/congresso/componentes/Cracha";
 import { GastosCota } from "@/features/congresso/componentes/GastosCota";
 import { PresencaDeputado } from "@/features/congresso/componentes/PresencaDeputado";
+import { ResumoParlamentar } from "@/features/congresso/componentes/ResumoParlamentar";
+import { SecaoPatrimonio, SecaoPropostas, SecaoSalario } from "@/features/congresso/componentes/DetalhesResumo";
+import { cartoesResumo } from "@/features/congresso/cartoes-resumo";
+import { patrimonioDe, propostasDe } from "@/features/congresso/resumo-topo";
 import { cotaDoDeputado, presencaDoDeputado } from "@/features/congresso/dados-camara";
 import { propPorExtenso, tituloOficialVotacao } from "@/features/congresso/lista";
 import { contagemNominais, resumoGastos, resumoPresenca } from "@/features/congresso/resumo-parlamentar";
@@ -64,7 +68,7 @@ export async function generateMetadata({ params }: PageProps<"/congresso/[casa]/
   return metadadosCompartilhamento({
     titulo: `${r.p.nome} (${r.p.partido ?? "partido não informado"}-${r.p.uf ?? "UF não informada"}), ${CASA_MEMBROS[r.casa].singular.toLowerCase()}`,
     descricao: [
-      `Votos nas votações nominais do ${CASA_NOME[r.casa]}${r.casa === "camara" ? ", presença em Plenário e gastos da cota parlamentar" : ""}`,
+      `Resumo: salário, cota parlamentar, patrimônio declarado, presença e propostas; votos nas votações nominais do ${CASA_NOME[r.casa]}`,
       `Fonte: ${CASA_NOME[r.casa]}`,
       `coletado em ${formatarData(ind.atualizado_em)}`,
     ],
@@ -111,6 +115,11 @@ export default async function ParlamentarPage({ params }: PageProps<"/congresso/
   ];
   const presenca = casa === "camara" ? presencaDoDeputado(p.id) : [];
   const cota = casa === "camara" ? cotaDoDeputado(p.id) : [];
+  const patrimonio = patrimonioDe(casa, p.id);
+  const propostas = propostasDe(casa, p.id);
+  const resPresenca = resumoPresenca(casa, p.id);
+  const resGastos = resumoGastos(casa, p.id);
+  const cartoes = cartoesResumo({ casa, nominais, presenca: resPresenca, gastos: resGastos, patrimonio, propostas, coletaVotos: ind.atualizado_em });
 
   return (
     <div className="space-y-8">
@@ -124,7 +133,15 @@ export default async function ParlamentarPage({ params }: PageProps<"/congresso/
         </Link>
       </nav>
 
-      <Cracha casa={casa} p={p} nominais={nominais} presenca={resumoPresenca(casa, p.id)} gastos={resumoGastos(casa, p.id)} foto={fotoOficial(casa, p.id)} />
+      <Cracha
+        casa={casa}
+        p={p}
+        nominais={nominais}
+        presenca={resPresenca}
+        gastos={resGastos}
+        foto={fotoOficial(casa, p.id)}
+        resumo={<ResumoParlamentar titulo={`Resumo de ${p.nome}`} cartoes={cartoes} />}
+      />
       <Favoritar tipo="politico" valor={idParlamentar(casa, p.id)} nome={casa === "camara" ? "este deputado" : "este senador"} />
 
       <Secao
@@ -189,6 +206,10 @@ export default async function ParlamentarPage({ params }: PageProps<"/congresso/
           </Secao>
         </>
       ) : null}
+
+      <SecaoSalario casa={casa} />
+      <SecaoPatrimonio dados={patrimonio} nome={p.nome} />
+      <SecaoPropostas casa={casa} dados={propostas} />
 
       <FichaTecnica
         titulo="Dados cadastrais"

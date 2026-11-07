@@ -8,6 +8,7 @@ import {
   obter, percorrerCsv, gravarAtomico, lerJson, hojeISO, robotsCarregados, estat,
   SAIDA, INICIO_LEGISLATURA, LEGISLATURA,
 } from './lib.mjs';
+import { apresentadasDoCsv, autoresApresentadas, contarCamara, montarApresentadas } from './apresentadas.mjs';
 
 export const BASE_ARQ = 'https://dadosabertos.camara.leg.br/arquivos';
 export const urlProposicoes = (ano) => `${BASE_ARQ}/proposicoes/csv/proposicoes-${ano}.csv`;
@@ -104,7 +105,7 @@ export async function coletarCamara({ hoje = hojeISO(), completo = false } = {})
     textos[u] = r.dados;
     novos[u] = { etag: r.etag, last_modified: r.last_modified };
   }
-  if (!Object.keys(textos).length && lerJson(path.join(dir, 'aprovadas.json'))) {
+  if (!Object.keys(textos).length && lerJson(path.join(dir, 'aprovadas.json')) && lerJson(path.join(dir, 'apresentadas.json'))) {
     console.log('[autoria/camara] arquivos sem mudança desde a última coleta.');
     gravarAtomico(metaArq, { ...meta, ultima_execucao: new Date().toISOString(), resultado: 'sem mudança' });
     return null;
@@ -128,6 +129,12 @@ export async function coletarCamara({ hoje = hojeISO(), completo = false } = {})
   ]);
   const saida = montar({ aprovadas, autores, fontes, hoje, robots: robotsCarregados() });
   const mudou = gravarAtomico(path.join(dir, 'aprovadas.json'), saida);
+  // Todas as apresentadas (autoria ou coautoria) dos tipos que podem virar norma, para a contagem do perfil.
+  const apresentadas = new Map();
+  for (const a of anos) for (const [k, v] of apresentadasDoCsv(textos[urlProposicoes(a)])) apresentadas.set(k, v);
+  const autoresAp = new Map();
+  for (const a of anos) autoresApresentadas(textos[urlAutores(a)], apresentadas, autoresAp);
+  gravarAtomico(path.join(dir, 'apresentadas.json'), montarApresentadas({ casa: 'camara', contagem: contarCamara(apresentadas, autoresAp), fontes, hoje }));
   gravarAtomico(metaArq, {
     atualizado_em: hoje,
     ultima_execucao: new Date().toISOString(),
