@@ -75,7 +75,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <footer id="rodape" tabIndex={-1} className="border-t border-borda bg-superficie focus:outline-none">
           <div className="mx-auto max-w-6xl px-4 py-3 text-sm text-[var(--cor-secundaria)]">
-            <p className="flex flex-wrap items-center gap-x-1">
+            {/* Desktop (1024 px ou mais): tudo numa linha, com letra de 13 px (mede ~960 px). Celular e tablet: quebra. */}
+            <p className="flex flex-wrap items-center gap-x-1 lg:flex-nowrap lg:whitespace-nowrap lg:text-[13px]">
               <span className="py-2.5">Site independente, sem ligação com governos ou partidos. Fontes oficiais citadas em cada informação.</span>
               <Link href="/metodologia" className="lk inline-flex min-h-11 items-center px-1">
                 Metodologia

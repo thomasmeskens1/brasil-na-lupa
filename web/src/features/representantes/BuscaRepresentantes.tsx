@@ -180,7 +180,7 @@ export function BuscaRepresentantes() {
           if (mostra && ativo >= 0) escolherCidade(sugestoes[ativo]);
           else setAberto(false);
         }}
-        className="heroi mx-auto max-w-3xl text-center"
+        className="heroi text-center"
       >
         <label htmlFor={`${id}-q`} className="block text-lg font-semibold">
           Nome do político ou cidade
@@ -316,7 +316,7 @@ export function BuscaRepresentantes() {
         ) : null}
       </form>
 
-      <section aria-labelledby={`${id}-res`} className="mx-auto max-w-3xl">
+      <section aria-labelledby={`${id}-res`}>
         <h2 id={`${id}-res`} className="text-xl font-semibold">
           {cidadeAtual ? `Quem representa ${cidadeAtual.nome} (${cidadeAtual.uf})` : "Resultados"}
         </h2>

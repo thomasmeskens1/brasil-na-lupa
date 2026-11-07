@@ -28,7 +28,7 @@ export default function QuemMeRepresentaPage() {
 
       <BuscaRepresentantes />
 
-      <div className="mx-auto max-w-3xl">
+      <div>
         <AvisoEleito />
       </div>
 
