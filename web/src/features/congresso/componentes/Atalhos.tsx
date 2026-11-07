@@ -21,6 +21,7 @@ const FIGURA_TEMA: Record<string, NomeFigurinha> = {
   "Meio ambiente": "mapa",
   "Transporte e cidades": "cidade",
   "Previdência e assistência": "calendario",
+  "Orçamento": "dinheiro",
   "Governo e instituições": "congresso",
 };
 

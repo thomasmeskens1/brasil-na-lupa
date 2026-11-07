@@ -48,6 +48,7 @@ export const TEMAS: ReadonlyArray<{ id: string; nome: string }> = [
   { id: "governo-instituicoes", nome: "Governo e instituições" },
   { id: "impostos-precos", nome: "Impostos e preços" },
   { id: "meio-ambiente", nome: "Meio ambiente" },
+  { id: "orcamento", nome: "Orçamento" },
   { id: "outros", nome: "Outros" },
   { id: "previdencia-assistencia", nome: "Previdência e assistência" },
   { id: "saude", nome: "Saúde" },

@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-02",
+  "atualizado_em": "2026-11-07",
   "descricao": "Correspondência entre a classificação oficial de cada órgão e os temas do dia a dia usados no Brasil na Lupa. A primeira regra que casar, na ordem abaixo, define o tema. Quando a fonte não classifica o item, vale o tipo do ato (fórmula inicial da ementa: crédito orçamentário, denominação, homenagem, indicação de autoridade) ou o tipo de decisão (ICMS, contas públicas). Sem correspondência: \"Outros\".",
   "temas": [
     "Impostos e preços",
@@ -12,6 +12,7 @@
     "Previdência e assistência",
     "Economia e empresas",
     "Direitos e cidadania",
+    "Orçamento",
     "Governo e instituições",
     "Outros"
   ],
@@ -218,41 +219,65 @@
     {
       "ordem": 33,
       "fonte": "camara-tema",
-      "padrao": "^(Administração Pública|Finanças Públicas e Orçamento|Processo Legislativo e Atuação Parlamentar|Política, Partidos e Eleições|Direito Constitucional)$",
-      "tema": "Governo e instituições"
+      "padrao": "^Finanças Públicas e Orçamento$",
+      "tema": "Orçamento"
     },
     {
       "ordem": 34,
       "fonte": "senado-classificacao",
-      "padrao": "Administração Pública|Orçamento|Organização do Estado|Política|Processo Legislativo|Eleitoral|Poder|Servidor",
-      "tema": "Governo e instituições"
+      "padrao": "Orçamento|Finanças Públicas",
+      "tema": "Orçamento"
     },
     {
       "ordem": 35,
       "fonte": "assunto-judicial",
-      "padrao": "DIREITO ADMINISTRATIVO|DIREITO ELEITORAL|DIREITO FINANCEIRO|Improbidade",
-      "tema": "Governo e instituições"
+      "padrao": "DIREITO FINANCEIRO",
+      "tema": "Orçamento"
     },
     {
       "ordem": 36,
       "fonte": "tipo",
-      "padrao": "^(credito-orcamentario|indicacao-autoridade|contas-publicas|veto-orcamento|organizacao-poder)$",
-      "tema": "Governo e instituições"
+      "padrao": "^(credito-orcamentario|contas-publicas|veto-orcamento)$",
+      "tema": "Orçamento"
     },
     {
       "ordem": 37,
+      "fonte": "camara-tema",
+      "padrao": "^(Administração Pública|Processo Legislativo e Atuação Parlamentar|Política, Partidos e Eleições|Direito Constitucional)$",
+      "tema": "Governo e instituições"
+    },
+    {
+      "ordem": 38,
+      "fonte": "senado-classificacao",
+      "padrao": "Administração Pública|Organização do Estado|Política|Processo Legislativo|Eleitoral|Poder|Servidor",
+      "tema": "Governo e instituições"
+    },
+    {
+      "ordem": 39,
+      "fonte": "assunto-judicial",
+      "padrao": "DIREITO ADMINISTRATIVO|DIREITO ELEITORAL|Improbidade",
+      "tema": "Governo e instituições"
+    },
+    {
+      "ordem": 40,
+      "fonte": "tipo",
+      "padrao": "^(indicacao-autoridade|organizacao-poder)$",
+      "tema": "Governo e instituições"
+    },
+    {
+      "ordem": 41,
       "fonte": "camara-tema",
       "padrao": "^(Homenagens e Datas Comemorativas|Ciências Exatas e da Terra|Ciências Sociais e Humanas)$",
       "tema": "Outros"
     },
     {
-      "ordem": 38,
+      "ordem": 42,
       "fonte": "senado-classificacao",
       "padrao": "Honorífico|Homenage",
       "tema": "Outros"
     },
     {
-      "ordem": 39,
+      "ordem": 43,
       "fonte": "tipo",
       "padrao": "^(homenagem|outro)$",
       "tema": "Outros"

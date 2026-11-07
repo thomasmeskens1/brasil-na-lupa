@@ -7,7 +7,7 @@
 export const TEMAS = [
   'Impostos e preços', 'Trabalho e renda', 'Saúde', 'Educação', 'Segurança', 'Meio ambiente',
   'Transporte e cidades', 'Previdência e assistência', 'Economia e empresas', 'Direitos e cidadania',
-  'Governo e instituições', 'Outros',
+  'Orçamento', 'Governo e instituições', 'Outros',
 ];
 
 // fonte: camara-tema | camara-palavra-chave | senado-classificacao | assunto-judicial | tipo
@@ -54,11 +54,16 @@ export const REGRAS = [
   { fonte: 'camara-tema', padrao: '^(Direitos Humanos e Minorias|Direito Civil e Processual Civil|Direito e Justiça|Arte, Cultura e Religião|Esporte e Lazer)$', tema: 'Direitos e cidadania' },
   { fonte: 'senado-classificacao', padrao: 'Direitos Humanos|Cidadania|Minorias|Família|Criança|Idoso|Pessoa com Deficiência|Mulher|Cultura|Desporto|Esporte|Jurídico|Direito Civil', tema: 'Direitos e cidadania' },
   { fonte: 'assunto-judicial', padrao: 'DIREITO CIVIL|DIREITO PROCESSUAL CIVIL|DIREITO DA CRIANÇA|Família|Sucessões|Responsabilidade Civil|DIREITO CONSTITUCIONAL', tema: 'Direitos e cidadania' },
+  // Orçamento (separado de "Governo e instituições" em 07/11/2026; mesmas classificações oficiais de antes)
+  { fonte: 'camara-tema', padrao: '^Finanças Públicas e Orçamento$', tema: 'Orçamento' },
+  { fonte: 'senado-classificacao', padrao: 'Orçamento|Finanças Públicas', tema: 'Orçamento' },
+  { fonte: 'assunto-judicial', padrao: 'DIREITO FINANCEIRO', tema: 'Orçamento' },
+  { fonte: 'tipo', padrao: '^(credito-orcamentario|contas-publicas|veto-orcamento)$', tema: 'Orçamento' },
   // Governo e instituições
-  { fonte: 'camara-tema', padrao: '^(Administração Pública|Finanças Públicas e Orçamento|Processo Legislativo e Atuação Parlamentar|Política, Partidos e Eleições|Direito Constitucional)$', tema: 'Governo e instituições' },
-  { fonte: 'senado-classificacao', padrao: 'Administração Pública|Orçamento|Organização do Estado|Política|Processo Legislativo|Eleitoral|Poder|Servidor', tema: 'Governo e instituições' },
-  { fonte: 'assunto-judicial', padrao: 'DIREITO ADMINISTRATIVO|DIREITO ELEITORAL|DIREITO FINANCEIRO|Improbidade', tema: 'Governo e instituições' },
-  { fonte: 'tipo', padrao: '^(credito-orcamentario|indicacao-autoridade|contas-publicas|veto-orcamento|organizacao-poder)$', tema: 'Governo e instituições' },
+  { fonte: 'camara-tema', padrao: '^(Administração Pública|Processo Legislativo e Atuação Parlamentar|Política, Partidos e Eleições|Direito Constitucional)$', tema: 'Governo e instituições' },
+  { fonte: 'senado-classificacao', padrao: 'Administração Pública|Organização do Estado|Política|Processo Legislativo|Eleitoral|Poder|Servidor', tema: 'Governo e instituições' },
+  { fonte: 'assunto-judicial', padrao: 'DIREITO ADMINISTRATIVO|DIREITO ELEITORAL|Improbidade', tema: 'Governo e instituições' },
+  { fonte: 'tipo', padrao: '^(indicacao-autoridade|organizacao-poder)$', tema: 'Governo e instituições' },
   // Outros
   { fonte: 'camara-tema', padrao: '^(Homenagens e Datas Comemorativas|Ciências Exatas e da Terra|Ciências Sociais e Humanas)$', tema: 'Outros' },
   { fonte: 'senado-classificacao', padrao: 'Honorífico|Homenage', tema: 'Outros' },
