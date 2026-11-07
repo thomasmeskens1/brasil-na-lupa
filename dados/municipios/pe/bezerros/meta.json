@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-06T00:12:48.198Z",
-  "ultima_execucao": "2026-11-05T23:13:42.515Z",
+  "atualizado_em": "2026-11-07T21:16:38.490Z",
+  "ultima_execucao": "2026-11-07T21:16:25.245Z",
   "uf": "PE",
   "casa": "cm-bezerros",
   "orgao": "Câmara Municipal de Bezerros",
   "host": "sapl.bezerros.pe.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-05"
+    "fim": "2026-11-07"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,26 +15,16 @@
       "titulo": "SAPL — Câmara Municipal de Bezerros (API REST pública)",
       "url": "https://sapl.bezerros.pe.leg.br/api/",
       "orgao": "Câmara Municipal de Bezerros",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-07"
     }
   ],
   "robots": {
-    "sapl.bezerros.pe.leg.br": {
-      "lido_em": "2026-11-05T23:13:42.515Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.bezerros.pe.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
+    "requisicoes": 1,
     "falhas": [
-      "/api/norma/normajuridica/?o=-id&page=1&page_size=1000: fetch failed",
-      "/api/sessao/tiposessaoplenaria/?page=1&page_size=1000: fetch failed"
+      "robots.txt: fetch failed"
     ]
   },
   "cobertura": {
@@ -90,8 +80,8 @@
     "itens_pauta": 298,
     "votacoes": 198,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 186,
-      "em-coleta": 12
+      "em-coleta": 12,
+      "coletados": 186
     },
     "votos_individuais": 2231
   },
@@ -215,7 +205,7 @@
       "status_tramitacao": "2026-11-05T23:34:09.776Z",
       "autores": "2026-11-05T23:35:10.951Z"
     },
-    "ultima_requisicao": "2026-11-06T00:12:40.854Z",
+    "ultima_requisicao": "2026-11-07T21:16:25.245Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

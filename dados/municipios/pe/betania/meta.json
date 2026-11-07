@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-05T23:57:36.205Z",
-  "ultima_execucao": "2026-11-05T23:13:42.513Z",
+  "atualizado_em": "2026-11-07T21:16:38.420Z",
+  "ultima_execucao": "2026-11-07T21:16:25.230Z",
   "uf": "PE",
   "casa": "cm-betania",
   "orgao": "Câmara Municipal de Betânia",
   "host": "sapl.betania.pe.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-05"
+    "fim": "2026-11-07"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,25 +15,16 @@
       "titulo": "SAPL — Câmara Municipal de Betânia (API REST pública)",
       "url": "https://sapl.betania.pe.leg.br/api/",
       "orgao": "Câmara Municipal de Betânia",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-07"
     }
   ],
   "robots": {
-    "sapl.betania.pe.leg.br": {
-      "lido_em": "2026-11-05T23:13:42.513Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.betania.pe.leg.br": null
   },
   "execucao": {
-    "requisicoes": 44,
+    "requisicoes": 1,
     "falhas": [
-      "/api/sessao/expedientemateria/?o=-id&page=2&page_size=99: fetch failed"
+      "robots.txt: fetch failed"
     ]
   },
   "cobertura": {
@@ -89,8 +80,8 @@
     "itens_pauta": 271,
     "votacoes": 149,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 89,
-      "inexistentes-na-fonte": 60
+      "inexistentes-na-fonte": 60,
+      "coletados": 89
     },
     "votos_individuais": 744
   },
@@ -214,7 +205,7 @@
       "status_tramitacao": "2026-11-05T23:32:07.767Z",
       "autores": "2026-11-05T23:33:11.716Z"
     },
-    "ultima_requisicao": "2026-11-05T23:57:25.659Z",
+    "ultima_requisicao": "2026-11-07T21:16:25.230Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

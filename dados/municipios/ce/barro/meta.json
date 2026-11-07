@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-06T00:00:32.207Z",
-  "ultima_execucao": "2026-11-05T23:13:42.499Z",
+  "atualizado_em": "2026-11-07T21:16:36.807Z",
+  "ultima_execucao": "2026-11-07T21:16:25.094Z",
   "uf": "CE",
   "casa": "cm-barro",
   "orgao": "Câmara Municipal de Barro",
   "host": "sapl.barro.ce.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-05"
+    "fim": "2026-11-07"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Barro (API REST pública)",
       "url": "https://sapl.barro.ce.leg.br/api/",
       "orgao": "Câmara Municipal de Barro",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-07"
     }
   ],
   "robots": {
-    "sapl.barro.ce.leg.br": {
-      "lido_em": "2026-11-05T23:13:42.499Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.barro.ce.leg.br": null
   },
   "execucao": {
-    "requisicoes": 47,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,8 +80,8 @@
     "itens_pauta": 405,
     "votacoes": 226,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 67,
-      "inexistentes-na-fonte": 159
+      "inexistentes-na-fonte": 159,
+      "coletados": 67
     },
     "votos_individuais": 658
   },
@@ -212,7 +205,7 @@
       "status_tramitacao": "2026-11-05T23:32:05.574Z",
       "autores": "2026-11-05T23:33:09.412Z"
     },
-    "ultima_requisicao": "2026-11-06T00:00:28.698Z",
+    "ultima_requisicao": "2026-11-07T21:16:25.094Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-06T11:36:13.759Z",
-  "ultima_execucao": "2026-11-06T10:37:12.508Z",
+  "atualizado_em": "2026-11-07T21:16:43.071Z",
+  "ultima_execucao": "2026-11-07T21:16:25.796Z",
   "uf": "MT",
   "casa": "cm-campo-verde",
   "orgao": "Câmara Municipal de Campo Verde",
   "host": "sapl.campoverde.mt.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-06"
+    "fim": "2026-11-07"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Campo Verde (API REST pública)",
       "url": "https://sapl.campoverde.mt.leg.br/api/",
       "orgao": "Câmara Municipal de Campo Verde",
-      "acessado_em": "2026-11-06"
+      "acessado_em": "2026-11-07"
     }
   ],
   "robots": {
-    "sapl.campoverde.mt.leg.br": {
-      "lido_em": "2026-11-06T10:37:12.508Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.campoverde.mt.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,9 +80,9 @@
     "itens_pauta": 678,
     "votacoes": 570,
     "votacoes_por_situacao_dos_votos": {
+      "em-coleta": 66,
       "inexistentes-na-fonte": 400,
-      "coletados": 104,
-      "em-coleta": 66
+      "coletados": 104
     },
     "votos_individuais": 1350
   },
@@ -213,7 +206,7 @@
       "status_tramitacao": "2026-11-06T10:55:34.690Z",
       "autores": "2026-11-06T10:56:37.905Z"
     },
-    "ultima_requisicao": "2026-11-06T11:36:10.931Z",
+    "ultima_requisicao": "2026-11-07T21:16:25.796Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

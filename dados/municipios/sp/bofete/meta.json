@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-06T00:12:45.815Z",
-  "ultima_execucao": "2026-11-05T23:13:42.515Z",
+  "atualizado_em": "2026-11-07T21:16:38.544Z",
+  "ultima_execucao": "2026-11-07T21:16:25.276Z",
   "uf": "SP",
   "casa": "cm-bofete",
   "orgao": "Câmara Municipal de Bofete",
   "host": "sapl.bofete.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-05"
+    "fim": "2026-11-07"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Bofete (API REST pública)",
       "url": "https://sapl.bofete.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Bofete",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-07"
     }
   ],
   "robots": {
-    "sapl.bofete.sp.leg.br": {
-      "lido_em": "2026-11-05T23:13:42.515Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.bofete.sp.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,9 +80,9 @@
     "itens_pauta": 1026,
     "votacoes": 832,
     "votacoes_por_situacao_dos_votos": {
+      "em-coleta": 10,
       "inexistentes-na-fonte": 782,
-      "coletados": 40,
-      "em-coleta": 10
+      "coletados": 40
     },
     "votos_individuais": 388
   },
@@ -213,7 +206,7 @@
       "status_tramitacao": "2026-11-05T23:32:07.571Z",
       "autores": "2026-11-05T23:33:11.504Z"
     },
-    "ultima_requisicao": "2026-11-06T00:12:40.851Z",
+    "ultima_requisicao": "2026-11-07T21:16:25.276Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

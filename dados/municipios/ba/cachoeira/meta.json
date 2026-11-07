@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-06T00:12:46.227Z",
-  "ultima_execucao": "2026-11-05T23:13:42.516Z",
+  "atualizado_em": "2026-11-07T21:16:39.141Z",
+  "ultima_execucao": "2026-11-07T21:16:25.317Z",
   "uf": "BA",
   "casa": "cm-cachoeira",
   "orgao": "Câmara Municipal de Cachoeira",
   "host": "sapl.cachoeira.ba.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-05"
+    "fim": "2026-11-07"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,28 +15,16 @@
       "titulo": "SAPL — Câmara Municipal de Cachoeira (API REST pública)",
       "url": "https://sapl.cachoeira.ba.leg.br/api/",
       "orgao": "Câmara Municipal de Cachoeira",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-07"
     }
   ],
   "robots": {
-    "sapl.cachoeira.ba.leg.br": {
-      "lido_em": "2026-11-05T23:13:42.516Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.cachoeira.ba.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
+    "requisicoes": 1,
     "falhas": [
-      "/api/materia/tipomaterialegislativa/?page=1&page_size=1000: fetch failed",
-      "/api/materia/materialegislativa/?o=-id&page=1&page_size=1000: fetch failed",
-      "/api/parlamentares/parlamentar/?page=1&page_size=1000: fetch failed",
-      "/api/materia/materialegislativa/1000/: fetch failed"
+      "robots.txt: fetch failed"
     ]
   },
   "cobertura": {
@@ -92,8 +80,8 @@
     "itens_pauta": 1572,
     "votacoes": 489,
     "votacoes_por_situacao_dos_votos": {
-      "inexistentes-na-fonte": 480,
-      "em-coleta": 9
+      "em-coleta": 9,
+      "inexistentes-na-fonte": 480
     },
     "votos_individuais": 100
   },
@@ -217,7 +205,7 @@
       "status_tramitacao": "2026-11-05T23:35:12.268Z",
       "autores": "2026-11-05T23:36:12.944Z"
     },
-    "ultima_requisicao": "2026-11-06T00:12:40.852Z",
+    "ultima_requisicao": "2026-11-07T21:16:25.318Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

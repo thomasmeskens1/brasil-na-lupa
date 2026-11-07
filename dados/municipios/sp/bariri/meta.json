@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-06T00:12:43.366Z",
-  "ultima_execucao": "2026-11-05T23:13:42.493Z",
+  "atualizado_em": "2026-11-07T21:16:37.667Z",
+  "ultima_execucao": "2026-11-07T21:16:25.003Z",
   "uf": "SP",
   "casa": "cm-bariri",
   "orgao": "Câmara Municipal de Bariri",
   "host": "sapl.bariri.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-05"
+    "fim": "2026-11-07"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Bariri (API REST pública)",
       "url": "https://sapl.bariri.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Bariri",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-07"
     }
   ],
   "robots": {
-    "sapl.bariri.sp.leg.br": {
-      "lido_em": "2026-11-05T23:13:42.493Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.bariri.sp.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,9 +80,9 @@
     "itens_pauta": 396,
     "votacoes": 222,
     "votacoes_por_situacao_dos_votos": {
+      "em-coleta": 50,
       "inexistentes-na-fonte": 171,
-      "coletados": 1,
-      "em-coleta": 50
+      "coletados": 1
     },
     "votos_individuais": 197
   },
@@ -213,7 +206,7 @@
       "status_tramitacao": "2026-11-05T23:32:04.179Z",
       "autores": "2026-11-05T23:33:07.535Z"
     },
-    "ultima_requisicao": "2026-11-06T00:12:40.848Z",
+    "ultima_requisicao": "2026-11-07T21:16:25.003Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-06T00:12:45.353Z",
-  "ultima_execucao": "2026-11-05T23:13:42.505Z",
+  "atualizado_em": "2026-11-07T21:16:36.237Z",
+  "ultima_execucao": "2026-11-07T21:16:25.150Z",
   "uf": "CE",
   "casa": "cm-beberibe",
   "orgao": "Câmara Municipal de Beberibe",
   "host": "sapl.beberibe.ce.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-05"
+    "fim": "2026-11-07"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Beberibe (API REST pública)",
       "url": "https://sapl.beberibe.ce.leg.br/api/",
       "orgao": "Câmara Municipal de Beberibe",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-07"
     }
   ],
   "robots": {
-    "sapl.beberibe.ce.leg.br": {
-      "lido_em": "2026-11-05T23:13:42.505Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.beberibe.ce.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,9 +80,9 @@
     "itens_pauta": 298,
     "votacoes": 198,
     "votacoes_por_situacao_dos_votos": {
+      "em-coleta": 24,
       "coletados": 173,
-      "inexistentes-na-fonte": 1,
-      "em-coleta": 24
+      "inexistentes-na-fonte": 1
     },
     "votos_individuais": 2314
   },
@@ -213,7 +206,7 @@
       "status_tramitacao": "2026-11-05T23:33:09.300Z",
       "autores": "2026-11-05T23:34:07.476Z"
     },
-    "ultima_requisicao": "2026-11-06T00:12:40.850Z",
+    "ultima_requisicao": "2026-11-07T21:16:25.150Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

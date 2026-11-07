@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-05T17:53:43.379Z",
-  "ultima_execucao": "2026-11-05T16:54:41.267Z",
+  "atualizado_em": "2026-11-07T22:15:28.582Z",
+  "ultima_execucao": "2026-11-07T21:16:24.638Z",
   "uf": "CE",
   "casa": "cm-aracati",
   "orgao": "Câmara Municipal de Aracati",
   "host": "sapl.aracati.ce.leg.br",
   "periodo": {
     "inicio": null,
-    "fim": "2026-11-05"
+    "fim": "2026-11-07"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,12 +15,12 @@
       "titulo": "SAPL — Câmara Municipal de Aracati (API REST pública)",
       "url": "https://sapl.aracati.ce.leg.br/api/",
       "orgao": "Câmara Municipal de Aracati",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-07"
     }
   ],
   "robots": {
     "sapl.aracati.ce.leg.br": {
-      "lido_em": "2026-11-05T16:54:41.267Z",
+      "lido_em": "2026-11-07T21:16:24.638Z",
       "status": 200,
       "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
@@ -36,31 +36,31 @@
   },
   "cobertura": {
     "registrovotacao": {
-      "desde": "2019-08-21",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "votoparlamentar": {
-      "desde": "2019-08-14",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "ordemdia": {
       "desde": "0000-00-00",
       "concluida": true
     },
     "expedientemateria": {
-      "desde": "2019-04-03",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "sessaoplenaria": {
-      "desde": "2017-09-11",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "materialegislativa": {
-      "desde": "2019-08-14",
+      "desde": "2014-09-08",
       "concluida": false
     },
     "normajuridica": {
-      "desde": "2018-09-17",
+      "desde": "2008-11-24",
       "concluida": false
     },
     "tramitacao": {
@@ -79,17 +79,17 @@
     "Datas impossíveis ou posteriores à coleta (ex.: erros de digitação) ficam null, com o valor bruto anotado em lacunas; nada é corrigido."
   ],
   "contagens": {
-    "proposicoes": 480,
-    "normas": 220,
-    "sessoes": 100,
-    "itens_pauta": 774,
-    "votacoes": 482,
+    "proposicoes": 1602,
+    "normas": 483,
+    "sessoes": 196,
+    "itens_pauta": 1410,
+    "votacoes": 1171,
     "votacoes_por_situacao_dos_votos": {
-      "inexistentes-na-fonte": 303,
-      "coletados": 60,
-      "em-coleta": 119
+      "inexistentes-na-fonte": 439,
+      "coletados": 61,
+      "em-coleta": 671
     },
-    "votos_individuais": 1350
+    "votos_individuais": 1919
   },
   "cursor": {
     "fluxos": {
@@ -97,12 +97,12 @@
         "faixas": [
           {
             "hi": 1184,
-            "lo": 696,
-            "n": 480,
-            "lo_data": "2019-08-21"
+            "lo": 1,
+            "n": 1171,
+            "lo_data": "2019-05-09"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 1171
       },
@@ -110,12 +110,12 @@
         "faixas": [
           {
             "hi": 1935,
-            "lo": 570,
-            "n": 1350,
-            "lo_data": "2019-08-14"
+            "lo": 1,
+            "n": 1919,
+            "lo_data": "2018-12-18"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 1919
       },
@@ -136,12 +136,12 @@
         "faixas": [
           {
             "hi": 1148,
-            "lo": 652,
-            "n": 480,
-            "lo_data": "2019-04-03"
+            "lo": 1,
+            "n": 1116,
+            "lo_data": "2014-06-26"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 1116
       },
@@ -149,12 +149,12 @@
         "faixas": [
           {
             "hi": 196,
-            "lo": 97,
-            "n": 100,
-            "lo_data": "2017-09-11"
+            "lo": 1,
+            "n": 196,
+            "lo_data": "2013-02-21"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 196
       },
@@ -162,9 +162,9 @@
         "faixas": [
           {
             "hi": 1646,
-            "lo": 1167,
-            "n": 480,
-            "lo_data": "2019-08-14"
+            "lo": 40,
+            "n": 1602,
+            "lo_data": "2014-09-08"
           }
         ],
         "concluido": false,
@@ -175,9 +175,9 @@
         "faixas": [
           {
             "hi": 1465,
-            "lo": 1266,
-            "n": 198,
-            "lo_data": "2018-09-17"
+            "lo": 984,
+            "n": 480,
+            "lo_data": "2008-11-24"
           }
         ],
         "concluido": false,
@@ -210,7 +210,7 @@
       "status_tramitacao": "2026-11-05T17:12:07.170Z",
       "autores": "2026-11-05T17:13:06.583Z"
     },
-    "ultima_requisicao": "2026-11-05T17:53:39.685Z",
+    "ultima_requisicao": "2026-11-07T22:15:22.639Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

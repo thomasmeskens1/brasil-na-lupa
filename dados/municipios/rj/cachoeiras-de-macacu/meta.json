@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-06T00:12:46.167Z",
-  "ultima_execucao": "2026-11-05T23:13:42.516Z",
+  "atualizado_em": "2026-11-07T21:16:40.369Z",
+  "ultima_execucao": "2026-11-07T21:16:25.335Z",
   "uf": "RJ",
   "casa": "cm-cachoeiras-de-macacu",
   "orgao": "Câmara Municipal de Cachoeiras de Macacu",
   "host": "sapl.cachoeirasdemacacu.rj.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-05"
+    "fim": "2026-11-07"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,27 +15,16 @@
       "titulo": "SAPL — Câmara Municipal de Cachoeiras de Macacu (API REST pública)",
       "url": "https://sapl.cachoeirasdemacacu.rj.leg.br/api/",
       "orgao": "Câmara Municipal de Cachoeiras de Macacu",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-07"
     }
   ],
   "robots": {
-    "sapl.cachoeirasdemacacu.rj.leg.br": {
-      "lido_em": "2026-11-05T23:13:42.516Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.cachoeirasdemacacu.rj.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
+    "requisicoes": 1,
     "falhas": [
-      "/api/materia/tipomaterialegislativa/?page=1&page_size=1000: fetch failed",
-      "/api/materia/materialegislativa/?o=-id&page=1&page_size=1000: fetch failed",
-      "/api/norma/tiponormajuridica/?page=1&page_size=1000: fetch failed"
+      "robots.txt: fetch failed"
     ]
   },
   "cobertura": {
@@ -91,8 +80,8 @@
     "itens_pauta": 363,
     "votacoes": 198,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 147,
-      "em-coleta": 51
+      "em-coleta": 51,
+      "coletados": 147
     },
     "votos_individuais": 1881
   },
@@ -216,7 +205,7 @@
       "status_tramitacao": "2026-11-05T23:36:12.070Z",
       "autores": "2026-11-05T23:38:13.911Z"
     },
-    "ultima_requisicao": "2026-11-06T00:12:40.852Z",
+    "ultima_requisicao": "2026-11-07T21:16:25.335Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

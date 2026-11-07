@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-06T00:12:47.821Z",
-  "ultima_execucao": "2026-11-05T23:13:42.519Z",
+  "atualizado_em": "2026-11-07T21:16:39.614Z",
+  "ultima_execucao": "2026-11-07T21:16:25.383Z",
   "uf": "RO",
   "casa": "cm-cacoal",
   "orgao": "Câmara Municipal de Cacoal",
   "host": "sapl.cacoal.ro.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-05"
+    "fim": "2026-11-07"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,30 +15,16 @@
       "titulo": "SAPL — Câmara Municipal de Cacoal (API REST pública)",
       "url": "https://sapl.cacoal.ro.leg.br/api/",
       "orgao": "Câmara Municipal de Cacoal",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-07"
     }
   ],
   "robots": {
-    "sapl.cacoal.ro.leg.br": {
-      "lido_em": "2026-11-05T23:13:42.519Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.cacoal.ro.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
+    "requisicoes": 1,
     "falhas": [
-      "/api/materia/tipomaterialegislativa/?page=1&page_size=1000: fetch failed",
-      "/api/sessao/votoparlamentar/?o=-id&page=1&page_size=1000: fetch failed",
-      "/api/sessao/sessaoplenaria/?o=-id&page=1&page_size=1000: fetch failed",
-      "/api/materia/tramitacao/?o=-id&page=1&page_size=1000: fetch failed",
-      "/api/parlamentares/partido/?page=1&page_size=1000: fetch failed",
-      "/api/materia/materialegislativa/5966/: fetch failed"
+      "robots.txt: fetch failed"
     ]
   },
   "cobertura": {
@@ -94,9 +80,9 @@
     "itens_pauta": 1122,
     "votacoes": 294,
     "votacoes_por_situacao_dos_votos": {
+      "em-coleta": 13,
       "inexistentes-na-fonte": 263,
-      "coletados": 18,
-      "em-coleta": 13
+      "coletados": 18
     },
     "votos_individuais": 198
   },
@@ -220,7 +206,7 @@
       "status_tramitacao": "2026-11-05T23:37:16.026Z",
       "autores": "2026-11-05T23:39:15.310Z"
     },
-    "ultima_requisicao": "2026-11-06T00:12:40.854Z",
+    "ultima_requisicao": "2026-11-07T21:16:25.383Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

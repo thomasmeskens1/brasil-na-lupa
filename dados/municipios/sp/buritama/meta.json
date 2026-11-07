@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-06T00:12:47.547Z",
-  "ultima_execucao": "2026-11-05T23:13:42.515Z",
+  "atualizado_em": "2026-11-07T21:16:39.019Z",
+  "ultima_execucao": "2026-11-07T21:16:25.295Z",
   "uf": "SP",
   "casa": "cm-buritama",
   "orgao": "Câmara Municipal de Buritama",
   "host": "sapl.buritama.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-05"
+    "fim": "2026-11-07"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,27 +15,16 @@
       "titulo": "SAPL — Câmara Municipal de Buritama (API REST pública)",
       "url": "https://sapl.buritama.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Buritama",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-07"
     }
   ],
   "robots": {
-    "sapl.buritama.sp.leg.br": {
-      "lido_em": "2026-11-05T23:13:42.515Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.buritama.sp.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
+    "requisicoes": 1,
     "falhas": [
-      "/api/sessao/ordemdia/?o=-id&page=1&page_size=1000: fetch failed",
-      "/api/norma/normajuridica/?o=-data_ultima_atualizacao&page=1&page_size=1000: fetch failed",
-      "/api/sessao/votoparlamentar/?o=-id&page=3&page_size=98: fetch failed"
+      "robots.txt: fetch failed"
     ]
   },
   "cobertura": {
@@ -91,9 +80,9 @@
     "itens_pauta": 492,
     "votacoes": 294,
     "votacoes_por_situacao_dos_votos": {
+      "em-coleta": 75,
       "coletados": 121,
-      "inexistentes-na-fonte": 98,
-      "em-coleta": 75
+      "inexistentes-na-fonte": 98
     },
     "votos_individuais": 1350
   },
@@ -217,7 +206,7 @@
       "status_tramitacao": "2026-11-05T23:34:10.757Z",
       "autores": "2026-11-05T23:35:11.782Z"
     },
-    "ultima_requisicao": "2026-11-06T00:12:40.853Z",
+    "ultima_requisicao": "2026-11-07T21:16:25.295Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
