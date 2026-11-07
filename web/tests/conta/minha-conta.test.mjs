@@ -66,9 +66,12 @@ describe("id da proposta a partir do endereço do cartão", () => {
     assert.equal(ids.idPropostaDoHref("/executivo/vetos/vet-55-2026"), "executivo:vet-55-2026");
     assert.equal(ids.idPropostaDoHref("/impostos/icms/confaz-convenio-127-2024"), "icms:confaz-convenio-127-2024");
     assert.equal(ids.idPropostaDoHref(encodeURI("/congresso/votacoes/camara/1-2")), "camara-votacao:1-2");
+    assert.equal(ids.idPropostaDoHref("/justica/stf/julgamentos/stf-adi-7616"), "stf-julgamento:stf-adi-7616");
+    assert.equal(ids.idPropostaDoHref("/justica/stf/temas/1265"), "stf-tema:1265");
+    assert.equal(ids.idPropostaDoHref("/justica/stj/temas/1076?x=1"), "stj-tema:1076");
   });
   test("o que não é proposta não ganha botões", () => {
-    for (const h of ["/justica/stj/temas/1", "/congresso/camara/parlamentares/1", "/executivo/decretos/1", "/estados/xx/votacoes/1", "/impostos/icms/%E0", "/"]) {
+    for (const h of ["/justica/stj/temas/0", "/justica/stj/temas/abc", "/justica/stf/julgamentos/adi-1", "/justica/tst/temas/1", "/justica/stj", "/congresso/camara/parlamentares/1", "/executivo/decretos/1", "/estados/xx/votacoes/1", "/impostos/icms/%E0", "/"]) {
       assert.equal(ids.idPropostaDoHref(h), null, h);
     }
   });
@@ -78,6 +81,9 @@ describe("id da proposta a partir do endereço do cartão", () => {
     assert.equal(ids.parteDoId("rn-deputado:9"), "rn");
     assert.equal(ids.parteDoId("executivo:vet-1-2026"), "executivo");
     assert.equal(ids.parteDoId("icms:x"), "icms");
+    assert.equal(ids.parteDoId("stf-julgamento:stf-adi-7616"), "justica");
+    assert.equal(ids.parteDoId("stf-tema:1"), "justica");
+    assert.equal(ids.parteDoId("stj-tema:1"), "justica");
     assert.equal(ids.parteDoId("xx-votacao:1"), null);
     assert.deepEqual(acomp.partesNecessarias(["camara-votacao:1", "camara:2", "sp-votacao:3"]), ["camara", "sp"]);
   });
@@ -127,6 +133,7 @@ describe("atualizações das propostas favoritas", () => {
     assert.equal(l[0].situacao, "MATÉRIA COM A RELATORIA");
     assert.equal(l[3].titulo, null, "fora do catálogo: sem título inventado");
     assert.equal(acomp.rotuloGenerico("senado-votacao:404"), "Votação no Senado Federal");
+    assert.equal(acomp.rotuloGenerico("stj-tema:1"), "Tema do Superior Tribunal de Justiça");
   });
 
   test("nomes de políticos e títulos das reações vêm do catálogo", () => {

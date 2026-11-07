@@ -5,6 +5,7 @@ import { metadadosCompartilhamento } from "@/components/compartilhar";
 import { CabecalhoDecisao, formatarData, type ItemFicha } from "@/components/decisao";
 import { Termo } from "@/components/glossario";
 import { Secao } from "@/components/Secao";
+import { AcoesProposta } from "@/components/reacoes";
 import { tituloFonteLegivel } from "@/features/comum/texto";
 import { Migalhas, TermosRecolhidos } from "@/features/executivo/componentes/Migalhas";
 import { QUEM_STF } from "@/features/justica/apresentacao";
@@ -12,6 +13,7 @@ import { JulgamentoStfBloco, ambienteStf } from "@/features/justica/componentes/
 import { getIndiceStf, getJulgamentoStf, idsOuMarcador } from "@/features/justica/dados";
 import { cabecalhoJulgamentoStf } from "@/features/justica/detalhes";
 import { COLECOES, TERMOS_JUSTICA } from "@/features/justica/rotulos";
+import { ehIdProposta, idJulgamentoStf } from "@/features/conta/ids";
 
 export function generateStaticParams() {
   return idsOuMarcador(getIndiceStf().julgamentos.map((j) => j.id)).map((id) => ({ id }));
@@ -40,6 +42,7 @@ export default async function JulgamentoStfPage({ params }: PageProps<"/justica/
   const c = cabecalhoJulgamentoStf(j, id);
   const tema = j.precedente?.tipo === "repercussao-geral" && j.precedente.numero != null ? String(j.precedente.numero) : null;
   const ambiente = ambienteStf(j);
+  const idReacao = idJulgamentoStf(id);
   const ficha: ItemFicha[] = [
     { rotulo: "Processo", valor: j.processo?.identificacao },
     { rotulo: "Órgão julgador", valor: j.orgao },
@@ -84,6 +87,7 @@ export default async function JulgamentoStfPage({ params }: PageProps<"/justica/
         quemDecidiu={QUEM_STF(j.orgao, j.relator)}
         fontePrincipal={c.fontePrincipal ? tituloFonteLegivel(c.fontePrincipal) : null}
         url={`/justica/stf/julgamentos/${id}`}
+        acoes={ehIdProposta(idReacao) ? <AcoesProposta proposta={idReacao} /> : undefined}
         atalhos={[{ href: "#julgamento", rotulo: "Votos e certidão" }]}
         textoOficial={j.certidao_literal ? { rotulo: "certidão de julgamento", texto: j.certidao_literal } : null}
         ficha={ficha}

@@ -104,6 +104,9 @@ export function rotuloGenerico(id: string): string {
     "senado-votacao": "Votação no Senado Federal",
     executivo: id.includes(":mpv-") ? "Medida provisória" : "Veto",
     icms: "Decisão sobre o ICMS",
+    "stf-julgamento": "Julgamento do Supremo Tribunal Federal",
+    "stf-tema": "Tema do Supremo Tribunal Federal",
+    "stj-tema": "Tema do Superior Tribunal de Justiça",
   };
   return R[origem] ?? "Registro";
 }

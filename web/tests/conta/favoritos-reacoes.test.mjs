@@ -84,6 +84,10 @@ describe("ids do site", () => {
       "executivo:mpv-1398-2026",
       "executivo:vet-55-2026",
       "icms:confaz-convenio-127-2024",
+      "stf-julgamento:stf-adi-7616",
+      "stf-julgamento:stf-adi-3837-ed-segundos",
+      "stf-tema:1265",
+      "stj-tema:1076",
     ]) {
       assert.equal(ids.ehIdProposta(ok), true, ok);
     }
@@ -92,6 +96,15 @@ describe("ids do site", () => {
       "xx-votacao:1",
       "executivo:dec-1-2026",
       "icms:<script>",
+      "stf-julgamento:adi-7616",
+      "stf-julgamento:stf-ADI-7616",
+      "stf-julgamento:stf-adi--7616",
+      "stf-julgamento:stf-adi-7616/../x",
+      "stf-tema:0",
+      "stf-tema:123456",
+      "stj-tema:1a",
+      "stj-tema:",
+      "tst-tema:1",
       "senado-votacao:7108/../x",
       "camara-votacao:",
       "a".repeat(200),
@@ -108,6 +121,9 @@ describe("ids do site", () => {
     assert.equal(ids.idVotacaoEstado("SP", "9"), "sp-votacao:9");
     assert.equal(ids.hrefDoId("sp-votacao:9"), "/estados/sp/votacoes/9");
     assert.equal(ids.hrefDoId("executivo:vet-55-2026"), "/executivo/vetos/vet-55-2026");
+    assert.equal(ids.hrefDoId("stf-julgamento:stf-adi-7616"), "/justica/stf/julgamentos/stf-adi-7616");
+    assert.equal(ids.hrefDoId("stf-tema:1265"), "/justica/stf/temas/1265");
+    assert.equal(ids.hrefDoId("stj-tema:1076"), "/justica/stj/temas/1076");
     assert.equal(ids.hrefDoId("senado:5012"), "/congresso/senado/parlamentares/5012");
   });
   test("caminho de volta só dentro do site", () => {

@@ -4,6 +4,7 @@ import { metadadosCompartilhamento } from "@/components/compartilhar";
 import { CabecalhoDecisao, ItemRecolhivel, formatarData, type ItemFicha } from "@/components/decisao";
 import { Termo } from "@/components/glossario";
 import { Secao } from "@/components/Secao";
+import { AcoesProposta } from "@/components/reacoes";
 import { lacunasLegiveis, textoLegivel, tituloFonteLegivel } from "@/features/comum/texto";
 import { ListaLacunas } from "@/features/congresso/componentes/Basicos";
 import { Citacao } from "@/features/executivo/componentes/Dispositivo";
@@ -13,6 +14,7 @@ import { SessaoJulgamento, conferenciaDaSessao } from "@/features/justica/compon
 import { getIndiceStj, getMinistrosStj, getTemaStj, getVotosConferidos, idsOuMarcador } from "@/features/justica/dados";
 import { cabecalhoTemaStj } from "@/features/justica/detalhes";
 import { COLECOES, ORGAO_STJ, TERMOS_JUSTICA } from "@/features/justica/rotulos";
+import { idTemaJustica } from "@/features/conta/ids";
 
 export function generateStaticParams() {
   return idsOuMarcador(getIndiceStj().com_pagina).map((n) => ({ n }));
@@ -99,6 +101,7 @@ export default async function TemaStjPage({ params }: PageProps<"/justica/stj/te
         quemDecidiu={QUEM_STJ(t.orgao, relator)}
         fontePrincipal={c.fontePrincipal}
         url={`/justica/stj/temas/${t.numero}`}
+        acoes={<AcoesProposta proposta={idTemaJustica("stj", t.numero)} />}
         atalhos={sessoes.length ? [{ href: "#julgamentos", rotulo: `Julgamentos e votos (${sessoes.length})` }] : undefined}
         textoOficial={t.questao ? { rotulo: "questão submetida a julgamento", texto: t.questao } : null}
         ficha={ficha}
