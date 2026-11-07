@@ -9,7 +9,8 @@
 //   - nenhuma ementa é reescrita, nenhuma manchete de agência é usada; item vetado por analista → oficial.
 // Ao terminar, roda verificar.mjs sobre a saída (reprovado → oficial).
 //
-// A rede só é usada para o TEMA (temas da Câmara, classificações do Senado). Com --sem-rede, sem cache,
+// A rede só é usada para o TEMA (temas da Câmara, classificações do Senado, temas e indexação da ALESP,
+// árvore de assuntos do CNJ). Com --sem-rede, sem cache,
 // mantém o tema já gravado do item.
 //
 // Uso: node scripts/coleta/titulos/gerar.mjs [--secoes camara,senado] [--sem-rede]
@@ -20,7 +21,7 @@ import { SAIDA, CACHE, lerJson, gravarSeMudou, hojeISO, estatisticas, contagemGr
 import { SECOES, carregarSecao } from './itens.mjs';
 import { verificarTitulo, verificarEtiqueta } from './regras.mjs';
 import { classificar, tabelaPublica } from './temas.mjs';
-import { camaraProposicao, camaraIdPorIdentificacao, senadoProcesso } from './fontes.mjs';
+import { camaraProposicao, camaraIdPorIdentificacao, senadoProcesso, senadoNorma, alespProposicao, alespNorma, alespTemasDoAno, tpuAssuntos } from './fontes.mjs';
 import { carregarVetos } from './conteudo.mjs';
 import { verificarTudo, contextoVerificacao, contextoEtiqueta, registroOficial } from './verificar.mjs';
 
@@ -43,14 +44,19 @@ async function emLotes(lista, fn) {
 
 /** Classificações oficiais externas (só para o tema). */
 async function enriquecer(itens) {
-  const camIds = new Set(), camBusca = new Map(), senProc = new Set();
+  const camIds = new Set(), camBusca = new Map(), senProc = new Set(), senNorma = new Set(), alespProc = new Set(), anosSp = new Set();
+  let tpu = false;
   for (const it of itens) {
     const c = it.consultas;
     if (c.camaraId) camIds.add(String(c.camaraId));
     if (c.camaraBusca) camBusca.set(`${c.camaraBusca.sigla} ${c.camaraBusca.numero}/${c.camaraBusca.ano}`, c.camaraBusca);
     if (c.senadoProcesso) senProc.add(String(c.senadoProcesso));
+    if (c.senadoNorma) senNorma.add(String(c.senadoNorma));
+    if (c.alespProcesso) alespProc.add(String(c.alespProcesso));
+    if (c.normaSp) anosSp.add(c.normaSp.split('|')[2]);
+    if (c.tpu?.length) tpu = true;
   }
-  console.log(`  consultas: ${camIds.size} proposições da Câmara, ${camBusca.size} buscas de projeto de lei, ${senProc.size} processos do Senado`);
+  console.log(`  consultas: ${camIds.size} proposições da Câmara, ${camBusca.size} buscas de projeto de lei, ${senProc.size} processos do Senado, ${senNorma.size} normas no Senado, ${alespProc.size} proposições da ALESP, ${anosSp.size} anos do Banco de Legislação da ALESP${tpu ? ', árvore de assuntos do CNJ' : ''}`);
   const buscaIds = await emLotes([...camBusca.keys()], (k) => { const b = camBusca.get(k); return camaraIdPorIdentificacao(b.sigla, b.numero, b.ano, rede); });
   for (const it of itens) if (it.consultas.camaraBusca) {
     const b = it.consultas.camaraBusca; const id = buscaIds.get(`${b.sigla} ${b.numero}/${b.ano}`);
@@ -58,11 +64,26 @@ async function enriquecer(itens) {
   }
   const cam = await emLotes([...camIds], (id) => camaraProposicao(id, rede));
   const sen = await emLotes([...senProc], (id) => senadoProcesso(id, rede));
-  return { cam, sen };
+  const senN = await emLotes([...senNorma], (id) => senadoNorma(id, rede));
+  const alesp = await emLotes([...alespProc], (id) => alespProposicao(id, rede));
+  const idsNorma = [...new Set([...alesp.values()].map((p) => p?.idNorma).filter(Boolean))];
+  const alespN = await emLotes(idsNorma, (id) => alespNorma(id, rede));
+  const sp = new Map();
+  for (const ano of anosSp) for (const [k, v] of await alespTemasDoAno(ano, rede)) sp.set(k, v);
+  return { cam, sen, senN, alesp, alespN, sp, tpu: tpu ? await tpuAssuntos(rede) : new Map() };
 }
 
+/** Nomes dos níveis acima de um assunto na árvore oficial do CNJ (do mais próximo ao ramo do direito). */
+function ancestrais(tpu, codigo) {
+  const out = [];
+  let a = tpu.get(String(codigo));
+  for (let i = 0; a?.pai && i < 12; i++) { a = tpu.get(a.pai); if (a) out.push(a.nome); }
+  return out;
+}
+
+/** { principais, reserva }: rótulos oficiais vindos das fontes externas. */
 function rotulosExternos(it, fx) {
-  const r = [];
+  const r = [], reserva = [];
   const c = fx.cam.get(String(it.consultas.camaraId));
   if (c) {
     for (const t of c.temas) r.push({ fonte: 'camara-tema', valor: t });
@@ -70,7 +91,17 @@ function rotulosExternos(it, fx) {
   }
   const s = fx.sen.get(String(it.consultas.senadoProcesso));
   if (s) for (const cl of s.classificacoes) r.push({ fonte: 'senado-classificacao', valor: cl });
-  return r;
+  if (s?.tipoConteudo) r.push({ fonte: 'senado-tipo-conteudo', valor: s.tipoConteudo });
+  const sn = fx.senN.get(String(it.consultas.senadoNorma));
+  if (sn) for (const cl of sn.classificacoes) reserva.push({ fonte: 'senado-classificacao', valor: cl });
+  const p = fx.alesp.get(String(it.consultas.alespProcesso));
+  if (p) {
+    for (const t of fx.alespN.get(p.idNorma)?.temas || []) r.push({ fonte: 'alesp-tema', valor: t });
+    for (const t of p.indexadores) reserva.push({ fonte: 'alesp-indexador', valor: t });
+  }
+  for (const t of (it.consultas.normaSp && fx.sp.get(it.consultas.normaSp)) || []) r.push({ fonte: 'alesp-tema', valor: t });
+  for (const cod of it.consultas.tpu || []) for (const nome of ancestrais(fx.tpu, cod)) reserva.push({ fonte: 'assunto-judicial', valor: nome });
+  return { principais: r, reserva };
 }
 const temConsultaExterna = (it) => Boolean(it.consultas.camaraId || it.consultas.camaraBusca || it.consultas.senadoProcesso);
 
@@ -116,9 +147,9 @@ async function main() {
       if (vetado) relatorio.vetos_aplicados++;
       const externos = rotulosExternos(it, fx);
       // sem resposta da fonte externa (sem rede e sem cache), o tema já gravado é mantido
-      const tema = !externos.length && temConsultaExterna(it) && anteriores[it.id]?.tema
+      const tema = !externos.principais.length && !externos.reserva.length && temConsultaExterna(it) && anteriores[it.id]?.tema
         ? anteriores[it.id].tema
-        : classificar([...it.rotulos, ...externos]).tema;
+        : classificar([...it.rotulos, ...externos.principais], externos.reserva).tema;
       const reg = registroDoItem(it, { vetado, tema, relatorio });
       saida[it.id] = reg;
       cobertura[reg.origem] = (cobertura[reg.origem] || 0) + 1;

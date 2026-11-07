@@ -6,6 +6,7 @@ import path from 'node:path';
 import { DADOS, jsonsDe, lerJson, dataBR } from './lib.mjs';
 import { universoNumerico, limpar as limparBase } from './texto.mjs';
 import { tipoDoAto } from './temas.mjs';
+import { chaveNormaSp } from './fontes.mjs';
 import { subtituloVotacao, oficialVotacao, etiquetaVotacao, quorumAplicavel } from './modelos-votacoes.mjs';
 import { subtituloMp, estruturadoMp, etiquetaMp, subtituloVeto, etiquetaVeto, estruturadoNorma, etiquetaNorma, modeloIcms, etiquetaIcms, modeloContasTce, etiquetaContasTce, contagemVeto } from './modelos-atos.mjs';
 import { etiquetaTemaStj, etiquetaTemaStf, etiquetaSumulaVinculante } from './modelos-justica.mjs';
@@ -106,7 +107,7 @@ export function carregarSecao(secao) {
     case 'senado':
       return votacoes('senado', P('senado/votacoes'), (f) => /^\d+\.json$/.test(f), (v) => ({ senadoProcesso: v.proposicao?.id, senadoMateria: v.proposicao?.codigo_materia ? String(v.proposicao.codigo_materia) : null, mpSenado: v.proposicao?.sigla === 'MPV' ? v.proposicao.id : null }));
     case 'alesp':
-      return votacoes('alesp', P('alesp/votacoes'), () => true, () => ({}));
+      return votacoes('alesp', P('alesp/votacoes'), () => true, (v) => ({ alespProcesso: v.proposicao?.id || null }));
     case 'executivo': return executivo();
     case 'stj':
       return jsonsDe(P('stj/temas')).map(({ arquivo }) => lerJson(arquivo)).filter((t) => t && t.id).map((t) => item({
@@ -115,6 +116,7 @@ export function carregarSecao(secao) {
         subtitulo: [`Tema Repetitivo ${t.numero}`, t.orgao ? `${t.orgao} do Superior Tribunal de Justiça` : 'Superior Tribunal de Justiça', t.situacao].filter(Boolean).join(' · '),
         universo: universoNumerico(sem(t, ['processos', 'fontes', 'pautas', 'anotacoes_nugepnac', 'informacoes_complementares', 'delimitacao_julgado'])),
         rotulos: (t.assuntos || []).map((a) => ({ fonte: 'assunto-judicial', valor: a.descricao })),
+        consultas: { tpu: (t.assuntos || []).map((a) => a.codigo).filter(Boolean) },
         data: t.datas?.julgamento || t.datas?.afetacao,
       }));
     case 'stf': return stf();
@@ -145,7 +147,9 @@ function normaItem(secao, bruto, esfera, n, nomeOficial, ocultar = []) {
     subtitulo: [raw.nome_oficial || nomeOficial, esfera === 'federal' ? raw.forma : esfera === 'sp' ? 'Governo do Estado de São Paulo · ato individual' : 'Município de Atibaia', dataBR(n.data)].filter(Boolean).join(' · '),
     universo: universoNumerico(sem(raw, ['fonte', 'edicao', 'publicacao_dou', 'links', 'ids_oficiais'])),
     rotulos: [{ fonte: 'tipo', valor: tipoDoAto(n.ementa) || 'outro' }],
-    consultas: esfera === 'federal' && raw.projeto_origem?.[0] ? normaConsultas(raw.projeto_origem[0]) : {},
+    consultas: esfera === 'federal'
+      ? { ...(raw.projeto_origem?.[0] ? normaConsultas(raw.projeto_origem[0]) : {}), senadoNorma: raw.ids_oficiais?.senado_norma || null }
+      : esfera === 'sp' && /^(Decreto|Lei|Lei Complementar)$/.test(n.tipo) ? { normaSp: chaveNormaSp(n.tipo, raw.numero, String(n.data || '').slice(0, 4)) } : {},
     textos: [n.ementa].filter(Boolean),
     chave: esfera === 'federal' && raw.projeto_origem?.[0]?.identificacao ? chaveDe(...raw.projeto_origem[0].identificacao.split(/[\s/]/)) : null,
     data: n.data,
