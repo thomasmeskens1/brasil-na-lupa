@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-06T20:51:31.192Z",
-  "ultima_execucao": "2026-11-06T20:28:05.800Z",
+  "atualizado_em": "2026-11-07T19:12:56.560Z",
+  "ultima_execucao": "2026-11-07T18:49:30.716Z",
   "uf": "PB",
   "casa": "alpb",
   "orgao": "Assembleia Legislativa do Estado da Paraíba (ALPB)",
   "host": "sapl.al.pb.leg.br",
   "periodo": {
     "inicio": "2023-02-01",
-    "fim": "2026-11-06"
+    "fim": "2026-11-07"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,12 +15,12 @@
       "titulo": "SAPL — Assembleia Legislativa do Estado da Paraíba (ALPB) (API REST pública)",
       "url": "https://sapl.al.pb.leg.br/api/",
       "orgao": "Assembleia Legislativa do Estado da Paraíba (ALPB)",
-      "acessado_em": "2026-11-06"
+      "acessado_em": "2026-11-07"
     }
   ],
   "robots": {
     "sapl.al.pb.leg.br": {
-      "lido_em": "2026-11-06T20:28:05.800Z",
+      "lido_em": "2026-11-07T18:49:30.716Z",
       "status": 200,
       "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
@@ -32,7 +32,9 @@
   },
   "execucao": {
     "requisicoes": 24,
-    "falhas": []
+    "falhas": [
+      "/api/materia/materialegislativa/151838/: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -56,11 +58,11 @@
       "concluida": false
     },
     "materialegislativa": {
-      "desde": "2026-09-08",
+      "desde": "2026-08-31",
       "concluida": false
     },
     "normajuridica": {
-      "desde": "2026-09-11",
+      "desde": "2026-07-03",
       "concluida": false
     },
     "tramitacao": {
@@ -81,14 +83,14 @@
   "contagens": {
     "parlamentares": 56,
     "parlamentares_em_exercicio": 34,
-    "proposicoes": 1015,
-    "normas": 201,
+    "proposicoes": 1286,
+    "normas": 300,
     "sessoes": 100,
     "itens_pauta": 910,
-    "votacoes": 297,
+    "votacoes": 483,
     "votacoes_por_situacao_dos_votos": {
-      "em-coleta": 3,
-      "inexistentes-na-fonte": 294
+      "em-coleta": 145,
+      "inexistentes-na-fonte": 338
     },
     "votos_individuais": 100
   },
@@ -98,8 +100,8 @@
         "faixas": [
           {
             "hi": 57476,
-            "lo": 57183,
-            "n": 294,
+            "lo": 56997,
+            "n": 480,
             "lo_data": "2026-09-02"
           }
         ],
@@ -156,9 +158,9 @@
         "faixas": [
           {
             "hi": 153083,
-            "lo": 152314,
-            "n": 768,
-            "lo_data": "2026-09-08"
+            "lo": 152142,
+            "n": 940,
+            "lo_data": "2026-08-31"
           }
         ],
         "concluido": false,
@@ -169,9 +171,9 @@
         "faixas": [
           {
             "hi": 19242,
-            "lo": 19142,
-            "n": 101,
-            "lo_data": "2026-09-11"
+            "lo": 19043,
+            "n": 200,
+            "lo_data": "2026-07-03"
           }
         ],
         "concluido": false,
@@ -205,7 +207,7 @@
       "status_tramitacao": "2026-11-03T20:23:59.884Z",
       "autores": "2026-11-03T20:27:03.061Z"
     },
-    "ultima_requisicao": "2026-11-06T20:51:28.808Z",
+    "ultima_requisicao": "2026-11-07T19:12:53.712Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
