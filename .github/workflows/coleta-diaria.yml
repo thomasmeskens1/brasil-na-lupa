@@ -167,6 +167,9 @@ jobs:
       - name: Eleitos (TSE)
         continue-on-error: true
         run: node scripts/coleta/eleitos/coletar.mjs
+      - name: Patrimônio declarado ao TSE (parlamentares federais)
+        continue-on-error: true
+        run: node scripts/coleta/patrimonio/coletar.mjs
       # Títulos em linguagem simples: rodam depois de todos os coletores; o cache evita refazer ~25 min de consultas às agências.
       - uses: actions/cache@v4
         with:
@@ -261,7 +264,7 @@ jobs:
         run: |
           git config user.name "coleta-diaria"
           git config user.email "coleta-diaria@users.noreply.github.com"
-          git add dados/camara dados/senado dados/agenda dados/stj dados/stf dados/executivo dados/alesp dados/governo-sp dados/atibaia dados/tribunais-contas dados/eleitos dados/titulos dados/estados/se dados/estados/ba dados/estados/rn dados/estados/es dados/estados/pe dados/estados/df dados/estados/ma dados/participacao dados/autoria dados/fotos dados/estados/go dados/estados/pr dados/estados/pa dados/estados/sc dados/estados/ce dados/estados/ap
+          git add dados/camara dados/senado dados/agenda dados/stj dados/stf dados/executivo dados/alesp dados/governo-sp dados/atibaia dados/tribunais-contas dados/eleitos dados/titulos dados/estados/se dados/estados/ba dados/estados/rn dados/estados/es dados/estados/pe dados/estados/df dados/estados/ma dados/participacao dados/autoria dados/patrimonio dados/fotos dados/estados/go dados/estados/pr dados/estados/pa dados/estados/sc dados/estados/ce dados/estados/ap
           # meta.json muda a cada execução; só publica se algum dado de fato mudou.
           if git diff --cached --name-only | grep -qv '/meta\.json$'; then
             git commit -m "Coleta diária: dados oficiais ($(date -u +%F))"
