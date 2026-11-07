@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-05T17:53:44.819Z",
-  "ultima_execucao": "2026-11-05T16:54:41.257Z",
+  "atualizado_em": "2026-11-07T12:36:35.816Z",
+  "ultima_execucao": "2026-11-07T12:05:49.487Z",
   "uf": "BA",
   "casa": "cm-amargosa",
   "orgao": "Câmara Municipal de Amargosa",
   "host": "sapl.amargosa.ba.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-05"
+    "fim": "2026-11-07"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,12 +15,12 @@
       "titulo": "SAPL — Câmara Municipal de Amargosa (API REST pública)",
       "url": "https://sapl.amargosa.ba.leg.br/api/",
       "orgao": "Câmara Municipal de Amargosa",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-07"
     }
   ],
   "robots": {
     "sapl.amargosa.ba.leg.br": {
-      "lido_em": "2026-11-05T16:54:41.257Z",
+      "lido_em": "2026-11-07T12:05:49.487Z",
       "status": 200,
       "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
@@ -31,8 +31,11 @@
     }
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 31,
+    "falhas": [
+      "/api/materia/materialegislativa/?o=-id&page=1&page_size=1000: fetch failed",
+      "/api/materia/materialegislativa/2647/: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -40,12 +43,12 @@
       "concluida": true
     },
     "votoparlamentar": {
-      "desde": "2025-11-06",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "ordemdia": {
-      "desde": "2025-10-02",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "expedientemateria": {
       "desde": null,
@@ -56,8 +59,8 @@
       "concluida": true
     },
     "materialegislativa": {
-      "desde": "2025-10-30",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "normajuridica": {
       "desde": null,
@@ -81,56 +84,55 @@
   "contagens": {
     "parlamentares": 13,
     "parlamentares_em_exercicio": 12,
-    "proposicoes": 298,
+    "proposicoes": 658,
     "normas": 0,
     "sessoes": 76,
-    "itens_pauta": 294,
-    "votacoes": 268,
+    "itens_pauta": 328,
+    "votacoes": 272,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 207,
-      "nao-se-aplica": 1,
-      "em-coleta": 60
+      "coletados": 271,
+      "nao-se-aplica": 1
     },
-    "votos_individuais": 2231
+    "votos_individuais": 2964
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 331,
+            "hi": 335,
             "lo": 61,
-            "n": 268,
+            "n": 272,
             "lo_data": "2025-09-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 268
+        "total_fonte": 272
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 3470,
-            "lo": 1219,
-            "n": 2231,
-            "lo_data": "2025-11-06"
+            "hi": 3507,
+            "lo": 512,
+            "n": 2964,
+            "lo_data": "2025-09-04"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2927
+        "total_fonte": 2964
       },
       "ordemdia": {
         "faixas": [
           {
             "hi": 541,
-            "lo": 169,
-            "n": 294,
-            "lo_data": "2025-10-02"
+            "lo": 99,
+            "n": 328,
+            "lo_data": "2025-09-04"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 328
       },
@@ -157,12 +159,12 @@
         "faixas": [
           {
             "hi": 2977,
-            "lo": 2679,
-            "n": 294,
-            "lo_data": "2025-10-30"
+            "lo": 2306,
+            "n": 658,
+            "lo_data": "2024-04-01"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 2883
       },
@@ -199,7 +201,7 @@
       "status_tramitacao": "2026-11-05T17:13:03.723Z",
       "autores": "2026-11-05T17:14:04.464Z"
     },
-    "ultima_requisicao": "2026-11-05T17:53:39.687Z",
+    "ultima_requisicao": "2026-11-07T12:36:19.489Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

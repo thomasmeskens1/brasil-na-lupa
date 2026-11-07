@@ -37,9 +37,10 @@
     "outros": null
   },
   "placar_origem": "totais-oficiais",
-  "conferencia_placar": null,
-  "votos_situacao": "em-coleta",
+  "conferencia_placar": "Totais do registro oficial conferem com a contagem dos 23 votos individuais.",
+  "votos_situacao": "coletados",
   "votos": [
+    {"parlamentar_id":"48","nome":"Vereador Adalto Bandeirantes","partido":"REPUBLICA","uf":"RO","voto":"Sim"},
     {"parlamentar_id":"55","nome":"Vereador Adriano Gomes","partido":"PRTB","uf":"RO","voto":"Não Votou"},
     {"parlamentar_id":"61","nome":"Vereador Claudio da Padaria","partido":"AGIR","uf":"RO","voto":"Sim"},
     {"parlamentar_id":"56","nome":"Vereador Dr. Breno Mendes Fiscal do Povo","partido":"AVANTE","uf":"RO","voto":"Sim"},
@@ -69,13 +70,13 @@
     "titulo": "Registro de votação — SAPL",
     "url": "https://sapl.portovelho.ro.leg.br/api/sessao/registrovotacao/3885/",
     "orgao": "Câmara Municipal de Porto Velho",
-    "acessado_em": "2026-11-06"
+    "acessado_em": "2026-11-07"
   },
   "fonte_votos": {
     "titulo": "Votos por parlamentar — SAPL",
     "url": "https://sapl.portovelho.ro.leg.br/api/sessao/votoparlamentar/?votacao=3885",
     "orgao": "Câmara Municipal de Porto Velho",
-    "acessado_em": "2026-11-06"
+    "acessado_em": "2026-11-07"
   },
   "registro_fonte": {
     "id": 3885,
@@ -93,8 +94,7 @@
     "lacunas": []
   },
   "lacunas": [
-    "Partido: filiação na data da votação não registrada no SAPL para parte dos votos (exibir \"Informação não disponível em fonte oficial\").",
-    "Votos individuais ainda em coleta (carga incremental); não exibir como ausência."
+    "Partido: filiação na data da votação não registrada no SAPL para parte dos votos (exibir \"Informação não disponível em fonte oficial\")."
   ],
   "votos_fonte": [
     {
@@ -151,6 +151,11 @@
       "parlamentar_id": 47,
       "voto": "Não Votou",
       "voto_id": 84224
+    },
+    {
+      "parlamentar_id": 48,
+      "voto": "Sim",
+      "voto_id": 84212
     },
     {
       "parlamentar_id": 49,

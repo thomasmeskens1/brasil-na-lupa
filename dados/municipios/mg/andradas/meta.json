@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-05T17:53:47.630Z",
-  "ultima_execucao": "2026-11-05T16:54:41.261Z",
+  "atualizado_em": "2026-11-07T13:04:58.095Z",
+  "ultima_execucao": "2026-11-07T12:05:49.558Z",
   "uf": "MG",
   "casa": "cm-andradas",
   "orgao": "Câmara Municipal de Andradas",
   "host": "sapl.andradas.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-05"
+    "fim": "2026-11-07"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,12 +15,12 @@
       "titulo": "SAPL — Câmara Municipal de Andradas (API REST pública)",
       "url": "https://sapl.andradas.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Andradas",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-07"
     }
   ],
   "robots": {
     "sapl.andradas.mg.leg.br": {
-      "lido_em": "2026-11-05T16:54:41.261Z",
+      "lido_em": "2026-11-07T12:05:49.558Z",
       "status": 200,
       "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
@@ -32,39 +32,44 @@
   },
   "execucao": {
     "requisicoes": 59,
-    "falhas": []
+    "falhas": [
+      "/api/sessao/sessaoplenaria/?o=-id&page=1&page_size=1000: fetch failed",
+      "/api/materia/tramitacao/?o=-id&page=1&page_size=1000: fetch failed",
+      "/api/materia/materialegislativa/10454/: fetch failed",
+      "/api/materia/materialegislativa/?o=-id&page=28&page_size=100: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
-      "desde": "2024-02-21",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "votoparlamentar": {
       "desde": "0000-00-00",
       "concluida": true
     },
     "ordemdia": {
-      "desde": "2024-03-05",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "expedientemateria": {
-      "desde": "2024-12-26",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "sessaoplenaria": {
-      "desde": "2021-10-25",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "materialegislativa": {
-      "desde": "2025-07-18",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "normajuridica": {
-      "desde": "2024-10-08",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "tramitacao": {
-      "desde": "2026-10-13",
+      "desde": "2026-03-30",
       "concluida": false
     }
   },
@@ -81,15 +86,15 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 2580,
-    "normas": 198,
-    "sessoes": 100,
-    "itens_pauta": 200,
-    "votacoes": 100,
+    "proposicoes": 4108,
+    "normas": 294,
+    "sessoes": 188,
+    "itens_pauta": 396,
+    "votacoes": 198,
     "votacoes_por_situacao_dos_votos": {
-      "inexistentes-na-fonte": 74,
-      "coletados": 9,
-      "em-coleta": 17
+      "inexistentes-na-fonte": 91,
+      "em-coleta": 95,
+      "coletados": 12
     },
     "votos_individuais": 100
   },
@@ -99,12 +104,12 @@
         "faixas": [
           {
             "hi": 2173,
-            "lo": 2069,
-            "n": 100,
-            "lo_data": "2024-02-21"
+            "lo": 1971,
+            "n": 198,
+            "lo_data": "2023-01-03"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 2095
       },
@@ -125,12 +130,12 @@
         "faixas": [
           {
             "hi": 426,
-            "lo": 312,
-            "n": 100,
-            "lo_data": "2024-03-05"
+            "lo": 212,
+            "n": 198,
+            "lo_data": "2022-03-03"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 393
       },
@@ -138,12 +143,12 @@
         "faixas": [
           {
             "hi": 2245,
-            "lo": 2137,
-            "n": 100,
-            "lo_data": "2024-12-26"
+            "lo": 2039,
+            "n": 198,
+            "lo_data": "2024-10-15"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 2195
       },
@@ -151,38 +156,38 @@
         "faixas": [
           {
             "hi": 202,
-            "lo": 98,
-            "n": 100,
-            "lo_data": "2021-10-25"
+            "lo": 5,
+            "n": 188,
+            "lo_data": "2019-02-05"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 188
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 17291,
-            "lo": 14677,
-            "n": 2574,
-            "lo_data": "2025-07-18"
+            "hi": 17311,
+            "lo": 13162,
+            "n": 4100,
+            "lo_data": "2024-12-09"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 16934
+        "total_fonte": 16952
       },
       "normajuridica": {
         "faixas": [
           {
             "hi": 1038,
-            "lo": 840,
-            "n": 198,
-            "lo_data": "2024-10-08"
+            "lo": 741,
+            "n": 294,
+            "lo_data": "2023-07-20"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 1011
       },
@@ -190,9 +195,9 @@
         "faixas": [
           {
             "hi": 19618,
-            "lo": 19518,
-            "n": 100,
-            "lo_data": "2026-10-13"
+            "lo": 18426,
+            "n": 1176,
+            "lo_data": "2026-03-30"
           }
         ],
         "concluido": false,
@@ -213,7 +218,7 @@
       "status_tramitacao": "2026-11-05T17:13:06.725Z",
       "autores": "2026-11-05T17:14:06.292Z"
     },
-    "ultima_requisicao": "2026-11-05T17:53:39.691Z",
+    "ultima_requisicao": "2026-11-07T13:04:47.587Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

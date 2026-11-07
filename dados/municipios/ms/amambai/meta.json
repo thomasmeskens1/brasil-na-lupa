@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-05T17:53:44.134Z",
-  "ultima_execucao": "2026-11-05T16:54:41.256Z",
+  "atualizado_em": "2026-11-07T12:56:51.603Z",
+  "ultima_execucao": "2026-11-07T12:05:49.468Z",
   "uf": "MS",
   "casa": "cm-amambai",
   "orgao": "Câmara Municipal de Amambai",
   "host": "sapl.amambai.ms.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-05"
+    "fim": "2026-11-07"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,12 +15,12 @@
       "titulo": "SAPL — Câmara Municipal de Amambai (API REST pública)",
       "url": "https://sapl.amambai.ms.leg.br/api/",
       "orgao": "Câmara Municipal de Amambai",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-07"
     }
   ],
   "robots": {
     "sapl.amambai.ms.leg.br": {
-      "lido_em": "2026-11-05T16:54:41.256Z",
+      "lido_em": "2026-11-07T12:05:49.468Z",
       "status": 200,
       "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
@@ -31,8 +31,11 @@
     }
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 51,
+    "falhas": [
+      "/api/sessao/sessaoplenaria/?o=-id&page=1&page_size=1000: fetch failed",
+      "/api/materia/tramitacao/?o=-id&page=1&page_size=1000: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -64,8 +67,8 @@
       "concluida": true
     },
     "tramitacao": {
-      "desde": "2026-09-14",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     }
   },
   "observacoes": [
@@ -81,15 +84,15 @@
   "contagens": {
     "parlamentares": 13,
     "parlamentares_em_exercicio": 13,
-    "proposicoes": 990,
+    "proposicoes": 992,
     "normas": 2,
     "sessoes": 64,
-    "itens_pauta": 1204,
+    "itens_pauta": 1208,
     "votacoes": 388,
     "votacoes_por_situacao_dos_votos": {
       "inexistentes-na-fonte": 386,
-      "coletados": 1,
-      "em-coleta": 1
+      "em-coleta": 1,
+      "coletados": 1
     },
     "votos_individuais": 13
   },
@@ -137,15 +140,15 @@
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 974,
+            "hi": 978,
             "lo": 1,
-            "n": 931,
+            "n": 935,
             "lo_data": "2025-06-09"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 931
+        "total_fonte": 935
       },
       "sessaoplenaria": {
         "faixas": [
@@ -163,15 +166,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 1002,
+            "hi": 1004,
             "lo": 3,
-            "n": 990,
+            "n": 992,
             "lo_data": "2024-06-03"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 990
+        "total_fonte": 992
       },
       "normajuridica": {
         "faixas": [
@@ -189,15 +192,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 3841,
-            "lo": 3361,
-            "n": 480,
-            "lo_data": "2026-09-14"
+            "hi": 3845,
+            "lo": 1,
+            "n": 3757,
+            "lo_data": "2025-06-18"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 3753
+        "total_fonte": 3757
       }
     },
     "tabelas_em": {
@@ -213,7 +216,7 @@
       "status_tramitacao": "2026-11-05T17:13:04.288Z",
       "autores": "2026-11-05T17:14:05.370Z"
     },
-    "ultima_requisicao": "2026-11-05T17:53:39.686Z",
+    "ultima_requisicao": "2026-11-07T12:56:39.525Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

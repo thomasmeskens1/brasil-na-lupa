@@ -1,0 +1,219 @@
+{
+  "atualizado_em": "2026-11-07T13:04:56.274Z",
+  "ultima_execucao": "2026-11-07T12:05:49.081Z",
+  "uf": "CE",
+  "casa": "cm-sao-goncalo-do-amarante",
+  "orgao": "Câmara Municipal de São Gonçalo do Amarante",
+  "host": "sapl.saogoncalodoamarante.ce.leg.br",
+  "periodo": {
+    "inicio": "2025-01-01",
+    "fim": "2026-11-07"
+  },
+  "modo": "incremental",
+  "fontes": [
+    {
+      "titulo": "SAPL — Câmara Municipal de São Gonçalo do Amarante (API REST pública)",
+      "url": "https://sapl.saogoncalodoamarante.ce.leg.br/api/",
+      "orgao": "Câmara Municipal de São Gonçalo do Amarante",
+      "acessado_em": "2026-11-07"
+    }
+  ],
+  "robots": {
+    "sapl.saogoncalodoamarante.ce.leg.br": {
+      "lido_em": "2026-11-07T12:05:49.081Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
+  },
+  "execucao": {
+    "requisicoes": 59,
+    "falhas": []
+  },
+  "cobertura": {
+    "registrovotacao": {
+      "desde": "2026-08-13",
+      "concluida": false
+    },
+    "votoparlamentar": {
+      "desde": "2026-08-20",
+      "concluida": false
+    },
+    "ordemdia": {
+      "desde": "2026-09-03",
+      "concluida": false
+    },
+    "expedientemateria": {
+      "desde": "2026-06-11",
+      "concluida": false
+    },
+    "sessaoplenaria": {
+      "desde": "2024-05-09",
+      "concluida": false
+    },
+    "materialegislativa": {
+      "desde": "2026-08-13",
+      "concluida": false
+    },
+    "normajuridica": {
+      "desde": "2026-03-17",
+      "concluida": false
+    },
+    "tramitacao": {
+      "desde": "2026-10-21",
+      "concluida": false
+    }
+  },
+  "observacoes": [
+    "Fonte: API REST pública do SAPL 3 (Interlegis) da Câmara Municipal. robots.txt lido antes de qualquer outra requisição; no máximo 1 requisição a cada 61 s (ou Crawl-delay + 1 s) por host, inclusive entre execuções; /materia/docacessorio/ nunca é acessado; nenhum PDF é baixado.",
+    "Carga incremental e retomável: cada rota é lida do registro mais novo para o mais antigo (o=-id); o cursor guarda as faixas de ids já lidas e a cobertura (data mais antiga contígua). Prioridade: o que é novo; depois retroage até o início da legislatura atual.",
+    "Tipo de votação vem do item da pauta (Ordem do Dia ou Expediente): 1 Simbólica, 2 Nominal, 3 Secreta. Voto individual só a partir do registro oficial por parlamentar (votoparlamentar), com o rótulo literal da fonte (\"Não Votou\" não é voto contrário). Nunca deduzido de \"unanimidade\" nem dos totais.",
+    "Votação nominal sem voto por parlamentar na fonte: \"Informação não disponível em fonte oficial\", só depois que a coleta dos votos já passou da data da votação; antes disso a situação é \"em-coleta\".",
+    "Votação simbólica: placar null e votos vazios; os números lançados no registro ficam em \"totais_registrados\" e não são votos.",
+    "Partido no voto: filiação registrada no SAPL vigente na data da votação; sem filiação registrada ou com mais de uma, null.",
+    "Sem CPF, RG, telefone, endereço, data de nascimento, IP ou usuário do sistema; e-mail só do domínio institucional da Casa. Ementas, observações e tramitações passam pelo mascaramento de nomes de particulares (diretriz 12); trechos em dúvida ficam marcados até a curadoria (revisao/mascaras.json).",
+    "Datas impossíveis ou posteriores à coleta (ex.: erros de digitação) ficam null, com o valor bruto anotado em lacunas; nada é corrigido."
+  ],
+  "contagens": {
+    "parlamentares": 16,
+    "parlamentares_em_exercicio": 15,
+    "proposicoes": 200,
+    "normas": 104,
+    "sessoes": 100,
+    "itens_pauta": 298,
+    "votacoes": 198,
+    "votacoes_por_situacao_dos_votos": {
+      "coletados": 148,
+      "em-coleta": 50
+    },
+    "votos_individuais": 2400
+  },
+  "cursor": {
+    "fluxos": {
+      "registrovotacao": {
+        "faixas": [
+          {
+            "hi": 4672,
+            "lo": 4470,
+            "n": 198,
+            "lo_data": "2026-08-13"
+          }
+        ],
+        "concluido": false,
+        "tamanho_pagina": 100,
+        "total_fonte": 4356
+      },
+      "votoparlamentar": {
+        "faixas": [
+          {
+            "hi": 40053,
+            "lo": 37586,
+            "n": 2400,
+            "lo_data": "2026-08-20"
+          }
+        ],
+        "concluido": false,
+        "tamanho_pagina": 100,
+        "total_fonte": 37184
+      },
+      "ordemdia": {
+        "faixas": [
+          {
+            "hi": 5202,
+            "lo": 4998,
+            "n": 198,
+            "lo_data": "2026-09-03"
+          }
+        ],
+        "concluido": false,
+        "tamanho_pagina": 100,
+        "total_fonte": 4664
+      },
+      "expedientemateria": {
+        "faixas": [
+          {
+            "hi": 1449,
+            "lo": 1346,
+            "n": 100,
+            "lo_data": "2026-06-11"
+          }
+        ],
+        "concluido": false,
+        "tamanho_pagina": 100,
+        "total_fonte": 1263
+      },
+      "sessaoplenaria": {
+        "faixas": [
+          {
+            "hi": 370,
+            "lo": 266,
+            "n": 100,
+            "lo_data": "2024-05-09"
+          }
+        ],
+        "concluido": false,
+        "tamanho_pagina": 100,
+        "total_fonte": 355
+      },
+      "materialegislativa": {
+        "faixas": [
+          {
+            "hi": 4697,
+            "lo": 4499,
+            "n": 198,
+            "lo_data": "2026-08-13"
+          }
+        ],
+        "concluido": false,
+        "tamanho_pagina": 100,
+        "total_fonte": 4625
+      },
+      "normajuridica": {
+        "faixas": [
+          {
+            "hi": 1835,
+            "lo": 1736,
+            "n": 100,
+            "lo_data": "2026-03-17"
+          }
+        ],
+        "concluido": false,
+        "tamanho_pagina": 100,
+        "total_fonte": 1813
+      },
+      "tramitacao": {
+        "faixas": [
+          {
+            "hi": 17521,
+            "lo": 17422,
+            "n": 100,
+            "lo_data": "2026-10-21"
+          }
+        ],
+        "concluido": false,
+        "tamanho_pagina": 100,
+        "total_fonte": 16814
+      }
+    },
+    "tabelas_em": {
+      "legislaturas": "2026-11-07T12:06:57.497Z",
+      "tipos_resultado": "2026-11-07T12:07:58.335Z",
+      "tipos_materia": "2026-11-07T12:08:59.141Z",
+      "mandatos": "2026-11-07T12:09:59.988Z",
+      "tipos_norma": "2026-11-07T12:19:11.418Z",
+      "tipos_sessao": "2026-11-07T12:20:10.460Z",
+      "partidos": "2026-11-07T12:21:11.477Z",
+      "filiacoes": "2026-11-07T12:22:12.972Z",
+      "parlamentares": "2026-11-07T12:23:14.073Z",
+      "status_tramitacao": "2026-11-07T12:24:14.783Z",
+      "autores": "2026-11-07T12:25:15.540Z"
+    },
+    "ultima_requisicao": "2026-11-07T13:04:47.582Z",
+    "pendencias_inexistentes": [],
+    "page_size_solicitado": 1000
+  }
+}

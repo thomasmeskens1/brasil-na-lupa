@@ -37,22 +37,30 @@
     "outros": null
   },
   "placar_origem": "totais-oficiais",
-  "conferencia_placar": null,
-  "votos_situacao": "em-coleta",
-  "votos": [],
+  "conferencia_placar": "Totais do registro oficial conferem com a contagem dos 7 votos individuais.",
+  "votos_situacao": "coletados",
+  "votos": [
+    {"parlamentar_id":"31","nome":"AMADEUS","partido":"PSD","uf":"PI","voto":"Não"},
+    {"parlamentar_id":"18","nome":"ANA","partido":"PSD","uf":"PI","voto":"Sim"},
+    {"parlamentar_id":"28","nome":"ARISTEU","partido":"PSD","uf":"PI","voto":"Não Votou"},
+    {"parlamentar_id":"33","nome":"FRANCINETE DE OSMAR","partido":"PSD","uf":"PI","voto":"Não"},
+    {"parlamentar_id":"32","nome":"ISA RODRIGUES","partido":"PSD","uf":"PI","voto":"Sim"},
+    {"parlamentar_id":"35","nome":"JOÃO DE DECA","partido":"PSD","uf":"PI","voto":"Não"},
+    {"parlamentar_id":"37","nome":"VALDEJANE DO SINDICATO","partido":"PT","uf":"PI","voto":"Não"}
+  ],
   "registrado_em": "2026-06-11T21:10:50.418781-03:00",
   "url": "https://sapl.acaua.pi.leg.br/sessao/111/resumo",
   "fonte": {
     "titulo": "Registro de votação — SAPL",
     "url": "https://sapl.acaua.pi.leg.br/api/sessao/registrovotacao/133/",
     "orgao": "Câmara Municipal de Acauã",
-    "acessado_em": "2026-11-04"
+    "acessado_em": "2026-11-07"
   },
   "fonte_votos": {
     "titulo": "Votos por parlamentar — SAPL",
     "url": "https://sapl.acaua.pi.leg.br/api/sessao/votoparlamentar/?votacao=133",
     "orgao": "Câmara Municipal de Acauã",
-    "acessado_em": "2026-11-04"
+    "acessado_em": "2026-11-07"
   },
   "registro_fonte": {
     "id": 133,
@@ -69,8 +77,42 @@
     "registrado_em": "2026-06-11T21:10:50.418781-03:00",
     "lacunas": []
   },
-  "lacunas": [
-    "Votos individuais ainda em coleta (carga incremental); não exibir como ausência."
-  ],
-  "votos_fonte": []
+  "lacunas": [],
+  "votos_fonte": [
+    {
+      "parlamentar_id": 18,
+      "voto": "Sim",
+      "voto_id": 1032
+    },
+    {
+      "parlamentar_id": 28,
+      "voto": "Não Votou",
+      "voto_id": 1037
+    },
+    {
+      "parlamentar_id": 31,
+      "voto": "Não",
+      "voto_id": 1035
+    },
+    {
+      "parlamentar_id": 32,
+      "voto": "Sim",
+      "voto_id": 1036
+    },
+    {
+      "parlamentar_id": 33,
+      "voto": "Não",
+      "voto_id": 1034
+    },
+    {
+      "parlamentar_id": 35,
+      "voto": "Não",
+      "voto_id": 1031
+    },
+    {
+      "parlamentar_id": 37,
+      "voto": "Não",
+      "voto_id": 1033
+    }
+  ]
 }

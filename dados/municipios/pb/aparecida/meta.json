@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-05T17:50:43.220Z",
-  "ultima_execucao": "2026-11-05T16:54:41.265Z",
+  "atualizado_em": "2026-11-07T12:16:22.980Z",
+  "ultima_execucao": "2026-11-07T12:05:49.612Z",
   "uf": "PB",
   "casa": "cm-aparecida",
   "orgao": "Câmara Municipal de Aparecida",
   "host": "sapl.aparecida.pb.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-05"
+    "fim": "2026-11-07"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,12 +15,12 @@
       "titulo": "SAPL — Câmara Municipal de Aparecida (API REST pública)",
       "url": "https://sapl.aparecida.pb.leg.br/api/",
       "orgao": "Câmara Municipal de Aparecida",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-07"
     }
   ],
   "robots": {
     "sapl.aparecida.pb.leg.br": {
-      "lido_em": "2026-11-05T16:54:41.265Z",
+      "lido_em": "2026-11-07T12:05:49.612Z",
       "status": 200,
       "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
@@ -31,8 +31,11 @@
     }
   },
   "execucao": {
-    "requisicoes": 56,
-    "falhas": []
+    "requisicoes": 11,
+    "falhas": [
+      "/api/sessao/sessaoplenaria/?o=-id&page=1&page_size=1000: fetch failed",
+      "/api/materia/materialegislativa/?o=-data_ultima_atualizacao&page=1&page_size=1000: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -85,40 +88,40 @@
     "normas": 0,
     "sessoes": 98,
     "itens_pauta": 348,
-    "votacoes": 293,
+    "votacoes": 301,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 225,
-      "inexistentes-na-fonte": 68
+      "inexistentes-na-fonte": 68,
+      "coletados": 233
     },
-    "votos_individuais": 1786
+    "votos_individuais": 1850
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 297,
+            "hi": 305,
             "lo": 3,
-            "n": 293,
+            "n": 301,
             "lo_data": "2023-11-17"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 293
+        "total_fonte": 301
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 2348,
+            "hi": 2412,
             "lo": 551,
-            "n": 1786,
+            "n": 1850,
             "lo_data": "2024-09-06"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2310
+        "total_fonte": 2374
       },
       "ordemdia": {
         "faixas": [
@@ -205,7 +208,7 @@
       "status_tramitacao": "2026-11-05T17:13:04.531Z",
       "autores": "2026-11-05T17:14:05.699Z"
     },
-    "ultima_requisicao": "2026-11-05T17:50:36.640Z",
+    "ultima_requisicao": "2026-11-07T12:15:59.613Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

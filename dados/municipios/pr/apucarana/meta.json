@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-05T17:53:46.583Z",
-  "ultima_execucao": "2026-11-05T16:54:41.266Z",
+  "atualizado_em": "2026-11-07T13:04:59.530Z",
+  "ultima_execucao": "2026-11-07T12:05:49.634Z",
   "uf": "PR",
   "casa": "cm-apucarana",
   "orgao": "Câmara Municipal de Apucarana",
   "host": "sapl.apucarana.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-05"
+    "fim": "2026-11-07"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,12 +15,12 @@
       "titulo": "SAPL — Câmara Municipal de Apucarana (API REST pública)",
       "url": "https://sapl.apucarana.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Apucarana",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-07"
     }
   ],
   "robots": {
     "sapl.apucarana.pr.leg.br": {
-      "lido_em": "2026-11-05T16:54:41.266Z",
+      "lido_em": "2026-11-07T12:05:49.634Z",
       "status": 200,
       "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
@@ -32,19 +32,25 @@
   },
   "execucao": {
     "requisicoes": 59,
-    "falhas": []
+    "falhas": [
+      "/api/sessao/sessaoplenaria/?o=-id&page=1&page_size=1000: fetch failed",
+      "/api/materia/tramitacao/?o=-id&page=1&page_size=1000: fetch failed",
+      "/api/materia/materialegislativa/26380/: fetch failed",
+      "/api/norma/normajuridica/?o=-data_ultima_atualizacao&page=1&page_size=1000: fetch failed",
+      "/api/sessao/ordemdia/?o=-id&page=4&page_size=100: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
-      "desde": "2026-05-05",
+      "desde": "2025-12-19",
       "concluida": false
     },
     "votoparlamentar": {
-      "desde": "2026-05-05",
+      "desde": "2026-01-27",
       "concluida": false
     },
     "ordemdia": {
-      "desde": "2026-06-15",
+      "desde": "2025-12-16",
       "concluida": false
     },
     "expedientemateria": {
@@ -56,7 +62,7 @@
       "concluida": false
     },
     "materialegislativa": {
-      "desde": "2026-05-25",
+      "desde": "2025-12-18",
       "concluida": false
     },
     "normajuridica": {
@@ -81,27 +87,27 @@
   "contagens": {
     "parlamentares": 15,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 203,
+    "proposicoes": 492,
     "normas": 207,
     "sessoes": 100,
-    "itens_pauta": 394,
-    "votacoes": 388,
+    "itens_pauta": 780,
+    "votacoes": 687,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 164,
-      "inexistentes-na-fonte": 131,
-      "em-coleta": 93
+      "coletados": 359,
+      "inexistentes-na-fonte": 288,
+      "em-coleta": 40
     },
-    "votos_individuais": 1786
+    "votos_individuais": 3637
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 4804,
-            "lo": 4367,
-            "n": 388,
-            "lo_data": "2026-05-05"
+            "hi": 4805,
+            "lo": 4046,
+            "n": 686,
+            "lo_data": "2025-12-19"
           }
         ],
         "concluido": false,
@@ -111,10 +117,10 @@
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 32809,
-            "lo": 30662,
-            "n": 1786,
-            "lo_data": "2026-05-05"
+            "hi": 32820,
+            "lo": 28678,
+            "n": 3626,
+            "lo_data": "2026-01-27"
           }
         ],
         "concluido": false,
@@ -124,10 +130,10 @@
       "ordemdia": {
         "faixas": [
           {
-            "hi": 14729,
-            "lo": 14429,
-            "n": 294,
-            "lo_data": "2026-06-15"
+            "hi": 14730,
+            "lo": 14012,
+            "n": 679,
+            "lo_data": "2025-12-16"
           }
         ],
         "concluido": false,
@@ -163,15 +169,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 26670,
-            "lo": 26473,
-            "n": 198,
-            "lo_data": "2026-05-25"
+            "hi": 26673,
+            "lo": 26180,
+            "n": 490,
+            "lo_data": "2025-12-18"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 26170
+        "total_fonte": 26173
       },
       "normajuridica": {
         "faixas": [
@@ -213,7 +219,7 @@
       "status_tramitacao": "2026-11-05T17:15:08.815Z",
       "autores": "2026-11-05T17:17:10.778Z"
     },
-    "ultima_requisicao": "2026-11-05T17:53:39.689Z",
+    "ultima_requisicao": "2026-11-07T13:04:47.635Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
