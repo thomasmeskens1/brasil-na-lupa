@@ -2,7 +2,7 @@
 /**
  * Sincroniza os dados do projeto para dentro de web/ antes de `dev` e `build`.
  *
- * - ../dados/{icms,camara,senado,executivo,stj,stf,alesp,governo-sp,atibaia,tribunais-contas,eleitos,agenda,titulos}/** -> web/content/<mesma pasta>/**
+ * - ../dados/{icms,camara,senado,executivo,stj,stf,alesp,governo-sp,atibaia,tribunais-contas,eleitos,agenda,titulos}/**  (e patrimonio, autoria etc.: ver PASTAS) -> web/content/<mesma pasta>/**
  *   (pastas ausentes são ignoradas). De Atibaia não se copiam a pasta de curadoria (revisao/)
  *   nem o texto bruto das edições (normas/edicoes-*.json): o site só usa os índices publicados.
  *   Dos títulos simples, não se copia a curadoria (revisao/ e amostra-revisao.json).
@@ -26,7 +26,7 @@ const webDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const dadosDir = path.join(webDir, "..", "dados");
 const contentFinal = path.join(webDir, "content");
 
-const PASTAS = ["icms", "camara", "senado", "executivo", "stj", "stf", "alesp", "governo-sp", "atibaia", "tribunais-contas", "eleitos", "agenda", "titulos", "estados", "participacao", "autoria", "municipios", "fotos"];
+const PASTAS = ["icms", "camara", "senado", "executivo", "stj", "stf", "alesp", "governo-sp", "atibaia", "tribunais-contas", "eleitos", "agenda", "titulos", "estados", "participacao", "autoria", "municipios", "fotos", "patrimonio"];
 /** Caminhos relativos a ../dados que não entram em content/ (material de curadoria). */
 const EXCLUIR = [/^atibaia\/revisao(\/|$)/, /^atibaia\/normas\/edicoes-[^/]*$/, /^titulos\/revisao(\/|$)/, /^titulos\/amostra-revisao(-\d+)?\.json$/, /^fotos\/(?!manifest\.json$)/];
 const ARQUIVOS = ["glossario.json"];

@@ -8,6 +8,7 @@ import {
   obter, paraCada, gravarAtomico, lerJson, hojeISO, robotsCarregados, estat,
   SAIDA, RAIZ, INICIO_LEGISLATURA, LEGISLATURA,
 } from './lib.mjs';
+import { contarListaSenado, montarApresentadas } from './apresentadas.mjs';
 
 export const BASE = 'https://legis.senado.leg.br/dadosabertos';
 export const urlLista = (cod, inicio = INICIO_LEGISLATURA) =>
@@ -96,10 +97,12 @@ export async function coletarSenado({ hoje = hojeISO() } = {}) {
 
   const consultados = new Set();
   const porSenador = new Map();
+  const apresentadas = {};
   await paraCada(senadores, async (cod) => {
     try {
       const r = await obter(urlLista(cod));
       porSenador.set(cod, transformadasDaLista(r.dados));
+      apresentadas[cod] = contarListaSenado(r.dados);
       consultados.add(cod);
     } catch (e) {
       console.warn(`[autoria/senado] senador ${cod}: ${e.message}`);
@@ -127,6 +130,8 @@ export async function coletarSenado({ hoje = hojeISO() } = {}) {
   const saida = montar({ consultados, porSenador, processos, fontes, hoje, robots: robotsCarregados() });
   const dir = path.join(SAIDA, 'senado');
   const mudou = gravarAtomico(path.join(dir, 'aprovadas.json'), saida);
+  const listaOk = Object.fromEntries(Object.keys(apresentadas).sort((a, b) => Number(a) - Number(b)).map((k) => [k, apresentadas[k]]));
+  gravarAtomico(path.join(dir, 'apresentadas.json'), montarApresentadas({ casa: 'senado', contagem: listaOk, fontes: fontes.slice(0, 1).concat(fontes.slice(2)), hoje, consultados: Object.keys(listaOk) }));
   gravarAtomico(path.join(dir, 'meta.json'), {
     atualizado_em: hoje,
     ultima_execucao: new Date().toISOString(),

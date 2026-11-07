@@ -124,3 +124,27 @@ test('robots.txt é lido antes, bloqueia e o paralelismo nunca passa de 2', asyn
   assert.ok(pico <= 2, `pico de ${pico} requisições simultâneas`);
   await assert.rejects(obter('https://teste.invalid/proibido/1', { buscar: falso }), /robots/);
 });
+
+test('Apresentadas: só tipos que podem virar norma, no período; primeiro signatário e coautoria', async () => {
+  const { apresentadasDoCsv, autoresApresentadas, contarCamara, contarListaSenado } = await import('./apresentadas.mjs');
+  const props = CAB +
+    '"20";"PL";"9";"2023";"Projeto de Lei";"x";"2023-03-01T10:00:00";"";"";"Aguardando";"1"\n' +
+    '"21";"REQ";"1";"2023";"Requerimento";"x";"2023-03-01T10:00:00";"";"";"Aguardando";"1"\n' +
+    '"22";"PEC";"2";"2023";"PEC";"x";"2023-03-02T10:00:00";"";"";"Aguardando";"1"\n' +
+    '"23";"PL";"3";"2023";"Projeto de Lei";"x";"2023-01-10T10:00:00";"";"";"Aguardando";"1"\n';
+  const ap = apresentadasDoCsv(props);
+  assert.deepEqual([...ap.entries()], [['20', 'PL'], ['22', 'PEC']]);
+  const aut = '"idProposicao";"idDeputadoAutor";"uriAutor";"ordemAssinatura"\n' +
+    '"20";"1";"";"1"\n"20";"1";"";"3"\n"22";"1";"";"5"\n"22";"2";"";"1"\n"21";"1";"";"1"\n';
+  const c = contarCamara(ap, autoresApresentadas(aut, ap));
+  assert.deepEqual(c['1'], { total: 2, primeiro_signatario: 1, por_tipo: { PEC: 1, PLP: 0, PL: 1, PDL: 0, PRC: 0 } });
+  assert.equal(c['2'].total, 1);
+  const s = contarListaSenado([
+    { id: 1, identificacao: 'PL 1/2024', dataApresentacao: '2024-01-01' },
+    { id: 1, identificacao: 'PL 1/2024', dataApresentacao: '2024-01-01' },
+    { id: 2, identificacao: 'RQS 5/2024', dataApresentacao: '2024-01-01' },
+    { id: 3, identificacao: 'PRS 2/2023', dataApresentacao: '2023-03-01' },
+    { id: 4, identificacao: 'PEC 2/2022', dataApresentacao: '2022-03-01' },
+  ]);
+  assert.deepEqual(s, { total: 2, por_tipo: { PEC: 0, PLP: 0, PL: 1, PDL: 0, PRS: 1 } });
+});

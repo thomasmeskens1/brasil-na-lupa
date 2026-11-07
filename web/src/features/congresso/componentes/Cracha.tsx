@@ -6,6 +6,7 @@
  * (diretriz 6).
  */
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { BotaoCompartilhar } from "@/components/compartilhar/BotaoCompartilhar";
 import { montarTextoCompartilhar } from "@/components/compartilhar/texto";
 import { SeloFonte } from "@/components/decisao/Selos";
@@ -30,9 +31,11 @@ export interface CrachaProps {
   presenca: ResumoCracha;
   gastos: ResumoCracha;
   foto: FotoInfo | null;
+  /** Resumo completo (cartões) no lugar dos três números do crachá. */
+  resumo?: ReactNode;
 }
 
-export function Cracha({ casa, p, nominais, presenca, gastos, foto }: CrachaProps) {
+export function Cracha({ casa, p, nominais, presenca, gastos, foto, resumo }: CrachaProps) {
   const m = CASA_MEMBROS[casa];
   const partidoUf = `${p.partido ?? "partido não informado"}-${p.uf ?? "UF não informada"}`;
   const titulo = `${p.nome} (${partidoUf}), ${m.singular.toLowerCase()}`;
@@ -65,6 +68,7 @@ export function Cracha({ casa, p, nominais, presenca, gastos, foto }: CrachaProp
         </p>
       ) : null}
 
+      {resumo ? <div className="mt-4">{resumo}</div> : (
       <dl className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-3">
         <div className="rounded-md border border-borda bg-superficie px-3 py-2">
           <dt className="text-sm text-[var(--cor-secundaria)]">Votações nominais com registro</dt>
@@ -84,6 +88,7 @@ export function Cracha({ casa, p, nominais, presenca, gastos, foto }: CrachaProp
           </div>
         ))}
       </dl>
+      )}
 
       <div className="mt-3 flex flex-wrap items-center gap-2">
         {p.url_oficial ? (
