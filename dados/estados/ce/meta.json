@@ -1,6 +1,6 @@
 {
-  "atualizado_em": "2026-11-06T19:43:04.190Z",
-  "ultima_execucao": "2026-11-06T19:40:30.564Z",
+  "atualizado_em": "2026-11-07T18:07:00.956Z",
+  "ultima_execucao": "2026-11-07T18:04:32.891Z",
   "uf": "CE",
   "casa": "alece",
   "orgao": "Assembleia Legislativa do Estado do Ceará (ALECE)",
@@ -8,7 +8,7 @@
     "anos": [
       2026
     ],
-    "fim": "2026-11-06"
+    "fim": "2026-11-07"
   },
   "modo": "incremental",
   "fontes": [
@@ -16,41 +16,32 @@
       "titulo": "Votação nominal — Portal da Transparência da ALECE",
       "url": "https://transparencia.al.ce.gov.br/consultas-gerais/votacao-nominal",
       "orgao": "Assembleia Legislativa do Estado do Ceará (ALECE)",
-      "acessado_em": "2026-11-06"
+      "acessado_em": "2026-11-07"
     },
     {
       "titulo": "Proposições — sistema de proposições da ALECE",
       "url": "https://www.al.ce.gov.br/paginas/proposicoes?menu=96",
       "orgao": "Assembleia Legislativa do Estado do Ceará (ALECE)",
-      "acessado_em": "2026-11-06"
+      "acessado_em": "2026-11-07"
     },
     {
       "titulo": "Deputados — portal da ALECE",
       "url": "https://www.al.ce.gov.br/deputados",
       "orgao": "Assembleia Legislativa do Estado do Ceará (ALECE)",
-      "acessado_em": "2026-11-06"
+      "acessado_em": "2026-11-07"
     },
     {
       "titulo": "Diário Oficial do Estado do Ceará (PDF por edição)",
       "url": "https://imagens.seplag.ce.gov.br/PDF/",
       "orgao": "Diário Oficial do Estado do Ceará (DOE-CE)",
-      "acessado_em": "2026-11-06"
+      "acessado_em": "2026-11-07"
     }
   ],
   "robots": {
-    "imagens.seplag.ce.gov.br": {
-      "url": "https://imagens.seplag.ce.gov.br/robots.txt",
-      "status": 404,
-      "lido_em": "2026-11-06T19:40:30.684Z",
-      "crawl_delay_s": null,
-      "intervalo_usado_s": 2,
-      "disallow": [],
-      "observacao": "sem robots.txt (HTTP 404): nenhuma restrição declarada (RFC 9309)"
-    },
     "www.al.ce.gov.br": {
       "url": "https://www.al.ce.gov.br/robots.txt",
       "status": 200,
-      "lido_em": "2026-11-06T19:40:30.708Z",
+      "lido_em": "2026-11-07T18:04:33.056Z",
       "crawl_delay_s": null,
       "intervalo_usado_s": 2,
       "disallow": [
@@ -58,10 +49,19 @@
       ],
       "observacao": "robots.txt lido e obedecido"
     },
+    "imagens.seplag.ce.gov.br": {
+      "url": "https://imagens.seplag.ce.gov.br/robots.txt",
+      "status": 404,
+      "lido_em": "2026-11-07T18:04:33.026Z",
+      "crawl_delay_s": null,
+      "intervalo_usado_s": 2,
+      "disallow": [],
+      "observacao": "sem robots.txt (HTTP 404): nenhuma restrição declarada (RFC 9309)"
+    },
     "transparencia.al.ce.gov.br": {
       "url": "https://transparencia.al.ce.gov.br/robots.txt",
       "status": 200,
-      "lido_em": "2026-11-06T19:40:39.219Z",
+      "lido_em": "2026-11-07T18:04:35.495Z",
       "crawl_delay_s": null,
       "intervalo_usado_s": 2,
       "disallow": [],
@@ -70,7 +70,7 @@
     "www2.al.ce.gov.br": {
       "url": "https://www2.al.ce.gov.br/robots.txt",
       "status": 404,
-      "lido_em": "2026-11-06T19:40:39.221Z",
+      "lido_em": "2026-11-07T18:04:35.496Z",
       "crawl_delay_s": null,
       "intervalo_usado_s": 2,
       "disallow": [],
@@ -82,7 +82,7 @@
     }
   },
   "execucao": {
-    "requisicoes": 101,
+    "requisicoes": 98,
     "python": true,
     "falhas": []
   },
@@ -111,14 +111,14 @@
     "votacoes_lidas_nesta_execucao": 0,
     "votacoes_ligadas_a_projeto": 9,
     "votos_sem_ligacao_com_deputado": 379,
-    "proposicoes_sem_ficha": 556,
+    "proposicoes_sem_ficha": 496,
     "fichas_lidas_nesta_execucao": 60,
     "listas_de_proposicoes_lidas": 12,
     "listas_de_proposicoes_com_falha": 0,
     "edicoes_doe_lidas": 35,
     "edicoes_doe_lidas_nesta_execucao": 0,
-    "dias_sem_edicao_doe": 25,
-    "edicoes_doe_sem_texto": 12,
+    "dias_sem_edicao_doe": 30,
+    "edicoes_doe_sem_texto": 26,
     "leis_ligadas_a_projeto": 16
   },
   "observacoes": [
@@ -398,8 +398,10 @@
       "sha256": "80eaffbc2fd113669cbef85d4c4c8c045d1885231c039618bb96c9047642f9ee"
     },
     "2026-11-06": {
-      "situacao": "sem-edicao",
-      "lida_em": "2026-11-06"
+      "situacao": "sem-texto",
+      "lida_em": "2026-11-07",
+      "url": "https://imagens.seplag.ce.gov.br/PDF/20261106/do20261106p01.pdf",
+      "motivo": "leitor de PDF falhou: spawn scripts/coleta/estados/ce/.venv/bin/python ENOENT"
     },
     "2026-10-31": {
       "situacao": "sem-edicao",
@@ -548,6 +550,108 @@
       "lida_em": "2026-11-06",
       "url": "https://imagens.seplag.ce.gov.br/PDF/20260827/do20260827p01.pdf",
       "motivo": "leitor de PDF falhou: spawn scripts/coleta/estados/ce/.venv/bin/python ENOENT"
+    },
+    "2026-11-07": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-07"
+    },
+    "2026-08-26": {
+      "situacao": "sem-texto",
+      "lida_em": "2026-11-07",
+      "url": "https://imagens.seplag.ce.gov.br/PDF/20260826/do20260826p01.pdf",
+      "motivo": "leitor de PDF falhou: spawn scripts/coleta/estados/ce/.venv/bin/python ENOENT"
+    },
+    "2026-08-25": {
+      "situacao": "sem-texto",
+      "lida_em": "2026-11-07",
+      "url": "https://imagens.seplag.ce.gov.br/PDF/20260825/do20260825p01.pdf",
+      "motivo": "leitor de PDF falhou: spawn scripts/coleta/estados/ce/.venv/bin/python ENOENT"
+    },
+    "2026-08-24": {
+      "situacao": "sem-texto",
+      "lida_em": "2026-11-07",
+      "url": "https://imagens.seplag.ce.gov.br/PDF/20260824/do20260824p01.pdf",
+      "motivo": "leitor de PDF falhou: spawn scripts/coleta/estados/ce/.venv/bin/python ENOENT"
+    },
+    "2026-08-23": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-07"
+    },
+    "2026-08-22": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-07"
+    },
+    "2026-08-21": {
+      "situacao": "sem-texto",
+      "lida_em": "2026-11-07",
+      "url": "https://imagens.seplag.ce.gov.br/PDF/20260821/do20260821p01.pdf",
+      "motivo": "leitor de PDF falhou: spawn scripts/coleta/estados/ce/.venv/bin/python ENOENT"
+    },
+    "2026-08-20": {
+      "situacao": "sem-texto",
+      "lida_em": "2026-11-07",
+      "url": "https://imagens.seplag.ce.gov.br/PDF/20260820/do20260820p01.pdf",
+      "motivo": "leitor de PDF falhou: spawn scripts/coleta/estados/ce/.venv/bin/python ENOENT"
+    },
+    "2026-08-19": {
+      "situacao": "sem-texto",
+      "lida_em": "2026-11-07",
+      "url": "https://imagens.seplag.ce.gov.br/PDF/20260819/do20260819p01.pdf",
+      "motivo": "leitor de PDF falhou: spawn scripts/coleta/estados/ce/.venv/bin/python ENOENT"
+    },
+    "2026-08-18": {
+      "situacao": "sem-texto",
+      "lida_em": "2026-11-07",
+      "url": "https://imagens.seplag.ce.gov.br/PDF/20260818/do20260818p01.pdf",
+      "motivo": "leitor de PDF falhou: spawn scripts/coleta/estados/ce/.venv/bin/python ENOENT"
+    },
+    "2026-08-17": {
+      "situacao": "sem-texto",
+      "lida_em": "2026-11-07",
+      "url": "https://imagens.seplag.ce.gov.br/PDF/20260817/do20260817p01.pdf",
+      "motivo": "leitor de PDF falhou: spawn scripts/coleta/estados/ce/.venv/bin/python ENOENT"
+    },
+    "2026-08-16": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-07"
+    },
+    "2026-08-15": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-07"
+    },
+    "2026-08-14": {
+      "situacao": "sem-texto",
+      "lida_em": "2026-11-07",
+      "url": "https://imagens.seplag.ce.gov.br/PDF/20260814/do20260814p01.pdf",
+      "motivo": "leitor de PDF falhou: spawn scripts/coleta/estados/ce/.venv/bin/python ENOENT"
+    },
+    "2026-08-13": {
+      "situacao": "sem-texto",
+      "lida_em": "2026-11-07",
+      "url": "https://imagens.seplag.ce.gov.br/PDF/20260813/do20260813p01.pdf",
+      "motivo": "leitor de PDF falhou: spawn scripts/coleta/estados/ce/.venv/bin/python ENOENT"
+    },
+    "2026-08-12": {
+      "situacao": "sem-texto",
+      "lida_em": "2026-11-07",
+      "url": "https://imagens.seplag.ce.gov.br/PDF/20260812/do20260812p01.pdf",
+      "motivo": "leitor de PDF falhou: spawn scripts/coleta/estados/ce/.venv/bin/python ENOENT"
+    },
+    "2026-08-11": {
+      "situacao": "sem-texto",
+      "lida_em": "2026-11-07",
+      "url": "https://imagens.seplag.ce.gov.br/PDF/20260811/do20260811p01.pdf",
+      "motivo": "leitor de PDF falhou: spawn scripts/coleta/estados/ce/.venv/bin/python ENOENT"
+    },
+    "2026-08-10": {
+      "situacao": "sem-texto",
+      "lida_em": "2026-11-07",
+      "url": "https://imagens.seplag.ce.gov.br/PDF/20260810/do20260810p01.pdf",
+      "motivo": "leitor de PDF falhou: spawn scripts/coleta/estados/ce/.venv/bin/python ENOENT"
+    },
+    "2026-08-09": {
+      "situacao": "sem-edicao",
+      "lida_em": "2026-11-07"
     }
   }
 }
