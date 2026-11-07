@@ -9,14 +9,26 @@ import { getIndiceExecutivo } from "@/features/executivo/dados";
 import { getDecisoes } from "@/features/icms/dados";
 import { dataDe } from "@/features/icms/cartao";
 import { caminhoCasa, getUf } from "@/features/estados/ufs";
+import { getIndiceStf, getIndiceStj, getJulgamentoStf, getTemaStf, getTemaStj } from "@/features/justica/dados";
+import { cabecalhoJulgamentoStf, cabecalhoTemaStf, cabecalhoTemaStj } from "@/features/justica/detalhes";
 import type { ParteCatalogo } from "./acompanhamento";
-import { idDeputadoEstadual, idExecutivo, idIcms, idParlamentar, idVotacaoCongresso, idVotacaoEstado } from "./ids";
+import {
+  ehIdProposta,
+  idDeputadoEstadual,
+  idExecutivo,
+  idIcms,
+  idJulgamentoStf,
+  idParlamentar,
+  idTemaJustica,
+  idVotacaoCongresso,
+  idVotacaoEstado,
+} from "./ids";
 
 /**
  * Catálogo público e estático (gerado no build, a partir de web/content) com os nomes que a
  * página Minha conta mostra para cada favorito e reação: título da proposta, data, quem decidiu,
  * a situação oficial e as outras votações da mesma proposição (as "atualizações"). Dividido em
- * partes (Câmara, Senado, Executivo, ICMS e cada UF) para o navegador baixar só as partes dos
+ * partes (Câmara, Senado, Executivo, ICMS, Justiça e cada UF) para o navegador baixar só as partes dos
  * favoritos da pessoa; nenhum favorito sai do navegador para montar a lista.
  *
  * Só fatos das fontes, sem juízo de valor; a ordem das atualizações é só a data.
@@ -38,7 +50,7 @@ const curto = (t: string) => {
 };
 
 export function partesCatalogo(): string[] {
-  return ["camara", "senado", "executivo", "icms", ...ufsComDados().map((u) => u.toLowerCase())];
+  return ["camara", "senado", "executivo", "icms", "justica", ...ufsComDados().map((u) => u.toLowerCase())];
 }
 
 function vazia(parte: string): ParteCatalogo {
@@ -54,6 +66,35 @@ function agrupar(p: ParteCatalogo, grupo: string | null | undefined, id: string,
 
 function ordenarGrupos(p: ParteCatalogo) {
   for (const g of Object.values(p.grupos)) g.sort((a, b) => (b[1] ?? "").localeCompare(a[1] ?? "") || a[0].localeCompare(b[0]));
+}
+
+/** Temas do STJ e do STF com página própria e julgamentos do STF (os que têm botões de reação). */
+function montarJustica(p: ParteCatalogo) {
+  const STJ = "Superior Tribunal de Justiça";
+  const STF = "Supremo Tribunal Federal";
+  for (const n of getIndiceStj().com_pagina) {
+    const t = getTemaStj(n);
+    const k = idTemaJustica("stj", n);
+    if (!t || !ehIdProposta(k)) continue;
+    const c = cabecalhoTemaStj(t);
+    p.itens[k] = [curto(`Tema ${n} do STJ: ${c.titulo}`), c.data, STJ, null, t.situacao ?? null];
+  }
+  const stf = getIndiceStf();
+  for (const n of stf.com_pagina) {
+    const t = getTemaStf(n);
+    const k = idTemaJustica("stf", n);
+    if (!t || !ehIdProposta(k)) continue;
+    const c = cabecalhoTemaStf(t);
+    p.itens[k] = [curto(`Tema ${n} do STF: ${c.titulo}`), c.data, STF, null, t.situacao?.andamento ?? t.situacao?.repercussao_geral ?? null];
+  }
+  for (const r of stf.julgamentos) {
+    const j = getJulgamentoStf(r.id);
+    const k = idJulgamentoStf(r.id);
+    if (!j || !ehIdProposta(k)) continue;
+    const c = cabecalhoJulgamentoStf(j, r.id);
+    const ident = j.processo?.identificacao ?? r.identificacao;
+    p.itens[k] = [curto(ident ? `${ident} (STF): ${c.titulo}` : c.titulo), c.data, STF, null, null];
+  }
 }
 
 export function montarParteCatalogo(parte: string): ParteCatalogo | null {
@@ -93,6 +134,8 @@ export function montarParteCatalogo(parte: string): ParteCatalogo | null {
     for (const d of getDecisoes().itens ?? []) {
       p.itens[idIcms(d.id)] = [curto(tituloSimplesDe(arq, d.id)?.titulo ?? d.titulo), dataDe(d), d.orgao ?? "ICMS", null, null];
     }
+  } else if (parte === "justica") {
+    montarJustica(p);
   } else {
     const u = getUf(parte);
     const ind = u ? getIndiceEstado(parte) : null;

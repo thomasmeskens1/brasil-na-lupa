@@ -22,6 +22,7 @@ import { MostrarMais } from "@/components/lista/MostrarMais";
 import { ContadorAnimado } from "@/components/marca/ContadorAnimado";
 import { montarCartao } from "../apresentacao";
 import type { DadosCartao } from "./ListaCartoes";
+import { FiltrosCompactos } from "./FiltrosCompactos";
 
 export interface ItemFiltro {
   id: string;
@@ -87,6 +88,8 @@ export interface ListaFiltrosProps {
   porPagina?: number;
   /** Conteúdo entre os números e a lista (ex.: explicação de cada tipo). */
   children?: ReactNode;
+  /** Todos os filtros em caixas de seleção numa linha (FiltrosCompactos), em vez de chips. */
+  compacto?: boolean;
 }
 
 type Selecao = Record<string, string>;
@@ -124,6 +127,7 @@ export function ListaFiltros({
   idLista = "lista",
   porPagina = 20,
   children,
+  compacto = false,
 }: ListaFiltrosProps) {
   const base = useId();
   const [termo, setTermo] = useState("");
@@ -381,59 +385,77 @@ export function ListaFiltros({
         <h2 id={`${base}-lista`} ref={titulo} tabIndex={-1} className="text-xl font-bold text-foreground focus:outline-none focus-visible:outline">
           {tituloLista}
         </h2>
-        <div className="mt-4 space-y-4 rounded-2xl border border-[var(--cor-borda)] bg-[var(--cor-superficie)] p-3 md:p-4">
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
-            <label htmlFor={`${base}-busca`} className={`block min-w-0 text-sm font-semibold text-foreground ${listas.length ? "md:col-span-1" : "md:col-span-3"}`}>
-              {busca.rotulo}
-              <input
-                id={`${base}-busca`}
-                type="search"
-                value={termo}
-                placeholder={busca.dica}
-                onChange={(e) => {
-                  setTermo(e.target.value);
-                  setLimite(porPagina);
-                }}
-                className={CAMPO}
-              />
-            </label>
-            {listas.map(caixaLista)}
-          </div>
-          {principais.map(grupoChips)}
-          {secundarias.length ? (
-            <details className="rounded-md border border-borda">
-              <summary className="pr-3">
-                Mais filtros{ativosSecundarios ? ` (${ativosSecundarios} ${ativosSecundarios === 1 ? "ativo" : "ativos"})` : ""}
-                <span className="font-normal text-[var(--cor-secundaria)]"> · {secundarias.map((f) => f.rotulo.toLowerCase()).join(", ")}</span>
-              </summary>
-              <div className="space-y-4 border-t border-borda p-3">
-                {secundarias.map((f) => (f.modo === "chips" ? grupoChips(f) : caixaLista(f)))}
-              </div>
-            </details>
-          ) : null}
-          {ativos.length || termo ? (
-            <ul className="flex flex-wrap gap-2" aria-label="Filtros ativos">
-              {ativos.map((f) => (
-                <li key={f.chave}>
-                  <button type="button" className="botao py-1 text-sm font-medium" onClick={() => mudar(f.chave, "")}>
-                    {f.rotulo}: {sel[f.chave]} <span aria-hidden="true">×</span>
-                    <span className="sr-only"> (remover filtro)</span>
+        {compacto ? (
+          <FiltrosCompactos
+            base={base}
+            facetas={visiveisFacetas}
+            opcoes={opcoes}
+            sel={sel}
+            mudar={mudar}
+            limpar={limpar}
+            termo={termo}
+            aoBuscar={(t) => {
+              setTermo(t);
+              setLimite(porPagina);
+            }}
+            busca={busca}
+            contagem={contagem}
+          />
+        ) : (
+          <div className="mt-4 space-y-4 rounded-2xl border border-[var(--cor-borda)] bg-[var(--cor-superficie)] p-3 md:p-4">
+            <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
+              <label htmlFor={`${base}-busca`} className={`block min-w-0 text-sm font-semibold text-foreground ${listas.length ? "md:col-span-1" : "md:col-span-3"}`}>
+                {busca.rotulo}
+                <input
+                  id={`${base}-busca`}
+                  type="search"
+                  value={termo}
+                  placeholder={busca.dica}
+                  onChange={(e) => {
+                    setTermo(e.target.value);
+                    setLimite(porPagina);
+                  }}
+                  className={CAMPO}
+                />
+              </label>
+              {listas.map(caixaLista)}
+            </div>
+            {principais.map(grupoChips)}
+            {secundarias.length ? (
+              <details className="rounded-md border border-borda">
+                <summary className="pr-3">
+                  Mais filtros{ativosSecundarios ? ` (${ativosSecundarios} ${ativosSecundarios === 1 ? "ativo" : "ativos"})` : ""}
+                  <span className="font-normal text-[var(--cor-secundaria)]"> · {secundarias.map((f) => f.rotulo.toLowerCase()).join(", ")}</span>
+                </summary>
+                <div className="space-y-4 border-t border-borda p-3">
+                  {secundarias.map((f) => (f.modo === "chips" ? grupoChips(f) : caixaLista(f)))}
+                </div>
+              </details>
+            ) : null}
+            {ativos.length || termo ? (
+              <ul className="flex flex-wrap gap-2" aria-label="Filtros ativos">
+                {ativos.map((f) => (
+                  <li key={f.chave}>
+                    <button type="button" className="botao py-1 text-sm font-medium" onClick={() => mudar(f.chave, "")}>
+                      {f.rotulo}: {sel[f.chave]} <span aria-hidden="true">×</span>
+                      <span className="sr-only"> (remover filtro)</span>
+                    </button>
+                  </li>
+                ))}
+                <li>
+                  <button type="button" className="botao py-1 text-sm font-medium" onClick={limpar}>
+                    Limpar tudo
                   </button>
                 </li>
-              ))}
-              <li>
-                <button type="button" className="botao py-1 text-sm font-medium" onClick={limpar}>
-                  Limpar tudo
-                </button>
-              </li>
-            </ul>
-          ) : null}
-          {contagem ? (
-            <p aria-live="polite" className="text-sm text-[var(--cor-secundaria)]">
-              {contagem}
-            </p>
-          ) : null}
-        </div>
+              </ul>
+            ) : null}
+            {contagem ? (
+              <p aria-live="polite" className="text-sm text-[var(--cor-secundaria)]">
+                {contagem}
+              </p>
+            ) : null}
+          </div>
+        )}
 
         <div className="mt-4">
           {erro ? <p className="lacuna text-sm">Não foi possível carregar a lista. Tente recarregar a página.</p> : null}

@@ -4,6 +4,7 @@ import { metadadosCompartilhamento } from "@/components/compartilhar";
 import { CabecalhoDecisao, ItemRecolhivel, formatarData, type ItemFicha } from "@/components/decisao";
 import { Termo } from "@/components/glossario";
 import { Secao } from "@/components/Secao";
+import { AcoesProposta } from "@/components/reacoes";
 import { lacunasLegiveis, tituloFonteLegivel } from "@/features/comum/texto";
 import { ListaLacunas } from "@/features/congresso/componentes/Basicos";
 import { Migalhas, TermosRecolhidos } from "@/features/executivo/componentes/Migalhas";
@@ -12,6 +13,7 @@ import { JulgamentoStfBloco, tituloJulgamentoStf } from "@/features/justica/comp
 import { getIndiceStf, getTemaStf, idsOuMarcador, julgamentosDoTemaStf } from "@/features/justica/dados";
 import { cabecalhoTemaStf } from "@/features/justica/detalhes";
 import { COLECOES, TERMOS_JUSTICA } from "@/features/justica/rotulos";
+import { idTemaJustica } from "@/features/conta/ids";
 
 /** Página só para temas de coleção ou com julgamento coletado; sem dados, um marcador que vira 404. */
 export function generateStaticParams() {
@@ -86,6 +88,7 @@ export default async function TemaStfPage({ params }: PageProps<"/justica/stf/te
         quemDecidiu={QUEM_STF(julgamentos[julgamentos.length - 1]?.orgao ?? null, t.relator)}
         fontePrincipal={c.fontePrincipal}
         url={`/justica/stf/temas/${t.numero}`}
+        acoes={<AcoesProposta proposta={idTemaJustica("stf", t.numero)} />}
         atalhos={julgamentos.length ? [{ href: "#julgamentos", rotulo: `Julgamentos e votos (${julgamentos.length})` }] : undefined}
         textoOficial={t.descricao ? { rotulo: "descrição oficial do tema", texto: t.descricao } : null}
         ficha={ficha}

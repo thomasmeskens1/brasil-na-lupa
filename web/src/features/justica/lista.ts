@@ -158,7 +158,7 @@ export const FACETAS_JUSTICA: Faceta[] = [
   { chave: "tema", rotulo: "Tema do dia a dia", modo: "chips", ajuda: "Classificação do site a partir dos assuntos oficiais registrados pelo tribunal." },
   {
     chave: "resultado",
-    rotulo: "Resultado, como escrito no texto oficial",
+    rotulo: "Resultado (texto oficial)",
     modo: "chips",
     ajuda: "Só nos julgamentos com o texto oficial coletado e só quando o texto diz “por unanimidade” ou “por maioria”.",
   },

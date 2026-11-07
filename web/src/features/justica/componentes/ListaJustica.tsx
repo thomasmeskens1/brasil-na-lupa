@@ -3,7 +3,7 @@
 /**
  * Lista única da Justiça (STJ e/ou STF): baixa os índices estáticos dos temas logo depois de a
  * página abrir, junta os julgamentos acompanhados (vindos do servidor) e mostra tudo na lista com
- * filtros por chips. Os números grandes e a explicação de cada tipo chegam prontos do servidor.
+ * filtros em caixas de seleção (FiltrosCompactos). Os números grandes e a explicação de cada tipo chegam prontos do servidor.
  */
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { ListaFiltros, type GrupoNumeros, type ItemFiltro } from "@/features/executivo/componentes/ListaFiltros";
@@ -61,6 +61,7 @@ export function ListaJustica({ stj, stf, julgamentos, numeros, tituloLista, chil
       rotulo={{ singular: "tema ou julgamento", plural: "temas e julgamentos" }}
       ordem="do mais recente para o mais antigo (pela data do cartão)"
       tituloLista={tituloLista}
+      compacto
     >
       {children}
     </ListaFiltros>
