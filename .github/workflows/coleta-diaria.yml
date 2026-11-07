@@ -179,7 +179,7 @@ jobs:
       - name: Títulos em linguagem simples (com verificador)
         continue-on-error: true
         # Grava só no fim (arquivo temporário) e guarda cache por consulta: interrompido, retoma no dia seguinte.
-        timeout-minutes: 30
+        timeout-minutes: 60
         run: |
           node scripts/coleta/titulos/gerar.mjs
           node scripts/coleta/titulos/verificar.mjs
