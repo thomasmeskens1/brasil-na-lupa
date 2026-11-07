@@ -12,6 +12,7 @@ import { siglasSemExtenso, carregarVetos } from './conteudo.mjs';
 import { perturbar, carregarSecao } from './itens.mjs';
 import { contextoVerificacao } from './verificar.mjs';
 import { SAIDA, lerJson } from './lib.mjs';
+import { classificar, REGRAS } from './temas.mjs';
 
 let ok = 0;
 const teste = (nome, fn) => { fn(); ok++; console.log(`ok - ${nome}`); };
@@ -158,5 +159,24 @@ teste('simetria nos estruturados reais', () => {
       assert.equal(contextoVerificacao(it, c).titulo_perturbado, c.titulo, `${s} ${it.id}`);
     }
   }
+});
+// ---------- tema: só classificação oficial ----------
+teste('tema: temas oficiais da ALESP e tipo de conteúdo do Senado', () => {
+  assert.equal(classificar([{ fonte: 'alesp-tema', valor: 'Saúde Pública' }]).tema, 'Saúde');
+  assert.equal(classificar([{ fonte: 'alesp-tema', valor: 'Patrimônio Imobiliário' }, { fonte: 'tipo', valor: 'outro' }]).tema, 'Governo e instituições');
+  assert.equal(classificar([{ fonte: 'alesp-tema', valor: 'Saúde Pública e Outros' }]).tema, 'Outros'); // sem casamento aproximado
+  assert.equal(classificar([{ fonte: 'senado-tipo-conteudo', valor: 'INDICACAO_CHEFE_MISSAO_DIPLOMATICA' }]).tema, 'Governo e instituições');
+  assert.equal(classificar([{ fonte: 'senado-tipo-conteudo', valor: 'URGENCIA_MATERIA' }]).tema, 'Outros');
+});
+teste('tema: classificação complementar só quando nenhuma regra casa com a principal', () => {
+  assert.equal(classificar([{ fonte: 'alesp-tema', valor: 'Calendário Oficial' }], [{ fonte: 'alesp-indexador', valor: 'SAÚDE MENTAL' }]).tema, 'Outros');
+  assert.equal(classificar([], [{ fonte: 'alesp-indexador', valor: 'SAÚDE MENTAL' }, { fonte: 'alesp-indexador', valor: 'CALENDÁRIO OFICIAL' }]).tema, 'Outros');
+  assert.equal(classificar([{ fonte: 'tipo', valor: 'outro' }], [{ fonte: 'alesp-indexador', valor: 'SAÚDE MENTAL' }]).tema, 'Saúde');
+  const res = [{ fonte: 'assunto-judicial', valor: 'DIREITO TRIBUTÁRIO' }];
+  assert.equal(classificar([{ fonte: 'assunto-judicial', valor: 'Cofins' }], res).tema, 'Impostos e preços');
+  assert.equal(classificar([{ fonte: 'assunto-judicial', valor: 'DIREITO PENAL' }], res).tema, 'Segurança');
+  assert.equal(classificar([{ fonte: 'tipo', valor: 'homenagem' }], [{ fonte: 'alesp-indexador', valor: 'Nada que case' }]).tema, 'Outros');
+  // o texto da ementa nunca é rótulo: nenhuma fonte "ementa" tem regra
+  assert.ok(!REGRAS.some((r) => /ementa|texto/.test(r.fonte)));
 });
 console.log(`${ok} testes passaram`);
