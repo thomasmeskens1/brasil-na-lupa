@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-06T11:34:24.262Z",
-  "ultima_execucao": "2026-11-06T10:37:12.592Z",
+  "atualizado_em": "2026-11-08T12:00:02.922Z",
+  "ultima_execucao": "2026-11-08T11:59:49.232Z",
   "uf": "SP",
   "casa": "cm-galia",
   "orgao": "Câmara Municipal de Gália",
   "host": "sapl.galia.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-06"
+    "fim": "2026-11-08"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Gália (API REST pública)",
       "url": "https://sapl.galia.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Gália",
-      "acessado_em": "2026-11-06"
+      "acessado_em": "2026-11-08"
     }
   ],
   "robots": {
-    "sapl.galia.sp.leg.br": {
-      "lido_em": "2026-11-06T10:37:12.592Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.galia.sp.leg.br": null
   },
   "execucao": {
-    "requisicoes": 57,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,9 +80,9 @@
     "itens_pauta": 682,
     "votacoes": 294,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 153,
+      "em-coleta": 34,
       "inexistentes-na-fonte": 107,
-      "em-coleta": 34
+      "coletados": 153
     },
     "votos_individuais": 1350
   },
@@ -213,7 +206,7 @@
       "status_tramitacao": "2026-11-06T10:55:48.533Z",
       "autores": "2026-11-06T10:57:50.737Z"
     },
-    "ultima_requisicao": "2026-11-06T11:34:08.942Z",
+    "ultima_requisicao": "2026-11-08T11:59:49.232Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

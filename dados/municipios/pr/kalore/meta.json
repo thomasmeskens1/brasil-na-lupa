@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-06T14:10:04.771Z",
-  "ultima_execucao": "2026-11-06T13:18:11.482Z",
+  "atualizado_em": "2026-11-08T12:00:05.888Z",
+  "ultima_execucao": "2026-11-08T11:59:49.549Z",
   "uf": "PR",
   "casa": "cm-kalore",
   "orgao": "Câmara Municipal de Kaloré",
   "host": "sapl.kalore.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-06"
+    "fim": "2026-11-08"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Kaloré (API REST pública)",
       "url": "https://sapl.kalore.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Kaloré",
-      "acessado_em": "2026-11-06"
+      "acessado_em": "2026-11-08"
     }
   ],
   "robots": {
-    "sapl.kalore.pr.leg.br": {
-      "lido_em": "2026-11-06T13:18:11.482Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.kalore.pr.leg.br": null
   },
   "execucao": {
-    "requisicoes": 52,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,9 +80,9 @@
     "itens_pauta": 406,
     "votacoes": 388,
     "votacoes_por_situacao_dos_votos": {
+      "em-coleta": 29,
       "inexistentes-na-fonte": 354,
-      "coletados": 5,
-      "em-coleta": 29
+      "coletados": 5
     },
     "votos_individuais": 40
   },
@@ -213,7 +206,7 @@
       "status_tramitacao": "2026-11-06T13:36:35.231Z",
       "autores": "2026-11-06T13:37:36.197Z"
     },
-    "ultima_requisicao": "2026-11-06T14:10:02.730Z",
+    "ultima_requisicao": "2026-11-08T11:59:49.549Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

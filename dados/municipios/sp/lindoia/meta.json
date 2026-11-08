@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-06T14:17:16.242Z",
-  "ultima_execucao": "2026-11-06T13:18:11.507Z",
+  "atualizado_em": "2026-11-08T12:00:07.529Z",
+  "ultima_execucao": "2026-11-08T11:59:49.726Z",
   "uf": "SP",
   "casa": "cm-lindoia",
   "orgao": "Câmara Municipal de Lindóia",
   "host": "sapl.lindoia.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-06"
+    "fim": "2026-11-08"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Lindóia (API REST pública)",
       "url": "https://sapl.lindoia.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Lindóia",
-      "acessado_em": "2026-11-06"
+      "acessado_em": "2026-11-08"
     }
   ],
   "robots": {
-    "sapl.lindoia.sp.leg.br": {
-      "lido_em": "2026-11-06T13:18:11.507Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.lindoia.sp.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,9 +80,9 @@
     "itens_pauta": 678,
     "votacoes": 194,
     "votacoes_por_situacao_dos_votos": {
+      "em-coleta": 3,
       "coletados": 190,
-      "inexistentes-na-fonte": 1,
-      "em-coleta": 3
+      "inexistentes-na-fonte": 1
     },
     "votos_individuais": 1700
   },
@@ -213,7 +206,7 @@
       "status_tramitacao": "2026-11-06T13:36:38.878Z",
       "autores": "2026-11-06T13:37:39.033Z"
     },
-    "ultima_requisicao": "2026-11-06T14:17:09.796Z",
+    "ultima_requisicao": "2026-11-08T11:59:49.726Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

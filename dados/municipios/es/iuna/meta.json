@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-06T14:02:56.871Z",
-  "ultima_execucao": "2026-11-06T13:18:11.442Z",
+  "atualizado_em": "2026-11-08T12:00:00.755Z",
+  "ultima_execucao": "2026-11-08T11:59:49.385Z",
   "uf": "ES",
   "casa": "cm-iuna",
   "orgao": "Câmara Municipal de Iúna",
   "host": "sapl.iuna.es.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-06"
+    "fim": "2026-11-08"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Iúna (API REST pública)",
       "url": "https://sapl.iuna.es.leg.br/api/",
       "orgao": "Câmara Municipal de Iúna",
-      "acessado_em": "2026-11-06"
+      "acessado_em": "2026-11-08"
     }
   ],
   "robots": {
-    "sapl.iuna.es.leg.br": {
-      "lido_em": "2026-11-06T13:18:11.442Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.iuna.es.leg.br": null
   },
   "execucao": {
-    "requisicoes": 45,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,9 +80,9 @@
     "itens_pauta": 588,
     "votacoes": 303,
     "votacoes_por_situacao_dos_votos": {
+      "em-coleta": 22,
       "inexistentes-na-fonte": 280,
-      "coletados": 1,
-      "em-coleta": 22
+      "coletados": 1
     },
     "votos_individuais": 100
   },
@@ -206,7 +199,7 @@
       "status_tramitacao": "2026-11-06T13:36:31.261Z",
       "autores": "2026-11-06T13:37:33.018Z"
     },
-    "ultima_requisicao": "2026-11-06T14:02:55.655Z",
+    "ultima_requisicao": "2026-11-08T11:59:49.385Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

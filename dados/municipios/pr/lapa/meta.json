@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-06T14:17:13.533Z",
-  "ultima_execucao": "2026-11-06T13:18:11.495Z",
+  "atualizado_em": "2026-11-08T12:00:06.415Z",
+  "ultima_execucao": "2026-11-08T11:59:49.632Z",
   "uf": "PR",
   "casa": "cm-lapa",
   "orgao": "Câmara Municipal de Lapa - PR",
   "host": "sapl.lapa.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-06"
+    "fim": "2026-11-08"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Lapa - PR (API REST pública)",
       "url": "https://sapl.lapa.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Lapa - PR",
-      "acessado_em": "2026-11-06"
+      "acessado_em": "2026-11-08"
     }
   ],
   "robots": {
-    "sapl.lapa.pr.leg.br": {
-      "lido_em": "2026-11-06T13:18:11.495Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.lapa.pr.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,9 +80,9 @@
     "itens_pauta": 928,
     "votacoes": 837,
     "votacoes_por_situacao_dos_votos": {
+      "em-coleta": 9,
       "inexistentes-na-fonte": 811,
-      "coletados": 17,
-      "em-coleta": 9
+      "coletados": 17
     },
     "votos_individuais": 198
   },
@@ -213,7 +206,7 @@
       "status_tramitacao": "2026-11-06T13:38:37.726Z",
       "autores": "2026-11-06T13:41:40.094Z"
     },
-    "ultima_requisicao": "2026-11-06T14:17:09.790Z",
+    "ultima_requisicao": "2026-11-08T11:59:49.632Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

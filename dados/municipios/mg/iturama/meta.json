@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-06T14:17:11.992Z",
-  "ultima_execucao": "2026-11-06T13:18:11.440Z",
+  "atualizado_em": "2026-11-08T12:00:00.921Z",
+  "ultima_execucao": "2026-11-08T11:59:49.377Z",
   "uf": "MG",
   "casa": "cm-iturama",
   "orgao": "Câmara Municipal de Iturama",
   "host": "sapl.iturama.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-06"
+    "fim": "2026-11-08"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Iturama (API REST pública)",
       "url": "https://sapl.iturama.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Iturama",
-      "acessado_em": "2026-11-06"
+      "acessado_em": "2026-11-08"
     }
   ],
   "robots": {
-    "sapl.iturama.mg.leg.br": {
-      "lido_em": "2026-11-06T13:18:11.440Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.iturama.mg.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,9 +80,9 @@
     "itens_pauta": 774,
     "votacoes": 294,
     "votacoes_por_situacao_dos_votos": {
+      "em-coleta": 19,
       "inexistentes-na-fonte": 273,
-      "coletados": 2,
-      "em-coleta": 19
+      "coletados": 2
     },
     "votos_individuais": 26
   },
@@ -213,7 +206,7 @@
       "status_tramitacao": "2026-11-06T13:37:31.038Z",
       "autores": "2026-11-06T13:39:33.384Z"
     },
-    "ultima_requisicao": "2026-11-06T14:17:09.786Z",
+    "ultima_requisicao": "2026-11-08T11:59:49.377Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

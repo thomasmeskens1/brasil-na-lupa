@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-06T11:27:18.198Z",
-  "ultima_execucao": "2026-11-06T10:37:12.594Z",
+  "atualizado_em": "2026-11-08T12:00:02.050Z",
+  "ultima_execucao": "2026-11-08T11:59:49.290Z",
   "uf": "SP",
   "casa": "cm-iguape",
   "orgao": "Câmara Municipal de Iguape",
   "host": "sapl.iguape.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-06"
+    "fim": "2026-11-08"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Iguape (API REST pública)",
       "url": "https://sapl.iguape.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Iguape",
-      "acessado_em": "2026-11-06"
+      "acessado_em": "2026-11-08"
     }
   ],
   "robots": {
-    "sapl.iguape.sp.leg.br": {
-      "lido_em": "2026-11-06T10:37:12.594Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.iguape.sp.leg.br": null
   },
   "execucao": {
-    "requisicoes": 50,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,8 +80,8 @@
     "itens_pauta": 686,
     "votacoes": 20,
     "votacoes_por_situacao_dos_votos": {
-      "inexistentes-na-fonte": 7,
-      "em-coleta": 13
+      "em-coleta": 13,
+      "inexistentes-na-fonte": 7
     },
     "votos_individuais": 33
   },
@@ -212,7 +205,7 @@
       "status_tramitacao": "2026-11-06T10:55:49.141Z",
       "autores": "2026-11-06T10:56:51.484Z"
     },
-    "ultima_requisicao": "2026-11-06T11:27:01.838Z",
+    "ultima_requisicao": "2026-11-08T11:59:49.290Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

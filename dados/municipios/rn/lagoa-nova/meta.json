@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-06T14:17:13.872Z",
-  "ultima_execucao": "2026-11-06T13:18:11.492Z",
+  "atualizado_em": "2026-11-08T12:00:06.310Z",
+  "ultima_execucao": "2026-11-08T11:59:49.600Z",
   "uf": "RN",
   "casa": "cm-lagoa-nova",
   "orgao": "Câmara Municipal de Lagoa Nova",
   "host": "sapl.lagoanova.rn.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-06"
+    "fim": "2026-11-08"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Lagoa Nova (API REST pública)",
       "url": "https://sapl.lagoanova.rn.leg.br/api/",
       "orgao": "Câmara Municipal de Lagoa Nova",
-      "acessado_em": "2026-11-06"
+      "acessado_em": "2026-11-08"
     }
   ],
   "robots": {
-    "sapl.lagoanova.rn.leg.br": {
-      "lido_em": "2026-11-06T13:18:11.492Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.lagoanova.rn.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,8 +80,8 @@
     "itens_pauta": 284,
     "votacoes": 118,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 64,
-      "inexistentes-na-fonte": 54
+      "inexistentes-na-fonte": 54,
+      "coletados": 64
     },
     "votos_individuais": 681
   },
@@ -205,7 +198,7 @@
       "status_tramitacao": "2026-11-06T13:36:36.829Z",
       "autores": "2026-11-06T13:37:37.598Z"
     },
-    "ultima_requisicao": "2026-11-06T14:17:09.791Z",
+    "ultima_requisicao": "2026-11-08T11:59:49.600Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

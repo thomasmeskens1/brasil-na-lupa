@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-06T11:36:25.861Z",
-  "ultima_execucao": "2026-11-06T10:37:12.583Z",
+  "atualizado_em": "2026-11-08T12:00:03.247Z",
+  "ultima_execucao": "2026-11-08T11:59:49.189Z",
   "uf": "RN",
   "casa": "cm-equador",
   "orgao": "Câmara Municipal de Equador",
   "host": "sapl.equador.rn.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-06"
+    "fim": "2026-11-08"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Equador (API REST pública)",
       "url": "https://sapl.equador.rn.leg.br/api/",
       "orgao": "Câmara Municipal de Equador",
-      "acessado_em": "2026-11-06"
+      "acessado_em": "2026-11-08"
     }
   ],
   "robots": {
-    "sapl.equador.rn.leg.br": {
-      "lido_em": "2026-11-06T10:37:12.583Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.equador.rn.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,9 +80,9 @@
     "itens_pauta": 330,
     "votacoes": 276,
     "votacoes_por_situacao_dos_votos": {
+      "em-coleta": 15,
       "coletados": 247,
-      "inexistentes-na-fonte": 14,
-      "em-coleta": 15
+      "inexistentes-na-fonte": 14
     },
     "votos_individuais": 1972
   },
@@ -213,7 +206,7 @@
       "status_tramitacao": "2026-11-06T10:55:50.490Z",
       "autores": "2026-11-06T10:56:50.061Z"
     },
-    "ultima_requisicao": "2026-11-06T11:36:10.953Z",
+    "ultima_requisicao": "2026-11-08T11:59:49.190Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

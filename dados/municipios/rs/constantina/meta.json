@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-06T11:36:18.687Z",
-  "ultima_execucao": "2026-11-06T10:37:12.533Z",
+  "atualizado_em": "2026-11-08T12:39:31.654Z",
+  "ultima_execucao": "2026-11-08T11:59:48.790Z",
   "uf": "RS",
   "casa": "cm-constantina",
   "orgao": "Câmara Municipal de Constantina",
   "host": "sapl.constantina.rs.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-06"
+    "fim": "2026-11-08"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,12 +15,12 @@
       "titulo": "SAPL — Câmara Municipal de Constantina (API REST pública)",
       "url": "https://sapl.constantina.rs.leg.br/api/",
       "orgao": "Câmara Municipal de Constantina",
-      "acessado_em": "2026-11-06"
+      "acessado_em": "2026-11-08"
     }
   ],
   "robots": {
     "sapl.constantina.rs.leg.br": {
-      "lido_em": "2026-11-06T10:37:12.533Z",
+      "lido_em": "2026-11-08T11:59:48.791Z",
       "status": 200,
       "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
@@ -31,41 +31,41 @@
     }
   },
   "execucao": {
-    "requisicoes": 59,
+    "requisicoes": 40,
     "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
-      "desde": "2025-01-13",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "votoparlamentar": {
-      "desde": "2025-07-07",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "ordemdia": {
-      "desde": "2025-01-20",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "expedientemateria": {
-      "desde": "2025-08-25",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "sessaoplenaria": {
-      "desde": "2023-11-27",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "materialegislativa": {
-      "desde": "2025-03-07",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "normajuridica": {
       "desde": "0000-00-00",
       "concluida": true
     },
     "tramitacao": {
-      "desde": "2020-12-31",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     }
   },
   "observacoes": [
@@ -81,16 +81,17 @@
   "contagens": {
     "parlamentares": 12,
     "parlamentares_em_exercicio": 8,
-    "proposicoes": 294,
+    "proposicoes": 480,
     "normas": 106,
-    "sessoes": 100,
-    "itens_pauta": 492,
-    "votacoes": 294,
+    "sessoes": 198,
+    "itens_pauta": 960,
+    "votacoes": 480,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 215,
-      "em-coleta": 79
+      "coletados": 314,
+      "inexistentes-na-fonte": 164,
+      "em-coleta": 2
     },
-    "votos_individuais": 1881
+    "votos_individuais": 2744
   },
   "cursor": {
     "fluxos": {
@@ -98,12 +99,12 @@
         "faixas": [
           {
             "hi": 1367,
-            "lo": 1072,
-            "n": 294,
-            "lo_data": "2025-01-13"
+            "lo": 884,
+            "n": 480,
+            "lo_data": "2023-11-27"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 1331
       },
@@ -111,12 +112,12 @@
         "faixas": [
           {
             "hi": 8381,
-            "lo": 6501,
-            "n": 1881,
-            "lo_data": "2025-07-07"
+            "lo": 5620,
+            "n": 2744,
+            "lo_data": "2024-12-09"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 8346
       },
@@ -124,12 +125,12 @@
         "faixas": [
           {
             "hi": 1907,
-            "lo": 1603,
-            "n": 294,
-            "lo_data": "2025-01-20"
+            "lo": 1410,
+            "n": 480,
+            "lo_data": "2023-11-27"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 1803
       },
@@ -137,12 +138,12 @@
         "faixas": [
           {
             "hi": 1773,
-            "lo": 1575,
-            "n": 198,
-            "lo_data": "2025-08-25"
+            "lo": 1290,
+            "n": 480,
+            "lo_data": "2023-10-16"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 1744
       },
@@ -150,12 +151,12 @@
         "faixas": [
           {
             "hi": 424,
-            "lo": 323,
-            "n": 100,
-            "lo_data": "2023-11-27"
+            "lo": 224,
+            "n": 198,
+            "lo_data": "2020-08-10"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 414
       },
@@ -163,12 +164,12 @@
         "faixas": [
           {
             "hi": 2272,
-            "lo": 1977,
-            "n": 294,
-            "lo_data": "2025-03-07"
+            "lo": 1788,
+            "n": 480,
+            "lo_data": "2024-01-03"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 2224
       },
@@ -189,12 +190,12 @@
         "faixas": [
           {
             "hi": 1171,
-            "lo": 1069,
-            "n": 100,
+            "lo": 971,
+            "n": 198,
             "lo_data": "2020-12-31"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 1148
       }
@@ -212,7 +213,7 @@
       "status_tramitacao": "2026-11-06T10:57:42.774Z",
       "autores": "2026-11-06T10:58:41.966Z"
     },
-    "ultima_requisicao": "2026-11-06T11:36:10.942Z",
+    "ultima_requisicao": "2026-11-08T12:39:27.789Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
