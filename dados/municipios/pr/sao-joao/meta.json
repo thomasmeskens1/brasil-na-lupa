@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-07T13:04:51.011Z",
-  "ultima_execucao": "2026-11-07T12:05:49.086Z",
+  "atualizado_em": "2026-11-08T21:25:11.226Z",
+  "ultima_execucao": "2026-11-08T21:24:58.103Z",
   "uf": "PR",
   "casa": "cm-sao-joao",
   "orgao": "Câmara Municipal de São João",
   "host": "sapl.saojoao.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-07"
+    "fim": "2026-11-08"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de São João (API REST pública)",
       "url": "https://sapl.saojoao.pr.leg.br/api/",
       "orgao": "Câmara Municipal de São João",
-      "acessado_em": "2026-11-07"
+      "acessado_em": "2026-11-08"
     }
   ],
   "robots": {
-    "sapl.saojoao.pr.leg.br": {
-      "lido_em": "2026-11-07T12:05:49.086Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.saojoao.pr.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,9 +80,9 @@
     "itens_pauta": 1050,
     "votacoes": 585,
     "votacoes_por_situacao_dos_votos": {
+      "em-coleta": 15,
       "inexistentes-na-fonte": 564,
-      "coletados": 6,
-      "em-coleta": 15
+      "coletados": 6
     },
     "votos_individuais": 185
   },
@@ -213,7 +206,7 @@
       "status_tramitacao": "2026-11-07T12:24:15.377Z",
       "autores": "2026-11-07T12:25:16.708Z"
     },
-    "ultima_requisicao": "2026-11-07T13:04:47.572Z",
+    "ultima_requisicao": "2026-11-08T21:24:58.103Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

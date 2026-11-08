@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-07T13:04:51.184Z",
-  "ultima_execucao": "2026-11-07T12:05:49.076Z",
+  "atualizado_em": "2026-11-08T21:25:10.509Z",
+  "ultima_execucao": "2026-11-08T21:24:57.981Z",
   "uf": "MG",
   "casa": "cm-sao-francisco",
   "orgao": "Câmara Municipal de São Francisco",
   "host": "sapl.saofrancisco.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-07"
+    "fim": "2026-11-08"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de São Francisco (API REST pública)",
       "url": "https://sapl.saofrancisco.mg.leg.br/api/",
       "orgao": "Câmara Municipal de São Francisco",
-      "acessado_em": "2026-11-07"
+      "acessado_em": "2026-11-08"
     }
   ],
   "robots": {
-    "sapl.saofrancisco.mg.leg.br": {
-      "lido_em": "2026-11-07T12:05:49.076Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.saofrancisco.mg.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,9 +80,9 @@
     "itens_pauta": 768,
     "votacoes": 388,
     "votacoes_por_situacao_dos_votos": {
+      "em-coleta": 67,
       "inexistentes-na-fonte": 226,
-      "coletados": 95,
-      "em-coleta": 67
+      "coletados": 95
     },
     "votos_individuais": 1350
   },
@@ -213,7 +206,7 @@
       "status_tramitacao": "2026-11-07T12:25:13.836Z",
       "autores": "2026-11-07T12:26:14.817Z"
     },
-    "ultima_requisicao": "2026-11-07T13:04:47.570Z",
+    "ultima_requisicao": "2026-11-08T21:24:57.981Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-07T13:04:52.472Z",
-  "ultima_execucao": "2026-11-07T12:05:49.067Z",
+  "atualizado_em": "2026-11-08T21:25:09.372Z",
+  "ultima_execucao": "2026-11-08T21:24:57.860Z",
   "uf": "PA",
   "casa": "cm-santarem",
   "orgao": "Câmara Municipal de Santarém",
   "host": "sapl.santarem.pa.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-07"
+    "fim": "2026-11-08"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Santarém (API REST pública)",
       "url": "https://sapl.santarem.pa.leg.br/api/",
       "orgao": "Câmara Municipal de Santarém",
-      "acessado_em": "2026-11-07"
+      "acessado_em": "2026-11-08"
     }
   ],
   "robots": {
-    "sapl.santarem.pa.leg.br": {
-      "lido_em": "2026-11-07T12:05:49.067Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.santarem.pa.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,8 +80,8 @@
     "itens_pauta": 915,
     "votacoes": 834,
     "votacoes_por_situacao_dos_votos": {
-      "inexistentes-na-fonte": 828,
-      "em-coleta": 6
+      "em-coleta": 6,
+      "inexistentes-na-fonte": 828
     },
     "votos_individuais": 100
   },
@@ -212,7 +205,7 @@
       "status_tramitacao": "2026-11-07T12:27:20.093Z",
       "autores": "2026-11-07T12:29:17.940Z"
     },
-    "ultima_requisicao": "2026-11-07T13:04:47.575Z",
+    "ultima_requisicao": "2026-11-08T21:24:57.860Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

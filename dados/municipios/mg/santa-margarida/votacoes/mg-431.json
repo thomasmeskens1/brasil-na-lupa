@@ -37,22 +37,27 @@
     "outros": null
   },
   "placar_origem": "totais-oficiais",
-  "conferencia_placar": null,
-  "votos_situacao": "em-coleta",
-  "votos": [],
+  "conferencia_placar": "Totais do registro oficial (9 Sim, 0 Não, 0 Abstenção) diferem da contagem dos votos individuais (3, 0, 0); guardados como a fonte traz.",
+  "votos_situacao": "coletados",
+  "votos": [
+    {"parlamentar_id":"2","nome":"AMILTON","partido":"PSDB","uf":"MG","voto":"Sim"},
+    {"parlamentar_id":"3","nome":"CARLOS ROBERTO","partido":"PODE","uf":"MG","voto":"Não Votou"},
+    {"parlamentar_id":"6","nome":"ESCOBAL","partido":"PP","uf":"MG","voto":"Sim"},
+    {"parlamentar_id":"11","nome":"MESSIAS","partido":"MDB","uf":"MG","voto":"Sim"}
+  ],
   "registrado_em": "2024-12-10T20:23:50.132585-03:00",
   "url": "https://sapl.santamargarida.mg.leg.br/sessao/93/resumo",
   "fonte": {
     "titulo": "Registro de votação — SAPL",
     "url": "https://sapl.santamargarida.mg.leg.br/api/sessao/registrovotacao/431/",
     "orgao": "Câmara Municipal de Santa Margarida",
-    "acessado_em": "2026-11-07"
+    "acessado_em": "2026-11-08"
   },
   "fonte_votos": {
     "titulo": "Votos por parlamentar — SAPL",
     "url": "https://sapl.santamargarida.mg.leg.br/api/sessao/votoparlamentar/?votacao=431",
     "orgao": "Câmara Municipal de Santa Margarida",
-    "acessado_em": "2026-11-07"
+    "acessado_em": "2026-11-08"
   },
   "registro_fonte": {
     "id": 431,
@@ -70,7 +75,28 @@
     "lacunas": []
   },
   "lacunas": [
-    "Votos individuais ainda em coleta (carga incremental); não exibir como ausência."
+    "Totais do registro oficial (9 Sim, 0 Não, 0 Abstenção) diferem da contagem dos votos individuais (3, 0, 0); guardados como a fonte traz."
   ],
-  "votos_fonte": []
+  "votos_fonte": [
+    {
+      "parlamentar_id": 2,
+      "voto": "Sim",
+      "voto_id": 4225
+    },
+    {
+      "parlamentar_id": 3,
+      "voto": "Não Votou",
+      "voto_id": 4227
+    },
+    {
+      "parlamentar_id": 6,
+      "voto": "Sim",
+      "voto_id": 4224
+    },
+    {
+      "parlamentar_id": 11,
+      "voto": "Sim",
+      "voto_id": 4226
+    }
+  ]
 }
