@@ -1,15 +1,12 @@
 {
-  "atualizado_em": "2026-11-05T11:31:18.320Z",
-  "ultima_execucao": "2026-11-05T11:31:18.320Z",
+  "atualizado_em": "2026-11-09T22:04:07.985Z",
+  "ultima_execucao": "2026-11-09T22:04:07.985Z",
   "tribunal": "tce-am",
   "modo": "incremental",
   "consulta_desta_execucao": "por ano do decisório",
-  "anos_consultados_nesta_execucao": [
-    2025,
-    2026
-  ],
+  "anos_consultados_nesta_execucao": [],
   "interrompido": null,
-  "bloqueio": null,
+  "bloqueio": "robots.txt de jurisprudencia-api.tce.am.gov.br inacessível (fetch failed); coleta interrompida",
   "contagens": {
     "exercicios_governador": 7,
     "municipios_com_parecer": 62,
@@ -901,17 +898,17 @@
       "titulo": "Banco de Jurisprudência do TCE-AM (site oficial)",
       "url": "https://jurisprudencia.tce.am.gov.br",
       "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-09"
     },
     {
       "titulo": "API JSON do Banco de Jurisprudência — consulta por campos (não documentada oficialmente)",
       "url": "https://jurisprudencia-api.tce.am.gov.br/decisorios/byManyFields",
       "orgao": "Tribunal de Contas do Estado do Amazonas (TCE-AM)",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-09"
     }
   ],
   "robots_e_restricoes": [
-    "robots.txt de jurisprudencia-api.tce.am.gov.br lido antes de cada execução: sem robots.txt válido (HTTP 404, application/json): nenhuma regra a respeitar.",
+    "robots.txt de jurisprudencia-api.tce.am.gov.br lido antes de cada execução: não consultado nesta execução.",
     "Único host consultado: jurisprudencia-api.tce.am.gov.br. Os PDFs (jurisprudencia-fs.tce.am.gov.br) só são linkados, nunca baixados.",
     "Sem CAPTCHA, login ou token na API. Resposta não-JSON, 401 ou 403 interrompem a coleta (não se contorna bloqueio).",
     "Consultas sempre filtradas por ano do decisório, natureza e palavra do conteúdo; uma consulta sem filtro devolve dezenas de MB e nunca é feita.",
@@ -927,11 +924,11 @@
     "Cobertura: a API não devolveu processos anteriores a 2001; nos exercícios antigos há poucos pareceres publicados. Exercício ausente não quer dizer que as contas não foram julgadas."
   ],
   "estatisticas_http": {
-    "requisicoes": 3,
+    "requisicoes": 1,
     "retentativas": 0,
-    "bytes": 2887461,
+    "bytes": 0,
     "cortes": 0,
     "falhas": []
   },
-  "duracao_s": 3
+  "duracao_s": 11
 }
