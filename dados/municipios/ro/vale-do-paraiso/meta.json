@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-07T22:15:24.806Z",
-  "ultima_execucao": "2026-11-07T21:16:24.190Z",
+  "atualizado_em": "2026-11-09T14:39:26.737Z",
+  "ultima_execucao": "2026-11-09T13:59:42.265Z",
   "uf": "RO",
   "casa": "cm-vale-do-paraiso",
   "orgao": "Câmara Municipal de Vale do Paraíso",
   "host": "sapl.valedoparaiso.ro.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-07"
+    "fim": "2026-11-09"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,12 +15,12 @@
       "titulo": "SAPL — Câmara Municipal de Vale do Paraíso (API REST pública)",
       "url": "https://sapl.valedoparaiso.ro.leg.br/api/",
       "orgao": "Câmara Municipal de Vale do Paraíso",
-      "acessado_em": "2026-11-07"
+      "acessado_em": "2026-11-09"
     }
   ],
   "robots": {
     "sapl.valedoparaiso.ro.leg.br": {
-      "lido_em": "2026-11-07T21:16:24.190Z",
+      "lido_em": "2026-11-09T13:59:42.265Z",
       "status": 200,
       "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
@@ -31,41 +31,41 @@
     }
   },
   "execucao": {
-    "requisicoes": 59,
+    "requisicoes": 40,
     "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
-      "desde": "2025-03-31",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "votoparlamentar": {
-      "desde": "2020-12-04",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "ordemdia": {
-      "desde": "2025-04-28",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "expedientemateria": {
-      "desde": "2025-06-23",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "sessaoplenaria": {
-      "desde": "2025-01-01",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "materialegislativa": {
-      "desde": "2025-03-24",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "normajuridica": {
-      "desde": "2025-02-24",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "tramitacao": {
-      "desde": "2022-05-30",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     }
   },
   "observacoes": [
@@ -81,16 +81,17 @@
   "contagens": {
     "parlamentares": 10,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 570,
-    "normas": 394,
-    "sessoes": 198,
-    "itens_pauta": 1486,
-    "votacoes": 671,
+    "proposicoes": 828,
+    "normas": 580,
+    "sessoes": 388,
+    "itens_pauta": 2261,
+    "votacoes": 934,
     "votacoes_por_situacao_dos_votos": {
-      "inexistentes-na-fonte": 622,
-      "em-coleta": 49
+      "em-coleta": 24,
+      "coletados": 1,
+      "inexistentes-na-fonte": 909
     },
-    "votos_individuais": 100
+    "votos_individuais": 198
   },
   "cursor": {
     "fluxos": {
@@ -98,12 +99,12 @@
         "faixas": [
           {
             "hi": 3841,
-            "lo": 3174,
-            "n": 658,
-            "lo_data": "2025-03-31"
+            "lo": 2921,
+            "n": 910,
+            "lo_data": "2024-08-05"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 3812
       },
@@ -111,12 +112,12 @@
         "faixas": [
           {
             "hi": 206,
-            "lo": 107,
-            "n": 100,
+            "lo": 9,
+            "n": 198,
             "lo_data": "2020-12-04"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 206
       },
@@ -124,12 +125,12 @@
         "faixas": [
           {
             "hi": 4200,
-            "lo": 3529,
-            "n": 658,
-            "lo_data": "2025-04-28"
+            "lo": 3187,
+            "n": 1000,
+            "lo_data": "2024-04-22"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 4137
       },
@@ -137,12 +138,12 @@
         "faixas": [
           {
             "hi": 5399,
-            "lo": 4555,
-            "n": 828,
-            "lo_data": "2025-06-23"
+            "lo": 4114,
+            "n": 1261,
+            "lo_data": "2024-08-05"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 5311
       },
@@ -150,12 +151,12 @@
         "faixas": [
           {
             "hi": 930,
-            "lo": 732,
-            "n": 198,
-            "lo_data": "2025-01-01"
+            "lo": 542,
+            "n": 388,
+            "lo_data": "2022-03-14"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 927
       },
@@ -163,12 +164,12 @@
         "faixas": [
           {
             "hi": 3072,
-            "lo": 2502,
-            "n": 570,
-            "lo_data": "2025-03-24"
+            "lo": 2244,
+            "n": 828,
+            "lo_data": "2024-03-25"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 3069
       },
@@ -176,12 +177,12 @@
         "faixas": [
           {
             "hi": 2929,
-            "lo": 2632,
-            "n": 294,
-            "lo_data": "2025-02-24"
+            "lo": 2446,
+            "n": 480,
+            "lo_data": "2023-12-12"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 2916
       },
@@ -189,12 +190,12 @@
         "faixas": [
           {
             "hi": 332,
-            "lo": 233,
-            "n": 100,
-            "lo_data": "2022-05-30"
+            "lo": 135,
+            "n": 198,
+            "lo_data": "2020-06-02"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 332
       }
@@ -212,7 +213,7 @@
       "status_tramitacao": "2026-11-07T21:34:42.856Z",
       "autores": "2026-11-07T21:36:45.354Z"
     },
-    "ultima_requisicao": "2026-11-07T22:15:22.274Z",
+    "ultima_requisicao": "2026-11-09T14:39:25.128Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

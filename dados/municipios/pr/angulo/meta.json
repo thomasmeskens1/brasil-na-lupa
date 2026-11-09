@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-07T12:50:47.792Z",
-  "ultima_execucao": "2026-11-07T12:05:49.578Z",
+  "atualizado_em": "2026-11-09T14:18:04.621Z",
+  "ultima_execucao": "2026-11-09T13:59:42.116Z",
   "uf": "PR",
   "casa": "cm-angulo",
   "orgao": "Câmara Municipal de Ângulo",
   "host": "sapl.angulo.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-07"
+    "fim": "2026-11-09"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,12 +15,12 @@
       "titulo": "SAPL — Câmara Municipal de Ângulo (API REST pública)",
       "url": "https://sapl.angulo.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Ângulo",
-      "acessado_em": "2026-11-07"
+      "acessado_em": "2026-11-09"
     }
   ],
   "robots": {
     "sapl.angulo.pr.leg.br": {
-      "lido_em": "2026-11-07T12:05:49.578Z",
+      "lido_em": "2026-11-09T13:59:42.116Z",
       "status": 200,
       "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
@@ -31,14 +31,8 @@
     }
   },
   "execucao": {
-    "requisicoes": 45,
-    "falhas": [
-      "/api/sessao/sessaoplenaria/?o=-id&page=1&page_size=1000: fetch failed",
-      "/api/materia/tramitacao/?o=-id&page=1&page_size=1000: fetch failed",
-      "/api/materia/materialegislativa/1999/: fetch failed",
-      "/api/norma/normajuridica/?o=-data_ultima_atualizacao&page=1&page_size=1000: fetch failed",
-      "/api/norma/normajuridica/?o=-id&page=3&page_size=98: fetch failed"
-    ]
+    "requisicoes": 19,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,15 +81,15 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 388,
+    "proposicoes": 396,
     "normas": 328,
     "sessoes": 198,
     "itens_pauta": 678,
     "votacoes": 480,
     "votacoes_por_situacao_dos_votos": {
       "inexistentes-na-fonte": 240,
-      "coletados": 238,
-      "em-coleta": 2
+      "em-coleta": 2,
+      "coletados": 238
     },
     "votos_individuais": 2058
   },
@@ -219,7 +213,7 @@
       "status_tramitacao": "2026-11-05T17:13:05.918Z",
       "autores": "2026-11-05T17:14:07.317Z"
     },
-    "ultima_requisicao": "2026-11-07T12:50:33.581Z",
+    "ultima_requisicao": "2026-11-09T14:18:00.445Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

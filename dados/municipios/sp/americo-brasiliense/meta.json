@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-07T13:04:57.454Z",
-  "ultima_execucao": "2026-11-07T12:05:49.501Z",
+  "atualizado_em": "2026-11-09T14:36:23.436Z",
+  "ultima_execucao": "2026-11-09T13:59:41.917Z",
   "uf": "SP",
   "casa": "cm-americo-brasiliense",
   "orgao": "Câmara Municipal de Américo Brasiliense",
   "host": "sapl.americobrasiliense.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-07"
+    "fim": "2026-11-09"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,12 +15,12 @@
       "titulo": "SAPL — Câmara Municipal de Américo Brasiliense (API REST pública)",
       "url": "https://sapl.americobrasiliense.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Américo Brasiliense",
-      "acessado_em": "2026-11-07"
+      "acessado_em": "2026-11-09"
     }
   ],
   "robots": {
     "sapl.americobrasiliense.sp.leg.br": {
-      "lido_em": "2026-11-07T12:05:49.501Z",
+      "lido_em": "2026-11-09T13:59:41.917Z",
       "status": 200,
       "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
@@ -31,12 +31,8 @@
     }
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": [
-      "/api/materia/materialegislativa/?o=-id&page=1&page_size=1000: fetch failed",
-      "/api/materia/materialegislativa/1585/: fetch failed",
-      "/api/materia/materialegislativa/1582/: fetch failed"
-    ]
+    "requisicoes": 37,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -68,8 +64,8 @@
       "concluida": true
     },
     "tramitacao": {
-      "desde": "2025-11-17",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     }
   },
   "observacoes": [
@@ -85,15 +81,15 @@
   "contagens": {
     "parlamentares": 13,
     "parlamentares_em_exercicio": 13,
-    "proposicoes": 1974,
+    "proposicoes": 1982,
     "normas": 388,
     "sessoes": 141,
     "itens_pauta": 485,
     "votacoes": 480,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 112,
+      "em-coleta": 23,
       "inexistentes-na-fonte": 345,
-      "em-coleta": 23
+      "coletados": 112
     },
     "votos_individuais": 1440
   },
@@ -187,12 +183,12 @@
         "faixas": [
           {
             "hi": 8547,
-            "lo": 6622,
-            "n": 1786,
-            "lo_data": "2025-11-17"
+            "lo": 4850,
+            "n": 3456,
+            "lo_data": "2024-11-25"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 7941
       }
@@ -210,7 +206,7 @@
       "status_tramitacao": "2026-11-05T17:13:03.512Z",
       "autores": "2026-11-05T17:14:04.269Z"
     },
-    "ultima_requisicao": "2026-11-07T13:04:47.586Z",
+    "ultima_requisicao": "2026-11-09T14:36:18.450Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
