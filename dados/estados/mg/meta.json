@@ -1,6 +1,6 @@
 {
-  "atualizado_em": "2026-11-07T18:49:42.135Z",
-  "ultima_execucao": "2026-11-07T18:49:42.135Z",
+  "atualizado_em": "2026-11-10T20:58:13.451Z",
+  "ultima_execucao": "2026-11-10T20:58:13.451Z",
   "uf": "MG",
   "casa": "almg",
   "periodo": {
@@ -45,9 +45,9 @@
       },
       "PL-2025": {
         "total_fonte": 1675,
-        "atualizadas_nesta_execucao": 1023,
+        "atualizadas_nesta_execucao": 971,
         "no_indice": 1675,
-        "consultas": 970
+        "consultas": 291
       },
       "PLC-2025": {
         "total_fonte": 25,
@@ -75,7 +75,7 @@
       }
     },
     "plenario_nesta_execucao": {
-      "edicoes_lidas": 0,
+      "edicoes_lidas": 3,
       "votacoes_publicadas": 0,
       "votacoes_recusadas": 0,
       "edicoes_pendentes": 0
@@ -107,17 +107,17 @@
         "com_projeto_origem": 381
       },
       "2026": {
-        "total": 534,
+        "total": 544,
         "por_tipo": {
           "Decreto": 151,
           "Emenda à Constituição": 1,
-          "Lei": 379,
+          "Lei": 389,
           "Lei Complementar": 3
         },
-        "com_projeto_origem": 241
+        "com_projeto_origem": 245
       }
     },
-    "requisicoes": 2,
+    "requisicoes": 963,
     "retentativas": 0
   },
   "cursor": {
@@ -6128,6 +6128,33 @@
         "sha256": "dcbb4817c04c0531201bd4b069e1b6b54ef4c794a4dec0a60e299d0d542a12ee",
         "lido_em": "2026-11-06",
         "versao_parser": 3
+      },
+      "2667933": {
+        "data": "2026-11-07",
+        "atas_plenario": 1,
+        "publicadas": 0,
+        "recusadas": 0,
+        "sha256": "08caec2630d533c37359d78beb37cadb8556b30731d750f0f10e380df62820b4",
+        "lido_em": "2026-11-10",
+        "versao_parser": 3
+      },
+      "2668395": {
+        "data": "2026-11-06",
+        "atas_plenario": 1,
+        "publicadas": 0,
+        "recusadas": 0,
+        "sha256": "1cd193d27b892afcba91a75e988151fad76d27db4d2fd994e9959fe2ea2b9a29",
+        "lido_em": "2026-11-10",
+        "versao_parser": 3
+      },
+      "2668644": {
+        "data": "2026-11-10",
+        "atas_plenario": 0,
+        "publicadas": 0,
+        "recusadas": 0,
+        "sha256": "096603e226e6b07aad842b2a6deee9d1562996a5402f77da206736e943aa1340",
+        "lido_em": "2026-11-10",
+        "versao_parser": 3
       }
     },
     "edicoes_pendentes": 0,
@@ -6967,17 +6994,17 @@
   "robots": {
     "https://dadosabertos.almg.gov.br": {
       "url": "https://dadosabertos.almg.gov.br/robots.txt",
-      "status": 0,
-      "situacao": "inacessível (HTTP falha de rede): tratado como bloqueio total (RFC 9309)",
+      "status": 200,
+      "situacao": "lido",
       "crawl_delay": null,
-      "regras": 1
+      "regras": 4
     },
     "https://mediaserver.almg.gov.br": {
       "url": "https://mediaserver.almg.gov.br/robots.txt",
-      "status": 0,
-      "situacao": "inacessível (HTTP falha de rede): tratado como bloqueio total (RFC 9309)",
+      "status": 200,
+      "situacao": "lido",
       "crawl_delay": null,
-      "regras": 1
+      "regras": 2
     }
   },
   "fontes": [
@@ -6985,19 +7012,19 @@
       "titulo": "API de dados abertos da ALMG (especificação OpenAPI)",
       "url": "https://dadosabertos.almg.gov.br/api/ajuda/swagger/endpoints/lastest",
       "orgao": "Assembleia Legislativa do Estado de Minas Gerais (ALMG)",
-      "acessado_em": "2026-11-07"
+      "acessado_em": "2026-11-10"
     },
     {
       "titulo": "Diário do Legislativo — pesquisa de edições",
       "url": "https://dadosabertos.almg.gov.br/api/v2/diario_legislativo/pesquisa",
       "orgao": "Assembleia Legislativa do Estado de Minas Gerais (ALMG)",
-      "acessado_em": "2026-11-07"
+      "acessado_em": "2026-11-10"
     },
     {
       "titulo": "Legislação Mineira",
       "url": "https://dadosabertos.almg.gov.br/api/v2/legislacao/mineira/pesquisa/direcionada",
       "orgao": "Assembleia Legislativa do Estado de Minas Gerais (ALMG)",
-      "acessado_em": "2026-11-07"
+      "acessado_em": "2026-11-10"
     }
   ],
   "observacoes": [
@@ -7007,7 +7034,6 @@
     "O sentido de \"sim\" e \"não\" é reproduzido como na ata; em vetos, a frase oficial que explica o registro (\"… registrarão “sim” e os que desejarem rejeitá-lo registrarão “não”\") fica em descricao_abertura quando consta da ata.",
     "Votos de comissões: a API prevê votos por deputado (tipoVoto), mas nos testes (PL 4.172/2025, VET 36/2026, PEC 45/2017) as reuniões vieram sem esse campo; só se publica quando a API traz o voto individual.",
     "Normas: ligação norma ↔ proposição apenas pelo registro literal da tramitação (\"Transformado em Lei nº …\").",
-    "Ementas e autores: nomes de particulares substituídos por \"[nome de particular omitido]\" por regra conservadora (diretriz 12). Sem CPF, RG, e-mail ou telefone.",
-    "Falhas nesta execução: parlamentares: bloqueado pelo robots.txt (/): https://dadosabertos.almg.gov.br/api/v2/deputados/em_exercicio?formato=json | proposições PL 2026: bloqueado pelo robots.txt (/): https://dadosabertos.almg.gov.br/api/v2/proposicoes/pesquisa/direcionada?tipo=PL&ano=2026&formato=json | proposições PLC 2026: bloqueado pelo robots.txt (/): https://dadosabertos.almg.gov.br/api/v2/proposicoes/pesquisa/direcionada?tipo=PLC&ano=2026&formato=json | proposições PEC 2026: bloqueado pelo robots.txt (/): https://dadosabertos.almg.gov.br/api/v2/proposicoes/pesquisa/direcionada?tipo=PEC&ano=2026&formato=json | proposições PRE 2026: bloqueado pelo robots.txt (/): https://dadosabertos.almg.gov.br/api/v2/proposicoes/pesquisa/direcionada?tipo=PRE&ano=2026&formato=json | proposições VET 2026: bloqueado pelo robots.txt (/): https://dadosabertos.almg.gov.br/api/v2/proposicoes/pesquisa/direcionada?tipo=VET&ano=2026&formato=json | proposições PL 2025: bloqueado pelo robots.txt (/): https://dadosabertos.almg.gov.br/api/v2/proposicoes/pesquisa/direcionada?tipo=PL&ano=2025&formato=json | proposições PLC 2025: bloqueado pelo robots.txt (/): https://dadosabertos.almg.gov.br/api/v2/proposicoes/pesquisa/direcionada?tipo=PLC&ano=2025&formato=json | proposições PEC 2025: bloqueado pelo robots.txt (/): https://dadosabertos.almg.gov.br/api/v2/proposicoes/pesquisa/direcionada?tipo=PEC&ano=2025&formato=json | proposições PRE 2025: bloqueado pelo robots.txt (/): https://dadosabertos.almg.gov.br/api/v2/proposicoes/pesquisa/direcionada?tipo=PRE&ano=2025&formato=json | proposições VET 2025: bloqueado pelo robots.txt (/): https://dadosabertos.almg.gov.br/api/v2/proposicoes/pesquisa/direcionada?tipo=VET&ano=2025&formato=json | reuniões de Plenário: bloqueado pelo robots.txt (/): https://dadosabertos.almg.gov.br/api/v2/plenario/reunioes/pesquisa?ini=20250101&fim=20250131&formato=json | edições do Diário: bloqueado pelo robots.txt (/): https://dadosabertos.almg.gov.br/api/v2/diario_legislativo/pesquisa?ini=20250101&fim=20250110&expressao=Registraram&formato=json | normas LEI 2026: bloqueado pelo robots.txt (/): https://dadosabertos.almg.gov.br/api/v2/legislacao/mineira/pesquisa/direcionada?tipo=LEI&ano=2026&resumido=true&formato=json | normas LCP 2026: bloqueado pelo robots.txt (/): https://dadosabertos.almg.gov.br/api/v2/legislacao/mineira/pesquisa/direcionada?tipo=LCP&ano=2026&resumido=true&formato=json | normas EMC 2026: bloqueado pelo robots.txt (/): https://dadosabertos.almg.gov.br/api/v2/legislacao/mineira/pesquisa/direcionada?tipo=EMC&ano=2026&resumido=true&formato=json | normas DEC 2026: bloqueado pelo robots.txt (/): https://dadosabertos.almg.gov.br/api/v2/legislacao/mineira/pesquisa/direcionada?tipo=DEC&ano=2026&resumido=true&formato=json | normas LEI 2025: bloqueado pelo robots.txt (/): https://dadosabertos.almg.gov.br/api/v2/legislacao/mineira/pesquisa/direcionada?tipo=LEI&ano=2025&resumido=true&formato=json | normas LCP 2025: bloqueado pelo robots.txt (/): https://dadosabertos.almg.gov.br/api/v2/legislacao/mineira/pesquisa/direcionada?tipo=LCP&ano=2025&resumido=true&formato=json | normas EMC 2025: bloqueado pelo robots.txt (/): https://dadosabertos.almg.gov.br/api/v2/legislacao/mineira/pesquisa/direcionada?tipo=EMC&ano=2025&resumido=true&formato=json | normas DEC 2025: bloqueado pelo robots.txt (/): https://dadosabertos.almg.gov.br/api/v2/legislacao/mineira/pesquisa/direcionada?tipo=DEC&ano=2025&resumido=true&formato=json"
+    "Ementas e autores: nomes de particulares substituídos por \"[nome de particular omitido]\" por regra conservadora (diretriz 12). Sem CPF, RG, e-mail ou telefone."
   ]
 }
