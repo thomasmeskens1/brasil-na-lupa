@@ -1,6 +1,6 @@
 {
-  "atualizado_em": "2026-11-10T18:43:17.181Z",
-  "verificado_em": "2026-11-10T18:43:17.181Z",
+  "atualizado_em": "2026-11-10T19:06:35.969Z",
+  "verificado_em": "2026-11-10T19:06:35.969Z",
   "periodo": {
     "inicio": "2026-09-11",
     "fim": "2026-12-10",
@@ -129,9 +129,33 @@
     "Câmara: a hora vem de \"dataHoraInicio\" da lista de eventos do Plenário. O detalhe do evento (/eventos/{id}) às vezes traz outro horário (ex.: evento 83066: 15:12 na lista, 10:00 no detalhe); a fonte não explica a diferença e o coletor não escolhe entre os dois além de usar a lista.",
     "Senado: a página oficial da sessão mostra no resultado só os itens apreciados; itens \"Não apreciado\" constam da pauta dos dados abertos, mas podem não aparecer na página."
   ],
-  "falhas": [],
+  "falhas": [
+    "Câmara: pauta do evento 82893: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/82893/pauta",
+    "Câmara: pauta do evento 83047: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83047/pauta",
+    "Câmara: pauta do evento 83057: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83057/pauta",
+    "Câmara: pauta do evento 83066: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83066/pauta",
+    "Câmara: pauta do evento 83089: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83089/pauta",
+    "Câmara: pauta do evento 83108: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83108/pauta",
+    "Câmara: pauta do evento 83159: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83159/pauta",
+    "Câmara: pauta do evento 83188: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83188/pauta",
+    "Câmara: pauta do evento 83236: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83236/pauta",
+    "Câmara: pauta do evento 83239: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83239/pauta",
+    "Câmara: pauta do evento 83240: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83240/pauta",
+    "Câmara: pauta do evento 83243: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83243/pauta",
+    "Câmara: pauta do evento 83256: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83256/pauta",
+    "Câmara: pauta do evento 83257: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83257/pauta",
+    "Câmara: votações do evento 83141: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83141/votacoes",
+    "Câmara: votações do evento 83098: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83098/votacoes",
+    "Câmara: votações do evento 83047: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83047/votacoes",
+    "Câmara: votações do evento 83057: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83057/votacoes",
+    "Câmara: votações do evento 83066: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83066/votacoes",
+    "Câmara: votações do evento 83108: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83108/votacoes",
+    "Câmara: votações do evento 83159: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83159/votacoes",
+    "Câmara: votações do evento 83188: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83188/votacoes",
+    "Câmara: votações do evento 83243: HTTP 504 em https://dadosabertos.camara.leg.br/api/v2/eventos/83243/votacoes"
+  ],
   "execucao": {
-    "requisicoes": 132,
-    "retentativas": 3
+    "requisicoes": 224,
+    "retentativas": 95
   }
 }
