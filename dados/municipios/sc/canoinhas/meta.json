@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-07T21:16:43.687Z",
-  "ultima_execucao": "2026-11-07T21:16:25.933Z",
+  "atualizado_em": "2026-11-10T01:52:57.882Z",
+  "ultima_execucao": "2026-11-10T00:53:54.774Z",
   "uf": "SC",
   "casa": "cm-canoinhas",
   "orgao": "Câmara Municipal de Canoinhas",
   "host": "sapl.canoinhas.sc.leg.br",
   "periodo": {
     "inicio": null,
-    "fim": "2026-11-07"
+    "fim": "2026-11-09"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Canoinhas (API REST pública)",
       "url": "https://sapl.canoinhas.sc.leg.br/api/",
       "orgao": "Câmara Municipal de Canoinhas",
-      "acessado_em": "2026-11-07"
+      "acessado_em": "2026-11-09"
     }
   ],
   "robots": {
-    "sapl.canoinhas.sc.leg.br": null
+    "sapl.canoinhas.sc.leg.br": {
+      "lido_em": "2026-11-10T00:53:54.774Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 59,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -37,7 +44,7 @@
       "concluida": true
     },
     "ordemdia": {
-      "desde": "2022-09-27",
+      "desde": "2020-06-02",
       "concluida": false
     },
     "expedientemateria": {
@@ -45,15 +52,15 @@
       "concluida": true
     },
     "sessaoplenaria": {
-      "desde": "2022-05-23",
+      "desde": "2020-04-13",
       "concluida": false
     },
     "materialegislativa": {
-      "desde": "2023-03-28",
+      "desde": "2020-08-24",
       "concluida": false
     },
     "normajuridica": {
-      "desde": "2022-11-22",
+      "desde": "2020-03-17",
       "concluida": false
     },
     "tramitacao": {
@@ -72,10 +79,10 @@
     "Datas impossíveis ou posteriores à coleta (ex.: erros de digitação) ficam null, com o valor bruto anotado em lacunas; nada é corrigido."
   ],
   "contagens": {
-    "proposicoes": 2063,
-    "normas": 302,
-    "sessoes": 198,
-    "itens_pauta": 412,
+    "proposicoes": 4668,
+    "normas": 664,
+    "sessoes": 388,
+    "itens_pauta": 768,
     "votacoes": 68,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 54,
@@ -115,9 +122,9 @@
         "faixas": [
           {
             "hi": 3683,
-            "lo": 3285,
-            "n": 388,
-            "lo_data": "2022-09-27"
+            "lo": 2924,
+            "n": 744,
+            "lo_data": "2020-06-02"
           }
         ],
         "concluido": false,
@@ -141,9 +148,9 @@
         "faixas": [
           {
             "hi": 1249,
-            "lo": 1048,
-            "n": 198,
-            "lo_data": "2022-05-23"
+            "lo": 852,
+            "n": 388,
+            "lo_data": "2020-04-13"
           }
         ],
         "concluido": false,
@@ -154,9 +161,9 @@
         "faixas": [
           {
             "hi": 15788,
-            "lo": 13724,
-            "n": 2058,
-            "lo_data": "2023-03-28"
+            "lo": 11092,
+            "n": 4656,
+            "lo_data": "2020-08-24"
           }
         ],
         "concluido": false,
@@ -167,9 +174,9 @@
         "faixas": [
           {
             "hi": 12024,
-            "lo": 11729,
-            "n": 294,
-            "lo_data": "2022-11-22"
+            "lo": 11362,
+            "n": 658,
+            "lo_data": "2020-03-17"
           }
         ],
         "concluido": false,
@@ -202,7 +209,7 @@
       "status_tramitacao": "2026-11-06T10:56:41.001Z",
       "autores": "2026-11-06T10:57:39.645Z"
     },
-    "ultima_requisicao": "2026-11-07T21:16:25.933Z",
+    "ultima_requisicao": "2026-11-10T01:52:53.424Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

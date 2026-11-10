@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-08T12:00:04.657Z",
-  "ultima_execucao": "2026-11-08T11:59:49.008Z",
+  "atualizado_em": "2026-11-10T01:12:22.291Z",
+  "ultima_execucao": "2026-11-10T00:53:55.645Z",
   "uf": "PI",
   "casa": "cm-dom-expedito-lopes",
   "orgao": "Câmara Municipal de Dom Expedito Lopes",
   "host": "sapl.domexpeditolopes.pi.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-08"
+    "fim": "2026-11-09"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Dom Expedito Lopes (API REST pública)",
       "url": "https://sapl.domexpeditolopes.pi.leg.br/api/",
       "orgao": "Câmara Municipal de Dom Expedito Lopes",
-      "acessado_em": "2026-11-08"
+      "acessado_em": "2026-11-09"
     }
   ],
   "robots": {
-    "sapl.domexpeditolopes.pi.leg.br": null
+    "sapl.domexpeditolopes.pi.leg.br": {
+      "lido_em": "2026-11-10T00:53:55.645Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 19,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 10,
     "parlamentares_em_exercicio": 8,
-    "proposicoes": 206,
+    "proposicoes": 214,
     "normas": 105,
     "sessoes": 117,
     "itens_pauta": 273,
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T10:55:44.743Z",
       "autores": "2026-11-06T10:56:48.272Z"
     },
-    "ultima_requisicao": "2026-11-08T11:59:49.008Z",
+    "ultima_requisicao": "2026-11-10T01:12:17.871Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

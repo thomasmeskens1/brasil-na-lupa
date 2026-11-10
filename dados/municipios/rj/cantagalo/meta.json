@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-07T21:16:43.810Z",
-  "ultima_execucao": "2026-11-07T21:16:25.939Z",
+  "atualizado_em": "2026-11-10T01:03:07.807Z",
+  "ultima_execucao": "2026-11-10T00:53:54.780Z",
   "uf": "RJ",
   "casa": "cm-cantagalo",
   "orgao": "Câmara Municipal de Cantagalo",
   "host": "sapl.cantagalo.rj.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-07"
+    "fim": "2026-11-09"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Cantagalo (API REST pública)",
       "url": "https://sapl.cantagalo.rj.leg.br/api/",
       "orgao": "Câmara Municipal de Cantagalo",
-      "acessado_em": "2026-11-07"
+      "acessado_em": "2026-11-09"
     }
   ],
   "robots": {
-    "sapl.cantagalo.rj.leg.br": null
+    "sapl.cantagalo.rj.leg.br": {
+      "lido_em": "2026-11-10T00:53:54.780Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 10,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -198,7 +205,7 @@
       "status_tramitacao": "2026-11-06T10:55:36.142Z",
       "autores": "2026-11-06T10:56:39.038Z"
     },
-    "ultima_requisicao": "2026-11-07T21:16:25.939Z",
+    "ultima_requisicao": "2026-11-10T01:03:03.781Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

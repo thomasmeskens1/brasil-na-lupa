@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-08T12:00:04.291Z",
-  "ultima_execucao": "2026-11-08T11:59:49.039Z",
+  "atualizado_em": "2026-11-10T01:14:21.096Z",
+  "ultima_execucao": "2026-11-10T00:53:55.692Z",
   "uf": "PB",
   "casa": "cm-dona-ines",
   "orgao": "Câmara Municipal de Dona Inês",
   "host": "sapl.donaines.pb.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-08"
+    "fim": "2026-11-09"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Dona Inês (API REST pública)",
       "url": "https://sapl.donaines.pb.leg.br/api/",
       "orgao": "Câmara Municipal de Dona Inês",
-      "acessado_em": "2026-11-08"
+      "acessado_em": "2026-11-09"
     }
   ],
   "robots": {
-    "sapl.donaines.pb.leg.br": null
+    "sapl.donaines.pb.leg.br": {
+      "lido_em": "2026-11-10T00:53:55.692Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 21,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -57,8 +64,8 @@
       "concluida": true
     },
     "tramitacao": {
-      "desde": "2025-02-24",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     }
   },
   "observacoes": [
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 17,
     "parlamentares_em_exercicio": 17,
-    "proposicoes": 389,
+    "proposicoes": 397,
     "normas": 225,
     "sessoes": 198,
     "itens_pauta": 868,
@@ -183,12 +190,12 @@
         "faixas": [
           {
             "hi": 741,
-            "lo": 381,
-            "n": 294,
-            "lo_data": "2025-02-24"
+            "lo": 189,
+            "n": 480,
+            "lo_data": "2023-04-24"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 654
       }
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T10:56:50.431Z",
       "autores": "2026-11-06T10:57:49.727Z"
     },
-    "ultima_requisicao": "2026-11-08T11:59:49.039Z",
+    "ultima_requisicao": "2026-11-10T01:14:19.871Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

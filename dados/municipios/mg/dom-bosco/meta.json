@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-08T12:00:04.678Z",
-  "ultima_execucao": "2026-11-08T11:59:49.005Z",
+  "atualizado_em": "2026-11-10T01:12:21.752Z",
+  "ultima_execucao": "2026-11-10T00:53:55.639Z",
   "uf": "MG",
   "casa": "cm-dom-bosco",
   "orgao": "Câmara Municipal de Dom Bosco",
   "host": "sapl.dombosco.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-08"
+    "fim": "2026-11-09"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Dom Bosco (API REST pública)",
       "url": "https://sapl.dombosco.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Dom Bosco",
-      "acessado_em": "2026-11-08"
+      "acessado_em": "2026-11-09"
     }
   ],
   "robots": {
-    "sapl.dombosco.mg.leg.br": null
+    "sapl.dombosco.mg.leg.br": {
+      "lido_em": "2026-11-10T00:53:55.640Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 19,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 295,
+    "proposicoes": 303,
     "normas": 204,
     "sessoes": 194,
     "itens_pauta": 492,
@@ -207,7 +214,7 @@
       "status_tramitacao": "2026-11-06T10:55:45.137Z",
       "autores": "2026-11-06T10:56:47.942Z"
     },
-    "ultima_requisicao": "2026-11-08T11:59:49.005Z",
+    "ultima_requisicao": "2026-11-10T01:12:17.871Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

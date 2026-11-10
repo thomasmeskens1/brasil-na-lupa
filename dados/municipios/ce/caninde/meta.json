@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-07T21:16:44.501Z",
-  "ultima_execucao": "2026-11-07T21:16:25.908Z",
+  "atualizado_em": "2026-11-10T01:52:56.795Z",
+  "ultima_execucao": "2026-11-10T00:53:54.742Z",
   "uf": "CE",
   "casa": "cm-caninde",
   "orgao": "Câmara Municipal de Canindé",
   "host": "sapl.caninde.ce.leg.br",
   "periodo": {
     "inicio": null,
-    "fim": "2026-11-07"
+    "fim": "2026-11-09"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,41 +15,48 @@
       "titulo": "SAPL — Câmara Municipal de Canindé (API REST pública)",
       "url": "https://sapl.caninde.ce.leg.br/api/",
       "orgao": "Câmara Municipal de Canindé",
-      "acessado_em": "2026-11-07"
+      "acessado_em": "2026-11-09"
     }
   ],
   "robots": {
-    "sapl.caninde.ce.leg.br": null
+    "sapl.caninde.ce.leg.br": {
+      "lido_em": "2026-11-10T00:53:54.742Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 59,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
-      "desde": "2022-05-25",
+      "desde": "2021-07-02",
       "concluida": false
     },
     "votoparlamentar": {
-      "desde": "2022-05-25",
+      "desde": "2021-07-09",
       "concluida": false
     },
     "ordemdia": {
-      "desde": "2022-05-06",
+      "desde": "2021-08-13",
       "concluida": false
     },
     "expedientemateria": {
-      "desde": "2022-02-04",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "sessaoplenaria": {
       "desde": "0000-00-00",
       "concluida": true
     },
     "materialegislativa": {
-      "desde": "2022-05-05",
+      "desde": "2021-04-15",
       "concluida": false
     },
     "normajuridica": {
@@ -72,17 +79,17 @@
     "Datas impossíveis ou posteriores à coleta (ex.: erros de digitação) ficam null, com o valor bruto anotado em lacunas; nada é corrigido."
   ],
   "contagens": {
-    "proposicoes": 658,
+    "proposicoes": 1350,
     "normas": 101,
     "sessoes": 94,
-    "itens_pauta": 856,
-    "votacoes": 571,
+    "itens_pauta": 1989,
+    "votacoes": 1176,
     "votacoes_por_situacao_dos_votos": {
-      "inexistentes-na-fonte": 449,
-      "coletados": 92,
-      "em-coleta": 30
+      "inexistentes-na-fonte": 944,
+      "coletados": 171,
+      "em-coleta": 61
     },
-    "votos_individuais": 1176
+    "votos_individuais": 2231
   },
   "cursor": {
     "fluxos": {
@@ -90,9 +97,9 @@
         "faixas": [
           {
             "hi": 1523,
-            "lo": 849,
-            "n": 570,
-            "lo_data": "2022-05-25"
+            "lo": 144,
+            "n": 1176,
+            "lo_data": "2021-07-02"
           }
         ],
         "concluido": false,
@@ -103,9 +110,9 @@
         "faixas": [
           {
             "hi": 3902,
-            "lo": 2283,
-            "n": 1176,
-            "lo_data": "2022-05-25"
+            "lo": 691,
+            "n": 2231,
+            "lo_data": "2021-07-09"
           }
         ],
         "concluido": false,
@@ -116,9 +123,9 @@
         "faixas": [
           {
             "hi": 1779,
-            "lo": 1068,
-            "n": 658,
-            "lo_data": "2022-05-06"
+            "lo": 196,
+            "n": 1520,
+            "lo_data": "2021-08-13"
           }
         ],
         "concluido": false,
@@ -129,12 +136,12 @@
         "faixas": [
           {
             "hi": 476,
-            "lo": 276,
-            "n": 198,
-            "lo_data": "2022-02-04"
+            "lo": 4,
+            "n": 469,
+            "lo_data": "2021-05-21"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 469
       },
@@ -155,9 +162,9 @@
         "faixas": [
           {
             "hi": 2338,
-            "lo": 1681,
-            "n": 658,
-            "lo_data": "2022-05-05"
+            "lo": 987,
+            "n": 1350,
+            "lo_data": "2021-04-15"
           }
         ],
         "concluido": false,
@@ -203,7 +210,7 @@
       "status_tramitacao": "2026-11-06T10:54:37.936Z",
       "autores": "2026-11-06T10:55:37.999Z"
     },
-    "ultima_requisicao": "2026-11-07T21:16:25.908Z",
+    "ultima_requisicao": "2026-11-10T01:52:53.428Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

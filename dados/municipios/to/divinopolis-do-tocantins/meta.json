@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-08T12:00:04.901Z",
-  "ultima_execucao": "2026-11-08T11:59:48.988Z",
+  "atualizado_em": "2026-11-10T01:09:18.048Z",
+  "ultima_execucao": "2026-11-10T00:53:55.612Z",
   "uf": "TO",
   "casa": "cm-divinopolis-do-tocantins",
   "orgao": "Câmara Municipal de Divinópolis do Tocantins",
   "host": "sapl.divinopolisdotocantins.to.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-08"
+    "fim": "2026-11-09"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Divinópolis do Tocantins (API REST pública)",
       "url": "https://sapl.divinopolisdotocantins.to.leg.br/api/",
       "orgao": "Câmara Municipal de Divinópolis do Tocantins",
-      "acessado_em": "2026-11-08"
+      "acessado_em": "2026-11-09"
     }
   ],
   "robots": {
-    "sapl.divinopolisdotocantins.to.leg.br": null
+    "sapl.divinopolisdotocantins.to.leg.br": {
+      "lido_em": "2026-11-10T00:53:55.612Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 16,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -45,20 +52,20 @@
       "concluida": true
     },
     "sessaoplenaria": {
-      "desde": "2021-06-16",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "materialegislativa": {
-      "desde": "2021-09-02",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "normajuridica": {
-      "desde": "2023-05-15",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "tramitacao": {
-      "desde": "2026-08-06",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     }
   },
   "observacoes": [
@@ -74,121 +81,121 @@
   "contagens": {
     "parlamentares": 10,
     "parlamentares_em_exercicio": 8,
-    "proposicoes": 480,
-    "normas": 100,
-    "sessoes": 100,
-    "itens_pauta": 248,
-    "votacoes": 227,
+    "proposicoes": 576,
+    "normas": 157,
+    "sessoes": 200,
+    "itens_pauta": 250,
+    "votacoes": 229,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 227
+      "coletados": 229
     },
-    "votos_individuais": 1894
+    "votos_individuais": 1912
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 233,
+            "hi": 235,
             "lo": 2,
-            "n": 227,
+            "n": 229,
             "lo_data": "2026-02-24"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 227
+        "total_fonte": 229
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 1964,
+            "hi": 1982,
             "lo": 11,
-            "n": 1894,
+            "n": 1912,
             "lo_data": "2026-02-24"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1894
+        "total_fonte": 1912
       },
       "ordemdia": {
         "faixas": [
           {
-            "hi": 332,
+            "hi": 333,
             "lo": 1,
-            "n": 223,
+            "n": 224,
             "lo_data": "2026-01-02"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 223
+        "total_fonte": 224
       },
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 25,
+            "hi": 26,
             "lo": 1,
-            "n": 25,
+            "n": 26,
             "lo_data": "2026-06-22"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 25
+        "total_fonte": 26
       },
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 314,
-            "lo": 215,
-            "n": 100,
-            "lo_data": "2021-06-16"
+            "hi": 315,
+            "lo": 116,
+            "n": 200,
+            "lo_data": "2024-06-03"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 313
+        "total_fonte": 314
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 645,
-            "lo": 124,
-            "n": 480,
-            "lo_data": "2021-09-02"
+            "hi": 649,
+            "lo": 30,
+            "n": 576,
+            "lo_data": "2021-11-22"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 601
+        "total_fonte": 605
       },
       "normajuridica": {
         "faixas": [
           {
             "hi": 157,
-            "lo": 58,
-            "n": 100,
-            "lo_data": "2023-05-15"
+            "lo": 1,
+            "n": 157,
+            "lo_data": "2023-02-14"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 157
       },
       "tramitacao": {
         "faixas": [
           {
-            "hi": 250,
-            "lo": 151,
-            "n": 100,
-            "lo_data": "2026-08-06"
+            "hi": 254,
+            "lo": 1,
+            "n": 248,
+            "lo_data": "2026-02-20"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 244
+        "total_fonte": 248
       }
     },
     "tabelas_em": {
@@ -204,7 +211,7 @@
       "status_tramitacao": "2026-11-06T10:55:43.916Z",
       "autores": "2026-11-06T10:56:46.067Z"
     },
-    "ultima_requisicao": "2026-11-08T11:59:48.988Z",
+    "ultima_requisicao": "2026-11-10T01:09:12.452Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

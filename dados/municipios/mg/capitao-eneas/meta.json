@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-07T21:16:44.031Z",
-  "ultima_execucao": "2026-11-07T21:16:25.977Z",
+  "atualizado_em": "2026-11-10T01:12:17.992Z",
+  "ultima_execucao": "2026-11-10T00:53:54.826Z",
   "uf": "MG",
   "casa": "cm-capitao-eneas",
   "orgao": "Câmara Municipal de Capitão Enéas",
   "host": "sapl.capitaoeneas.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-07"
+    "fim": "2026-11-09"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Capitão Enéas (API REST pública)",
       "url": "https://sapl.capitaoeneas.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Capitão Enéas",
-      "acessado_em": "2026-11-07"
+      "acessado_em": "2026-11-09"
     }
   ],
   "robots": {
-    "sapl.capitaoeneas.mg.leg.br": null
+    "sapl.capitaoeneas.mg.leg.br": {
+      "lido_em": "2026-11-10T00:53:54.826Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 19,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 571,
+    "proposicoes": 579,
     "normas": 206,
     "sessoes": 95,
     "itens_pauta": 613,
@@ -181,15 +188,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 503,
+            "hi": 505,
             "lo": 146,
-            "n": 198,
+            "n": 200,
             "lo_data": "2022-05-17"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 335
+        "total_fonte": 327
       }
     },
     "tabelas_em": {
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T10:55:38.499Z",
       "autores": "2026-11-06T10:57:39.237Z"
     },
-    "ultima_requisicao": "2026-11-07T21:16:25.977Z",
+    "ultima_requisicao": "2026-11-10T01:12:13.668Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
