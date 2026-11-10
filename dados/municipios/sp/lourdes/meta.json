@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-08T12:00:07.576Z",
-  "ultima_execucao": "2026-11-08T11:59:49.731Z",
+  "atualizado_em": "2026-11-10T13:49:41.573Z",
+  "ultima_execucao": "2026-11-10T13:33:22.701Z",
   "uf": "SP",
   "casa": "cm-lourdes",
   "orgao": "Câmara Municipal de Lourdes",
   "host": "sapl.lourdes.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-08"
+    "fim": "2026-11-10"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Lourdes (API REST pública)",
       "url": "https://sapl.lourdes.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Lourdes",
-      "acessado_em": "2026-11-08"
+      "acessado_em": "2026-11-10"
     }
   ],
   "robots": {
-    "sapl.lourdes.sp.leg.br": null
+    "sapl.lourdes.sp.leg.br": {
+      "lido_em": "2026-11-10T13:33:22.701Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 17,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 6,
-    "proposicoes": 198,
+    "proposicoes": 206,
     "normas": 0,
     "sessoes": 181,
     "itens_pauta": 396,
@@ -199,7 +206,7 @@
       "status_tramitacao": "2026-11-06T13:36:38.431Z",
       "autores": "2026-11-06T13:37:38.773Z"
     },
-    "ultima_requisicao": "2026-11-08T11:59:49.731Z",
+    "ultima_requisicao": "2026-11-10T13:49:38.840Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

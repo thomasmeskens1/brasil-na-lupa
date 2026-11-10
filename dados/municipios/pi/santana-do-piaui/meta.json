@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-08T21:25:09.279Z",
-  "ultima_execucao": "2026-11-08T21:24:57.811Z",
+  "atualizado_em": "2026-11-10T13:39:40.110Z",
+  "ultima_execucao": "2026-11-10T13:33:24.426Z",
   "uf": "PI",
   "casa": "cm-santana-do-piaui",
   "orgao": "Câmara Municipal de Santana do Piauí",
   "host": "sapl.santanadopiaui.pi.leg.br",
   "periodo": {
     "inicio": null,
-    "fim": "2026-11-08"
+    "fim": "2026-11-10"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Santana do Piauí (API REST pública)",
       "url": "https://sapl.santanadopiaui.pi.leg.br/api/",
       "orgao": "Câmara Municipal de Santana do Piauí",
-      "acessado_em": "2026-11-08"
+      "acessado_em": "2026-11-10"
     }
   ],
   "robots": {
-    "sapl.santanadopiaui.pi.leg.br": null
+    "sapl.santanadopiaui.pi.leg.br": {
+      "lido_em": "2026-11-10T13:33:24.426Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 7,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -180,7 +187,7 @@
       "status_tramitacao": "2026-11-07T12:23:09.452Z",
       "autores": "2026-11-07T12:24:09.435Z"
     },
-    "ultima_requisicao": "2026-11-08T21:24:57.811Z",
+    "ultima_requisicao": "2026-11-10T13:39:32.951Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

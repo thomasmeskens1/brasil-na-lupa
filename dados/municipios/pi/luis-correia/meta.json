@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-08T12:00:07.643Z",
-  "ultima_execucao": "2026-11-08T11:59:49.740Z",
+  "atualizado_em": "2026-11-10T13:51:45.897Z",
+  "ultima_execucao": "2026-11-10T13:33:22.751Z",
   "uf": "PI",
   "casa": "cm-luis-correia",
   "orgao": "Câmara Municipal de Luís Correia",
   "host": "sapl.luiscorreia.pi.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-08"
+    "fim": "2026-11-10"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Luís Correia (API REST pública)",
       "url": "https://sapl.luiscorreia.pi.leg.br/api/",
       "orgao": "Câmara Municipal de Luís Correia",
-      "acessado_em": "2026-11-08"
+      "acessado_em": "2026-11-10"
     }
   ],
   "robots": {
-    "sapl.luiscorreia.pi.leg.br": null
+    "sapl.luiscorreia.pi.leg.br": {
+      "lido_em": "2026-11-10T13:33:22.751Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 19,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 16,
     "parlamentares_em_exercicio": 13,
-    "proposicoes": 570,
+    "proposicoes": 578,
     "normas": 203,
     "sessoes": 198,
     "itens_pauta": 396,
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T13:36:39.090Z",
       "autores": "2026-11-06T13:37:39.604Z"
     },
-    "ultima_requisicao": "2026-11-08T11:59:49.740Z",
+    "ultima_requisicao": "2026-11-10T13:51:40.838Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

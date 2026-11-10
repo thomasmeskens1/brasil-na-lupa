@@ -37,9 +37,11 @@
     "outros": null
   },
   "placar_origem": "totais-oficiais",
-  "conferencia_placar": null,
-  "votos_situacao": "em-coleta",
+  "conferencia_placar": "Totais do registro oficial conferem com a contagem dos 7 votos individuais.",
+  "votos_situacao": "coletados",
   "votos": [
+    {"parlamentar_id":"148","nome":"Carlos Roberto da Luz","partido":"PL","uf":"SC","voto":"Não Votou"},
+    {"parlamentar_id":"155","nome":"Claudio Melchioretto","partido":"MDB","uf":"SC","voto":"Sim"},
     {"parlamentar_id":"126","nome":"Felipe Brás Luciani","partido":"PMDB","uf":"SC","voto":"Sim"},
     {"parlamentar_id":"150","nome":"João Sidnei da Silva (Nei)","partido":"PL","uf":"SC","voto":"Sim"},
     {"parlamentar_id":"147","nome":"Luis Carlos Reichert (Luli)","partido":"PSDB","uf":"SC","voto":"Sim"},
@@ -52,13 +54,13 @@
     "titulo": "Registro de votação — SAPL",
     "url": "https://sapl.luizalves.sc.leg.br/api/sessao/registrovotacao/2968/",
     "orgao": "Câmara Municipal de Luiz Alves",
-    "acessado_em": "2026-11-06"
+    "acessado_em": "2026-11-10"
   },
   "fonte_votos": {
     "titulo": "Votos por parlamentar — SAPL",
     "url": "https://sapl.luizalves.sc.leg.br/api/sessao/votoparlamentar/?votacao=2968",
     "orgao": "Câmara Municipal de Luiz Alves",
-    "acessado_em": "2026-11-06"
+    "acessado_em": "2026-11-10"
   },
   "registro_fonte": {
     "id": 2968,
@@ -75,9 +77,7 @@
     "registrado_em": "2026-07-02T10:12:57.922050-03:00",
     "lacunas": []
   },
-  "lacunas": [
-    "Votos individuais ainda em coleta (carga incremental); não exibir como ausência."
-  ],
+  "lacunas": [],
   "votos_fonte": [
     {
       "parlamentar_id": 126,
@@ -95,6 +95,11 @@
       "voto_id": 22280
     },
     {
+      "parlamentar_id": 148,
+      "voto": "Não Votou",
+      "voto_id": 22276
+    },
+    {
       "parlamentar_id": 149,
       "voto": "Sim",
       "voto_id": 22281
@@ -103,6 +108,11 @@
       "parlamentar_id": 150,
       "voto": "Sim",
       "voto_id": 22279
+    },
+    {
+      "parlamentar_id": 155,
+      "voto": "Sim",
+      "voto_id": 22277
     }
   ]
 }
