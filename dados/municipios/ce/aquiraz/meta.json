@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-09T14:58:49.933Z",
-  "ultima_execucao": "2026-11-09T13:59:42.564Z",
+  "atualizado_em": "2026-11-10T23:34:38.409Z",
+  "ultima_execucao": "2026-11-10T22:35:32.653Z",
   "uf": "CE",
   "casa": "cm-aquiraz",
   "orgao": "Câmara Municipal de Aquiraz",
   "host": "sapl.aquiraz.ce.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-09"
+    "fim": "2026-11-10"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,12 +15,12 @@
       "titulo": "SAPL — Câmara Municipal de Aquiraz (API REST pública)",
       "url": "https://sapl.aquiraz.ce.leg.br/api/",
       "orgao": "Câmara Municipal de Aquiraz",
-      "acessado_em": "2026-11-09"
+      "acessado_em": "2026-11-10"
     }
   ],
   "robots": {
     "sapl.aquiraz.ce.leg.br": {
-      "lido_em": "2026-11-09T13:59:42.564Z",
+      "lido_em": "2026-11-10T22:35:32.653Z",
       "status": 200,
       "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
@@ -32,19 +32,21 @@
   },
   "execucao": {
     "requisicoes": 59,
-    "falhas": []
+    "falhas": [
+      "/api/sessao/sessaoplenaria/?o=-id&page=1&page_size=1000: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
-      "desde": "2026-03-09",
+      "desde": "2025-12-08",
       "concluida": false
     },
     "votoparlamentar": {
-      "desde": "2026-03-16",
+      "desde": "2026-02-19",
       "concluida": false
     },
     "ordemdia": {
-      "desde": "2026-03-16",
+      "desde": "2026-02-19",
       "concluida": false
     },
     "expedientemateria": {
@@ -81,17 +83,17 @@
   "contagens": {
     "parlamentares": 26,
     "parlamentares_em_exercicio": 16,
-    "proposicoes": 583,
+    "proposicoes": 591,
     "normas": 114,
     "sessoes": 101,
-    "itens_pauta": 793,
-    "votacoes": 570,
+    "itens_pauta": 1006,
+    "votacoes": 828,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 525,
+      "coletados": 726,
       "inexistentes-na-fonte": 6,
-      "em-coleta": 39
+      "em-coleta": 96
     },
-    "votos_individuais": 8280
+    "votos_individuais": 11102
   },
   "cursor": {
     "fluxos": {
@@ -99,9 +101,9 @@
         "faixas": [
           {
             "hi": 3267,
-            "lo": 2660,
-            "n": 570,
-            "lo_data": "2026-03-09"
+            "lo": 2397,
+            "n": 828,
+            "lo_data": "2025-12-08"
           }
         ],
         "concluido": false,
@@ -112,9 +114,9 @@
         "faixas": [
           {
             "hi": 40668,
-            "lo": 31823,
-            "n": 8280,
-            "lo_data": "2026-03-16"
+            "lo": 28962,
+            "n": 11102,
+            "lo_data": "2026-02-19"
           }
         ],
         "concluido": false,
@@ -124,10 +126,10 @@
       "ordemdia": {
         "faixas": [
           {
-            "hi": 3237,
-            "lo": 2449,
-            "n": 594,
-            "lo_data": "2026-03-16"
+            "hi": 3243,
+            "lo": 2237,
+            "n": 801,
+            "lo_data": "2026-02-19"
           }
         ],
         "concluido": false,
@@ -189,15 +191,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 12571,
+            "hi": 12580,
             "lo": 12432,
-            "n": 133,
+            "n": 142,
             "lo_data": "2026-10-29"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 12012
+        "total_fonte": 12021
       }
     },
     "tabelas_em": {
@@ -213,7 +215,7 @@
       "status_tramitacao": "2026-11-05T17:13:07.678Z",
       "autores": "2026-11-05T17:14:08.697Z"
     },
-    "ultima_requisicao": "2026-11-09T14:58:45.621Z",
+    "ultima_requisicao": "2026-11-10T23:34:35.150Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-09T14:58:49.650Z",
-  "ultima_execucao": "2026-11-09T13:59:42.607Z",
+  "atualizado_em": "2026-11-10T23:20:21.706Z",
+  "ultima_execucao": "2026-11-10T22:35:32.687Z",
   "uf": "CE",
   "casa": "cm-aracati",
   "orgao": "Câmara Municipal de Aracati",
   "host": "sapl.aracati.ce.leg.br",
   "periodo": {
     "inicio": null,
-    "fim": "2026-11-09"
+    "fim": "2026-11-10"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,12 +15,12 @@
       "titulo": "SAPL — Câmara Municipal de Aracati (API REST pública)",
       "url": "https://sapl.aracati.ce.leg.br/api/",
       "orgao": "Câmara Municipal de Aracati",
-      "acessado_em": "2026-11-09"
+      "acessado_em": "2026-11-10"
     }
   ],
   "robots": {
     "sapl.aracati.ce.leg.br": {
-      "lido_em": "2026-11-09T13:59:42.607Z",
+      "lido_em": "2026-11-10T22:35:32.687Z",
       "status": 200,
       "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
@@ -31,8 +31,10 @@
     }
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 45,
+    "falhas": [
+      "/api/sessao/sessaoplenaria/?o=-id&page=1&page_size=1000: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -64,8 +66,8 @@
       "concluida": true
     },
     "tramitacao": {
-      "desde": "2017-06-05",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     }
   },
   "observacoes": [
@@ -82,12 +84,12 @@
     "proposicoes": 1641,
     "normas": 1456,
     "sessoes": 196,
-    "itens_pauta": 1410,
+    "itens_pauta": 1418,
     "votacoes": 1171,
     "votacoes_por_situacao_dos_votos": {
-      "em-coleta": 671,
-      "inexistentes-na-fonte": 439,
-      "coletados": 61
+      "inexistentes-na-fonte": 447,
+      "coletados": 61,
+      "em-coleta": 663
     },
     "votos_individuais": 1919
   },
@@ -188,12 +190,12 @@
         "faixas": [
           {
             "hi": 4682,
-            "lo": 2177,
-            "n": 2484,
-            "lo_data": "2017-06-05"
+            "lo": 1,
+            "n": 4627,
+            "lo_data": "2013-10-17"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 4627
       }
@@ -210,7 +212,7 @@
       "status_tramitacao": "2026-11-05T17:12:07.170Z",
       "autores": "2026-11-05T17:13:06.583Z"
     },
-    "ultima_requisicao": "2026-11-09T14:58:45.622Z",
+    "ultima_requisicao": "2026-11-10T23:20:20.270Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

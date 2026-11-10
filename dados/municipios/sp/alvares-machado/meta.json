@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-08T21:25:14.503Z",
-  "ultima_execucao": "2026-11-08T21:24:58.601Z",
+  "atualizado_em": "2026-11-10T22:53:54.002Z",
+  "ultima_execucao": "2026-11-10T22:35:32.077Z",
   "uf": "SP",
   "casa": "cm-alvares-machado",
   "orgao": "Câmara Municipal de Álvares Machado",
   "host": "sapl.alvaresmachado.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-08"
+    "fim": "2026-11-10"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Álvares Machado (API REST pública)",
       "url": "https://sapl.alvaresmachado.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Álvares Machado",
-      "acessado_em": "2026-11-08"
+      "acessado_em": "2026-11-10"
     }
   ],
   "robots": {
-    "sapl.alvaresmachado.sp.leg.br": null
+    "sapl.alvaresmachado.sp.leg.br": {
+      "lido_em": "2026-11-10T22:35:32.077Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 19,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,14 +81,14 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 1013,
-    "normas": 336,
+    "proposicoes": 1021,
+    "normas": 338,
     "sessoes": 199,
     "itens_pauta": 1046,
-    "votacoes": 664,
+    "votacoes": 668,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 25,
-      "inexistentes-na-fonte": 636,
+      "inexistentes-na-fonte": 640,
       "coletados": 3
     },
     "votos_individuais": 61
@@ -91,15 +98,15 @@
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 5223,
+            "hi": 5227,
             "lo": 4530,
-            "n": 660,
+            "n": 664,
             "lo_data": "2024-06-18"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 4964
+        "total_fonte": 4968
       },
       "votoparlamentar": {
         "faixas": [
@@ -169,28 +176,28 @@
       "normajuridica": {
         "faixas": [
           {
-            "hi": 2617,
+            "hi": 2619,
             "lo": 2312,
-            "n": 294,
+            "n": 296,
             "lo_data": "2020-12-08"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2593
+        "total_fonte": 2595
       },
       "tramitacao": {
         "faixas": [
           {
-            "hi": 10565,
+            "hi": 10586,
             "lo": 7709,
-            "n": 2744,
+            "n": 2764,
             "lo_data": "2024-11-14"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 10053
+        "total_fonte": 10073
       }
     },
     "tabelas_em": {
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-05T17:13:03.119Z",
       "autores": "2026-11-05T17:14:03.941Z"
     },
-    "ultima_requisicao": "2026-11-08T21:24:58.602Z",
+    "ultima_requisicao": "2026-11-10T22:53:50.257Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

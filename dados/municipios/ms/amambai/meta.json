@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-08T21:25:08.797Z",
-  "ultima_execucao": "2026-11-08T21:24:58.649Z",
+  "atualizado_em": "2026-11-10T22:45:43.834Z",
+  "ultima_execucao": "2026-11-10T22:35:32.109Z",
   "uf": "MS",
   "casa": "cm-amambai",
   "orgao": "Câmara Municipal de Amambai",
   "host": "sapl.amambai.ms.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-08"
+    "fim": "2026-11-10"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Amambai (API REST pública)",
       "url": "https://sapl.amambai.ms.leg.br/api/",
       "orgao": "Câmara Municipal de Amambai",
-      "acessado_em": "2026-11-08"
+      "acessado_em": "2026-11-10"
     }
   ],
   "robots": {
-    "sapl.amambai.ms.leg.br": null
+    "sapl.amambai.ms.leg.br": {
+      "lido_em": "2026-11-10T22:35:32.109Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 11,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -78,9 +85,9 @@
     "normas": 2,
     "sessoes": 64,
     "itens_pauta": 1208,
-    "votacoes": 388,
+    "votacoes": 406,
     "votacoes_por_situacao_dos_votos": {
-      "inexistentes-na-fonte": 386,
+      "inexistentes-na-fonte": 404,
       "em-coleta": 1,
       "coletados": 1
     },
@@ -91,15 +98,15 @@
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 390,
+            "hi": 408,
             "lo": 1,
-            "n": 388,
+            "n": 406,
             "lo_data": "2025-06-09"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 388
+        "total_fonte": 406
       },
       "votoparlamentar": {
         "faixas": [
@@ -182,15 +189,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 3845,
+            "hi": 3888,
             "lo": 1,
-            "n": 3757,
+            "n": 3800,
             "lo_data": "2025-06-18"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 3757
+        "total_fonte": 3800
       }
     },
     "tabelas_em": {
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-05T17:13:04.288Z",
       "autores": "2026-11-05T17:14:05.370Z"
     },
-    "ultima_requisicao": "2026-11-08T21:24:58.649Z",
+    "ultima_requisicao": "2026-11-10T22:45:42.106Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

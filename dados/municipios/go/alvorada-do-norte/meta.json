@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-08T21:25:09.061Z",
-  "ultima_execucao": "2026-11-08T21:24:58.627Z",
+  "atualizado_em": "2026-11-10T22:52:52.745Z",
+  "ultima_execucao": "2026-11-10T22:35:32.093Z",
   "uf": "GO",
   "casa": "cm-alvorada-do-norte",
   "orgao": "Câmara Municipal de Alvorada do Norte",
   "host": "sapl.alvoradadonorte.go.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-08"
+    "fim": "2026-11-10"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Alvorada do Norte (API REST pública)",
       "url": "https://sapl.alvoradadonorte.go.leg.br/api/",
       "orgao": "Câmara Municipal de Alvorada do Norte",
-      "acessado_em": "2026-11-08"
+      "acessado_em": "2026-11-10"
     }
   ],
   "robots": {
-    "sapl.alvoradadonorte.go.leg.br": null
+    "sapl.alvoradadonorte.go.leg.br": {
+      "lido_em": "2026-11-10T22:35:32.093Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 18,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -57,8 +64,8 @@
       "concluida": true
     },
     "tramitacao": {
-      "desde": "2025-03-10",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     }
   },
   "observacoes": [
@@ -74,10 +81,10 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 749,
-    "normas": 230,
-    "sessoes": 198,
-    "itens_pauta": 868,
+    "proposicoes": 753,
+    "normas": 231,
+    "sessoes": 199,
+    "itens_pauta": 871,
     "votacoes": 480,
     "votacoes_por_situacao_dos_votos": {
       "inexistentes-na-fonte": 234,
@@ -130,28 +137,28 @@
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 415,
+            "hi": 418,
             "lo": 12,
-            "n": 388,
+            "n": 391,
             "lo_data": "2022-10-03"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 399
+        "total_fonte": 402
       },
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 224,
+            "hi": 225,
             "lo": 26,
-            "n": 198,
+            "n": 199,
             "lo_data": "2023-03-06"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 223
+        "total_fonte": 224
       },
       "materialegislativa": {
         "faixas": [
@@ -169,28 +176,28 @@
       "normajuridica": {
         "faixas": [
           {
-            "hi": 999,
+            "hi": 1000,
             "lo": 798,
-            "n": 198,
+            "n": 199,
             "lo_data": "1982-11-18"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 993
+        "total_fonte": 994
       },
       "tramitacao": {
         "faixas": [
           {
-            "hi": 4647,
-            "lo": 1895,
-            "n": 2484,
-            "lo_data": "2025-03-10"
+            "hi": 4653,
+            "lo": 1619,
+            "n": 2760,
+            "lo_data": "2024-11-06"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 4259
+        "total_fonte": 4265
       }
     },
     "tabelas_em": {
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-05T17:13:04.502Z",
       "autores": "2026-11-05T17:14:05.565Z"
     },
-    "ultima_requisicao": "2026-11-08T21:24:58.627Z",
+    "ultima_requisicao": "2026-11-10T22:52:49.250Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

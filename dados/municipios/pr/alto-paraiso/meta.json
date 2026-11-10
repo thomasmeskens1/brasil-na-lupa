@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-08T21:25:14.493Z",
-  "ultima_execucao": "2026-11-08T21:24:58.569Z",
+  "atualizado_em": "2026-11-10T22:43:41.755Z",
+  "ultima_execucao": "2026-11-10T22:35:32.057Z",
   "uf": "PR",
   "casa": "cm-alto-paraiso",
   "orgao": "Câmara Municipal de Alto Paraíso",
   "host": "sapl.altoparaiso.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-08"
+    "fim": "2026-11-10"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Alto Paraíso (API REST pública)",
       "url": "https://sapl.altoparaiso.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Alto Paraíso",
-      "acessado_em": "2026-11-08"
+      "acessado_em": "2026-11-10"
     }
   ],
   "robots": {
-    "sapl.altoparaiso.pr.leg.br": null
+    "sapl.altoparaiso.pr.leg.br": {
+      "lido_em": "2026-11-10T22:35:32.057Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 9,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,44 +81,44 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 45,
+    "proposicoes": 46,
     "normas": 0,
     "sessoes": 28,
-    "itens_pauta": 73,
-    "votacoes": 14,
+    "itens_pauta": 74,
+    "votacoes": 16,
     "votacoes_por_situacao_dos_votos": {
       "inexistentes-na-fonte": 12,
-      "coletados": 2
+      "coletados": 4
     },
-    "votos_individuais": 18
+    "votos_individuais": 36
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 19,
+            "hi": 21,
             "lo": 1,
-            "n": 14,
+            "n": 16,
             "lo_data": "2026-05-14"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 14
+        "total_fonte": 16
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 63,
+            "hi": 81,
             "lo": 46,
-            "n": 18,
+            "n": 36,
             "lo_data": "2026-10-29"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 18
+        "total_fonte": 36
       },
       "ordemdia": {
         "faixas": [
@@ -129,15 +136,15 @@
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 22,
+            "hi": 25,
             "lo": 1,
-            "n": 19,
+            "n": 20,
             "lo_data": "2026-04-27"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 19
+        "total_fonte": 20
       },
       "sessaoplenaria": {
         "faixas": [
@@ -155,15 +162,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 52,
+            "hi": 53,
             "lo": 1,
-            "n": 45,
+            "n": 46,
             "lo_data": "2026-04-15"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 45
+        "total_fonte": 46
       },
       "normajuridica": {
         "faixas": [],
@@ -198,7 +205,7 @@
       "status_tramitacao": "2026-11-05T17:13:02.273Z",
       "autores": "2026-11-05T17:14:02.843Z"
     },
-    "ultima_requisicao": "2026-11-08T21:24:58.569Z",
+    "ultima_requisicao": "2026-11-10T22:43:40.056Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
