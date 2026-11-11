@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-09T14:00:02.494Z",
-  "ultima_execucao": "2026-11-09T13:59:43.857Z",
+  "atualizado_em": "2026-11-11T13:47:49.614Z",
+  "ultima_execucao": "2026-11-11T12:48:44.636Z",
   "uf": "CE",
   "casa": "cm-campos-sales",
   "orgao": "Câmara Municipal de Campos Sales",
   "host": "sapl.campossales.ce.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-09"
+    "fim": "2026-11-11"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,29 +15,36 @@
       "titulo": "SAPL — Câmara Municipal de Campos Sales (API REST pública)",
       "url": "https://sapl.campossales.ce.leg.br/api/",
       "orgao": "Câmara Municipal de Campos Sales",
-      "acessado_em": "2026-11-09"
+      "acessado_em": "2026-11-11"
     }
   ],
   "robots": {
-    "sapl.campossales.ce.leg.br": null
+    "sapl.campossales.ce.leg.br": {
+      "lido_em": "2026-11-11T12:48:44.636Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 59,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
-      "desde": "2025-10-10",
+      "desde": "2025-02-28",
       "concluida": false
     },
     "votoparlamentar": {
-      "desde": "2025-11-28",
+      "desde": "2025-03-13",
       "concluida": false
     },
     "ordemdia": {
-      "desde": "2025-10-31",
+      "desde": "2025-02-07",
       "concluida": false
     },
     "expedientemateria": {
@@ -49,7 +56,7 @@
       "concluida": false
     },
     "materialegislativa": {
-      "desde": "2025-11-19",
+      "desde": "2025-02-12",
       "concluida": false
     },
     "normajuridica": {
@@ -74,16 +81,16 @@
   "contagens": {
     "parlamentares": 12,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 294,
+    "proposicoes": 658,
     "normas": 0,
     "sessoes": 100,
-    "itens_pauta": 484,
-    "votacoes": 294,
+    "itens_pauta": 914,
+    "votacoes": 570,
     "votacoes_por_situacao_dos_votos": {
-      "em-coleta": 61,
-      "coletados": 233
+      "coletados": 524,
+      "em-coleta": 46
     },
-    "votos_individuais": 2057
+    "votos_individuais": 4744
   },
   "cursor": {
     "fluxos": {
@@ -91,9 +98,9 @@
         "faixas": [
           {
             "hi": 790,
-            "lo": 483,
-            "n": 294,
-            "lo_data": "2025-10-10"
+            "lo": 171,
+            "n": 570,
+            "lo_data": "2025-02-28"
           }
         ],
         "concluido": false,
@@ -104,9 +111,9 @@
         "faixas": [
           {
             "hi": 7247,
-            "lo": 5048,
-            "n": 2058,
-            "lo_data": "2025-11-28"
+            "lo": 2064,
+            "n": 4752,
+            "lo_data": "2025-03-13"
           }
         ],
         "concluido": false,
@@ -117,9 +124,9 @@
         "faixas": [
           {
             "hi": 1396,
-            "lo": 881,
-            "n": 480,
-            "lo_data": "2025-10-31"
+            "lo": 336,
+            "n": 910,
+            "lo_data": "2025-02-07"
           }
         ],
         "concluido": false,
@@ -156,9 +163,9 @@
         "faixas": [
           {
             "hi": 860,
-            "lo": 562,
-            "n": 294,
-            "lo_data": "2025-11-19"
+            "lo": 188,
+            "n": 658,
+            "lo_data": "2025-02-12"
           }
         ],
         "concluido": false,
@@ -191,7 +198,7 @@
       "status_tramitacao": "2026-11-06T10:55:36.534Z",
       "autores": "2026-11-06T10:56:38.464Z"
     },
-    "ultima_requisicao": "2026-11-09T13:59:43.857Z",
+    "ultima_requisicao": "2026-11-11T13:47:48.082Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

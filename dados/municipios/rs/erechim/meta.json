@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-10T00:54:07.570Z",
-  "ultima_execucao": "2026-11-10T00:53:55.880Z",
+  "atualizado_em": "2026-11-11T13:47:57.114Z",
+  "ultima_execucao": "2026-11-11T12:48:46.024Z",
   "uf": "RS",
   "casa": "cm-erechim",
   "orgao": "Câmara Municipal de Erechim",
   "host": "sapl.erechim.rs.leg.br",
   "periodo": {
     "inicio": null,
-    "fim": "2026-11-09"
+    "fim": "2026-11-11"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,33 +15,40 @@
       "titulo": "SAPL — Câmara Municipal de Erechim (API REST pública)",
       "url": "https://sapl.erechim.rs.leg.br/api/",
       "orgao": "Câmara Municipal de Erechim",
-      "acessado_em": "2026-11-09"
+      "acessado_em": "2026-11-11"
     }
   ],
   "robots": {
-    "sapl.erechim.rs.leg.br": null
+    "sapl.erechim.rs.leg.br": {
+      "lido_em": "2026-11-11T12:48:46.024Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 59,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
-      "desde": "2021-09-27",
+      "desde": "2021-08-02",
       "concluida": false
     },
     "votoparlamentar": {
-      "desde": "2021-10-25",
+      "desde": "2021-08-09",
       "concluida": false
     },
     "ordemdia": {
-      "desde": "2021-10-04",
+      "desde": "2021-07-26",
       "concluida": false
     },
     "expedientemateria": {
-      "desde": "2021-09-27",
+      "desde": "2021-07-23",
       "concluida": false
     },
     "sessaoplenaria": {
@@ -49,11 +56,11 @@
       "concluida": false
     },
     "materialegislativa": {
-      "desde": "2021-10-20",
+      "desde": "2021-07-30",
       "concluida": false
     },
     "normajuridica": {
-      "desde": "2021-10-27",
+      "desde": "2021-05-28",
       "concluida": false
     },
     "tramitacao": {
@@ -72,16 +79,17 @@
     "Datas impossíveis ou posteriores à coleta (ex.: erros de digitação) ficam null, com o valor bruto anotado em lacunas; nada é corrigido."
   ],
   "contagens": {
-    "proposicoes": 204,
-    "normas": 130,
+    "proposicoes": 573,
+    "normas": 319,
     "sessoes": 100,
-    "itens_pauta": 298,
-    "votacoes": 198,
+    "itens_pauta": 588,
+    "votacoes": 294,
     "votacoes_por_situacao_dos_votos": {
-      "em-coleta": 82,
-      "coletados": 116
+      "coletados": 268,
+      "inexistentes-na-fonte": 19,
+      "em-coleta": 7
     },
-    "votos_individuais": 1974
+    "votos_individuais": 4560
   },
   "cursor": {
     "fluxos": {
@@ -89,9 +97,9 @@
         "faixas": [
           {
             "hi": 7474,
-            "lo": 7277,
-            "n": 198,
-            "lo_data": "2021-09-27"
+            "lo": 7175,
+            "n": 294,
+            "lo_data": "2021-08-02"
           }
         ],
         "concluido": false,
@@ -102,9 +110,9 @@
         "faixas": [
           {
             "hi": 47058,
-            "lo": 45085,
-            "n": 1974,
-            "lo_data": "2021-10-25"
+            "lo": 42448,
+            "n": 4560,
+            "lo_data": "2021-08-09"
           }
         ],
         "concluido": false,
@@ -115,9 +123,9 @@
         "faixas": [
           {
             "hi": 6125,
-            "lo": 5918,
-            "n": 198,
-            "lo_data": "2021-10-04"
+            "lo": 5793,
+            "n": 294,
+            "lo_data": "2021-07-26"
           }
         ],
         "concluido": false,
@@ -128,9 +136,9 @@
         "faixas": [
           {
             "hi": 2432,
-            "lo": 2333,
-            "n": 100,
-            "lo_data": "2021-09-27"
+            "lo": 2134,
+            "n": 294,
+            "lo_data": "2021-07-23"
           }
         ],
         "concluido": false,
@@ -154,9 +162,9 @@
         "faixas": [
           {
             "hi": 23575,
-            "lo": 23376,
-            "n": 198,
-            "lo_data": "2021-10-20"
+            "lo": 23000,
+            "n": 570,
+            "lo_data": "2021-07-30"
           }
         ],
         "concluido": false,
@@ -167,9 +175,9 @@
         "faixas": [
           {
             "hi": 19491,
-            "lo": 19392,
-            "n": 100,
-            "lo_data": "2021-10-27"
+            "lo": 19198,
+            "n": 294,
+            "lo_data": "2021-05-28"
           }
         ],
         "concluido": false,
@@ -202,7 +210,7 @@
       "status_tramitacao": "2026-11-06T10:58:51.422Z",
       "autores": "2026-11-06T11:01:55.177Z"
     },
-    "ultima_requisicao": "2026-11-10T00:53:55.880Z",
+    "ultima_requisicao": "2026-11-11T13:47:48.091Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-10T00:54:08.426Z",
-  "ultima_execucao": "2026-11-10T00:53:55.764Z",
+  "atualizado_em": "2026-11-11T12:59:07.050Z",
+  "ultima_execucao": "2026-11-11T12:48:45.911Z",
   "uf": "MG",
   "casa": "cm-durande",
   "orgao": "Câmara Municipal de Durandé",
   "host": "sapl.durande.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-09"
+    "fim": "2026-11-11"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Durandé (API REST pública)",
       "url": "https://sapl.durande.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Durandé",
-      "acessado_em": "2026-11-09"
+      "acessado_em": "2026-11-11"
     }
   ],
   "robots": {
-    "sapl.durande.mg.leg.br": null
+    "sapl.durande.mg.leg.br": {
+      "lido_em": "2026-11-11T12:48:45.911Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 11,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T10:55:45.727Z",
       "autores": "2026-11-06T10:56:49.851Z"
     },
-    "ultima_requisicao": "2026-11-10T00:53:55.764Z",
+    "ultima_requisicao": "2026-11-11T12:58:59.650Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

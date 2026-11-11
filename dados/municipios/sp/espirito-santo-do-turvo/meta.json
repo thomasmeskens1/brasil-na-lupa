@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-10T00:54:07.349Z",
-  "ultima_execucao": "2026-11-10T00:53:55.904Z",
+  "atualizado_em": "2026-11-11T13:19:26.233Z",
+  "ultima_execucao": "2026-11-11T12:48:46.049Z",
   "uf": "SP",
   "casa": "cm-espirito-santo-do-turvo",
   "orgao": "Câmara Municipal de Espírito Santo do Turvo",
   "host": "sapl.espiritosantodoturvo.sp.leg.br",
   "periodo": {
     "inicio": null,
-    "fim": "2026-11-09"
+    "fim": "2026-11-11"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Espírito Santo do Turvo (API REST pública)",
       "url": "https://sapl.espiritosantodoturvo.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Espírito Santo do Turvo",
-      "acessado_em": "2026-11-09"
+      "acessado_em": "2026-11-11"
     }
   ],
   "robots": {
-    "sapl.espiritosantodoturvo.sp.leg.br": null
+    "sapl.espiritosantodoturvo.sp.leg.br": {
+      "lido_em": "2026-11-11T12:48:46.049Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 31,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -49,12 +56,12 @@
       "concluida": true
     },
     "materialegislativa": {
-      "desde": "2013-09-30",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "normajuridica": {
-      "desde": "2010-07-12",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "tramitacao": {
       "desde": null,
@@ -72,8 +79,8 @@
     "Datas impossíveis ou posteriores à coleta (ex.: erros de digitação) ficam null, com o valor bruto anotado em lacunas; nada é corrigido."
   ],
   "contagens": {
-    "proposicoes": 1481,
-    "normas": 279,
+    "proposicoes": 1655,
+    "normas": 1336,
     "sessoes": 76,
     "itens_pauta": 400,
     "votacoes": 319,
@@ -154,12 +161,12 @@
         "faixas": [
           {
             "hi": 1896,
-            "lo": 449,
-            "n": 1440,
-            "lo_data": "2013-09-30"
+            "lo": 11,
+            "n": 1655,
+            "lo_data": "1993-01-12"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 1655
       },
@@ -167,12 +174,12 @@
         "faixas": [
           {
             "hi": 1348,
-            "lo": 1149,
-            "n": 198,
-            "lo_data": "2010-07-12"
+            "lo": 2,
+            "n": 1336,
+            "lo_data": "2013-02-18"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 1336
       },
@@ -195,7 +202,7 @@
       "status_tramitacao": "2026-11-06T10:54:46.732Z",
       "autores": "2026-11-06T10:55:47.565Z"
     },
-    "ultima_requisicao": "2026-11-10T00:53:55.904Z",
+    "ultima_requisicao": "2026-11-11T13:19:19.922Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

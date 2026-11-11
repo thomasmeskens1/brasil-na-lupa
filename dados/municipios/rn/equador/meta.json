@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-10T00:54:07.636Z",
-  "ultima_execucao": "2026-11-10T00:53:55.869Z",
+  "atualizado_em": "2026-11-11T13:15:19.505Z",
+  "ultima_execucao": "2026-11-11T12:48:46.013Z",
   "uf": "RN",
   "casa": "cm-equador",
   "orgao": "Câmara Municipal de Equador",
   "host": "sapl.equador.rn.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-09"
+    "fim": "2026-11-11"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Equador (API REST pública)",
       "url": "https://sapl.equador.rn.leg.br/api/",
       "orgao": "Câmara Municipal de Equador",
-      "acessado_em": "2026-11-09"
+      "acessado_em": "2026-11-11"
     }
   ],
   "robots": {
-    "sapl.equador.rn.leg.br": null
+    "sapl.equador.rn.leg.br": {
+      "lido_em": "2026-11-11T12:48:46.013Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 27,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -33,32 +40,32 @@
       "concluida": true
     },
     "votoparlamentar": {
-      "desde": "2025-03-19",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "ordemdia": {
-      "desde": "2025-03-06",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "expedientemateria": {
       "desde": "0000-00-00",
       "concluida": true
     },
     "sessaoplenaria": {
-      "desde": "2022-07-15",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "materialegislativa": {
-      "desde": "2024-08-29",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "normajuridica": {
-      "desde": "2024-12-10",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "tramitacao": {
-      "desde": "2026-04-16",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     }
   },
   "observacoes": [
@@ -74,56 +81,55 @@
   "contagens": {
     "parlamentares": 12,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 390,
-    "normas": 203,
-    "sessoes": 100,
-    "itens_pauta": 330,
-    "votacoes": 276,
+    "proposicoes": 482,
+    "normas": 297,
+    "sessoes": 180,
+    "itens_pauta": 349,
+    "votacoes": 277,
     "votacoes_por_situacao_dos_votos": {
-      "em-coleta": 15,
-      "coletados": 247,
-      "inexistentes-na-fonte": 14
+      "inexistentes-na-fonte": 17,
+      "coletados": 260
     },
-    "votos_individuais": 1972
+    "votos_individuais": 2083
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 277,
+            "hi": 278,
             "lo": 1,
-            "n": 276,
+            "n": 277,
             "lo_data": "2025-03-06"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 276
+        "total_fonte": 277
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 2082,
-            "lo": 103,
-            "n": 1974,
-            "lo_data": "2025-03-19"
+            "hi": 2091,
+            "lo": 1,
+            "n": 2085,
+            "lo_data": "2025-03-06"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2076
+        "total_fonte": 2085
       },
       "ordemdia": {
         "faixas": [
           {
             "hi": 325,
-            "lo": 20,
-            "n": 294,
-            "lo_data": "2025-03-06"
+            "lo": 1,
+            "n": 313,
+            "lo_data": "2025-01-29"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 313
       },
@@ -144,12 +150,12 @@
         "faixas": [
           {
             "hi": 181,
-            "lo": 81,
-            "n": 100,
-            "lo_data": "2022-07-15"
+            "lo": 1,
+            "n": 180,
+            "lo_data": "2025-01-01"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 180
       },
@@ -157,12 +163,12 @@
         "faixas": [
           {
             "hi": 662,
-            "lo": 257,
-            "n": 388,
-            "lo_data": "2024-08-29"
+            "lo": 163,
+            "n": 480,
+            "lo_data": "2023-11-21"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 634
       },
@@ -170,12 +176,12 @@
         "faixas": [
           {
             "hi": 495,
-            "lo": 293,
-            "n": 198,
-            "lo_data": "2024-12-10"
+            "lo": 195,
+            "n": 294,
+            "lo_data": "2023-10-24"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 450
       },
@@ -183,12 +189,12 @@
         "faixas": [
           {
             "hi": 235,
-            "lo": 123,
-            "n": 100,
-            "lo_data": "2026-04-16"
+            "lo": 1,
+            "n": 202,
+            "lo_data": "2025-02-20"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 202
       }
@@ -206,7 +212,7 @@
       "status_tramitacao": "2026-11-06T10:55:50.490Z",
       "autores": "2026-11-06T10:56:50.061Z"
     },
-    "ultima_requisicao": "2026-11-10T00:53:55.869Z",
+    "ultima_requisicao": "2026-11-11T13:15:15.920Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

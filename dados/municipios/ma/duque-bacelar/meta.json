@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-10T00:54:08.447Z",
-  "ultima_execucao": "2026-11-10T00:53:55.759Z",
+  "atualizado_em": "2026-11-11T12:55:02.155Z",
+  "ultima_execucao": "2026-11-11T12:48:45.906Z",
   "uf": "MA",
   "casa": "cm-duque-bacelar",
   "orgao": "Câmara Municipal de Duque Bacelar",
   "host": "sapl.duquebacelar.ma.leg.br",
   "periodo": {
     "inicio": null,
-    "fim": "2026-11-09"
+    "fim": "2026-11-11"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Duque Bacelar (API REST pública)",
       "url": "https://sapl.duquebacelar.ma.leg.br/api/",
       "orgao": "Câmara Municipal de Duque Bacelar",
-      "acessado_em": "2026-11-09"
+      "acessado_em": "2026-11-11"
     }
   ],
   "robots": {
-    "sapl.duquebacelar.ma.leg.br": null
+    "sapl.duquebacelar.ma.leg.br": {
+      "lido_em": "2026-11-11T12:48:45.906Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 7,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -180,7 +187,7 @@
       "status_tramitacao": "2026-11-06T10:54:44.734Z",
       "autores": "2026-11-06T10:55:46.717Z"
     },
-    "ultima_requisicao": "2026-11-10T00:53:55.759Z",
+    "ultima_requisicao": "2026-11-11T12:54:55.500Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
