@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-10T22:35:48.994Z",
-  "ultima_execucao": "2026-11-10T22:35:32.741Z",
+  "atualizado_em": "2026-11-12T14:50:04.318Z",
+  "ultima_execucao": "2026-11-12T13:50:55.753Z",
   "uf": "ES",
   "casa": "cm-aracruz",
   "orgao": "Câmara Municipal de Aracruz",
   "host": "sapl.aracruz.es.leg.br",
   "periodo": {
     "inicio": null,
-    "fim": "2026-11-10"
+    "fim": "2026-11-12"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Aracruz (API REST pública)",
       "url": "https://sapl.aracruz.es.leg.br/api/",
       "orgao": "Câmara Municipal de Aracruz",
-      "acessado_em": "2026-11-10"
+      "acessado_em": "2026-11-12"
     }
   ],
   "robots": {
-    "sapl.aracruz.es.leg.br": null
+    "sapl.aracruz.es.leg.br": {
+      "lido_em": "2026-11-12T13:50:55.753Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 59,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -49,7 +56,7 @@
       "concluida": true
     },
     "materialegislativa": {
-      "desde": "2013-09-03",
+      "desde": "2017-11-17",
       "concluida": false
     },
     "normajuridica": {
@@ -72,7 +79,7 @@
     "Datas impossíveis ou posteriores à coleta (ex.: erros de digitação) ficam null, com o valor bruto anotado em lacunas; nada é corrigido."
   ],
   "contagens": {
-    "proposicoes": 5917,
+    "proposicoes": 9409,
     "normas": 482,
     "sessoes": 560,
     "itens_pauta": 1637,
@@ -155,9 +162,9 @@
         "faixas": [
           {
             "hi": 10259,
-            "lo": 4256,
-            "n": 5917,
-            "lo_data": "2013-09-03"
+            "lo": 746,
+            "n": 9409,
+            "lo_data": "2017-11-17"
           }
         ],
         "concluido": false,
@@ -203,7 +210,7 @@
       "status_tramitacao": "2026-11-05T17:13:07.938Z",
       "autores": "2026-11-05T17:14:09.187Z"
     },
-    "ultima_requisicao": "2026-11-10T22:35:32.741Z",
+    "ultima_requisicao": "2026-11-12T14:49:58.403Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

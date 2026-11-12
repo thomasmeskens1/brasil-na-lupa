@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-10T23:34:38.409Z",
-  "ultima_execucao": "2026-11-10T22:35:32.653Z",
+  "atualizado_em": "2026-11-12T14:50:02.997Z",
+  "ultima_execucao": "2026-11-12T13:50:55.620Z",
   "uf": "CE",
   "casa": "cm-aquiraz",
   "orgao": "Câmara Municipal de Aquiraz",
   "host": "sapl.aquiraz.ce.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-10"
+    "fim": "2026-11-12"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,12 +15,12 @@
       "titulo": "SAPL — Câmara Municipal de Aquiraz (API REST pública)",
       "url": "https://sapl.aquiraz.ce.leg.br/api/",
       "orgao": "Câmara Municipal de Aquiraz",
-      "acessado_em": "2026-11-10"
+      "acessado_em": "2026-11-12"
     }
   ],
   "robots": {
     "sapl.aquiraz.ce.leg.br": {
-      "lido_em": "2026-11-10T22:35:32.653Z",
+      "lido_em": "2026-11-12T13:50:55.620Z",
       "status": 200,
       "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
@@ -32,25 +32,23 @@
   },
   "execucao": {
     "requisicoes": 59,
-    "falhas": [
-      "/api/sessao/sessaoplenaria/?o=-id&page=1&page_size=1000: fetch failed"
-    ]
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
-      "desde": "2025-12-08",
+      "desde": "2025-10-13",
       "concluida": false
     },
     "votoparlamentar": {
-      "desde": "2026-02-19",
+      "desde": "2025-10-13",
       "concluida": false
     },
     "ordemdia": {
-      "desde": "2026-02-19",
+      "desde": "2025-09-29",
       "concluida": false
     },
     "expedientemateria": {
-      "desde": "2025-11-17",
+      "desde": "2025-05-12",
       "concluida": false
     },
     "sessaoplenaria": {
@@ -58,7 +56,7 @@
       "concluida": false
     },
     "materialegislativa": {
-      "desde": "2026-01-19",
+      "desde": "2025-10-13",
       "concluida": false
     },
     "normajuridica": {
@@ -83,53 +81,53 @@
   "contagens": {
     "parlamentares": 26,
     "parlamentares_em_exercicio": 16,
-    "proposicoes": 591,
+    "proposicoes": 927,
     "normas": 114,
     "sessoes": 101,
-    "itens_pauta": 1006,
-    "votacoes": 828,
+    "itens_pauta": 1293,
+    "votacoes": 920,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 726,
+      "coletados": 908,
       "inexistentes-na-fonte": 6,
-      "em-coleta": 96
+      "em-coleta": 6
     },
-    "votos_individuais": 11102
+    "votos_individuais": 13968
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 3267,
-            "lo": 2397,
-            "n": 828,
-            "lo_data": "2025-12-08"
+            "hi": 3270,
+            "lo": 2304,
+            "n": 920,
+            "lo_data": "2025-10-13"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 2976
+        "total_fonte": 2979
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 40668,
-            "lo": 28962,
-            "n": 11102,
-            "lo_data": "2026-02-19"
+            "hi": 40713,
+            "lo": 26051,
+            "n": 13968,
+            "lo_data": "2025-10-13"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 36785
+        "total_fonte": 36830
       },
       "ordemdia": {
         "faixas": [
           {
             "hi": 3243,
-            "lo": 2237,
-            "n": 801,
-            "lo_data": "2026-02-19"
+            "lo": 2041,
+            "n": 990,
+            "lo_data": "2025-09-29"
           }
         ],
         "concluido": false,
@@ -140,9 +138,9 @@
         "faixas": [
           {
             "hi": 2062,
-            "lo": 1844,
-            "n": 199,
-            "lo_data": "2025-11-17"
+            "lo": 1717,
+            "n": 297,
+            "lo_data": "2025-05-12"
           }
         ],
         "concluido": false,
@@ -166,9 +164,9 @@
         "faixas": [
           {
             "hi": 3122,
-            "lo": 2542,
-            "n": 576,
-            "lo_data": "2026-01-19"
+            "lo": 2193,
+            "n": 920,
+            "lo_data": "2025-10-13"
           }
         ],
         "concluido": false,
@@ -215,7 +213,7 @@
       "status_tramitacao": "2026-11-05T17:13:07.678Z",
       "autores": "2026-11-05T17:14:08.697Z"
     },
-    "ultima_requisicao": "2026-11-10T23:34:35.150Z",
+    "ultima_requisicao": "2026-11-12T14:49:58.401Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

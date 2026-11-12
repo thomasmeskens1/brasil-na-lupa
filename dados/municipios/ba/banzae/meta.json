@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-10T22:35:45.355Z",
-  "ultima_execucao": "2026-11-10T22:35:33.020Z",
+  "atualizado_em": "2026-11-12T14:09:27.500Z",
+  "ultima_execucao": "2026-11-12T13:50:56.250Z",
   "uf": "BA",
   "casa": "cm-banzae",
   "orgao": "Câmara Municipal de Banzaê",
   "host": "sapl.banzae.ba.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-10"
+    "fim": "2026-11-12"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Banzaê (API REST pública)",
       "url": "https://sapl.banzae.ba.leg.br/api/",
       "orgao": "Câmara Municipal de Banzaê",
-      "acessado_em": "2026-11-10"
+      "acessado_em": "2026-11-12"
     }
   ],
   "robots": {
-    "sapl.banzae.ba.leg.br": null
+    "sapl.banzae.ba.leg.br": {
+      "lido_em": "2026-11-12T13:50:56.250Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 19,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,14 +81,14 @@
   "contagens": {
     "parlamentares": 10,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 490,
+    "proposicoes": 502,
     "normas": 182,
-    "sessoes": 155,
-    "itens_pauta": 776,
-    "votacoes": 389,
+    "sessoes": 156,
+    "itens_pauta": 789,
+    "votacoes": 394,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 35,
-      "inexistentes-na-fonte": 344,
+      "inexistentes-na-fonte": 349,
       "coletados": 10
     },
     "votos_individuais": 101
@@ -91,15 +98,15 @@
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 470,
+            "hi": 475,
             "lo": 74,
-            "n": 388,
+            "n": 393,
             "lo_data": "2023-05-15"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 459
+        "total_fonte": 464
       },
       "votoparlamentar": {
         "faixas": [
@@ -117,54 +124,54 @@
       "ordemdia": {
         "faixas": [
           {
-            "hi": 517,
+            "hi": 522,
             "lo": 94,
-            "n": 388,
+            "n": 393,
             "lo_data": "2023-09-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 477
+        "total_fonte": 482
       },
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 566,
+            "hi": 574,
             "lo": 147,
-            "n": 388,
+            "n": 396,
             "lo_data": "2023-10-23"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 526
+        "total_fonte": 534
       },
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 165,
+            "hi": 166,
             "lo": 1,
-            "n": 155,
+            "n": 156,
             "lo_data": "2022-01-27"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 155
+        "total_fonte": 156
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 772,
+            "hi": 776,
             "lo": 282,
-            "n": 481,
+            "n": 485,
             "lo_data": "2024-06-18"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 758
+        "total_fonte": 762
       },
       "normajuridica": {
         "faixas": [
@@ -182,15 +189,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 2411,
+            "hi": 2454,
             "lo": 925,
-            "n": 1440,
+            "n": 1483,
             "lo_data": "2021-06-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2310
+        "total_fonte": 2353
       }
     },
     "tabelas_em": {
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-05T23:32:03.863Z",
       "autores": "2026-11-05T23:33:07.312Z"
     },
-    "ultima_requisicao": "2026-11-10T22:35:33.020Z",
+    "ultima_requisicao": "2026-11-12T14:09:18.390Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

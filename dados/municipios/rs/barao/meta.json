@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-10T22:35:45.242Z",
-  "ultima_execucao": "2026-11-10T22:35:33.034Z",
+  "atualizado_em": "2026-11-12T14:09:25.640Z",
+  "ultima_execucao": "2026-11-12T13:50:56.271Z",
   "uf": "RS",
   "casa": "cm-barao",
   "orgao": "Câmara Municipal de Barão",
   "host": "sapl.barao.rs.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-10"
+    "fim": "2026-11-12"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Barão (API REST pública)",
       "url": "https://sapl.barao.rs.leg.br/api/",
       "orgao": "Câmara Municipal de Barão",
-      "acessado_em": "2026-11-10"
+      "acessado_em": "2026-11-12"
     }
   ],
   "robots": {
-    "sapl.barao.rs.leg.br": null
+    "sapl.barao.rs.leg.br": {
+      "lido_em": "2026-11-12T13:50:56.271Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 19,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,8 +81,8 @@
   "contagens": {
     "parlamentares": 12,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 573,
-    "normas": 306,
+    "proposicoes": 591,
+    "normas": 315,
     "sessoes": 176,
     "itens_pauta": 682,
     "votacoes": 388,
@@ -156,41 +163,41 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 2016,
+            "hi": 2026,
             "lo": 1445,
-            "n": 570,
+            "n": 580,
             "lo_data": "2024-02-26"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2000
+        "total_fonte": 2010
       },
       "normajuridica": {
         "faixas": [
           {
-            "hi": 3188,
+            "hi": 3196,
             "lo": 2895,
-            "n": 294,
+            "n": 302,
             "lo_data": "2024-04-03"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 3173
+        "total_fonte": 3181
       },
       "tramitacao": {
         "faixas": [
           {
-            "hi": 3322,
+            "hi": 3334,
             "lo": 2406,
-            "n": 910,
+            "n": 922,
             "lo_data": "2024-07-08"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 3306
+        "total_fonte": 3318
       }
     },
     "tabelas_em": {
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-05T23:32:03.396Z",
       "autores": "2026-11-05T23:33:06.975Z"
     },
-    "ultima_requisicao": "2026-11-10T22:35:33.034Z",
+    "ultima_requisicao": "2026-11-12T14:09:18.391Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

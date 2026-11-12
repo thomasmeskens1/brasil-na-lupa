@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-10T13:33:39.733Z",
-  "ultima_execucao": "2026-11-10T13:33:25.001Z",
+  "atualizado_em": "2026-11-12T14:09:17.099Z",
+  "ultima_execucao": "2026-11-12T13:50:54.436Z",
   "uf": "PR",
   "casa": "cm-almirante-tamandare",
   "orgao": "Câmara Municipal de Almirante Tamandaré",
   "host": "sapl.almirantetamandare.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-10"
+    "fim": "2026-11-12"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Almirante Tamandaré (API REST pública)",
       "url": "https://sapl.almirantetamandare.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Almirante Tamandaré",
-      "acessado_em": "2026-11-10"
+      "acessado_em": "2026-11-12"
     }
   ],
   "robots": {
-    "sapl.almirantetamandare.pr.leg.br": null
+    "sapl.almirantetamandare.pr.leg.br": {
+      "lido_em": "2026-11-12T13:50:54.436Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 19,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 18,
     "parlamentares_em_exercicio": 15,
-    "proposicoes": 844,
+    "proposicoes": 852,
     "normas": 573,
     "sessoes": 198,
     "itens_pauta": 682,
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-05T17:13:01.495Z",
       "autores": "2026-11-05T17:15:03.215Z"
     },
-    "ultima_requisicao": "2026-11-10T13:33:25.001Z",
+    "ultima_requisicao": "2026-11-12T14:09:13.927Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

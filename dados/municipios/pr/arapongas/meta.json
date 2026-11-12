@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-10T22:35:48.043Z",
-  "ultima_execucao": "2026-11-10T22:35:32.830Z",
+  "atualizado_em": "2026-11-12T14:50:04.020Z",
+  "ultima_execucao": "2026-11-12T13:50:55.908Z",
   "uf": "PR",
   "casa": "cm-arapongas",
   "orgao": "Câmara Municipal de Arapongas",
   "host": "sapl.arapongas.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-10"
+    "fim": "2026-11-12"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Arapongas (API REST pública)",
       "url": "https://sapl.arapongas.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Arapongas",
-      "acessado_em": "2026-11-10"
+      "acessado_em": "2026-11-12"
     }
   ],
   "robots": {
-    "sapl.arapongas.pr.leg.br": null
+    "sapl.arapongas.pr.leg.br": {
+      "lido_em": "2026-11-12T13:50:55.908Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 59,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -57,7 +64,7 @@
       "concluida": true
     },
     "tramitacao": {
-      "desde": "2025-10-29",
+      "desde": "2025-03-10",
       "concluida": false
     }
   },
@@ -74,14 +81,14 @@
   "contagens": {
     "parlamentares": 15,
     "parlamentares_em_exercicio": 15,
-    "proposicoes": 2492,
+    "proposicoes": 2503,
     "normas": 752,
     "sessoes": 295,
     "itens_pauta": 2193,
-    "votacoes": 659,
+    "votacoes": 666,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 37,
-      "inexistentes-na-fonte": 622
+      "inexistentes-na-fonte": 629
     },
     "votos_individuais": 15
   },
@@ -90,15 +97,15 @@
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 2680,
+            "hi": 2687,
             "lo": 1994,
-            "n": 658,
+            "n": 665,
             "lo_data": "2024-02-19"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2603
+        "total_fonte": 2610
       },
       "votoparlamentar": {
         "faixas": [
@@ -155,15 +162,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 10409,
+            "hi": 10412,
             "lo": 7913,
-            "n": 2484,
+            "n": 2487,
             "lo_data": "2024-11-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 10158
+        "total_fonte": 10161
       },
       "normajuridica": {
         "faixas": [
@@ -181,15 +188,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 38423,
-            "lo": 34340,
-            "n": 4048,
-            "lo_data": "2025-10-29"
+            "hi": 38462,
+            "lo": 30740,
+            "n": 7569,
+            "lo_data": "2025-03-10"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 34615
+        "total_fonte": 34653
       }
     },
     "tabelas_em": {
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-05T17:13:06.918Z",
       "autores": "2026-11-05T17:14:08.115Z"
     },
-    "ultima_requisicao": "2026-11-10T22:35:32.830Z",
+    "ultima_requisicao": "2026-11-12T14:49:58.398Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-10T13:33:39.831Z",
-  "ultima_execucao": "2026-11-10T13:33:25.013Z",
+  "atualizado_em": "2026-11-12T14:01:07.461Z",
+  "ultima_execucao": "2026-11-12T13:50:54.453Z",
   "uf": "MG",
   "casa": "cm-alpinopolis",
   "orgao": "Câmara Municipal de Alpinópolis",
   "host": "sapl.alpinopolis.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-10"
+    "fim": "2026-11-12"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Alpinópolis (API REST pública)",
       "url": "https://sapl.alpinopolis.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Alpinópolis",
-      "acessado_em": "2026-11-10"
+      "acessado_em": "2026-11-12"
     }
   ],
   "robots": {
-    "sapl.alpinopolis.mg.leg.br": null
+    "sapl.alpinopolis.mg.leg.br": {
+      "lido_em": "2026-11-12T13:50:54.453Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 11,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,96 +81,96 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 275,
+    "proposicoes": 282,
     "normas": 147,
-    "sessoes": 100,
-    "itens_pauta": 281,
-    "votacoes": 244,
+    "sessoes": 102,
+    "itens_pauta": 291,
+    "votacoes": 248,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 212,
+      "coletados": 216,
       "inexistentes-na-fonte": 32
     },
-    "votos_individuais": 1836
+    "votos_individuais": 1871
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 282,
+            "hi": 286,
             "lo": 1,
-            "n": 244,
+            "n": 248,
             "lo_data": "2025-01-29"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 244
+        "total_fonte": 248
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 1939,
+            "hi": 1974,
             "lo": 1,
-            "n": 1836,
+            "n": 1871,
             "lo_data": "2025-01-29"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1836
+        "total_fonte": 1871
       },
       "ordemdia": {
         "faixas": [
           {
-            "hi": 265,
+            "hi": 269,
             "lo": 1,
-            "n": 246,
+            "n": 250,
             "lo_data": "2025-01-15"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 246
+        "total_fonte": 250
       },
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 35,
+            "hi": 41,
             "lo": 1,
-            "n": 35,
+            "n": 41,
             "lo_data": "2025-01-15"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 35
+        "total_fonte": 41
       },
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 100,
+            "hi": 102,
             "lo": 1,
-            "n": 100,
+            "n": 102,
             "lo_data": "2025-01-15"
           }
         ],
         "concluido": true,
-        "tamanho_pagina": null,
-        "total_fonte": 100
+        "tamanho_pagina": 100,
+        "total_fonte": 102
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 277,
+            "hi": 284,
             "lo": 1,
-            "n": 275,
+            "n": 282,
             "lo_data": "2023-05-08"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 275
+        "total_fonte": 282
       },
       "normajuridica": {
         "faixas": [
@@ -181,15 +188,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 1801,
+            "hi": 1804,
             "lo": 1,
-            "n": 1702,
+            "n": 1705,
             "lo_data": "2023-05-05"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1702
+        "total_fonte": 1705
       }
     },
     "tabelas_em": {
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-05T17:13:00.518Z",
       "autores": "2026-11-05T17:14:01.326Z"
     },
-    "ultima_requisicao": "2026-11-10T13:33:25.014Z",
+    "ultima_requisicao": "2026-11-12T14:01:05.162Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

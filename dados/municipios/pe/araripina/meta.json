@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-10T22:35:47.401Z",
-  "ultima_execucao": "2026-11-10T22:35:32.865Z",
+  "atualizado_em": "2026-11-12T14:09:26.906Z",
+  "ultima_execucao": "2026-11-12T13:50:56.008Z",
   "uf": "PE",
   "casa": "cm-araripina",
   "orgao": "Câmara Municipal de Araripina",
   "host": "sapl.araripina.pe.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-10"
+    "fim": "2026-11-12"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Araripina (API REST pública)",
       "url": "https://sapl.araripina.pe.leg.br/api/",
       "orgao": "Câmara Municipal de Araripina",
-      "acessado_em": "2026-11-10"
+      "acessado_em": "2026-11-12"
     }
   ],
   "robots": {
-    "sapl.araripina.pe.leg.br": null
+    "sapl.araripina.pe.leg.br": {
+      "lido_em": "2026-11-12T13:50:56.008Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 19,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,14 +81,14 @@
   "contagens": {
     "parlamentares": 18,
     "parlamentares_em_exercicio": 17,
-    "proposicoes": 1409,
-    "normas": 397,
-    "sessoes": 148,
-    "itens_pauta": 2522,
-    "votacoes": 1350,
+    "proposicoes": 1434,
+    "normas": 411,
+    "sessoes": 149,
+    "itens_pauta": 2525,
+    "votacoes": 1352,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 93,
-      "inexistentes-na-fonte": 1255,
+      "inexistentes-na-fonte": 1257,
       "coletados": 2
     },
     "votos_individuais": 198
@@ -91,15 +98,15 @@
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 1437,
+            "hi": 1439,
             "lo": 61,
-            "n": 1350,
+            "n": 1352,
             "lo_data": "2023-07-26"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1398
+        "total_fonte": 1400
       },
       "votoparlamentar": {
         "faixas": [
@@ -117,67 +124,67 @@
       "ordemdia": {
         "faixas": [
           {
-            "hi": 1879,
+            "hi": 1895,
             "lo": 264,
-            "n": 1261,
+            "n": 1263,
             "lo_data": "2024-04-03"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1471
+        "total_fonte": 1473
       },
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 1897,
+            "hi": 1908,
             "lo": 268,
-            "n": 1261,
+            "n": 1262,
             "lo_data": "2024-03-13"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1482
+        "total_fonte": 1483
       },
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 177,
+            "hi": 178,
             "lo": 6,
-            "n": 148,
+            "n": 149,
             "lo_data": "2023-05-10"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 148
+        "total_fonte": 149
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 1639,
+            "hi": 1656,
             "lo": 192,
-            "n": 1400,
+            "n": 1417,
             "lo_data": "2024-03-06"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1576
+        "total_fonte": 1593
       },
       "normajuridica": {
         "faixas": [
           {
-            "hi": 2389,
+            "hi": 2400,
             "lo": 1996,
-            "n": 388,
+            "n": 399,
             "lo_data": "1962-10-27"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2382
+        "total_fonte": 2393
       },
       "tramitacao": {
         "faixas": [
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-05T17:13:07.342Z",
       "autores": "2026-11-05T17:14:08.471Z"
     },
-    "ultima_requisicao": "2026-11-10T22:35:32.865Z",
+    "ultima_requisicao": "2026-11-12T14:09:18.389Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

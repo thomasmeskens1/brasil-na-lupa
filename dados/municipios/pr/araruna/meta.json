@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-10T22:35:47.357Z",
-  "ultima_execucao": "2026-11-10T22:35:32.874Z",
+  "atualizado_em": "2026-11-12T14:01:15.313Z",
+  "ultima_execucao": "2026-11-12T13:50:56.022Z",
   "uf": "PR",
   "casa": "cm-araruna",
   "orgao": "Câmara Municipal de Araruna",
   "host": "sapl.araruna.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-10"
+    "fim": "2026-11-12"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Araruna (API REST pública)",
       "url": "https://sapl.araruna.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Araruna",
-      "acessado_em": "2026-11-10"
+      "acessado_em": "2026-11-12"
     }
   ],
   "robots": {
-    "sapl.araruna.pr.leg.br": null
+    "sapl.araruna.pr.leg.br": {
+      "lido_em": "2026-11-12T13:50:56.022Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 11,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -78,39 +85,39 @@
     "normas": 102,
     "sessoes": 44,
     "itens_pauta": 307,
-    "votacoes": 216,
+    "votacoes": 225,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 216
+      "coletados": 225
     },
-    "votos_individuais": 1937
+    "votos_individuais": 2009
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 230,
+            "hi": 239,
             "lo": 6,
-            "n": 216,
+            "n": 225,
             "lo_data": "2026-02-02"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 216
+        "total_fonte": 225
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 2070,
+            "hi": 2142,
             "lo": 48,
-            "n": 1937,
+            "n": 2009,
             "lo_data": "2026-02-02"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1937
+        "total_fonte": 2009
       },
       "ordemdia": {
         "faixas": [
@@ -180,15 +187,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 241,
+            "hi": 256,
             "lo": 1,
-            "n": 234,
+            "n": 249,
             "lo_data": "2026-04-03"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 234
+        "total_fonte": 249
       }
     },
     "tabelas_em": {
@@ -204,7 +211,7 @@
       "status_tramitacao": "2026-11-05T23:34:04.346Z",
       "autores": "2026-11-05T23:35:05.530Z"
     },
-    "ultima_requisicao": "2026-11-10T22:35:32.874Z",
+    "ultima_requisicao": "2026-11-12T14:01:09.039Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

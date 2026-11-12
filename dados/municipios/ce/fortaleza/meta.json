@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-12T00:44:24.687Z",
-  "ultima_execucao": "2026-11-11T23:45:18.295Z",
+  "atualizado_em": "2026-11-12T14:14:28.816Z",
+  "ultima_execucao": "2026-11-12T13:50:54.290Z",
   "uf": "CE",
   "casa": "cm-fortaleza",
   "orgao": "Câmara Municipal de Fortaleza",
   "host": "sapl.fortaleza.ce.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-11"
+    "fim": "2026-11-12"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,12 +15,12 @@
       "titulo": "SAPL — Câmara Municipal de Fortaleza (API REST pública)",
       "url": "https://sapl.fortaleza.ce.leg.br/api/",
       "orgao": "Câmara Municipal de Fortaleza",
-      "acessado_em": "2026-11-11"
+      "acessado_em": "2026-11-12"
     }
   ],
   "robots": {
     "sapl.fortaleza.ce.leg.br": {
-      "lido_em": "2026-11-11T23:45:18.295Z",
+      "lido_em": "2026-11-12T13:50:54.290Z",
       "status": 200,
       "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
@@ -31,8 +31,11 @@
     }
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 24,
+    "falhas": [
+      "/api/sessao/tiporesultadovotacao/?page=1&page_size=1000: HTTP 503",
+      "/api/materia/tramitacao/?o=-id&page=15&page_size=95: HTTP 503"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -64,8 +67,8 @@
       "concluida": true
     },
     "tramitacao": {
-      "desde": "2026-10-29",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     }
   },
   "observacoes": [
@@ -81,10 +84,10 @@
   "contagens": {
     "parlamentares": 72,
     "parlamentares_em_exercicio": 43,
-    "proposicoes": 31382,
+    "proposicoes": 31502,
     "normas": 587,
-    "sessoes": 494,
-    "itens_pauta": 6147,
+    "sessoes": 495,
+    "itens_pauta": 6163,
     "votacoes": 1,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 1
@@ -128,9 +131,9 @@
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 57758,
+            "hi": 57774,
             "lo": 51705,
-            "n": 5963,
+            "n": 5979,
             "lo_data": "2024-12-11"
           }
         ],
@@ -141,9 +144,9 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 2113,
+            "hi": 2114,
             "lo": 1616,
-            "n": 495,
+            "n": 496,
             "lo_data": "2024-02-07"
           }
         ],
@@ -154,15 +157,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 128747,
+            "hi": 128856,
             "lo": 97228,
-            "n": 31331,
+            "n": 31438,
             "lo_data": "2024-12-30"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 127842
+        "total_fonte": 127949
       },
       "normajuridica": {
         "faixas": [
@@ -180,20 +183,20 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 417836,
+            "hi": 417954,
             "lo": 416605,
-            "n": 1222,
+            "n": 1339,
             "lo_data": "2026-10-29"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 410390
+        "total_fonte": 410507
       }
     },
     "tabelas_em": {
       "legislaturas": "2026-11-12T00:06:42.335Z",
-      "tipos_resultado": "2026-11-04T23:10:23.760Z",
+      "tipos_resultado": "2026-11-12T14:12:34.815Z",
       "tipos_materia": "2026-11-04T23:11:25.485Z",
       "mandatos": "2026-11-04T23:12:26.070Z",
       "tipos_norma": "2026-11-04T23:21:34.376Z",
@@ -204,7 +207,7 @@
       "status_tramitacao": "2026-11-06T22:57:35.378Z",
       "autores": "2026-11-06T23:02:40.357Z"
     },
-    "ultima_requisicao": "2026-11-12T00:44:21.257Z",
+    "ultima_requisicao": "2026-11-12T14:14:17.709Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

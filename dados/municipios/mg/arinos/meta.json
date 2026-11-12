@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-10T22:35:45.980Z",
-  "ultima_execucao": "2026-11-10T22:35:32.973Z",
+  "atualizado_em": "2026-11-12T14:09:26.202Z",
+  "ultima_execucao": "2026-11-12T13:50:56.178Z",
   "uf": "MG",
   "casa": "cm-arinos",
   "orgao": "Câmara Municipal de Arinos",
   "host": "sapl.arinos.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-10"
+    "fim": "2026-11-12"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Arinos (API REST pública)",
       "url": "https://sapl.arinos.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Arinos",
-      "acessado_em": "2026-11-10"
+      "acessado_em": "2026-11-12"
     }
   ],
   "robots": {
-    "sapl.arinos.mg.leg.br": null
+    "sapl.arinos.mg.leg.br": {
+      "lido_em": "2026-11-12T13:50:56.178Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 19,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,8 +81,8 @@
   "contagens": {
     "parlamentares": 11,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 320,
-    "normas": 590,
+    "proposicoes": 329,
+    "normas": 591,
     "sessoes": 100,
     "itens_pauta": 109,
     "votacoes": 100,
@@ -157,41 +164,41 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 742,
+            "hi": 743,
             "lo": 447,
-            "n": 295,
+            "n": 296,
             "lo_data": "2021-01-30"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 721
+        "total_fonte": 722
       },
       "normajuridica": {
         "faixas": [
           {
-            "hi": 5521,
+            "hi": 5523,
             "lo": 4931,
-            "n": 586,
+            "n": 588,
             "lo_data": "2024-06-17"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 5339
+        "total_fonte": 5341
       },
       "tramitacao": {
         "faixas": [
           {
-            "hi": 6974,
+            "hi": 6993,
             "lo": 5578,
-            "n": 1368,
+            "n": 1387,
             "lo_data": "2024-11-27"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 6811
+        "total_fonte": 6830
       }
     },
     "tabelas_em": {
@@ -207,7 +214,7 @@
       "status_tramitacao": "2026-11-05T23:33:05.422Z",
       "autores": "2026-11-05T23:34:04.748Z"
     },
-    "ultima_requisicao": "2026-11-10T22:35:32.973Z",
+    "ultima_requisicao": "2026-11-12T14:09:18.389Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
