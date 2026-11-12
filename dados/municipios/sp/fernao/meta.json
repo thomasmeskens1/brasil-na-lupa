@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-11T13:47:54.134Z",
-  "ultima_execucao": "2026-11-11T12:48:46.063Z",
+  "atualizado_em": "2026-11-12T22:55:26.773Z",
+  "ultima_execucao": "2026-11-12T22:55:15.455Z",
   "uf": "SP",
   "casa": "cm-fernao",
   "orgao": "Câmara Municipal de Fernão",
   "host": "sapl.fernao.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-11"
+    "fim": "2026-11-12"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Fernão (API REST pública)",
       "url": "https://sapl.fernao.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Fernão",
-      "acessado_em": "2026-11-11"
+      "acessado_em": "2026-11-12"
     }
   ],
   "robots": {
-    "sapl.fernao.sp.leg.br": {
-      "lido_em": "2026-11-11T12:48:46.064Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.fernao.sp.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,9 +80,9 @@
     "itens_pauta": 774,
     "votacoes": 388,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 199,
+      "inexistentes-na-fonte": 143,
       "em-coleta": 46,
-      "inexistentes-na-fonte": 143
+      "coletados": 199
     },
     "votos_individuais": 1786
   },
@@ -213,7 +206,7 @@
       "status_tramitacao": "2026-11-06T10:55:49.095Z",
       "autores": "2026-11-06T10:57:51.181Z"
     },
-    "ultima_requisicao": "2026-11-11T13:47:48.089Z",
+    "ultima_requisicao": "2026-11-12T22:55:15.455Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
