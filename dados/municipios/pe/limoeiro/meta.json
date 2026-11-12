@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-10T00:54:15.549Z",
-  "ultima_execucao": "2026-11-10T00:53:56.690Z",
+  "atualizado_em": "2026-11-11T23:53:29.096Z",
+  "ultima_execucao": "2026-11-11T23:45:18.575Z",
   "uf": "PE",
   "casa": "cm-limoeiro",
   "orgao": "Câmara Municipal de Limoeiro",
   "host": "sapl.limoeiro.pe.leg.br",
   "periodo": {
     "inicio": "2025-01-02",
-    "fim": "2026-11-09"
+    "fim": "2026-11-11"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Limoeiro (API REST pública)",
       "url": "https://sapl.limoeiro.pe.leg.br/api/",
       "orgao": "Câmara Municipal de Limoeiro",
-      "acessado_em": "2026-11-09"
+      "acessado_em": "2026-11-11"
     }
   ],
   "robots": {
-    "sapl.limoeiro.pe.leg.br": null
+    "sapl.limoeiro.pe.leg.br": {
+      "lido_em": "2026-11-11T23:45:18.575Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 9,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -197,7 +204,7 @@
       "status_tramitacao": "2026-11-06T13:36:37.496Z",
       "autores": "2026-11-06T13:37:38.208Z"
     },
-    "ultima_requisicao": "2026-11-10T00:53:56.690Z",
+    "ultima_requisicao": "2026-11-11T23:53:26.577Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

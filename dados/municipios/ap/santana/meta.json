@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-10T14:32:36.011Z",
-  "ultima_execucao": "2026-11-10T13:33:24.337Z",
+  "atualizado_em": "2026-11-11T23:45:35.786Z",
+  "ultima_execucao": "2026-11-11T23:45:20.535Z",
   "uf": "AP",
   "casa": "cm-santana",
   "orgao": "Câmara Municipal de Santana",
   "host": "sapl.santana.ap.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-10"
+    "fim": "2026-11-11"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Santana (API REST pública)",
       "url": "https://sapl.santana.ap.leg.br/api/",
       "orgao": "Câmara Municipal de Santana",
-      "acessado_em": "2026-11-10"
+      "acessado_em": "2026-11-11"
     }
   ],
   "robots": {
-    "sapl.santana.ap.leg.br": {
-      "lido_em": "2026-11-10T13:33:24.337Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.santana.ap.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,9 +80,9 @@
     "itens_pauta": 4236,
     "votacoes": 1746,
     "votacoes_por_situacao_dos_votos": {
-      "inexistentes-na-fonte": 1477,
+      "em-coleta": 83,
       "coletados": 186,
-      "em-coleta": 83
+      "inexistentes-na-fonte": 1477
     },
     "votos_individuais": 2185
   },
@@ -213,7 +206,7 @@
       "status_tramitacao": "2026-11-07T12:24:09.817Z",
       "autores": "2026-11-07T12:25:12.526Z"
     },
-    "ultima_requisicao": "2026-11-10T14:32:27.314Z",
+    "ultima_requisicao": "2026-11-11T23:45:20.535Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

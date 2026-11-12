@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-10T00:54:15.284Z",
-  "ultima_execucao": "2026-11-10T00:53:56.688Z",
+  "atualizado_em": "2026-11-12T00:03:42.525Z",
+  "ultima_execucao": "2026-11-11T23:45:18.572Z",
   "uf": "MG",
   "casa": "cm-limeira-do-oeste",
   "orgao": "Câmara Municipal de Limeira do Oeste",
   "host": "sapl.limeiradooeste.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-09"
+    "fim": "2026-11-11"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Limeira do Oeste (API REST pública)",
       "url": "https://sapl.limeiradooeste.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Limeira do Oeste",
-      "acessado_em": "2026-11-09"
+      "acessado_em": "2026-11-11"
     }
   ],
   "robots": {
-    "sapl.limeiradooeste.mg.leg.br": null
+    "sapl.limeiradooeste.mg.leg.br": {
+      "lido_em": "2026-11-11T23:45:18.572Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 19,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,8 +81,8 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 1001,
-    "normas": 486,
+    "proposicoes": 1020,
+    "normas": 490,
     "sessoes": 198,
     "itens_pauta": 545,
     "votacoes": 393,
@@ -155,41 +162,41 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 5203,
+            "hi": 5212,
             "lo": 4172,
-            "n": 1000,
+            "n": 1009,
             "lo_data": "2024-05-27"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 5118
+        "total_fonte": 5127
       },
       "normajuridica": {
         "faixas": [
           {
-            "hi": 2932,
+            "hi": 2936,
             "lo": 2435,
-            "n": 480,
+            "n": 483,
             "lo_data": "2024-01-22"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2855
+        "total_fonte": 2858
       },
       "tramitacao": {
         "faixas": [
           {
-            "hi": 1040,
+            "hi": 1048,
             "lo": 457,
-            "n": 570,
+            "n": 578,
             "lo_data": "2024-04-11"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1013
+        "total_fonte": 1021
       }
     },
     "tabelas_em": {
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T13:36:38.650Z",
       "autores": "2026-11-06T13:37:39.802Z"
     },
-    "ultima_requisicao": "2026-11-10T00:53:56.688Z",
+    "ultima_requisicao": "2026-11-12T00:03:38.881Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

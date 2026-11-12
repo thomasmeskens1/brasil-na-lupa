@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-10T00:54:14.667Z",
-  "ultima_execucao": "2026-11-10T00:53:56.636Z",
+  "atualizado_em": "2026-11-12T00:03:41.451Z",
+  "ultima_execucao": "2026-11-11T23:45:18.519Z",
   "uf": "RS",
   "casa": "cm-liberato-salzano",
   "orgao": "Câmara Municipal de Liberato Salzano",
   "host": "sapl.liberatosalzano.rs.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-09"
+    "fim": "2026-11-11"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Liberato Salzano (API REST pública)",
       "url": "https://sapl.liberatosalzano.rs.leg.br/api/",
       "orgao": "Câmara Municipal de Liberato Salzano",
-      "acessado_em": "2026-11-09"
+      "acessado_em": "2026-11-11"
     }
   ],
   "robots": {
-    "sapl.liberatosalzano.rs.leg.br": null
+    "sapl.liberatosalzano.rs.leg.br": {
+      "lido_em": "2026-11-11T23:45:18.519Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 19,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 10,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 388,
+    "proposicoes": 399,
     "normas": 294,
     "sessoes": 198,
     "itens_pauta": 776,
@@ -155,15 +162,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 1297,
+            "hi": 1300,
             "lo": 900,
-            "n": 388,
+            "n": 391,
             "lo_data": "2023-02-03"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1263
+        "total_fonte": 1266
       },
       "normajuridica": {
         "faixas": [
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T13:38:38.687Z",
       "autores": "2026-11-06T13:39:39.629Z"
     },
-    "ultima_requisicao": "2026-11-10T00:53:56.636Z",
+    "ultima_requisicao": "2026-11-12T00:03:37.373Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
