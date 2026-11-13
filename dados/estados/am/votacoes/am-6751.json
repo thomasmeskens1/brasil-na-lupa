@@ -37,9 +37,12 @@
     "outros": null
   },
   "placar_origem": "totais-oficiais",
-  "conferencia_placar": null,
-  "votos_situacao": "em-coleta",
+  "conferencia_placar": "Totais do registro oficial conferem com a contagem dos 14 votos individuais.",
+  "votos_situacao": "coletados",
   "votos": [
+    {"parlamentar_id":"7","nome":"Adjuto Afonso","partido":"UNIÃO","uf":"AM","voto":"Abstenção"},
+    {"parlamentar_id":"9","nome":"Alessandra Campêlo","partido":"PSD","uf":"AM","voto":"Não Votou"},
+    {"parlamentar_id":"81","nome":"Brena Dianná","partido":"UNIÃO","uf":"AM","voto":"Não Votou"},
     {"parlamentar_id":"12","nome":"Cabo Maciel","partido":"PL","uf":"AM","voto":"Não Votou"},
     {"parlamentar_id":"71","nome":"Comandante Dan","partido":"REPUBLICANOS","uf":"AM","voto":"Não Votou"},
     {"parlamentar_id":"70","nome":"Cristiano D’Angelo","partido":"MDB","uf":"AM","voto":"Não Votou"},
@@ -58,13 +61,13 @@
     "titulo": "Registro de votação — SAPL",
     "url": "https://sapl.al.am.leg.br/api/sessao/registrovotacao/6751/",
     "orgao": "Assembleia Legislativa do Estado do Amazonas (ALEAM)",
-    "acessado_em": "2026-11-12"
+    "acessado_em": "2026-11-13"
   },
   "fonte_votos": {
     "titulo": "Votos por parlamentar — SAPL",
     "url": "https://sapl.al.am.leg.br/api/sessao/votoparlamentar/?votacao=6751",
     "orgao": "Assembleia Legislativa do Estado do Amazonas (ALEAM)",
-    "acessado_em": "2026-11-12"
+    "acessado_em": "2026-11-13"
   },
   "registro_fonte": {
     "id": 6751,
@@ -81,10 +84,18 @@
     "registrado_em": "2026-08-19T13:44:39.732034-03:00",
     "lacunas": []
   },
-  "lacunas": [
-    "Votos individuais ainda em coleta (carga incremental); não exibir como ausência."
-  ],
+  "lacunas": [],
   "votos_fonte": [
+    {
+      "parlamentar_id": 7,
+      "voto": "Abstenção",
+      "voto_id": 135267
+    },
+    {
+      "parlamentar_id": 9,
+      "voto": "Não Votou",
+      "voto_id": 135268
+    },
     {
       "parlamentar_id": 12,
       "voto": "Não Votou",
@@ -139,6 +150,11 @@
       "parlamentar_id": 79,
       "voto": "Não Votou",
       "voto_id": 135279
+    },
+    {
+      "parlamentar_id": 81,
+      "voto": "Não Votou",
+      "voto_id": 135269
     }
   ]
 }
