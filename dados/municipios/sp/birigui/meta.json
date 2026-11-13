@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-12T00:44:31.826Z",
-  "ultima_execucao": "2026-11-11T23:45:19.917Z",
+  "atualizado_em": "2026-11-13T13:13:11.216Z",
+  "ultima_execucao": "2026-11-13T13:12:59.475Z",
   "uf": "SP",
   "casa": "cm-birigui",
   "orgao": "Câmara Municipal de Birigui",
   "host": "sapl.birigui.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-11"
+    "fim": "2026-11-13"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Birigui (API REST pública)",
       "url": "https://sapl.birigui.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Birigui",
-      "acessado_em": "2026-11-11"
+      "acessado_em": "2026-11-13"
     }
   ],
   "robots": {
-    "sapl.birigui.sp.leg.br": {
-      "lido_em": "2026-11-11T23:45:19.917Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.birigui.sp.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,8 +80,8 @@
     "itens_pauta": 1520,
     "votacoes": 1200,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 412,
-      "inexistentes-na-fonte": 788
+      "inexistentes-na-fonte": 788,
+      "coletados": 412
     },
     "votos_individuais": 5607
   },
@@ -212,7 +205,7 @@
       "status_tramitacao": "2026-11-06T22:59:37.450Z",
       "autores": "2026-11-06T23:01:40.137Z"
     },
-    "ultima_requisicao": "2026-11-12T00:44:26.348Z",
+    "ultima_requisicao": "2026-11-13T13:12:59.475Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

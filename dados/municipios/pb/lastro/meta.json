@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-11T12:48:56.777Z",
-  "ultima_execucao": "2026-11-11T12:48:46.716Z",
+  "atualizado_em": "2026-11-13T13:21:08.058Z",
+  "ultima_execucao": "2026-11-13T13:12:58.352Z",
   "uf": "PB",
   "casa": "cm-lastro",
   "orgao": "Câmara Municipal de Lastro",
   "host": "sapl.lastro.pb.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-11"
+    "fim": "2026-11-13"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Lastro (API REST pública)",
       "url": "https://sapl.lastro.pb.leg.br/api/",
       "orgao": "Câmara Municipal de Lastro",
-      "acessado_em": "2026-11-11"
+      "acessado_em": "2026-11-13"
     }
   ],
   "robots": {
-    "sapl.lastro.pb.leg.br": null
+    "sapl.lastro.pb.leg.br": {
+      "lido_em": "2026-11-13T13:12:58.352Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 9,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -178,7 +185,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T13:19:21.087Z",
+      "legislaturas": "2026-11-13T13:21:08.058Z",
       "tipos_resultado": "2026-11-06T13:20:21.349Z",
       "tipos_materia": "2026-11-06T13:21:21.302Z",
       "mandatos": "2026-11-06T13:22:22.085Z",
@@ -190,7 +197,7 @@
       "status_tramitacao": "2026-11-06T13:36:37.302Z",
       "autores": "2026-11-06T13:37:37.563Z"
     },
-    "ultima_requisicao": "2026-11-11T12:48:46.716Z",
+    "ultima_requisicao": "2026-11-13T13:21:06.354Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-11T12:49:02.166Z",
-  "ultima_execucao": "2026-11-11T12:48:46.672Z",
+  "atualizado_em": "2026-11-13T14:12:01.349Z",
+  "ultima_execucao": "2026-11-13T13:12:58.319Z",
   "uf": "MG",
   "casa": "cm-lajinha",
   "orgao": "Câmara Municipal de Lajinha",
   "host": "sapl.lajinha.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-11"
+    "fim": "2026-11-13"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,29 +15,36 @@
       "titulo": "SAPL — Câmara Municipal de Lajinha (API REST pública)",
       "url": "https://sapl.lajinha.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Lajinha",
-      "acessado_em": "2026-11-11"
+      "acessado_em": "2026-11-13"
     }
   ],
   "robots": {
-    "sapl.lajinha.mg.leg.br": null
+    "sapl.lajinha.mg.leg.br": {
+      "lido_em": "2026-11-13T13:12:58.319Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 59,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
-      "desde": "2026-02-04",
+      "desde": "2025-04-09",
       "concluida": false
     },
     "votoparlamentar": {
-      "desde": "2026-04-01",
+      "desde": "2025-09-03",
       "concluida": false
     },
     "ordemdia": {
-      "desde": "2026-02-25",
+      "desde": "2025-09-03",
       "concluida": false
     },
     "expedientemateria": {
@@ -49,7 +56,7 @@
       "concluida": true
     },
     "materialegislativa": {
-      "desde": "2026-02-03",
+      "desde": "2025-09-02",
       "concluida": false
     },
     "normajuridica": {
@@ -74,17 +81,17 @@
   "contagens": {
     "parlamentares": 11,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 294,
+    "proposicoes": 485,
     "normas": 103,
     "sessoes": 80,
-    "itens_pauta": 394,
-    "votacoes": 294,
+    "itens_pauta": 580,
+    "votacoes": 570,
     "votacoes_por_situacao_dos_votos": {
-      "em-coleta": 82,
-      "coletados": 211,
-      "inexistentes-na-fonte": 1
+      "coletados": 465,
+      "inexistentes-na-fonte": 1,
+      "em-coleta": 104
     },
-    "votos_individuais": 2139
+    "votos_individuais": 4929
   },
   "cursor": {
     "fluxos": {
@@ -92,9 +99,9 @@
         "faixas": [
           {
             "hi": 1398,
-            "lo": 1095,
-            "n": 294,
-            "lo_data": "2026-02-04"
+            "lo": 819,
+            "n": 570,
+            "lo_data": "2025-04-09"
           }
         ],
         "concluido": false,
@@ -105,9 +112,9 @@
         "faixas": [
           {
             "hi": 13033,
-            "lo": 10873,
-            "n": 2139,
-            "lo_data": "2026-04-01"
+            "lo": 7986,
+            "n": 4929,
+            "lo_data": "2025-09-03"
           }
         ],
         "concluido": false,
@@ -118,9 +125,9 @@
         "faixas": [
           {
             "hi": 1710,
-            "lo": 1339,
-            "n": 294,
-            "lo_data": "2026-02-25"
+            "lo": 1092,
+            "n": 480,
+            "lo_data": "2025-09-03"
           }
         ],
         "concluido": false,
@@ -156,15 +163,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 1465,
-            "lo": 1163,
-            "n": 294,
-            "lo_data": "2026-02-03"
+            "hi": 1467,
+            "lo": 971,
+            "n": 485,
+            "lo_data": "2025-09-02"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 1420
+        "total_fonte": 1422
       },
       "normajuridica": {
         "faixas": [
@@ -194,7 +201,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T13:19:18.880Z",
+      "legislaturas": "2026-11-13T13:32:21.272Z",
       "tipos_resultado": "2026-11-06T13:20:20.947Z",
       "tipos_materia": "2026-11-06T13:21:20.511Z",
       "mandatos": "2026-11-06T13:22:23.115Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T13:36:37.078Z",
       "autores": "2026-11-06T13:37:37.219Z"
     },
-    "ultima_requisicao": "2026-11-11T12:48:46.672Z",
+    "ultima_requisicao": "2026-11-13T14:11:57.146Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

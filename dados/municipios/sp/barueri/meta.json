@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-12T00:43:28.408Z",
-  "ultima_execucao": "2026-11-11T23:45:19.858Z",
+  "atualizado_em": "2026-11-13T13:13:11.750Z",
+  "ultima_execucao": "2026-11-13T13:12:59.423Z",
   "uf": "SP",
   "casa": "cm-barueri",
   "orgao": "Câmara Municipal de Barueri",
   "host": "sapl.barueri.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-11"
+    "fim": "2026-11-13"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Barueri (API REST pública)",
       "url": "https://sapl.barueri.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Barueri",
-      "acessado_em": "2026-11-11"
+      "acessado_em": "2026-11-13"
     }
   ],
   "robots": {
-    "sapl.barueri.sp.leg.br": {
-      "lido_em": "2026-11-11T23:45:19.858Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.barueri.sp.leg.br": null
   },
   "execucao": {
-    "requisicoes": 58,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,8 +80,8 @@
     "itens_pauta": 5541,
     "votacoes": 400,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 105,
-      "inexistentes-na-fonte": 295
+      "inexistentes-na-fonte": 295,
+      "coletados": 105
     },
     "votos_individuais": 2100
   },
@@ -212,7 +205,7 @@
       "status_tramitacao": "2026-11-06T22:59:37.450Z",
       "autores": "2026-11-06T23:02:40.550Z"
     },
-    "ultima_requisicao": "2026-11-12T00:43:25.125Z",
+    "ultima_requisicao": "2026-11-13T13:12:59.423Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

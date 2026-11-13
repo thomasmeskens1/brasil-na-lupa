@@ -28,15 +28,16 @@
   "resultado_oficial": "Aprovado",
   "resultado_pauta": "Aprovado",
   "observacao_oficial": null,
-  "tipo": "simbolica",
-  "placar": null,
-  "placar_origem": null,
-  "conferencia_placar": null,
-  "totais_registrados": {
+  "tipo": "nominal",
+  "placar": {
     "sim": 14,
     "nao": 0,
-    "abstencao": 0
+    "abstencao": 0,
+    "obstrucao": null,
+    "outros": null
   },
+  "placar_origem": "totais-oficiais",
+  "conferencia_placar": null,
   "votos_situacao": "inexistentes-na-fonte",
   "votos": [],
   "registrado_em": "2026-11-11T11:48:19.076812-03:00",
@@ -45,13 +46,13 @@
     "titulo": "Registro de votação — SAPL",
     "url": "https://sapl.parauapebas.pa.leg.br/api/sessao/registrovotacao/8784/",
     "orgao": "Câmara Municipal de Parauapébas",
-    "acessado_em": "2026-11-11"
+    "acessado_em": "2026-11-13"
   },
   "fonte_votos": {
     "titulo": "Votos por parlamentar — SAPL",
     "url": "https://sapl.parauapebas.pa.leg.br/api/sessao/votoparlamentar/?votacao=8784",
     "orgao": "Câmara Municipal de Parauapébas",
-    "acessado_em": "2026-11-11"
+    "acessado_em": "2026-11-13"
   },
   "registro_fonte": {
     "id": 8784,
@@ -69,7 +70,7 @@
     "lacunas": []
   },
   "lacunas": [
-    "Votação simbólica: voto individual — Informação não disponível em fonte oficial. Os números lançados no registro ficam em \"totais_registrados\" e não são votos de vereadores."
+    "Voto individual: Informação não disponível em fonte oficial (votação nominal sem registro de voto por vereador no SAPL)."
   ],
   "votos_fonte": []
 }

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-12T00:44:31.489Z",
-  "ultima_execucao": "2026-11-11T23:45:19.966Z",
+  "atualizado_em": "2026-11-13T13:13:10.823Z",
+  "ultima_execucao": "2026-11-13T13:12:59.519Z",
   "uf": "SP",
   "casa": "cm-ibiuna",
   "orgao": "Câmara Municipal de Ibiúna",
   "host": "sapl.ibiuna.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-11"
+    "fim": "2026-11-13"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Ibiúna (API REST pública)",
       "url": "https://sapl.ibiuna.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Ibiúna",
-      "acessado_em": "2026-11-11"
+      "acessado_em": "2026-11-13"
     }
   ],
   "robots": {
-    "sapl.ibiuna.sp.leg.br": {
-      "lido_em": "2026-11-11T23:45:19.966Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.ibiuna.sp.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,10 +80,10 @@
     "itens_pauta": 3186,
     "votacoes": 1012,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 454,
+      "em-coleta": 25,
       "inexistentes-na-fonte": 525,
-      "nao-se-aplica": 8,
-      "em-coleta": 25
+      "coletados": 454,
+      "nao-se-aplica": 8
     },
     "votos_individuais": 6664
   },
@@ -214,7 +207,7 @@
       "status_tramitacao": "2026-11-06T22:59:37.860Z",
       "autores": "2026-11-06T23:01:39.727Z"
     },
-    "ultima_requisicao": "2026-11-12T00:44:26.347Z",
+    "ultima_requisicao": "2026-11-13T13:12:59.519Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
