@@ -1,6 +1,6 @@
 {
-  "atualizado_em": "2026-11-12T19:24:24.616Z",
-  "verificado_em": "2026-11-12T19:24:24.616Z",
+  "atualizado_em": "2026-11-13T00:34:03.357Z",
+  "verificado_em": "2026-11-13T00:34:03.357Z",
   "periodo": {
     "inicio": "2026-09-13",
     "fim": "2026-12-12",
@@ -25,10 +25,9 @@
       "senado": {
         "sessoes": 57,
         "por_situacao": {
-          "encerrada": 23,
+          "encerrada": 25,
           "não realizada": 3,
           "cancelada": 1,
-          "não informado": 2,
           "agendada": 28
         },
         "por_tipo": {
@@ -50,13 +49,13 @@
     },
     "sessoes": 96,
     "arquivos_de_pauta": 69,
-    "itens_de_pauta": 261,
+    "itens_de_pauta": 265,
     "itens_por_desfecho": {
-      "aprovado": 135,
-      "não informado": 26,
-      "não votado": 93,
+      "aprovado": 137,
+      "não informado": 19,
+      "não votado": 100,
       "adiado": 1,
-      "retirado": 6
+      "retirado": 8
     }
   },
   "regras": {
@@ -126,11 +125,14 @@
     "Relator: Câmara, campo \"relator\" da pauta; Senado, nome citado no texto do parecer que acompanha o item (\"Relator: Senador …\"). Sem isso, \"Informação não disponível em fonte oficial\".",
     "Arquivos de pauta de dias que saíram da janela não são apagados; sessoes.json lista só a janela atual.",
     "Câmara: a hora vem de \"dataHoraInicio\" da lista de eventos do Plenário. O detalhe do evento (/eventos/{id}) às vezes traz outro horário (ex.: evento 83066: 15:12 na lista, 10:00 no detalhe); a fonte não explica a diferença e o coletor não escolhe entre os dois além de usar a lista.",
-    "Senado: a página oficial da sessão mostra no resultado só os itens apreciados; itens \"Não apreciado\" constam da pauta dos dados abertos, mas podem não aparecer na página."
+    "Senado: a página oficial da sessão mostra no resultado só os itens apreciados; itens \"Não apreciado\" constam da pauta dos dados abertos, mas podem não aparecer na página.",
+    "Coleta incompleta: mantidas as sessões anteriores de camara."
   ],
-  "falhas": [],
+  "falhas": [
+    "Câmara: coleta não concluída (fetch failed); mantidas as sessões da coleta anterior"
+  ],
   "execucao": {
-    "requisicoes": 136,
-    "retentativas": 0
+    "requisicoes": 97,
+    "retentativas": 4
   }
 }
