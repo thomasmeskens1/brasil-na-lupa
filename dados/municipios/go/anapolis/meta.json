@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-12T14:50:03.450Z",
-  "ultima_execucao": "2026-11-12T13:50:54.902Z",
+  "atualizado_em": "2026-11-13T22:57:14.353Z",
+  "ultima_execucao": "2026-11-13T22:56:56.093Z",
   "uf": "GO",
   "casa": "cm-anapolis",
   "orgao": "Câmara Municipal de Anápolis",
   "host": "sapl.anapolis.go.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-12"
+    "fim": "2026-11-13"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Anápolis (API REST pública)",
       "url": "https://sapl.anapolis.go.leg.br/api/",
       "orgao": "Câmara Municipal de Anápolis",
-      "acessado_em": "2026-11-12"
+      "acessado_em": "2026-11-13"
     }
   ],
   "robots": {
-    "sapl.anapolis.go.leg.br": {
-      "lido_em": "2026-11-12T13:50:54.902Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.anapolis.go.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,9 +80,9 @@
     "itens_pauta": 3308,
     "votacoes": 2139,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 478,
+      "em-coleta": 57,
       "inexistentes-na-fonte": 1604,
-      "em-coleta": 57
+      "coletados": 478
     },
     "votos_individuais": 9016
   },
@@ -213,7 +206,7 @@
       "status_tramitacao": "2026-11-05T17:15:07.625Z",
       "autores": "2026-11-05T17:16:10.096Z"
     },
-    "ultima_requisicao": "2026-11-12T14:49:58.390Z",
+    "ultima_requisicao": "2026-11-13T22:56:56.093Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-11T23:45:31.421Z",
-  "ultima_execucao": "2026-11-11T23:45:21.237Z",
+  "atualizado_em": "2026-11-13T23:08:08.409Z",
+  "ultima_execucao": "2026-11-13T22:56:55.748Z",
   "uf": "RN",
   "casa": "cm-alexandria",
   "orgao": "Câmara Municipal de Alexandria",
   "host": "sapl.alexandria.rn.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-11"
+    "fim": "2026-11-13"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Alexandria (API REST pública)",
       "url": "https://sapl.alexandria.rn.leg.br/api/",
       "orgao": "Câmara Municipal de Alexandria",
-      "acessado_em": "2026-11-11"
+      "acessado_em": "2026-11-13"
     }
   ],
   "robots": {
-    "sapl.alexandria.rn.leg.br": null
+    "sapl.alexandria.rn.leg.br": {
+      "lido_em": "2026-11-13T22:56:55.748Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,9 +81,9 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 480,
-    "normas": 207,
-    "sessoes": 44,
+    "proposicoes": 490,
+    "normas": 209,
+    "sessoes": 45,
     "itens_pauta": 77,
     "votacoes": 37,
     "votacoes_por_situacao_dos_votos": {
@@ -141,41 +148,41 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 46,
+            "hi": 47,
             "lo": 3,
-            "n": 44,
+            "n": 45,
             "lo_data": "2021-02-16"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 44
+        "total_fonte": 45
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 499,
+            "hi": 509,
             "lo": 3,
-            "n": 480,
+            "n": 490,
             "lo_data": "2021-02-16"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 480
+        "total_fonte": 490
       },
       "normajuridica": {
         "faixas": [
           {
-            "hi": 547,
+            "hi": 549,
             "lo": 344,
-            "n": 203,
+            "n": 205,
             "lo_data": "2015-06-02"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 544
+        "total_fonte": 546
       },
       "tramitacao": {
         "faixas": [
@@ -192,7 +199,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-05T16:55:44.467Z",
+      "legislaturas": "2026-11-13T23:08:08.409Z",
       "tipos_resultado": "2026-11-05T16:56:44.410Z",
       "tipos_materia": "2026-11-05T16:57:45.710Z",
       "mandatos": "2026-11-05T16:58:46.754Z",
@@ -204,7 +211,7 @@
       "status_tramitacao": "2026-11-05T17:13:01.944Z",
       "autores": "2026-11-05T17:14:03.335Z"
     },
-    "ultima_requisicao": "2026-11-11T23:45:21.237Z",
+    "ultima_requisicao": "2026-11-13T23:08:06.749Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
