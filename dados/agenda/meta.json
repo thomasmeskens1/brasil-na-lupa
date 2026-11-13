@@ -1,10 +1,10 @@
 {
-  "atualizado_em": "2026-11-13T00:34:03.357Z",
-  "verificado_em": "2026-11-13T00:34:03.357Z",
+  "atualizado_em": "2026-11-13T06:58:15.577Z",
+  "verificado_em": "2026-11-13T06:58:15.577Z",
   "periodo": {
-    "inicio": "2026-09-13",
-    "fim": "2026-12-12",
-    "referencia": "2026-11-12",
+    "inicio": "2026-09-14",
+    "fim": "2026-12-13",
+    "referencia": "2026-11-13",
     "regra": "últimos 60 dias e próximos 30 dias"
   },
   "tempo_real": false,
@@ -86,37 +86,37 @@
       "titulo": "Câmara dos Deputados: eventos do Plenário (órgão 180)",
       "url": "https://dadosabertos.camara.leg.br/api/v2/eventos?idOrgao=180",
       "orgao": "Câmara dos Deputados",
-      "acessado_em": "2026-11-12"
+      "acessado_em": "2026-11-13"
     },
     {
       "titulo": "Câmara dos Deputados: pauta do evento",
       "url": "https://dadosabertos.camara.leg.br/api/v2/eventos/{id}/pauta",
       "orgao": "Câmara dos Deputados",
-      "acessado_em": "2026-11-12"
+      "acessado_em": "2026-11-13"
     },
     {
       "titulo": "Câmara dos Deputados: votações do evento",
       "url": "https://dadosabertos.camara.leg.br/api/v2/eventos/{id}/votacoes",
       "orgao": "Câmara dos Deputados",
-      "acessado_em": "2026-11-12"
+      "acessado_em": "2026-11-13"
     },
     {
       "titulo": "Senado Federal: agenda do mês nos Plenários do Senado e do Congresso",
       "url": "https://legis.senado.leg.br/dadosabertos/plenario/agenda/mes/{AAAAMMDD}",
       "orgao": "Senado Federal",
-      "acessado_em": "2026-11-12"
+      "acessado_em": "2026-11-13"
     },
     {
       "titulo": "Senado Federal: detalhes e pauta do encontro do Plenário",
       "url": "https://legis.senado.leg.br/dadosabertos/plenario/encontro/{codigo}/pauta",
       "orgao": "Senado Federal",
-      "acessado_em": "2026-11-12"
+      "acessado_em": "2026-11-13"
     },
     {
       "titulo": "Senado Federal: resultado do mês das sessões plenárias",
       "url": "https://legis.senado.leg.br/dadosabertos/plenario/resultado/mes/{AAAAMMDD}",
       "orgao": "Senado Federal",
-      "acessado_em": "2026-11-12"
+      "acessado_em": "2026-11-13"
     }
   ],
   "observacoes": [
@@ -125,14 +125,11 @@
     "Relator: Câmara, campo \"relator\" da pauta; Senado, nome citado no texto do parecer que acompanha o item (\"Relator: Senador …\"). Sem isso, \"Informação não disponível em fonte oficial\".",
     "Arquivos de pauta de dias que saíram da janela não são apagados; sessoes.json lista só a janela atual.",
     "Câmara: a hora vem de \"dataHoraInicio\" da lista de eventos do Plenário. O detalhe do evento (/eventos/{id}) às vezes traz outro horário (ex.: evento 83066: 15:12 na lista, 10:00 no detalhe); a fonte não explica a diferença e o coletor não escolhe entre os dois além de usar a lista.",
-    "Senado: a página oficial da sessão mostra no resultado só os itens apreciados; itens \"Não apreciado\" constam da pauta dos dados abertos, mas podem não aparecer na página.",
-    "Coleta incompleta: mantidas as sessões anteriores de camara."
+    "Senado: a página oficial da sessão mostra no resultado só os itens apreciados; itens \"Não apreciado\" constam da pauta dos dados abertos, mas podem não aparecer na página."
   ],
-  "falhas": [
-    "Câmara: coleta não concluída (fetch failed); mantidas as sessões da coleta anterior"
-  ],
+  "falhas": [],
   "execucao": {
-    "requisicoes": 97,
-    "retentativas": 4
+    "requisicoes": 136,
+    "retentativas": 0
   }
 }
