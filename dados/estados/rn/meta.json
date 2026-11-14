@@ -1,6 +1,6 @@
 {
-  "atualizado_em": "2026-11-13T19:21:38.220Z",
-  "ultima_execucao": "2026-11-13T19:21:38.220Z",
+  "atualizado_em": "2026-11-14T18:03:08.932Z",
+  "ultima_execucao": "2026-11-14T18:03:08.932Z",
   "uf": "RN",
   "casa": "alrn",
   "periodo": {
@@ -11,10 +11,10 @@
       2023
     ],
     "inicio_cobertura": "2023-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
-  "duracao_s": 301,
+  "duracao_s": 446,
   "orcamento_min": 20,
   "contagens": {
     "parlamentares": {
@@ -60,70 +60,13 @@
       }
     },
     "votacoes_nesta_execucao": {
-      "processos_na_lista": 2003,
-      "processos_consultados": 43,
-      "votacoes_gravadas": 45,
-      "puladas_sem_mudanca": 1384,
-      "sem_votos_conferidos": 17
+      "processos_na_lista": 0,
+      "processos_consultados": 0,
+      "votacoes_gravadas": 0,
+      "puladas_sem_mudanca": 0,
+      "sem_votos_conferidos": 0
     },
-    "proposicoes_nesta_execucao": {
-      "2023": {
-        "processos_no_ano": 4392,
-        "no_indice": 630,
-        "por_sigla": {
-          "MSG": 2,
-          "PDL": 1,
-          "PEC": 2,
-          "PL": 512,
-          "PLC": 29,
-          "PRES": 84
-        },
-        "situacao_consultada_nesta_execucao": 0,
-        "sem_situacao": 630
-      },
-      "2024": {
-        "processos_no_ano": 3811,
-        "no_indice": 662,
-        "por_sigla": {
-          "MSG": 6,
-          "PEC": 1,
-          "PL": 550,
-          "PLC": 30,
-          "PRES": 64,
-          "VET": 11
-        },
-        "situacao_consultada_nesta_execucao": 0,
-        "sem_situacao": 662
-      },
-      "2025": {
-        "processos_no_ano": 4352,
-        "no_indice": 742,
-        "por_sigla": {
-          "MSG": 4,
-          "PEC": 1,
-          "PL": 661,
-          "PLC": 26,
-          "PRES": 23,
-          "VET": 27
-        },
-        "situacao_consultada_nesta_execucao": 359,
-        "sem_situacao": 35
-      },
-      "2026": {
-        "processos_no_ano": 3380,
-        "no_indice": 498,
-        "por_sigla": {
-          "MSG": 2,
-          "PEC": 2,
-          "PL": 444,
-          "PLC": 22,
-          "PRES": 11,
-          "VET": 17
-        },
-        "situacao_consultada_nesta_execucao": 41,
-        "sem_situacao": 0
-      }
-    },
+    "proposicoes_nesta_execucao": {},
     "normas_por_ano": {
       "2023": {
         "total": 386,
@@ -154,33 +97,33 @@
         }
       }
     },
-    "requisicoes": 549
+    "requisicoes": 23
   },
   "fontes": [
     {
       "titulo": "API eLegis — Transparência Legislativa da ALRN",
       "url": "https://api-transparencialegislativa.al.rn.leg.br/elegis-api-transp-legislativa",
       "orgao": "Assembleia Legislativa do Estado do Rio Grande do Norte (ALRN)",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-14"
     },
     {
       "titulo": "Transparência Legislativa da ALRN",
       "url": "https://transparencialegislativa.al.rn.leg.br",
       "orgao": "Assembleia Legislativa do Estado do Rio Grande do Norte (ALRN)",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-14"
     },
     {
       "titulo": "Legislação — portal da ALRN",
       "url": "https://www.al.rn.leg.br/legislacao/leis-ordinarias",
       "orgao": "Assembleia Legislativa do Estado do Rio Grande do Norte (ALRN)",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
     "api-transparencialegislativa.al.rn.leg.br": {
       "url": "https://api-transparencialegislativa.al.rn.leg.br/robots.txt",
       "status": 404,
-      "lido_em": "2026-11-13T19:16:37.415Z",
+      "lido_em": "2026-11-14T17:55:42.945Z",
       "crawl_delay_s": null,
       "disallow": [],
       "allow": [],
@@ -189,7 +132,7 @@
     "transparencialegislativa.al.rn.leg.br": {
       "url": "https://transparencialegislativa.al.rn.leg.br/robots.txt",
       "status": 200,
-      "lido_em": "2026-11-13T19:16:38.745Z",
+      "lido_em": "2026-11-14T17:55:44.516Z",
       "crawl_delay_s": null,
       "disallow": [],
       "allow": [],
@@ -198,7 +141,7 @@
     "www.al.rn.leg.br": {
       "url": "https://www.al.rn.leg.br/robots.txt",
       "status": 200,
-      "lido_em": "2026-11-13T19:16:40.013Z",
+      "lido_em": "2026-11-14T17:55:46.012Z",
       "crawl_delay_s": null,
       "disallow": [],
       "allow": [],
@@ -217,8 +160,7 @@
     "Índice de proposições por ano do processo (filtro \"ano\" da fonte); entram PL, PLC, PEC, PDL, PRES, VET e Mensagens. Situação = última tramitação, consultada em rodízio (no máximo RN_MAX_TRAMITACOES por execução; padrão 400).",
     "Leis: lista oficial do portal da ALRN com o PDF de cada lei. O serviço privado leisestaduais.com.br, linkado no portal, não é usado.",
     "Decretos do Governador: o Diário Oficial do RN só publica PDF diário, sem fonte estruturada; não coletados nesta versão.",
-    "Pendências desta execução: proposições 2025: 35 sem situação (tramitação) ainda; entram nas próximas execuções | proposições 2024: 662 sem situação (tramitação) ainda; entram nas próximas execuções | proposições 2023: 630 sem situação (tramitação) ainda; entram nas próximas execuções",
-    "Falhas nesta execução: votações: HTTP 500 em https://api-transparencialegislativa.al.rn.leg.br/elegis-api-transp-legislativa/processo/37879/detalhamento-votacao/2464"
+    "Falhas nesta execução: parlamentares: HTTP 500 em https://api-transparencialegislativa.al.rn.leg.br/elegis-api-transp-legislativa/parlamentar | votações: HTTP 500 em https://api-transparencialegislativa.al.rn.leg.br/elegis-api-transp-legislativa/processo/ultimas-votacoes?pagina=0&tamanhoPagina=200 | proposições 2026: HTTP 500 em https://api-transparencialegislativa.al.rn.leg.br/elegis-api-transp-legislativa/processo?pagina=0&tamanhoPagina=500&ano=2026 | leis: HTTP 500 em https://www.al.rn.leg.br/legislacao/leis-ordinarias"
   ],
   "cursor": {
     "votacoes_por_processo": {
