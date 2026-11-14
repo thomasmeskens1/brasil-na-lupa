@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-12T13:51:12.434Z",
-  "ultima_execucao": "2026-11-12T13:50:56.941Z",
+  "atualizado_em": "2026-11-14T12:37:54.743Z",
+  "ultima_execucao": "2026-11-14T12:18:32.228Z",
   "uf": "GO",
   "casa": "cm-campinorte",
   "orgao": "Câmara Municipal de Campinorte",
   "host": "sapl.campinorte.go.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-12"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Campinorte (API REST pública)",
       "url": "https://sapl.campinorte.go.leg.br/api/",
       "orgao": "Câmara Municipal de Campinorte",
-      "acessado_em": "2026-11-12"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.campinorte.go.leg.br": null
+    "sapl.campinorte.go.leg.br": {
+      "lido_em": "2026-11-14T12:18:32.228Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 390,
+    "proposicoes": 398,
     "normas": 69,
     "sessoes": 85,
     "itens_pauta": 153,
@@ -193,7 +200,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:17.172Z",
+      "legislaturas": "2026-11-14T12:37:54.743Z",
       "tipos_resultado": "2026-11-06T10:39:17.766Z",
       "tipos_materia": "2026-11-06T10:40:21.211Z",
       "mandatos": "2026-11-06T10:41:20.592Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T10:55:33.139Z",
       "autores": "2026-11-06T10:56:35.670Z"
     },
-    "ultima_requisicao": "2026-11-12T13:50:56.941Z",
+    "ultima_requisicao": "2026-11-14T12:37:54.154Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

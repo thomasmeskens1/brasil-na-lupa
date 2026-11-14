@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-12T13:51:12.378Z",
-  "ultima_execucao": "2026-11-12T13:50:56.930Z",
+  "atualizado_em": "2026-11-14T12:36:55.774Z",
+  "ultima_execucao": "2026-11-14T12:18:32.203Z",
   "uf": "MG",
   "casa": "cm-campina-verde",
   "orgao": "Câmara Municipal de Campina Verde",
   "host": "sapl.campinaverde.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-12"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Campina Verde (API REST pública)",
       "url": "https://sapl.campinaverde.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Campina Verde",
-      "acessado_em": "2026-11-12"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.campinaverde.mg.leg.br": null
+    "sapl.campinaverde.mg.leg.br": {
+      "lido_em": "2026-11-14T12:18:32.203Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 19,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 11,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 206,
+    "proposicoes": 214,
     "normas": 48,
     "sessoes": 198,
     "itens_pauta": 86,
@@ -186,7 +193,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:16.980Z",
+      "legislaturas": "2026-11-14T12:36:55.774Z",
       "tipos_resultado": "2026-11-06T10:39:17.965Z",
       "tipos_materia": "2026-11-06T10:40:20.616Z",
       "mandatos": "2026-11-06T10:41:20.388Z",
@@ -198,7 +205,7 @@
       "status_tramitacao": "2026-11-06T10:55:32.325Z",
       "autores": "2026-11-06T10:56:34.437Z"
     },
-    "ultima_requisicao": "2026-11-12T13:50:56.930Z",
+    "ultima_requisicao": "2026-11-14T12:36:53.156Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

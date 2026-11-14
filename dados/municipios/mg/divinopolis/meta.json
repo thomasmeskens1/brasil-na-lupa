@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-12T23:54:21.262Z",
-  "ultima_execucao": "2026-11-12T22:55:15.066Z",
+  "atualizado_em": "2026-11-14T12:18:47.756Z",
+  "ultima_execucao": "2026-11-14T12:18:33.703Z",
   "uf": "MG",
   "casa": "cm-divinopolis",
   "orgao": "Câmara Municipal de Divinópolis",
   "host": "sapl.divinopolis.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-12"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Divinópolis (API REST pública)",
       "url": "https://sapl.divinopolis.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Divinópolis",
-      "acessado_em": "2026-11-12"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.divinopolis.mg.leg.br": {
-      "lido_em": "2026-11-12T22:55:15.066Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.divinopolis.mg.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,9 +80,9 @@
     "itens_pauta": 2430,
     "votacoes": 1764,
     "votacoes_por_situacao_dos_votos": {
-      "inexistentes-na-fonte": 1386,
+      "em-coleta": 38,
       "coletados": 340,
-      "em-coleta": 38
+      "inexistentes-na-fonte": 1386
     },
     "votos_individuais": 5432
   },
@@ -213,7 +206,7 @@
       "status_tramitacao": "2026-11-06T11:01:53.613Z",
       "autores": "2026-11-06T11:04:53.652Z"
     },
-    "ultima_requisicao": "2026-11-12T23:54:15.083Z",
+    "ultima_requisicao": "2026-11-14T12:18:33.703Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
