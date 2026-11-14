@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-12T22:55:31.437Z",
-  "ultima_execucao": "2026-11-12T22:55:15.893Z",
+  "atualizado_em": "2026-11-14T22:02:39.319Z",
+  "ultima_execucao": "2026-11-14T21:43:16.715Z",
   "uf": "PR",
   "casa": "cm-kalore",
   "orgao": "Câmara Municipal de Kaloré",
   "host": "sapl.kalore.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-12"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Kaloré (API REST pública)",
       "url": "https://sapl.kalore.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Kaloré",
-      "acessado_em": "2026-11-12"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.kalore.pr.leg.br": null
+    "sapl.kalore.pr.leg.br": {
+      "lido_em": "2026-11-14T21:43:16.715Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -76,13 +83,13 @@
     "parlamentares_em_exercicio": 11,
     "proposicoes": 389,
     "normas": 16,
-    "sessoes": 195,
-    "itens_pauta": 406,
-    "votacoes": 388,
+    "sessoes": 196,
+    "itens_pauta": 415,
+    "votacoes": 389,
     "votacoes_por_situacao_dos_votos": {
-      "em-coleta": 29,
-      "inexistentes-na-fonte": 354,
-      "coletados": 5
+      "inexistentes-na-fonte": 363,
+      "coletados": 5,
+      "em-coleta": 21
     },
     "votos_individuais": 40
   },
@@ -91,15 +98,15 @@
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 462,
+            "hi": 463,
             "lo": 73,
-            "n": 388,
+            "n": 389,
             "lo_data": "2023-12-12"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 455
+        "total_fonte": 456
       },
       "votoparlamentar": {
         "faixas": [
@@ -117,15 +124,15 @@
       "ordemdia": {
         "faixas": [
           {
-            "hi": 601,
+            "hi": 602,
             "lo": 189,
-            "n": 388,
+            "n": 389,
             "lo_data": "2024-02-27"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 576
+        "total_fonte": 577
       },
       "expedientemateria": {
         "faixas": [
@@ -143,15 +150,15 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 201,
+            "hi": 202,
             "lo": 1,
-            "n": 195,
+            "n": 196,
             "lo_data": "2013-08-14"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 195
+        "total_fonte": 196
       },
       "materialegislativa": {
         "faixas": [
@@ -182,19 +189,19 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 1520,
+            "hi": 1521,
             "lo": 303,
-            "n": 1176,
+            "n": 1177,
             "lo_data": "2024-04-30"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1467
+        "total_fonte": 1468
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T13:19:17.093Z",
+      "legislaturas": "2026-11-14T22:02:39.318Z",
       "tipos_resultado": "2026-11-06T13:20:19.352Z",
       "tipos_materia": "2026-11-06T13:21:19.298Z",
       "mandatos": "2026-11-06T13:22:19.318Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T13:36:35.231Z",
       "autores": "2026-11-06T13:37:36.197Z"
     },
-    "ultima_requisicao": "2026-11-12T22:55:15.893Z",
+    "ultima_requisicao": "2026-11-14T22:02:38.086Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

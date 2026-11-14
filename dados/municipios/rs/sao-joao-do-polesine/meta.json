@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T13:13:21.944Z",
-  "ultima_execucao": "2026-11-13T13:13:00.235Z",
+  "atualizado_em": "2026-11-14T21:54:45.572Z",
+  "ultima_execucao": "2026-11-14T21:43:19.574Z",
   "uf": "RS",
   "casa": "cm-sao-joao-do-polesine",
   "orgao": "Câmara Municipal de São João do Polêsine",
   "host": "sapl.saojoaodopolesine.rs.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de São João do Polêsine (API REST pública)",
       "url": "https://sapl.saojoaodopolesine.rs.leg.br/api/",
       "orgao": "Câmara Municipal de São João do Polêsine",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.saojoaodopolesine.rs.leg.br": null
+    "sapl.saojoaodopolesine.rs.leg.br": {
+      "lido_em": "2026-11-14T21:43:19.574Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,9 +81,9 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 291,
+    "proposicoes": 292,
     "normas": 11,
-    "sessoes": 71,
+    "sessoes": 72,
     "itens_pauta": 94,
     "votacoes": 22,
     "votacoes_por_situacao_dos_votos": {
@@ -141,28 +148,28 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 72,
+            "hi": 73,
             "lo": 1,
-            "n": 71,
+            "n": 72,
             "lo_data": "2024-10-28"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 71
+        "total_fonte": 72
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 294,
+            "hi": 295,
             "lo": 1,
-            "n": 291,
+            "n": 292,
             "lo_data": "2024-06-24"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 291
+        "total_fonte": 292
       },
       "normajuridica": {
         "faixas": [
@@ -192,7 +199,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T12:06:59.099Z",
+      "legislaturas": "2026-11-14T21:54:45.572Z",
       "tipos_resultado": "2026-11-07T12:07:59.541Z",
       "tipos_materia": "2026-11-07T12:09:01.868Z",
       "mandatos": "2026-11-07T12:10:02.581Z",
@@ -204,7 +211,7 @@
       "status_tramitacao": "2026-11-07T12:24:17.380Z",
       "autores": "2026-11-07T12:25:17.939Z"
     },
-    "ultima_requisicao": "2026-11-13T13:13:00.235Z",
+    "ultima_requisicao": "2026-11-14T21:54:34.262Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

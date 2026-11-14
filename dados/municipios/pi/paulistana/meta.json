@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T13:13:14.575Z",
-  "ultima_execucao": "2026-11-13T13:12:59.171Z",
+  "atualizado_em": "2026-11-14T22:02:45.507Z",
+  "ultima_execucao": "2026-11-14T21:43:18.149Z",
   "uf": "PI",
   "casa": "cm-paulistana",
   "orgao": "Câmara Municipal de Paulistana",
   "host": "sapl.paulistana.pi.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Paulistana (API REST pública)",
       "url": "https://sapl.paulistana.pi.leg.br/api/",
       "orgao": "Câmara Municipal de Paulistana",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.paulistana.pi.leg.br": null
+    "sapl.paulistana.pi.leg.br": {
+      "lido_em": "2026-11-14T21:43:18.149Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -77,55 +84,55 @@
     "proposicoes": 495,
     "normas": 4,
     "sessoes": 200,
-    "itens_pauta": 660,
-    "votacoes": 484,
+    "itens_pauta": 669,
+    "votacoes": 486,
     "votacoes_por_situacao_dos_votos": {
-      "inexistentes-na-fonte": 92,
-      "em-coleta": 48,
-      "coletados": 344
+      "inexistentes-na-fonte": 100,
+      "em-coleta": 40,
+      "coletados": 346
     },
-    "votos_individuais": 3496
+    "votos_individuais": 3516
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 719,
+            "hi": 721,
             "lo": 213,
-            "n": 484,
+            "n": 486,
             "lo_data": "2023-05-29"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 675
+        "total_fonte": 677
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 7309,
+            "hi": 7329,
             "lo": 3723,
-            "n": 3496,
+            "n": 3516,
             "lo_data": "2024-11-25"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 6830
+        "total_fonte": 6850
       },
       "ordemdia": {
         "faixas": [
           {
-            "hi": 823,
+            "hi": 824,
             "lo": 319,
-            "n": 491,
+            "n": 492,
             "lo_data": "2023-11-13"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 759
+        "total_fonte": 760
       },
       "expedientemateria": {
         "faixas": [
@@ -194,7 +201,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T22:46:08.871Z",
+      "legislaturas": "2026-11-14T22:02:45.507Z",
       "tipos_resultado": "2026-11-06T22:47:08.360Z",
       "tipos_materia": "2026-11-06T22:48:10.387Z",
       "mandatos": "2026-11-06T22:49:10.415Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T23:03:24.235Z",
       "autores": "2026-11-06T23:04:25.315Z"
     },
-    "ultima_requisicao": "2026-11-13T13:12:59.171Z",
+    "ultima_requisicao": "2026-11-14T22:02:43.738Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

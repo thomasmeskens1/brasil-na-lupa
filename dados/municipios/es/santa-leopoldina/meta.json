@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T13:13:17.128Z",
-  "ultima_execucao": "2026-11-13T13:12:59.769Z",
+  "atualizado_em": "2026-11-14T22:15:59.209Z",
+  "ultima_execucao": "2026-11-14T21:43:18.948Z",
   "uf": "ES",
   "casa": "cm-santa-leopoldina",
   "orgao": "Câmara Municipal de Santa Leopoldina",
   "host": "sapl.santaleopoldina.es.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Santa Leopoldina (API REST pública)",
       "url": "https://sapl.santaleopoldina.es.leg.br/api/",
       "orgao": "Câmara Municipal de Santa Leopoldina",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.santaleopoldina.es.leg.br": null
+    "sapl.santaleopoldina.es.leg.br": {
+      "lido_em": "2026-11-14T21:43:18.948Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 33,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -57,8 +64,8 @@
       "concluida": true
     },
     "tramitacao": {
-      "desde": "2025-06-02",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     }
   },
   "observacoes": [
@@ -74,8 +81,8 @@
   "contagens": {
     "parlamentares": 10,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 676,
-    "normas": 303,
+    "proposicoes": 686,
+    "normas": 306,
     "sessoes": 199,
     "itens_pauta": 842,
     "votacoes": 570,
@@ -156,45 +163,45 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 3776,
+            "hi": 3778,
             "lo": 3080,
-            "n": 660,
+            "n": 662,
             "lo_data": "2023-11-20"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 3673
+        "total_fonte": 3675
       },
       "normajuridica": {
         "faixas": [
           {
-            "hi": 2309,
+            "hi": 2312,
             "lo": 2007,
-            "n": 294,
+            "n": 297,
             "lo_data": "2022-08-10"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2281
+        "total_fonte": 2284
       },
       "tramitacao": {
         "faixas": [
           {
-            "hi": 15229,
-            "lo": 11405,
-            "n": 3705,
-            "lo_data": "2025-06-02"
+            "hi": 15239,
+            "lo": 10176,
+            "n": 4845,
+            "lo_data": "2024-12-05"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 14375
+        "total_fonte": 14385
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T12:06:52.099Z",
+      "legislaturas": "2026-11-14T22:02:48.323Z",
       "tipos_resultado": "2026-11-07T12:07:52.740Z",
       "tipos_materia": "2026-11-07T12:08:53.956Z",
       "mandatos": "2026-11-07T12:09:54.774Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-07T12:24:10.631Z",
       "autores": "2026-11-07T12:25:11.460Z"
     },
-    "ultima_requisicao": "2026-11-13T13:12:59.769Z",
+    "ultima_requisicao": "2026-11-14T22:15:56.748Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

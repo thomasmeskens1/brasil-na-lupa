@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T13:13:20.728Z",
-  "ultima_execucao": "2026-11-13T13:13:00.076Z",
+  "atualizado_em": "2026-11-14T21:53:45.968Z",
+  "ultima_execucao": "2026-11-14T21:43:19.374Z",
   "uf": "RN",
   "casa": "cm-sao-bento-do-trairi",
   "orgao": "Câmara Municipal de São Bento do Trairí",
   "host": "sapl.saobentodotrairi.rn.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de São Bento do Trairí (API REST pública)",
       "url": "https://sapl.saobentodotrairi.rn.leg.br/api/",
       "orgao": "Câmara Municipal de São Bento do Trairí",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.saobentodotrairi.rn.leg.br": null
+    "sapl.saobentodotrairi.rn.leg.br": {
+      "lido_em": "2026-11-14T21:43:19.374Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 11,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -185,7 +192,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T12:06:55.291Z",
+      "legislaturas": "2026-11-14T21:53:45.968Z",
       "tipos_resultado": "2026-11-07T12:07:56.933Z",
       "tipos_materia": "2026-11-07T12:08:57.341Z",
       "mandatos": "2026-11-07T12:09:58.577Z",
@@ -197,7 +204,7 @@
       "status_tramitacao": "2026-11-07T12:24:12.225Z",
       "autores": "2026-11-07T12:25:12.699Z"
     },
-    "ultima_requisicao": "2026-11-13T13:13:00.076Z",
+    "ultima_requisicao": "2026-11-14T21:53:33.252Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

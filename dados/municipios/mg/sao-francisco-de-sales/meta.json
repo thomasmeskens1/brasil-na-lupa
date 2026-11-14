@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T13:13:20.955Z",
-  "ultima_execucao": "2026-11-13T13:13:00.132Z",
+  "atualizado_em": "2026-11-14T22:02:52.319Z",
+  "ultima_execucao": "2026-11-14T21:43:19.448Z",
   "uf": "MG",
   "casa": "cm-sao-francisco-de-sales",
   "orgao": "Câmara Municipal de São Francisco de Sales",
   "host": "sapl.saofranciscodesales.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de São Francisco de Sales (API REST pública)",
       "url": "https://sapl.saofranciscodesales.mg.leg.br/api/",
       "orgao": "Câmara Municipal de São Francisco de Sales",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.saofranciscodesales.mg.leg.br": null
+    "sapl.saofranciscodesales.mg.leg.br": {
+      "lido_em": "2026-11-14T21:43:19.448Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 388,
+    "proposicoes": 401,
     "normas": 3,
     "sessoes": 93,
     "itens_pauta": 380,
@@ -157,15 +164,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 493,
+            "hi": 498,
             "lo": 83,
-            "n": 388,
+            "n": 393,
             "lo_data": "2015-08-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 468
+        "total_fonte": 473
       },
       "normajuridica": {
         "faixas": [
@@ -195,7 +202,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T12:06:56.688Z",
+      "legislaturas": "2026-11-14T22:02:52.319Z",
       "tipos_resultado": "2026-11-07T12:07:59.338Z",
       "tipos_materia": "2026-11-07T12:08:59.118Z",
       "mandatos": "2026-11-07T12:09:59.172Z",
@@ -207,7 +214,7 @@
       "status_tramitacao": "2026-11-07T12:24:15.223Z",
       "autores": "2026-11-07T12:25:15.953Z"
     },
-    "ultima_requisicao": "2026-11-13T13:13:00.132Z",
+    "ultima_requisicao": "2026-11-14T22:02:43.751Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

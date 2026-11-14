@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T13:13:21.664Z",
-  "ultima_execucao": "2026-11-13T13:13:00.213Z",
+  "atualizado_em": "2026-11-14T22:42:30.924Z",
+  "ultima_execucao": "2026-11-14T21:43:19.549Z",
   "uf": "SP",
   "casa": "cm-sao-joao-da-boa-vista",
   "orgao": "Câmara Municipal de São João da Boa Vista",
   "host": "sapl.saojoaodaboavista.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,33 +15,40 @@
       "titulo": "SAPL — Câmara Municipal de São João da Boa Vista (API REST pública)",
       "url": "https://sapl.saojoaodaboavista.sp.leg.br/api/",
       "orgao": "Câmara Municipal de São João da Boa Vista",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.saojoaodaboavista.sp.leg.br": null
+    "sapl.saojoaodaboavista.sp.leg.br": {
+      "lido_em": "2026-11-14T21:43:19.549Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 59,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
-      "desde": "2026-06-09",
+      "desde": "2026-02-24",
       "concluida": false
     },
     "votoparlamentar": {
-      "desde": "2026-06-29",
+      "desde": "2026-03-03",
       "concluida": false
     },
     "ordemdia": {
-      "desde": "2026-06-22",
+      "desde": "2026-03-02",
       "concluida": false
     },
     "expedientemateria": {
-      "desde": "2026-08-03",
+      "desde": "2026-03-09",
       "concluida": false
     },
     "sessaoplenaria": {
@@ -49,7 +56,7 @@
       "concluida": false
     },
     "materialegislativa": {
-      "desde": "2026-07-20",
+      "desde": "2026-02-27",
       "concluida": false
     },
     "normajuridica": {
@@ -74,97 +81,97 @@
   "contagens": {
     "parlamentares": 19,
     "parlamentares_em_exercicio": 14,
-    "proposicoes": 571,
-    "normas": 156,
-    "sessoes": 100,
-    "itens_pauta": 670,
-    "votacoes": 480,
+    "proposicoes": 1400,
+    "normas": 159,
+    "sessoes": 101,
+    "itens_pauta": 1422,
+    "votacoes": 873,
     "votacoes_por_situacao_dos_votos": {
-      "em-coleta": 101,
-      "coletados": 96,
-      "inexistentes-na-fonte": 283
+      "coletados": 198,
+      "inexistentes-na-fonte": 598,
+      "em-coleta": 77
     },
-    "votos_individuais": 1440
+    "votos_individuais": 3007
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 22902,
-            "lo": 22406,
-            "n": 480,
-            "lo_data": "2026-06-09"
+            "hi": 22929,
+            "lo": 22037,
+            "n": 873,
+            "lo_data": "2026-02-24"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 22160
+        "total_fonte": 22187
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 27806,
-            "lo": 26218,
-            "n": 1440,
-            "lo_data": "2026-06-29"
+            "hi": 27911,
+            "lo": 24696,
+            "n": 3007,
+            "lo_data": "2026-03-03"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 27164
+        "total_fonte": 27269
       },
       "ordemdia": {
         "faixas": [
           {
-            "hi": 4293,
-            "lo": 4187,
-            "n": 100,
-            "lo_data": "2026-06-22"
+            "hi": 4300,
+            "lo": 4092,
+            "n": 200,
+            "lo_data": "2026-03-02"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 4044
+        "total_fonte": 4051
       },
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 20868,
-            "lo": 20292,
-            "n": 570,
-            "lo_data": "2026-08-03"
+            "hi": 20904,
+            "lo": 19665,
+            "n": 1222,
+            "lo_data": "2026-03-09"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 20222
+        "total_fonte": 20258
       },
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 738,
+            "hi": 739,
             "lo": 638,
-            "n": 100,
+            "n": 101,
             "lo_data": "2025-03-24"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 727
+        "total_fonte": 728
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 29583,
-            "lo": 29007,
-            "n": 570,
-            "lo_data": "2026-07-20"
+            "hi": 29621,
+            "lo": 28213,
+            "n": 1400,
+            "lo_data": "2026-02-27"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 29197
+        "total_fonte": 29235
       },
       "normajuridica": {
         "faixas": [
@@ -177,7 +184,7 @@
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 12093
+        "total_fonte": 12092
       },
       "tramitacao": {
         "faixas": [
@@ -194,7 +201,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T12:06:59.224Z",
+      "legislaturas": "2026-11-14T22:03:49.485Z",
       "tipos_resultado": "2026-11-07T12:07:59.134Z",
       "tipos_materia": "2026-11-07T12:09:00.164Z",
       "mandatos": "2026-11-07T12:10:00.384Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-07T12:24:16.399Z",
       "autores": "2026-11-07T12:25:17.177Z"
     },
-    "ultima_requisicao": "2026-11-13T13:13:00.213Z",
+    "ultima_requisicao": "2026-11-14T22:42:23.185Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

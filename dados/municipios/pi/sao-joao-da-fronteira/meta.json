@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T13:13:21.840Z",
-  "ultima_execucao": "2026-11-13T13:13:00.216Z",
+  "atualizado_em": "2026-11-14T21:53:45.785Z",
+  "ultima_execucao": "2026-11-14T21:43:19.552Z",
   "uf": "PI",
   "casa": "cm-sao-joao-da-fronteira",
   "orgao": "Câmara Municipal de São João da Fronteira",
   "host": "sapl.saojoaodafronteira.pi.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de São João da Fronteira (API REST pública)",
       "url": "https://sapl.saojoaodafronteira.pi.leg.br/api/",
       "orgao": "Câmara Municipal de São João da Fronteira",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.saojoaodafronteira.pi.leg.br": null
+    "sapl.saojoaodafronteira.pi.leg.br": {
+      "lido_em": "2026-11-14T21:43:19.552Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 11,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -76,7 +83,7 @@
     "parlamentares_em_exercicio": 9,
     "proposicoes": 82,
     "normas": 64,
-    "sessoes": 36,
+    "sessoes": 37,
     "itens_pauta": 39,
     "votacoes": 18,
     "votacoes_por_situacao_dos_votos": {
@@ -141,15 +148,15 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 37,
+            "hi": 38,
             "lo": 2,
-            "n": 36,
+            "n": 37,
             "lo_data": "2025-02-21"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 36
+        "total_fonte": 37
       },
       "materialegislativa": {
         "faixas": [
@@ -185,7 +192,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T12:06:58.695Z",
+      "legislaturas": "2026-11-14T21:53:45.785Z",
       "tipos_resultado": "2026-11-07T12:08:00.928Z",
       "tipos_materia": "2026-11-07T12:09:00.541Z",
       "mandatos": "2026-11-07T12:10:00.767Z",
@@ -197,7 +204,7 @@
       "status_tramitacao": "2026-11-07T12:24:14.825Z",
       "autores": "2026-11-07T12:25:14.737Z"
     },
-    "ultima_requisicao": "2026-11-13T13:13:00.216Z",
+    "ultima_requisicao": "2026-11-14T21:53:33.260Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

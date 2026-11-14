@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-12T22:55:31.773Z",
-  "ultima_execucao": "2026-11-12T22:55:15.912Z",
+  "atualizado_em": "2026-11-14T21:51:26.102Z",
+  "ultima_execucao": "2026-11-14T21:43:16.743Z",
   "uf": "MA",
   "casa": "cm-lago-dos-rodrigues",
   "orgao": "Câmara Municipal de Lago dos Rodrigues",
   "host": "sapl.lagodosrodrigues.ma.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-12"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Lago dos Rodrigues (API REST pública)",
       "url": "https://sapl.lagodosrodrigues.ma.leg.br/api/",
       "orgao": "Câmara Municipal de Lago dos Rodrigues",
-      "acessado_em": "2026-11-12"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.lagodosrodrigues.ma.leg.br": null
+    "sapl.lagodosrodrigues.ma.leg.br": {
+      "lido_em": "2026-11-14T21:43:16.743Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 9,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -178,7 +185,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T13:19:17.284Z",
+      "legislaturas": "2026-11-14T21:51:26.102Z",
       "tipos_resultado": "2026-11-06T13:20:19.142Z",
       "tipos_materia": "2026-11-06T13:21:19.691Z",
       "mandatos": "2026-11-06T13:22:20.506Z",
@@ -190,7 +197,7 @@
       "status_tramitacao": "2026-11-06T13:36:35.286Z",
       "autores": "2026-11-06T13:37:35.370Z"
     },
-    "ultima_requisicao": "2026-11-12T22:55:15.912Z",
+    "ultima_requisicao": "2026-11-14T21:51:24.745Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

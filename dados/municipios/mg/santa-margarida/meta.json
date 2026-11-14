@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T13:13:17.834Z",
-  "ultima_execucao": "2026-11-13T13:12:59.788Z",
+  "atualizado_em": "2026-11-14T22:00:46.649Z",
+  "ultima_execucao": "2026-11-14T21:43:18.988Z",
   "uf": "MG",
   "casa": "cm-santa-margarida",
   "orgao": "Câmara Municipal de Santa Margarida",
   "host": "sapl.santamargarida.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-02",
-    "fim": "2026-11-13"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Santa Margarida (API REST pública)",
       "url": "https://sapl.santamargarida.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Santa Margarida",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.santamargarida.mg.leg.br": null
+    "sapl.santamargarida.mg.leg.br": {
+      "lido_em": "2026-11-14T21:43:18.988Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 18,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,45 +81,45 @@
   "contagens": {
     "parlamentares": 11,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 389,
+    "proposicoes": 407,
     "normas": 0,
     "sessoes": 116,
-    "itens_pauta": 790,
-    "votacoes": 388,
+    "itens_pauta": 814,
+    "votacoes": 393,
     "votacoes_por_situacao_dos_votos": {
-      "inexistentes-na-fonte": 131,
-      "em-coleta": 22,
-      "coletados": 235
+      "inexistentes-na-fonte": 139,
+      "em-coleta": 14,
+      "coletados": 240
     },
-    "votos_individuais": 2314
+    "votos_individuais": 2364
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 665,
+            "hi": 670,
             "lo": 278,
-            "n": 388,
+            "n": 393,
             "lo_data": "2023-09-05"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 632
+        "total_fonte": 637
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 6542,
+            "hi": 6592,
             "lo": 4224,
-            "n": 2314,
+            "n": 2364,
             "lo_data": "2024-12-10"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 6161
+        "total_fonte": 6211
       },
       "ordemdia": {
         "faixas": [
@@ -130,15 +137,15 @@
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 554,
+            "hi": 570,
             "lo": 159,
-            "n": 389,
+            "n": 405,
             "lo_data": "2022-10-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 522
+        "total_fonte": 538
       },
       "sessaoplenaria": {
         "faixas": [
@@ -156,15 +163,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 602,
+            "hi": 620,
             "lo": 200,
-            "n": 389,
+            "n": 407,
             "lo_data": "2023-02-14"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 573
+        "total_fonte": 591
       },
       "normajuridica": {
         "faixas": [],
@@ -175,19 +182,19 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 24,
+            "hi": 25,
             "lo": 21,
-            "n": 4,
+            "n": 5,
             "lo_data": "2021-09-30"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 4
+        "total_fonte": 5
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T12:06:52.307Z",
+      "legislaturas": "2026-11-14T22:00:46.649Z",
       "tipos_resultado": "2026-11-07T12:07:53.135Z",
       "tipos_materia": "2026-11-07T12:08:54.540Z",
       "mandatos": "2026-11-07T12:09:54.984Z",
@@ -199,7 +206,7 @@
       "status_tramitacao": "2026-11-07T12:24:10.258Z",
       "autores": "2026-11-07T12:25:10.947Z"
     },
-    "ultima_requisicao": "2026-11-13T13:12:59.788Z",
+    "ultima_requisicao": "2026-11-14T22:00:41.369Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

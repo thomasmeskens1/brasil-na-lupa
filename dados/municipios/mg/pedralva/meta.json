@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T13:13:12.271Z",
-  "ultima_execucao": "2026-11-13T13:12:59.358Z",
+  "atualizado_em": "2026-11-14T22:42:24.702Z",
+  "ultima_execucao": "2026-11-14T21:43:18.390Z",
   "uf": "MG",
   "casa": "cm-pedralva",
   "orgao": "Câmara Municipal de Pedralva",
   "host": "sapl.pedralva.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Pedralva (API REST pública)",
       "url": "https://sapl.pedralva.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Pedralva",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.pedralva.mg.leg.br": null
+    "sapl.pedralva.mg.leg.br": {
+      "lido_em": "2026-11-14T21:43:18.390Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 59,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -57,7 +64,7 @@
       "concluida": true
     },
     "tramitacao": {
-      "desde": "2025-06-16",
+      "desde": "2025-01-21",
       "concluida": false
     }
   },
@@ -74,8 +81,8 @@
   "contagens": {
     "parlamentares": 10,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 2029,
-    "normas": 301,
+    "proposicoes": 2037,
+    "normas": 304,
     "sessoes": 199,
     "itens_pauta": 1718,
     "votacoes": 1460,
@@ -169,23 +176,23 @@
       "normajuridica": {
         "faixas": [
           {
-            "hi": 1596,
+            "hi": 1599,
             "lo": 1300,
-            "n": 296,
+            "n": 299,
             "lo_data": "2023-06-30"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1582
+        "total_fonte": 1585
       },
       "tramitacao": {
         "faixas": [
           {
             "hi": 35078,
-            "lo": 26519,
-            "n": 8019,
-            "lo_data": "2025-06-16"
+            "lo": 22970,
+            "n": 11468,
+            "lo_data": "2025-01-21"
           }
         ],
         "concluido": false,
@@ -194,7 +201,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T22:46:10.283Z",
+      "legislaturas": "2026-11-14T22:02:47.328Z",
       "tipos_resultado": "2026-11-06T22:47:11.363Z",
       "tipos_materia": "2026-11-06T22:48:12.609Z",
       "mandatos": "2026-11-06T22:49:12.416Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T23:05:27.631Z",
       "autores": "2026-11-06T23:07:29.409Z"
     },
-    "ultima_requisicao": "2026-11-13T13:12:59.358Z",
+    "ultima_requisicao": "2026-11-14T22:42:23.178Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T13:13:12.174Z",
-  "ultima_execucao": "2026-11-13T13:12:59.366Z",
+  "atualizado_em": "2026-11-14T22:02:45.717Z",
+  "ultima_execucao": "2026-11-14T21:43:18.401Z",
   "uf": "MG",
   "casa": "cm-pedrinopolis",
   "orgao": "Câmara Municipal de Pedrinópolis",
   "host": "sapl.pedrinopolis.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Pedrinópolis (API REST pública)",
       "url": "https://sapl.pedrinopolis.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Pedrinópolis",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.pedrinopolis.mg.leg.br": null
+    "sapl.pedrinopolis.mg.leg.br": {
+      "lido_em": "2026-11-14T21:43:18.401Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,14 +81,14 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 222,
+    "proposicoes": 228,
     "normas": 199,
     "sessoes": 198,
-    "itens_pauta": 396,
+    "itens_pauta": 398,
     "votacoes": 199,
     "votacoes_por_situacao_dos_votos": {
-      "em-coleta": 14,
-      "inexistentes-na-fonte": 153,
+      "em-coleta": 12,
+      "inexistentes-na-fonte": 155,
       "coletados": 32
     },
     "votos_individuais": 294
@@ -194,7 +201,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T22:46:10.471Z",
+      "legislaturas": "2026-11-14T22:02:45.717Z",
       "tipos_resultado": "2026-11-06T22:47:10.559Z",
       "tipos_materia": "2026-11-06T22:48:11.781Z",
       "mandatos": "2026-11-06T22:49:12.989Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T23:03:27.240Z",
       "autores": "2026-11-06T23:04:27.918Z"
     },
-    "ultima_requisicao": "2026-11-13T13:12:59.366Z",
+    "ultima_requisicao": "2026-11-14T22:02:43.741Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

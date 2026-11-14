@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T13:13:18.062Z",
-  "ultima_execucao": "2026-11-13T13:12:59.949Z",
+  "atualizado_em": "2026-11-14T22:42:28.861Z",
+  "ultima_execucao": "2026-11-14T21:43:19.202Z",
   "uf": "MG",
   "casa": "cm-santana-da-vargem",
   "orgao": "Câmara Municipal de Santana da Vargem",
   "host": "sapl.santanadavargem.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Santana da Vargem (API REST pública)",
       "url": "https://sapl.santanadavargem.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Santana da Vargem",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.santanadavargem.mg.leg.br": null
+    "sapl.santanadavargem.mg.leg.br": {
+      "lido_em": "2026-11-14T21:43:19.202Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 59,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -57,7 +64,7 @@
       "concluida": true
     },
     "tramitacao": {
-      "desde": "2026-02-02",
+      "desde": "2025-04-29",
       "concluida": false
     }
   },
@@ -74,13 +81,13 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 1821,
+    "proposicoes": 1835,
     "normas": 397,
     "sessoes": 294,
     "itens_pauta": 1316,
-    "votacoes": 744,
+    "votacoes": 746,
     "votacoes_por_situacao_dos_votos": {
-      "inexistentes-na-fonte": 590,
+      "inexistentes-na-fonte": 592,
       "coletados": 124,
       "em-coleta": 30
     },
@@ -91,15 +98,15 @@
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 1448,
+            "hi": 1450,
             "lo": 665,
-            "n": 744,
+            "n": 746,
             "lo_data": "2024-03-18"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1374
+        "total_fonte": 1376
       },
       "votoparlamentar": {
         "faixas": [
@@ -156,15 +163,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 5318,
+            "hi": 5324,
             "lo": 3511,
-            "n": 1786,
+            "n": 1792,
             "lo_data": "2024-07-22"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 5223
+        "total_fonte": 5229
       },
       "normajuridica": {
         "faixas": [
@@ -182,19 +189,19 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 21350,
-            "lo": 16334,
-            "n": 4929,
-            "lo_data": "2026-02-02"
+            "hi": 21351,
+            "lo": 12840,
+            "n": 8370,
+            "lo_data": "2025-04-29"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 20753
+        "total_fonte": 20754
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T12:06:53.697Z",
+      "legislaturas": "2026-11-14T22:02:48.918Z",
       "tipos_resultado": "2026-11-07T12:07:54.533Z",
       "tipos_materia": "2026-11-07T12:08:54.943Z",
       "mandatos": "2026-11-07T12:09:56.183Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-07T12:24:10.583Z",
       "autores": "2026-11-07T12:25:11.527Z"
     },
-    "ultima_requisicao": "2026-11-13T13:12:59.949Z",
+    "ultima_requisicao": "2026-11-14T22:42:23.179Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

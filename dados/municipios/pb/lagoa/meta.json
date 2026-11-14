@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-12T22:55:31.777Z",
-  "ultima_execucao": "2026-11-12T22:55:15.918Z",
+  "atualizado_em": "2026-11-14T21:51:25.912Z",
+  "ultima_execucao": "2026-11-14T21:43:16.747Z",
   "uf": "PB",
   "casa": "cm-lagoa",
   "orgao": "Câmara Municipal de Lagoa",
   "host": "sapl.lagoa.pb.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-12"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Lagoa (API REST pública)",
       "url": "https://sapl.lagoa.pb.leg.br/api/",
       "orgao": "Câmara Municipal de Lagoa",
-      "acessado_em": "2026-11-12"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.lagoa.pb.leg.br": null
+    "sapl.lagoa.pb.leg.br": {
+      "lido_em": "2026-11-14T21:43:16.747Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 9,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -178,7 +185,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T13:19:17.880Z",
+      "legislaturas": "2026-11-14T21:51:25.912Z",
       "tipos_resultado": "2026-11-06T13:20:19.751Z",
       "tipos_materia": "2026-11-06T13:21:20.093Z",
       "mandatos": "2026-11-06T13:22:21.118Z",
@@ -190,7 +197,7 @@
       "status_tramitacao": "2026-11-06T13:36:36.477Z",
       "autores": "2026-11-06T13:37:36.579Z"
     },
-    "ultima_requisicao": "2026-11-12T22:55:15.918Z",
+    "ultima_requisicao": "2026-11-14T21:51:24.747Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

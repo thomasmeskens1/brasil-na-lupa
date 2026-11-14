@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T13:13:21.155Z",
-  "ultima_execucao": "2026-11-13T13:13:00.160Z",
+  "atualizado_em": "2026-11-14T21:54:44.767Z",
+  "ultima_execucao": "2026-11-14T21:43:19.484Z",
   "uf": "MG",
   "casa": "cm-sao-goncalo-do-para",
   "orgao": "Câmara Municipal de São Gonçalo do Pará",
   "host": "sapl.saogoncalodopara.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de São Gonçalo do Pará (API REST pública)",
       "url": "https://sapl.saogoncalodopara.mg.leg.br/api/",
       "orgao": "Câmara Municipal de São Gonçalo do Pará",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.saogoncalodopara.mg.leg.br": null
+    "sapl.saogoncalodopara.mg.leg.br": {
+      "lido_em": "2026-11-14T21:43:19.484Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,10 +81,10 @@
   "contagens": {
     "parlamentares": 10,
     "parlamentares_em_exercicio": 8,
-    "proposicoes": 107,
+    "proposicoes": 116,
     "normas": 165,
-    "sessoes": 48,
-    "itens_pauta": 162,
+    "sessoes": 49,
+    "itens_pauta": 172,
     "votacoes": 77,
     "votacoes_por_situacao_dos_votos": {
       "coletados": 77
@@ -115,54 +122,54 @@
       "ordemdia": {
         "faixas": [
           {
-            "hi": 87,
+            "hi": 95,
             "lo": 1,
-            "n": 78,
+            "n": 86,
             "lo_data": "2026-01-26"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 78
+        "total_fonte": 86
       },
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 94,
+            "hi": 96,
             "lo": 2,
-            "n": 84,
+            "n": 86,
             "lo_data": "2026-01-26"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 84
+        "total_fonte": 86
       },
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 51,
+            "hi": 52,
             "lo": 1,
-            "n": 48,
+            "n": 49,
             "lo_data": "2019-02-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 48
+        "total_fonte": 49
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 112,
+            "hi": 121,
             "lo": 1,
-            "n": 107,
+            "n": 116,
             "lo_data": "2019-02-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 107
+        "total_fonte": 116
       },
       "normajuridica": {
         "faixas": [
@@ -180,19 +187,19 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 314,
+            "hi": 326,
             "lo": 7,
-            "n": 304,
+            "n": 316,
             "lo_data": "2026-01-27"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 304
+        "total_fonte": 316
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T12:06:57.693Z",
+      "legislaturas": "2026-11-14T21:54:44.766Z",
       "tipos_resultado": "2026-11-07T12:07:57.937Z",
       "tipos_materia": "2026-11-07T12:08:59.553Z",
       "mandatos": "2026-11-07T12:10:00.575Z",
@@ -204,7 +211,7 @@
       "status_tramitacao": "2026-11-07T12:24:14.599Z",
       "autores": "2026-11-07T12:25:15.137Z"
     },
-    "ultima_requisicao": "2026-11-13T13:13:00.160Z",
+    "ultima_requisicao": "2026-11-14T21:54:34.258Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

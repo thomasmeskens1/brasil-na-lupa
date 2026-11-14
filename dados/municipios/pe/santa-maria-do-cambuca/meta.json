@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T13:13:17.818Z",
-  "ultima_execucao": "2026-11-13T13:12:59.825Z",
+  "atualizado_em": "2026-11-14T21:50:38.973Z",
+  "ultima_execucao": "2026-11-14T21:43:19.037Z",
   "uf": "PE",
   "casa": "cm-santa-maria-do-cambuca",
   "orgao": "Câmara Municipal de Santa Maria do Cambucá",
   "host": "sapl.santamariadocambuca.pe.leg.br",
   "periodo": {
     "inicio": null,
-    "fim": "2026-11-13"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Santa Maria do Cambucá (API REST pública)",
       "url": "https://sapl.santamariadocambuca.pe.leg.br/api/",
       "orgao": "Câmara Municipal de Santa Maria do Cambucá",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.santamariadocambuca.pe.leg.br": null
+    "sapl.santamariadocambuca.pe.leg.br": {
+      "lido_em": "2026-11-14T21:43:19.037Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 8,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -169,7 +176,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T12:06:52.891Z",
+      "legislaturas": "2026-11-14T21:50:38.973Z",
       "tipos_resultado": "2026-11-07T12:07:53.938Z",
       "tipos_materia": "2026-11-07T12:08:54.548Z",
       "tipos_norma": "2026-11-07T12:18:04.412Z",
@@ -180,7 +187,7 @@
       "status_tramitacao": "2026-11-07T12:23:09.855Z",
       "autores": "2026-11-07T12:24:10.879Z"
     },
-    "ultima_requisicao": "2026-11-13T13:12:59.825Z",
+    "ultima_requisicao": "2026-11-14T21:50:28.964Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

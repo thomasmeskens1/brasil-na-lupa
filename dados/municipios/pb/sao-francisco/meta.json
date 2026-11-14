@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T13:13:20.804Z",
-  "ultima_execucao": "2026-11-13T13:13:00.110Z",
+  "atualizado_em": "2026-11-14T22:00:51.248Z",
+  "ultima_execucao": "2026-11-14T21:43:19.418Z",
   "uf": "PB",
   "casa": "cm-sao-francisco",
   "orgao": "Câmara Municipal de São Francisco",
   "host": "sapl.saofrancisco.pb.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de São Francisco (API REST pública)",
       "url": "https://sapl.saofrancisco.pb.leg.br/api/",
       "orgao": "Câmara Municipal de São Francisco",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.saofrancisco.pb.leg.br": null
+    "sapl.saofrancisco.pb.leg.br": {
+      "lido_em": "2026-11-14T21:43:19.418Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 18,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 10,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 198,
+    "proposicoes": 206,
     "normas": 0,
     "sessoes": 60,
     "itens_pauta": 231,
@@ -186,7 +193,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T12:06:57.098Z",
+      "legislaturas": "2026-11-14T22:00:51.248Z",
       "tipos_resultado": "2026-11-07T12:07:57.731Z",
       "tipos_materia": "2026-11-07T12:09:03.540Z",
       "mandatos": "2026-11-07T12:09:59.372Z",
@@ -198,7 +205,7 @@
       "status_tramitacao": "2026-11-07T12:24:12.631Z",
       "autores": "2026-11-07T12:25:13.905Z"
     },
-    "ultima_requisicao": "2026-11-13T13:13:00.110Z",
+    "ultima_requisicao": "2026-11-14T22:00:41.380Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

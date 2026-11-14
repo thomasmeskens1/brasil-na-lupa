@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T13:13:20.889Z",
-  "ultima_execucao": "2026-11-13T13:13:00.119Z",
+  "atualizado_em": "2026-11-14T22:02:48.728Z",
+  "ultima_execucao": "2026-11-14T21:43:19.432Z",
   "uf": "RS",
   "casa": "cm-sao-francisco-de-assis",
   "orgao": "Câmara Municipal de São Francisco de Assis",
   "host": "sapl.saofranciscodeassis.rs.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de São Francisco de Assis (API REST pública)",
       "url": "https://sapl.saofranciscodeassis.rs.leg.br/api/",
       "orgao": "Câmara Municipal de São Francisco de Assis",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.saofranciscodeassis.rs.leg.br": null
+    "sapl.saofranciscodeassis.rs.leg.br": {
+      "lido_em": "2026-11-14T21:43:19.432Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,9 +81,9 @@
   "contagens": {
     "parlamentares": 11,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 1337,
+    "proposicoes": 1344,
     "normas": 388,
-    "sessoes": 198,
+    "sessoes": 199,
     "itens_pauta": 61,
     "votacoes": 61,
     "votacoes_por_situacao_dos_votos": {
@@ -193,7 +200,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T12:06:57.329Z",
+      "legislaturas": "2026-11-14T22:02:48.728Z",
       "tipos_resultado": "2026-11-07T12:07:57.152Z",
       "tipos_materia": "2026-11-07T12:08:58.552Z",
       "mandatos": "2026-11-07T12:09:59.570Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-07T12:25:13.256Z",
       "autores": "2026-11-07T12:26:14.186Z"
     },
-    "ultima_requisicao": "2026-11-13T13:13:00.119Z",
+    "ultima_requisicao": "2026-11-14T22:02:43.753Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

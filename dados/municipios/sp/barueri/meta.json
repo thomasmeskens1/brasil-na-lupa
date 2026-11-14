@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T13:13:11.750Z",
-  "ultima_execucao": "2026-11-13T13:12:59.423Z",
+  "atualizado_em": "2026-11-14T22:02:46.517Z",
+  "ultima_execucao": "2026-11-14T21:43:18.486Z",
   "uf": "SP",
   "casa": "cm-barueri",
   "orgao": "Câmara Municipal de Barueri",
   "host": "sapl.barueri.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Barueri (API REST pública)",
       "url": "https://sapl.barueri.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Barueri",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.barueri.sp.leg.br": null
+    "sapl.barueri.sp.leg.br": {
+      "lido_em": "2026-11-14T21:43:18.486Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 21,
     "parlamentares_em_exercicio": 21,
-    "proposicoes": 5164,
+    "proposicoes": 5188,
     "normas": 394,
     "sessoes": 200,
     "itens_pauta": 5541,
@@ -155,15 +162,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 72433,
+            "hi": 72449,
             "lo": 67262,
-            "n": 5162,
+            "n": 5178,
             "lo_data": "2024-11-18"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 72176
+        "total_fonte": 72192
       },
       "normajuridica": {
         "faixas": [
@@ -194,7 +201,7 @@
     },
     "tabelas_em": {
       "legislaturas": "2026-11-12T00:04:45.580Z",
-      "tipos_resultado": "2026-11-04T00:48:09.853Z",
+      "tipos_resultado": "2026-11-14T22:02:46.517Z",
       "tipos_materia": "2026-11-04T00:49:10.514Z",
       "mandatos": "2026-11-04T00:50:12.194Z",
       "tipos_norma": "2026-11-04T01:41:16.710Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T22:59:37.450Z",
       "autores": "2026-11-06T23:02:40.550Z"
     },
-    "ultima_requisicao": "2026-11-13T13:12:59.423Z",
+    "ultima_requisicao": "2026-11-14T22:02:43.743Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

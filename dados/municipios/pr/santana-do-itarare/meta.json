@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T13:13:18.476Z",
-  "ultima_execucao": "2026-11-13T13:12:59.978Z",
+  "atualizado_em": "2026-11-14T22:02:48.516Z",
+  "ultima_execucao": "2026-11-14T21:43:19.243Z",
   "uf": "PR",
   "casa": "cm-santana-do-itarare",
   "orgao": "Câmara Municipal de Santana do Itararé",
   "host": "sapl.santanadoitarare.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-14"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Santana do Itararé (API REST pública)",
       "url": "https://sapl.santanadoitarare.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Santana do Itararé",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-14"
     }
   ],
   "robots": {
-    "sapl.santanadoitarare.pr.leg.br": null
+    "sapl.santanadoitarare.pr.leg.br": {
+      "lido_em": "2026-11-14T21:43:19.243Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,9 +81,9 @@
   "contagens": {
     "parlamentares": 10,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 841,
-    "normas": 483,
-    "sessoes": 199,
+    "proposicoes": 849,
+    "normas": 485,
+    "sessoes": 200,
     "itens_pauta": 758,
     "votacoes": 390,
     "votacoes_por_situacao_dos_votos": {
@@ -144,15 +151,15 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 257,
+            "hi": 258,
             "lo": 54,
-            "n": 199,
+            "n": 200,
             "lo_data": "2022-04-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 249
+        "total_fonte": 250
       },
       "materialegislativa": {
         "faixas": [
@@ -170,15 +177,15 @@
       "normajuridica": {
         "faixas": [
           {
-            "hi": 1641,
+            "hi": 1643,
             "lo": 1149,
-            "n": 480,
+            "n": 482,
             "lo_data": "2022-12-12"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1626
+        "total_fonte": 1628
       },
       "tramitacao": {
         "faixas": [
@@ -195,7 +202,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T12:06:54.097Z",
+      "legislaturas": "2026-11-14T22:02:48.516Z",
       "tipos_resultado": "2026-11-07T12:07:54.740Z",
       "tipos_materia": "2026-11-07T12:08:55.581Z",
       "mandatos": "2026-11-07T12:09:56.771Z",
@@ -207,7 +214,7 @@
       "status_tramitacao": "2026-11-07T12:25:14.481Z",
       "autores": "2026-11-07T12:27:19.731Z"
     },
-    "ultima_requisicao": "2026-11-13T13:12:59.978Z",
+    "ultima_requisicao": "2026-11-14T22:02:43.748Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
