@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-14T12:18:49.518Z",
-  "ultima_execucao": "2026-11-14T12:18:33.521Z",
+  "atualizado_em": "2026-11-15T23:08:48.938Z",
+  "ultima_execucao": "2026-11-15T22:09:36.512Z",
   "uf": "RN",
   "casa": "cm-currais-novos",
   "orgao": "Câmara Municipal de Currais Novos",
   "host": "sapl.curraisnovos.rn.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-14"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,45 +15,52 @@
       "titulo": "SAPL — Câmara Municipal de Currais Novos (API REST pública)",
       "url": "https://sapl.curraisnovos.rn.leg.br/api/",
       "orgao": "Câmara Municipal de Currais Novos",
-      "acessado_em": "2026-11-14"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.curraisnovos.rn.leg.br": null
+    "sapl.curraisnovos.rn.leg.br": {
+      "lido_em": "2026-11-15T22:09:36.512Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 59,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
-      "desde": "2025-06-11",
+      "desde": "2025-04-01",
       "concluida": false
     },
     "votoparlamentar": {
-      "desde": "2025-06-25",
+      "desde": "2025-04-01",
       "concluida": false
     },
     "ordemdia": {
-      "desde": "2025-06-24",
+      "desde": "2025-04-03",
       "concluida": false
     },
     "expedientemateria": {
-      "desde": "2025-06-17",
+      "desde": "2025-04-01",
       "concluida": false
     },
     "sessaoplenaria": {
-      "desde": "2025-06-24",
+      "desde": "2024-04-16",
       "concluida": false
     },
     "materialegislativa": {
-      "desde": "2025-06-17",
+      "desde": "2025-03-24",
       "concluida": false
     },
     "normajuridica": {
-      "desde": "2025-06-17",
+      "desde": "2015-09-17",
       "concluida": false
     },
     "tramitacao": {
@@ -74,17 +81,17 @@
   "contagens": {
     "parlamentares": 13,
     "parlamentares_em_exercicio": 13,
-    "proposicoes": 3552,
-    "normas": 669,
-    "sessoes": 102,
-    "itens_pauta": 7278,
-    "votacoes": 3626,
+    "proposicoes": 4356,
+    "normas": 921,
+    "sessoes": 200,
+    "itens_pauta": 8686,
+    "votacoes": 4224,
     "votacoes_por_situacao_dos_votos": {
-      "em-coleta": 155,
-      "coletados": 167,
-      "inexistentes-na-fonte": 3304
+      "inexistentes-na-fonte": 3992,
+      "coletados": 195,
+      "em-coleta": 37
     },
-    "votos_individuais": 2002
+    "votos_individuais": 2277
   },
   "cursor": {
     "fluxos": {
@@ -92,9 +99,9 @@
         "faixas": [
           {
             "hi": 9536,
-            "lo": 5707,
-            "n": 3626,
-            "lo_data": "2025-06-11"
+            "lo": 5109,
+            "n": 4224,
+            "lo_data": "2025-04-01"
           }
         ],
         "concluido": false,
@@ -105,9 +112,9 @@
         "faixas": [
           {
             "hi": 2956,
-            "lo": 777,
-            "n": 2002,
-            "lo_data": "2025-06-25"
+            "lo": 502,
+            "n": 2277,
+            "lo_data": "2025-04-01"
           }
         ],
         "concluido": false,
@@ -118,9 +125,9 @@
         "faixas": [
           {
             "hi": 10280,
-            "lo": 6521,
-            "n": 3744,
-            "lo_data": "2025-06-24"
+            "lo": 5800,
+            "n": 4462,
+            "lo_data": "2025-04-03"
           }
         ],
         "concluido": false,
@@ -131,9 +138,9 @@
         "faixas": [
           {
             "hi": 9904,
-            "lo": 6219,
-            "n": 3534,
-            "lo_data": "2025-06-17"
+            "lo": 5474,
+            "n": 4224,
+            "lo_data": "2025-04-01"
           }
         ],
         "concluido": false,
@@ -144,9 +151,9 @@
         "faixas": [
           {
             "hi": 314,
-            "lo": 208,
-            "n": 102,
-            "lo_data": "2025-06-24"
+            "lo": 106,
+            "n": 200,
+            "lo_data": "2024-04-16"
           }
         ],
         "concluido": false,
@@ -156,23 +163,23 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 9941,
-            "lo": 6390,
-            "n": 3552,
-            "lo_data": "2025-06-17"
+            "hi": 9944,
+            "lo": 5588,
+            "n": 4356,
+            "lo_data": "2025-03-24"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 9840
+        "total_fonte": 9843
       },
       "normajuridica": {
         "faixas": [
           {
             "hi": 4638,
-            "lo": 3978,
-            "n": 658,
-            "lo_data": "2025-06-17"
+            "lo": 3726,
+            "n": 910,
+            "lo_data": "2015-09-17"
           }
         ],
         "concluido": false,
@@ -182,19 +189,19 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 67469,
+            "hi": 67471,
             "lo": 66985,
-            "n": 479,
+            "n": 481,
             "lo_data": "2026-10-26"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 60884
+        "total_fonte": 60886
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:26.963Z",
+      "legislaturas": "2026-11-15T22:29:06.882Z",
       "tipos_resultado": "2026-11-06T10:39:28.162Z",
       "tipos_materia": "2026-11-06T10:40:30.014Z",
       "mandatos": "2026-11-06T10:41:28.382Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T10:55:44.311Z",
       "autores": "2026-11-06T10:56:45.468Z"
     },
-    "ultima_requisicao": "2026-11-14T12:18:33.521Z",
+    "ultima_requisicao": "2026-11-15T23:08:42.382Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

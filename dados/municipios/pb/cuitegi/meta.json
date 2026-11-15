@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-14T12:18:51.911Z",
-  "ultima_execucao": "2026-11-14T12:18:33.334Z",
+  "atualizado_em": "2026-11-15T22:20:57.786Z",
+  "ultima_execucao": "2026-11-15T22:09:36.318Z",
   "uf": "PB",
   "casa": "cm-cuitegi",
   "orgao": "Câmara Municipal de Cuitegi",
   "host": "sapl.cuitegi.pb.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-14"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Cuitegi (API REST pública)",
       "url": "https://sapl.cuitegi.pb.leg.br/api/",
       "orgao": "Câmara Municipal de Cuitegi",
-      "acessado_em": "2026-11-14"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.cuitegi.pb.leg.br": null
+    "sapl.cuitegi.pb.leg.br": {
+      "lido_em": "2026-11-15T22:09:36.318Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -193,7 +200,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:24.776Z",
+      "legislaturas": "2026-11-15T22:20:57.786Z",
       "tipos_resultado": "2026-11-06T10:39:27.759Z",
       "tipos_materia": "2026-11-06T10:40:29.215Z",
       "mandatos": "2026-11-06T10:41:29.804Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T10:56:43.383Z",
       "autores": "2026-11-06T10:57:44.608Z"
     },
-    "ultima_requisicao": "2026-11-14T12:18:33.334Z",
+    "ultima_requisicao": "2026-11-15T22:20:51.263Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

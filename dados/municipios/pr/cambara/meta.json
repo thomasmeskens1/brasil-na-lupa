@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T22:57:16.533Z",
-  "ultima_execucao": "2026-11-13T22:56:57.339Z",
+  "atualizado_em": "2026-11-15T23:08:41.894Z",
+  "ultima_execucao": "2026-11-15T22:09:34.775Z",
   "uf": "PR",
   "casa": "cm-cambara",
   "orgao": "Câmara Municipal de Cambará",
   "host": "sapl.cambara.pr.leg.br",
   "periodo": {
     "inicio": null,
-    "fim": "2026-11-13"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,21 +15,28 @@
       "titulo": "SAPL — Câmara Municipal de Cambará (API REST pública)",
       "url": "https://sapl.cambara.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Cambará",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.cambara.pr.leg.br": null
+    "sapl.cambara.pr.leg.br": {
+      "lido_em": "2026-11-15T22:09:34.775Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 59,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
-      "desde": "2022-05-23",
+      "desde": "2019-10-07",
       "concluida": false
     },
     "votoparlamentar": {
@@ -37,7 +44,7 @@
       "concluida": false
     },
     "ordemdia": {
-      "desde": "2022-06-08",
+      "desde": "2019-08-12",
       "concluida": false
     },
     "expedientemateria": {
@@ -45,15 +52,15 @@
       "concluida": false
     },
     "sessaoplenaria": {
-      "desde": "2021-08-16",
+      "desde": "2017-12-14",
       "concluida": false
     },
     "materialegislativa": {
-      "desde": "2022-06-10",
+      "desde": "2019-09-11",
       "concluida": false
     },
     "normajuridica": {
-      "desde": "2021-02-09",
+      "desde": "2019-05-30",
       "concluida": false
     },
     "tramitacao": {
@@ -72,15 +79,15 @@
     "Datas impossíveis ou posteriores à coleta (ex.: erros de digitação) ficam null, com o valor bruto anotado em lacunas; nada é corrigido."
   ],
   "contagens": {
-    "proposicoes": 480,
-    "normas": 101,
-    "sessoes": 100,
-    "itens_pauta": 580,
-    "votacoes": 485,
+    "proposicoes": 2139,
+    "normas": 199,
+    "sessoes": 294,
+    "itens_pauta": 1361,
+    "votacoes": 1177,
     "votacoes_por_situacao_dos_votos": {
-      "em-coleta": 35,
-      "inexistentes-na-fonte": 251,
-      "coletados": 199
+      "inexistentes-na-fonte": 973,
+      "coletados": 203,
+      "em-coleta": 1
     },
     "votos_individuais": 1700
   },
@@ -90,9 +97,9 @@
         "faixas": [
           {
             "hi": 1782,
-            "lo": 1303,
-            "n": 480,
-            "lo_data": "2022-05-23"
+            "lo": 606,
+            "n": 1176,
+            "lo_data": "2019-10-07"
           }
         ],
         "concluido": false,
@@ -116,9 +123,9 @@
         "faixas": [
           {
             "hi": 1955,
-            "lo": 1472,
-            "n": 480,
-            "lo_data": "2022-06-08"
+            "lo": 675,
+            "n": 1261,
+            "lo_data": "2019-08-12"
           }
         ],
         "concluido": false,
@@ -142,9 +149,9 @@
         "faixas": [
           {
             "hi": 577,
-            "lo": 477,
-            "n": 100,
-            "lo_data": "2021-08-16"
+            "lo": 278,
+            "n": 294,
+            "lo_data": "2017-12-14"
           }
         ],
         "concluido": false,
@@ -155,9 +162,9 @@
         "faixas": [
           {
             "hi": 7029,
-            "lo": 6550,
-            "n": 480,
-            "lo_data": "2022-06-10"
+            "lo": 4887,
+            "n": 2139,
+            "lo_data": "2019-09-11"
           }
         ],
         "concluido": false,
@@ -168,9 +175,9 @@
         "faixas": [
           {
             "hi": 2165,
-            "lo": 2066,
-            "n": 100,
-            "lo_data": "2021-02-09"
+            "lo": 1968,
+            "n": 198,
+            "lo_data": "2019-05-30"
           }
         ],
         "concluido": false,
@@ -192,7 +199,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:15.973Z",
+      "legislaturas": "2026-11-15T22:28:57.225Z",
       "tipos_resultado": "2026-11-06T10:39:15.566Z",
       "tipos_materia": "2026-11-06T10:40:18.239Z",
       "tipos_norma": "2026-11-06T10:49:25.656Z",
@@ -203,7 +210,7 @@
       "status_tramitacao": "2026-11-06T10:54:30.688Z",
       "autores": "2026-11-06T10:55:31.212Z"
     },
-    "ultima_requisicao": "2026-11-13T22:56:57.339Z",
+    "ultima_requisicao": "2026-11-15T23:08:38.794Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

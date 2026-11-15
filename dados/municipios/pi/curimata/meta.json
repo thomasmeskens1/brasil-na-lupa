@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-14T12:18:51.444Z",
-  "ultima_execucao": "2026-11-14T12:18:33.405Z",
+  "atualizado_em": "2026-11-15T22:20:58.177Z",
+  "ultima_execucao": "2026-11-15T22:09:36.382Z",
   "uf": "PI",
   "casa": "cm-curimata",
   "orgao": "Câmara Municipal de Curimatá",
   "host": "sapl.curimata.pi.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-14"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Curimatá (API REST pública)",
       "url": "https://sapl.curimata.pi.leg.br/api/",
       "orgao": "Câmara Municipal de Curimatá",
-      "acessado_em": "2026-11-14"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.curimata.pi.leg.br": null
+    "sapl.curimata.pi.leg.br": {
+      "lido_em": "2026-11-15T22:09:36.382Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -193,7 +200,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:28.373Z",
+      "legislaturas": "2026-11-15T22:20:58.177Z",
       "tipos_resultado": "2026-11-06T10:39:26.965Z",
       "tipos_materia": "2026-11-06T10:40:30.212Z",
       "mandatos": "2026-11-06T10:41:29.991Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T10:55:42.723Z",
       "autores": "2026-11-06T10:56:45.491Z"
     },
-    "ultima_requisicao": "2026-11-14T12:18:33.405Z",
+    "ultima_requisicao": "2026-11-15T22:20:52.895Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

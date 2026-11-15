@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-14T12:18:49.084Z",
-  "ultima_execucao": "2026-11-14T12:18:33.573Z",
+  "atualizado_em": "2026-11-15T22:29:06.284Z",
+  "ultima_execucao": "2026-11-15T22:09:36.561Z",
   "uf": "PI",
   "casa": "cm-demerval-lobao",
   "orgao": "Câmara Municipal de Demerval Lobão",
   "host": "sapl.demervallobao.pi.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-14"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Demerval Lobão (API REST pública)",
       "url": "https://sapl.demervallobao.pi.leg.br/api/",
       "orgao": "Câmara Municipal de Demerval Lobão",
-      "acessado_em": "2026-11-14"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.demervallobao.pi.leg.br": null
+    "sapl.demervallobao.pi.leg.br": {
+      "lido_em": "2026-11-15T22:09:36.561Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,14 +81,14 @@
   "contagens": {
     "parlamentares": 12,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 521,
-    "normas": 297,
-    "sessoes": 191,
-    "itens_pauta": 690,
-    "votacoes": 481,
+    "proposicoes": 529,
+    "normas": 299,
+    "sessoes": 193,
+    "itens_pauta": 693,
+    "votacoes": 485,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 19,
-      "inexistentes-na-fonte": 374,
+      "inexistentes-na-fonte": 378,
       "coletados": 88
     },
     "votos_individuais": 843
@@ -91,15 +98,15 @@
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 693,
+            "hi": 697,
             "lo": 202,
-            "n": 481,
+            "n": 485,
             "lo_data": "2022-03-17"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 677
+        "total_fonte": 681
       },
       "votoparlamentar": {
         "faixas": [
@@ -130,28 +137,28 @@
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 499,
+            "hi": 502,
             "lo": 76,
-            "n": 395,
+            "n": 398,
             "lo_data": "2022-04-20"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 466
+        "total_fonte": 469
       },
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 191,
+            "hi": 193,
             "lo": 1,
-            "n": 191,
+            "n": 193,
             "lo_data": "2015-08-20"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 191
+        "total_fonte": 193
       },
       "materialegislativa": {
         "faixas": [
@@ -169,15 +176,15 @@
       "normajuridica": {
         "faixas": [
           {
-            "hi": 601,
+            "hi": 603,
             "lo": 305,
-            "n": 294,
+            "n": 296,
             "lo_data": "2021-05-17"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 596
+        "total_fonte": 598
       },
       "tramitacao": {
         "faixas": [
@@ -194,7 +201,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:26.377Z",
+      "legislaturas": "2026-11-15T22:29:06.284Z",
       "tipos_resultado": "2026-11-06T10:39:26.555Z",
       "tipos_materia": "2026-11-06T10:40:32.811Z",
       "mandatos": "2026-11-06T10:41:29.590Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T10:55:44.929Z",
       "autores": "2026-11-06T10:56:47.281Z"
     },
-    "ultima_requisicao": "2026-11-14T12:18:33.573Z",
+    "ultima_requisicao": "2026-11-15T22:29:01.340Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

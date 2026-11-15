@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-14T12:18:49.326Z",
-  "ultima_execucao": "2026-11-14T12:18:33.550Z",
+  "atualizado_em": "2026-11-15T22:18:59.922Z",
+  "ultima_execucao": "2026-11-15T22:09:36.539Z",
   "uf": "MG",
   "casa": "cm-delfinopolis",
   "orgao": "Câmara Municipal de Delfinópolis",
   "host": "sapl.delfinopolis.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-14"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Delfinópolis (API REST pública)",
       "url": "https://sapl.delfinopolis.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Delfinópolis",
-      "acessado_em": "2026-11-14"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.delfinopolis.mg.leg.br": null
+    "sapl.delfinopolis.mg.leg.br": {
+      "lido_em": "2026-11-15T22:09:36.539Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 10,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -186,7 +193,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:27.602Z",
+      "legislaturas": "2026-11-15T22:18:59.922Z",
       "tipos_resultado": "2026-11-06T10:39:29.327Z",
       "tipos_materia": "2026-11-06T10:40:32.021Z",
       "mandatos": "2026-11-06T10:41:29.535Z",
@@ -198,7 +205,7 @@
       "status_tramitacao": "2026-11-06T10:55:43.936Z",
       "autores": "2026-11-06T10:56:46.929Z"
     },
-    "ultima_requisicao": "2026-11-14T12:18:33.550Z",
+    "ultima_requisicao": "2026-11-15T22:18:49.241Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

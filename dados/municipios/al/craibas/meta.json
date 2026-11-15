@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-14T12:18:52.245Z",
-  "ultima_execucao": "2026-11-14T12:18:33.281Z",
+  "atualizado_em": "2026-11-15T22:20:57.982Z",
+  "ultima_execucao": "2026-11-15T22:09:36.254Z",
   "uf": "AL",
   "casa": "cm-craibas",
   "orgao": "Câmara Municipal de Craíbas",
   "host": "sapl.craibas.al.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-14"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Craíbas (API REST pública)",
       "url": "https://sapl.craibas.al.leg.br/api/",
       "orgao": "Câmara Municipal de Craíbas",
-      "acessado_em": "2026-11-14"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.craibas.al.leg.br": null
+    "sapl.craibas.al.leg.br": {
+      "lido_em": "2026-11-15T22:09:36.254Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -193,7 +200,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:27.773Z",
+      "legislaturas": "2026-11-15T22:20:57.982Z",
       "tipos_resultado": "2026-11-06T10:39:24.758Z",
       "tipos_materia": "2026-11-06T10:40:29.826Z",
       "mandatos": "2026-11-06T10:41:28.001Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T10:55:42.932Z",
       "autores": "2026-11-06T10:56:44.262Z"
     },
-    "ultima_requisicao": "2026-11-14T12:18:33.281Z",
+    "ultima_requisicao": "2026-11-15T22:20:51.263Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

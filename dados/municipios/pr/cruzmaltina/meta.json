@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-14T12:18:51.981Z",
-  "ultima_execucao": "2026-11-14T12:18:33.320Z",
+  "atualizado_em": "2026-11-15T22:20:57.379Z",
+  "ultima_execucao": "2026-11-15T22:09:36.305Z",
   "uf": "PR",
   "casa": "cm-cruzmaltina",
   "orgao": "Câmara Municipal de Cruzmaltina",
   "host": "sapl.cruzmaltina.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-14"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Cruzmaltina (API REST pública)",
       "url": "https://sapl.cruzmaltina.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Cruzmaltina",
-      "acessado_em": "2026-11-14"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.cruzmaltina.pr.leg.br": null
+    "sapl.cruzmaltina.pr.leg.br": {
+      "lido_em": "2026-11-15T22:09:36.305Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -75,44 +82,44 @@
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
     "proposicoes": 389,
-    "normas": 302,
+    "normas": 303,
     "sessoes": 199,
     "itens_pauta": 566,
-    "votacoes": 388,
+    "votacoes": 391,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 297,
+      "coletados": 300,
       "nao-se-aplica": 7,
       "inexistentes-na-fonte": 84
     },
-    "votos_individuais": 2574
+    "votos_individuais": 2601
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 1054,
+            "hi": 1057,
             "lo": 631,
-            "n": 388,
+            "n": 391,
             "lo_data": "2023-09-27"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 863
+        "total_fonte": 866
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 3910,
+            "hi": 3937,
             "lo": 1239,
-            "n": 2574,
+            "n": 2601,
             "lo_data": "2024-07-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 3548
+        "total_fonte": 3575
       },
       "ordemdia": {
         "faixas": [
@@ -169,15 +176,15 @@
       "normajuridica": {
         "faixas": [
           {
-            "hi": 1319,
+            "hi": 1320,
             "lo": 1024,
-            "n": 294,
+            "n": 295,
             "lo_data": "2022-03-03"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1302
+        "total_fonte": 1303
       },
       "tramitacao": {
         "faixas": [
@@ -194,7 +201,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:28.180Z",
+      "legislaturas": "2026-11-15T22:20:57.379Z",
       "tipos_resultado": "2026-11-06T10:39:26.352Z",
       "tipos_materia": "2026-11-06T10:40:28.815Z",
       "mandatos": "2026-11-06T10:41:27.589Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T10:55:42.513Z",
       "autores": "2026-11-06T10:56:44.083Z"
     },
-    "ultima_requisicao": "2026-11-14T12:18:33.320Z",
+    "ultima_requisicao": "2026-11-15T22:20:51.262Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-14T12:18:49.479Z",
-  "ultima_execucao": "2026-11-14T12:18:33.527Z",
+  "atualizado_em": "2026-11-15T22:20:58.377Z",
+  "ultima_execucao": "2026-11-15T22:09:36.522Z",
   "uf": "PE",
   "casa": "cm-custodia",
   "orgao": "Câmara Municipal de Custódia",
   "host": "sapl.custodia.pe.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-14"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Custódia (API REST pública)",
       "url": "https://sapl.custodia.pe.leg.br/api/",
       "orgao": "Câmara Municipal de Custódia",
-      "acessado_em": "2026-11-14"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.custodia.pe.leg.br": null
+    "sapl.custodia.pe.leg.br": {
+      "lido_em": "2026-11-15T22:09:36.522Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -75,7 +82,7 @@
     "parlamentares": 11,
     "parlamentares_em_exercicio": 11,
     "proposicoes": 315,
-    "normas": 198,
+    "normas": 203,
     "sessoes": 96,
     "itens_pauta": 289,
     "votacoes": 76,
@@ -168,15 +175,15 @@
       "normajuridica": {
         "faixas": [
           {
-            "hi": 519,
+            "hi": 524,
             "lo": 322,
-            "n": 198,
+            "n": 203,
             "lo_data": "2021-01-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 518
+        "total_fonte": 523
       },
       "tramitacao": {
         "faixas": [
@@ -193,7 +200,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:26.171Z",
+      "legislaturas": "2026-11-15T22:20:58.377Z",
       "tipos_resultado": "2026-11-06T10:39:28.760Z",
       "tipos_materia": "2026-11-06T10:40:30.823Z",
       "mandatos": "2026-11-06T10:41:30.586Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T10:55:43.490Z",
       "autores": "2026-11-06T10:56:46.279Z"
     },
-    "ultima_requisicao": "2026-11-14T12:18:33.527Z",
+    "ultima_requisicao": "2026-11-15T22:20:51.263Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

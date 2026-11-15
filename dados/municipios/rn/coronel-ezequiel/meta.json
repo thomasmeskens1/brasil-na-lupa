@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-14T12:18:52.760Z",
-  "ultima_execucao": "2026-11-14T12:18:33.234Z",
+  "atualizado_em": "2026-11-15T22:19:54.782Z",
+  "ultima_execucao": "2026-11-15T22:09:36.203Z",
   "uf": "RN",
   "casa": "cm-coronel-ezequiel",
   "orgao": "Câmara Municipal de Coronel Ezequiel",
   "host": "sapl.coronelezequiel.rn.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-14"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Coronel Ezequiel (API REST pública)",
       "url": "https://sapl.coronelezequiel.rn.leg.br/api/",
       "orgao": "Câmara Municipal de Coronel Ezequiel",
-      "acessado_em": "2026-11-14"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.coronelezequiel.rn.leg.br": null
+    "sapl.coronelezequiel.rn.leg.br": {
+      "lido_em": "2026-11-15T22:09:36.203Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 11,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -185,7 +192,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:26.577Z",
+      "legislaturas": "2026-11-15T22:19:54.781Z",
       "tipos_resultado": "2026-11-06T10:39:25.758Z",
       "tipos_materia": "2026-11-06T10:40:27.416Z",
       "mandatos": "2026-11-06T10:41:26.578Z",
@@ -197,7 +204,7 @@
       "status_tramitacao": "2026-11-06T10:55:41.332Z",
       "autores": "2026-11-06T10:56:43.645Z"
     },
-    "ultima_requisicao": "2026-11-14T12:18:33.234Z",
+    "ultima_requisicao": "2026-11-15T22:19:50.239Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

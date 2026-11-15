@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-14T12:18:52.559Z",
-  "ultima_execucao": "2026-11-14T12:18:33.252Z",
+  "atualizado_em": "2026-11-15T22:29:06.484Z",
+  "ultima_execucao": "2026-11-15T22:09:36.221Z",
   "uf": "RO",
   "casa": "cm-corumbiara",
   "orgao": "Câmara Municipal de Corumbiara",
   "host": "sapl.corumbiara.ro.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-14"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Corumbiara (API REST pública)",
       "url": "https://sapl.corumbiara.ro.leg.br/api/",
       "orgao": "Câmara Municipal de Corumbiara",
-      "acessado_em": "2026-11-14"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.corumbiara.ro.leg.br": null
+    "sapl.corumbiara.ro.leg.br": {
+      "lido_em": "2026-11-15T22:09:36.221Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,10 +81,10 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 548,
-    "normas": 687,
-    "sessoes": 199,
-    "itens_pauta": 782,
+    "proposicoes": 558,
+    "normas": 714,
+    "sessoes": 200,
+    "itens_pauta": 784,
     "votacoes": 308,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 11,
@@ -131,41 +138,41 @@
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 664,
+            "hi": 666,
             "lo": 261,
-            "n": 391,
+            "n": 393,
             "lo_data": "2022-04-08"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 633
+        "total_fonte": 635
       },
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 271,
+            "hi": 272,
             "lo": 72,
-            "n": 199,
+            "n": 200,
             "lo_data": "2021-06-21"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 270
+        "total_fonte": 271
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 1276,
+            "hi": 1278,
             "lo": 791,
-            "n": 484,
+            "n": 486,
             "lo_data": "2023-08-18"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1269
+        "total_fonte": 1271
       },
       "normajuridica": {
         "faixas": [
@@ -195,7 +202,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:24.989Z",
+      "legislaturas": "2026-11-15T22:29:06.484Z",
       "tipos_resultado": "2026-11-06T10:39:25.356Z",
       "tipos_materia": "2026-11-06T10:40:27.628Z",
       "mandatos": "2026-11-06T10:41:27.777Z",
@@ -207,7 +214,7 @@
       "status_tramitacao": "2026-11-06T10:55:42.293Z",
       "autores": "2026-11-06T10:56:44.692Z"
     },
-    "ultima_requisicao": "2026-11-14T12:18:33.252Z",
+    "ultima_requisicao": "2026-11-15T22:29:01.342Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

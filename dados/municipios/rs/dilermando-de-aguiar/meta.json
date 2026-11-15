@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-14T12:18:48.666Z",
-  "ultima_execucao": "2026-11-14T12:18:33.630Z",
+  "atualizado_em": "2026-11-15T22:29:06.088Z",
+  "ultima_execucao": "2026-11-15T22:09:36.629Z",
   "uf": "RS",
   "casa": "cm-dilermando-de-aguiar",
   "orgao": "Câmara Municipal de Dilermando de Aguiar",
   "host": "sapl.dilermandodeaguiar.rs.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-14"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Dilermando de Aguiar (API REST pública)",
       "url": "https://sapl.dilermandodeaguiar.rs.leg.br/api/",
       "orgao": "Câmara Municipal de Dilermando de Aguiar",
-      "acessado_em": "2026-11-14"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.dilermandodeaguiar.rs.leg.br": null
+    "sapl.dilermandodeaguiar.rs.leg.br": {
+      "lido_em": "2026-11-15T22:09:36.629Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,8 +81,8 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 597,
-    "normas": 213,
+    "proposicoes": 607,
+    "normas": 214,
     "sessoes": 199,
     "itens_pauta": 871,
     "votacoes": 396,
@@ -156,45 +163,45 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 2432,
+            "hi": 2434,
             "lo": 1858,
-            "n": 573,
+            "n": 575,
             "lo_data": "2024-07-22"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2394
+        "total_fonte": 2396
       },
       "normajuridica": {
         "faixas": [
           {
-            "hi": 215,
+            "hi": 216,
             "lo": 2,
-            "n": 213,
+            "n": 214,
             "lo_data": "2015-02-02"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 213
+        "total_fonte": 214
       },
       "tramitacao": {
         "faixas": [
           {
-            "hi": 7477,
+            "hi": 7479,
             "lo": 5945,
-            "n": 1526,
+            "n": 1528,
             "lo_data": "2024-11-06"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 7414
+        "total_fonte": 7416
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:27.175Z",
+      "legislaturas": "2026-11-15T22:29:06.088Z",
       "tipos_resultado": "2026-11-06T10:39:27.960Z",
       "tipos_materia": "2026-11-06T10:40:31.223Z",
       "mandatos": "2026-11-06T10:41:30.189Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T10:55:48.148Z",
       "autores": "2026-11-06T10:56:47.323Z"
     },
-    "ultima_requisicao": "2026-11-14T12:18:33.630Z",
+    "ultima_requisicao": "2026-11-15T22:29:01.339Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

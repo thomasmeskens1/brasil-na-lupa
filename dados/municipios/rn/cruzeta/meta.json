@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-14T12:18:52.117Z",
-  "ultima_execucao": "2026-11-14T12:18:33.298Z",
+  "atualizado_em": "2026-11-15T22:27:02.586Z",
+  "ultima_execucao": "2026-11-15T22:09:36.278Z",
   "uf": "RN",
   "casa": "cm-cruzeta",
   "orgao": "Câmara Municipal de Cruzeta",
   "host": "sapl.cruzeta.rn.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-14"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Cruzeta (API REST pública)",
       "url": "https://sapl.cruzeta.rn.leg.br/api/",
       "orgao": "Câmara Municipal de Cruzeta",
-      "acessado_em": "2026-11-14"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.cruzeta.rn.leg.br": null
+    "sapl.cruzeta.rn.leg.br": {
+      "lido_em": "2026-11-15T22:09:36.278Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 18,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 510,
+    "proposicoes": 518,
     "normas": 0,
     "sessoes": 295,
     "itens_pauta": 871,
@@ -188,7 +195,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:24.572Z",
+      "legislaturas": "2026-11-15T22:27:02.586Z",
       "tipos_resultado": "2026-11-06T10:39:26.766Z",
       "tipos_materia": "2026-11-06T10:40:29.421Z",
       "mandatos": "2026-11-06T10:41:28.782Z",
@@ -200,7 +207,7 @@
       "status_tramitacao": "2026-11-06T10:55:42.539Z",
       "autores": "2026-11-06T10:56:44.461Z"
     },
-    "ultima_requisicao": "2026-11-14T12:18:33.298Z",
+    "ultima_requisicao": "2026-11-15T22:26:59.026Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

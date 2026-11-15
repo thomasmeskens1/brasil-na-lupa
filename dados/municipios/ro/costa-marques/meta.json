@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-14T12:18:52.287Z",
-  "ultima_execucao": "2026-11-14T12:18:33.270Z",
+  "atualizado_em": "2026-11-15T22:29:05.886Z",
+  "ultima_execucao": "2026-11-15T22:09:36.245Z",
   "uf": "RO",
   "casa": "cm-costa-marques",
   "orgao": "Câmara Municipal de Costa Marques",
   "host": "sapl.costamarques.ro.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-14"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Costa Marques (API REST pública)",
       "url": "https://sapl.costamarques.ro.leg.br/api/",
       "orgao": "Câmara Municipal de Costa Marques",
-      "acessado_em": "2026-11-14"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.costamarques.ro.leg.br": null
+    "sapl.costamarques.ro.leg.br": {
+      "lido_em": "2026-11-15T22:09:36.245Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 609,
+    "proposicoes": 617,
     "normas": 3,
     "sessoes": 298,
     "itens_pauta": 769,
@@ -194,7 +201,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:25.168Z",
+      "legislaturas": "2026-11-15T22:29:05.886Z",
       "tipos_resultado": "2026-11-06T10:39:27.182Z",
       "tipos_materia": "2026-11-06T10:40:28.415Z",
       "mandatos": "2026-11-06T10:41:27.185Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T10:55:41.295Z",
       "autores": "2026-11-06T10:56:43.077Z"
     },
-    "ultima_requisicao": "2026-11-14T12:18:33.270Z",
+    "ultima_requisicao": "2026-11-15T22:29:01.339Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

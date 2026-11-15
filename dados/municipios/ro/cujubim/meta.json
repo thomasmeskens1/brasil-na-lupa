@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-14T12:18:51.871Z",
-  "ultima_execucao": "2026-11-14T12:18:33.345Z",
+  "atualizado_em": "2026-11-15T22:20:56.772Z",
+  "ultima_execucao": "2026-11-15T22:09:36.330Z",
   "uf": "RO",
   "casa": "cm-cujubim",
   "orgao": "Câmara Municipal de Cujubim",
   "host": "sapl.cujubim.ro.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-14"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Cujubim (API REST pública)",
       "url": "https://sapl.cujubim.ro.leg.br/api/",
       "orgao": "Câmara Municipal de Cujubim",
-      "acessado_em": "2026-11-14"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.cujubim.ro.leg.br": null
+    "sapl.cujubim.ro.leg.br": {
+      "lido_em": "2026-11-15T22:09:36.330Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -192,7 +199,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:25.367Z",
+      "legislaturas": "2026-11-15T22:20:56.772Z",
       "tipos_resultado": "2026-11-06T10:39:27.379Z",
       "tipos_materia": "2026-11-06T10:40:30.426Z",
       "mandatos": "2026-11-06T10:41:29.181Z",
@@ -204,7 +211,7 @@
       "status_tramitacao": "2026-11-06T10:55:51.094Z",
       "autores": "2026-11-06T10:56:46.860Z"
     },
-    "ultima_requisicao": "2026-11-14T12:18:33.345Z",
+    "ultima_requisicao": "2026-11-15T22:20:51.260Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
