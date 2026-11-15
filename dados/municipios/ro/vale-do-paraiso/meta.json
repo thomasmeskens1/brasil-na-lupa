@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T22:57:13.231Z",
-  "ultima_execucao": "2026-11-13T22:56:56.268Z",
+  "atualizado_em": "2026-11-15T13:09:04.206Z",
+  "ultima_execucao": "2026-11-15T12:49:38.956Z",
   "uf": "RO",
   "casa": "cm-vale-do-paraiso",
   "orgao": "Câmara Municipal de Vale do Paraíso",
   "host": "sapl.valedoparaiso.ro.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Vale do Paraíso (API REST pública)",
       "url": "https://sapl.valedoparaiso.ro.leg.br/api/",
       "orgao": "Câmara Municipal de Vale do Paraíso",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.valedoparaiso.ro.leg.br": null
+    "sapl.valedoparaiso.ro.leg.br": {
+      "lido_em": "2026-11-15T12:49:38.956Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,10 +81,10 @@
   "contagens": {
     "parlamentares": 10,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 844,
+    "proposicoes": 855,
     "normas": 580,
-    "sessoes": 388,
-    "itens_pauta": 2261,
+    "sessoes": 390,
+    "itens_pauta": 2264,
     "votacoes": 934,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 24,
@@ -130,41 +137,41 @@
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 5399,
+            "hi": 5402,
             "lo": 4114,
-            "n": 1261,
+            "n": 1264,
             "lo_data": "2024-08-05"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 5311
+        "total_fonte": 5314
       },
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 930,
+            "hi": 932,
             "lo": 542,
-            "n": 388,
+            "n": 390,
             "lo_data": "2022-03-14"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 927
+        "total_fonte": 929
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 3072,
+            "hi": 3075,
             "lo": 2244,
-            "n": 828,
+            "n": 831,
             "lo_data": "2024-03-25"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 3069
+        "total_fonte": 3072
       },
       "normajuridica": {
         "faixas": [
@@ -194,7 +201,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T21:17:25.889Z",
+      "legislaturas": "2026-11-15T13:09:04.206Z",
       "tipos_resultado": "2026-11-07T21:18:27.285Z",
       "tipos_materia": "2026-11-07T21:19:28.291Z",
       "mandatos": "2026-11-07T21:20:29.353Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-07T21:34:42.856Z",
       "autores": "2026-11-07T21:36:45.354Z"
     },
-    "ultima_requisicao": "2026-11-13T22:56:56.268Z",
+    "ultima_requisicao": "2026-11-15T13:09:00.423Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

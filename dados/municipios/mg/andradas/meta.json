@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T22:57:14.109Z",
-  "ultima_execucao": "2026-11-13T22:56:56.132Z",
+  "atualizado_em": "2026-11-15T13:09:05.224Z",
+  "ultima_execucao": "2026-11-15T12:49:38.779Z",
   "uf": "MG",
   "casa": "cm-andradas",
   "orgao": "Câmara Municipal de Andradas",
   "host": "sapl.andradas.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Andradas (API REST pública)",
       "url": "https://sapl.andradas.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Andradas",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.andradas.mg.leg.br": null
+    "sapl.andradas.mg.leg.br": {
+      "lido_em": "2026-11-15T12:49:38.779Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 4155,
+    "proposicoes": 4182,
     "normas": 294,
     "sessoes": 188,
     "itens_pauta": 396,
@@ -156,15 +163,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 17335,
+            "hi": 17354,
             "lo": 13162,
-            "n": 4123,
+            "n": 4142,
             "lo_data": "2024-12-09"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 16975
+        "total_fonte": 16994
       },
       "normajuridica": {
         "faixas": [
@@ -182,19 +189,19 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 19641,
+            "hi": 19642,
             "lo": 16049,
-            "n": 3557,
+            "n": 3558,
             "lo_data": "2024-11-28"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 19176
+        "total_fonte": 19177
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-05T16:55:49.633Z",
+      "legislaturas": "2026-11-15T13:09:05.224Z",
       "tipos_resultado": "2026-11-05T16:56:48.405Z",
       "tipos_materia": "2026-11-05T16:57:48.919Z",
       "mandatos": "2026-11-05T16:58:50.162Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-05T17:13:06.725Z",
       "autores": "2026-11-05T17:14:06.292Z"
     },
-    "ultima_requisicao": "2026-11-13T22:56:56.132Z",
+    "ultima_requisicao": "2026-11-15T13:09:00.426Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

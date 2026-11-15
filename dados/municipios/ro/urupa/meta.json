@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T22:57:13.440Z",
-  "ultima_execucao": "2026-11-13T22:56:56.244Z",
+  "atualizado_em": "2026-11-15T13:09:03.997Z",
+  "ultima_execucao": "2026-11-15T12:49:38.923Z",
   "uf": "RO",
   "casa": "cm-urupa",
   "orgao": "Câmara Municipal de Urupá",
   "host": "sapl.urupa.ro.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Urupá (API REST pública)",
       "url": "https://sapl.urupa.ro.leg.br/api/",
       "orgao": "Câmara Municipal de Urupá",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.urupa.ro.leg.br": null
+    "sapl.urupa.ro.leg.br": {
+      "lido_em": "2026-11-15T12:49:38.923Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 412,
+    "proposicoes": 420,
     "normas": 297,
     "sessoes": 198,
     "itens_pauta": 385,
@@ -194,7 +201,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T21:17:25.687Z",
+      "legislaturas": "2026-11-15T13:09:03.997Z",
       "tipos_resultado": "2026-11-07T21:18:26.689Z",
       "tipos_materia": "2026-11-07T21:19:28.343Z",
       "mandatos": "2026-11-07T21:20:29.161Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-07T21:34:43.739Z",
       "autores": "2026-11-07T21:35:44.218Z"
     },
-    "ultima_requisicao": "2026-11-13T22:56:56.244Z",
+    "ultima_requisicao": "2026-11-15T13:09:00.423Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T13:13:10.327Z",
-  "ultima_execucao": "2026-11-13T13:13:00.331Z",
+  "atualizado_em": "2026-11-15T13:09:02.600Z",
+  "ultima_execucao": "2026-11-15T12:49:38.138Z",
   "uf": "MA",
   "casa": "cm-afonso-cunha",
   "orgao": "Câmara Municipal de Afonso Cunha",
   "host": "sapl.afonsocunha.ma.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Afonso Cunha (API REST pública)",
       "url": "https://sapl.afonsocunha.ma.leg.br/api/",
       "orgao": "Câmara Municipal de Afonso Cunha",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.afonsocunha.ma.leg.br": null
+    "sapl.afonsocunha.ma.leg.br": {
+      "lido_em": "2026-11-15T12:49:38.138Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 113,
+    "proposicoes": 121,
     "normas": 95,
     "sessoes": 175,
     "itens_pauta": 200,
@@ -195,7 +202,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-04T23:09:24.597Z",
+      "legislaturas": "2026-11-15T13:09:02.600Z",
       "tipos_resultado": "2026-11-04T23:10:25.357Z",
       "tipos_materia": "2026-11-04T23:11:28.119Z",
       "mandatos": "2026-11-04T23:12:27.388Z",
@@ -207,7 +214,7 @@
       "status_tramitacao": "2026-11-04T23:26:41.812Z",
       "autores": "2026-11-04T23:27:44.285Z"
     },
-    "ultima_requisicao": "2026-11-13T13:13:00.331Z",
+    "ultima_requisicao": "2026-11-15T13:09:00.420Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

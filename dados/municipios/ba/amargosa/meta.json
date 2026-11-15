@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T22:57:15.374Z",
-  "ultima_execucao": "2026-11-13T22:56:55.959Z",
+  "atualizado_em": "2026-11-15T12:57:52.439Z",
+  "ultima_execucao": "2026-11-15T12:49:38.544Z",
   "uf": "BA",
   "casa": "cm-amargosa",
   "orgao": "Câmara Municipal de Amargosa",
   "host": "sapl.amargosa.ba.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Amargosa (API REST pública)",
       "url": "https://sapl.amargosa.ba.leg.br/api/",
       "orgao": "Câmara Municipal de Amargosa",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.amargosa.ba.leg.br": null
+    "sapl.amargosa.ba.leg.br": {
+      "lido_em": "2026-11-15T12:49:38.544Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 9,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,10 +81,10 @@
   "contagens": {
     "parlamentares": 13,
     "parlamentares_em_exercicio": 12,
-    "proposicoes": 663,
+    "proposicoes": 664,
     "normas": 0,
-    "sessoes": 76,
-    "itens_pauta": 328,
+    "sessoes": 77,
+    "itens_pauta": 331,
     "votacoes": 272,
     "votacoes_por_situacao_dos_votos": {
       "coletados": 271,
@@ -116,15 +123,15 @@
       "ordemdia": {
         "faixas": [
           {
-            "hi": 541,
+            "hi": 544,
             "lo": 99,
-            "n": 328,
+            "n": 331,
             "lo_data": "2025-09-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 328
+        "total_fonte": 331
       },
       "expedientemateria": {
         "faixas": [],
@@ -135,28 +142,28 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 148,
+            "hi": 149,
             "lo": 17,
-            "n": 76,
+            "n": 77,
             "lo_data": "2025-02-06"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 76
+        "total_fonte": 77
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 2982,
+            "hi": 2983,
             "lo": 2306,
-            "n": 663,
+            "n": 664,
             "lo_data": "2024-04-01"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2888
+        "total_fonte": 2889
       },
       "normajuridica": {
         "faixas": [],
@@ -179,7 +186,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-05T16:55:48.403Z",
+      "legislaturas": "2026-11-15T12:57:52.439Z",
       "tipos_resultado": "2026-11-05T16:56:47.606Z",
       "tipos_materia": "2026-11-05T16:57:49.110Z",
       "mandatos": "2026-11-05T16:58:49.960Z",
@@ -191,7 +198,7 @@
       "status_tramitacao": "2026-11-05T17:13:03.723Z",
       "autores": "2026-11-05T17:14:04.464Z"
     },
-    "ultima_requisicao": "2026-11-13T22:56:55.959Z",
+    "ultima_requisicao": "2026-11-15T12:57:47.174Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

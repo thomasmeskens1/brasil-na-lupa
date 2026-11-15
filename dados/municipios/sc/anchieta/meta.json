@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T22:57:14.261Z",
-  "ultima_execucao": "2026-11-13T22:56:56.103Z",
+  "atualizado_em": "2026-11-15T13:00:56.602Z",
+  "ultima_execucao": "2026-11-15T12:49:38.742Z",
   "uf": "SC",
   "casa": "cm-anchieta",
   "orgao": "Câmara Municipal de Anchieta",
   "host": "sapl.anchieta.sc.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Anchieta (API REST pública)",
       "url": "https://sapl.anchieta.sc.leg.br/api/",
       "orgao": "Câmara Municipal de Anchieta",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.anchieta.sc.leg.br": null
+    "sapl.anchieta.sc.leg.br": {
+      "lido_em": "2026-11-15T12:49:38.742Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -194,7 +201,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-05T16:55:49.203Z",
+      "legislaturas": "2026-11-15T13:00:56.601Z",
       "tipos_resultado": "2026-11-05T16:56:48.200Z",
       "tipos_materia": "2026-11-05T16:57:49.503Z",
       "mandatos": "2026-11-05T16:58:50.369Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-05T17:13:04.920Z",
       "autores": "2026-11-05T17:14:06.524Z"
     },
-    "ultima_requisicao": "2026-11-13T22:56:56.103Z",
+    "ultima_requisicao": "2026-11-15T13:00:51.002Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

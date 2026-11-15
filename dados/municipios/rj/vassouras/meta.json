@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T22:57:12.786Z",
-  "ultima_execucao": "2026-11-13T22:56:56.338Z",
+  "atualizado_em": "2026-11-15T13:09:05.408Z",
+  "ultima_execucao": "2026-11-15T12:49:39.050Z",
   "uf": "RJ",
   "casa": "cm-vassouras",
   "orgao": "Câmara Municipal de Vassouras",
   "host": "sapl.vassouras.rj.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Vassouras (API REST pública)",
       "url": "https://sapl.vassouras.rj.leg.br/api/",
       "orgao": "Câmara Municipal de Vassouras",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.vassouras.rj.leg.br": null
+    "sapl.vassouras.rj.leg.br": {
+      "lido_em": "2026-11-15T12:49:39.050Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,8 +81,8 @@
   "contagens": {
     "parlamentares": 13,
     "parlamentares_em_exercicio": 13,
-    "proposicoes": 1657,
-    "normas": 412,
+    "proposicoes": 1665,
+    "normas": 414,
     "sessoes": 107,
     "itens_pauta": 37,
     "votacoes": 11,
@@ -192,7 +199,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T21:17:27.307Z",
+      "legislaturas": "2026-11-15T13:09:05.407Z",
       "tipos_resultado": "2026-11-07T21:18:27.888Z",
       "tipos_materia": "2026-11-07T21:19:29.732Z",
       "mandatos": "2026-11-07T21:20:30.564Z",
@@ -204,7 +211,7 @@
       "status_tramitacao": "2026-11-07T21:35:48.732Z",
       "autores": "2026-11-07T21:36:47.235Z"
     },
-    "ultima_requisicao": "2026-11-13T22:56:56.338Z",
+    "ultima_requisicao": "2026-11-15T13:09:00.426Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

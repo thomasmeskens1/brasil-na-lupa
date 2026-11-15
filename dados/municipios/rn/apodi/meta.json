@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T22:57:13.753Z",
-  "ultima_execucao": "2026-11-13T22:56:56.190Z",
+  "atualizado_em": "2026-11-15T12:59:56.802Z",
+  "ultima_execucao": "2026-11-15T12:49:38.852Z",
   "uf": "RN",
   "casa": "cm-apodi",
   "orgao": "Câmara Municipal de Apodi",
   "host": "sapl.apodi.rn.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Apodi (API REST pública)",
       "url": "https://sapl.apodi.rn.leg.br/api/",
       "orgao": "Câmara Municipal de Apodi",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.apodi.rn.leg.br": null
+    "sapl.apodi.rn.leg.br": {
+      "lido_em": "2026-11-15T12:49:38.852Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 11,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -78,39 +85,39 @@
     "normas": 390,
     "sessoes": 164,
     "itens_pauta": 595,
-    "votacoes": 118,
+    "votacoes": 123,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 118
+      "coletados": 123
     },
-    "votos_individuais": 1326
+    "votos_individuais": 1381
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 119,
+            "hi": 124,
             "lo": 2,
-            "n": 118,
+            "n": 123,
             "lo_data": "2026-04-16"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 118
+        "total_fonte": 123
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 1349,
+            "hi": 1404,
             "lo": 24,
-            "n": 1326,
+            "n": 1381,
             "lo_data": "2026-04-16"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1326
+        "total_fonte": 1381
       },
       "ordemdia": {
         "faixas": [
@@ -185,7 +192,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-05T16:55:50.442Z",
+      "legislaturas": "2026-11-15T12:59:56.801Z",
       "tipos_resultado": "2026-11-05T16:56:49.794Z",
       "tipos_materia": "2026-11-05T16:57:50.510Z",
       "mandatos": "2026-11-05T16:58:51.384Z",
@@ -197,7 +204,7 @@
       "status_tramitacao": "2026-11-05T17:14:05.443Z",
       "autores": "2026-11-05T17:15:06.493Z"
     },
-    "ultima_requisicao": "2026-11-13T22:56:56.190Z",
+    "ultima_requisicao": "2026-11-15T12:59:50.004Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

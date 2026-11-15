@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T22:57:12.839Z",
-  "ultima_execucao": "2026-11-13T22:56:56.329Z",
+  "atualizado_em": "2026-11-15T13:00:57.408Z",
+  "ultima_execucao": "2026-11-15T12:49:39.037Z",
   "uf": "RN",
   "casa": "cm-varzea",
   "orgao": "Câmara Municipal de Várzea",
   "host": "sapl.varzea.rn.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Várzea (API REST pública)",
       "url": "https://sapl.varzea.rn.leg.br/api/",
       "orgao": "Câmara Municipal de Várzea",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.varzea.rn.leg.br": null
+    "sapl.varzea.rn.leg.br": {
+      "lido_em": "2026-11-15T12:49:39.037Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -193,7 +200,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T21:17:26.091Z",
+      "legislaturas": "2026-11-15T13:00:57.408Z",
       "tipos_resultado": "2026-11-07T21:18:27.703Z",
       "tipos_materia": "2026-11-07T21:19:29.528Z",
       "mandatos": "2026-11-07T21:20:30.359Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-07T21:34:43.104Z",
       "autores": "2026-11-07T21:35:44.414Z"
     },
-    "ultima_requisicao": "2026-11-13T22:56:56.329Z",
+    "ultima_requisicao": "2026-11-15T13:00:51.005Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

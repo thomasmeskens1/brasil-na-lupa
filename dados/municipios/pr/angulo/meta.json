@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T22:57:13.967Z",
-  "ultima_execucao": "2026-11-13T22:56:56.157Z",
+  "atualizado_em": "2026-11-15T13:00:56.201Z",
+  "ultima_execucao": "2026-11-15T12:49:38.809Z",
   "uf": "PR",
   "casa": "cm-angulo",
   "orgao": "Câmara Municipal de Ângulo",
   "host": "sapl.angulo.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Ângulo (API REST pública)",
       "url": "https://sapl.angulo.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Ângulo",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.angulo.pr.leg.br": null
+    "sapl.angulo.pr.leg.br": {
+      "lido_em": "2026-11-15T12:49:38.809Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 400,
+    "proposicoes": 408,
     "normas": 334,
     "sessoes": 198,
     "itens_pauta": 681,
@@ -155,15 +162,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 2303,
+            "hi": 2311,
             "lo": 1916,
-            "n": 388,
+            "n": 396,
             "lo_data": "2024-02-26"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2266
+        "total_fonte": 2274
       },
       "normajuridica": {
         "faixas": [
@@ -193,7 +200,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-05T16:55:49.828Z",
+      "legislaturas": "2026-11-15T13:00:56.200Z",
       "tipos_resultado": "2026-11-05T16:56:49.397Z",
       "tipos_materia": "2026-11-05T16:57:50.317Z",
       "mandatos": "2026-11-05T16:58:51.556Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-05T17:13:05.918Z",
       "autores": "2026-11-05T17:14:07.317Z"
     },
-    "ultima_requisicao": "2026-11-13T22:56:56.157Z",
+    "ultima_requisicao": "2026-11-15T13:00:51.002Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

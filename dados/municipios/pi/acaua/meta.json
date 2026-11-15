@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T13:13:22.079Z",
-  "ultima_execucao": "2026-11-13T13:13:00.269Z",
+  "atualizado_em": "2026-11-15T12:59:49.390Z",
+  "ultima_execucao": "2026-11-15T12:49:38.075Z",
   "uf": "PI",
   "casa": "cm-acaua",
   "orgao": "Câmara Municipal de Acauã",
   "host": "sapl.acaua.pi.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Acauã (API REST pública)",
       "url": "https://sapl.acaua.pi.leg.br/api/",
       "orgao": "Câmara Municipal de Acauã",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.acaua.pi.leg.br": null
+    "sapl.acaua.pi.leg.br": {
+      "lido_em": "2026-11-15T12:49:38.075Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 11,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,56 +81,56 @@
   "contagens": {
     "parlamentares": 10,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 167,
+    "proposicoes": 168,
     "normas": 71,
-    "sessoes": 123,
-    "itens_pauta": 233,
-    "votacoes": 149,
+    "sessoes": 124,
+    "itens_pauta": 236,
+    "votacoes": 152,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 149
+      "coletados": 152
     },
-    "votos_individuais": 1170
+    "votos_individuais": 1194
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 152,
+            "hi": 155,
             "lo": 2,
-            "n": 149,
+            "n": 152,
             "lo_data": "2025-05-16"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 149
+        "total_fonte": 152
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 1203,
+            "hi": 1227,
             "lo": 10,
-            "n": 1170,
+            "n": 1194,
             "lo_data": "2025-05-16"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1170
+        "total_fonte": 1194
       },
       "ordemdia": {
         "faixas": [
           {
-            "hi": 165,
+            "hi": 168,
             "lo": 5,
-            "n": 157,
+            "n": 160,
             "lo_data": "2024-02-09"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 157
+        "total_fonte": 160
       },
       "expedientemateria": {
         "faixas": [
@@ -141,28 +148,28 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 123,
+            "hi": 124,
             "lo": 1,
-            "n": 123,
+            "n": 124,
             "lo_data": "2025-02-20"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 123
+        "total_fonte": 124
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 169,
+            "hi": 170,
             "lo": 1,
-            "n": 167,
+            "n": 168,
             "lo_data": "2025-02-05"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 167
+        "total_fonte": 168
       },
       "normajuridica": {
         "faixas": [
@@ -185,7 +192,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-04T23:09:23.813Z",
+      "legislaturas": "2026-11-15T12:59:49.390Z",
       "tipos_resultado": "2026-11-04T23:10:24.559Z",
       "tipos_materia": "2026-11-04T23:11:27.176Z",
       "mandatos": "2026-11-04T23:12:26.787Z",
@@ -197,7 +204,7 @@
       "status_tramitacao": "2026-11-04T23:26:40.819Z",
       "autores": "2026-11-04T23:27:42.273Z"
     },
-    "ultima_requisicao": "2026-11-13T13:13:00.269Z",
+    "ultima_requisicao": "2026-11-15T12:59:48.576Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

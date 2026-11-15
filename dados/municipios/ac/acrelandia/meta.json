@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T13:13:22.296Z",
-  "ultima_execucao": "2026-11-13T13:13:00.299Z",
+  "atualizado_em": "2026-11-15T13:09:01.801Z",
+  "ultima_execucao": "2026-11-15T12:49:38.108Z",
   "uf": "AC",
   "casa": "cm-acrelandia",
   "orgao": "Câmara Municipal de Acrelândia",
   "host": "sapl.acrelandia.ac.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Acrelândia (API REST pública)",
       "url": "https://sapl.acrelandia.ac.leg.br/api/",
       "orgao": "Câmara Municipal de Acrelândia",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.acrelandia.ac.leg.br": null
+    "sapl.acrelandia.ac.leg.br": {
+      "lido_em": "2026-11-15T12:49:38.108Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -77,12 +84,12 @@
     "proposicoes": 404,
     "normas": 2,
     "sessoes": 170,
-    "itens_pauta": 295,
+    "itens_pauta": 303,
     "votacoes": 362,
     "votacoes_por_situacao_dos_votos": {
-      "em-coleta": 71,
-      "inexistentes-na-fonte": 222,
-      "coletados": 69
+      "inexistentes-na-fonte": 230,
+      "coletados": 69,
+      "em-coleta": 63
     },
     "votos_individuais": 602
   },
@@ -194,7 +201,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-04T23:09:24.199Z",
+      "legislaturas": "2026-11-15T13:09:01.801Z",
       "tipos_resultado": "2026-11-04T23:10:24.957Z",
       "tipos_materia": "2026-11-04T23:11:27.932Z",
       "mandatos": "2026-11-04T23:12:26.996Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-04T23:26:40.223Z",
       "autores": "2026-11-04T23:27:41.609Z"
     },
-    "ultima_requisicao": "2026-11-13T13:13:00.299Z",
+    "ultima_requisicao": "2026-11-15T13:09:00.418Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

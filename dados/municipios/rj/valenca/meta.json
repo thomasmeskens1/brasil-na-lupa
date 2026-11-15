@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T22:57:13.212Z",
-  "ultima_execucao": "2026-11-13T22:56:56.271Z",
+  "atualizado_em": "2026-11-15T12:59:57.788Z",
+  "ultima_execucao": "2026-11-15T12:49:38.963Z",
   "uf": "RJ",
   "casa": "cm-valenca",
   "orgao": "Câmara Municipal de Valença",
   "host": "sapl.valenca.rj.leg.br",
   "periodo": {
     "inicio": "2025-02-04",
-    "fim": "2026-11-13"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Valença (API REST pública)",
       "url": "https://sapl.valenca.rj.leg.br/api/",
       "orgao": "Câmara Municipal de Valença",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.valenca.rj.leg.br": null
+    "sapl.valenca.rj.leg.br": {
+      "lido_em": "2026-11-15T12:49:38.963Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 11,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -186,7 +193,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T21:17:26.492Z",
+      "legislaturas": "2026-11-15T12:59:57.788Z",
       "tipos_resultado": "2026-11-07T21:18:26.888Z",
       "tipos_materia": "2026-11-07T21:19:27.899Z",
       "mandatos": "2026-11-07T21:20:29.545Z",
@@ -198,7 +205,7 @@
       "status_tramitacao": "2026-11-07T21:34:43.347Z",
       "autores": "2026-11-07T21:35:45.213Z"
     },
-    "ultima_requisicao": "2026-11-13T22:56:56.271Z",
+    "ultima_requisicao": "2026-11-15T12:59:50.004Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

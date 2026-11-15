@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T22:57:13.162Z",
-  "ultima_execucao": "2026-11-13T22:56:56.280Z",
+  "atualizado_em": "2026-11-15T13:00:57.199Z",
+  "ultima_execucao": "2026-11-15T12:49:38.972Z",
   "uf": "MG",
   "casa": "cm-vargem-bonita",
   "orgao": "Câmara Municipal de Vargem Bonita",
   "host": "sapl.vargembonita.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Vargem Bonita (API REST pública)",
       "url": "https://sapl.vargembonita.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Vargem Bonita",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.vargembonita.mg.leg.br": null
+    "sapl.vargembonita.mg.leg.br": {
+      "lido_em": "2026-11-15T12:49:38.972Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -194,7 +201,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T21:17:26.291Z",
+      "legislaturas": "2026-11-15T13:00:57.199Z",
       "tipos_resultado": "2026-11-07T21:18:27.488Z",
       "tipos_materia": "2026-11-07T21:19:27.703Z",
       "mandatos": "2026-11-07T21:20:29.755Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-07T21:34:43.316Z",
       "autores": "2026-11-07T21:35:44.199Z"
     },
-    "ultima_requisicao": "2026-11-13T22:56:56.280Z",
+    "ultima_requisicao": "2026-11-15T13:00:51.003Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

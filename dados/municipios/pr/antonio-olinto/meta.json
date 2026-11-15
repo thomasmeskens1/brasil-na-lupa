@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T22:57:13.874Z",
-  "ultima_execucao": "2026-11-13T22:56:56.168Z",
+  "atualizado_em": "2026-11-15T13:09:04.675Z",
+  "ultima_execucao": "2026-11-15T12:49:38.823Z",
   "uf": "PR",
   "casa": "cm-antonio-olinto",
   "orgao": "Câmara Municipal de Antônio Olinto",
   "host": "sapl.antonioolinto.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-13"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Antônio Olinto (API REST pública)",
       "url": "https://sapl.antonioolinto.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Antônio Olinto",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.antonioolinto.pr.leg.br": null
+    "sapl.antonioolinto.pr.leg.br": {
+      "lido_em": "2026-11-15T12:49:38.823Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,10 +81,10 @@
   "contagens": {
     "parlamentares": 10,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 521,
+    "proposicoes": 529,
     "normas": 198,
-    "sessoes": 269,
-    "itens_pauta": 393,
+    "sessoes": 270,
+    "itens_pauta": 394,
     "votacoes": 389,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 21,
@@ -117,15 +124,15 @@
       "ordemdia": {
         "faixas": [
           {
-            "hi": 995,
+            "hi": 996,
             "lo": 575,
-            "n": 390,
+            "n": 391,
             "lo_data": "2024-03-13"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 938
+        "total_fonte": 939
       },
       "expedientemateria": {
         "faixas": [
@@ -143,15 +150,15 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 273,
+            "hi": 274,
             "lo": 1,
-            "n": 269,
+            "n": 270,
             "lo_data": "2020-02-03"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 269
+        "total_fonte": 270
       },
       "materialegislativa": {
         "faixas": [
@@ -194,7 +201,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-05T16:55:50.011Z",
+      "legislaturas": "2026-11-15T13:09:04.675Z",
       "tipos_resultado": "2026-11-05T16:56:49.009Z",
       "tipos_materia": "2026-11-05T16:57:50.111Z",
       "mandatos": "2026-11-05T16:58:51.168Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-05T17:13:05.689Z",
       "autores": "2026-11-05T17:15:07.909Z"
     },
-    "ultima_requisicao": "2026-11-13T22:56:56.168Z",
+    "ultima_requisicao": "2026-11-15T13:09:00.425Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

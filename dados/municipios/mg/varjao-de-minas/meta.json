@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-13T22:57:12.858Z",
-  "ultima_execucao": "2026-11-13T22:56:56.326Z",
+  "atualizado_em": "2026-11-15T13:00:58.609Z",
+  "ultima_execucao": "2026-11-15T12:49:39.033Z",
   "uf": "MG",
   "casa": "cm-varjao-de-minas",
   "orgao": "Câmara Municipal de Varjão de Minas",
   "host": "sapl.varjaodeminas.mg.leg.br",
   "periodo": {
     "inicio": null,
-    "fim": "2026-11-13"
+    "fim": "2026-11-15"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Varjão de Minas (API REST pública)",
       "url": "https://sapl.varjaodeminas.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Varjão de Minas",
-      "acessado_em": "2026-11-13"
+      "acessado_em": "2026-11-15"
     }
   ],
   "robots": {
-    "sapl.varjaodeminas.mg.leg.br": null
+    "sapl.varjaodeminas.mg.leg.br": {
+      "lido_em": "2026-11-15T12:49:39.033Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -191,7 +198,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T21:17:26.895Z",
+      "legislaturas": "2026-11-15T13:00:58.609Z",
       "tipos_resultado": "2026-11-07T21:18:27.085Z",
       "tipos_materia": "2026-11-07T21:19:28.511Z",
       "tipos_norma": "2026-11-07T21:28:38.649Z",
@@ -202,7 +209,7 @@
       "status_tramitacao": "2026-11-07T21:33:43.388Z",
       "autores": "2026-11-07T21:34:44.226Z"
     },
-    "ultima_requisicao": "2026-11-13T22:56:56.326Z",
+    "ultima_requisicao": "2026-11-15T13:00:51.008Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
