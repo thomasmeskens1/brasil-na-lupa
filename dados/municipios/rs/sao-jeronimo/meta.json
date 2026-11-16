@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-14T22:42:29.533Z",
-  "ultima_execucao": "2026-11-14T21:43:19.508Z",
+  "atualizado_em": "2026-11-16T13:46:31.760Z",
+  "ultima_execucao": "2026-11-16T13:46:21.600Z",
   "uf": "RS",
   "casa": "cm-sao-jeronimo",
   "orgao": "Câmara Municipal de São Jerônimo",
   "host": "sapl.saojeronimo.rs.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-14"
+    "fim": "2026-11-16"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de São Jerônimo (API REST pública)",
       "url": "https://sapl.saojeronimo.rs.leg.br/api/",
       "orgao": "Câmara Municipal de São Jerônimo",
-      "acessado_em": "2026-11-14"
+      "acessado_em": "2026-11-16"
     }
   ],
   "robots": {
-    "sapl.saojeronimo.rs.leg.br": {
-      "lido_em": "2026-11-14T21:43:19.508Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.saojeronimo.rs.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,9 +80,9 @@
     "itens_pauta": 523,
     "votacoes": 495,
     "votacoes_por_situacao_dos_votos": {
+      "em-coleta": 21,
       "coletados": 472,
-      "inexistentes-na-fonte": 2,
-      "em-coleta": 21
+      "inexistentes-na-fonte": 2
     },
     "votos_individuais": 5100
   },
@@ -213,7 +206,7 @@
       "status_tramitacao": "2026-11-07T12:24:16.002Z",
       "autores": "2026-11-07T12:25:17.446Z"
     },
-    "ultima_requisicao": "2026-11-14T22:42:23.184Z",
+    "ultima_requisicao": "2026-11-16T13:46:21.600Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

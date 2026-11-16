@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-14T12:18:58.949Z",
-  "ultima_execucao": "2026-11-14T12:18:34.760Z",
+  "atualizado_em": "2026-11-16T13:59:35.702Z",
+  "ultima_execucao": "2026-11-16T13:46:19.472Z",
   "uf": "RN",
   "casa": "cm-jucurutu",
   "orgao": "Câmara Municipal de Jucurutu",
   "host": "sapl.jucurutu.rn.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-14"
+    "fim": "2026-11-16"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Jucurutu (API REST pública)",
       "url": "https://sapl.jucurutu.rn.leg.br/api/",
       "orgao": "Câmara Municipal de Jucurutu",
-      "acessado_em": "2026-11-14"
+      "acessado_em": "2026-11-16"
     }
   ],
   "robots": {
-    "sapl.jucurutu.rn.leg.br": null
+    "sapl.jucurutu.rn.leg.br": {
+      "lido_em": "2026-11-16T13:46:19.472Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 14,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -45,16 +52,16 @@
       "concluida": true
     },
     "sessaoplenaria": {
-      "desde": "2021-02-23",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "materialegislativa": {
       "desde": "0000-00-00",
       "concluida": true
     },
     "normajuridica": {
-      "desde": "2022-12-30",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "tramitacao": {
       "desde": "0000-00-00",
@@ -75,8 +82,8 @@
     "parlamentares": 11,
     "parlamentares_em_exercicio": 11,
     "proposicoes": 744,
-    "normas": 100,
-    "sessoes": 100,
+    "normas": 198,
+    "sessoes": 198,
     "itens_pauta": 202,
     "votacoes": 187,
     "votacoes_por_situacao_dos_votos": {
@@ -142,12 +149,12 @@
         "faixas": [
           {
             "hi": 203,
-            "lo": 99,
-            "n": 100,
-            "lo_data": "2021-02-23"
+            "lo": 1,
+            "n": 198,
+            "lo_data": "2023-03-07"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 198
       },
@@ -168,12 +175,12 @@
         "faixas": [
           {
             "hi": 357,
-            "lo": 258,
-            "n": 100,
-            "lo_data": "2022-12-30"
+            "lo": 160,
+            "n": 198,
+            "lo_data": "2022-09-19"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 357
       },
@@ -192,7 +199,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T13:19:16.681Z",
+      "legislaturas": "2026-11-16T13:57:32.566Z",
       "tipos_resultado": "2026-11-06T13:20:18.339Z",
       "tipos_materia": "2026-11-06T13:21:18.704Z",
       "mandatos": "2026-11-06T13:22:18.523Z",
@@ -204,7 +211,7 @@
       "status_tramitacao": "2026-11-06T13:36:35.021Z",
       "autores": "2026-11-06T13:37:36.198Z"
     },
-    "ultima_requisicao": "2026-11-14T12:18:34.760Z",
+    "ultima_requisicao": "2026-11-16T13:59:32.744Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

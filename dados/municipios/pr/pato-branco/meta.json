@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-14T22:42:25.059Z",
-  "ultima_execucao": "2026-11-14T21:43:18.012Z",
+  "atualizado_em": "2026-11-16T13:46:37.095Z",
+  "ultima_execucao": "2026-11-16T13:46:20.462Z",
   "uf": "PR",
   "casa": "cm-pato-branco",
   "orgao": "Câmara Municipal de Pato Branco",
   "host": "sapl.patobranco.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-14"
+    "fim": "2026-11-16"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Pato Branco (API REST pública)",
       "url": "https://sapl.patobranco.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Pato Branco",
-      "acessado_em": "2026-11-14"
+      "acessado_em": "2026-11-16"
     }
   ],
   "robots": {
-    "sapl.patobranco.pr.leg.br": {
-      "lido_em": "2026-11-14T21:43:18.012Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.patobranco.pr.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,9 +80,9 @@
     "itens_pauta": 2934,
     "votacoes": 2376,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 1000,
+      "em-coleta": 74,
       "inexistentes-na-fonte": 1302,
-      "em-coleta": 74
+      "coletados": 1000
     },
     "votos_individuais": 10672
   },
@@ -213,7 +206,7 @@
       "status_tramitacao": "2026-11-06T23:06:26.687Z",
       "autores": "2026-11-06T23:09:26.416Z"
     },
-    "ultima_requisicao": "2026-11-14T22:42:23.177Z",
+    "ultima_requisicao": "2026-11-16T13:46:20.462Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
