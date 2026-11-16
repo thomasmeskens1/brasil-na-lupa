@@ -1,6 +1,6 @@
 {
-  "atualizado_em": "2026-11-15T18:53:29.434Z",
-  "ultima_execucao": "2026-11-15T18:53:29.434Z",
+  "atualizado_em": "2026-11-16T21:55:32.262Z",
+  "ultima_execucao": "2026-11-16T21:55:32.262Z",
   "uf": "RN",
   "casa": "alrn",
   "periodo": {
@@ -11,10 +11,10 @@
       2023
     ],
     "inicio_cobertura": "2023-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-16"
   },
   "modo": "incremental",
-  "duracao_s": 446,
+  "duracao_s": 158,
   "orcamento_min": 20,
   "contagens": {
     "parlamentares": {
@@ -60,13 +60,28 @@
       }
     },
     "votacoes_nesta_execucao": {
-      "processos_na_lista": 0,
-      "processos_consultados": 0,
-      "votacoes_gravadas": 0,
-      "puladas_sem_mudanca": 0,
-      "sem_votos_conferidos": 0
+      "processos_na_lista": 2003,
+      "processos_consultados": 43,
+      "votacoes_gravadas": 45,
+      "puladas_sem_mudanca": 1384,
+      "sem_votos_conferidos": 17
     },
-    "proposicoes_nesta_execucao": {},
+    "proposicoes_nesta_execucao": {
+      "2026": {
+        "processos_no_ano": 3380,
+        "no_indice": 498,
+        "por_sigla": {
+          "MSG": 2,
+          "PEC": 2,
+          "PL": 444,
+          "PLC": 22,
+          "PRES": 11,
+          "VET": 17
+        },
+        "situacao_consultada_nesta_execucao": 41,
+        "sem_situacao": 0
+      }
+    },
     "normas_por_ano": {
       "2023": {
         "total": 386,
@@ -97,33 +112,33 @@
         }
       }
     },
-    "requisicoes": 23
+    "requisicoes": 164
   },
   "fontes": [
     {
       "titulo": "API eLegis — Transparência Legislativa da ALRN",
       "url": "https://api-transparencialegislativa.al.rn.leg.br/elegis-api-transp-legislativa",
       "orgao": "Assembleia Legislativa do Estado do Rio Grande do Norte (ALRN)",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-16"
     },
     {
       "titulo": "Transparência Legislativa da ALRN",
       "url": "https://transparencialegislativa.al.rn.leg.br",
       "orgao": "Assembleia Legislativa do Estado do Rio Grande do Norte (ALRN)",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-16"
     },
     {
       "titulo": "Legislação — portal da ALRN",
       "url": "https://www.al.rn.leg.br/legislacao/leis-ordinarias",
       "orgao": "Assembleia Legislativa do Estado do Rio Grande do Norte (ALRN)",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-16"
     }
   ],
   "robots": {
     "api-transparencialegislativa.al.rn.leg.br": {
       "url": "https://api-transparencialegislativa.al.rn.leg.br/robots.txt",
       "status": 404,
-      "lido_em": "2026-11-15T18:46:03.876Z",
+      "lido_em": "2026-11-16T21:52:54.422Z",
       "crawl_delay_s": null,
       "disallow": [],
       "allow": [],
@@ -132,7 +147,7 @@
     "transparencialegislativa.al.rn.leg.br": {
       "url": "https://transparencialegislativa.al.rn.leg.br/robots.txt",
       "status": 200,
-      "lido_em": "2026-11-15T18:46:05.556Z",
+      "lido_em": "2026-11-16T21:52:55.886Z",
       "crawl_delay_s": null,
       "disallow": [],
       "allow": [],
@@ -141,7 +156,7 @@
     "www.al.rn.leg.br": {
       "url": "https://www.al.rn.leg.br/robots.txt",
       "status": 200,
-      "lido_em": "2026-11-15T18:46:07.040Z",
+      "lido_em": "2026-11-16T21:52:57.325Z",
       "crawl_delay_s": null,
       "disallow": [],
       "allow": [],
@@ -160,7 +175,7 @@
     "Índice de proposições por ano do processo (filtro \"ano\" da fonte); entram PL, PLC, PEC, PDL, PRES, VET e Mensagens. Situação = última tramitação, consultada em rodízio (no máximo RN_MAX_TRAMITACOES por execução; padrão 400).",
     "Leis: lista oficial do portal da ALRN com o PDF de cada lei. O serviço privado leisestaduais.com.br, linkado no portal, não é usado.",
     "Decretos do Governador: o Diário Oficial do RN só publica PDF diário, sem fonte estruturada; não coletados nesta versão.",
-    "Falhas nesta execução: parlamentares: HTTP 500 em https://api-transparencialegislativa.al.rn.leg.br/elegis-api-transp-legislativa/parlamentar | votações: HTTP 500 em https://api-transparencialegislativa.al.rn.leg.br/elegis-api-transp-legislativa/processo/ultimas-votacoes?pagina=0&tamanhoPagina=200 | proposições 2026: HTTP 500 em https://api-transparencialegislativa.al.rn.leg.br/elegis-api-transp-legislativa/processo?pagina=0&tamanhoPagina=500&ano=2026 | leis: HTTP 500 em https://www.al.rn.leg.br/legislacao/leis-ordinarias"
+    "Falhas nesta execução: votações: HTTP 500 em https://api-transparencialegislativa.al.rn.leg.br/elegis-api-transp-legislativa/processo/37877/detalhamento-votacao/2464"
   ],
   "cursor": {
     "votacoes_por_processo": {
@@ -1594,7 +1609,7 @@
       "2023": "2026-11-13",
       "2024": "2026-11-13",
       "2025": "2026-11-13",
-      "2026": "2026-11-13"
+      "2026": "2026-11-16"
     }
   }
 }
