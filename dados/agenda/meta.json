@@ -1,37 +1,26 @@
 {
-  "atualizado_em": "2026-11-16T21:31:02.112Z",
-  "verificado_em": "2026-11-16T21:31:02.112Z",
+  "atualizado_em": "2026-11-17T04:00:12.955Z",
+  "verificado_em": "2026-11-17T04:00:12.955Z",
   "periodo": {
-    "inicio": "2026-09-17",
-    "fim": "2026-12-16",
-    "referencia": "2026-11-16",
+    "inicio": "2026-09-18",
+    "fim": "2026-12-17",
+    "referencia": "2026-11-17",
     "regra": "últimos 60 dias e próximos 30 dias"
   },
   "tempo_real": false,
   "aviso": "Não é tempo real: a agenda, a pauta e o resultado vêm dos serviços de dados abertos das casas, que se atualizam com atraso de minutos; a coleta é diária.",
   "contagens": {
     "por_casa": {
-      "camara": {
-        "sessoes": 34,
-        "por_situacao": {
-          "encerrada": 18,
-          "agendada": 16
-        },
-        "por_tipo": {
-          "não deliberativa": 23,
-          "deliberativa extraordinária": 11
-        }
-      },
       "senado": {
-        "sessoes": 61,
+        "sessoes": 60,
         "por_situacao": {
-          "encerrada": 26,
+          "encerrada": 25,
           "não realizada": 4,
           "cancelada": 1,
           "agendada": 30
         },
         "por_tipo": {
-          "não deliberativa": 39,
+          "não deliberativa": 38,
           "deliberativa ordinária": 21,
           "deliberativa extraordinária": 1
         }
@@ -45,10 +34,21 @@
         "por_tipo": {
           "sessão do Congresso Nacional": 6
         }
+      },
+      "camara": {
+        "sessoes": 33,
+        "por_situacao": {
+          "encerrada": 17,
+          "agendada": 16
+        },
+        "por_tipo": {
+          "deliberativa extraordinária": 11,
+          "não deliberativa": 22
+        }
       }
     },
-    "sessoes": 101,
-    "arquivos_de_pauta": 73,
+    "sessoes": 99,
+    "arquivos_de_pauta": 71,
     "itens_de_pauta": 273,
     "itens_por_desfecho": {
       "aprovado": 137,
@@ -86,37 +86,37 @@
       "titulo": "Câmara dos Deputados: eventos do Plenário (órgão 180)",
       "url": "https://dadosabertos.camara.leg.br/api/v2/eventos?idOrgao=180",
       "orgao": "Câmara dos Deputados",
-      "acessado_em": "2026-11-16"
+      "acessado_em": "2026-11-17"
     },
     {
       "titulo": "Câmara dos Deputados: pauta do evento",
       "url": "https://dadosabertos.camara.leg.br/api/v2/eventos/{id}/pauta",
       "orgao": "Câmara dos Deputados",
-      "acessado_em": "2026-11-16"
+      "acessado_em": "2026-11-17"
     },
     {
       "titulo": "Câmara dos Deputados: votações do evento",
       "url": "https://dadosabertos.camara.leg.br/api/v2/eventos/{id}/votacoes",
       "orgao": "Câmara dos Deputados",
-      "acessado_em": "2026-11-16"
+      "acessado_em": "2026-11-17"
     },
     {
       "titulo": "Senado Federal: agenda do mês nos Plenários do Senado e do Congresso",
       "url": "https://legis.senado.leg.br/dadosabertos/plenario/agenda/mes/{AAAAMMDD}",
       "orgao": "Senado Federal",
-      "acessado_em": "2026-11-16"
+      "acessado_em": "2026-11-17"
     },
     {
       "titulo": "Senado Federal: detalhes e pauta do encontro do Plenário",
       "url": "https://legis.senado.leg.br/dadosabertos/plenario/encontro/{codigo}/pauta",
       "orgao": "Senado Federal",
-      "acessado_em": "2026-11-16"
+      "acessado_em": "2026-11-17"
     },
     {
       "titulo": "Senado Federal: resultado do mês das sessões plenárias",
       "url": "https://legis.senado.leg.br/dadosabertos/plenario/resultado/mes/{AAAAMMDD}",
       "orgao": "Senado Federal",
-      "acessado_em": "2026-11-16"
+      "acessado_em": "2026-11-17"
     }
   ],
   "observacoes": [
@@ -129,7 +129,7 @@
   ],
   "falhas": [],
   "execucao": {
-    "requisicoes": 143,
+    "requisicoes": 141,
     "retentativas": 0
   }
 }
