@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T12:49:53.244Z",
-  "ultima_execucao": "2026-11-15T12:49:39.469Z",
+  "atualizado_em": "2026-11-17T01:28:24.636Z",
+  "ultima_execucao": "2026-11-17T01:08:55.770Z",
   "uf": "BA",
   "casa": "cm-araci",
   "orgao": "Câmara Municipal de Araci",
   "host": "sapl.araci.ba.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-16"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Araci (API REST pública)",
       "url": "https://sapl.araci.ba.leg.br/api/",
       "orgao": "Câmara Municipal de Araci",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-16"
     }
   ],
   "robots": {
-    "sapl.araci.ba.leg.br": null
+    "sapl.araci.ba.leg.br": {
+      "lido_em": "2026-11-17T01:08:55.770Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,10 +81,10 @@
   "contagens": {
     "parlamentares": 17,
     "parlamentares_em_exercicio": 14,
-    "proposicoes": 333,
-    "normas": 210,
-    "sessoes": 184,
-    "itens_pauta": 604,
+    "proposicoes": 343,
+    "normas": 213,
+    "sessoes": 185,
+    "itens_pauta": 605,
     "votacoes": 301,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 44,
@@ -130,71 +137,71 @@
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 459,
+            "hi": 460,
             "lo": 141,
-            "n": 299,
+            "n": 300,
             "lo_data": "2023-09-26"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 433
+        "total_fonte": 434
       },
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 192,
+            "hi": 193,
             "lo": 2,
-            "n": 184,
+            "n": 185,
             "lo_data": "2021-11-09"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 184
+        "total_fonte": 185
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 503,
+            "hi": 505,
             "lo": 205,
-            "n": 298,
+            "n": 300,
             "lo_data": "2023-11-20"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 495
+        "total_fonte": 497
       },
       "normajuridica": {
         "faixas": [
           {
-            "hi": 596,
+            "hi": 599,
             "lo": 395,
-            "n": 198,
+            "n": 201,
             "lo_data": "2017-12-27"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 579
+        "total_fonte": 582
       },
       "tramitacao": {
         "faixas": [
           {
-            "hi": 3910,
+            "hi": 3913,
             "lo": 2139,
-            "n": 1743,
+            "n": 1746,
             "lo_data": "2024-09-27"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 3774
+        "total_fonte": 3777
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-05T16:55:51.450Z",
+      "legislaturas": "2026-11-17T01:28:24.636Z",
       "tipos_resultado": "2026-11-05T16:56:50.798Z",
       "tipos_materia": "2026-11-05T16:57:51.514Z",
       "mandatos": "2026-11-05T16:58:52.389Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-05T17:14:08.223Z",
       "autores": "2026-11-05T17:15:09.373Z"
     },
-    "ultima_requisicao": "2026-11-15T12:49:39.469Z",
+    "ultima_requisicao": "2026-11-17T01:28:20.172Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

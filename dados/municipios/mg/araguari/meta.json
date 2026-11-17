@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T12:49:53.346Z",
-  "ultima_execucao": "2026-11-15T12:49:39.615Z",
+  "atualizado_em": "2026-11-17T01:28:24.822Z",
+  "ultima_execucao": "2026-11-17T01:08:55.931Z",
   "uf": "MG",
   "casa": "cm-araguari",
   "orgao": "Câmara Municipal de Araguari",
   "host": "sapl.araguari.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-16"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Araguari (API REST pública)",
       "url": "https://sapl.araguari.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Araguari",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-16"
     }
   ],
   "robots": {
-    "sapl.araguari.mg.leg.br": null
+    "sapl.araguari.mg.leg.br": {
+      "lido_em": "2026-11-17T01:08:55.931Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 19,
     "parlamentares_em_exercicio": 17,
-    "proposicoes": 7824,
+    "proposicoes": 7873,
     "normas": 95,
     "sessoes": 295,
     "itens_pauta": 849,
@@ -156,15 +163,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 25856,
+            "hi": 25897,
             "lo": 17998,
-            "n": 7808,
+            "n": 7849,
             "lo_data": "2024-11-19"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 25494
+        "total_fonte": 25535
       },
       "normajuridica": {
         "faixas": [
@@ -194,7 +201,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-05T16:55:51.996Z",
+      "legislaturas": "2026-11-17T01:28:24.821Z",
       "tipos_resultado": "2026-11-05T16:56:51.397Z",
       "tipos_materia": "2026-11-05T16:57:52.538Z",
       "mandatos": "2026-11-05T16:58:53.587Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-05T17:13:07.905Z",
       "autores": "2026-11-05T17:14:08.972Z"
     },
-    "ultima_requisicao": "2026-11-15T12:49:39.615Z",
+    "ultima_requisicao": "2026-11-17T01:28:20.172Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

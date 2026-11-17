@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T12:49:52.705Z",
-  "ultima_execucao": "2026-11-15T12:49:39.103Z",
+  "atualizado_em": "2026-11-17T01:20:14.916Z",
+  "ultima_execucao": "2026-11-17T01:08:55.388Z",
   "uf": "MA",
   "casa": "cm-vila-nova-dos-martirios",
   "orgao": "Câmara Municipal de Vila Nova dos Martírios",
   "host": "sapl.vilanovadosmartirios.ma.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-16"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Vila Nova dos Martírios (API REST pública)",
       "url": "https://sapl.vilanovadosmartirios.ma.leg.br/api/",
       "orgao": "Câmara Municipal de Vila Nova dos Martírios",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-16"
     }
   ],
   "robots": {
-    "sapl.vilanovadosmartirios.ma.leg.br": null
+    "sapl.vilanovadosmartirios.ma.leg.br": {
+      "lido_em": "2026-11-17T01:08:55.388Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,10 +81,10 @@
   "contagens": {
     "parlamentares": 10,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 662,
+    "proposicoes": 669,
     "normas": 277,
-    "sessoes": 87,
-    "itens_pauta": 453,
+    "sessoes": 88,
+    "itens_pauta": 462,
     "votacoes": 305,
     "votacoes_por_situacao_dos_votos": {
       "coletados": 304,
@@ -124,46 +131,46 @@
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 348
+        "total_fonte": 349
       },
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 129,
+            "hi": 137,
             "lo": 4,
-            "n": 105,
+            "n": 113,
             "lo_data": "2025-04-15"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 105
+        "total_fonte": 113
       },
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 88,
+            "hi": 89,
             "lo": 1,
-            "n": 87,
+            "n": 88,
             "lo_data": "2025-04-08"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 87
+        "total_fonte": 88
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 701,
+            "hi": 708,
             "lo": 2,
-            "n": 662,
+            "n": 669,
             "lo_data": "2025-02-11"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 662
+        "total_fonte": 669
       },
       "normajuridica": {
         "faixas": [
@@ -181,19 +188,19 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 1900,
+            "hi": 1914,
             "lo": 1,
-            "n": 1801,
+            "n": 1815,
             "lo_data": "2025-03-17"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1801
+        "total_fonte": 1815
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T21:17:28.899Z",
+      "legislaturas": "2026-11-17T01:20:14.915Z",
       "tipos_resultado": "2026-11-07T21:18:28.886Z",
       "tipos_materia": "2026-11-07T21:19:30.510Z",
       "mandatos": "2026-11-07T21:20:31.165Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-07T21:34:43.711Z",
       "autores": "2026-11-07T21:35:45.559Z"
     },
-    "ultima_requisicao": "2026-11-15T12:49:39.103Z",
+    "ultima_requisicao": "2026-11-17T01:20:10.872Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

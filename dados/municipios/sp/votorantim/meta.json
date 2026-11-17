@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T12:49:51.327Z",
-  "ultima_execucao": "2026-11-15T12:49:39.313Z",
+  "atualizado_em": "2026-11-17T01:28:23.866Z",
+  "ultima_execucao": "2026-11-17T01:08:55.614Z",
   "uf": "SP",
   "casa": "cm-votorantim",
   "orgao": "Câmara Municipal de Votorantim",
   "host": "sapl.votorantim.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-16"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Votorantim (API REST pública)",
       "url": "https://sapl.votorantim.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Votorantim",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-16"
     }
   ],
   "robots": {
-    "sapl.votorantim.sp.leg.br": null
+    "sapl.votorantim.sp.leg.br": {
+      "lido_em": "2026-11-17T01:08:55.614Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 13,
     "parlamentares_em_exercicio": 12,
-    "proposicoes": 4081,
+    "proposicoes": 4110,
     "normas": 537,
     "sessoes": 199,
     "itens_pauta": 680,
@@ -156,15 +163,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 24849,
+            "hi": 24870,
             "lo": 20746,
-            "n": 4057,
+            "n": 4078,
             "lo_data": "2012-02-13"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 24657
+        "total_fonte": 24678
       },
       "normajuridica": {
         "faixas": [
@@ -182,19 +189,19 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 11720,
+            "hi": 11723,
             "lo": 4560,
-            "n": 7056,
+            "n": 7059,
             "lo_data": "2024-07-11"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 11505
+        "total_fonte": 11508
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T21:17:28.696Z",
+      "legislaturas": "2026-11-17T01:28:23.866Z",
       "tipos_resultado": "2026-11-07T21:18:29.287Z",
       "tipos_materia": "2026-11-07T21:19:30.116Z",
       "mandatos": "2026-11-07T21:20:32.365Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-07T21:35:46.318Z",
       "autores": "2026-11-07T21:37:48.778Z"
     },
-    "ultima_requisicao": "2026-11-15T12:49:39.313Z",
+    "ultima_requisicao": "2026-11-17T01:28:20.169Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

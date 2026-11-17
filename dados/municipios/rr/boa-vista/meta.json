@@ -1,6 +1,6 @@
 {
-  "atualizado_em": "2026-11-16T14:31:07.670Z",
-  "ultima_execucao": "2026-11-16T13:46:19.129Z",
+  "atualizado_em": "2026-11-17T01:28:17.437Z",
+  "ultima_execucao": "2026-11-17T01:08:53.572Z",
   "uf": "RR",
   "casa": "cm-boa-vista",
   "orgao": "Câmara Municipal de Boa Vista",
@@ -20,7 +20,7 @@
   ],
   "robots": {
     "sapl.boavista.rr.leg.br": {
-      "lido_em": "2026-11-16T13:46:19.129Z",
+      "lido_em": "2026-11-17T01:08:53.572Z",
       "status": 200,
       "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
@@ -31,8 +31,12 @@
     }
   },
   "execucao": {
-    "requisicoes": 45,
-    "falhas": []
+    "requisicoes": 20,
+    "falhas": [
+      "/api/materia/materialegislativa/59887/: HTTP 503",
+      "/api/norma/normajuridica/?o=-data_ultima_atualizacao&page=1&page_size=1000: HTTP 503",
+      "/api/norma/normajuridica/?o=-data_ultima_atualizacao&page=1&page_size=1000: HTTP 503"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -81,7 +85,7 @@
   "contagens": {
     "parlamentares": 28,
     "parlamentares_em_exercicio": 21,
-    "proposicoes": 4481,
+    "proposicoes": 4584,
     "normas": 1451,
     "sessoes": 299,
     "itens_pauta": 0,
@@ -157,15 +161,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 268619,
+            "hi": 268646,
             "lo": 193349,
-            "n": 70389,
+            "n": 70416,
             "lo_data": "2026-03-02"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 246913
+        "total_fonte": 246930
       }
     },
     "tabelas_em": {
@@ -179,10 +183,12 @@
       "filiacoes": "2026-11-15T13:05:55.181Z",
       "parlamentares": "2026-11-15T22:27:58.686Z",
       "status_tramitacao": "2026-11-16T14:01:39.014Z",
-      "autores": "2026-11-04T23:29:42.857Z"
+      "autores": "2026-11-17T01:28:17.437Z"
     },
-    "ultima_requisicao": "2026-11-16T14:31:04.114Z",
-    "pendencias_inexistentes": [],
+    "ultima_requisicao": "2026-11-17T01:28:15.004Z",
+    "pendencias_inexistentes": [
+      "materia-76477"
+    ],
     "page_size_solicitado": 1000
   }
 }

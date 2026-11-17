@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T12:49:51.918Z",
-  "ultima_execucao": "2026-11-15T12:49:39.217Z",
+  "atualizado_em": "2026-11-17T01:28:22.780Z",
+  "ultima_execucao": "2026-11-17T01:08:55.519Z",
   "uf": "MA",
   "casa": "cm-vitoria-do-mearim",
   "orgao": "Câmara Municipal de Vitória do Mearim",
   "host": "sapl.vitoriadomearim.ma.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-16"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Vitória do Mearim (API REST pública)",
       "url": "https://sapl.vitoriadomearim.ma.leg.br/api/",
       "orgao": "Câmara Municipal de Vitória do Mearim",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-16"
     }
   ],
   "robots": {
-    "sapl.vitoriadomearim.ma.leg.br": null
+    "sapl.vitoriadomearim.ma.leg.br": {
+      "lido_em": "2026-11-17T01:08:55.519Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 13,
     "parlamentares_em_exercicio": 13,
-    "proposicoes": 417,
+    "proposicoes": 425,
     "normas": 204,
     "sessoes": 124,
     "itens_pauta": 585,
@@ -195,7 +202,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T21:17:29.281Z",
+      "legislaturas": "2026-11-17T01:28:22.779Z",
       "tipos_resultado": "2026-11-07T21:18:28.299Z",
       "tipos_materia": "2026-11-07T21:19:30.709Z",
       "mandatos": "2026-11-07T21:20:32.182Z",
@@ -207,7 +214,7 @@
       "status_tramitacao": "2026-11-07T21:34:44.330Z",
       "autores": "2026-11-07T21:35:46.211Z"
     },
-    "ultima_requisicao": "2026-11-15T12:49:39.217Z",
+    "ultima_requisicao": "2026-11-17T01:28:20.167Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

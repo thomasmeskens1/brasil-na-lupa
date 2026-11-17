@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T12:49:52.304Z",
-  "ultima_execucao": "2026-11-15T12:49:39.145Z",
+  "atualizado_em": "2026-11-17T02:08:03.619Z",
+  "ultima_execucao": "2026-11-17T01:08:55.436Z",
   "uf": "RO",
   "casa": "cm-vilhena",
   "orgao": "Câmara Municipal de Vilhena - RO",
   "host": "sapl.vilhena.ro.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-16"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Vilhena - RO (API REST pública)",
       "url": "https://sapl.vilhena.ro.leg.br/api/",
       "orgao": "Câmara Municipal de Vilhena - RO",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-16"
     }
   ],
   "robots": {
-    "sapl.vilhena.ro.leg.br": null
+    "sapl.vilhena.ro.leg.br": {
+      "lido_em": "2026-11-17T01:08:55.436Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 59,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -57,7 +64,7 @@
       "concluida": true
     },
     "tramitacao": {
-      "desde": "2026-03-16",
+      "desde": "2025-04-14",
       "concluida": false
     }
   },
@@ -74,8 +81,8 @@
   "contagens": {
     "parlamentares": 15,
     "parlamentares_em_exercicio": 13,
-    "proposicoes": 2331,
-    "normas": 859,
+    "proposicoes": 2355,
+    "normas": 878,
     "sessoes": 200,
     "itens_pauta": 1682,
     "votacoes": 755,
@@ -155,45 +162,45 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 6428,
+            "hi": 6444,
             "lo": 4029,
-            "n": 2323,
+            "n": 2339,
             "lo_data": "2024-09-24"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 6276
+        "total_fonte": 6292
       },
       "normajuridica": {
         "faixas": [
           {
-            "hi": 2223,
+            "hi": 2242,
             "lo": 1375,
-            "n": 847,
+            "n": 866,
             "lo_data": "2024-07-09"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2216
+        "total_fonte": 2235
       },
       "tramitacao": {
         "faixas": [
           {
-            "hi": 15560,
-            "lo": 11464,
-            "n": 4018,
-            "lo_data": "2026-03-16"
+            "hi": 15630,
+            "lo": 7978,
+            "n": 7360,
+            "lo_data": "2025-04-14"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 14787
+        "total_fonte": 14851
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T21:17:28.294Z",
+      "legislaturas": "2026-11-17T01:28:22.224Z",
       "tipos_resultado": "2026-11-07T21:18:29.088Z",
       "tipos_materia": "2026-11-07T21:19:30.304Z",
       "mandatos": "2026-11-07T21:20:31.926Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-07T21:35:47.521Z",
       "autores": "2026-11-07T21:37:49.443Z"
     },
-    "ultima_requisicao": "2026-11-15T12:49:39.145Z",
+    "ultima_requisicao": "2026-11-17T02:08:01.137Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

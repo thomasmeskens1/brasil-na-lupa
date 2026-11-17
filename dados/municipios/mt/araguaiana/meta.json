@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T12:49:57.952Z",
-  "ultima_execucao": "2026-11-15T12:49:39.551Z",
+  "atualizado_em": "2026-11-17T01:18:22.396Z",
+  "ultima_execucao": "2026-11-17T01:08:55.862Z",
   "uf": "MT",
   "casa": "cm-araguaiana",
   "orgao": "Câmara Municipal de Araguaiana",
   "host": "sapl.araguaiana.mt.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-16"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Araguaiana (API REST pública)",
       "url": "https://sapl.araguaiana.mt.leg.br/api/",
       "orgao": "Câmara Municipal de Araguaiana",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-16"
     }
   ],
   "robots": {
-    "sapl.araguaiana.mt.leg.br": null
+    "sapl.araguaiana.mt.leg.br": {
+      "lido_em": "2026-11-17T01:08:55.862Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 10,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -185,7 +192,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-05T16:55:51.821Z",
+      "legislaturas": "2026-11-17T01:18:22.395Z",
       "tipos_resultado": "2026-11-05T16:56:51.200Z",
       "tipos_materia": "2026-11-05T16:57:52.119Z",
       "mandatos": "2026-11-05T16:58:53.159Z",
@@ -197,7 +204,7 @@
       "status_tramitacao": "2026-11-05T17:13:06.278Z",
       "autores": "2026-11-05T17:14:07.677Z"
     },
-    "ultima_requisicao": "2026-11-15T12:49:39.551Z",
+    "ultima_requisicao": "2026-11-17T01:18:08.873Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

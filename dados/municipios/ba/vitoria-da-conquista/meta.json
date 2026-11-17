@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T12:49:52.042Z",
-  "ultima_execucao": "2026-11-15T12:49:39.198Z",
+  "atualizado_em": "2026-11-17T02:08:03.940Z",
+  "ultima_execucao": "2026-11-17T01:08:55.496Z",
   "uf": "BA",
   "casa": "cm-vitoria-da-conquista",
   "orgao": "Câmara Municipal de Vitória da Conquista",
   "host": "sapl.vitoriadaconquista.ba.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-16"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Vitória da Conquista (API REST pública)",
       "url": "https://sapl.vitoriadaconquista.ba.leg.br/api/",
       "orgao": "Câmara Municipal de Vitória da Conquista",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-16"
     }
   ],
   "robots": {
-    "sapl.vitoriadaconquista.ba.leg.br": null
+    "sapl.vitoriadaconquista.ba.leg.br": {
+      "lido_em": "2026-11-17T01:08:55.497Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 59,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -57,7 +64,7 @@
       "concluida": true
     },
     "tramitacao": {
-      "desde": "2026-09-22",
+      "desde": "2026-05-13",
       "concluida": false
     }
   },
@@ -74,10 +81,10 @@
   "contagens": {
     "parlamentares": 25,
     "parlamentares_em_exercicio": 23,
-    "proposicoes": 5488,
+    "proposicoes": 5530,
     "normas": 585,
     "sessoes": 300,
-    "itens_pauta": 6011,
+    "itens_pauta": 6024,
     "votacoes": 100,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 100
@@ -115,15 +122,15 @@
       "ordemdia": {
         "faixas": [
           {
-            "hi": 24862,
+            "hi": 24875,
             "lo": 19266,
-            "n": 5346,
+            "n": 5359,
             "lo_data": "2024-12-11"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 23519
+        "total_fonte": 23532
       },
       "expedientemateria": {
         "faixas": [
@@ -154,15 +161,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 24839,
+            "hi": 24873,
             "lo": 19338,
-            "n": 5456,
+            "n": 5490,
             "lo_data": "2024-12-02"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 24493
+        "total_fonte": 24527
       },
       "normajuridica": {
         "faixas": [
@@ -180,19 +187,19 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 97727,
-            "lo": 96154,
-            "n": 1568,
-            "lo_data": "2026-09-22"
+            "hi": 97786,
+            "lo": 92733,
+            "n": 5016,
+            "lo_data": "2026-05-13"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 92794
+        "total_fonte": 92850
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-07T21:17:27.688Z",
+      "legislaturas": "2026-11-17T01:28:21.641Z",
       "tipos_resultado": "2026-11-07T21:18:28.685Z",
       "tipos_materia": "2026-11-07T21:19:32.710Z",
       "mandatos": "2026-11-07T21:20:31.592Z",
@@ -204,7 +211,7 @@
       "status_tramitacao": "2026-11-07T21:34:44.906Z",
       "autores": "2026-11-07T21:36:47.659Z"
     },
-    "ultima_requisicao": "2026-11-15T12:49:39.198Z",
+    "ultima_requisicao": "2026-11-17T02:08:01.139Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
