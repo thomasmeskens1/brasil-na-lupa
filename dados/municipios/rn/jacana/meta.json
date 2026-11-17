@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T22:10:00.514Z",
-  "ultima_execucao": "2026-11-15T22:09:37.489Z",
+  "atualizado_em": "2026-11-17T14:45:34.490Z",
+  "ultima_execucao": "2026-11-17T14:35:04.597Z",
   "uf": "RN",
   "casa": "cm-jacana",
   "orgao": "Câmara Municipal de Jaçanã",
   "host": "sapl.jacana.rn.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Jaçanã (API REST pública)",
       "url": "https://sapl.jacana.rn.leg.br/api/",
       "orgao": "Câmara Municipal de Jaçanã",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.jacana.rn.leg.br": null
+    "sapl.jacana.rn.leg.br": {
+      "lido_em": "2026-11-17T14:35:04.597Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 11,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -76,7 +83,7 @@
     "parlamentares_em_exercicio": 9,
     "proposicoes": 137,
     "normas": 33,
-    "sessoes": 51,
+    "sessoes": 52,
     "itens_pauta": 44,
     "votacoes": 18,
     "votacoes_por_situacao_dos_votos": {
@@ -141,15 +148,15 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 51,
+            "hi": 52,
             "lo": 1,
-            "n": 51,
+            "n": 52,
             "lo_data": "2026-02-27"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 51
+        "total_fonte": 52
       },
       "materialegislativa": {
         "faixas": [
@@ -185,7 +192,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T13:19:13.886Z",
+      "legislaturas": "2026-11-17T14:45:34.490Z",
       "tipos_resultado": "2026-11-06T13:20:15.361Z",
       "tipos_materia": "2026-11-06T13:21:19.494Z",
       "mandatos": "2026-11-06T13:22:16.916Z",
@@ -197,7 +204,7 @@
       "status_tramitacao": "2026-11-06T13:36:30.698Z",
       "autores": "2026-11-06T13:37:31.808Z"
     },
-    "ultima_requisicao": "2026-11-15T22:09:37.489Z",
+    "ultima_requisicao": "2026-11-17T14:45:19.338Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

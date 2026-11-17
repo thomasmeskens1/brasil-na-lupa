@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T22:09:58.774Z",
-  "ultima_execucao": "2026-11-15T22:09:37.542Z",
+  "atualizado_em": "2026-11-17T14:54:38.084Z",
+  "ultima_execucao": "2026-11-17T14:35:04.662Z",
   "uf": "ES",
   "casa": "cm-jaguare",
   "orgao": "Câmara Municipal de Jaguaré",
   "host": "sapl.jaguare.es.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Jaguaré (API REST pública)",
       "url": "https://sapl.jaguare.es.leg.br/api/",
       "orgao": "Câmara Municipal de Jaguaré",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.jaguare.es.leg.br": null
+    "sapl.jaguare.es.leg.br": {
+      "lido_em": "2026-11-17T14:35:04.662Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,10 +81,10 @@
   "contagens": {
     "parlamentares": 11,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 570,
-    "normas": 294,
-    "sessoes": 198,
-    "itens_pauta": 1046,
+    "proposicoes": 589,
+    "normas": 299,
+    "sessoes": 199,
+    "itens_pauta": 1051,
     "votacoes": 399,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 21,
@@ -130,71 +137,71 @@
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 1226,
+            "hi": 1231,
             "lo": 809,
-            "n": 388,
+            "n": 393,
             "lo_data": "2023-05-30"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1090
+        "total_fonte": 1095
       },
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 621,
+            "hi": 622,
             "lo": 414,
-            "n": 198,
+            "n": 199,
             "lo_data": "2022-08-01"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 592
+        "total_fonte": 593
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 2497,
+            "hi": 2509,
             "lo": 1919,
-            "n": 570,
+            "n": 581,
             "lo_data": "2024-03-07"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2460
+        "total_fonte": 2471
       },
       "normajuridica": {
         "faixas": [
           {
-            "hi": 1940,
+            "hi": 1945,
             "lo": 1642,
-            "n": 294,
+            "n": 299,
             "lo_data": "2023-02-15"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1926
+        "total_fonte": 1931
       },
       "tramitacao": {
         "faixas": [
           {
-            "hi": 8033,
+            "hi": 8049,
             "lo": 7415,
-            "n": 570,
+            "n": 584,
             "lo_data": "2024-04-15"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 7678
+        "total_fonte": 7692
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T13:19:14.486Z",
+      "legislaturas": "2026-11-17T14:54:38.083Z",
       "tipos_resultado": "2026-11-06T13:20:16.146Z",
       "tipos_materia": "2026-11-06T13:21:16.102Z",
       "mandatos": "2026-11-06T13:22:18.335Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T13:36:32.653Z",
       "autores": "2026-11-06T13:37:33.608Z"
     },
-    "ultima_requisicao": "2026-11-15T22:09:37.542Z",
+    "ultima_requisicao": "2026-11-17T14:54:28.735Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

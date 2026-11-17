@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T22:09:58.676Z",
-  "ultima_execucao": "2026-11-15T22:09:37.508Z",
+  "atualizado_em": "2026-11-17T14:45:36.683Z",
+  "ultima_execucao": "2026-11-17T14:35:04.614Z",
   "uf": "PI",
   "casa": "cm-jacobina-do-piaui",
   "orgao": "Câmara Municipal de Jacobina do Piauí",
   "host": "sapl.jacobinadopiaui.pi.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Jacobina do Piauí (API REST pública)",
       "url": "https://sapl.jacobinadopiaui.pi.leg.br/api/",
       "orgao": "Câmara Municipal de Jacobina do Piauí",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.jacobinadopiaui.pi.leg.br": null
+    "sapl.jacobinadopiaui.pi.leg.br": {
+      "lido_em": "2026-11-17T14:35:04.614Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 11,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -186,7 +193,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T13:19:14.089Z",
+      "legislaturas": "2026-11-17T14:45:36.683Z",
       "tipos_resultado": "2026-11-06T13:20:15.741Z",
       "tipos_materia": "2026-11-06T13:21:15.701Z",
       "mandatos": "2026-11-06T13:22:20.115Z",
@@ -198,7 +205,7 @@
       "status_tramitacao": "2026-11-06T13:36:30.887Z",
       "autores": "2026-11-06T13:37:31.419Z"
     },
-    "ultima_requisicao": "2026-11-15T22:09:37.508Z",
+    "ultima_requisicao": "2026-11-17T14:45:19.342Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

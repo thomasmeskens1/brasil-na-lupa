@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-17T01:29:17.374Z",
-  "ultima_execucao": "2026-11-17T01:08:53.173Z",
+  "atualizado_em": "2026-11-17T14:56:29.611Z",
+  "ultima_execucao": "2026-11-17T14:35:00.316Z",
   "uf": "RN",
   "casa": "cm-natal",
   "orgao": "Câmara Municipal de Natal",
   "host": "sapl.natal.rn.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-16"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,12 +15,12 @@
       "titulo": "SAPL — Câmara Municipal de Natal (API REST pública)",
       "url": "https://sapl.natal.rn.leg.br/api/",
       "orgao": "Câmara Municipal de Natal",
-      "acessado_em": "2026-11-16"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
     "sapl.natal.rn.leg.br": {
-      "lido_em": "2026-11-17T01:08:53.173Z",
+      "lido_em": "2026-11-17T14:35:00.316Z",
       "status": 200,
       "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
@@ -31,8 +31,11 @@
     }
   },
   "execucao": {
-    "requisicoes": 21,
-    "falhas": []
+    "requisicoes": 22,
+    "falhas": [
+      "/api/materia/materialegislativa/38085/: HTTP 503",
+      "/api/materia/materialegislativa/38085/: HTTP 503"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -81,7 +84,7 @@
   "contagens": {
     "parlamentares": 32,
     "parlamentares_em_exercicio": 29,
-    "proposicoes": 15971,
+    "proposicoes": 15991,
     "normas": 898,
     "sessoes": 395,
     "itens_pauta": 2111,
@@ -162,15 +165,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 58954,
+            "hi": 58961,
             "lo": 43046,
-            "n": 15833,
+            "n": 15840,
             "lo_data": "2024-12-18"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 58508
+        "total_fonte": 58515
       },
       "normajuridica": {
         "faixas": [
@@ -188,15 +191,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 414272,
+            "hi": 414386,
             "lo": 398188,
-            "n": 15644,
+            "n": 15758,
             "lo_data": "2026-08-12"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 393778
+        "total_fonte": 393892
       }
     },
     "tabelas_em": {
@@ -212,7 +215,7 @@
       "status_tramitacao": "2026-11-15T22:28:54.675Z",
       "autores": "2026-11-16T14:06:40.079Z"
     },
-    "ultima_requisicao": "2026-11-17T01:29:16.002Z",
+    "ultima_requisicao": "2026-11-17T14:56:25.718Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T12:49:50.390Z",
-  "ultima_execucao": "2026-11-15T12:49:40.371Z",
+  "atualizado_em": "2026-11-17T14:46:15.764Z",
+  "ultima_execucao": "2026-11-17T14:35:01.316Z",
   "uf": "PR",
   "casa": "cm-cafeara",
   "orgao": "Câmara Municipal de Cafeara",
   "host": "sapl.cafeara.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Cafeara (API REST pública)",
       "url": "https://sapl.cafeara.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Cafeara",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.cafeara.pr.leg.br": null
+    "sapl.cafeara.pr.leg.br": {
+      "lido_em": "2026-11-17T14:35:01.316Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,57 +81,57 @@
   "contagens": {
     "parlamentares": 10,
     "parlamentares_em_exercicio": 10,
-    "proposicoes": 225,
+    "proposicoes": 247,
     "normas": 70,
-    "sessoes": 186,
-    "itens_pauta": 15,
-    "votacoes": 14,
+    "sessoes": 188,
+    "itens_pauta": 16,
+    "votacoes": 15,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 13,
+      "coletados": 14,
       "inexistentes-na-fonte": 1
     },
-    "votos_individuais": 116
+    "votos_individuais": 125
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 19,
+            "hi": 20,
             "lo": 1,
-            "n": 14,
+            "n": 15,
             "lo_data": "2022-12-06"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 14
+        "total_fonte": 15
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 125,
+            "hi": 134,
             "lo": 1,
-            "n": 116,
+            "n": 125,
             "lo_data": "2022-12-06"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 116
+        "total_fonte": 125
       },
       "ordemdia": {
         "faixas": [
           {
-            "hi": 23,
+            "hi": 24,
             "lo": 1,
-            "n": 11,
+            "n": 12,
             "lo_data": "2022-11-28"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 11
+        "total_fonte": 12
       },
       "expedientemateria": {
         "faixas": [
@@ -142,28 +149,28 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 190,
+            "hi": 193,
             "lo": 1,
-            "n": 186,
+            "n": 188,
             "lo_data": "2022-09-19"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 186
+        "total_fonte": 188
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 237,
+            "hi": 259,
             "lo": 2,
-            "n": 225,
+            "n": 247,
             "lo_data": "2022-11-18"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 225
+        "total_fonte": 247
       },
       "normajuridica": {
         "faixas": [
@@ -181,19 +188,19 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 328,
+            "hi": 332,
             "lo": 1,
-            "n": 318,
+            "n": 321,
             "lo_data": "2022-11-25"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 318
+        "total_fonte": 321
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:14.788Z",
+      "legislaturas": "2026-11-17T14:46:15.764Z",
       "tipos_resultado": "2026-11-06T10:39:15.766Z",
       "tipos_materia": "2026-11-06T10:40:18.045Z",
       "mandatos": "2026-11-06T10:41:17.592Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T10:55:31.437Z",
       "autores": "2026-11-06T10:56:33.514Z"
     },
-    "ultima_requisicao": "2026-11-15T12:49:40.371Z",
+    "ultima_requisicao": "2026-11-17T14:46:14.491Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

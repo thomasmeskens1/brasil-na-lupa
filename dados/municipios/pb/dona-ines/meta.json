@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T22:09:49.069Z",
-  "ultima_execucao": "2026-11-15T22:09:36.832Z",
+  "atualizado_em": "2026-11-17T14:54:34.601Z",
+  "ultima_execucao": "2026-11-17T14:35:03.786Z",
   "uf": "PB",
   "casa": "cm-dona-ines",
   "orgao": "Câmara Municipal de Dona Inês",
   "host": "sapl.donaines.pb.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Dona Inês (API REST pública)",
       "url": "https://sapl.donaines.pb.leg.br/api/",
       "orgao": "Câmara Municipal de Dona Inês",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.donaines.pb.leg.br": null
+    "sapl.donaines.pb.leg.br": {
+      "lido_em": "2026-11-17T14:35:03.786Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 17,
     "parlamentares_em_exercicio": 17,
-    "proposicoes": 413,
+    "proposicoes": 421,
     "normas": 225,
     "sessoes": 198,
     "itens_pauta": 868,
@@ -194,7 +201,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:28.779Z",
+      "legislaturas": "2026-11-17T14:54:34.601Z",
       "tipos_resultado": "2026-11-06T10:39:28.956Z",
       "tipos_materia": "2026-11-06T10:40:33.019Z",
       "mandatos": "2026-11-06T10:41:32.194Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T10:56:50.431Z",
       "autores": "2026-11-06T10:57:49.727Z"
     },
-    "ultima_requisicao": "2026-11-15T22:09:36.832Z",
+    "ultima_requisicao": "2026-11-17T14:54:28.726Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

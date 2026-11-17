@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T22:09:53.169Z",
-  "ultima_execucao": "2026-11-15T22:09:37.142Z",
+  "atualizado_em": "2026-11-17T14:46:33.704Z",
+  "ultima_execucao": "2026-11-17T14:35:04.208Z",
   "uf": "RN",
   "casa": "cm-equador",
   "orgao": "Câmara Municipal de Equador",
   "host": "sapl.equador.rn.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Equador (API REST pública)",
       "url": "https://sapl.equador.rn.leg.br/api/",
       "orgao": "Câmara Municipal de Equador",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.equador.rn.leg.br": null
+    "sapl.equador.rn.leg.br": {
+      "lido_em": "2026-11-17T14:35:04.208Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,57 +81,57 @@
   "contagens": {
     "parlamentares": 12,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 482,
+    "proposicoes": 483,
     "normas": 297,
-    "sessoes": 180,
-    "itens_pauta": 349,
-    "votacoes": 277,
+    "sessoes": 181,
+    "itens_pauta": 352,
+    "votacoes": 282,
     "votacoes_por_situacao_dos_votos": {
       "inexistentes-na-fonte": 17,
-      "coletados": 260
+      "coletados": 265
     },
-    "votos_individuais": 2083
+    "votos_individuais": 2128
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 278,
+            "hi": 283,
             "lo": 1,
-            "n": 277,
+            "n": 282,
             "lo_data": "2025-03-06"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 277
+        "total_fonte": 282
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 2091,
+            "hi": 2136,
             "lo": 1,
-            "n": 2085,
+            "n": 2130,
             "lo_data": "2025-03-06"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2085
+        "total_fonte": 2130
       },
       "ordemdia": {
         "faixas": [
           {
-            "hi": 325,
+            "hi": 328,
             "lo": 1,
-            "n": 313,
+            "n": 316,
             "lo_data": "2025-01-29"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 313
+        "total_fonte": 316
       },
       "expedientemateria": {
         "faixas": [
@@ -142,28 +149,28 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 181,
+            "hi": 182,
             "lo": 1,
-            "n": 180,
+            "n": 181,
             "lo_data": "2025-01-01"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 180
+        "total_fonte": 181
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 662,
+            "hi": 663,
             "lo": 163,
-            "n": 480,
+            "n": 481,
             "lo_data": "2023-11-21"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 634
+        "total_fonte": 635
       },
       "normajuridica": {
         "faixas": [
@@ -193,7 +200,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:30.376Z",
+      "legislaturas": "2026-11-17T14:46:33.704Z",
       "tipos_resultado": "2026-11-06T10:39:31.777Z",
       "tipos_materia": "2026-11-06T10:40:33.417Z",
       "mandatos": "2026-11-06T10:41:34.390Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T10:55:50.490Z",
       "autores": "2026-11-06T10:56:50.061Z"
     },
-    "ultima_requisicao": "2026-11-15T22:09:37.142Z",
+    "ultima_requisicao": "2026-11-17T14:46:20.330Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

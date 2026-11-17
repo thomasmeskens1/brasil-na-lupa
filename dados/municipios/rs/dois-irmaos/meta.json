@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T22:09:47.693Z",
-  "ultima_execucao": "2026-11-15T22:09:36.736Z",
+  "atualizado_em": "2026-11-17T14:54:34.193Z",
+  "ultima_execucao": "2026-11-17T14:35:03.672Z",
   "uf": "RS",
   "casa": "cm-dois-irmaos",
   "orgao": "Câmara Municipal de Dois Irmãos",
   "host": "sapl.doisirmaos.rs.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Dois Irmãos (API REST pública)",
       "url": "https://sapl.doisirmaos.rs.leg.br/api/",
       "orgao": "Câmara Municipal de Dois Irmãos",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.doisirmaos.rs.leg.br": null
+    "sapl.doisirmaos.rs.leg.br": {
+      "lido_em": "2026-11-17T14:35:03.672Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 10,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 245,
+    "proposicoes": 253,
     "normas": 209,
     "sessoes": 198,
     "itens_pauta": 298,
@@ -193,7 +200,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:29.174Z",
+      "legislaturas": "2026-11-17T14:54:34.192Z",
       "tipos_resultado": "2026-11-06T10:39:30.958Z",
       "tipos_materia": "2026-11-06T10:40:31.646Z",
       "mandatos": "2026-11-06T10:41:32.581Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T10:57:46.946Z",
       "autores": "2026-11-06T10:58:48.806Z"
     },
-    "ultima_requisicao": "2026-11-15T22:09:36.736Z",
+    "ultima_requisicao": "2026-11-17T14:54:28.725Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

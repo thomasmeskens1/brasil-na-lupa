@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-17T01:28:17.437Z",
-  "ultima_execucao": "2026-11-17T01:08:53.572Z",
+  "atualizado_em": "2026-11-17T14:51:20.413Z",
+  "ultima_execucao": "2026-11-17T14:35:00.802Z",
   "uf": "RR",
   "casa": "cm-boa-vista",
   "orgao": "Câmara Municipal de Boa Vista",
   "host": "sapl.boavista.rr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-16"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,12 +15,12 @@
       "titulo": "SAPL — Câmara Municipal de Boa Vista (API REST pública)",
       "url": "https://sapl.boavista.rr.leg.br/api/",
       "orgao": "Câmara Municipal de Boa Vista",
-      "acessado_em": "2026-11-16"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
     "sapl.boavista.rr.leg.br": {
-      "lido_em": "2026-11-17T01:08:53.572Z",
+      "lido_em": "2026-11-17T14:35:00.802Z",
       "status": 200,
       "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
@@ -31,12 +31,8 @@
     }
   },
   "execucao": {
-    "requisicoes": 20,
-    "falhas": [
-      "/api/materia/materialegislativa/59887/: HTTP 503",
-      "/api/norma/normajuridica/?o=-data_ultima_atualizacao&page=1&page_size=1000: HTTP 503",
-      "/api/norma/normajuridica/?o=-data_ultima_atualizacao&page=1&page_size=1000: HTTP 503"
-    ]
+    "requisicoes": 17,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -60,7 +56,7 @@
       "concluida": true
     },
     "materialegislativa": {
-      "desde": "0000-00-00",
+      "desde": "2026-11-16",
       "concluida": true
     },
     "normajuridica": {
@@ -85,7 +81,7 @@
   "contagens": {
     "parlamentares": 28,
     "parlamentares_em_exercicio": 21,
-    "proposicoes": 4584,
+    "proposicoes": 4715,
     "normas": 1451,
     "sessoes": 299,
     "itens_pauta": 0,
@@ -135,6 +131,12 @@
       "materialegislativa": {
         "faixas": [
           {
+            "hi": 111591,
+            "lo": 111392,
+            "n": 200,
+            "lo_data": "2026-11-16"
+          },
+          {
             "hi": 111364,
             "lo": 107130,
             "n": 4240,
@@ -143,7 +145,7 @@
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 110077
+        "total_fonte": 110304
       },
       "normajuridica": {
         "faixas": [
@@ -161,15 +163,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 268646,
+            "hi": 268648,
             "lo": 193349,
-            "n": 70416,
+            "n": 70418,
             "lo_data": "2026-03-02"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 246930
+        "total_fonte": 246932
       }
     },
     "tabelas_em": {
@@ -185,7 +187,7 @@
       "status_tramitacao": "2026-11-16T14:01:39.014Z",
       "autores": "2026-11-17T01:28:17.437Z"
     },
-    "ultima_requisicao": "2026-11-17T01:28:15.004Z",
+    "ultima_requisicao": "2026-11-17T14:51:17.283Z",
     "pendencias_inexistentes": [
       "materia-76477"
     ],

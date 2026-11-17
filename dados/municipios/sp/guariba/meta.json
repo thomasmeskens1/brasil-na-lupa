@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T22:09:54.669Z",
-  "ultima_execucao": "2026-11-15T22:09:37.280Z",
+  "atualizado_em": "2026-11-17T15:24:03.251Z",
+  "ultima_execucao": "2026-11-17T14:35:04.369Z",
   "uf": "SP",
   "casa": "cm-guariba",
   "orgao": "Câmara Municipal de Guariba",
   "host": "sapl.guariba.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Guariba (API REST pública)",
       "url": "https://sapl.guariba.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Guariba",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.guariba.sp.leg.br": null
+    "sapl.guariba.sp.leg.br": {
+      "lido_em": "2026-11-17T14:35:04.369Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 49,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -57,8 +64,8 @@
       "concluida": true
     },
     "tramitacao": {
-      "desde": "2025-10-22",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     }
   },
   "observacoes": [
@@ -74,10 +81,10 @@
   "contagens": {
     "parlamentares": 12,
     "parlamentares_em_exercicio": 10,
-    "proposicoes": 744,
+    "proposicoes": 768,
     "normas": 399,
-    "sessoes": 198,
-    "itens_pauta": 952,
+    "sessoes": 201,
+    "itens_pauta": 982,
     "votacoes": 393,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 11,
@@ -117,54 +124,54 @@
       "ordemdia": {
         "faixas": [
           {
-            "hi": 1351,
+            "hi": 1356,
             "lo": 1051,
-            "n": 294,
+            "n": 299,
             "lo_data": "2023-12-15"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1255
+        "total_fonte": 1260
       },
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 4493,
+            "hi": 4518,
             "lo": 3803,
-            "n": 658,
+            "n": 683,
             "lo_data": "2024-06-03"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 4306
+        "total_fonte": 4331
       },
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 413,
+            "hi": 416,
             "lo": 213,
-            "n": 198,
+            "n": 201,
             "lo_data": "2020-12-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 407
+        "total_fonte": 410
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 11681,
+            "hi": 11699,
             "lo": 10910,
-            "n": 744,
+            "n": 760,
             "lo_data": "2024-04-24"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 11511
+        "total_fonte": 11527
       },
       "normajuridica": {
         "faixas": [
@@ -182,19 +189,19 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 31980,
-            "lo": 31219,
-            "n": 744,
-            "lo_data": "2025-10-22"
+            "hi": 32040,
+            "lo": 28562,
+            "n": 3366,
+            "lo_data": "2024-11-25"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 31267
+        "total_fonte": 31327
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:32.572Z",
+      "legislaturas": "2026-11-17T14:54:36.480Z",
       "tipos_resultado": "2026-11-06T10:39:33.557Z",
       "tipos_materia": "2026-11-06T10:40:36.824Z",
       "mandatos": "2026-11-06T10:41:36.204Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T10:55:50.306Z",
       "autores": "2026-11-06T10:56:53.330Z"
     },
-    "ultima_requisicao": "2026-11-15T22:09:37.280Z",
+    "ultima_requisicao": "2026-11-17T15:23:58.960Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

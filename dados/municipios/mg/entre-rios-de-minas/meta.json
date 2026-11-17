@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T22:09:52.486Z",
-  "ultima_execucao": "2026-11-15T22:09:37.110Z",
+  "atualizado_em": "2026-11-17T14:46:31.287Z",
+  "ultima_execucao": "2026-11-17T14:35:04.175Z",
   "uf": "MG",
   "casa": "cm-entre-rios-de-minas",
   "orgao": "Câmara Municipal de Entre Rios de Minas",
   "host": "sapl.entreriosdeminas.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Entre Rios de Minas (API REST pública)",
       "url": "https://sapl.entreriosdeminas.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Entre Rios de Minas",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.entreriosdeminas.mg.leg.br": null
+    "sapl.entreriosdeminas.mg.leg.br": {
+      "lido_em": "2026-11-17T14:35:04.176Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -193,7 +200,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:33.977Z",
+      "legislaturas": "2026-11-17T14:46:31.287Z",
       "tipos_resultado": "2026-11-06T10:39:32.966Z",
       "tipos_materia": "2026-11-06T10:40:33.622Z",
       "mandatos": "2026-11-06T10:41:34.591Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T10:55:47.099Z",
       "autores": "2026-11-06T10:56:49.334Z"
     },
-    "ultima_requisicao": "2026-11-15T22:09:37.110Z",
+    "ultima_requisicao": "2026-11-17T14:46:20.329Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

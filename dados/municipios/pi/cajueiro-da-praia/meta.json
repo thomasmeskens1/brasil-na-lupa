@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T12:50:02.533Z",
-  "ultima_execucao": "2026-11-15T12:49:40.386Z",
+  "atualizado_em": "2026-11-17T14:50:20.179Z",
+  "ultima_execucao": "2026-11-17T14:35:01.337Z",
   "uf": "PI",
   "casa": "cm-cajueiro-da-praia",
   "orgao": "Câmara Municipal de Cajueiro da Praia",
   "host": "sapl.cajueirodapraia.pi.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Cajueiro da Praia (API REST pública)",
       "url": "https://sapl.cajueirodapraia.pi.leg.br/api/",
       "orgao": "Câmara Municipal de Cajueiro da Praia",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.cajueirodapraia.pi.leg.br": null
+    "sapl.cajueirodapraia.pi.leg.br": {
+      "lido_em": "2026-11-17T14:35:01.337Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 16,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 302,
+    "proposicoes": 306,
     "normas": 185,
     "sessoes": 46,
     "itens_pauta": 41,
@@ -193,7 +200,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:22.977Z",
+      "legislaturas": "2026-11-17T14:50:20.179Z",
       "tipos_resultado": "2026-11-06T10:39:16.963Z",
       "tipos_materia": "2026-11-06T10:40:19.215Z",
       "mandatos": "2026-11-06T10:41:18.396Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T10:55:32.932Z",
       "autores": "2026-11-06T10:56:34.775Z"
     },
-    "ultima_requisicao": "2026-11-15T12:49:40.386Z",
+    "ultima_requisicao": "2026-11-17T14:50:18.667Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T22:09:59.405Z",
-  "ultima_execucao": "2026-11-15T22:09:37.569Z",
+  "atualizado_em": "2026-11-17T14:46:35.704Z",
+  "ultima_execucao": "2026-11-17T14:35:04.698Z",
   "uf": "MG",
   "casa": "cm-japaraiba",
   "orgao": "Câmara Municipal de Japaraíba",
   "host": "sapl.japaraiba.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Japaraíba (API REST pública)",
       "url": "https://sapl.japaraiba.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Japaraíba",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.japaraiba.mg.leg.br": null
+    "sapl.japaraiba.mg.leg.br": {
+      "lido_em": "2026-11-17T14:35:04.698Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,10 +81,10 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 658,
-    "normas": 294,
-    "sessoes": 67,
-    "itens_pauta": 725,
+    "proposicoes": 661,
+    "normas": 297,
+    "sessoes": 69,
+    "itens_pauta": 728,
     "votacoes": 206,
     "votacoes_por_situacao_dos_votos": {
       "inexistentes-na-fonte": 205,
@@ -129,54 +136,54 @@
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 520,
+            "hi": 523,
             "lo": 1,
-            "n": 515,
+            "n": 518,
             "lo_data": "2025-06-02"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 515
+        "total_fonte": 518
       },
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 72,
+            "hi": 74,
             "lo": 2,
-            "n": 67,
+            "n": 69,
             "lo_data": "2017-01-01"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 67
+        "total_fonte": 69
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 1368,
+            "hi": 1371,
             "lo": 708,
-            "n": 658,
+            "n": 661,
             "lo_data": "2023-02-13"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1358
+        "total_fonte": 1361
       },
       "normajuridica": {
         "faixas": [
           {
-            "hi": 881,
+            "hi": 884,
             "lo": 588,
-            "n": 294,
+            "n": 297,
             "lo_data": "2018-04-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 881
+        "total_fonte": 884
       },
       "tramitacao": {
         "faixas": [
@@ -193,7 +200,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T13:19:14.887Z",
+      "legislaturas": "2026-11-17T14:46:35.704Z",
       "tipos_resultado": "2026-11-06T13:20:16.342Z",
       "tipos_materia": "2026-11-06T13:21:16.303Z",
       "mandatos": "2026-11-06T13:22:20.913Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T13:37:32.360Z",
       "autores": "2026-11-06T13:38:33.569Z"
     },
-    "ultima_requisicao": "2026-11-15T22:09:37.569Z",
+    "ultima_requisicao": "2026-11-17T14:46:20.344Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

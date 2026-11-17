@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T22:09:51.056Z",
-  "ultima_execucao": "2026-11-15T22:09:37.003Z",
+  "atualizado_em": "2026-11-17T14:54:34.283Z",
+  "ultima_execucao": "2026-11-17T14:35:04.070Z",
   "uf": "PA",
   "casa": "cm-eldorado-do-carajas",
   "orgao": "Câmara Municipal de Eldorado do Carajás",
   "host": "sapl.eldoradodocarajas.pa.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Eldorado do Carajás (API REST pública)",
       "url": "https://sapl.eldoradodocarajas.pa.leg.br/api/",
       "orgao": "Câmara Municipal de Eldorado do Carajás",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.eldoradodocarajas.pa.leg.br": null
+    "sapl.eldoradodocarajas.pa.leg.br": {
+      "lido_em": "2026-11-17T14:35:04.070Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,10 +81,10 @@
   "contagens": {
     "parlamentares": 11,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 497,
+    "proposicoes": 505,
     "normas": 199,
-    "sessoes": 169,
-    "itens_pauta": 964,
+    "sessoes": 171,
+    "itens_pauta": 965,
     "votacoes": 482,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 33,
@@ -117,15 +124,15 @@
       "ordemdia": {
         "faixas": [
           {
-            "hi": 733,
+            "hi": 735,
             "lo": 219,
-            "n": 480,
+            "n": 481,
             "lo_data": "2023-12-11"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 662
+        "total_fonte": 663
       },
       "expedientemateria": {
         "faixas": [
@@ -143,15 +150,15 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 192,
+            "hi": 194,
             "lo": 4,
-            "n": 169,
+            "n": 171,
             "lo_data": "2022-08-29"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 169
+        "total_fonte": 171
       },
       "materialegislativa": {
         "faixas": [
@@ -182,19 +189,19 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 2956,
+            "hi": 2962,
             "lo": 1813,
-            "n": 1100,
+            "n": 1105,
             "lo_data": "2024-05-10"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2742
+        "total_fonte": 2747
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:30.167Z",
+      "legislaturas": "2026-11-17T14:54:34.283Z",
       "tipos_resultado": "2026-11-06T10:39:32.555Z",
       "tipos_materia": "2026-11-06T10:40:38.022Z",
       "mandatos": "2026-11-06T10:41:32.982Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T10:55:46.735Z",
       "autores": "2026-11-06T10:56:49.467Z"
     },
-    "ultima_requisicao": "2026-11-15T22:09:37.003Z",
+    "ultima_requisicao": "2026-11-17T14:54:28.725Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

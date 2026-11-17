@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T22:09:48.167Z",
-  "ultima_execucao": "2026-11-15T22:09:36.758Z",
+  "atualizado_em": "2026-11-17T14:53:32.232Z",
+  "ultima_execucao": "2026-11-17T14:35:03.692Z",
   "uf": "PI",
   "casa": "cm-dom-expedito-lopes",
   "orgao": "Câmara Municipal de Dom Expedito Lopes",
   "host": "sapl.domexpeditolopes.pi.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Dom Expedito Lopes (API REST pública)",
       "url": "https://sapl.domexpeditolopes.pi.leg.br/api/",
       "orgao": "Câmara Municipal de Dom Expedito Lopes",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.domexpeditolopes.pi.leg.br": null
+    "sapl.domexpeditolopes.pi.leg.br": {
+      "lido_em": "2026-11-17T14:35:03.692Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 19,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -77,11 +84,10 @@
     "proposicoes": 227,
     "normas": 105,
     "sessoes": 117,
-    "itens_pauta": 276,
+    "itens_pauta": 283,
     "votacoes": 14,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 6,
-      "em-coleta": 7,
+      "coletados": 13,
       "inexistentes-na-fonte": 1
     },
     "votos_individuais": 100
@@ -194,7 +200,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T10:38:29.573Z",
+      "legislaturas": "2026-11-17T14:53:32.232Z",
       "tipos_resultado": "2026-11-06T10:39:28.365Z",
       "tipos_materia": "2026-11-06T10:40:32.211Z",
       "mandatos": "2026-11-06T10:41:33.202Z",
@@ -206,7 +212,7 @@
       "status_tramitacao": "2026-11-06T10:55:44.743Z",
       "autores": "2026-11-06T10:56:48.272Z"
     },
-    "ultima_requisicao": "2026-11-15T22:09:36.758Z",
+    "ultima_requisicao": "2026-11-17T14:53:27.642Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
