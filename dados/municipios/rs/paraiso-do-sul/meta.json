@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-16T13:46:39.146Z",
-  "ultima_execucao": "2026-11-16T13:46:20.151Z",
+  "atualizado_em": "2026-11-18T00:21:22.970Z",
+  "ultima_execucao": "2026-11-18T00:01:55.079Z",
   "uf": "RS",
   "casa": "cm-paraiso-do-sul",
   "orgao": "Câmara Municipal de Paraíso do Sul",
   "host": "sapl.paraisodosul.rs.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-16"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Paraíso do Sul (API REST pública)",
       "url": "https://sapl.paraisodosul.rs.leg.br/api/",
       "orgao": "Câmara Municipal de Paraíso do Sul",
-      "acessado_em": "2026-11-16"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.paraisodosul.rs.leg.br": null
+    "sapl.paraisodosul.rs.leg.br": {
+      "lido_em": "2026-11-18T00:01:55.079Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,10 +81,10 @@
   "contagens": {
     "parlamentares": 14,
     "parlamentares_em_exercicio": 14,
-    "proposicoes": 535,
+    "proposicoes": 550,
     "normas": 198,
-    "sessoes": 199,
-    "itens_pauta": 690,
+    "sessoes": 200,
+    "itens_pauta": 698,
     "votacoes": 102,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 102
@@ -115,54 +122,54 @@
       "ordemdia": {
         "faixas": [
           {
-            "hi": 1474,
+            "hi": 1475,
             "lo": 1173,
-            "n": 295,
+            "n": 296,
             "lo_data": "2023-01-23"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1454
+        "total_fonte": 1455
       },
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 1492,
+            "hi": 1499,
             "lo": 1078,
-            "n": 395,
+            "n": 402,
             "lo_data": "2019-05-07"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1448
+        "total_fonte": 1455
       },
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 724,
+            "hi": 725,
             "lo": 513,
-            "n": 199,
+            "n": 200,
             "lo_data": "2022-10-03"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 692
+        "total_fonte": 693
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 2579,
+            "hi": 2586,
             "lo": 2092,
-            "n": 487,
+            "n": 494,
             "lo_data": "2024-01-23"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2570
+        "total_fonte": 2577
       },
       "normajuridica": {
         "faixas": [
@@ -193,7 +200,7 @@
     },
     "tabelas_em": {
       "legislaturas": "2026-11-14T22:02:43.902Z",
-      "tipos_resultado": "2026-11-06T22:47:07.562Z",
+      "tipos_resultado": "2026-11-18T00:21:22.970Z",
       "tipos_materia": "2026-11-06T22:48:09.377Z",
       "mandatos": "2026-11-06T22:49:08.807Z",
       "tipos_norma": "2026-11-06T22:58:18.368Z",
@@ -204,7 +211,7 @@
       "status_tramitacao": "2026-11-06T23:03:22.239Z",
       "autores": "2026-11-06T23:04:23.921Z"
     },
-    "ultima_requisicao": "2026-11-16T13:46:20.151Z",
+    "ultima_requisicao": "2026-11-18T00:21:19.907Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

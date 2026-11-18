@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-16T13:46:39.901Z",
-  "ultima_execucao": "2026-11-16T13:46:20.025Z",
+  "atualizado_em": "2026-11-18T00:13:13.761Z",
+  "ultima_execucao": "2026-11-18T00:01:54.913Z",
   "uf": "CE",
   "casa": "cm-pacoti",
   "orgao": "Câmara Municipal de Pacoti",
   "host": "sapl.pacoti.ce.leg.br",
   "periodo": {
     "inicio": "2025-01-02",
-    "fim": "2026-11-16"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Pacoti (API REST pública)",
       "url": "https://sapl.pacoti.ce.leg.br/api/",
       "orgao": "Câmara Municipal de Pacoti",
-      "acessado_em": "2026-11-16"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.pacoti.ce.leg.br": null
+    "sapl.pacoti.ce.leg.br": {
+      "lido_em": "2026-11-18T00:01:54.913Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -194,7 +201,7 @@
     },
     "tabelas_em": {
       "legislaturas": "2026-11-14T21:54:35.372Z",
-      "tipos_resultado": "2026-11-06T22:47:05.562Z",
+      "tipos_resultado": "2026-11-18T00:13:13.761Z",
       "tipos_materia": "2026-11-06T22:48:06.190Z",
       "mandatos": "2026-11-06T22:49:07.389Z",
       "tipos_norma": "2026-11-06T22:58:17.569Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T23:03:22.034Z",
       "autores": "2026-11-06T23:04:22.682Z"
     },
-    "ultima_requisicao": "2026-11-16T13:46:20.025Z",
+    "ultima_requisicao": "2026-11-18T00:13:11.142Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-15T22:09:59.643Z",
-  "ultima_execucao": "2026-11-15T22:09:37.574Z",
+  "atualizado_em": "2026-11-18T00:19:13.003Z",
+  "ultima_execucao": "2026-11-18T00:01:54.071Z",
   "uf": "AL",
   "casa": "cm-japaratinga",
   "orgao": "Câmara Municipal de Japaratinga",
   "host": "sapl.japaratinga.al.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-15"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Japaratinga (API REST pública)",
       "url": "https://sapl.japaratinga.al.leg.br/api/",
       "orgao": "Câmara Municipal de Japaratinga",
-      "acessado_em": "2026-11-15"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.japaratinga.al.leg.br": null
+    "sapl.japaratinga.al.leg.br": {
+      "lido_em": "2026-11-18T00:01:54.071Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 18,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 13,
     "parlamentares_em_exercicio": 13,
-    "proposicoes": 206,
+    "proposicoes": 214,
     "normas": 205,
     "sessoes": 13,
     "itens_pauta": 81,
@@ -179,7 +186,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-06T13:19:15.278Z",
+      "legislaturas": "2026-11-18T00:19:13.003Z",
       "tipos_resultado": "2026-11-06T13:20:16.953Z",
       "tipos_materia": "2026-11-06T13:21:16.696Z",
       "mandatos": "2026-11-06T13:22:18.118Z",
@@ -191,7 +198,7 @@
       "status_tramitacao": "2026-11-06T13:36:33.228Z",
       "autores": "2026-11-06T13:37:33.992Z"
     },
-    "ultima_requisicao": "2026-11-15T22:09:37.575Z",
+    "ultima_requisicao": "2026-11-18T00:19:12.364Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

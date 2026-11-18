@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-16T13:46:40.613Z",
-  "ultima_execucao": "2026-11-16T13:46:19.898Z",
+  "atualizado_em": "2026-11-18T00:21:21.985Z",
+  "ultima_execucao": "2026-11-18T00:01:54.746Z",
   "uf": "PA",
   "casa": "cm-ourilandia-do-norte",
   "orgao": "Câmara Municipal de Ourilândia do Norte",
   "host": "sapl.ourilandiadonorte.pa.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-16"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Ourilândia do Norte (API REST pública)",
       "url": "https://sapl.ourilandiadonorte.pa.leg.br/api/",
       "orgao": "Câmara Municipal de Ourilândia do Norte",
-      "acessado_em": "2026-11-16"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.ourilandiadonorte.pa.leg.br": null
+    "sapl.ourilandiadonorte.pa.leg.br": {
+      "lido_em": "2026-11-18T00:01:54.746Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,58 +81,58 @@
   "contagens": {
     "parlamentares": 15,
     "parlamentares_em_exercicio": 13,
-    "proposicoes": 599,
+    "proposicoes": 609,
     "normas": 205,
     "sessoes": 199,
-    "itens_pauta": 586,
-    "votacoes": 394,
+    "itens_pauta": 588,
+    "votacoes": 396,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 67,
       "inexistentes-na-fonte": 304,
-      "coletados": 23
+      "coletados": 25
     },
-    "votos_individuais": 388
+    "votos_individuais": 414
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 1759,
+            "hi": 1761,
             "lo": 1345,
-            "n": 388,
+            "n": 390,
             "lo_data": "2023-05-19"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1671
+        "total_fonte": 1673
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 590,
+            "hi": 627,
             "lo": 190,
-            "n": 388,
+            "n": 414,
             "lo_data": "2021-11-26"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 551
+        "total_fonte": 577
       },
       "ordemdia": {
         "faixas": [
           {
-            "hi": 1894,
+            "hi": 1896,
             "lo": 1491,
-            "n": 388,
+            "n": 390,
             "lo_data": "2023-09-01"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1852
+        "total_fonte": 1854
       },
       "expedientemateria": {
         "faixas": [
@@ -156,15 +163,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 2476,
+            "hi": 2478,
             "lo": 1980,
-            "n": 480,
+            "n": 482,
             "lo_data": "2023-10-02"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2442
+        "total_fonte": 2444
       },
       "normajuridica": {
         "faixas": [
@@ -195,7 +202,7 @@
     },
     "tabelas_em": {
       "legislaturas": "2026-11-14T22:02:40.712Z",
-      "tipos_resultado": "2026-11-06T22:47:03.775Z",
+      "tipos_resultado": "2026-11-18T00:21:21.985Z",
       "tipos_materia": "2026-11-06T22:48:04.983Z",
       "mandatos": "2026-11-06T22:49:05.997Z",
       "tipos_norma": "2026-11-06T22:58:16.770Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T23:03:21.420Z",
       "autores": "2026-11-06T23:04:23.368Z"
     },
-    "ultima_requisicao": "2026-11-16T13:46:19.898Z",
+    "ultima_requisicao": "2026-11-18T00:21:19.905Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

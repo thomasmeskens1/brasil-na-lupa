@@ -1,6 +1,6 @@
 {
-  "atualizado_em": "2026-11-17T15:34:02.490Z",
-  "ultima_execucao": "2026-11-17T14:35:00.143Z",
+  "atualizado_em": "2026-11-18T01:00:53.422Z",
+  "ultima_execucao": "2026-11-18T00:01:53.153Z",
   "uf": "PB",
   "casa": "cm-joao-pessoa",
   "orgao": "Câmara Municipal de João Pessoa",
@@ -20,23 +20,19 @@
   ],
   "robots": {
     "sapl.joaopessoa.pb.leg.br": {
-      "lido_em": "2026-11-17T14:35:00.143Z",
-      "status": 503,
-      "crawl_delay_s": null,
+      "lido_em": "2026-11-18T00:01:53.153Z",
+      "status": 200,
+      "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
-      "disallow": []
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
     }
   },
   "execucao": {
     "requisicoes": 59,
-    "falhas": [
-      "fluxo-materialegislativa: HTTP 503 em /api/materia/materialegislativa/?o=-id&page=230&page_size=99",
-      "/api/materia/materialegislativa/18325/: HTTP 503",
-      "/api/materia/materialegislativa/18325/: HTTP 503",
-      "/api/materia/materialegislativa/?o=-id&page=230&page_size=99: HTTP 503",
-      "/api/materia/materialegislativa/?o=-id&page=230&page_size=99: HTTP 503",
-      "/api/materia/materialegislativa/?o=-id&page=230&page_size=99: HTTP 503"
-    ]
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -60,15 +56,15 @@
       "concluida": true
     },
     "materialegislativa": {
-      "desde": "2025-03-31",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "normajuridica": {
       "desde": "0000-00-00",
       "concluida": true
     },
     "tramitacao": {
-      "desde": "2026-10-15",
+      "desde": "2026-10-06",
       "concluida": false
     }
   },
@@ -85,14 +81,14 @@
   "contagens": {
     "parlamentares": 39,
     "parlamentares_em_exercicio": 29,
-    "proposicoes": 22743,
+    "proposicoes": 24640,
     "normas": 1091,
-    "sessoes": 588,
-    "itens_pauta": 34987,
-    "votacoes": 4738,
+    "sessoes": 591,
+    "itens_pauta": 35044,
+    "votacoes": 4827,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 633,
-      "inexistentes-na-fonte": 3611,
+      "inexistentes-na-fonte": 3700,
       "coletados": 494
     },
     "votos_individuais": 5371
@@ -102,15 +98,15 @@
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 60444,
+            "hi": 60533,
             "lo": 56250,
-            "n": 4105,
+            "n": 4194,
             "lo_data": "2026-08-20"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 59846
+        "total_fonte": 59935
       },
       "votoparlamentar": {
         "faixas": [
@@ -128,54 +124,54 @@
       "ordemdia": {
         "faixas": [
           {
-            "hi": 23081,
+            "hi": 23137,
             "lo": 17968,
-            "n": 4606,
+            "n": 4662,
             "lo_data": "2024-12-09"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 19716
+        "total_fonte": 19772
       },
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 206555,
+            "hi": 206556,
             "lo": 176066,
-            "n": 30380,
+            "n": 30381,
             "lo_data": "2025-04-03"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 204194
+        "total_fonte": 204195
       },
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 1997,
+            "hi": 2000,
             "lo": 1393,
-            "n": 588,
+            "n": 591,
             "lo_data": "2024-05-14"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1926
+        "total_fonte": 1929
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 206252,
-            "lo": 183435,
-            "n": 22680,
-            "lo_data": "2025-03-31"
+            "hi": 206253,
+            "lo": 181523,
+            "n": 24576,
+            "lo_data": "2024-12-17"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 204896
+        "total_fonte": 204897
       },
       "normajuridica": {
         "faixas": [
@@ -193,15 +189,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 558061,
-            "lo": 552682,
-            "n": 5336,
-            "lo_data": "2026-10-15"
+            "hi": 558281,
+            "lo": 551271,
+            "n": 6942,
+            "lo_data": "2026-10-06"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 519727
+        "total_fonte": 519923
       }
     },
     "tabelas_em": {
@@ -217,7 +213,7 @@
       "status_tramitacao": "2026-11-15T22:28:54.458Z",
       "autores": "2026-11-16T14:06:40.733Z"
     },
-    "ultima_requisicao": "2026-11-17T15:33:58.442Z",
+    "ultima_requisicao": "2026-11-18T01:00:51.646Z",
     "pendencias_inexistentes": [
       "materia-22566"
     ],

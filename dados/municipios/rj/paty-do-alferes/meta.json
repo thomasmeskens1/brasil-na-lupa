@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-16T13:46:36.529Z",
-  "ultima_execucao": "2026-11-16T13:46:20.535Z",
+  "atualizado_em": "2026-11-18T00:13:17.176Z",
+  "ultima_execucao": "2026-11-18T00:01:55.586Z",
   "uf": "RJ",
   "casa": "cm-paty-do-alferes",
   "orgao": "Câmara Municipal de Paty do Alferes",
   "host": "sapl.patydoalferes.rj.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-16"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Paty do Alferes (API REST pública)",
       "url": "https://sapl.patydoalferes.rj.leg.br/api/",
       "orgao": "Câmara Municipal de Paty do Alferes",
-      "acessado_em": "2026-11-16"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.patydoalferes.rj.leg.br": null
+    "sapl.patydoalferes.rj.leg.br": {
+      "lido_em": "2026-11-18T00:01:55.586Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -196,7 +203,7 @@
     },
     "tabelas_em": {
       "legislaturas": "2026-11-14T21:54:38.774Z",
-      "tipos_resultado": "2026-11-06T22:47:08.966Z",
+      "tipos_resultado": "2026-11-18T00:13:17.175Z",
       "tipos_materia": "2026-11-06T22:48:09.980Z",
       "mandatos": "2026-11-06T22:49:12.604Z",
       "tipos_norma": "2026-11-06T22:58:20.762Z",
@@ -207,7 +214,7 @@
       "status_tramitacao": "2026-11-06T23:03:24.843Z",
       "autores": "2026-11-06T23:04:26.516Z"
     },
-    "ultima_requisicao": "2026-11-16T13:46:20.535Z",
+    "ultima_requisicao": "2026-11-18T00:13:11.150Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

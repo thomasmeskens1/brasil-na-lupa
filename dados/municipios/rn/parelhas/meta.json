@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-16T13:46:38.312Z",
-  "ultima_execucao": "2026-11-16T13:46:20.277Z",
+  "atualizado_em": "2026-11-18T00:21:22.383Z",
+  "ultima_execucao": "2026-11-18T00:01:55.247Z",
   "uf": "RN",
   "casa": "cm-parelhas",
   "orgao": "Câmara Municipal de Parelhas",
   "host": "sapl.parelhas.rn.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-16"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Parelhas (API REST pública)",
       "url": "https://sapl.parelhas.rn.leg.br/api/",
       "orgao": "Câmara Municipal de Parelhas",
-      "acessado_em": "2026-11-16"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.parelhas.rn.leg.br": null
+    "sapl.parelhas.rn.leg.br": {
+      "lido_em": "2026-11-18T00:01:55.247Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,10 +81,10 @@
   "contagens": {
     "parlamentares": 11,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 1130,
+    "proposicoes": 1168,
     "normas": 159,
     "sessoes": 134,
-    "itens_pauta": 2291,
+    "itens_pauta": 2303,
     "votacoes": 1016,
     "votacoes_por_situacao_dos_votos": {
       "inexistentes-na-fonte": 143,
@@ -129,15 +136,15 @@
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 1255,
+            "hi": 1267,
             "lo": 3,
-            "n": 1099,
+            "n": 1111,
             "lo_data": "2024-08-01"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1101
+        "total_fonte": 1113
       },
       "sessaoplenaria": {
         "faixas": [
@@ -155,15 +162,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 1685,
+            "hi": 1715,
             "lo": 537,
-            "n": 1114,
+            "n": 1144,
             "lo_data": "2024-10-24"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1633
+        "total_fonte": 1663
       },
       "normajuridica": {
         "faixas": [
@@ -194,7 +201,7 @@
     },
     "tabelas_em": {
       "legislaturas": "2026-11-14T22:02:43.508Z",
-      "tipos_resultado": "2026-11-06T22:47:06.764Z",
+      "tipos_resultado": "2026-11-18T00:21:22.382Z",
       "tipos_materia": "2026-11-06T22:48:08.795Z",
       "mandatos": "2026-11-06T22:49:10.222Z",
       "tipos_norma": "2026-11-06T22:58:18.571Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T23:03:35.837Z",
       "autores": "2026-11-06T23:04:24.512Z"
     },
-    "ultima_requisicao": "2026-11-16T13:46:20.277Z",
+    "ultima_requisicao": "2026-11-18T00:21:19.906Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

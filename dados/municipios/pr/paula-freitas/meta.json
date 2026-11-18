@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-16T13:46:36.523Z",
-  "ultima_execucao": "2026-11-16T13:46:20.537Z",
+  "atualizado_em": "2026-11-18T00:11:20.763Z",
+  "ultima_execucao": "2026-11-18T00:01:55.591Z",
   "uf": "PR",
   "casa": "cm-paula-freitas",
   "orgao": "Câmara Municipal de Paula Freitas",
   "host": "sapl.paulafreitas.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-16"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Paula Freitas (API REST pública)",
       "url": "https://sapl.paulafreitas.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Paula Freitas",
-      "acessado_em": "2026-11-16"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.paulafreitas.pr.leg.br": null
+    "sapl.paulafreitas.pr.leg.br": {
+      "lido_em": "2026-11-18T00:01:55.591Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 10,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,44 +81,44 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 60,
+    "proposicoes": 61,
     "normas": 0,
     "sessoes": 7,
     "itens_pauta": 49,
-    "votacoes": 20,
+    "votacoes": 23,
     "votacoes_por_situacao_dos_votos": {
       "inexistentes-na-fonte": 1,
-      "coletados": 19
+      "coletados": 22
     },
-    "votos_individuais": 148
+    "votos_individuais": 172
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 20,
+            "hi": 23,
             "lo": 1,
-            "n": 20,
+            "n": 23,
             "lo_data": "2026-09-29"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 20
+        "total_fonte": 23
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 148,
+            "hi": 172,
             "lo": 1,
-            "n": 148,
+            "n": 172,
             "lo_data": "2026-09-29"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 148
+        "total_fonte": 172
       },
       "ordemdia": {
         "faixas": [
@@ -155,15 +162,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 60,
+            "hi": 61,
             "lo": 1,
-            "n": 60,
+            "n": 61,
             "lo_data": "2026-02-02"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 60
+        "total_fonte": 61
       },
       "normajuridica": {
         "faixas": [],
@@ -174,20 +181,20 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 179,
+            "hi": 192,
             "lo": 1,
-            "n": 160,
+            "n": 173,
             "lo_data": "2026-02-02"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 158
+        "total_fonte": 171
       }
     },
     "tabelas_em": {
       "legislaturas": "2026-11-14T21:52:39.794Z",
-      "tipos_resultado": "2026-11-06T22:47:09.371Z",
+      "tipos_resultado": "2026-11-18T00:11:20.763Z",
       "tipos_materia": "2026-11-06T22:48:10.581Z",
       "mandatos": "2026-11-06T22:49:11.985Z",
       "tipos_norma": "2026-11-06T22:58:21.573Z",
@@ -198,7 +205,7 @@
       "status_tramitacao": "2026-11-06T23:03:25.436Z",
       "autores": "2026-11-06T23:04:26.088Z"
     },
-    "ultima_requisicao": "2026-11-16T13:46:20.537Z",
+    "ultima_requisicao": "2026-11-18T00:11:09.145Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

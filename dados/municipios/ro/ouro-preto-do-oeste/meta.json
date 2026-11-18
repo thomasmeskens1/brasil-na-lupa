@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-16T13:46:40.177Z",
-  "ultima_execucao": "2026-11-16T13:46:19.971Z",
+  "atualizado_em": "2026-11-18T00:21:22.577Z",
+  "ultima_execucao": "2026-11-18T00:01:54.843Z",
   "uf": "RO",
   "casa": "cm-ouro-preto-do-oeste",
   "orgao": "Câmara Municipal de Ouro Preto do Oeste",
   "host": "sapl.ouropretodooeste.ro.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-16"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Ouro Preto do Oeste (API REST pública)",
       "url": "https://sapl.ouropretodooeste.ro.leg.br/api/",
       "orgao": "Câmara Municipal de Ouro Preto do Oeste",
-      "acessado_em": "2026-11-16"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.ouropretodooeste.ro.leg.br": null
+    "sapl.ouropretodooeste.ro.leg.br": {
+      "lido_em": "2026-11-18T00:01:54.843Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,84 +81,84 @@
   "contagens": {
     "parlamentares": 12,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 930,
+    "proposicoes": 938,
     "normas": 392,
-    "sessoes": 297,
-    "itens_pauta": 1917,
-    "votacoes": 1176,
+    "sessoes": 299,
+    "itens_pauta": 1930,
+    "votacoes": 1189,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 41,
-      "inexistentes-na-fonte": 478,
-      "coletados": 657
+      "inexistentes-na-fonte": 485,
+      "coletados": 663
     },
-    "votos_individuais": 6708
+    "votos_individuais": 6750
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 2626,
+            "hi": 2639,
             "lo": 1421,
-            "n": 1176,
+            "n": 1189,
             "lo_data": "2024-07-09"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2557
+        "total_fonte": 2570
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 17806,
+            "hi": 17848,
             "lo": 10908,
-            "n": 6708,
+            "n": 6750,
             "lo_data": "2024-12-16"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 17380
+        "total_fonte": 17422
       },
       "ordemdia": {
         "faixas": [
           {
-            "hi": 4550,
+            "hi": 4556,
             "lo": 3717,
-            "n": 828,
+            "n": 834,
             "lo_data": "2024-09-16"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 4455
+        "total_fonte": 4461
       },
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 1736,
+            "hi": 1743,
             "lo": 574,
-            "n": 1089,
+            "n": 1096,
             "lo_data": "2021-02-15"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1631
+        "total_fonte": 1638
       },
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 1309,
+            "hi": 1311,
             "lo": 1007,
-            "n": 297,
+            "n": 299,
             "lo_data": "2024-03-25"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1276
+        "total_fonte": 1278
       },
       "materialegislativa": {
         "faixas": [
@@ -195,7 +202,7 @@
     },
     "tabelas_em": {
       "legislaturas": "2026-11-14T22:02:42.108Z",
-      "tipos_resultado": "2026-11-06T22:47:04.970Z",
+      "tipos_resultado": "2026-11-18T00:21:22.577Z",
       "tipos_materia": "2026-11-06T22:48:05.797Z",
       "mandatos": "2026-11-06T22:49:06.792Z",
       "tipos_norma": "2026-11-06T22:58:16.179Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T23:03:21.234Z",
       "autores": "2026-11-06T23:04:22.715Z"
     },
-    "ultima_requisicao": "2026-11-16T13:46:19.971Z",
+    "ultima_requisicao": "2026-11-18T00:21:19.905Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

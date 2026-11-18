@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-16T13:46:36.174Z",
-  "ultima_execucao": "2026-11-16T13:46:20.606Z",
+  "atualizado_em": "2026-11-18T00:21:23.171Z",
+  "ultima_execucao": "2026-11-18T00:01:55.680Z",
   "uf": "PR",
   "casa": "cm-peabiru",
   "orgao": "Câmara Municipal de Peabiru",
   "host": "sapl.peabiru.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-16"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Peabiru (API REST pública)",
       "url": "https://sapl.peabiru.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Peabiru",
-      "acessado_em": "2026-11-16"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.peabiru.pr.leg.br": null
+    "sapl.peabiru.pr.leg.br": {
+      "lido_em": "2026-11-18T00:01:55.680Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 956,
+    "proposicoes": 964,
     "normas": 490,
     "sessoes": 297,
     "itens_pauta": 1263,
@@ -195,7 +202,7 @@
     },
     "tabelas_em": {
       "legislaturas": "2026-11-14T22:02:47.125Z",
-      "tipos_resultado": "2026-11-06T22:47:09.560Z",
+      "tipos_resultado": "2026-11-18T00:21:23.170Z",
       "tipos_materia": "2026-11-06T22:48:11.187Z",
       "mandatos": "2026-11-06T22:49:12.788Z",
       "tipos_norma": "2026-11-06T22:58:21.366Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T23:04:26.434Z",
       "autores": "2026-11-06T23:05:29.339Z"
     },
-    "ultima_requisicao": "2026-11-16T13:46:20.606Z",
+    "ultima_requisicao": "2026-11-18T00:21:19.907Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

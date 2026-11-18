@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-16T13:46:39.020Z",
-  "ultima_execucao": "2026-11-16T13:46:20.174Z",
+  "atualizado_em": "2026-11-18T00:21:22.171Z",
+  "ultima_execucao": "2026-11-18T00:01:55.108Z",
   "uf": "MT",
   "casa": "cm-paranatinga",
   "orgao": "Câmara Municipal de Paranatinga",
   "host": "sapl.paranatinga.mt.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-16"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Paranatinga (API REST pública)",
       "url": "https://sapl.paranatinga.mt.leg.br/api/",
       "orgao": "Câmara Municipal de Paranatinga",
-      "acessado_em": "2026-11-16"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.paranatinga.mt.leg.br": null
+    "sapl.paranatinga.mt.leg.br": {
+      "lido_em": "2026-11-18T00:01:55.108Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,8 +81,8 @@
   "contagens": {
     "parlamentares": 11,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 2032,
-    "normas": 795,
+    "proposicoes": 2045,
+    "normas": 804,
     "sessoes": 198,
     "itens_pauta": 1472,
     "votacoes": 109,
@@ -154,46 +161,46 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 7635,
+            "hi": 7640,
             "lo": 5636,
-            "n": 1984,
+            "n": 1989,
             "lo_data": "2024-07-10"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 7516
+        "total_fonte": 7521
       },
       "normajuridica": {
         "faixas": [
           {
-            "hi": 4255,
+            "hi": 4264,
             "lo": 3502,
-            "n": 744,
+            "n": 753,
             "lo_data": "2024-05-17"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 4150
+        "total_fonte": 4159
       },
       "tramitacao": {
         "faixas": [
           {
-            "hi": 10188,
+            "hi": 10211,
             "lo": 5229,
-            "n": 4845,
+            "n": 4868,
             "lo_data": "2024-12-07"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 9703
+        "total_fonte": 9726
       }
     },
     "tabelas_em": {
       "legislaturas": "2026-11-14T22:02:43.758Z",
-      "tipos_resultado": "2026-11-06T22:47:06.361Z",
+      "tipos_resultado": "2026-11-18T00:21:22.171Z",
       "tipos_materia": "2026-11-06T22:48:08.193Z",
       "mandatos": "2026-11-06T22:49:08.996Z",
       "tipos_norma": "2026-11-06T22:58:18.967Z",
@@ -204,7 +211,7 @@
       "status_tramitacao": "2026-11-06T23:03:23.026Z",
       "autores": "2026-11-06T23:04:24.754Z"
     },
-    "ultima_requisicao": "2026-11-16T13:46:20.174Z",
+    "ultima_requisicao": "2026-11-18T00:21:19.906Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

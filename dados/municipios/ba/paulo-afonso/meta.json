@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-16T13:46:36.282Z",
-  "ultima_execucao": "2026-11-16T13:46:20.587Z",
+  "atualizado_em": "2026-11-18T01:01:03.633Z",
+  "ultima_execucao": "2026-11-18T00:01:55.654Z",
   "uf": "BA",
   "casa": "cm-paulo-afonso",
   "orgao": "Câmara Municipal de Paulo Afonso",
   "host": "sapl.pauloafonso.ba.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-16"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Paulo Afonso (API REST pública)",
       "url": "https://sapl.pauloafonso.ba.leg.br/api/",
       "orgao": "Câmara Municipal de Paulo Afonso",
-      "acessado_em": "2026-11-16"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.pauloafonso.ba.leg.br": null
+    "sapl.pauloafonso.ba.leg.br": {
+      "lido_em": "2026-11-18T00:01:55.654Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 59,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -33,11 +40,11 @@
       "concluida": false
     },
     "votoparlamentar": {
-      "desde": "2026-03-08",
+      "desde": "2025-12-15",
       "concluida": false
     },
     "ordemdia": {
-      "desde": "2026-03-02",
+      "desde": "2025-12-01",
       "concluida": false
     },
     "expedientemateria": {
@@ -49,7 +56,7 @@
       "concluida": false
     },
     "materialegislativa": {
-      "desde": "2026-03-04",
+      "desde": "2026-02-20",
       "concluida": false
     },
     "normajuridica": {
@@ -74,17 +81,17 @@
   "contagens": {
     "parlamentares": 18,
     "parlamentares_em_exercicio": 17,
-    "proposicoes": 1031,
+    "proposicoes": 1231,
     "normas": 100,
     "sessoes": 102,
-    "itens_pauta": 1300,
+    "itens_pauta": 1572,
     "votacoes": 1141,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 916,
-      "em-coleta": 223,
+      "coletados": 1116,
+      "em-coleta": 23,
       "inexistentes-na-fonte": 2
     },
-    "votos_individuais": 13813
+    "votos_individuais": 16843
   },
   "cursor": {
     "fluxos": {
@@ -105,9 +112,9 @@
         "faixas": [
           {
             "hi": 149845,
-            "lo": 135507,
-            "n": 13800,
-            "lo_data": "2026-03-08"
+            "lo": 132413,
+            "n": 16830,
+            "lo_data": "2025-12-15"
           }
         ],
         "concluido": false,
@@ -118,9 +125,9 @@
         "faixas": [
           {
             "hi": 10012,
-            "lo": 8812,
-            "n": 1200,
-            "lo_data": "2026-03-02"
+            "lo": 8540,
+            "n": 1472,
+            "lo_data": "2025-12-01"
           }
         ],
         "concluido": false,
@@ -156,15 +163,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 13776,
-            "lo": 12754,
-            "n": 1023,
-            "lo_data": "2026-03-04"
+            "hi": 13800,
+            "lo": 12579,
+            "n": 1222,
+            "lo_data": "2026-02-20"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 13745
+        "total_fonte": 13769
       },
       "normajuridica": {
         "faixas": [
@@ -195,7 +202,7 @@
     },
     "tabelas_em": {
       "legislaturas": "2026-11-14T22:09:51.564Z",
-      "tipos_resultado": "2026-11-06T22:47:11.166Z",
+      "tipos_resultado": "2026-11-18T00:21:23.970Z",
       "tipos_materia": "2026-11-06T22:48:10.775Z",
       "mandatos": "2026-11-06T22:49:11.635Z",
       "tipos_norma": "2026-11-06T22:58:20.970Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T23:03:28.238Z",
       "autores": "2026-11-06T23:04:28.557Z"
     },
-    "ultima_requisicao": "2026-11-16T13:46:20.587Z",
+    "ultima_requisicao": "2026-11-18T01:01:00.136Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

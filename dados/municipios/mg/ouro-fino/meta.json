@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-16T13:46:40.390Z",
-  "ultima_execucao": "2026-11-16T13:46:19.937Z",
+  "atualizado_em": "2026-11-18T00:21:20.975Z",
+  "ultima_execucao": "2026-11-18T00:01:54.795Z",
   "uf": "MG",
   "casa": "cm-ouro-fino",
   "orgao": "Câmara Municipal de Ouro Fino",
   "host": "sapl.ourofino.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-16"
+    "fim": "2026-11-17"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Ouro Fino (API REST pública)",
       "url": "https://sapl.ourofino.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Ouro Fino",
-      "acessado_em": "2026-11-16"
+      "acessado_em": "2026-11-17"
     }
   ],
   "robots": {
-    "sapl.ourofino.mg.leg.br": null
+    "sapl.ourofino.mg.leg.br": {
+      "lido_em": "2026-11-18T00:01:54.795Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 11,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 6365,
+    "proposicoes": 6380,
     "normas": 762,
     "sessoes": 178,
     "itens_pauta": 298,
@@ -156,15 +163,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 13285,
+            "hi": 13292,
             "lo": 6859,
-            "n": 6316,
+            "n": 6323,
             "lo_data": "2024-11-21"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 12940
+        "total_fonte": 12947
       },
       "normajuridica": {
         "faixas": [
@@ -195,7 +202,7 @@
     },
     "tabelas_em": {
       "legislaturas": "2026-11-14T22:02:42.514Z",
-      "tipos_resultado": "2026-11-06T22:47:04.569Z",
+      "tipos_resultado": "2026-11-18T00:21:20.975Z",
       "tipos_materia": "2026-11-06T22:48:05.799Z",
       "mandatos": "2026-11-06T22:49:06.604Z",
       "tipos_norma": "2026-11-06T22:58:15.770Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T23:03:20.447Z",
       "autores": "2026-11-06T23:04:20.946Z"
     },
-    "ultima_requisicao": "2026-11-16T13:46:19.937Z",
+    "ultima_requisicao": "2026-11-18T00:21:19.902Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
