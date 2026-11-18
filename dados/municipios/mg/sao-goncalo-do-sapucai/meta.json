@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-16T13:46:31.845Z",
-  "ultima_execucao": "2026-11-16T13:46:21.586Z",
+  "atualizado_em": "2026-11-18T14:21:18.275Z",
+  "ultima_execucao": "2026-11-18T14:11:05.135Z",
   "uf": "MG",
   "casa": "cm-sao-goncalo-do-sapucai",
   "orgao": "Câmara Municipal de São Gonçalo do Sapucaí",
   "host": "sapl.saogoncalodosapucai.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-16"
+    "fim": "2026-11-18"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de São Gonçalo do Sapucaí (API REST pública)",
       "url": "https://sapl.saogoncalodosapucai.mg.leg.br/api/",
       "orgao": "Câmara Municipal de São Gonçalo do Sapucaí",
-      "acessado_em": "2026-11-16"
+      "acessado_em": "2026-11-18"
     }
   ],
   "robots": {
-    "sapl.saogoncalodosapucai.mg.leg.br": null
+    "sapl.saogoncalodosapucai.mg.leg.br": {
+      "lido_em": "2026-11-18T14:11:05.135Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 11,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -187,7 +194,7 @@
     },
     "tabelas_em": {
       "legislaturas": "2026-11-14T21:53:44.976Z",
-      "tipos_resultado": "2026-11-07T12:07:58.942Z",
+      "tipos_resultado": "2026-11-18T14:21:18.275Z",
       "tipos_materia": "2026-11-07T12:08:59.940Z",
       "mandatos": "2026-11-07T12:10:01.581Z",
       "tipos_norma": "2026-11-07T12:19:11.619Z",
@@ -198,7 +205,7 @@
       "status_tramitacao": "2026-11-07T12:24:15.436Z",
       "autores": "2026-11-07T12:25:15.557Z"
     },
-    "ultima_requisicao": "2026-11-16T13:46:21.586Z",
+    "ultima_requisicao": "2026-11-18T14:21:16.621Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
