@@ -1,9 +1,9 @@
 {
-  "atualizado_em": "2026-11-18T19:56:11.066Z",
-  "ultima_execucao": "2026-11-18T19:56:11.066Z",
+  "atualizado_em": "2026-11-19T20:14:18.507Z",
+  "ultima_execucao": "2026-11-19T20:14:18.507Z",
   "tribunal": "tce-pe",
   "modo": "incremental",
-  "interrompido_por_orcamento": false,
+  "interrompido_por_orcamento": true,
   "periodo": {
     "contas_governador": {
       "inicio": 2014,
@@ -14,13 +14,13 @@
       "fim": 2025
     }
   },
-  "exercicios_municipais_baixados_nesta_execucao": [
+  "exercicios_municipais_baixados_nesta_execucao": [],
+  "exercicios_municipais_pendentes": [
     2022,
     2023,
     2024,
     2025
   ],
-  "exercicios_municipais_pendentes": [],
   "exercicios_municipais_coletados": [
     2014,
     2015,
@@ -36,15 +36,15 @@
     2025
   ],
   "consultas_processos_governador": {
-    "2023": "2026-11-12",
+    "2023": "2026-11-19",
     "2024": "2026-11-12",
     "2025": "2026-11-12"
   },
   "contagens": {
     "registros_governador": 10,
     "exercicios_governador_com_parecer": 9,
-    "registros_municipais_nesta_execucao": 502,
-    "registros_municipais_descartados": 1,
+    "registros_municipais_nesta_execucao": 0,
+    "registros_municipais_descartados": 0,
     "municipios": 184,
     "itens_municipais_por_resultado": {
       "Aprovação com ressalvas": 1443,
@@ -128,7 +128,11 @@
     },
     {
       "exercicio": 2023,
-      "mantido": true
+      "processo": "24100726-4",
+      "data_julgamento": null,
+      "conclusao": null,
+      "relator": null,
+      "situacao": "Não Julgado"
     },
     {
       "exercicio": 2024,
@@ -144,19 +148,19 @@
       "titulo": "API de Dados Abertos do TCE-PE — catálogo de entidades",
       "url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!listar",
       "orgao": "Tribunal de Contas do Estado de Pernambuco (TCE-PE)",
-      "acessado_em": "2026-11-18"
+      "acessado_em": "2026-11-19"
     },
     {
       "titulo": "API de Dados Abertos do TCE-PE — entidade \"Resultados\" (documentação)",
       "url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=42",
       "orgao": "Tribunal de Contas do Estado de Pernambuco (TCE-PE)",
-      "acessado_em": "2026-11-18"
+      "acessado_em": "2026-11-19"
     },
     {
       "titulo": "API de Dados Abertos do TCE-PE — contas de governo do Estado (consulta usada)",
       "url": "https://sistemas.tcepe.tc.br/DadosAbertos/Resultados!json?Tipo=Governo&EsferaUJPrincipalProcesso=E",
       "orgao": "Tribunal de Contas do Estado de Pernambuco (TCE-PE)",
-      "acessado_em": "2026-11-18"
+      "acessado_em": "2026-11-19"
     }
   ],
   "robots_e_restricoes": [
@@ -172,13 +176,17 @@
     "Julgamento político das contas (Alepe e Câmaras Municipais) ainda não coletado."
   ],
   "api_indisponivel": false,
-  "erros": [],
+  "erros": [
+    "Processos 2024: The operation was aborted due to timeout"
+  ],
   "estatisticas_http": {
-    "requisicoes": 6,
-    "retentativas": 0,
-    "bytes": 407975,
-    "falhas": []
+    "requisicoes": 5,
+    "retentativas": 1,
+    "bytes": 11282,
+    "falhas": [
+      "https://sistemas.tcepe.tc.br/DadosAbertos/Processos!json?Exercicio=2024&Tipo=Governo&Esfera=E&Modalidade=Presta%E7%E3o%20de%20Contas: The operation was aborted due to timeout"
+    ]
   },
-  "duracao_s": 52,
+  "duracao_s": 900,
   "ultima_coleta_completa": "2026-11-05"
 }
