@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-17T15:34:14.749Z",
-  "ultima_execucao": "2026-11-17T14:35:04.341Z",
+  "atualizado_em": "2026-11-18T23:40:15.050Z",
+  "ultima_execucao": "2026-11-18T23:40:04.741Z",
   "uf": "SP",
   "casa": "cm-garca",
   "orgao": "Câmara Municipal de Garça",
   "host": "sapl.garca.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-17"
+    "fim": "2026-11-18"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Garça (API REST pública)",
       "url": "https://sapl.garca.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Garça",
-      "acessado_em": "2026-11-17"
+      "acessado_em": "2026-11-18"
     }
   ],
   "robots": {
-    "sapl.garca.sp.leg.br": {
-      "lido_em": "2026-11-17T14:35:04.341Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.garca.sp.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -87,9 +80,9 @@
     "itens_pauta": 1407,
     "votacoes": 1252,
     "votacoes_por_situacao_dos_votos": {
+      "em-coleta": 43,
       "coletados": 96,
-      "inexistentes-na-fonte": 1113,
-      "em-coleta": 43
+      "inexistentes-na-fonte": 1113
     },
     "votos_individuais": 1248
   },
@@ -213,7 +206,7 @@
       "status_tramitacao": "2026-11-06T10:57:51.939Z",
       "autores": "2026-11-06T10:59:54.936Z"
     },
-    "ultima_requisicao": "2026-11-17T15:34:09.036Z",
+    "ultima_requisicao": "2026-11-18T23:40:04.741Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

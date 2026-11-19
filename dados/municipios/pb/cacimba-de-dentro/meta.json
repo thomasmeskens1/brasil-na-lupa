@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-17T01:09:07.318Z",
-  "ultima_execucao": "2026-11-17T01:08:56.735Z",
+  "atualizado_em": "2026-11-18T23:52:21.811Z",
+  "ultima_execucao": "2026-11-18T23:40:01.570Z",
   "uf": "PB",
   "casa": "cm-cacimba-de-dentro",
   "orgao": "Câmara Municipal de Cacimba de Dentro",
   "host": "sapl.cacimbadedentro.pb.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-16"
+    "fim": "2026-11-18"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Cacimba de Dentro (API REST pública)",
       "url": "https://sapl.cacimbadedentro.pb.leg.br/api/",
       "orgao": "Câmara Municipal de Cacimba de Dentro",
-      "acessado_em": "2026-11-16"
+      "acessado_em": "2026-11-18"
     }
   ],
   "robots": {
-    "sapl.cacimbadedentro.pb.leg.br": null
+    "sapl.cacimbadedentro.pb.leg.br": {
+      "lido_em": "2026-11-18T23:40:01.570Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 13,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 11,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 198,
+    "proposicoes": 200,
     "normas": 101,
     "sessoes": 49,
     "itens_pauta": 396,
@@ -186,7 +193,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-05T23:14:51.848Z",
+      "legislaturas": "2026-11-18T23:52:21.810Z",
       "tipos_resultado": "2026-11-05T23:15:52.674Z",
       "tipos_materia": "2026-11-05T23:17:54.858Z",
       "mandatos": "2026-11-05T23:18:55.798Z",
@@ -198,7 +205,7 @@
       "status_tramitacao": "2026-11-05T23:36:11.266Z",
       "autores": "2026-11-05T23:37:14.867Z"
     },
-    "ultima_requisicao": "2026-11-17T01:08:56.735Z",
+    "ultima_requisicao": "2026-11-18T23:52:15.899Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

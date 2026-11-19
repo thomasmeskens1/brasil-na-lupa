@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-17T15:34:14.357Z",
-  "ultima_execucao": "2026-11-17T14:35:04.400Z",
+  "atualizado_em": "2026-11-18T23:40:27.467Z",
+  "ultima_execucao": "2026-11-18T23:40:04.797Z",
   "uf": "SP",
   "casa": "cm-igarapava",
   "orgao": "Câmara Municipal de Igarapava",
   "host": "sapl.igarapava.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-17"
+    "fim": "2026-11-18"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,17 @@
       "titulo": "SAPL — Câmara Municipal de Igarapava (API REST pública)",
       "url": "https://sapl.igarapava.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Igarapava",
-      "acessado_em": "2026-11-17"
+      "acessado_em": "2026-11-18"
     }
   ],
   "robots": {
-    "sapl.igarapava.sp.leg.br": {
-      "lido_em": "2026-11-17T14:35:04.400Z",
-      "status": 200,
-      "crawl_delay_s": 60,
-      "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
-    }
+    "sapl.igarapava.sp.leg.br": null
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 1,
+    "falhas": [
+      "robots.txt: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -88,8 +81,8 @@
     "votacoes": 866,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 42,
-      "coletados": 8,
-      "inexistentes-na-fonte": 816
+      "inexistentes-na-fonte": 816,
+      "coletados": 8
     },
     "votos_individuais": 200
   },
@@ -213,7 +206,7 @@
       "status_tramitacao": "2026-11-06T10:55:50.529Z",
       "autores": "2026-11-06T10:56:52.707Z"
     },
-    "ultima_requisicao": "2026-11-17T15:34:09.035Z",
+    "ultima_requisicao": "2026-11-18T23:40:04.797Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
