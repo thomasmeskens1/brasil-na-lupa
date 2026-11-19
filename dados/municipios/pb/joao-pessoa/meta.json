@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-19T00:39:00.498Z",
-  "ultima_execucao": "2026-11-18T23:40:00.403Z",
+  "atualizado_em": "2026-11-19T15:31:05.143Z",
+  "ultima_execucao": "2026-11-19T14:32:06.670Z",
   "uf": "PB",
   "casa": "cm-joao-pessoa",
   "orgao": "Câmara Municipal de João Pessoa",
   "host": "sapl.joaopessoa.pb.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-18"
+    "fim": "2026-11-19"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,24 +15,26 @@
       "titulo": "SAPL — Câmara Municipal de João Pessoa (API REST pública)",
       "url": "https://sapl.joaopessoa.pb.leg.br/api/",
       "orgao": "Câmara Municipal de João Pessoa",
-      "acessado_em": "2026-11-18"
+      "acessado_em": "2026-11-19"
     }
   ],
   "robots": {
     "sapl.joaopessoa.pb.leg.br": {
-      "lido_em": "2026-11-18T23:40:00.403Z",
-      "status": 200,
-      "crawl_delay_s": 60,
+      "lido_em": "2026-11-19T14:32:06.670Z",
+      "status": 503,
+      "crawl_delay_s": null,
       "intervalo_usado_s": 61,
-      "disallow": [
-        "/materia/docacessorio/pdf/*",
-        "/materia/docacessorio/zip/*"
-      ]
+      "disallow": []
     }
   },
   "execucao": {
-    "requisicoes": 59,
-    "falhas": []
+    "requisicoes": 58,
+    "falhas": [
+      "fluxo-registrovotacao: HTTP 503 em /api/sessao/registrovotacao/?o=-id&page=1&page_size=1000",
+      "/api/sessao/registrovotacao/?o=-id&page=1&page_size=1000: The operation was aborted due to timeout",
+      "/api/sessao/registrovotacao/?o=-id&page=1&page_size=1000: HTTP 503",
+      "/api/sessao/registrovotacao/?o=-id&page=1&page_size=1000: HTTP 503"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -64,7 +66,7 @@
       "concluida": true
     },
     "tramitacao": {
-      "desde": "2026-09-08",
+      "desde": "2026-08-25",
       "concluida": false
     }
   },
@@ -81,10 +83,10 @@
   "contagens": {
     "parlamentares": 39,
     "parlamentares_em_exercicio": 29,
-    "proposicoes": 24772,
-    "normas": 1093,
+    "proposicoes": 24781,
+    "normas": 1094,
     "sessoes": 593,
-    "itens_pauta": 35193,
+    "itens_pauta": 35194,
     "votacoes": 4827,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 633,
@@ -137,15 +139,15 @@
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 206706,
+            "hi": 206707,
             "lo": 176066,
-            "n": 30530,
+            "n": 30531,
             "lo_data": "2025-04-03"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 204344
+        "total_fonte": 204345
       },
       "sessaoplenaria": {
         "faixas": [
@@ -163,15 +165,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 206369,
+            "hi": 206370,
             "lo": 181523,
-            "n": 24692,
+            "n": 24693,
             "lo_data": "2024-12-17"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 205012
+        "total_fonte": 205013
       },
       "normajuridica": {
         "faixas": [
@@ -189,21 +191,21 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 558486,
-            "lo": 548010,
-            "n": 10400,
-            "lo_data": "2026-09-08"
+            "hi": 558488,
+            "lo": 544692,
+            "n": 13600,
+            "lo_data": "2026-08-25"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 520126
+        "total_fonte": 520128
       }
     },
     "tabelas_em": {
       "legislaturas": "2026-11-18T14:30:25.515Z",
       "tipos_resultado": "2026-11-19T00:13:34.554Z",
-      "tipos_materia": "2026-11-12T14:10:16.008Z",
+      "tipos_materia": "2026-11-19T14:54:27.706Z",
       "mandatos": "2026-11-12T23:20:39.142Z",
       "tipos_norma": "2026-11-13T13:33:18.447Z",
       "tipos_sessao": "2026-11-13T23:16:15.316Z",
@@ -213,7 +215,7 @@
       "status_tramitacao": "2026-11-15T22:28:54.458Z",
       "autores": "2026-11-16T14:06:40.733Z"
     },
-    "ultima_requisicao": "2026-11-19T00:38:58.587Z",
+    "ultima_requisicao": "2026-11-19T15:31:03.279Z",
     "pendencias_inexistentes": [
       "materia-22566"
     ],
