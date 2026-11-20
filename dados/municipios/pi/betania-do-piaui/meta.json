@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-18T14:11:36.901Z",
-  "ultima_execucao": "2026-11-18T14:11:08.116Z",
+  "atualizado_em": "2026-11-20T14:18:35.611Z",
+  "ultima_execucao": "2026-11-20T14:08:23.085Z",
   "uf": "PI",
   "casa": "cm-betania-do-piaui",
   "orgao": "Câmara Municipal de Betânia do Piauí",
   "host": "sapl.betaniadopiaui.pi.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-18"
+    "fim": "2026-11-20"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Betânia do Piauí (API REST pública)",
       "url": "https://sapl.betaniadopiaui.pi.leg.br/api/",
       "orgao": "Câmara Municipal de Betânia do Piauí",
-      "acessado_em": "2026-11-18"
+      "acessado_em": "2026-11-20"
     }
   ],
   "robots": {
-    "sapl.betaniadopiaui.pi.leg.br": null
+    "sapl.betaniadopiaui.pi.leg.br": {
+      "lido_em": "2026-11-20T14:08:23.085Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 11,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -185,7 +192,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-05T23:14:50.456Z",
+      "legislaturas": "2026-11-20T14:18:35.610Z",
       "tipos_resultado": "2026-11-05T23:15:51.490Z",
       "tipos_materia": "2026-11-05T23:16:55.532Z",
       "mandatos": "2026-11-05T23:17:53.501Z",
@@ -197,7 +204,7 @@
       "status_tramitacao": "2026-11-05T23:32:07.212Z",
       "autores": "2026-11-05T23:33:11.272Z"
     },
-    "ultima_requisicao": "2026-11-18T14:11:08.116Z",
+    "ultima_requisicao": "2026-11-20T14:18:34.350Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

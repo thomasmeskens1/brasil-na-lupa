@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-18T14:11:36.692Z",
-  "ultima_execucao": "2026-11-18T14:11:08.102Z",
+  "atualizado_em": "2026-11-20T14:47:05.714Z",
+  "ultima_execucao": "2026-11-20T14:08:23.075Z",
   "uf": "SP",
   "casa": "cm-bertioga",
   "orgao": "Câmara Municipal de Bertioga",
   "host": "sapl.bertioga.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-18"
+    "fim": "2026-11-20"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Bertioga (API REST pública)",
       "url": "https://sapl.bertioga.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Bertioga",
-      "acessado_em": "2026-11-18"
+      "acessado_em": "2026-11-20"
     }
   ],
   "robots": {
-    "sapl.bertioga.sp.leg.br": null
+    "sapl.bertioga.sp.leg.br": {
+      "lido_em": "2026-11-20T14:08:23.075Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 39,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -57,8 +64,8 @@
       "concluida": true
     },
     "tramitacao": {
-      "desde": "2025-09-10",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     }
   },
   "observacoes": [
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 11,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 919,
+    "proposicoes": 927,
     "normas": 662,
     "sessoes": 198,
     "itens_pauta": 488,
@@ -182,18 +189,18 @@
         "faixas": [
           {
             "hi": 9229,
-            "lo": 8205,
-            "n": 910,
-            "lo_data": "2025-09-10"
+            "lo": 6299,
+            "n": 2574,
+            "lo_data": "2024-10-21"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 8686
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-05T23:14:49.879Z",
+      "legislaturas": "2026-11-20T14:27:45.839Z",
       "tipos_resultado": "2026-11-05T23:15:51.098Z",
       "tipos_materia": "2026-11-05T23:16:54.923Z",
       "mandatos": "2026-11-05T23:17:52.896Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-05T23:32:08.806Z",
       "autores": "2026-11-05T23:33:13.018Z"
     },
-    "ultima_requisicao": "2026-11-18T14:11:08.102Z",
+    "ultima_requisicao": "2026-11-20T14:47:03.812Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
