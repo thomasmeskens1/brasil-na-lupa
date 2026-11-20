@@ -1,9 +1,9 @@
 {
-  "atualizado_em": "2026-11-19T20:14:18.507Z",
-  "ultima_execucao": "2026-11-19T20:14:18.507Z",
+  "atualizado_em": "2026-11-20T19:43:44.299Z",
+  "ultima_execucao": "2026-11-20T19:43:44.299Z",
   "tribunal": "tce-pe",
   "modo": "incremental",
-  "interrompido_por_orcamento": true,
+  "interrompido_por_orcamento": false,
   "periodo": {
     "contas_governador": {
       "inicio": 2014,
@@ -14,13 +14,13 @@
       "fim": 2025
     }
   },
-  "exercicios_municipais_baixados_nesta_execucao": [],
-  "exercicios_municipais_pendentes": [
+  "exercicios_municipais_baixados_nesta_execucao": [
     2022,
     2023,
     2024,
     2025
   ],
+  "exercicios_municipais_pendentes": [],
   "exercicios_municipais_coletados": [
     2014,
     2015,
@@ -37,19 +37,19 @@
   ],
   "consultas_processos_governador": {
     "2023": "2026-11-19",
-    "2024": "2026-11-12",
-    "2025": "2026-11-12"
+    "2024": "2026-11-20",
+    "2025": "2026-11-20"
   },
   "contagens": {
     "registros_governador": 10,
     "exercicios_governador_com_parecer": 9,
-    "registros_municipais_nesta_execucao": 0,
-    "registros_municipais_descartados": 0,
+    "registros_municipais_nesta_execucao": 504,
+    "registros_municipais_descartados": 1,
     "municipios": 184,
     "itens_municipais_por_resultado": {
-      "Aprovação com ressalvas": 1443,
+      "Aprovação com ressalvas": 1445,
       "Rejeição": 490,
-      "sem parecer na API": 269,
+      "sem parecer na API": 267,
       "Aprovação": 6
     }
   },
@@ -128,19 +128,23 @@
     },
     {
       "exercicio": 2023,
-      "processo": "24100726-4",
+      "mantido": true
+    },
+    {
+      "exercicio": 2024,
+      "processo": "25100439-9",
       "data_julgamento": null,
       "conclusao": null,
       "relator": null,
       "situacao": "Não Julgado"
     },
     {
-      "exercicio": 2024,
-      "mantido": true
-    },
-    {
       "exercicio": 2025,
-      "mantido": true
+      "processo": "26100704-0",
+      "data_julgamento": null,
+      "conclusao": null,
+      "relator": null,
+      "situacao": "Não Julgado"
     }
   ],
   "fontes": [
@@ -148,19 +152,19 @@
       "titulo": "API de Dados Abertos do TCE-PE — catálogo de entidades",
       "url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!listar",
       "orgao": "Tribunal de Contas do Estado de Pernambuco (TCE-PE)",
-      "acessado_em": "2026-11-19"
+      "acessado_em": "2026-11-20"
     },
     {
       "titulo": "API de Dados Abertos do TCE-PE — entidade \"Resultados\" (documentação)",
       "url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=42",
       "orgao": "Tribunal de Contas do Estado de Pernambuco (TCE-PE)",
-      "acessado_em": "2026-11-19"
+      "acessado_em": "2026-11-20"
     },
     {
       "titulo": "API de Dados Abertos do TCE-PE — contas de governo do Estado (consulta usada)",
       "url": "https://sistemas.tcepe.tc.br/DadosAbertos/Resultados!json?Tipo=Governo&EsferaUJPrincipalProcesso=E",
       "orgao": "Tribunal de Contas do Estado de Pernambuco (TCE-PE)",
-      "acessado_em": "2026-11-19"
+      "acessado_em": "2026-11-20"
     }
   ],
   "robots_e_restricoes": [
@@ -176,17 +180,13 @@
     "Julgamento político das contas (Alepe e Câmaras Municipais) ainda não coletado."
   ],
   "api_indisponivel": false,
-  "erros": [
-    "Processos 2024: The operation was aborted due to timeout"
-  ],
+  "erros": [],
   "estatisticas_http": {
-    "requisicoes": 5,
-    "retentativas": 1,
-    "bytes": 11282,
-    "falhas": [
-      "https://sistemas.tcepe.tc.br/DadosAbertos/Processos!json?Exercicio=2024&Tipo=Governo&Esfera=E&Modalidade=Presta%E7%E3o%20de%20Contas: The operation was aborted due to timeout"
-    ]
+    "requisicoes": 8,
+    "retentativas": 0,
+    "bytes": 416675,
+    "falhas": []
   },
-  "duracao_s": 900,
+  "duracao_s": 15,
   "ultima_coleta_completa": "2026-11-05"
 }
