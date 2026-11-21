@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-19T14:32:22.889Z",
-  "ultima_execucao": "2026-11-19T14:32:08.764Z",
+  "atualizado_em": "2026-11-20T23:46:07.488Z",
+  "ultima_execucao": "2026-11-20T23:26:37.268Z",
   "uf": "RS",
   "casa": "cm-paraiso-do-sul",
   "orgao": "Câmara Municipal de Paraíso do Sul",
   "host": "sapl.paraisodosul.rs.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-19"
+    "fim": "2026-11-20"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Paraíso do Sul (API REST pública)",
       "url": "https://sapl.paraisodosul.rs.leg.br/api/",
       "orgao": "Câmara Municipal de Paraíso do Sul",
-      "acessado_em": "2026-11-19"
+      "acessado_em": "2026-11-20"
     }
   ],
   "robots": {
-    "sapl.paraisodosul.rs.leg.br": null
+    "sapl.paraisodosul.rs.leg.br": {
+      "lido_em": "2026-11-20T23:26:37.268Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 14,
     "parlamentares_em_exercicio": 14,
-    "proposicoes": 550,
+    "proposicoes": 558,
     "normas": 198,
     "sessoes": 200,
     "itens_pauta": 698,
@@ -194,7 +201,7 @@
     "tabelas_em": {
       "legislaturas": "2026-11-14T22:02:43.902Z",
       "tipos_resultado": "2026-11-18T00:21:22.970Z",
-      "tipos_materia": "2026-11-06T22:48:09.377Z",
+      "tipos_materia": "2026-11-20T23:46:07.488Z",
       "mandatos": "2026-11-06T22:49:08.807Z",
       "tipos_norma": "2026-11-06T22:58:18.368Z",
       "tipos_sessao": "2026-11-06T22:59:18.219Z",
@@ -204,7 +211,7 @@
       "status_tramitacao": "2026-11-06T23:03:22.239Z",
       "autores": "2026-11-06T23:04:23.921Z"
     },
-    "ultima_requisicao": "2026-11-19T14:32:08.764Z",
+    "ultima_requisicao": "2026-11-20T23:46:03.713Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

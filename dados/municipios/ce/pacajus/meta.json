@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-19T14:32:24.535Z",
-  "ultima_execucao": "2026-11-19T14:32:08.574Z",
+  "atualizado_em": "2026-11-20T23:37:58.399Z",
+  "ultima_execucao": "2026-11-20T23:26:37.050Z",
   "uf": "CE",
   "casa": "cm-pacajus",
   "orgao": "Câmara Municipal de Pacajus",
   "host": "sapl.pacajus.ce.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-19"
+    "fim": "2026-11-20"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Pacajus (API REST pública)",
       "url": "https://sapl.pacajus.ce.leg.br/api/",
       "orgao": "Câmara Municipal de Pacajus",
-      "acessado_em": "2026-11-19"
+      "acessado_em": "2026-11-20"
     }
   ],
   "robots": {
-    "sapl.pacajus.ce.leg.br": null
+    "sapl.pacajus.ce.leg.br": {
+      "lido_em": "2026-11-20T23:26:37.050Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -76,8 +83,8 @@
     "parlamentares_em_exercicio": 15,
     "proposicoes": 947,
     "normas": 203,
-    "sessoes": 146,
-    "itens_pauta": 978,
+    "sessoes": 147,
+    "itens_pauta": 986,
     "votacoes": 843,
     "votacoes_por_situacao_dos_votos": {
       "coletados": 735,
@@ -117,15 +124,15 @@
       "ordemdia": {
         "faixas": [
           {
-            "hi": 1279,
+            "hi": 1287,
             "lo": 276,
-            "n": 920,
+            "n": 928,
             "lo_data": "2024-05-16"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1168
+        "total_fonte": 1176
       },
       "expedientemateria": {
         "faixas": [
@@ -143,15 +150,15 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 151,
+            "hi": 152,
             "lo": 1,
-            "n": 146,
+            "n": 147,
             "lo_data": "2023-09-21"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 146
+        "total_fonte": 147
       },
       "materialegislativa": {
         "faixas": [
@@ -196,7 +203,7 @@
     "tabelas_em": {
       "legislaturas": "2026-11-14T22:02:43.952Z",
       "tipos_resultado": "2026-11-18T00:13:12.765Z",
-      "tipos_materia": "2026-11-06T22:48:05.979Z",
+      "tipos_materia": "2026-11-20T23:37:58.398Z",
       "mandatos": "2026-11-06T22:49:07.011Z",
       "tipos_norma": "2026-11-06T22:58:16.569Z",
       "tipos_sessao": "2026-11-06T22:59:16.613Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T23:03:20.646Z",
       "autores": "2026-11-06T23:04:22.373Z"
     },
-    "ultima_requisicao": "2026-11-19T14:32:08.574Z",
+    "ultima_requisicao": "2026-11-20T23:37:54.825Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

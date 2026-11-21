@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-19T14:32:23.435Z",
-  "ultima_execucao": "2026-11-19T14:32:08.654Z",
+  "atualizado_em": "2026-11-20T23:46:06.884Z",
+  "ultima_execucao": "2026-11-20T23:26:37.138Z",
   "uf": "PI",
   "casa": "cm-palmeirais",
   "orgao": "Câmara Municipal de Palmeirais",
   "host": "sapl.palmeirais.pi.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-19"
+    "fim": "2026-11-20"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Palmeirais (API REST pública)",
       "url": "https://sapl.palmeirais.pi.leg.br/api/",
       "orgao": "Câmara Municipal de Palmeirais",
-      "acessado_em": "2026-11-19"
+      "acessado_em": "2026-11-20"
     }
   ],
   "robots": {
-    "sapl.palmeirais.pi.leg.br": null
+    "sapl.palmeirais.pi.leg.br": {
+      "lido_em": "2026-11-20T23:26:37.138Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 10,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 348,
+    "proposicoes": 356,
     "normas": 200,
     "sessoes": 198,
     "itens_pauta": 224,
@@ -196,7 +203,7 @@
     "tabelas_em": {
       "legislaturas": "2026-11-14T22:02:41.923Z",
       "tipos_resultado": "2026-11-18T00:21:21.564Z",
-      "tipos_materia": "2026-11-06T22:48:06.975Z",
+      "tipos_materia": "2026-11-20T23:46:06.884Z",
       "mandatos": "2026-11-06T22:49:08.396Z",
       "tipos_norma": "2026-11-06T22:58:17.376Z",
       "tipos_sessao": "2026-11-06T22:59:17.823Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T23:04:21.645Z",
       "autores": "2026-11-06T23:05:24.148Z"
     },
-    "ultima_requisicao": "2026-11-19T14:32:08.654Z",
+    "ultima_requisicao": "2026-11-20T23:46:03.711Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

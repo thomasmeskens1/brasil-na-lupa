@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-18T23:40:29.252Z",
-  "ultima_execucao": "2026-11-18T23:40:04.970Z",
+  "atualizado_em": "2026-11-20T23:46:01.888Z",
+  "ultima_execucao": "2026-11-20T23:26:35.716Z",
   "uf": "PR",
   "casa": "cm-itauna-do-sul",
   "orgao": "Câmara Municipal de Itaúna do Sul",
   "host": "sapl.itaunadosul.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-18"
+    "fim": "2026-11-20"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Itaúna do Sul (API REST pública)",
       "url": "https://sapl.itaunadosul.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Itaúna do Sul",
-      "acessado_em": "2026-11-18"
+      "acessado_em": "2026-11-20"
     }
   ],
   "robots": {
-    "sapl.itaunadosul.pr.leg.br": null
+    "sapl.itaunadosul.pr.leg.br": {
+      "lido_em": "2026-11-20T23:26:35.716Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,8 +81,8 @@
   "contagens": {
     "parlamentares": 11,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 849,
-    "normas": 301,
+    "proposicoes": 861,
+    "normas": 302,
     "sessoes": 200,
     "itens_pauta": 870,
     "votacoes": 499,
@@ -156,28 +163,28 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 2996,
+            "hi": 3000,
             "lo": 2155,
-            "n": 841,
+            "n": 845,
             "lo_data": "2024-09-24"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2925
+        "total_fonte": 2929
       },
       "normajuridica": {
         "faixas": [
           {
-            "hi": 2013,
+            "hi": 2014,
             "lo": 1719,
-            "n": 294,
+            "n": 295,
             "lo_data": "2023-12-12"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1999
+        "total_fonte": 2000
       },
       "tramitacao": {
         "faixas": [
@@ -195,7 +202,7 @@
     },
     "tabelas_em": {
       "legislaturas": "2026-11-17T14:54:37.309Z",
-      "tipos_resultado": "2026-11-06T13:20:14.539Z",
+      "tipos_resultado": "2026-11-20T23:46:01.888Z",
       "tipos_materia": "2026-11-06T13:21:15.311Z",
       "mandatos": "2026-11-06T13:22:17.327Z",
       "tipos_norma": "2026-11-06T13:31:25.696Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T13:36:31.229Z",
       "autores": "2026-11-06T13:37:32.176Z"
     },
-    "ultima_requisicao": "2026-11-18T23:40:04.970Z",
+    "ultima_requisicao": "2026-11-20T23:45:57.779Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-18T23:40:29.856Z",
-  "ultima_execucao": "2026-11-18T23:40:05.014Z",
+  "atualizado_em": "2026-11-20T23:43:56.062Z",
+  "ultima_execucao": "2026-11-20T23:26:35.780Z",
   "uf": "ES",
   "casa": "cm-iuna",
   "orgao": "Câmara Municipal de Iúna",
   "host": "sapl.iuna.es.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-18"
+    "fim": "2026-11-20"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Iúna (API REST pública)",
       "url": "https://sapl.iuna.es.leg.br/api/",
       "orgao": "Câmara Municipal de Iúna",
-      "acessado_em": "2026-11-18"
+      "acessado_em": "2026-11-20"
     }
   ],
   "robots": {
-    "sapl.iuna.es.leg.br": null
+    "sapl.iuna.es.leg.br": {
+      "lido_em": "2026-11-20T23:26:35.780Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 18,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,9 +81,9 @@
   "contagens": {
     "parlamentares": 11,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 511,
+    "proposicoes": 549,
     "normas": 0,
-    "sessoes": 200,
+    "sessoes": 201,
     "itens_pauta": 594,
     "votacoes": 306,
     "votacoes_por_situacao_dos_votos": {
@@ -143,28 +150,28 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 342,
+            "hi": 343,
             "lo": 140,
-            "n": 200,
+            "n": 201,
             "lo_data": "2021-10-18"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 331
+        "total_fonte": 332
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 3275,
+            "hi": 3305,
             "lo": 2755,
-            "n": 503,
+            "n": 533,
             "lo_data": "2024-06-18"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 3130
+        "total_fonte": 3160
       },
       "normajuridica": {
         "faixas": [],
@@ -175,20 +182,20 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 2728,
+            "hi": 2754,
             "lo": 2141,
-            "n": 571,
+            "n": 597,
             "lo_data": "2024-03-27"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2513
+        "total_fonte": 2539
       }
     },
     "tabelas_em": {
       "legislaturas": "2026-11-17T14:52:36.888Z",
-      "tipos_resultado": "2026-11-06T13:20:14.940Z",
+      "tipos_resultado": "2026-11-20T23:43:56.062Z",
       "tipos_materia": "2026-11-06T13:21:15.104Z",
       "mandatos": "2026-11-06T13:22:16.494Z",
       "tipos_norma": "2026-11-06T13:31:26.494Z",
@@ -199,7 +206,7 @@
       "status_tramitacao": "2026-11-06T13:36:31.261Z",
       "autores": "2026-11-06T13:37:33.018Z"
     },
-    "ultima_requisicao": "2026-11-18T23:40:05.014Z",
+    "ultima_requisicao": "2026-11-20T23:43:54.492Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

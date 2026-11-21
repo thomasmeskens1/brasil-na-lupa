@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-19T14:32:23.332Z",
-  "ultima_execucao": "2026-11-19T14:32:08.675Z",
+  "atualizado_em": "2026-11-20T23:38:00.397Z",
+  "ultima_execucao": "2026-11-20T23:26:37.163Z",
   "uf": "GO",
   "casa": "cm-palminopolis",
   "orgao": "Câmara Municipal de Palminópolis",
   "host": "sapl.palminopolis.go.leg.br",
   "periodo": {
     "inicio": null,
-    "fim": "2026-11-19"
+    "fim": "2026-11-20"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Palminópolis (API REST pública)",
       "url": "https://sapl.palminopolis.go.leg.br/api/",
       "orgao": "Câmara Municipal de Palminópolis",
-      "acessado_em": "2026-11-19"
+      "acessado_em": "2026-11-20"
     }
   ],
   "robots": {
-    "sapl.palminopolis.go.leg.br": null
+    "sapl.palminopolis.go.leg.br": {
+      "lido_em": "2026-11-20T23:26:37.163Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -192,7 +199,7 @@
     "tabelas_em": {
       "legislaturas": "2026-11-14T21:54:36.386Z",
       "tipos_resultado": "2026-11-18T00:13:14.570Z",
-      "tipos_materia": "2026-11-06T22:48:07.778Z",
+      "tipos_materia": "2026-11-20T23:38:00.396Z",
       "tipos_norma": "2026-11-06T22:57:16.768Z",
       "tipos_sessao": "2026-11-06T22:58:17.770Z",
       "partidos": "2026-11-06T22:59:18.448Z",
@@ -201,7 +208,7 @@
       "status_tramitacao": "2026-11-06T23:02:22.864Z",
       "autores": "2026-11-06T23:03:23.703Z"
     },
-    "ultima_requisicao": "2026-11-19T14:32:08.675Z",
+    "ultima_requisicao": "2026-11-20T23:37:54.828Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

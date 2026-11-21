@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-18T23:40:15.777Z",
-  "ultima_execucao": "2026-11-18T23:40:05.059Z",
+  "atualizado_em": "2026-11-20T23:37:49.475Z",
+  "ultima_execucao": "2026-11-20T23:26:35.830Z",
   "uf": "PR",
   "casa": "cm-jaboti",
   "orgao": "Câmara Municipal de Jaboti",
   "host": "sapl.jaboti.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-18"
+    "fim": "2026-11-20"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Jaboti (API REST pública)",
       "url": "https://sapl.jaboti.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Jaboti",
-      "acessado_em": "2026-11-18"
+      "acessado_em": "2026-11-20"
     }
   ],
   "robots": {
-    "sapl.jaboti.pr.leg.br": null
+    "sapl.jaboti.pr.leg.br": {
+      "lido_em": "2026-11-20T23:26:35.830Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -194,7 +201,7 @@
     },
     "tabelas_em": {
       "legislaturas": "2026-11-17T14:46:34.085Z",
-      "tipos_resultado": "2026-11-06T13:20:15.148Z",
+      "tipos_resultado": "2026-11-20T23:37:49.475Z",
       "tipos_materia": "2026-11-06T13:21:15.909Z",
       "mandatos": "2026-11-06T13:22:16.116Z",
       "tipos_norma": "2026-11-06T13:31:25.460Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T13:36:30.375Z",
       "autores": "2026-11-06T13:37:31.194Z"
     },
-    "ultima_requisicao": "2026-11-18T23:40:05.059Z",
+    "ultima_requisicao": "2026-11-20T23:37:48.296Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

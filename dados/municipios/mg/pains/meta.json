@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-19T14:32:24.482Z",
-  "ultima_execucao": "2026-11-19T14:32:08.586Z",
+  "atualizado_em": "2026-11-20T23:36:00.379Z",
+  "ultima_execucao": "2026-11-20T23:26:37.062Z",
   "uf": "MG",
   "casa": "cm-pains",
   "orgao": "Câmara Municipal de Pains",
   "host": "sapl.pains.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-19"
+    "fim": "2026-11-20"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Pains (API REST pública)",
       "url": "https://sapl.pains.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Pains",
-      "acessado_em": "2026-11-19"
+      "acessado_em": "2026-11-20"
     }
   ],
   "robots": {
-    "sapl.pains.mg.leg.br": null
+    "sapl.pains.mg.leg.br": {
+      "lido_em": "2026-11-20T23:26:37.062Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 10,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -188,7 +195,7 @@
     "tabelas_em": {
       "legislaturas": "2026-11-14T21:52:34.292Z",
       "tipos_resultado": "2026-11-18T00:11:19.113Z",
-      "tipos_materia": "2026-11-06T22:48:06.390Z",
+      "tipos_materia": "2026-11-20T23:36:00.379Z",
       "mandatos": "2026-11-06T22:49:07.792Z",
       "tipos_norma": "2026-11-06T22:58:17.164Z",
       "tipos_sessao": "2026-11-06T22:59:17.015Z",
@@ -198,7 +205,7 @@
       "status_tramitacao": "2026-11-06T23:04:23.245Z",
       "autores": "2026-11-06T23:06:25.234Z"
     },
-    "ultima_requisicao": "2026-11-19T14:32:08.586Z",
+    "ultima_requisicao": "2026-11-20T23:35:52.824Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-19T14:32:23.527Z",
-  "ultima_execucao": "2026-11-19T14:32:08.645Z",
+  "atualizado_em": "2026-11-20T23:35:58.412Z",
+  "ultima_execucao": "2026-11-20T23:26:37.128Z",
   "uf": "PR",
   "casa": "cm-palmeira",
   "orgao": "Câmara Municipal de Palmeira",
   "host": "sapl.palmeira.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-19"
+    "fim": "2026-11-20"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Palmeira (API REST pública)",
       "url": "https://sapl.palmeira.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Palmeira",
-      "acessado_em": "2026-11-19"
+      "acessado_em": "2026-11-20"
     }
   ],
   "robots": {
-    "sapl.palmeira.pr.leg.br": null
+    "sapl.palmeira.pr.leg.br": {
+      "lido_em": "2026-11-20T23:26:37.128Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 10,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 12,
     "parlamentares_em_exercicio": 8,
-    "proposicoes": 1736,
+    "proposicoes": 1744,
     "normas": 0,
     "sessoes": 129,
     "itens_pauta": 3834,
@@ -155,15 +162,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 7065,
+            "hi": 7073,
             "lo": 5312,
-            "n": 1736,
+            "n": 1744,
             "lo_data": "2024-08-29"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 6975
+        "total_fonte": 6983
       },
       "normajuridica": {
         "faixas": [],
@@ -174,21 +181,21 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 22782,
+            "hi": 22863,
             "lo": 16788,
-            "n": 5923,
+            "n": 6004,
             "lo_data": "2024-11-12"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 22267
+        "total_fonte": 22348
       }
     },
     "tabelas_em": {
       "legislaturas": "2026-11-14T21:52:34.531Z",
       "tipos_resultado": "2026-11-18T00:11:15.911Z",
-      "tipos_materia": "2026-11-06T22:48:06.773Z",
+      "tipos_materia": "2026-11-20T23:35:58.412Z",
       "mandatos": "2026-11-06T22:49:07.602Z",
       "tipos_norma": "2026-11-06T22:58:16.967Z",
       "tipos_sessao": "2026-11-06T22:59:18.023Z",
@@ -198,7 +205,7 @@
       "status_tramitacao": "2026-11-06T23:03:21.820Z",
       "autores": "2026-11-06T23:04:22.944Z"
     },
-    "ultima_requisicao": "2026-11-19T14:32:08.645Z",
+    "ultima_requisicao": "2026-11-20T23:35:52.824Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

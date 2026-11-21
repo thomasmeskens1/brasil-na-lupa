@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-18T23:40:30.044Z",
-  "ultima_execucao": "2026-11-18T23:40:05.057Z",
+  "atualizado_em": "2026-11-21T00:25:39.187Z",
+  "ultima_execucao": "2026-11-20T23:26:35.826Z",
   "uf": "PR",
   "casa": "cm-ivaipora",
   "orgao": "Câmara Municipal de Ivaiporã",
   "host": "sapl.ivaipora.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-18"
+    "fim": "2026-11-20"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Ivaiporã (API REST pública)",
       "url": "https://sapl.ivaipora.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Ivaiporã",
-      "acessado_em": "2026-11-18"
+      "acessado_em": "2026-11-20"
     }
   ],
   "robots": {
-    "sapl.ivaipora.pr.leg.br": null
+    "sapl.ivaipora.pr.leg.br": {
+      "lido_em": "2026-11-20T23:26:35.826Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 59,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -49,15 +56,15 @@
       "concluida": true
     },
     "materialegislativa": {
-      "desde": "2008-08-25",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "normajuridica": {
-      "desde": "1974-07-31",
-      "concluida": false
+      "desde": "0000-00-00",
+      "concluida": true
     },
     "tramitacao": {
-      "desde": "2026-10-08",
+      "desde": "2026-07-21",
       "concluida": false
     }
   },
@@ -74,128 +81,128 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 8,
-    "proposicoes": 1112,
-    "normas": 677,
-    "sessoes": 297,
-    "itens_pauta": 2128,
-    "votacoes": 775,
+    "proposicoes": 4005,
+    "normas": 763,
+    "sessoes": 299,
+    "itens_pauta": 2143,
+    "votacoes": 788,
     "votacoes_por_situacao_dos_votos": {
       "inexistentes-na-fonte": 546,
-      "coletados": 214,
+      "coletados": 227,
       "em-coleta": 15
     },
-    "votos_individuais": 1795
+    "votos_individuais": 1886
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 1237,
+            "hi": 1250,
             "lo": 433,
-            "n": 760,
+            "n": 773,
             "lo_data": "2024-09-13"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1157
+        "total_fonte": 1170
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 1828,
+            "hi": 1919,
             "lo": 1,
-            "n": 1795,
+            "n": 1886,
             "lo_data": "2023-10-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1795
+        "total_fonte": 1886
       },
       "ordemdia": {
         "faixas": [
           {
-            "hi": 1324,
+            "hi": 1343,
             "lo": 369,
-            "n": 828,
+            "n": 842,
             "lo_data": "2024-06-03"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1166
+        "total_fonte": 1180
       },
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 3595,
+            "hi": 3596,
             "lo": 2129,
-            "n": 1300,
+            "n": 1301,
             "lo_data": "2024-10-28"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 3330
+        "total_fonte": 3325
       },
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 357,
+            "hi": 361,
             "lo": 44,
-            "n": 297,
+            "n": 299,
             "lo_data": "2023-02-22"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 336
+        "total_fonte": 338
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 14088,
-            "lo": 12982,
-            "n": 1105,
-            "lo_data": "2008-08-25"
+            "hi": 14093,
+            "lo": 10071,
+            "n": 4005,
+            "lo_data": "2022-10-13"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 13971
+        "total_fonte": 13975
       },
       "normajuridica": {
         "faixas": [
           {
             "hi": 5569,
-            "lo": 4976,
-            "n": 588,
-            "lo_data": "1974-07-31"
+            "lo": 4705,
+            "n": 679,
+            "lo_data": "1977-04-11"
           }
         ],
-        "concluido": false,
+        "concluido": true,
         "tamanho_pagina": 100,
         "total_fonte": 5305
       },
       "tramitacao": {
         "faixas": [
           {
-            "hi": 11203,
-            "lo": 11080,
-            "n": 119,
-            "lo_data": "2026-10-08"
+            "hi": 11219,
+            "lo": 10613,
+            "n": 576,
+            "lo_data": "2026-07-21"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 10943
+        "total_fonte": 10952
       }
     },
     "tabelas_em": {
       "legislaturas": "2026-11-17T14:54:38.309Z",
-      "tipos_resultado": "2026-11-06T13:20:14.753Z",
+      "tipos_resultado": "2026-11-20T23:46:02.056Z",
       "tipos_materia": "2026-11-06T13:21:15.511Z",
       "mandatos": "2026-11-06T13:22:17.124Z",
       "tipos_norma": "2026-11-06T13:31:25.904Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T13:38:32.039Z",
       "autores": "2026-11-06T13:40:35.181Z"
     },
-    "ultima_requisicao": "2026-11-18T23:40:05.057Z",
+    "ultima_requisicao": "2026-11-21T00:25:37.200Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-18T23:40:29.552Z",
-  "ultima_execucao": "2026-11-18T23:40:05.001Z",
+  "atualizado_em": "2026-11-20T23:45:58.549Z",
+  "ultima_execucao": "2026-11-20T23:26:35.757Z",
   "uf": "MG",
   "casa": "cm-iturama",
   "orgao": "Câmara Municipal de Iturama",
   "host": "sapl.iturama.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-18"
+    "fim": "2026-11-20"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Iturama (API REST pública)",
       "url": "https://sapl.iturama.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Iturama",
-      "acessado_em": "2026-11-18"
+      "acessado_em": "2026-11-20"
     }
   ],
   "robots": {
-    "sapl.iturama.mg.leg.br": null
+    "sapl.iturama.mg.leg.br": {
+      "lido_em": "2026-11-20T23:26:35.757Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,13 +81,13 @@
   "contagens": {
     "parlamentares": 13,
     "parlamentares_em_exercicio": 13,
-    "proposicoes": 1001,
+    "proposicoes": 1014,
     "normas": 1363,
-    "sessoes": 116,
-    "itens_pauta": 1065,
-    "votacoes": 400,
+    "sessoes": 118,
+    "itens_pauta": 1073,
+    "votacoes": 408,
     "votacoes_por_situacao_dos_votos": {
-      "inexistentes-na-fonte": 398,
+      "inexistentes-na-fonte": 406,
       "coletados": 2
     },
     "votos_individuais": 26
@@ -90,15 +97,15 @@
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 525,
+            "hi": 533,
             "lo": 106,
-            "n": 400,
+            "n": 408,
             "lo_data": "2023-12-07"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 478
+        "total_fonte": 486
       },
       "votoparlamentar": {
         "faixas": [
@@ -116,15 +123,15 @@
       "ordemdia": {
         "faixas": [
           {
-            "hi": 545,
+            "hi": 553,
             "lo": 41,
-            "n": 495,
+            "n": 503,
             "lo_data": "2023-10-16"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 531
+        "total_fonte": 539
       },
       "expedientemateria": {
         "faixas": [
@@ -142,28 +149,28 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 117,
+            "hi": 119,
             "lo": 1,
-            "n": 116,
+            "n": 118,
             "lo_data": "2023-01-16"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 116
+        "total_fonte": 118
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 4212,
+            "hi": 4217,
             "lo": 3207,
-            "n": 1001,
+            "n": 1006,
             "lo_data": "2022-04-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 4144
+        "total_fonte": 4149
       },
       "normajuridica": {
         "faixas": [
@@ -194,7 +201,7 @@
     },
     "tabelas_em": {
       "legislaturas": "2026-11-17T14:54:38.686Z",
-      "tipos_resultado": "2026-11-06T13:20:14.340Z",
+      "tipos_resultado": "2026-11-20T23:45:58.549Z",
       "tipos_materia": "2026-11-06T13:21:14.900Z",
       "mandatos": "2026-11-06T13:22:15.922Z",
       "tipos_norma": "2026-11-06T13:31:25.500Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T13:37:31.038Z",
       "autores": "2026-11-06T13:39:33.384Z"
     },
-    "ultima_requisicao": "2026-11-18T23:40:05.001Z",
+    "ultima_requisicao": "2026-11-20T23:45:57.778Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
