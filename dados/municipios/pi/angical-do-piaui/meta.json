@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-19T23:57:05.099Z",
-  "ultima_execucao": "2026-11-19T23:56:52.214Z",
+  "atualizado_em": "2026-11-21T13:53:27.783Z",
+  "ultima_execucao": "2026-11-21T13:33:59.354Z",
   "uf": "PI",
   "casa": "cm-angical-do-piaui",
   "orgao": "Câmara Municipal de Angical do Piauí",
   "host": "sapl.angicaldopiaui.pi.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-19"
+    "fim": "2026-11-21"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Angical do Piauí (API REST pública)",
       "url": "https://sapl.angicaldopiaui.pi.leg.br/api/",
       "orgao": "Câmara Municipal de Angical do Piauí",
-      "acessado_em": "2026-11-19"
+      "acessado_em": "2026-11-21"
     }
   ],
   "robots": {
-    "sapl.angicaldopiaui.pi.leg.br": null
+    "sapl.angicaldopiaui.pi.leg.br": {
+      "lido_em": "2026-11-21T13:33:59.354Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 265,
+    "proposicoes": 273,
     "normas": 78,
     "sessoes": 202,
     "itens_pauta": 396,
@@ -196,7 +203,7 @@
       "legislaturas": "2026-11-15T13:09:04.805Z",
       "tipos_resultado": "2026-11-17T01:28:23.228Z",
       "tipos_materia": "2026-11-18T14:30:34.680Z",
-      "mandatos": "2026-11-05T16:58:51.770Z",
+      "mandatos": "2026-11-21T13:53:27.782Z",
       "tipos_norma": "2026-11-05T17:08:03.725Z",
       "tipos_sessao": "2026-11-05T17:09:02.610Z",
       "partidos": "2026-11-05T17:10:03.219Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-05T17:13:05.732Z",
       "autores": "2026-11-05T17:14:06.868Z"
     },
-    "ultima_requisicao": "2026-11-19T23:56:52.214Z",
+    "ultima_requisicao": "2026-11-21T13:53:20.816Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

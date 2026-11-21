@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-19T14:32:45.650Z",
-  "ultima_execucao": "2026-11-19T14:32:10.782Z",
+  "atualizado_em": "2026-11-21T13:53:21.182Z",
+  "ultima_execucao": "2026-11-21T13:33:57.707Z",
   "uf": "RS",
   "casa": "cm-santo-augusto",
   "orgao": "Câmara Municipal de Santo Augusto",
   "host": "sapl.santoaugusto.rs.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-19"
+    "fim": "2026-11-21"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Santo Augusto (API REST pública)",
       "url": "https://sapl.santoaugusto.rs.leg.br/api/",
       "orgao": "Câmara Municipal de Santo Augusto",
-      "acessado_em": "2026-11-19"
+      "acessado_em": "2026-11-21"
     }
   ],
   "robots": {
-    "sapl.santoaugusto.rs.leg.br": null
+    "sapl.santoaugusto.rs.leg.br": {
+      "lido_em": "2026-11-21T13:33:57.707Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,9 +81,9 @@
   "contagens": {
     "parlamentares": 11,
     "parlamentares_em_exercicio": 10,
-    "proposicoes": 406,
+    "proposicoes": 416,
     "normas": 480,
-    "sessoes": 297,
+    "sessoes": 298,
     "itens_pauta": 200,
     "votacoes": 102,
     "votacoes_por_situacao_dos_votos": {
@@ -143,28 +150,28 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 735,
+            "hi": 736,
             "lo": 437,
-            "n": 297,
+            "n": 298,
             "lo_data": "2021-11-01"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 730
+        "total_fonte": 731
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 1445,
+            "hi": 1447,
             "lo": 1049,
-            "n": 390,
+            "n": 392,
             "lo_data": "2024-01-15"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1426
+        "total_fonte": 1428
       },
       "normajuridica": {
         "faixas": [
@@ -182,20 +189,20 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 5996,
+            "hi": 6004,
             "lo": 4306,
-            "n": 1462,
+            "n": 1470,
             "lo_data": "2024-06-17"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 5608
+        "total_fonte": 5616
       }
     },
     "tabelas_em": {
       "legislaturas": "2026-11-14T22:02:50.511Z",
-      "tipos_resultado": "2026-11-07T12:07:56.329Z",
+      "tipos_resultado": "2026-11-21T13:53:21.182Z",
       "tipos_materia": "2026-11-07T12:08:57.152Z",
       "mandatos": "2026-11-07T12:09:57.576Z",
       "tipos_norma": "2026-11-07T12:19:07.821Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-07T12:24:11.025Z",
       "autores": "2026-11-07T12:25:11.971Z"
     },
-    "ultima_requisicao": "2026-11-19T14:32:10.782Z",
+    "ultima_requisicao": "2026-11-21T13:53:20.538Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

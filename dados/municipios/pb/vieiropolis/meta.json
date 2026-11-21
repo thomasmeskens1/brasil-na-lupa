@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-19T23:57:07.081Z",
-  "ultima_execucao": "2026-11-19T23:56:52.536Z",
+  "atualizado_em": "2026-11-21T13:50:23.951Z",
+  "ultima_execucao": "2026-11-21T13:33:59.767Z",
   "uf": "PB",
   "casa": "cm-vieiropolis",
   "orgao": "Câmara Municipal de Vieirópolis",
   "host": "sapl.vieiropolis.pb.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-19"
+    "fim": "2026-11-21"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Vieirópolis (API REST pública)",
       "url": "https://sapl.vieiropolis.pb.leg.br/api/",
       "orgao": "Câmara Municipal de Vieirópolis",
-      "acessado_em": "2026-11-19"
+      "acessado_em": "2026-11-21"
     }
   ],
   "robots": {
-    "sapl.vieiropolis.pb.leg.br": null
+    "sapl.vieiropolis.pb.leg.br": {
+      "lido_em": "2026-11-21T13:33:59.767Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 17,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 238,
+    "proposicoes": 246,
     "normas": 0,
     "sessoes": 94,
     "itens_pauta": 198,
@@ -182,7 +189,7 @@
     "tabelas_em": {
       "legislaturas": "2026-11-15T13:06:00.715Z",
       "tipos_resultado": "2026-11-17T01:25:18.480Z",
-      "tipos_materia": "2026-11-07T21:19:31.311Z",
+      "tipos_materia": "2026-11-21T13:50:23.951Z",
       "mandatos": "2026-11-07T21:20:31.361Z",
       "tipos_norma": "2026-11-07T21:29:40.307Z",
       "tipos_sessao": "2026-11-07T21:30:40.915Z",
@@ -192,7 +199,7 @@
       "status_tramitacao": "2026-11-07T21:34:45.354Z",
       "autores": "2026-11-07T21:35:44.804Z"
     },
-    "ultima_requisicao": "2026-11-19T23:56:52.536Z",
+    "ultima_requisicao": "2026-11-21T13:50:17.386Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

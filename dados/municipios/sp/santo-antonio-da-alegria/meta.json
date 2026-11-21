@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-19T14:32:44.903Z",
-  "ultima_execucao": "2026-11-19T14:32:10.721Z",
+  "atualizado_em": "2026-11-21T13:44:09.724Z",
+  "ultima_execucao": "2026-11-21T13:33:57.634Z",
   "uf": "SP",
   "casa": "cm-santo-antonio-da-alegria",
   "orgao": "Câmara Municipal de Santo Antônio da Alegria",
   "host": "sapl.santoantoniodaalegria.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-19"
+    "fim": "2026-11-21"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Santo Antônio da Alegria (API REST pública)",
       "url": "https://sapl.santoantoniodaalegria.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Santo Antônio da Alegria",
-      "acessado_em": "2026-11-19"
+      "acessado_em": "2026-11-21"
     }
   ],
   "robots": {
-    "sapl.santoantoniodaalegria.sp.leg.br": null
+    "sapl.santoantoniodaalegria.sp.leg.br": {
+      "lido_em": "2026-11-21T13:33:57.634Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 11,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -76,7 +83,7 @@
     "parlamentares_em_exercicio": 9,
     "proposicoes": 388,
     "normas": 1,
-    "sessoes": 166,
+    "sessoes": 167,
     "itens_pauta": 6,
     "votacoes": 3,
     "votacoes_por_situacao_dos_votos": {
@@ -141,15 +148,15 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 171,
+            "hi": 172,
             "lo": 1,
-            "n": 166,
+            "n": 167,
             "lo_data": "2020-12-15"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 166
+        "total_fonte": 167
       },
       "materialegislativa": {
         "faixas": [
@@ -186,7 +193,7 @@
     },
     "tabelas_em": {
       "legislaturas": "2026-11-14T21:53:42.968Z",
-      "tipos_resultado": "2026-11-07T12:07:56.138Z",
+      "tipos_resultado": "2026-11-21T13:44:09.724Z",
       "tipos_materia": "2026-11-07T12:08:57.536Z",
       "mandatos": "2026-11-07T12:09:58.373Z",
       "tipos_norma": "2026-11-07T12:19:08.022Z",
@@ -197,7 +204,7 @@
       "status_tramitacao": "2026-11-07T12:24:11.434Z",
       "autores": "2026-11-07T12:25:11.912Z"
     },
-    "ultima_requisicao": "2026-11-19T14:32:10.721Z",
+    "ultima_requisicao": "2026-11-21T13:44:09.262Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

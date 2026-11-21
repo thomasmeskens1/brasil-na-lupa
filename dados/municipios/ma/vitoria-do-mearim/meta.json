@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-19T23:57:08.219Z",
-  "ultima_execucao": "2026-11-19T23:56:52.669Z",
+  "atualizado_em": "2026-11-21T13:53:28.523Z",
+  "ultima_execucao": "2026-11-21T13:33:59.931Z",
   "uf": "MA",
   "casa": "cm-vitoria-do-mearim",
   "orgao": "Câmara Municipal de Vitória do Mearim",
   "host": "sapl.vitoriadomearim.ma.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-19"
+    "fim": "2026-11-21"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Vitória do Mearim (API REST pública)",
       "url": "https://sapl.vitoriadomearim.ma.leg.br/api/",
       "orgao": "Câmara Municipal de Vitória do Mearim",
-      "acessado_em": "2026-11-19"
+      "acessado_em": "2026-11-21"
     }
   ],
   "robots": {
-    "sapl.vitoriadomearim.ma.leg.br": null
+    "sapl.vitoriadomearim.ma.leg.br": {
+      "lido_em": "2026-11-21T13:33:59.931Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,10 +81,10 @@
   "contagens": {
     "parlamentares": 13,
     "parlamentares_em_exercicio": 13,
-    "proposicoes": 425,
+    "proposicoes": 434,
     "normas": 204,
-    "sessoes": 124,
-    "itens_pauta": 585,
+    "sessoes": 125,
+    "itens_pauta": 588,
     "votacoes": 388,
     "votacoes_por_situacao_dos_votos": {
       "inexistentes-na-fonte": 91,
@@ -118,15 +125,15 @@
       "ordemdia": {
         "faixas": [
           {
-            "hi": 486,
+            "hi": 489,
             "lo": 63,
-            "n": 298,
+            "n": 301,
             "lo_data": "2023-09-29"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 345
+        "total_fonte": 348
       },
       "expedientemateria": {
         "faixas": [
@@ -144,28 +151,28 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 136,
+            "hi": 137,
             "lo": 1,
-            "n": 124,
+            "n": 125,
             "lo_data": "2023-03-03"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 124
+        "total_fonte": 125
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 547,
+            "hi": 548,
             "lo": 147,
-            "n": 393,
+            "n": 394,
             "lo_data": "2023-09-28"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 519
+        "total_fonte": 520
       },
       "normajuridica": {
         "faixas": [
@@ -196,7 +203,7 @@
     },
     "tabelas_em": {
       "legislaturas": "2026-11-17T01:28:22.779Z",
-      "tipos_resultado": "2026-11-07T21:18:28.299Z",
+      "tipos_resultado": "2026-11-21T13:53:28.523Z",
       "tipos_materia": "2026-11-07T21:19:30.709Z",
       "mandatos": "2026-11-07T21:20:32.182Z",
       "tipos_norma": "2026-11-07T21:29:40.108Z",
@@ -207,7 +214,7 @@
       "status_tramitacao": "2026-11-07T21:34:44.330Z",
       "autores": "2026-11-07T21:35:46.211Z"
     },
-    "ultima_requisicao": "2026-11-19T23:56:52.669Z",
+    "ultima_requisicao": "2026-11-21T13:53:20.821Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

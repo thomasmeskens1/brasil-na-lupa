@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-20T00:55:48.763Z",
-  "ultima_execucao": "2026-11-19T23:56:51.302Z",
+  "atualizado_em": "2026-11-21T14:33:04.318Z",
+  "ultima_execucao": "2026-11-21T13:33:58.148Z",
   "uf": "SP",
   "casa": "cm-sao-joao-da-boa-vista",
   "orgao": "Câmara Municipal de São João da Boa Vista",
   "host": "sapl.saojoaodaboavista.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-19"
+    "fim": "2026-11-21"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,12 +15,12 @@
       "titulo": "SAPL — Câmara Municipal de São João da Boa Vista (API REST pública)",
       "url": "https://sapl.saojoaodaboavista.sp.leg.br/api/",
       "orgao": "Câmara Municipal de São João da Boa Vista",
-      "acessado_em": "2026-11-19"
+      "acessado_em": "2026-11-21"
     }
   ],
   "robots": {
     "sapl.saojoaodaboavista.sp.leg.br": {
-      "lido_em": "2026-11-19T23:56:51.302Z",
+      "lido_em": "2026-11-21T13:33:58.148Z",
       "status": 200,
       "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
@@ -31,28 +31,24 @@
     }
   },
   "execucao": {
-    "requisicoes": 58,
-    "falhas": [
-      "fluxo-expedientemateria: HTTP 503 em /api/sessao/expedientemateria/?o=-id&page=34&page_size=83",
-      "/api/sessao/votoparlamentar/?o=-id&page=76&page_size=94: HTTP 503",
-      "/api/sessao/expedientemateria/?o=-id&page=34&page_size=83: HTTP 503"
-    ]
+    "requisicoes": 59,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
-      "desde": "2025-05-27",
+      "desde": "2025-04-02",
       "concluida": false
     },
     "votoparlamentar": {
-      "desde": "2025-05-29",
+      "desde": "2025-04-08",
       "concluida": false
     },
     "ordemdia": {
-      "desde": "2025-06-02",
+      "desde": "2025-02-24",
       "concluida": false
     },
     "expedientemateria": {
-      "desde": "2025-06-09",
+      "desde": "2025-04-07",
       "concluida": false
     },
     "sessaoplenaria": {
@@ -60,7 +56,7 @@
       "concluida": false
     },
     "materialegislativa": {
-      "desde": "2025-06-02",
+      "desde": "2025-04-03",
       "concluida": false
     },
     "normajuridica": {
@@ -85,17 +81,17 @@
   "contagens": {
     "parlamentares": 19,
     "parlamentares_em_exercicio": 14,
-    "proposicoes": 2850,
+    "proposicoes": 3663,
     "normas": 166,
     "sessoes": 103,
-    "itens_pauta": 3326,
-    "votacoes": 2047,
+    "itens_pauta": 4126,
+    "votacoes": 2400,
     "votacoes_por_situacao_dos_votos": {
-      "inexistentes-na-fonte": 1407,
-      "coletados": 572,
-      "em-coleta": 68
+      "coletados": 674,
+      "inexistentes-na-fonte": 1688,
+      "em-coleta": 38
     },
-    "votos_individuais": 8550
+    "votos_individuais": 10058
   },
   "cursor": {
     "fluxos": {
@@ -103,9 +99,9 @@
         "faixas": [
           {
             "hi": 22949,
-            "lo": 20856,
-            "n": 2047,
-            "lo_data": "2025-05-27"
+            "lo": 20499,
+            "n": 2400,
+            "lo_data": "2025-04-02"
           }
         ],
         "concluido": false,
@@ -116,9 +112,9 @@
         "faixas": [
           {
             "hi": 27953,
-            "lo": 18926,
-            "n": 8550,
-            "lo_data": "2025-05-29"
+            "lo": 17313,
+            "n": 10058,
+            "lo_data": "2025-04-08"
           }
         ],
         "concluido": false,
@@ -129,9 +125,9 @@
         "faixas": [
           {
             "hi": 4304,
-            "lo": 3707,
-            "n": 582,
-            "lo_data": "2025-06-02"
+            "lo": 3529,
+            "n": 760,
+            "lo_data": "2025-02-24"
           }
         ],
         "concluido": false,
@@ -142,9 +138,9 @@
         "faixas": [
           {
             "hi": 20932,
-            "lo": 18156,
-            "n": 2744,
-            "lo_data": "2025-06-09"
+            "lo": 17532,
+            "n": 3366,
+            "lo_data": "2025-04-07"
           }
         ],
         "concluido": false,
@@ -168,9 +164,9 @@
         "faixas": [
           {
             "hi": 29649,
-            "lo": 26768,
-            "n": 2850,
-            "lo_data": "2025-06-02"
+            "lo": 25953,
+            "n": 3663,
+            "lo_data": "2025-04-03"
           }
         ],
         "concluido": false,
@@ -209,7 +205,7 @@
       "tipos_resultado": "2026-11-17T01:29:16.827Z",
       "tipos_materia": "2026-11-18T14:30:29.638Z",
       "mandatos": "2026-11-20T00:16:14.017Z",
-      "tipos_norma": "2026-11-07T12:19:12.416Z",
+      "tipos_norma": "2026-11-21T13:53:22.387Z",
       "tipos_sessao": "2026-11-07T12:20:11.860Z",
       "partidos": "2026-11-07T12:21:12.676Z",
       "filiacoes": "2026-11-07T12:22:14.360Z",
@@ -217,7 +213,7 @@
       "status_tramitacao": "2026-11-07T12:24:16.399Z",
       "autores": "2026-11-07T12:25:17.177Z"
     },
-    "ultima_requisicao": "2026-11-20T00:55:48.600Z",
+    "ultima_requisicao": "2026-11-21T14:33:00.097Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

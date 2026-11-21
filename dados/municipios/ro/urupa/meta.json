@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-19T23:57:03.709Z",
-  "ultima_execucao": "2026-11-19T23:56:52.357Z",
+  "atualizado_em": "2026-11-21T13:53:26.416Z",
+  "ultima_execucao": "2026-11-21T13:33:59.534Z",
   "uf": "RO",
   "casa": "cm-urupa",
   "orgao": "Câmara Municipal de Urupá",
   "host": "sapl.urupa.ro.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-19"
+    "fim": "2026-11-21"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Urupá (API REST pública)",
       "url": "https://sapl.urupa.ro.leg.br/api/",
       "orgao": "Câmara Municipal de Urupá",
-      "acessado_em": "2026-11-19"
+      "acessado_em": "2026-11-21"
     }
   ],
   "robots": {
-    "sapl.urupa.ro.leg.br": null
+    "sapl.urupa.ro.leg.br": {
+      "lido_em": "2026-11-21T13:33:59.534Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -75,14 +82,14 @@
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
     "proposicoes": 436,
-    "normas": 297,
+    "normas": 298,
     "sessoes": 200,
-    "itens_pauta": 398,
+    "itens_pauta": 406,
     "votacoes": 165,
     "votacoes_por_situacao_dos_votos": {
-      "inexistentes-na-fonte": 133,
-      "em-coleta": 28,
-      "coletados": 4
+      "inexistentes-na-fonte": 141,
+      "coletados": 4,
+      "em-coleta": 20
     },
     "votos_individuais": 36
   },
@@ -169,15 +176,15 @@
       "normajuridica": {
         "faixas": [
           {
-            "hi": 972,
+            "hi": 973,
             "lo": 671,
-            "n": 295,
+            "n": 296,
             "lo_data": "2022-08-02"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 944
+        "total_fonte": 945
       },
       "tramitacao": {
         "faixas": [
@@ -197,7 +204,7 @@
       "legislaturas": "2026-11-15T13:09:03.997Z",
       "tipos_resultado": "2026-11-17T01:28:20.829Z",
       "tipos_materia": "2026-11-18T14:30:34.776Z",
-      "mandatos": "2026-11-07T21:20:29.161Z",
+      "mandatos": "2026-11-21T13:53:26.416Z",
       "tipos_norma": "2026-11-07T21:29:38.315Z",
       "tipos_sessao": "2026-11-07T21:30:39.098Z",
       "partidos": "2026-11-07T21:31:40.386Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-07T21:34:43.739Z",
       "autores": "2026-11-07T21:35:44.218Z"
     },
-    "ultima_requisicao": "2026-11-19T23:56:52.357Z",
+    "ultima_requisicao": "2026-11-21T13:53:20.817Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-19T23:57:04.677Z",
-  "ultima_execucao": "2026-11-19T23:56:52.248Z",
+  "atualizado_em": "2026-11-21T13:53:26.221Z",
+  "ultima_execucao": "2026-11-21T13:33:59.399Z",
   "uf": "PR",
   "casa": "cm-antonio-olinto",
   "orgao": "Câmara Municipal de Antônio Olinto",
   "host": "sapl.antonioolinto.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-19"
+    "fim": "2026-11-21"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Antônio Olinto (API REST pública)",
       "url": "https://sapl.antonioolinto.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Antônio Olinto",
-      "acessado_em": "2026-11-19"
+      "acessado_em": "2026-11-21"
     }
   ],
   "robots": {
-    "sapl.antonioolinto.pr.leg.br": null
+    "sapl.antonioolinto.pr.leg.br": {
+      "lido_em": "2026-11-21T13:33:59.399Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 10,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 550,
+    "proposicoes": 558,
     "normas": 199,
     "sessoes": 270,
     "itens_pauta": 394,
@@ -197,7 +204,7 @@
       "legislaturas": "2026-11-15T13:09:04.675Z",
       "tipos_resultado": "2026-11-17T01:28:22.880Z",
       "tipos_materia": "2026-11-18T14:30:33.262Z",
-      "mandatos": "2026-11-05T16:58:51.168Z",
+      "mandatos": "2026-11-21T13:53:26.221Z",
       "tipos_norma": "2026-11-05T17:08:03.334Z",
       "tipos_sessao": "2026-11-05T17:09:01.796Z",
       "partidos": "2026-11-05T17:10:02.839Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-05T17:13:05.689Z",
       "autores": "2026-11-05T17:15:07.909Z"
     },
-    "ultima_requisicao": "2026-11-19T23:56:52.248Z",
+    "ultima_requisicao": "2026-11-21T13:53:20.815Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
