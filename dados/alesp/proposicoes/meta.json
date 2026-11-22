@@ -1,55 +1,33 @@
 {
-  "atualizado_em": "2026-11-21T18:41:13.677Z",
-  "ultima_execucao": "2026-11-21T18:41:13.677Z",
+  "atualizado_em": "2026-11-22T19:01:48.893Z",
+  "ultima_execucao": "2026-11-22T19:01:48.893Z",
   "periodo": {
-    "inicio": "2026-11-14",
-    "fim": "2026-11-21"
+    "inicio": "2026-11-15",
+    "fim": "2026-11-22"
   },
   "modo": "incremental",
   "contagens": {
-    "por_ano": {
-      "2025": {
-        "total": 1547,
-        "por_sigla": {
-          "PDL": 49,
-          "PEC": 5,
-          "PL": 1406,
-          "PLC": 57,
-          "PR": 30
-        },
-        "situacao_atualizada_nesta_execucao": 91
-      },
-      "2026": {
-        "total": 991,
-        "por_sigla": {
-          "PDL": 24,
-          "PEC": 3,
-          "PL": 935,
-          "PLC": 16,
-          "PR": 13
-        },
-        "situacao_atualizada_nesta_execucao": 140
-      }
-    },
-    "processos_com_tramitacao_no_periodo": 308
+    "por_ano": {},
+    "processos_com_tramitacao_no_periodo": 0
   },
   "fontes": [
     {
       "titulo": "Proposições — Portal Legislativo da ALESP",
       "url": "https://legis-api-portal-prd.al.sp.gov.br/processo",
       "orgao": "Assembleia Legislativa do Estado de São Paulo (ALESP)",
-      "acessado_em": "2026-11-21"
+      "acessado_em": "2026-11-22"
     },
     {
       "titulo": "Tramitações publicadas por dia",
       "url": "https://legis-api-portal-prd.al.sp.gov.br/notificacao/tramitacoes/{data}",
       "orgao": "Assembleia Legislativa do Estado de São Paulo (ALESP)",
-      "acessado_em": "2026-11-21"
+      "acessado_em": "2026-11-22"
     }
   ],
   "observacoes": [
     "Tipos: PL (Projeto de Lei), PLC (Projeto de Lei Complementar), PEC (Proposta de Emenda à Constituição), PDL (Projeto de Decreto Legislativo), PR (Projeto de Resolução). Ano = ano de apresentação.",
     "Situação: etapa e regime informados pela ALESP e a última tramitação (texto oficial). O campo situacao_coletada_em indica quando a situação foi consultada.",
-    "O arquivo legado proposituras.xml da ALESP parou em 2026-07-28; por isso a fonte é a API do portal."
+    "O arquivo legado proposituras.xml da ALESP parou em 2026-07-28; por isso a fonte é a API do portal.",
+    "Falhas nesta execução: parlamentares: HTTP 500 em https://legis-api-portal-prd.al.sp.gov.br/parlamentar-portal/todos | plenário 2025: HTTP 500 em https://legis-api-portal-prd.al.sp.gov.br/votacao/2025 | plenário 2026: HTTP 500 em https://legis-api-portal-prd.al.sp.gov.br/votacao/2026 | tramitações: HTTP 500 em https://legis-api-portal-prd.al.sp.gov.br/notificacao/tramitacoes/2026-11-16 | proposições 2025: HTTP 500 em https://legis-api-portal-prd.al.sp.gov.br/processo?page=0&size=1000&ano=2025&listaIdTipoProcesso=1&listaIdTipoProcesso=2&listaIdTipoProcesso=3&listaIdTipoProcesso=4&listaIdTipoProcesso=5 | proposições 2026: HTTP 500 em https://legis-api-portal-prd.al.sp.gov.br/processo?page=0&size=1000&ano=2026&listaIdTipoProcesso=1&listaIdTipoProcesso=2&listaIdTipoProcesso=3&listaIdTipoProcesso=4&listaIdTipoProcesso=5"
   ]
 }

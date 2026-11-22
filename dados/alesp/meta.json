@@ -1,9 +1,9 @@
 {
-  "atualizado_em": "2026-11-21T18:41:13.677Z",
-  "ultima_execucao": "2026-11-21T18:41:13.677Z",
+  "atualizado_em": "2026-11-22T19:01:48.893Z",
+  "ultima_execucao": "2026-11-22T19:01:48.893Z",
   "periodo": {
-    "inicio": "2026-11-14",
-    "fim": "2026-11-21"
+    "inicio": "2026-11-15",
+    "fim": "2026-11-22"
   },
   "modo": "incremental",
   "contagens": {
@@ -14,12 +14,13 @@
       "titulo": "Portal Legislativo da ALESP — API (OpenAPI pública)",
       "url": "https://legis-api-portal-prd.al.sp.gov.br/v3/api-docs",
       "orgao": "Assembleia Legislativa do Estado de São Paulo (ALESP)",
-      "acessado_em": "2026-11-21"
+      "acessado_em": "2026-11-22"
     }
   ],
   "observacoes": [
     "Deputados em exercício segundo o campo isEmExercicio da ALESP. Sem CPF, telefone, sala, aniversário ou biografia.",
     "Foto: arquivo do repositório oficial da ALESP, publicado só quando o endereço responde com imagem; senão null.",
-    "nome_civil: não informado pela fonte (null)."
+    "nome_civil: não informado pela fonte (null).",
+    "Falhas nesta execução: parlamentares: HTTP 500 em https://legis-api-portal-prd.al.sp.gov.br/parlamentar-portal/todos | plenário 2025: HTTP 500 em https://legis-api-portal-prd.al.sp.gov.br/votacao/2025 | plenário 2026: HTTP 500 em https://legis-api-portal-prd.al.sp.gov.br/votacao/2026 | tramitações: HTTP 500 em https://legis-api-portal-prd.al.sp.gov.br/notificacao/tramitacoes/2026-11-16 | proposições 2025: HTTP 500 em https://legis-api-portal-prd.al.sp.gov.br/processo?page=0&size=1000&ano=2025&listaIdTipoProcesso=1&listaIdTipoProcesso=2&listaIdTipoProcesso=3&listaIdTipoProcesso=4&listaIdTipoProcesso=5 | proposições 2026: HTTP 500 em https://legis-api-portal-prd.al.sp.gov.br/processo?page=0&size=1000&ano=2026&listaIdTipoProcesso=1&listaIdTipoProcesso=2&listaIdTipoProcesso=3&listaIdTipoProcesso=4&listaIdTipoProcesso=5"
   ]
 }
