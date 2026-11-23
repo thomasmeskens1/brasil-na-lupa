@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-21T13:45:20.748Z",
-  "ultima_execucao": "2026-11-21T13:33:59.438Z",
+  "atualizado_em": "2026-11-23T16:19:50.405Z",
+  "ultima_execucao": "2026-11-23T16:07:26.221Z",
   "uf": "BA",
   "casa": "cm-apuarema",
   "orgao": "Câmara Municipal de Apuarema",
   "host": "sapl.apuarema.ba.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-21"
+    "fim": "2026-11-23"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,12 +15,12 @@
       "titulo": "SAPL — Câmara Municipal de Apuarema (API REST pública)",
       "url": "https://sapl.apuarema.ba.leg.br/api/",
       "orgao": "Câmara Municipal de Apuarema",
-      "acessado_em": "2026-11-21"
+      "acessado_em": "2026-11-23"
     }
   ],
   "robots": {
     "sapl.apuarema.ba.leg.br": {
-      "lido_em": "2026-11-21T13:33:59.438Z",
+      "lido_em": "2026-11-23T16:07:26.221Z",
       "status": 200,
       "crawl_delay_s": 60,
       "intervalo_usado_s": 61,
@@ -31,8 +31,10 @@
     }
   },
   "execucao": {
-    "requisicoes": 12,
-    "falhas": []
+    "requisicoes": 13,
+    "falhas": [
+      "/api/sessao/votoparlamentar/?o=-id&page=1&page_size=1000: fetch failed"
+    ]
   },
   "cobertura": {
     "registrovotacao": {
@@ -203,7 +205,7 @@
       "tipos_resultado": "2026-11-17T01:20:14.517Z",
       "tipos_materia": "2026-11-18T14:22:27.285Z",
       "mandatos": "2026-11-21T13:45:20.747Z",
-      "tipos_norma": "2026-11-05T17:08:02.512Z",
+      "tipos_norma": "2026-11-23T16:19:50.405Z",
       "tipos_sessao": "2026-11-05T17:09:01.404Z",
       "partidos": "2026-11-05T17:10:02.448Z",
       "filiacoes": "2026-11-05T17:11:03.442Z",
@@ -211,7 +213,7 @@
       "status_tramitacao": "2026-11-05T17:13:05.147Z",
       "autores": "2026-11-05T17:14:05.865Z"
     },
-    "ultima_requisicao": "2026-11-21T13:45:12.377Z",
+    "ultima_requisicao": "2026-11-23T16:19:44.874Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
