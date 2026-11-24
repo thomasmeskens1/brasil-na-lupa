@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-21T22:30:16.971Z",
-  "ultima_execucao": "2026-11-21T22:29:54.569Z",
+  "atualizado_em": "2026-11-24T03:51:42.231Z",
+  "ultima_execucao": "2026-11-24T03:32:17.199Z",
   "uf": "PR",
   "casa": "cm-california",
   "orgao": "Câmara Municipal de Califórnia",
   "host": "sapl.california.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-21"
+    "fim": "2026-11-24"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Califórnia (API REST pública)",
       "url": "https://sapl.california.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Califórnia",
-      "acessado_em": "2026-11-21"
+      "acessado_em": "2026-11-24"
     }
   ],
   "robots": {
-    "sapl.california.pr.leg.br": null
+    "sapl.california.pr.leg.br": {
+      "lido_em": "2026-11-24T03:32:17.199Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,46 +81,46 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 614,
+    "proposicoes": 622,
     "normas": 333,
     "sessoes": 299,
     "itens_pauta": 793,
-    "votacoes": 496,
+    "votacoes": 500,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 21,
-      "inexistentes-na-fonte": 304,
+      "inexistentes-na-fonte": 305,
       "nao-se-aplica": 3,
-      "coletados": 168
+      "coletados": 171
     },
-    "votos_individuais": 1367
+    "votos_individuais": 1394
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 1711,
+            "hi": 1715,
             "lo": 1204,
-            "n": 496,
+            "n": 500,
             "lo_data": "2024-02-19"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1647
+        "total_fonte": 1651
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 5323,
+            "hi": 5350,
             "lo": 3939,
-            "n": 1367,
+            "n": 1394,
             "lo_data": "2024-11-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 5082
+        "total_fonte": 5109
       },
       "ordemdia": {
         "faixas": [
@@ -198,7 +205,7 @@
       "legislaturas": "2026-11-17T14:54:23.803Z",
       "tipos_resultado": "2026-11-18T23:59:25.799Z",
       "tipos_materia": "2026-11-20T14:27:50.020Z",
-      "mandatos": "2026-11-06T10:41:18.988Z",
+      "mandatos": "2026-11-24T03:51:42.231Z",
       "tipos_norma": "2026-11-06T10:50:27.365Z",
       "tipos_sessao": "2026-11-06T10:51:28.180Z",
       "partidos": "2026-11-06T10:52:30.136Z",
@@ -207,7 +214,7 @@
       "status_tramitacao": "2026-11-06T10:56:33.912Z",
       "autores": "2026-11-06T10:57:34.086Z"
     },
-    "ultima_requisicao": "2026-11-21T22:29:54.569Z",
+    "ultima_requisicao": "2026-11-24T03:51:39.076Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

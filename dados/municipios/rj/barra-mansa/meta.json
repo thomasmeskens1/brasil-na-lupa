@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-21T13:34:20.139Z",
-  "ultima_execucao": "2026-11-21T13:34:01.116Z",
+  "atualizado_em": "2026-11-24T04:31:19.793Z",
+  "ultima_execucao": "2026-11-24T03:32:16.683Z",
   "uf": "RJ",
   "casa": "cm-barra-mansa",
   "orgao": "Câmara Municipal de Barra Mansa",
   "host": "sapl.barramansa.rj.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-21"
+    "fim": "2026-11-24"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,29 +15,36 @@
       "titulo": "SAPL — Câmara Municipal de Barra Mansa (API REST pública)",
       "url": "https://sapl.barramansa.rj.leg.br/api/",
       "orgao": "Câmara Municipal de Barra Mansa",
-      "acessado_em": "2026-11-21"
+      "acessado_em": "2026-11-24"
     }
   ],
   "robots": {
-    "sapl.barramansa.rj.leg.br": null
+    "sapl.barramansa.rj.leg.br": {
+      "lido_em": "2026-11-24T03:32:16.683Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 59,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
-      "desde": "2026-04-07",
+      "desde": "2025-09-24",
       "concluida": false
     },
     "votoparlamentar": {
-      "desde": "2026-04-14",
+      "desde": "2025-09-10",
       "concluida": false
     },
     "ordemdia": {
-      "desde": "2026-04-07",
+      "desde": "2025-09-18",
       "concluida": false
     },
     "expedientemateria": {
@@ -49,11 +56,11 @@
       "concluida": false
     },
     "materialegislativa": {
-      "desde": "2026-04-16",
+      "desde": "2025-10-07",
       "concluida": false
     },
     "normajuridica": {
-      "desde": "2025-12-05",
+      "desde": "2025-06-13",
       "concluida": false
     },
     "tramitacao": {
@@ -74,58 +81,58 @@
   "contagens": {
     "parlamentares": 19,
     "parlamentares_em_exercicio": 19,
-    "proposicoes": 507,
-    "normas": 193,
-    "sessoes": 100,
-    "itens_pauta": 670,
-    "votacoes": 480,
+    "proposicoes": 1031,
+    "normas": 390,
+    "sessoes": 104,
+    "itens_pauta": 1322,
+    "votacoes": 943,
     "votacoes_por_situacao_dos_votos": {
-      "em-coleta": 16,
-      "inexistentes-na-fonte": 370,
-      "coletados": 94
+      "coletados": 194,
+      "inexistentes-na-fonte": 744,
+      "em-coleta": 5
     },
-    "votos_individuais": 1520
+    "votos_individuais": 3189
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 5332,
-            "lo": 4805,
-            "n": 480,
-            "lo_data": "2026-04-07"
+            "hi": 5344,
+            "lo": 4335,
+            "n": 940,
+            "lo_data": "2025-09-24"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 5020
+        "total_fonte": 5031
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 14380,
-            "lo": 12212,
-            "n": 1520,
-            "lo_data": "2026-04-14"
+            "hi": 14512,
+            "lo": 10597,
+            "n": 3201,
+            "lo_data": "2025-09-10"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 11372
+        "total_fonte": 11485
       },
       "ordemdia": {
         "faixas": [
           {
-            "hi": 8050,
-            "lo": 7387,
-            "n": 570,
-            "lo_data": "2026-04-07"
+            "hi": 8098,
+            "lo": 6668,
+            "n": 1222,
+            "lo_data": "2025-09-18"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 6885
+        "total_fonte": 6931
       },
       "expedientemateria": {
         "faixas": [
@@ -143,36 +150,36 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 600,
+            "hi": 604,
             "lo": 489,
-            "n": 100,
+            "n": 104,
             "lo_data": "2025-10-08"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 528
+        "total_fonte": 532
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 11542,
-            "lo": 11043,
-            "n": 480,
-            "lo_data": "2026-04-16"
+            "hi": 11612,
+            "lo": 10580,
+            "n": 990,
+            "lo_data": "2025-10-07"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 11234
+        "total_fonte": 11304
       },
       "normajuridica": {
         "faixas": [
           {
             "hi": 5563,
-            "lo": 5461,
-            "n": 100,
-            "lo_data": "2025-12-05"
+            "lo": 5362,
+            "n": 198,
+            "lo_data": "2025-06-13"
           }
         ],
         "concluido": false,
@@ -182,19 +189,19 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 40581,
-            "lo": 40482,
-            "n": 100,
+            "hi": 40781,
+            "lo": 40480,
+            "n": 302,
             "lo_data": "2026-10-27"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 38819
+        "total_fonte": 39017
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-05T23:14:47.851Z",
+      "legislaturas": "2026-11-24T03:54:42.920Z",
       "tipos_resultado": "2026-11-05T23:15:48.687Z",
       "tipos_materia": "2026-11-05T23:16:51.737Z",
       "mandatos": "2026-11-05T23:17:51.108Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-05T23:32:04.601Z",
       "autores": "2026-11-05T23:33:08.612Z"
     },
-    "ultima_requisicao": "2026-11-21T13:34:01.116Z",
+    "ultima_requisicao": "2026-11-24T04:31:18.323Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

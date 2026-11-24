@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-21T22:30:16.336Z",
-  "ultima_execucao": "2026-11-21T22:29:54.656Z",
+  "atualizado_em": "2026-11-24T03:51:41.604Z",
+  "ultima_execucao": "2026-11-24T03:32:17.302Z",
   "uf": "PR",
   "casa": "cm-cambe",
   "orgao": "Câmara Municipal de Cambé",
   "host": "sapl.cambe.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-21"
+    "fim": "2026-11-24"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Cambé (API REST pública)",
       "url": "https://sapl.cambe.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Cambé",
-      "acessado_em": "2026-11-21"
+      "acessado_em": "2026-11-24"
     }
   ],
   "robots": {
-    "sapl.cambe.pr.leg.br": null
+    "sapl.cambe.pr.leg.br": {
+      "lido_em": "2026-11-24T03:32:17.302Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,59 +81,59 @@
   "contagens": {
     "parlamentares": 10,
     "parlamentares_em_exercicio": 10,
-    "proposicoes": 1223,
+    "proposicoes": 1239,
     "normas": 501,
-    "sessoes": 200,
-    "itens_pauta": 489,
-    "votacoes": 388,
+    "sessoes": 201,
+    "itens_pauta": 496,
+    "votacoes": 397,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 54,
       "inexistentes-na-fonte": 254,
       "nao-se-aplica": 3,
-      "coletados": 77
+      "coletados": 86
     },
-    "votos_individuais": 726
+    "votos_individuais": 798
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 632,
+            "hi": 641,
             "lo": 215,
-            "n": 388,
+            "n": 397,
             "lo_data": "2023-10-09"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 584
+        "total_fonte": 593
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 743,
+            "hi": 815,
             "lo": 18,
-            "n": 726,
+            "n": 798,
             "lo_data": "2026-04-16"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 726
+        "total_fonte": 798
       },
       "ordemdia": {
         "faixas": [
           {
-            "hi": 2870,
+            "hi": 2877,
             "lo": 2461,
-            "n": 394,
+            "n": 401,
             "lo_data": "2023-12-18"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2769
+        "total_fonte": 2776
       },
       "expedientemateria": {
         "faixas": [
@@ -144,28 +151,28 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 1590,
+            "hi": 1591,
             "lo": 1386,
-            "n": 200,
+            "n": 201,
             "lo_data": "2022-07-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 741
+        "total_fonte": 742
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 9388,
+            "hi": 9396,
             "lo": 8173,
-            "n": 1191,
+            "n": 1199,
             "lo_data": "2024-05-13"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 9272
+        "total_fonte": 9280
       },
       "normajuridica": {
         "faixas": [
@@ -183,15 +190,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 6873,
+            "hi": 6892,
             "lo": 5974,
-            "n": 846,
+            "n": 864,
             "lo_data": "2024-04-30"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 6735
+        "total_fonte": 6753
       }
     },
     "tabelas_em": {
@@ -199,7 +206,7 @@
       "tipos_resultado": "2026-11-17T14:54:26.668Z",
       "tipos_materia": "2026-11-18T23:59:24.426Z",
       "mandatos": "2026-11-20T14:27:48.233Z",
-      "tipos_norma": "2026-11-06T10:50:28.139Z",
+      "tipos_norma": "2026-11-24T03:51:41.604Z",
       "tipos_sessao": "2026-11-06T10:51:28.573Z",
       "partidos": "2026-11-06T10:52:31.335Z",
       "filiacoes": "2026-11-06T10:53:31.212Z",
@@ -207,7 +214,7 @@
       "status_tramitacao": "2026-11-06T10:56:36.203Z",
       "autores": "2026-11-06T10:57:35.658Z"
     },
-    "ultima_requisicao": "2026-11-21T22:29:54.656Z",
+    "ultima_requisicao": "2026-11-24T03:51:39.075Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

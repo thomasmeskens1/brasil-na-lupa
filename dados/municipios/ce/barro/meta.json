@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-21T13:34:11.717Z",
-  "ultima_execucao": "2026-11-21T13:34:01.156Z",
+  "atualizado_em": "2026-11-24T03:50:38.792Z",
+  "ultima_execucao": "2026-11-24T03:32:16.710Z",
   "uf": "CE",
   "casa": "cm-barro",
   "orgao": "Câmara Municipal de Barro",
   "host": "sapl.barro.ce.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-21"
+    "fim": "2026-11-24"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Barro (API REST pública)",
       "url": "https://sapl.barro.ce.leg.br/api/",
       "orgao": "Câmara Municipal de Barro",
-      "acessado_em": "2026-11-21"
+      "acessado_em": "2026-11-24"
     }
   ],
   "robots": {
-    "sapl.barro.ce.leg.br": null
+    "sapl.barro.ce.leg.br": {
+      "lido_em": "2026-11-24T03:32:16.710Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 19,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,8 +81,8 @@
   "contagens": {
     "parlamentares": 11,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 294,
-    "normas": 198,
+    "proposicoes": 302,
+    "normas": 257,
     "sessoes": 115,
     "itens_pauta": 405,
     "votacoes": 226,
@@ -155,28 +162,28 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 336,
+            "hi": 337,
             "lo": 40,
-            "n": 294,
+            "n": 295,
             "lo_data": "2023-09-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 307
+        "total_fonte": 308
       },
       "normajuridica": {
         "faixas": [
           {
-            "hi": 754,
+            "hi": 813,
             "lo": 655,
-            "n": 100,
+            "n": 159,
             "lo_data": "1983-08-05"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 736
+        "total_fonte": 795
       },
       "tramitacao": {
         "faixas": [
@@ -193,7 +200,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-05T23:14:48.255Z",
+      "legislaturas": "2026-11-24T03:50:38.792Z",
       "tipos_resultado": "2026-11-05T23:15:49.290Z",
       "tipos_materia": "2026-11-05T23:16:52.638Z",
       "mandatos": "2026-11-05T23:17:51.304Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-05T23:32:05.574Z",
       "autores": "2026-11-05T23:33:09.412Z"
     },
-    "ultima_requisicao": "2026-11-21T13:34:01.156Z",
+    "ultima_requisicao": "2026-11-24T03:50:37.202Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

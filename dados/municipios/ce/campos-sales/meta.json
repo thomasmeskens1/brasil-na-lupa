@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-21T22:30:13.784Z",
-  "ultima_execucao": "2026-11-21T22:29:55.049Z",
+  "atualizado_em": "2026-11-24T03:40:37.937Z",
+  "ultima_execucao": "2026-11-24T03:32:17.771Z",
   "uf": "CE",
   "casa": "cm-campos-sales",
   "orgao": "Câmara Municipal de Campos Sales",
   "host": "sapl.campossales.ce.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-21"
+    "fim": "2026-11-24"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Campos Sales (API REST pública)",
       "url": "https://sapl.campossales.ce.leg.br/api/",
       "orgao": "Câmara Municipal de Campos Sales",
-      "acessado_em": "2026-11-21"
+      "acessado_em": "2026-11-24"
     }
   ],
   "robots": {
-    "sapl.campossales.ce.leg.br": null
+    "sapl.campossales.ce.leg.br": {
+      "lido_em": "2026-11-24T03:32:17.771Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 9,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -184,14 +191,14 @@
       "tipos_materia": "2026-11-17T14:51:25.876Z",
       "mandatos": "2026-11-18T23:56:25.385Z",
       "tipos_norma": "2026-11-20T14:17:41.444Z",
-      "tipos_sessao": "2026-11-06T10:51:31.177Z",
+      "tipos_sessao": "2026-11-24T03:40:37.936Z",
       "partidos": "2026-11-06T10:52:34.135Z",
       "filiacoes": "2026-11-06T10:53:33.947Z",
       "parlamentares": "2026-11-06T10:54:34.542Z",
       "status_tramitacao": "2026-11-06T10:55:36.534Z",
       "autores": "2026-11-06T10:56:38.464Z"
     },
-    "ultima_requisicao": "2026-11-21T22:29:55.049Z",
+    "ultima_requisicao": "2026-11-24T03:40:29.736Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

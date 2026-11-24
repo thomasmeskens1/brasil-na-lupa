@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-21T22:30:16.450Z",
-  "ultima_execucao": "2026-11-21T22:29:54.638Z",
+  "atualizado_em": "2026-11-24T03:43:33.983Z",
+  "ultima_execucao": "2026-11-24T03:32:17.282Z",
   "uf": "PR",
   "casa": "cm-cambara",
   "orgao": "Câmara Municipal de Cambará",
   "host": "sapl.cambara.pr.leg.br",
   "periodo": {
     "inicio": null,
-    "fim": "2026-11-21"
+    "fim": "2026-11-24"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Cambará (API REST pública)",
       "url": "https://sapl.cambara.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Cambará",
-      "acessado_em": "2026-11-21"
+      "acessado_em": "2026-11-24"
     }
   ],
   "robots": {
-    "sapl.cambara.pr.leg.br": null
+    "sapl.cambara.pr.leg.br": {
+      "lido_em": "2026-11-24T03:32:17.282Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -195,14 +202,14 @@
       "tipos_resultado": "2026-11-17T14:54:24.765Z",
       "tipos_materia": "2026-11-18T23:59:25.005Z",
       "tipos_norma": "2026-11-20T14:27:49.005Z",
-      "tipos_sessao": "2026-11-06T10:50:27.135Z",
+      "tipos_sessao": "2026-11-24T03:43:33.982Z",
       "partidos": "2026-11-06T10:51:27.604Z",
       "filiacoes": "2026-11-06T10:52:29.590Z",
       "parlamentares": "2026-11-06T10:53:30.124Z",
       "status_tramitacao": "2026-11-06T10:54:30.688Z",
       "autores": "2026-11-06T10:55:31.212Z"
     },
-    "ultima_requisicao": "2026-11-21T22:29:54.638Z",
+    "ultima_requisicao": "2026-11-24T03:43:30.030Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

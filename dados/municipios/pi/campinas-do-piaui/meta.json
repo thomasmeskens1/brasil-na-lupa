@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-21T22:30:15.680Z",
-  "ultima_execucao": "2026-11-21T22:29:54.766Z",
+  "atualizado_em": "2026-11-24T03:43:37.395Z",
+  "ultima_execucao": "2026-11-24T03:32:17.432Z",
   "uf": "PI",
   "casa": "cm-campinas-do-piaui",
   "orgao": "Câmara Municipal de Campinas do Piauí",
   "host": "sapl.campinasdopiaui.pi.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-21"
+    "fim": "2026-11-24"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Campinas do Piauí (API REST pública)",
       "url": "https://sapl.campinasdopiaui.pi.leg.br/api/",
       "orgao": "Câmara Municipal de Campinas do Piauí",
-      "acessado_em": "2026-11-21"
+      "acessado_em": "2026-11-24"
     }
   ],
   "robots": {
-    "sapl.campinasdopiaui.pi.leg.br": null
+    "sapl.campinasdopiaui.pi.leg.br": {
+      "lido_em": "2026-11-24T03:32:17.432Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -197,14 +204,14 @@
       "tipos_materia": "2026-11-17T14:46:19.888Z",
       "mandatos": "2026-11-18T23:51:19.685Z",
       "tipos_norma": "2026-11-20T14:19:40.411Z",
-      "tipos_sessao": "2026-11-06T10:51:30.575Z",
+      "tipos_sessao": "2026-11-24T03:43:37.394Z",
       "partidos": "2026-11-06T10:52:32.541Z",
       "filiacoes": "2026-11-06T10:53:32.530Z",
       "parlamentares": "2026-11-06T10:54:33.542Z",
       "status_tramitacao": "2026-11-06T10:55:35.722Z",
       "autores": "2026-11-06T10:56:37.253Z"
     },
-    "ultima_requisicao": "2026-11-21T22:29:54.766Z",
+    "ultima_requisicao": "2026-11-24T03:43:30.036Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

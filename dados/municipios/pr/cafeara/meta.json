@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-21T22:30:17.239Z",
-  "ultima_execucao": "2026-11-21T22:29:54.520Z",
+  "atualizado_em": "2026-11-24T03:43:33.607Z",
+  "ultima_execucao": "2026-11-24T03:32:17.138Z",
   "uf": "PR",
   "casa": "cm-cafeara",
   "orgao": "Câmara Municipal de Cafeara",
   "host": "sapl.cafeara.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-21"
+    "fim": "2026-11-24"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Cafeara (API REST pública)",
       "url": "https://sapl.cafeara.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Cafeara",
-      "acessado_em": "2026-11-21"
+      "acessado_em": "2026-11-24"
     }
   ],
   "robots": {
-    "sapl.cafeara.pr.leg.br": null
+    "sapl.cafeara.pr.leg.br": {
+      "lido_em": "2026-11-24T03:32:17.138Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -196,7 +203,7 @@
       "legislaturas": "2026-11-17T14:46:15.764Z",
       "tipos_resultado": "2026-11-18T23:51:16.638Z",
       "tipos_materia": "2026-11-20T14:19:38.423Z",
-      "mandatos": "2026-11-06T10:41:17.592Z",
+      "mandatos": "2026-11-24T03:43:33.607Z",
       "tipos_norma": "2026-11-06T10:50:26.327Z",
       "tipos_sessao": "2026-11-06T10:51:27.175Z",
       "partidos": "2026-11-06T10:52:29.235Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T10:55:31.437Z",
       "autores": "2026-11-06T10:56:33.514Z"
     },
-    "ultima_requisicao": "2026-11-21T22:29:54.520Z",
+    "ultima_requisicao": "2026-11-24T03:43:30.029Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-21T22:30:15.692Z",
-  "ultima_execucao": "2026-11-21T22:29:54.763Z",
+  "atualizado_em": "2026-11-24T03:42:35.878Z",
+  "ultima_execucao": "2026-11-24T03:32:17.427Z",
   "uf": "MG",
   "casa": "cm-campina-verde",
   "orgao": "Câmara Municipal de Campina Verde",
   "host": "sapl.campinaverde.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-21"
+    "fim": "2026-11-24"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Campina Verde (API REST pública)",
       "url": "https://sapl.campinaverde.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Campina Verde",
-      "acessado_em": "2026-11-21"
+      "acessado_em": "2026-11-24"
     }
   ],
   "robots": {
-    "sapl.campinaverde.mg.leg.br": null
+    "sapl.campinaverde.mg.leg.br": {
+      "lido_em": "2026-11-24T03:32:17.427Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 11,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -191,14 +198,14 @@
       "tipos_materia": "2026-11-17T14:53:27.645Z",
       "mandatos": "2026-11-18T23:57:24.691Z",
       "tipos_norma": "2026-11-20T14:18:39.808Z",
-      "tipos_sessao": "2026-11-06T10:51:28.783Z",
+      "tipos_sessao": "2026-11-24T03:42:35.878Z",
       "partidos": "2026-11-06T10:52:30.933Z",
       "filiacoes": "2026-11-06T10:53:30.978Z",
       "parlamentares": "2026-11-06T10:54:31.887Z",
       "status_tramitacao": "2026-11-06T10:55:32.325Z",
       "autores": "2026-11-06T10:56:34.437Z"
     },
-    "ultima_requisicao": "2026-11-21T22:29:54.763Z",
+    "ultima_requisicao": "2026-11-24T03:42:29.035Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

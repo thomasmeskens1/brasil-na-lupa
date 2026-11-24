@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-21T22:30:13.628Z",
-  "ultima_execucao": "2026-11-21T22:29:55.072Z",
+  "atualizado_em": "2026-11-24T03:51:45.048Z",
+  "ultima_execucao": "2026-11-24T03:32:17.798Z",
   "uf": "PA",
   "casa": "cm-canaa-dos-carajas",
   "orgao": "Câmara Municipal de Canaã dos Carajás",
   "host": "sapl.canaadoscarajas.pa.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-21"
+    "fim": "2026-11-24"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Canaã dos Carajás (API REST pública)",
       "url": "https://sapl.canaadoscarajas.pa.leg.br/api/",
       "orgao": "Câmara Municipal de Canaã dos Carajás",
-      "acessado_em": "2026-11-21"
+      "acessado_em": "2026-11-24"
     }
   ],
   "robots": {
-    "sapl.canaadoscarajas.pa.leg.br": null
+    "sapl.canaadoscarajas.pa.leg.br": {
+      "lido_em": "2026-11-24T03:32:17.798Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 15,
     "parlamentares_em_exercicio": 15,
-    "proposicoes": 890,
+    "proposicoes": 900,
     "normas": 113,
     "sessoes": 201,
     "itens_pauta": 591,
@@ -156,15 +163,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 2651,
+            "hi": 2653,
             "lo": 1815,
-            "n": 832,
+            "n": 834,
             "lo_data": "2022-11-26"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2610
+        "total_fonte": 2612
       },
       "normajuridica": {
         "faixas": [
@@ -182,15 +189,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 8411,
+            "hi": 8413,
             "lo": 5880,
-            "n": 2460,
+            "n": 2462,
             "lo_data": "2024-10-29"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 8116
+        "total_fonte": 8118
       }
     },
     "tabelas_em": {
@@ -199,14 +206,14 @@
       "tipos_materia": "2026-11-17T14:54:28.491Z",
       "mandatos": "2026-11-18T23:59:29.357Z",
       "tipos_norma": "2026-11-20T14:27:48.007Z",
-      "tipos_sessao": "2026-11-06T10:51:32.574Z",
+      "tipos_sessao": "2026-11-24T03:51:45.048Z",
       "partidos": "2026-11-06T10:52:35.150Z",
       "filiacoes": "2026-11-06T10:53:33.427Z",
       "parlamentares": "2026-11-06T10:54:36.294Z",
       "status_tramitacao": "2026-11-06T10:55:37.495Z",
       "autores": "2026-11-06T10:56:38.954Z"
     },
-    "ultima_requisicao": "2026-11-21T22:29:55.072Z",
+    "ultima_requisicao": "2026-11-24T03:51:44.341Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

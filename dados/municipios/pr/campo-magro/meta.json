@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-21T22:30:15.070Z",
-  "ultima_execucao": "2026-11-21T22:29:54.871Z",
+  "atualizado_em": "2026-11-24T03:51:43.403Z",
+  "ultima_execucao": "2026-11-24T03:32:17.556Z",
   "uf": "PR",
   "casa": "cm-campo-magro",
   "orgao": "Câmara Municipal de Campo Magro",
   "host": "sapl.campomagro.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-21"
+    "fim": "2026-11-24"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Campo Magro (API REST pública)",
       "url": "https://sapl.campomagro.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Campo Magro",
-      "acessado_em": "2026-11-21"
+      "acessado_em": "2026-11-24"
     }
   ],
   "robots": {
-    "sapl.campomagro.pr.leg.br": null
+    "sapl.campomagro.pr.leg.br": {
+      "lido_em": "2026-11-24T03:32:17.556Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,10 +81,10 @@
   "contagens": {
     "parlamentares": 11,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 3040,
+    "proposicoes": 3053,
     "normas": 308,
-    "sessoes": 201,
-    "itens_pauta": 2177,
+    "sessoes": 202,
+    "itens_pauta": 2199,
     "votacoes": 788,
     "votacoes_por_situacao_dos_votos": {
       "inexistentes-na-fonte": 740,
@@ -117,54 +124,54 @@
       "ordemdia": {
         "faixas": [
           {
-            "hi": 2121,
+            "hi": 2127,
             "lo": 1012,
-            "n": 768,
+            "n": 774,
             "lo_data": "2024-03-12"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1501
+        "total_fonte": 1507
       },
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 3800,
+            "hi": 3816,
             "lo": 1534,
-            "n": 1409,
+            "n": 1425,
             "lo_data": "2024-05-21"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2519
+        "total_fonte": 2535
       },
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 572,
+            "hi": 573,
             "lo": 214,
-            "n": 201,
+            "n": 202,
             "lo_data": "2022-11-22"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 378
+        "total_fonte": 379
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 4347,
+            "hi": 4352,
             "lo": 1286,
-            "n": 3000,
+            "n": 3005,
             "lo_data": "2024-04-30"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 4256
+        "total_fonte": 4261
       },
       "normajuridica": {
         "faixas": [
@@ -199,14 +206,14 @@
       "tipos_materia": "2026-11-17T14:54:27.648Z",
       "mandatos": "2026-11-18T23:59:29.956Z",
       "tipos_norma": "2026-11-20T14:27:46.810Z",
-      "tipos_sessao": "2026-11-06T10:51:29.568Z",
+      "tipos_sessao": "2026-11-24T03:51:43.403Z",
       "partidos": "2026-11-06T10:52:33.701Z",
       "filiacoes": "2026-11-06T10:53:34.016Z",
       "parlamentares": "2026-11-06T10:54:34.299Z",
       "status_tramitacao": "2026-11-06T10:55:35.121Z",
       "autores": "2026-11-06T10:56:36.956Z"
     },
-    "ultima_requisicao": "2026-11-21T22:29:54.871Z",
+    "ultima_requisicao": "2026-11-24T03:51:39.080Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

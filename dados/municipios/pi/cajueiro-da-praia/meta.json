@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-21T22:30:17.081Z",
-  "ultima_execucao": "2026-11-21T22:29:54.552Z",
+  "atualizado_em": "2026-11-24T03:43:37.828Z",
+  "ultima_execucao": "2026-11-24T03:32:17.178Z",
   "uf": "PI",
   "casa": "cm-cajueiro-da-praia",
   "orgao": "Câmara Municipal de Cajueiro da Praia",
   "host": "sapl.cajueirodapraia.pi.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-21"
+    "fim": "2026-11-24"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Cajueiro da Praia (API REST pública)",
       "url": "https://sapl.cajueirodapraia.pi.leg.br/api/",
       "orgao": "Câmara Municipal de Cajueiro da Praia",
-      "acessado_em": "2026-11-21"
+      "acessado_em": "2026-11-24"
     }
   ],
   "robots": {
-    "sapl.cajueirodapraia.pi.leg.br": null
+    "sapl.cajueirodapraia.pi.leg.br": {
+      "lido_em": "2026-11-24T03:32:17.178Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -196,7 +203,7 @@
       "legislaturas": "2026-11-17T14:50:20.179Z",
       "tipos_resultado": "2026-11-18T23:51:19.033Z",
       "tipos_materia": "2026-11-20T14:19:40.031Z",
-      "mandatos": "2026-11-06T10:41:18.396Z",
+      "mandatos": "2026-11-24T03:43:37.828Z",
       "tipos_norma": "2026-11-06T10:50:27.523Z",
       "tipos_sessao": "2026-11-06T10:51:28.974Z",
       "partidos": "2026-11-06T10:52:30.719Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T10:55:32.932Z",
       "autores": "2026-11-06T10:56:34.775Z"
     },
-    "ultima_requisicao": "2026-11-21T22:29:54.552Z",
+    "ultima_requisicao": "2026-11-24T03:43:30.032Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
