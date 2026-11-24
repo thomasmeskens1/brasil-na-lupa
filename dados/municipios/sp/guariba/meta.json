@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-21T22:30:20.823Z",
-  "ultima_execucao": "2026-11-21T22:29:56.756Z",
+  "atualizado_em": "2026-11-24T16:19:15.830Z",
+  "ultima_execucao": "2026-11-24T15:59:55.192Z",
   "uf": "SP",
   "casa": "cm-guariba",
   "orgao": "Câmara Municipal de Guariba",
   "host": "sapl.guariba.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-21"
+    "fim": "2026-11-24"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Guariba (API REST pública)",
       "url": "https://sapl.guariba.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Guariba",
-      "acessado_em": "2026-11-21"
+      "acessado_em": "2026-11-24"
     }
   ],
   "robots": {
-    "sapl.guariba.sp.leg.br": null
+    "sapl.guariba.sp.leg.br": {
+      "lido_em": "2026-11-24T15:59:55.192Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,8 +81,8 @@
   "contagens": {
     "parlamentares": 12,
     "parlamentares_em_exercicio": 10,
-    "proposicoes": 768,
-    "normas": 399,
+    "proposicoes": 778,
+    "normas": 401,
     "sessoes": 201,
     "itens_pauta": 982,
     "votacoes": 393,
@@ -156,46 +163,46 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 11699,
+            "hi": 11702,
             "lo": 10910,
-            "n": 760,
+            "n": 762,
             "lo_data": "2024-04-24"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 11527
+        "total_fonte": 11529
       },
       "normajuridica": {
         "faixas": [
           {
-            "hi": 5030,
+            "hi": 5032,
             "lo": 4643,
-            "n": 388,
+            "n": 390,
             "lo_data": "2024-05-07"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 5015
+        "total_fonte": 5017
       },
       "tramitacao": {
         "faixas": [
           {
-            "hi": 32040,
+            "hi": 32045,
             "lo": 28562,
-            "n": 3366,
+            "n": 3371,
             "lo_data": "2024-11-25"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 31327
+        "total_fonte": 31332
       }
     },
     "tabelas_em": {
       "legislaturas": "2026-11-17T14:54:36.480Z",
-      "tipos_resultado": "2026-11-06T10:39:33.557Z",
+      "tipos_resultado": "2026-11-24T16:19:15.830Z",
       "tipos_materia": "2026-11-06T10:40:36.824Z",
       "mandatos": "2026-11-06T10:41:36.204Z",
       "tipos_norma": "2026-11-06T10:50:44.933Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T10:55:50.306Z",
       "autores": "2026-11-06T10:56:53.330Z"
     },
-    "ultima_requisicao": "2026-11-21T22:29:56.756Z",
+    "ultima_requisicao": "2026-11-24T16:19:15.329Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
