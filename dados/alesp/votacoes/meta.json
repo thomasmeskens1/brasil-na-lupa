@@ -1,9 +1,9 @@
 {
-  "atualizado_em": "2026-11-22T19:01:48.893Z",
-  "ultima_execucao": "2026-11-22T19:01:48.893Z",
+  "atualizado_em": "2026-11-23T23:14:45.973Z",
+  "ultima_execucao": "2026-11-23T23:14:45.973Z",
   "periodo": {
-    "inicio": "2026-11-15",
-    "fim": "2026-11-22"
+    "inicio": "2026-11-16",
+    "fim": "2026-11-23"
   },
   "modo": "incremental",
   "contagens": {
@@ -32,9 +32,9 @@
       "votos": 4700
     },
     "comissoes_nesta_execucao": {
-      "processos_consultados": 0,
-      "votacoes_gravadas": 0,
-      "fora_do_periodo": 0,
+      "processos_consultados": 232,
+      "votacoes_gravadas": 256,
+      "fora_do_periodo": 19,
       "sem_data": 0
     }
   },
@@ -43,13 +43,13 @@
       "titulo": "Votações nominais em Plenário — lista anual",
       "url": "https://legis-api-portal-prd.al.sp.gov.br/votacao/{ano}",
       "orgao": "Assembleia Legislativa do Estado de São Paulo (ALESP)",
-      "acessado_em": "2026-11-22"
+      "acessado_em": "2026-11-23"
     },
     {
       "titulo": "Votações nominais em comissões",
       "url": "https://legis-api-portal-prd.al.sp.gov.br/processo/votacaoComissao/{idProcesso}",
       "orgao": "Assembleia Legislativa do Estado de São Paulo (ALESP)",
-      "acessado_em": "2026-11-22"
+      "acessado_em": "2026-11-23"
     }
   ],
   "observacoes": [
@@ -60,7 +60,6 @@
     "Plenário: o relatório da eleição da Mesa (formato de votos por candidato) não é lido automaticamente.",
     "Comissões: o voto é o texto oficial (ex.: \"Favorável ao voto do relator\", \"Com o Voto em Separado\", \"Não registrou voto\"), sem conversão para sim/não; placar null.",
     "Comissões: id = idReuniaoItemDeliberacao da ALESP; período a partir de 2025-01-01. Partido na data do voto não informado pela fonte.",
-    "Ligação nome → parlamentar_id só por nome idêntico (sem acento/maiúsculas) na lista oficial; caso contrário null.",
-    "Falhas nesta execução: parlamentares: HTTP 500 em https://legis-api-portal-prd.al.sp.gov.br/parlamentar-portal/todos | plenário 2025: HTTP 500 em https://legis-api-portal-prd.al.sp.gov.br/votacao/2025 | plenário 2026: HTTP 500 em https://legis-api-portal-prd.al.sp.gov.br/votacao/2026 | tramitações: HTTP 500 em https://legis-api-portal-prd.al.sp.gov.br/notificacao/tramitacoes/2026-11-16 | proposições 2025: HTTP 500 em https://legis-api-portal-prd.al.sp.gov.br/processo?page=0&size=1000&ano=2025&listaIdTipoProcesso=1&listaIdTipoProcesso=2&listaIdTipoProcesso=3&listaIdTipoProcesso=4&listaIdTipoProcesso=5 | proposições 2026: HTTP 500 em https://legis-api-portal-prd.al.sp.gov.br/processo?page=0&size=1000&ano=2026&listaIdTipoProcesso=1&listaIdTipoProcesso=2&listaIdTipoProcesso=3&listaIdTipoProcesso=4&listaIdTipoProcesso=5"
+    "Ligação nome → parlamentar_id só por nome idêntico (sem acento/maiúsculas) na lista oficial; caso contrário null."
   ]
 }
