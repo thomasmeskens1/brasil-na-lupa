@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-24T01:44:06.025Z",
-  "ultima_execucao": "2026-11-24T01:44:03.174Z",
+  "atualizado_em": "2026-11-24T23:55:37.257Z",
+  "ultima_execucao": "2026-11-24T23:32:11.119Z",
   "uf": "TO",
   "casa": "alto",
   "orgao": "Assembleia Legislativa do Estado do Tocantins (AL-TO)",
   "host": "sapl.al.to.leg.br",
   "periodo": {
     "inicio": "2023-02-01",
-    "fim": "2026-11-23"
+    "fim": "2026-11-24"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Assembleia Legislativa do Estado do Tocantins (AL-TO) (API REST pública)",
       "url": "https://sapl.al.to.leg.br/api/",
       "orgao": "Assembleia Legislativa do Estado do Tocantins (AL-TO)",
-      "acessado_em": "2026-11-23"
+      "acessado_em": "2026-11-24"
     }
   ],
   "robots": {
-    "sapl.al.to.leg.br": null
+    "sapl.al.to.leg.br": {
+      "lido_em": "2026-11-24T23:32:11.119Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 24,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -49,11 +56,11 @@
       "concluida": false
     },
     "materialegislativa": {
-      "desde": "2024-03-06",
+      "desde": "2023-11-22",
       "concluida": false
     },
     "normajuridica": {
-      "desde": "2023-12-14",
+      "desde": "2023-08-18",
       "concluida": false
     },
     "tramitacao": {
@@ -74,8 +81,8 @@
   "contagens": {
     "parlamentares": 27,
     "parlamentares_em_exercicio": 25,
-    "proposicoes": 4864,
-    "normas": 744,
+    "proposicoes": 5355,
+    "normas": 910,
     "sessoes": 294,
     "itens_pauta": 76,
     "votacoes": 0,
@@ -131,23 +138,23 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 14799,
-            "lo": 9867,
-            "n": 4845,
-            "lo_data": "2024-03-06"
+            "hi": 14855,
+            "lo": 9388,
+            "n": 5336,
+            "lo_data": "2023-11-22"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 14551
+        "total_fonte": 14604
       },
       "normajuridica": {
         "faixas": [
           {
             "hi": 1620,
-            "lo": 870,
-            "n": 744,
-            "lo_data": "2023-12-14"
+            "lo": 697,
+            "n": 910,
+            "lo_data": "2023-08-18"
           }
         ],
         "concluido": false,
@@ -157,20 +164,20 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 18102,
+            "hi": 18191,
             "lo": 17998,
-            "n": 103,
+            "n": 191,
             "lo_data": "2026-07-01"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 17970
+        "total_fonte": 18058
       }
     },
     "tabelas_em": {
       "legislaturas": "2026-11-11T21:44:43.454Z",
-      "tipos_resultado": "2026-11-04T00:29:04.066Z",
+      "tipos_resultado": "2026-11-24T23:48:29.763Z",
       "tipos_materia": "2026-11-04T00:30:04.468Z",
       "mandatos": "2026-11-04T00:31:05.970Z",
       "tipos_norma": "2026-11-04T00:40:14.506Z",
@@ -181,7 +188,7 @@
       "status_tramitacao": "2026-11-04T00:45:19.754Z",
       "autores": "2026-11-04T00:48:23.156Z"
     },
-    "ultima_requisicao": "2026-11-24T01:44:03.174Z",
+    "ultima_requisicao": "2026-11-24T23:55:34.118Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
