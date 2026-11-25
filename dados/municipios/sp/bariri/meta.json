@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-23T16:07:46.954Z",
-  "ultima_execucao": "2026-11-23T16:07:27.488Z",
+  "atualizado_em": "2026-11-25T16:05:34.307Z",
+  "ultima_execucao": "2026-11-25T15:46:09.101Z",
   "uf": "SP",
   "casa": "cm-bariri",
   "orgao": "Câmara Municipal de Bariri",
   "host": "sapl.bariri.sp.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-23"
+    "fim": "2026-11-25"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Bariri (API REST pública)",
       "url": "https://sapl.bariri.sp.leg.br/api/",
       "orgao": "Câmara Municipal de Bariri",
-      "acessado_em": "2026-11-23"
+      "acessado_em": "2026-11-25"
     }
   ],
   "robots": {
-    "sapl.bariri.sp.leg.br": null
+    "sapl.bariri.sp.leg.br": {
+      "lido_em": "2026-11-25T15:46:09.101Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,9 +81,9 @@
   "contagens": {
     "parlamentares": 12,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 1372,
-    "normas": 298,
-    "sessoes": 198,
+    "proposicoes": 1391,
+    "normas": 301,
+    "sessoes": 206,
     "itens_pauta": 396,
     "votacoes": 222,
     "votacoes_por_situacao_dos_votos": {
@@ -143,41 +150,41 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 269,
+            "hi": 277,
             "lo": 68,
-            "n": 198,
+            "n": 206,
             "lo_data": "2020-06-16"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 260
+        "total_fonte": 268
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 4778,
+            "hi": 4789,
             "lo": 3416,
-            "n": 1363,
+            "n": 1374,
             "lo_data": "2024-10-03"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 4758
+        "total_fonte": 4769
       },
       "normajuridica": {
         "faixas": [
           {
-            "hi": 1689,
+            "hi": 1691,
             "lo": 1395,
-            "n": 295,
+            "n": 297,
             "lo_data": "2023-06-22"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1684
+        "total_fonte": 1686
       },
       "tramitacao": {
         "faixas": [
@@ -194,7 +201,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-05T23:14:46.858Z",
+      "legislaturas": "2026-11-25T16:05:34.307Z",
       "tipos_resultado": "2026-11-05T23:15:48.090Z",
       "tipos_materia": "2026-11-05T23:16:51.114Z",
       "mandatos": "2026-11-05T23:17:50.309Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-05T23:32:04.179Z",
       "autores": "2026-11-05T23:33:07.535Z"
     },
-    "ultima_requisicao": "2026-11-23T16:07:27.488Z",
+    "ultima_requisicao": "2026-11-25T16:05:31.588Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
