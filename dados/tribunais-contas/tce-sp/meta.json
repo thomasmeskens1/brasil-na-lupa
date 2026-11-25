@@ -1,6 +1,6 @@
 {
-  "atualizado_em": "2026-11-05T19:17:39.312Z",
-  "ultima_execucao": "2026-11-05T19:17:39.312Z",
+  "atualizado_em": "2026-11-25T21:04:06.146Z",
+  "ultima_execucao": "2026-11-25T21:04:06.146Z",
   "tribunal": "tce-sp",
   "modo": "incremental",
   "periodo": {
@@ -11,9 +11,9 @@
     "contas_prefeitos": "exercícios de 2008 até o ano anterior ao atual"
   },
   "contagens": {
-    "exercicios_governador_publicados_na_pagina": 18,
-    "exercicios_governador_processados": 1,
-    "exercicios_governador_com_erro": 2,
+    "exercicios_governador_publicados_na_pagina": 19,
+    "exercicios_governador_processados": 0,
+    "exercicios_governador_com_erro": 3,
     "linhas_conjunto_pareceres": 6440,
     "municipios": [
       {
@@ -35,14 +35,7 @@
     },
     {
       "exercicio": 2025,
-      "publicado": false,
-      "data_julgamento": null,
-      "conclusao": null,
-      "com_ressalvas": null,
-      "relator": null,
-      "julgamento_politico": null,
-      "situacao_conferencia": "automatico-estruturado",
-      "lacunas": 2
+      "erro": "spawnSync scripts/coleta/alesp/.venv/bin/python ENOENT"
     }
   ],
   "fontes": [
@@ -50,13 +43,13 @@
       "titulo": "Contas Anuais (página oficial)",
       "url": "https://www.tce.sp.gov.br/contas-anuais",
       "orgao": "Tribunal de Contas do Estado de São Paulo (TCE-SP)",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-25"
     },
     {
       "titulo": "Conjunto de dados \"Pareceres\" (Contas de Prefeituras 2008 a 2017)",
       "url": "https://transparencia.tce.sp.gov.br/sites/default/files/conjunto-dados/pareceres/pareceres.zip",
       "orgao": "Tribunal de Contas do Estado de São Paulo (TCE-SP)",
-      "acessado_em": "2026-11-05",
+      "acessado_em": "2026-11-25",
       "pagina": "https://transparencia.tce.sp.gov.br/conjunto-de-dados",
       "sha256": "3e1b1d31645641b3cc2c5b5cafb8ab1ecfcac8ecc1c5e58930783d3b6a1d70b7",
       "atualizado_na_fonte": "Wed, 14 Oct 2020 20:30:41 GMT"
@@ -75,10 +68,10 @@
     "Conferência: os campos extraídos de 2023 e 2024 foram conferidos por amostragem contra os PDFs oficiais em 02/11/2026."
   ],
   "estatisticas_http": {
-    "requisicoes": 4,
+    "requisicoes": 5,
     "retentativas": 0,
-    "bytes": 897654,
+    "bytes": 5908605,
     "falhas": []
   },
-  "duracao_s": 6
+  "duracao_s": 8
 }

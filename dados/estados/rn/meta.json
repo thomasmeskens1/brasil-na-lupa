@@ -1,6 +1,6 @@
 {
-  "atualizado_em": "2026-11-24T22:29:30.241Z",
-  "ultima_execucao": "2026-11-24T22:29:30.241Z",
+  "atualizado_em": "2026-11-25T21:23:26.830Z",
+  "ultima_execucao": "2026-11-25T21:23:26.830Z",
   "uf": "RN",
   "casa": "alrn",
   "periodo": {
@@ -11,10 +11,10 @@
       2023
     ],
     "inicio_cobertura": "2023-01-01",
-    "fim": "2026-11-24"
+    "fim": "2026-11-25"
   },
   "modo": "incremental",
-  "duracao_s": 177,
+  "duracao_s": 241,
   "orcamento_min": 20,
   "contagens": {
     "parlamentares": {
@@ -47,38 +47,38 @@
         "votos": 5630
       },
       "2026": {
-        "votacoes": 875,
+        "votacoes": 883,
         "por_tipo": {
+          "nominal": 665,
           "secreta": 47,
-          "ostensiva": 171,
-          "nominal": 657
+          "ostensiva": 171
         },
         "plenario": 196,
-        "comissoes": 679,
-        "com_votos_individuais": 597,
-        "votos": 2733
+        "comissoes": 687,
+        "com_votos_individuais": 605,
+        "votos": 2757
       }
     },
     "votacoes_nesta_execucao": {
-      "processos_na_lista": 2040,
-      "processos_consultados": 95,
-      "votacoes_gravadas": 103,
-      "puladas_sem_mudanca": 1369,
+      "processos_na_lista": 2042,
+      "processos_consultados": 99,
+      "votacoes_gravadas": 111,
+      "puladas_sem_mudanca": 1367,
       "sem_votos_conferidos": 17
     },
     "proposicoes_nesta_execucao": {
       "2026": {
-        "processos_no_ano": 3469,
-        "no_indice": 518,
+        "processos_no_ano": 3504,
+        "no_indice": 521,
         "por_sigla": {
           "MSG": 2,
           "PEC": 3,
-          "PL": 462,
+          "PL": 465,
           "PLC": 22,
           "PRES": 12,
           "VET": 17
         },
-        "situacao_consultada_nesta_execucao": 90,
+        "situacao_consultada_nesta_execucao": 89,
         "sem_situacao": 0
       }
     },
@@ -112,33 +112,33 @@
         }
       }
     },
-    "requisicoes": 323
+    "requisicoes": 335
   },
   "fontes": [
     {
       "titulo": "API eLegis — Transparência Legislativa da ALRN",
       "url": "https://api-transparencialegislativa.al.rn.leg.br/elegis-api-transp-legislativa",
       "orgao": "Assembleia Legislativa do Estado do Rio Grande do Norte (ALRN)",
-      "acessado_em": "2026-11-24"
+      "acessado_em": "2026-11-25"
     },
     {
       "titulo": "Transparência Legislativa da ALRN",
       "url": "https://transparencialegislativa.al.rn.leg.br",
       "orgao": "Assembleia Legislativa do Estado do Rio Grande do Norte (ALRN)",
-      "acessado_em": "2026-11-24"
+      "acessado_em": "2026-11-25"
     },
     {
       "titulo": "Legislação — portal da ALRN",
       "url": "https://www.al.rn.leg.br/legislacao/leis-ordinarias",
       "orgao": "Assembleia Legislativa do Estado do Rio Grande do Norte (ALRN)",
-      "acessado_em": "2026-11-24"
+      "acessado_em": "2026-11-25"
     }
   ],
   "robots": {
     "api-transparencialegislativa.al.rn.leg.br": {
       "url": "https://api-transparencialegislativa.al.rn.leg.br/robots.txt",
       "status": 404,
-      "lido_em": "2026-11-24T22:26:33.680Z",
+      "lido_em": "2026-11-25T21:19:25.542Z",
       "crawl_delay_s": null,
       "disallow": [],
       "allow": [],
@@ -147,7 +147,7 @@
     "transparencialegislativa.al.rn.leg.br": {
       "url": "https://transparencialegislativa.al.rn.leg.br/robots.txt",
       "status": 200,
-      "lido_em": "2026-11-24T22:26:35.242Z",
+      "lido_em": "2026-11-25T21:19:27.274Z",
       "crawl_delay_s": null,
       "disallow": [],
       "allow": [],
@@ -156,7 +156,7 @@
     "www.al.rn.leg.br": {
       "url": "https://www.al.rn.leg.br/robots.txt",
       "status": 200,
-      "lido_em": "2026-11-24T22:26:36.770Z",
+      "lido_em": "2026-11-25T21:19:28.795Z",
       "crawl_delay_s": null,
       "disallow": [],
       "allow": [],
@@ -175,7 +175,7 @@
     "Índice de proposições por ano do processo (filtro \"ano\" da fonte); entram PL, PLC, PEC, PDL, PRES, VET e Mensagens. Situação = última tramitação, consultada em rodízio (no máximo RN_MAX_TRAMITACOES por execução; padrão 400).",
     "Leis: lista oficial do portal da ALRN com o PDF de cada lei. O serviço privado leisestaduais.com.br, linkado no portal, não é usado.",
     "Decretos do Governador: o Diário Oficial do RN só publica PDF diário, sem fonte estruturada; não coletados nesta versão.",
-    "Falhas nesta execução: votações: HTTP 500 em https://api-transparencialegislativa.al.rn.leg.br/elegis-api-transp-legislativa/processo/37879/detalhamento-votacao/2464"
+    "Falhas nesta execução: votações: HTTP 500 em https://api-transparencialegislativa.al.rn.leg.br/elegis-api-transp-legislativa/processo/37877/detalhamento-votacao/2464"
   ],
   "cursor": {
     "votacoes_por_processo": {
@@ -1173,6 +1173,7 @@
       "60199": 51871,
       "60202": 58144,
       "60210": 51812,
+      "60213": 61140,
       "60223": 53795,
       "60224": 55397,
       "60236": 52674,
@@ -1254,7 +1255,7 @@
       "60652": 54252,
       "60658": 55432,
       "60660": 55002,
-      "60662": 60491,
+      "60662": 61122,
       "60668": 54283,
       "60671": 54027,
       "60687": 60072,
@@ -1408,7 +1409,7 @@
       "61806": 60048,
       "61810": 60050,
       "61817": 58311,
-      "61818": 60489,
+      "61818": 61127,
       "61824": 55902,
       "61829": 56074,
       "61830": 55897,
@@ -1432,6 +1433,7 @@
       "61932": 57194,
       "61934": 60051,
       "61950": 56352,
+      "61969": 61141,
       "61970": 56840,
       "61978": 56915,
       "61994": 56856,
@@ -1499,7 +1501,7 @@
       "62579": 57093,
       "62585": 58234,
       "62586": 57759,
-      "62601": 60290,
+      "62601": 61123,
       "62623": 60614,
       "62639": 60613,
       "62642": 56898,
@@ -1544,7 +1546,7 @@
       "62918": 59206,
       "62931": 58235,
       "62935": 60064,
-      "62956": 60484,
+      "62956": 61126,
       "62976": 59582,
       "62978": 58236,
       "62980": 61023,
@@ -1629,7 +1631,7 @@
       "63923": 61011,
       "63925": 61013,
       "63955": 59956,
-      "63961": 60079,
+      "63961": 61124,
       "63995": 59954,
       "63996": 59955,
       "64009": 60288,
@@ -1637,7 +1639,7 @@
       "64146": 60280,
       "64150": 60283,
       "64210": 60279,
-      "64256": 60494,
+      "64256": 61125,
       "64315": 60939,
       "64331": 60904,
       "64405": 61036
@@ -1646,7 +1648,7 @@
       "2023": "2026-11-21",
       "2024": "2026-11-21",
       "2025": "2026-11-21",
-      "2026": "2026-11-24"
+      "2026": "2026-11-25"
     }
   }
 }
