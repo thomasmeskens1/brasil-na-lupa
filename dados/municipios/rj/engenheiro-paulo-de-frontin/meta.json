@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-24T03:32:46.049Z",
-  "ultima_execucao": "2026-11-24T03:32:19.584Z",
+  "atualizado_em": "2026-11-26T01:34:30.426Z",
+  "ultima_execucao": "2026-11-26T01:15:06.145Z",
   "uf": "RJ",
   "casa": "cm-engenheiro-paulo-de-frontin",
   "orgao": "Câmara Municipal de Engenheiro Paulo de Frontin",
   "host": "sapl.engenheiropaulodefrontin.rj.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-24"
+    "fim": "2026-11-25"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Engenheiro Paulo de Frontin (API REST pública)",
       "url": "https://sapl.engenheiropaulodefrontin.rj.leg.br/api/",
       "orgao": "Câmara Municipal de Engenheiro Paulo de Frontin",
-      "acessado_em": "2026-11-24"
+      "acessado_em": "2026-11-25"
     }
   ],
   "robots": {
-    "sapl.engenheiropaulodefrontin.rj.leg.br": null
+    "sapl.engenheiropaulodefrontin.rj.leg.br": {
+      "lido_em": "2026-11-26T01:15:06.145Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 1560,
+    "proposicoes": 1572,
     "normas": 625,
     "sessoes": 262,
     "itens_pauta": 1261,
@@ -156,15 +163,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 2774,
+            "hi": 2778,
             "lo": 1213,
-            "n": 1552,
+            "n": 1556,
             "lo_data": "2015-02-26"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2731
+        "total_fonte": 2735
       },
       "normajuridica": {
         "faixas": [
@@ -195,7 +202,7 @@
     },
     "tabelas_em": {
       "legislaturas": "2026-11-17T14:54:35.088Z",
-      "tipos_resultado": "2026-11-06T10:39:30.165Z",
+      "tipos_resultado": "2026-11-26T01:34:30.426Z",
       "tipos_materia": "2026-11-06T10:40:36.031Z",
       "mandatos": "2026-11-06T10:41:34.214Z",
       "tipos_norma": "2026-11-06T10:50:42.946Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T10:55:47.132Z",
       "autores": "2026-11-06T10:56:51.947Z"
     },
-    "ultima_requisicao": "2026-11-24T03:32:19.584Z",
+    "ultima_requisicao": "2026-11-26T01:34:29.636Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

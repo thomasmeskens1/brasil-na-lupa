@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-24T03:32:46.456Z",
-  "ultima_execucao": "2026-11-24T03:32:19.655Z",
+  "atualizado_em": "2026-11-26T02:14:11.492Z",
+  "ultima_execucao": "2026-11-26T01:15:06.229Z",
   "uf": "RS",
   "casa": "cm-erechim",
   "orgao": "Câmara Municipal de Erechim",
   "host": "sapl.erechim.rs.leg.br",
   "periodo": {
     "inicio": null,
-    "fim": "2026-11-24"
+    "fim": "2026-11-25"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,33 +15,40 @@
       "titulo": "SAPL — Câmara Municipal de Erechim (API REST pública)",
       "url": "https://sapl.erechim.rs.leg.br/api/",
       "orgao": "Câmara Municipal de Erechim",
-      "acessado_em": "2026-11-24"
+      "acessado_em": "2026-11-25"
     }
   ],
   "robots": {
-    "sapl.erechim.rs.leg.br": null
+    "sapl.erechim.rs.leg.br": {
+      "lido_em": "2026-11-26T01:15:06.230Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 59,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
-      "desde": "2021-03-22",
+      "desde": "2020-11-16",
       "concluida": false
     },
     "votoparlamentar": {
-      "desde": "2021-03-29",
+      "desde": "2020-11-23",
       "concluida": false
     },
     "ordemdia": {
-      "desde": "2020-12-14",
+      "desde": "2020-11-16",
       "concluida": false
     },
     "expedientemateria": {
-      "desde": "2021-03-15",
+      "desde": "2020-11-03",
       "concluida": false
     },
     "sessaoplenaria": {
@@ -49,11 +56,11 @@
       "concluida": false
     },
     "materialegislativa": {
-      "desde": "2021-03-22",
+      "desde": "2020-11-19",
       "concluida": false
     },
     "normajuridica": {
-      "desde": "2021-01-12",
+      "desde": "2020-11-16",
       "concluida": false
     },
     "tramitacao": {
@@ -72,17 +79,17 @@
     "Datas impossíveis ou posteriores à coleta (ex.: erros de digitação) ficam null, com o valor bruto anotado em lacunas; nada é corrigido."
   ],
   "contagens": {
-    "proposicoes": 1090,
-    "normas": 505,
+    "proposicoes": 1440,
+    "normas": 594,
     "sessoes": 100,
-    "itens_pauta": 1138,
-    "votacoes": 570,
+    "itens_pauta": 1398,
+    "votacoes": 910,
     "votacoes_por_situacao_dos_votos": {
-      "inexistentes-na-fonte": 177,
-      "em-coleta": 9,
-      "coletados": 384
+      "inexistentes-na-fonte": 361,
+      "coletados": 528,
+      "em-coleta": 21
     },
-    "votos_individuais": 6534
+    "votos_individuais": 8910
   },
   "cursor": {
     "fluxos": {
@@ -90,9 +97,9 @@
         "faixas": [
           {
             "hi": 7474,
-            "lo": 6896,
-            "n": 570,
-            "lo_data": "2021-03-22"
+            "lo": 6542,
+            "n": 910,
+            "lo_data": "2020-11-16"
           }
         ],
         "concluido": false,
@@ -103,9 +110,9 @@
         "faixas": [
           {
             "hi": 47058,
-            "lo": 40406,
-            "n": 6534,
-            "lo_data": "2021-03-29"
+            "lo": 37922,
+            "n": 8910,
+            "lo_data": "2020-11-23"
           }
         ],
         "concluido": false,
@@ -116,9 +123,9 @@
         "faixas": [
           {
             "hi": 6125,
-            "lo": 5587,
-            "n": 480,
-            "lo_data": "2020-12-14"
+            "lo": 5491,
+            "n": 570,
+            "lo_data": "2020-11-16"
           }
         ],
         "concluido": false,
@@ -129,9 +136,9 @@
         "faixas": [
           {
             "hi": 2432,
-            "lo": 1752,
-            "n": 658,
-            "lo_data": "2021-03-15"
+            "lo": 1580,
+            "n": 828,
+            "lo_data": "2020-11-03"
           }
         ],
         "concluido": false,
@@ -155,9 +162,9 @@
         "faixas": [
           {
             "hi": 23575,
-            "lo": 22457,
-            "n": 1089,
-            "lo_data": "2021-03-22"
+            "lo": 22095,
+            "n": 1440,
+            "lo_data": "2020-11-19"
           }
         ],
         "concluido": false,
@@ -168,9 +175,9 @@
         "faixas": [
           {
             "hi": 19491,
-            "lo": 19012,
-            "n": 480,
-            "lo_data": "2021-01-12"
+            "lo": 18922,
+            "n": 570,
+            "lo_data": "2020-11-16"
           }
         ],
         "concluido": false,
@@ -193,7 +200,7 @@
     },
     "tabelas_em": {
       "legislaturas": "2026-11-17T14:54:36.089Z",
-      "tipos_resultado": "2026-11-06T10:39:34.157Z",
+      "tipos_resultado": "2026-11-26T01:34:31.037Z",
       "tipos_materia": "2026-11-06T10:40:35.019Z",
       "tipos_norma": "2026-11-06T10:49:43.852Z",
       "tipos_sessao": "2026-11-06T10:50:44.719Z",
@@ -203,7 +210,7 @@
       "status_tramitacao": "2026-11-06T10:58:51.422Z",
       "autores": "2026-11-06T11:01:55.177Z"
     },
-    "ultima_requisicao": "2026-11-24T03:32:19.655Z",
+    "ultima_requisicao": "2026-11-26T02:14:09.046Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
