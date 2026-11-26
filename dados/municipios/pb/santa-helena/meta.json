@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-24T16:00:28.449Z",
-  "ultima_execucao": "2026-11-24T15:59:57.559Z",
+  "atualizado_em": "2026-11-26T15:36:33.274Z",
+  "ultima_execucao": "2026-11-26T15:27:15.140Z",
   "uf": "PB",
   "casa": "cm-santa-helena",
   "orgao": "Câmara Municipal de Santa Helena",
   "host": "sapl.santahelena.pb.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-24"
+    "fim": "2026-11-26"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Santa Helena (API REST pública)",
       "url": "https://sapl.santahelena.pb.leg.br/api/",
       "orgao": "Câmara Municipal de Santa Helena",
-      "acessado_em": "2026-11-24"
+      "acessado_em": "2026-11-26"
     }
   ],
   "robots": {
-    "sapl.santahelena.pb.leg.br": null
+    "sapl.santahelena.pb.leg.br": {
+      "lido_em": "2026-11-26T15:27:15.140Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 10,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -187,7 +194,7 @@
     },
     "tabelas_em": {
       "legislaturas": "2026-11-14T21:52:40.628Z",
-      "tipos_resultado": "2026-11-07T12:07:52.139Z",
+      "tipos_resultado": "2026-11-26T15:36:33.274Z",
       "tipos_materia": "2026-11-07T12:08:53.345Z",
       "mandatos": "2026-11-07T12:09:54.173Z",
       "tipos_norma": "2026-11-07T12:19:05.807Z",
@@ -198,7 +205,7 @@
       "status_tramitacao": "2026-11-07T12:24:08.031Z",
       "autores": "2026-11-07T12:25:09.334Z"
     },
-    "ultima_requisicao": "2026-11-24T15:59:57.559Z",
+    "ultima_requisicao": "2026-11-26T15:36:25.545Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

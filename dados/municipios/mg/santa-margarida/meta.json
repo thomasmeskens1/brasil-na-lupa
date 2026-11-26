@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-24T16:00:26.025Z",
-  "ultima_execucao": "2026-11-24T15:59:57.611Z",
+  "atualizado_em": "2026-11-26T15:44:36.129Z",
+  "ultima_execucao": "2026-11-26T15:27:15.191Z",
   "uf": "MG",
   "casa": "cm-santa-margarida",
   "orgao": "Câmara Municipal de Santa Margarida",
   "host": "sapl.santamargarida.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-02",
-    "fim": "2026-11-24"
+    "fim": "2026-11-26"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Santa Margarida (API REST pública)",
       "url": "https://sapl.santamargarida.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Santa Margarida",
-      "acessado_em": "2026-11-24"
+      "acessado_em": "2026-11-26"
     }
   ],
   "robots": {
-    "sapl.santamargarida.mg.leg.br": null
+    "sapl.santamargarida.mg.leg.br": {
+      "lido_em": "2026-11-26T15:27:15.191Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 18,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -76,12 +83,12 @@
     "parlamentares_em_exercicio": 11,
     "proposicoes": 407,
     "normas": 0,
-    "sessoes": 116,
-    "itens_pauta": 814,
+    "sessoes": 117,
+    "itens_pauta": 822,
     "votacoes": 393,
     "votacoes_por_situacao_dos_votos": {
-      "inexistentes-na-fonte": 139,
-      "em-coleta": 14,
+      "inexistentes-na-fonte": 147,
+      "em-coleta": 6,
       "coletados": 240
     },
     "votos_individuais": 2364
@@ -143,15 +150,15 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 141,
+            "hi": 142,
             "lo": 15,
-            "n": 116,
+            "n": 117,
             "lo_data": "2021-09-14"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 116
+        "total_fonte": 117
       },
       "materialegislativa": {
         "faixas": [
@@ -188,7 +195,7 @@
     },
     "tabelas_em": {
       "legislaturas": "2026-11-14T22:00:46.649Z",
-      "tipos_resultado": "2026-11-07T12:07:53.135Z",
+      "tipos_resultado": "2026-11-26T15:44:36.128Z",
       "tipos_materia": "2026-11-07T12:08:54.540Z",
       "mandatos": "2026-11-07T12:09:54.984Z",
       "tipos_norma": "2026-11-07T12:19:06.017Z",
@@ -199,7 +206,7 @@
       "status_tramitacao": "2026-11-07T12:24:10.258Z",
       "autores": "2026-11-07T12:25:10.947Z"
     },
-    "ultima_requisicao": "2026-11-24T15:59:57.611Z",
+    "ultima_requisicao": "2026-11-26T15:44:33.891Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
