@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-05T12:59:12.058Z",
+  "atualizado_em": "2026-11-27T20:45:33.370Z",
   "municipio": {
     "id": "nazare-da-mata",
     "nome": "Nazaré da Mata",
@@ -12,15 +12,15 @@
   },
   "contagens": {
     "exercicios": 12,
-    "com_parecer_em_fonte_aberta": 9,
-    "sem_fonte_aberta": 3
+    "com_parecer_em_fonte_aberta": 10,
+    "sem_fonte_aberta": 2
   },
   "fontes": [
     {
       "titulo": "API de Dados Abertos do TCE-PE — entidade \"Resultados\" (documentação oficial)",
       "url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=42",
       "orgao": "Tribunal de Contas do Estado de Pernambuco (TCE-PE)",
-      "acessado_em": "2026-11-05"
+      "acessado_em": "2026-11-27"
     }
   ],
   "observacoes": [
@@ -444,13 +444,13 @@
       },
       "julgamento_politico": null,
       "situacao_conferencia": "automatico-estruturado",
-      "coletado_em": "2026-11-05",
+      "coletado_em": "2026-11-27",
       "fontes": [
         {
           "titulo": "API de Dados Abertos do TCE-PE — entidade \"Resultados\" (processos eletrônicos julgados)",
           "url": "https://sistemas.tcepe.tc.br/DadosAbertos/Resultados!json?Tipo=Governo&ExercicioPrincipalProcesso=2022",
           "orgao": "Tribunal de Contas do Estado de Pernambuco (TCE-PE)",
-          "acessado_em": "2026-11-05"
+          "acessado_em": "2026-11-27"
         }
       ],
       "lacunas": [
@@ -486,13 +486,13 @@
       },
       "julgamento_politico": null,
       "situacao_conferencia": "automatico-estruturado",
-      "coletado_em": "2026-11-05",
+      "coletado_em": "2026-11-27",
       "fontes": [
         {
           "titulo": "API de Dados Abertos do TCE-PE — entidade \"Resultados\" (processos eletrônicos julgados)",
           "url": "https://sistemas.tcepe.tc.br/DadosAbertos/Resultados!json?Tipo=Governo&ExercicioPrincipalProcesso=2023",
           "orgao": "Tribunal de Contas do Estado de Pernambuco (TCE-PE)",
-          "acessado_em": "2026-11-05"
+          "acessado_em": "2026-11-27"
         }
       ],
       "lacunas": [
@@ -506,38 +506,47 @@
       "natureza": "parecer-previo",
       "titulo": "Parecer prévio do Tribunal de Contas do Estado de Pernambuco sobre as contas do Prefeito de Nazaré da Mata — exercício 2024",
       "processo": {
-        "classe": null,
-        "numero": null,
-        "url": null
+        "classe": "Prestação de Contas — tipo Governo",
+        "numero": "25100671-2",
+        "url": "http://etce.tcepe.tc.br/epp/ConsultaExternaTCE/listView.seam?cprc=25100671&digito=2"
       },
-      "orgao": null,
-      "relator": null,
-      "data_julgamento": null,
+      "orgao": "2ª Câmara",
+      "relator": "RICARDO RIOS",
+      "data_julgamento": "2026-11-19",
       "data_transito_em_julgado": null,
-      "situacao_processo_literal": null,
-      "responsaveis_literal": [],
+      "situacao_processo_literal": "Julgado",
+      "responsaveis_literal": [
+        "INACIO MANOEL DO NASCIMENTO"
+      ],
       "parecer": {
-        "conclusao": null,
+        "conclusao": "Rejeição",
         "ressalvas": [],
         "alertas": [],
         "contas_de": "Prefeito de Nazaré da Mata",
-        "exercicio": "2024"
+        "exercicio": "2024",
+        "documento": {
+          "titulo": "Parecer Prévio (2026) — e-TCE",
+          "url": "http://etce.tcepe.tc.br/epp/validaDoc.seam?cod=0C96F903-5166-46BC-9422-127D40869E04"
+        }
       },
       "julgamento_politico": null,
       "situacao_conferencia": "automatico-estruturado",
-      "coletado_em": "2026-11-05",
+      "coletado_em": "2026-11-27",
       "fontes": [
         {
           "titulo": "API de Dados Abertos do TCE-PE — entidade \"Resultados\" (processos eletrônicos julgados)",
           "url": "https://sistemas.tcepe.tc.br/DadosAbertos/Resultados!json?Tipo=Governo&ExercicioPrincipalProcesso=2024",
           "orgao": "Tribunal de Contas do Estado de Pernambuco (TCE-PE)",
-          "acessado_em": "2026-11-05"
+          "acessado_em": "2026-11-27"
         }
       ],
       "lacunas": [
-        "Parecer prévio não encontrado na API de Dados Abertos do TCE-PE (entidade \"Resultados\", que lista processos eletrônicos julgados) até a coleta",
+        "Ressalvas, determinações e recomendações não constam na API; estão no documento do parecer (link do e-TCE, não aberto pelo coletor)",
+        "Resultado da votação (unanimidade ou maioria) e votos de cada conselheiro não constam na API",
+        "Data do trânsito em julgado não consta na API; a situação literal do processo é \"Julgado\"",
         "Julgamento das contas pela Câmara Municipal de Nazaré da Mata não localizado nos dados coletados"
-      ]
+      ],
+      "unidade_jurisdicionada_literal": "Prefeitura Municipal de Nazaré da Mata"
     },
     {
       "id": "tce-pe-contas-prefeito-nazare-da-mata-2025",
@@ -564,13 +573,13 @@
       },
       "julgamento_politico": null,
       "situacao_conferencia": "automatico-estruturado",
-      "coletado_em": "2026-11-05",
+      "coletado_em": "2026-11-27",
       "fontes": [
         {
           "titulo": "API de Dados Abertos do TCE-PE — entidade \"Resultados\" (processos eletrônicos julgados)",
           "url": "https://sistemas.tcepe.tc.br/DadosAbertos/Resultados!json?Tipo=Governo&ExercicioPrincipalProcesso=2025",
           "orgao": "Tribunal de Contas do Estado de Pernambuco (TCE-PE)",
-          "acessado_em": "2026-11-05"
+          "acessado_em": "2026-11-27"
         }
       ],
       "lacunas": [

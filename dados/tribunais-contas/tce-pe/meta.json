@@ -1,6 +1,6 @@
 {
-  "atualizado_em": "2026-11-26T20:55:01.748Z",
-  "ultima_execucao": "2026-11-26T20:55:01.749Z",
+  "atualizado_em": "2026-11-27T20:45:33.408Z",
+  "ultima_execucao": "2026-11-27T20:45:33.408Z",
   "tribunal": "tce-pe",
   "modo": "incremental",
   "interrompido_por_orcamento": false,
@@ -41,126 +41,31 @@
     "2025": "2026-11-20"
   },
   "contagens": {
-    "registros_governador": 10,
-    "exercicios_governador_com_parecer": 9,
-    "registros_municipais_nesta_execucao": 504,
+    "registros_governador": null,
+    "exercicios_governador_com_parecer": 0,
+    "registros_municipais_nesta_execucao": 507,
     "registros_municipais_descartados": 1,
     "municipios": 184,
     "itens_municipais_por_resultado": {
-      "Aprovação com ressalvas": 1445,
-      "Rejeição": 490,
-      "sem parecer na API": 267,
+      "Aprovação com ressalvas": 1447,
+      "Rejeição": 491,
+      "sem parecer na API": 264,
       "Aprovação": 6
     }
   },
-  "contas_governador": [
-    {
-      "exercicio": 2014,
-      "processo": "15100188-1",
-      "data_julgamento": "2016-07-27",
-      "conclusao": "Aprovação",
-      "relator": "TERESA DUERE",
-      "situacao": "Transitado em julgado"
-    },
-    {
-      "exercicio": 2015,
-      "processo": "16100001-0",
-      "data_julgamento": "2017-07-19",
-      "conclusao": "Aprovação",
-      "relator": "RANILSON RAMOS",
-      "situacao": "Transitado em julgado"
-    },
-    {
-      "exercicio": 2016,
-      "processo": "17100360-3",
-      "data_julgamento": "2018-04-25",
-      "conclusao": "Aprovação",
-      "relator": "VALDECIR PASCOAL",
-      "situacao": "Transitado em julgado"
-    },
-    {
-      "exercicio": 2017,
-      "processo": "18100002-7",
-      "data_julgamento": "2019-12-16",
-      "conclusao": "Aprovação",
-      "relator": "DIRCEU RODOLFO DE MELO JÚNIOR",
-      "situacao": "Transitado em julgado"
-    },
-    {
-      "exercicio": 2018,
-      "processo": "19100416-9",
-      "data_julgamento": "2022-02-09",
-      "conclusao": "Aprovação",
-      "relator": "CARLOS NEVES",
-      "situacao": "Transitado em julgado"
-    },
-    {
-      "exercicio": 2019,
-      "processo": "20100524-4",
-      "data_julgamento": "2023-09-13",
-      "conclusao": "Aprovação",
-      "relator": "EDUARDO LYRA PORTO",
-      "situacao": "Transitado em julgado"
-    },
-    {
-      "exercicio": 2020,
-      "processo": "21100644-0",
-      "data_julgamento": "2023-11-08",
-      "conclusao": "Aprovação",
-      "relator": "MARCOS LORETO",
-      "situacao": "Transitado em julgado"
-    },
-    {
-      "exercicio": 2021,
-      "processo": "22100604-7",
-      "data_julgamento": "2024-12-04",
-      "conclusao": "Aprovação com ressalvas",
-      "relator": "DIRCEU RODOLFO DE MELO JÚNIOR",
-      "situacao": "Transitado em julgado"
-    },
-    {
-      "exercicio": 2022,
-      "processo": "23100164-2",
-      "data_julgamento": "2025-06-04",
-      "conclusao": "Aprovação",
-      "relator": "RANILSON RAMOS",
-      "situacao": "Transitado em julgado"
-    },
-    {
-      "exercicio": 2023,
-      "processo": "24100726-4",
-      "data_julgamento": null,
-      "conclusao": null,
-      "relator": null,
-      "situacao": "Não Julgado"
-    },
-    {
-      "exercicio": 2024,
-      "mantido": true
-    },
-    {
-      "exercicio": 2025,
-      "mantido": true
-    }
-  ],
+  "contas_governador": [],
   "fontes": [
     {
       "titulo": "API de Dados Abertos do TCE-PE — catálogo de entidades",
       "url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!listar",
       "orgao": "Tribunal de Contas do Estado de Pernambuco (TCE-PE)",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     },
     {
       "titulo": "API de Dados Abertos do TCE-PE — entidade \"Resultados\" (documentação)",
       "url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=42",
       "orgao": "Tribunal de Contas do Estado de Pernambuco (TCE-PE)",
-      "acessado_em": "2026-11-26"
-    },
-    {
-      "titulo": "API de Dados Abertos do TCE-PE — contas de governo do Estado (consulta usada)",
-      "url": "https://sistemas.tcepe.tc.br/DadosAbertos/Resultados!json?Tipo=Governo&EsferaUJPrincipalProcesso=E",
-      "orgao": "Tribunal de Contas do Estado de Pernambuco (TCE-PE)",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots_e_restricoes": [
@@ -176,13 +81,17 @@
     "Julgamento político das contas (Alepe e Câmaras Municipais) ainda não coletado."
   ],
   "api_indisponivel": false,
-  "erros": [],
+  "erros": [
+    "Resultados (Governador): HTTP 503 em https://sistemas.tcepe.tc.br/DadosAbertos/Resultados!json?Tipo=Governo&EsferaUJPrincipalProcesso=E"
+  ],
   "estatisticas_http": {
-    "requisicoes": 7,
-    "retentativas": 0,
-    "bytes": 412753,
-    "falhas": []
+    "requisicoes": 14,
+    "retentativas": 8,
+    "bytes": 406719,
+    "falhas": [
+      "https://sistemas.tcepe.tc.br/DadosAbertos/Resultados!json?Tipo=Governo&EsferaUJPrincipalProcesso=E: HTTP 503 em https://sistemas.tcepe.tc.br/DadosAbertos/Resultados!json?Tipo=Governo&EsferaUJPrincipalProcesso=E"
+    ]
   },
-  "duracao_s": 13,
+  "duracao_s": 370,
   "ultima_coleta_completa": "2026-11-05"
 }

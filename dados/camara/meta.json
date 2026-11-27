@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-27T20:03:46.550Z",
+  "atualizado_em": "2026-11-27T20:18:18.433Z",
   "periodo": {
     "inicio": "2024-05-28",
     "fim": "2026-11-26"
@@ -43,32 +43,32 @@
     "presenca": {
       "2026": {
         "deputados": 567,
-        "sessoes_deliberativas": 88,
-        "dias_com_sessoes_deliberativas": 85,
-        "sessoes_com_lista_de_presenca_no_arquivo": 85,
-        "dias_consultados_no_servico": 83
+        "sessoes_deliberativas": 89,
+        "dias_com_sessoes_deliberativas": 86,
+        "sessoes_com_lista_de_presenca_no_arquivo": 86,
+        "dias_consultados_no_servico": 84
       }
     },
     "despesas": {
       "2025": {
         "deputados": 562,
-        "documentos": 169678,
-        "total_liquido": 213363357.76,
-        "lancamentos_no_arquivo": 170615,
+        "documentos": 208160,
+        "total_liquido": 239215124.85,
+        "lancamentos_no_arquivo": 209097,
         "lancamentos_de_liderancas": 937,
-        "cpf_de_fornecedor_descartados": 1846,
-        "documentos_sem_link": 7920,
-        "deputados_com_total_diferente_da_pagina_oficial": 531
+        "cpf_de_fornecedor_descartados": 1848,
+        "documentos_sem_link": 51810,
+        "deputados_com_total_diferente_da_pagina_oficial": 517
       },
       "2026": {
         "deputados": 565,
-        "documentos": 128279,
-        "total_liquido": 163483520.13,
-        "lancamentos_no_arquivo": 128906,
-        "lancamentos_de_liderancas": 627,
-        "cpf_de_fornecedor_descartados": 1367,
-        "documentos_sem_link": 2488,
-        "deputados_com_total_diferente_da_pagina_oficial": 556
+        "documentos": 129623,
+        "total_liquido": 163112551.17,
+        "lancamentos_no_arquivo": 130255,
+        "lancamentos_de_liderancas": 632,
+        "cpf_de_fornecedor_descartados": 1374,
+        "documentos_sem_link": 7519,
+        "deputados_com_total_diferente_da_pagina_oficial": 557
       }
     }
   },
@@ -154,6 +154,18 @@
     },
     {
       "titulo": "Arquivo de dados abertos (anual)",
+      "url": "https://dadosabertos.camara.leg.br/arquivos/eventos/csv/eventos-2026.csv",
+      "orgao": "Câmara dos Deputados",
+      "acessado_em": "2026-11-27"
+    },
+    {
+      "titulo": "Arquivo de dados abertos (anual)",
+      "url": "https://dadosabertos.camara.leg.br/arquivos/eventosPresencaDeputados/csv/eventosPresencaDeputados-2026.csv",
+      "orgao": "Câmara dos Deputados",
+      "acessado_em": "2026-11-27"
+    },
+    {
+      "titulo": "Arquivo de dados abertos (anual)",
       "url": "https://dadosabertos.camara.leg.br/arquivos/votacoes/json/votacoes-2026.json",
       "orgao": "Câmara dos Deputados",
       "acessado_em": "2026-11-27"
@@ -175,6 +187,42 @@
       "url": "https://dadosabertos.camara.leg.br/arquivos/votacoesVotos/csv/votacoesVotos-2026.csv",
       "orgao": "Câmara dos Deputados",
       "acessado_em": "2026-11-27"
+    },
+    {
+      "titulo": "Serviço de dados abertos SitCamaraWS (carteira parlamentar)",
+      "url": "https://www.camara.leg.br/SitCamaraWS/Deputados.asmx/ObterDeputados",
+      "orgao": "Câmara dos Deputados",
+      "acessado_em": "2026-11-27"
+    },
+    {
+      "titulo": "Serviço de dados abertos SitCamaraWS (frequência em Plenário)",
+      "url": "https://www.camara.leg.br/SitCamaraWS/sessoesreunioes.asmx/ListarPresencasDia?data=DD/MM/AAAA",
+      "orgao": "Câmara dos Deputados",
+      "acessado_em": "2026-11-27"
+    },
+    {
+      "titulo": "Página oficial de consulta da cota parlamentar (conferência)",
+      "url": "https://www.camara.leg.br/cota-parlamentar/sumarizado?nuDeputadoId={id}&dataInicio=1/2025&dataFim=12/2025",
+      "orgao": "Câmara dos Deputados",
+      "acessado_em": "2026-11-27"
+    },
+    {
+      "titulo": "Página oficial de consulta da cota parlamentar (conferência)",
+      "url": "https://www.camara.leg.br/cota-parlamentar/sumarizado?nuDeputadoId={id}&dataInicio=1/2026&dataFim=12/2026",
+      "orgao": "Câmara dos Deputados",
+      "acessado_em": "2026-11-27"
+    },
+    {
+      "titulo": "Cota para o Exercício da Atividade Parlamentar (arquivo anual)",
+      "url": "https://www.camara.leg.br/cotas/Ano-2025.csv.zip",
+      "orgao": "Câmara dos Deputados",
+      "acessado_em": "2026-11-27"
+    },
+    {
+      "titulo": "Cota para o Exercício da Atividade Parlamentar (arquivo anual)",
+      "url": "https://www.camara.leg.br/cotas/Ano-2026.csv.zip",
+      "orgao": "Câmara dos Deputados",
+      "acessado_em": "2026-11-27"
     }
   ],
   "observacoes": [
@@ -183,28 +231,28 @@
   ],
   "arquivos_em_massa": {
     "https://www.camara.leg.br/cotas/Ano-2025.csv.zip": {
-      "etag": "\"6b07cfcf-5b8880\"",
-      "last_modified": "Thu, 26 Nov 2026 06:21:03 GMT",
-      "sha256": "9a2a43eb0261b0311c48b1f6ed298c64c20107fa20b82a7375718bbd52bf60df",
-      "baixado_em": "2026-11-26"
+      "etag": "\"6b09264d-69cc97\"",
+      "last_modified": "Fri, 27 Nov 2026 06:42:21 GMT",
+      "sha256": "bd988474af55112a2698297af7ffe7130c127c7d1f88197c33ca21c83ac8f2ae",
+      "baixado_em": "2026-11-27"
     },
     "https://www.camara.leg.br/cotas/Ano-2026.csv.zip": {
-      "etag": "\"6b07cfce-494771\"",
-      "last_modified": "Thu, 26 Nov 2026 06:21:02 GMT",
-      "sha256": "9e8f716d5f9c2229023db3899401e6bde9f2d2f63d2ad522cad812277f177b6c",
-      "baixado_em": "2026-11-26"
+      "etag": "\"6b09264a-49e2b5\"",
+      "last_modified": "Fri, 27 Nov 2026 06:42:18 GMT",
+      "sha256": "fcff19418b84a8e36b781a1a42c0f916cf99c33293d26ee4608986c736bea630",
+      "baixado_em": "2026-11-27"
     },
     "https://dadosabertos.camara.leg.br/arquivos/eventos/csv/eventos-2026.csv": {
-      "etag": "\"6b07a8fa-1311c6\"",
-      "last_modified": "Thu, 26 Nov 2026 03:35:22 GMT",
-      "sha256": "539e2ece8a5c7cc78dfdae9debc8c72bfd0852bffd3ed56f09ec967db5ada993",
-      "baixado_em": "2026-11-26"
+      "etag": "\"6b08fa6f-134dcc\"",
+      "last_modified": "Fri, 27 Nov 2026 03:35:11 GMT",
+      "sha256": "39e78083c86b04e36f0d1571774984206bf415fc7d6959feae348c312f86f253",
+      "baixado_em": "2026-11-27"
     },
     "https://dadosabertos.camara.leg.br/arquivos/eventosPresencaDeputados/csv/eventosPresencaDeputados-2026.csv": {
-      "etag": "\"6b07ab71-ad12c8\"",
-      "last_modified": "Thu, 26 Nov 2026 03:45:53 GMT",
-      "sha256": "d7e68be3ae0d9b5d2d86f0aeb93432f6c89cde8fa9d921399f23feb62be3d8cc",
-      "baixado_em": "2026-11-26"
+      "etag": "\"6b08fcea-ae6b3a\"",
+      "last_modified": "Fri, 27 Nov 2026 03:45:46 GMT",
+      "sha256": "33c2aa9c810da1f1b431c1b43dd3ce134610915a8419dca38abd04ef5d2fb0a8",
+      "baixado_em": "2026-11-27"
     }
   },
   "ultima_execucao": {
@@ -213,13 +261,18 @@
     "anos_baixados": [
       2026
     ],
-    "duracao_segundos": 10,
-    "requisicoes": 20,
-    "retentativas": 0,
+    "duracao_segundos": 39,
+    "requisicoes": 33,
+    "retentativas": 1,
     "votacoes_gravadas": 0,
-    "arquivos_gravados": 2,
-    "arquivos_inalterados": 39,
-    "presenca": {},
-    "despesas": {}
+    "arquivos_gravados": 810,
+    "arquivos_inalterados": 362,
+    "presenca": {
+      "2026": "processado"
+    },
+    "despesas": {
+      "2025": "processado",
+      "2026": "processado"
+    }
   }
 }
