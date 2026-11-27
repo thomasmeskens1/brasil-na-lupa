@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-25T15:46:38.290Z",
-  "ultima_execucao": "2026-11-25T15:46:12.757Z",
+  "atualizado_em": "2026-11-27T15:33:46.581Z",
+  "ultima_execucao": "2026-11-27T15:14:22.129Z",
   "uf": "PA",
   "casa": "cm-eldorado-do-carajas",
   "orgao": "Câmara Municipal de Eldorado do Carajás",
   "host": "sapl.eldoradodocarajas.pa.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-25"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Eldorado do Carajás (API REST pública)",
       "url": "https://sapl.eldoradodocarajas.pa.leg.br/api/",
       "orgao": "Câmara Municipal de Eldorado do Carajás",
-      "acessado_em": "2026-11-25"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.eldoradodocarajas.pa.leg.br": null
+    "sapl.eldoradodocarajas.pa.leg.br": {
+      "lido_em": "2026-11-27T15:14:22.129Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,58 +81,58 @@
   "contagens": {
     "parlamentares": 11,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 505,
+    "proposicoes": 514,
     "normas": 199,
     "sessoes": 171,
-    "itens_pauta": 965,
-    "votacoes": 482,
+    "itens_pauta": 969,
+    "votacoes": 483,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 33,
       "inexistentes-na-fonte": 425,
-      "coletados": 24
+      "coletados": 25
     },
-    "votos_individuais": 303
+    "votos_individuais": 313
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 638,
+            "hi": 639,
             "lo": 149,
-            "n": 481,
+            "n": 482,
             "lo_data": "2023-10-02"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 616
+        "total_fonte": 617
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 400,
+            "hi": 410,
             "lo": 66,
-            "n": 303,
+            "n": 313,
             "lo_data": "2023-09-25"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 358
+        "total_fonte": 368
       },
       "ordemdia": {
         "faixas": [
           {
-            "hi": 735,
+            "hi": 739,
             "lo": 219,
-            "n": 481,
+            "n": 485,
             "lo_data": "2023-12-11"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 663
+        "total_fonte": 667
       },
       "expedientemateria": {
         "faixas": [
@@ -156,15 +163,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 893,
+            "hi": 894,
             "lo": 403,
-            "n": 481,
+            "n": 482,
             "lo_data": "2023-11-30"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 860
+        "total_fonte": 861
       },
       "normajuridica": {
         "faixas": [
@@ -182,20 +189,20 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 2962,
+            "hi": 2963,
             "lo": 1813,
-            "n": 1105,
+            "n": 1106,
             "lo_data": "2024-05-10"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2747
+        "total_fonte": 2748
       }
     },
     "tabelas_em": {
       "legislaturas": "2026-11-17T14:54:34.283Z",
-      "tipos_resultado": "2026-11-06T10:39:32.555Z",
+      "tipos_resultado": "2026-11-27T15:33:46.581Z",
       "tipos_materia": "2026-11-06T10:40:38.022Z",
       "mandatos": "2026-11-06T10:41:32.982Z",
       "tipos_norma": "2026-11-06T10:50:42.530Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-06T10:55:46.735Z",
       "autores": "2026-11-06T10:56:49.467Z"
     },
-    "ultima_requisicao": "2026-11-25T15:46:12.757Z",
+    "ultima_requisicao": "2026-11-27T15:33:44.540Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
