@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-25T15:46:26.178Z",
-  "ultima_execucao": "2026-11-25T15:46:11.119Z",
+  "atualizado_em": "2026-11-27T01:24:26.107Z",
+  "ultima_execucao": "2026-11-27T01:13:02.038Z",
   "uf": "MG",
   "casa": "cm-capitolio",
   "orgao": "Câmara Municipal de Capitólio",
   "host": "sapl.capitolio.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-25"
+    "fim": "2026-11-26"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Capitólio (API REST pública)",
       "url": "https://sapl.capitolio.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Capitólio",
-      "acessado_em": "2026-11-25"
+      "acessado_em": "2026-11-26"
     }
   ],
   "robots": {
-    "sapl.capitolio.mg.leg.br": null
+    "sapl.capitolio.mg.leg.br": {
+      "lido_em": "2026-11-27T01:13:02.038Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,10 +81,10 @@
   "contagens": {
     "parlamentares": 10,
     "parlamentares_em_exercicio": 8,
-    "proposicoes": 1097,
-    "normas": 94,
-    "sessoes": 91,
-    "itens_pauta": 477,
+    "proposicoes": 1100,
+    "normas": 95,
+    "sessoes": 93,
+    "itens_pauta": 479,
     "votacoes": 277,
     "votacoes_por_situacao_dos_votos": {
       "coletados": 257,
@@ -129,67 +136,67 @@
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 181,
+            "hi": 183,
             "lo": 16,
-            "n": 163,
+            "n": 165,
             "lo_data": "2025-05-13"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 163
+        "total_fonte": 165
       },
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 102,
+            "hi": 104,
             "lo": 5,
-            "n": 91,
+            "n": 93,
             "lo_data": "2024-12-05"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 91
+        "total_fonte": 93
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 1286,
+            "hi": 1289,
             "lo": 123,
-            "n": 1097,
+            "n": 1100,
             "lo_data": "2023-11-07"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1213
+        "total_fonte": 1216
       },
       "normajuridica": {
         "faixas": [
           {
-            "hi": 98,
+            "hi": 99,
             "lo": 1,
-            "n": 94,
+            "n": 95,
             "lo_data": "2024-01-15"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 94
+        "total_fonte": 95
       },
       "tramitacao": {
         "faixas": [
           {
-            "hi": 9591,
+            "hi": 9613,
             "lo": 245,
-            "n": 7852,
+            "n": 7872,
             "lo_data": "2024-04-16"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 7852
+        "total_fonte": 7872
       }
     },
     "tabelas_em": {
@@ -197,7 +204,7 @@
       "tipos_resultado": "2026-11-15T22:20:53.542Z",
       "tipos_materia": "2026-11-17T14:46:23.355Z",
       "mandatos": "2026-11-18T23:51:25.874Z",
-      "tipos_norma": "2026-11-06T10:50:33.921Z",
+      "tipos_norma": "2026-11-27T01:24:26.106Z",
       "tipos_sessao": "2026-11-06T10:51:33.779Z",
       "partidos": "2026-11-06T10:52:37.740Z",
       "filiacoes": "2026-11-06T10:53:37.926Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T10:55:38.724Z",
       "autores": "2026-11-06T10:56:41.234Z"
     },
-    "ultima_requisicao": "2026-11-25T15:46:11.119Z",
+    "ultima_requisicao": "2026-11-27T01:24:18.761Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

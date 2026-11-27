@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-25T01:41:30.665Z",
-  "ultima_execucao": "2026-11-25T01:41:03.898Z",
+  "atualizado_em": "2026-11-27T01:32:24.315Z",
+  "ultima_execucao": "2026-11-27T01:12:59.781Z",
   "uf": "ES",
   "casa": "cm-baixo-guandu",
   "orgao": "Câmara Municipal de Baixo Guandu",
   "host": "sapl.baixoguandu.es.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-24"
+    "fim": "2026-11-26"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Baixo Guandu (API REST pública)",
       "url": "https://sapl.baixoguandu.es.leg.br/api/",
       "orgao": "Câmara Municipal de Baixo Guandu",
-      "acessado_em": "2026-11-24"
+      "acessado_em": "2026-11-26"
     }
   ],
   "robots": {
-    "sapl.baixoguandu.es.leg.br": null
+    "sapl.baixoguandu.es.leg.br": {
+      "lido_em": "2026-11-27T01:12:59.781Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 0,
     "parlamentares_em_exercicio": 0,
-    "proposicoes": 133,
+    "proposicoes": 141,
     "normas": 102,
     "sessoes": 198,
     "itens_pauta": 200,
@@ -194,7 +201,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-05T23:14:45.850Z",
+      "legislaturas": "2026-11-27T01:32:24.315Z",
       "tipos_resultado": "2026-11-05T23:15:46.888Z",
       "tipos_materia": "2026-11-05T23:16:49.001Z",
       "mandatos": "2026-11-05T23:17:48.470Z",
@@ -206,7 +213,7 @@
       "status_tramitacao": "2026-11-05T23:32:03.378Z",
       "autores": "2026-11-05T23:33:06.243Z"
     },
-    "ultima_requisicao": "2026-11-25T01:41:03.898Z",
+    "ultima_requisicao": "2026-11-27T01:32:23.665Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

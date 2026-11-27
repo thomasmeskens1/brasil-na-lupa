@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-25T15:46:32.144Z",
-  "ultima_execucao": "2026-11-25T15:46:11.306Z",
+  "atualizado_em": "2026-11-27T01:24:29.916Z",
+  "ultima_execucao": "2026-11-27T01:13:02.216Z",
   "uf": "MG",
   "casa": "cm-congonhal",
   "orgao": "Câmara Municipal de Congonhal",
   "host": "sapl.congonhal.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-25"
+    "fim": "2026-11-26"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Congonhal (API REST pública)",
       "url": "https://sapl.congonhal.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Congonhal",
-      "acessado_em": "2026-11-25"
+      "acessado_em": "2026-11-26"
     }
   ],
   "robots": {
-    "sapl.congonhal.mg.leg.br": null
+    "sapl.congonhal.mg.leg.br": {
+      "lido_em": "2026-11-27T01:13:02.216Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -197,7 +204,7 @@
       "tipos_resultado": "2026-11-15T22:20:54.779Z",
       "tipos_materia": "2026-11-17T14:46:26.289Z",
       "mandatos": "2026-11-18T23:51:25.060Z",
-      "tipos_norma": "2026-11-06T10:50:34.525Z",
+      "tipos_norma": "2026-11-27T01:24:29.916Z",
       "tipos_sessao": "2026-11-06T10:51:34.364Z",
       "partidos": "2026-11-06T10:52:38.494Z",
       "filiacoes": "2026-11-06T10:53:49.409Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T10:56:42.394Z",
       "autores": "2026-11-06T10:58:41.514Z"
     },
-    "ultima_requisicao": "2026-11-25T15:46:11.306Z",
+    "ultima_requisicao": "2026-11-27T01:24:18.763Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

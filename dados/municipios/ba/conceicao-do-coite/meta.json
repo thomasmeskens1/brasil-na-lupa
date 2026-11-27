@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-25T15:46:27.313Z",
-  "ultima_execucao": "2026-11-25T15:46:11.301Z",
+  "atualizado_em": "2026-11-27T01:32:31.657Z",
+  "ultima_execucao": "2026-11-27T01:13:02.208Z",
   "uf": "BA",
   "casa": "cm-conceicao-do-coite",
   "orgao": "Câmara Municipal de Conceição do Coité",
   "host": "sapl.conceicaodocoite.ba.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-25"
+    "fim": "2026-11-26"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Conceição do Coité (API REST pública)",
       "url": "https://sapl.conceicaodocoite.ba.leg.br/api/",
       "orgao": "Câmara Municipal de Conceição do Coité",
-      "acessado_em": "2026-11-25"
+      "acessado_em": "2026-11-26"
     }
   ],
   "robots": {
-    "sapl.conceicaodocoite.ba.leg.br": null
+    "sapl.conceicaodocoite.ba.leg.br": {
+      "lido_em": "2026-11-27T01:13:02.208Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,14 +81,14 @@
   "contagens": {
     "parlamentares": 15,
     "parlamentares_em_exercicio": 15,
-    "proposicoes": 1159,
-    "normas": 672,
-    "sessoes": 297,
-    "itens_pauta": 1231,
-    "votacoes": 1016,
+    "proposicoes": 1173,
+    "normas": 678,
+    "sessoes": 299,
+    "itens_pauta": 1232,
+    "votacoes": 1017,
     "votacoes_por_situacao_dos_votos": {
       "em-coleta": 14,
-      "inexistentes-na-fonte": 1002
+      "inexistentes-na-fonte": 1003
     },
     "votos_individuais": 100
   },
@@ -90,15 +97,15 @@
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 2617,
+            "hi": 2618,
             "lo": 1559,
-            "n": 1008,
+            "n": 1009,
             "lo_data": "2024-04-01"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2400
+        "total_fonte": 2401
       },
       "votoparlamentar": {
         "faixas": [
@@ -116,15 +123,15 @@
       "ordemdia": {
         "faixas": [
           {
-            "hi": 1134,
+            "hi": 1135,
             "lo": 613,
-            "n": 486,
+            "n": 487,
             "lo_data": "2024-04-08"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 978
+        "total_fonte": 979
       },
       "expedientemateria": {
         "faixas": [
@@ -142,28 +149,28 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 1446,
+            "hi": 1448,
             "lo": 1143,
-            "n": 297,
+            "n": 299,
             "lo_data": "1999-02-22"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1426
+        "total_fonte": 1428
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 3548,
+            "hi": 3555,
             "lo": 2429,
-            "n": 1093,
+            "n": 1099,
             "lo_data": "2024-06-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 3414
+        "total_fonte": 3420
       },
       "normajuridica": {
         "faixas": [
@@ -181,15 +188,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 36117,
+            "hi": 36144,
             "lo": 24245,
-            "n": 11498,
+            "n": 11524,
             "lo_data": "2024-12-09"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 34193
+        "total_fonte": 34219
       }
     },
     "tabelas_em": {
@@ -197,7 +204,7 @@
       "tipos_resultado": "2026-11-15T22:29:04.881Z",
       "tipos_materia": "2026-11-17T14:54:32.683Z",
       "mandatos": "2026-11-18T23:59:31.366Z",
-      "tipos_norma": "2026-11-06T10:50:36.125Z",
+      "tipos_norma": "2026-11-27T01:32:31.657Z",
       "tipos_sessao": "2026-11-06T10:51:36.368Z",
       "partidos": "2026-11-06T10:52:38.133Z",
       "filiacoes": "2026-11-06T10:53:36.626Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T10:56:42.817Z",
       "autores": "2026-11-06T10:57:42.045Z"
     },
-    "ultima_requisicao": "2026-11-25T15:46:11.301Z",
+    "ultima_requisicao": "2026-11-27T01:32:26.837Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

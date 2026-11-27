@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-25T01:41:30.731Z",
-  "ultima_execucao": "2026-11-25T01:41:03.903Z",
+  "atualizado_em": "2026-11-27T01:22:17.296Z",
+  "ultima_execucao": "2026-11-27T01:12:59.787Z",
   "uf": "MG",
   "casa": "cm-bambui",
   "orgao": "Câmara Municipal de Bambuí",
   "host": "sapl.bambui.mg.leg.br",
   "periodo": {
     "inicio": null,
-    "fim": "2026-11-24"
+    "fim": "2026-11-26"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Bambuí (API REST pública)",
       "url": "https://sapl.bambui.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Bambuí",
-      "acessado_em": "2026-11-24"
+      "acessado_em": "2026-11-26"
     }
   ],
   "robots": {
-    "sapl.bambui.mg.leg.br": null
+    "sapl.bambui.mg.leg.br": {
+      "lido_em": "2026-11-27T01:12:59.787Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 10,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -184,7 +191,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-05T23:14:45.648Z",
+      "legislaturas": "2026-11-27T01:22:17.296Z",
       "tipos_resultado": "2026-11-05T23:15:46.685Z",
       "tipos_materia": "2026-11-05T23:16:50.128Z",
       "tipos_norma": "2026-11-05T23:25:56.722Z",
@@ -195,7 +202,7 @@
       "status_tramitacao": "2026-11-05T23:31:01.773Z",
       "autores": "2026-11-05T23:32:02.638Z"
     },
-    "ultima_requisicao": "2026-11-25T01:41:03.903Z",
+    "ultima_requisicao": "2026-11-27T01:22:10.941Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

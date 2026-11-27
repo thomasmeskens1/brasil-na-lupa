@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-25T01:41:30.600Z",
-  "ultima_execucao": "2026-11-25T01:41:03.876Z",
+  "atualizado_em": "2026-11-27T01:23:12.722Z",
+  "ultima_execucao": "2026-11-27T01:12:59.754Z",
   "uf": "RS",
   "casa": "cm-arroio-dos-ratos",
   "orgao": "Câmara Municipal de Arroio dos Ratos",
   "host": "sapl.arroiodosratos.rs.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-24"
+    "fim": "2026-11-26"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Arroio dos Ratos (API REST pública)",
       "url": "https://sapl.arroiodosratos.rs.leg.br/api/",
       "orgao": "Câmara Municipal de Arroio dos Ratos",
-      "acessado_em": "2026-11-24"
+      "acessado_em": "2026-11-26"
     }
   ],
   "robots": {
-    "sapl.arroiodosratos.rs.leg.br": null
+    "sapl.arroiodosratos.rs.leg.br": {
+      "lido_em": "2026-11-27T01:12:59.754Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 11,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -186,7 +193,7 @@
       }
     },
     "tabelas_em": {
-      "legislaturas": "2026-11-05T23:14:45.263Z",
+      "legislaturas": "2026-11-27T01:23:12.722Z",
       "tipos_resultado": "2026-11-05T23:15:46.288Z",
       "tipos_materia": "2026-11-05T23:16:47.937Z",
       "mandatos": "2026-11-05T23:17:48.306Z",
@@ -198,7 +205,7 @@
       "status_tramitacao": "2026-11-05T23:32:01.615Z",
       "autores": "2026-11-05T23:33:03.058Z"
     },
-    "ultima_requisicao": "2026-11-25T01:41:03.876Z",
+    "ultima_requisicao": "2026-11-27T01:23:11.938Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

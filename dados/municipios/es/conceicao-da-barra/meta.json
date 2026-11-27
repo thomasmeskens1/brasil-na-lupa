@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-25T15:46:26.679Z",
-  "ultima_execucao": "2026-11-25T15:46:11.217Z",
+  "atualizado_em": "2026-11-27T01:32:32.319Z",
+  "ultima_execucao": "2026-11-27T01:13:02.134Z",
   "uf": "ES",
   "casa": "cm-conceicao-da-barra",
   "orgao": "Câmara Municipal de Conceição da Barra",
   "host": "sapl.conceicaodabarra.es.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-25"
+    "fim": "2026-11-26"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Conceição da Barra (API REST pública)",
       "url": "https://sapl.conceicaodabarra.es.leg.br/api/",
       "orgao": "Câmara Municipal de Conceição da Barra",
-      "acessado_em": "2026-11-25"
+      "acessado_em": "2026-11-26"
     }
   ],
   "robots": {
-    "sapl.conceicaodabarra.es.leg.br": null
+    "sapl.conceicaodabarra.es.leg.br": {
+      "lido_em": "2026-11-27T01:13:02.134Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,9 +81,9 @@
   "contagens": {
     "parlamentares": 11,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 1535,
-    "normas": 296,
-    "sessoes": 207,
+    "proposicoes": 1555,
+    "normas": 305,
+    "sessoes": 209,
     "itens_pauta": 506,
     "votacoes": 100,
     "votacoes_por_situacao_dos_votos": {
@@ -142,41 +149,41 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 284,
+            "hi": 286,
             "lo": 76,
-            "n": 207,
+            "n": 209,
             "lo_data": "2021-10-18"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 266
+        "total_fonte": 268
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 2794,
+            "hi": 2806,
             "lo": 1325,
-            "n": 1463,
+            "n": 1475,
             "lo_data": "2024-06-18"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2745
+        "total_fonte": 2757
       },
       "normajuridica": {
         "faixas": [
           {
-            "hi": 1330,
+            "hi": 1339,
             "lo": 1030,
-            "n": 295,
+            "n": 304,
             "lo_data": "2023-03-13"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1300
+        "total_fonte": 1309
       },
       "tramitacao": {
         "faixas": [
@@ -197,7 +204,7 @@
       "tipos_resultado": "2026-11-15T22:29:03.675Z",
       "tipos_materia": "2026-11-17T14:54:32.527Z",
       "mandatos": "2026-11-18T23:59:32.356Z",
-      "tipos_norma": "2026-11-06T10:50:35.123Z",
+      "tipos_norma": "2026-11-27T01:32:32.318Z",
       "tipos_sessao": "2026-11-06T10:51:35.566Z",
       "partidos": "2026-11-06T10:52:37.546Z",
       "filiacoes": "2026-11-06T10:53:37.367Z",
@@ -205,7 +212,7 @@
       "status_tramitacao": "2026-11-06T10:55:39.951Z",
       "autores": "2026-11-06T10:56:42.873Z"
     },
-    "ultima_requisicao": "2026-11-25T15:46:11.217Z",
+    "ultima_requisicao": "2026-11-27T01:32:26.839Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
