@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:33.159Z",
-  "ultima_execucao": "2026-11-26T15:27:16.125Z",
+  "atualizado_em": "2026-11-28T00:57:05.014Z",
+  "ultima_execucao": "2026-11-28T00:45:39.744Z",
   "uf": "RN",
   "casa": "cm-alexandria",
   "orgao": "Câmara Municipal de Alexandria",
   "host": "sapl.alexandria.rn.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Alexandria (API REST pública)",
       "url": "https://sapl.alexandria.rn.leg.br/api/",
       "orgao": "Câmara Municipal de Alexandria",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.alexandria.rn.leg.br": null
+    "sapl.alexandria.rn.leg.br": {
+      "lido_em": "2026-11-28T00:45:39.744Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 495,
+    "proposicoes": 497,
     "normas": 209,
     "sessoes": 49,
     "itens_pauta": 89,
@@ -154,15 +161,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 514,
+            "hi": 516,
             "lo": 3,
-            "n": 495,
+            "n": 497,
             "lo_data": "2021-02-16"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 495
+        "total_fonte": 497
       },
       "normajuridica": {
         "faixas": [
@@ -200,11 +207,11 @@
       "tipos_sessao": "2026-11-21T13:45:16.878Z",
       "partidos": "2026-11-23T16:18:44.291Z",
       "filiacoes": "2026-11-25T01:52:19.553Z",
-      "parlamentares": "2026-11-05T17:12:02.586Z",
+      "parlamentares": "2026-11-28T00:57:05.013Z",
       "status_tramitacao": "2026-11-05T17:13:01.944Z",
       "autores": "2026-11-05T17:14:03.335Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:16.125Z",
+    "ultima_requisicao": "2026-11-28T00:56:58.940Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

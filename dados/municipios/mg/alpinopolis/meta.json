@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:32.786Z",
-  "ultima_execucao": "2026-11-26T15:27:16.198Z",
+  "atualizado_em": "2026-11-28T00:57:06.250Z",
+  "ultima_execucao": "2026-11-28T00:45:39.862Z",
   "uf": "MG",
   "casa": "cm-alpinopolis",
   "orgao": "Câmara Municipal de Alpinópolis",
   "host": "sapl.alpinopolis.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Alpinópolis (API REST pública)",
       "url": "https://sapl.alpinopolis.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Alpinópolis",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.alpinopolis.mg.leg.br": null
+    "sapl.alpinopolis.mg.leg.br": {
+      "lido_em": "2026-11-28T00:45:39.862Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 290,
+    "proposicoes": 291,
     "normas": 147,
     "sessoes": 104,
     "itens_pauta": 299,
@@ -155,15 +162,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 292,
+            "hi": 293,
             "lo": 1,
-            "n": 290,
+            "n": 291,
             "lo_data": "2023-05-08"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 290
+        "total_fonte": 291
       },
       "normajuridica": {
         "faixas": [
@@ -181,15 +188,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 1823,
+            "hi": 1866,
             "lo": 1,
-            "n": 1723,
+            "n": 1765,
             "lo_data": "2023-05-05"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1723
+        "total_fonte": 1765
       }
     },
     "tabelas_em": {
@@ -201,11 +208,11 @@
       "tipos_sessao": "2026-11-21T13:45:17.520Z",
       "partidos": "2026-11-23T16:18:44.630Z",
       "filiacoes": "2026-11-25T01:52:21.160Z",
-      "parlamentares": "2026-11-05T17:12:00.914Z",
+      "parlamentares": "2026-11-28T00:57:06.250Z",
       "status_tramitacao": "2026-11-05T17:13:00.518Z",
       "autores": "2026-11-05T17:14:01.326Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:16.198Z",
+    "ultima_requisicao": "2026-11-28T00:56:58.942Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

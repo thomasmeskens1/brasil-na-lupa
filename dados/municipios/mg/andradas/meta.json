@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:29.045Z",
-  "ultima_execucao": "2026-11-26T15:27:16.745Z",
+  "atualizado_em": "2026-11-28T01:06:10.027Z",
+  "ultima_execucao": "2026-11-28T00:45:40.853Z",
   "uf": "MG",
   "casa": "cm-andradas",
   "orgao": "Câmara Municipal de Andradas",
   "host": "sapl.andradas.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Andradas (API REST pública)",
       "url": "https://sapl.andradas.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Andradas",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.andradas.mg.leg.br": null
+    "sapl.andradas.mg.leg.br": {
+      "lido_em": "2026-11-28T00:45:40.853Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 21,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 4244,
+    "proposicoes": 4426,
     "normas": 297,
     "sessoes": 188,
     "itens_pauta": 396,
@@ -156,15 +163,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 17384,
+            "hi": 17558,
             "lo": 13162,
-            "n": 4172,
+            "n": 4345,
             "lo_data": "2024-12-09"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 17024
+        "total_fonte": 17197
       },
       "normajuridica": {
         "faixas": [
@@ -182,15 +189,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 19698,
+            "hi": 19722,
             "lo": 16049,
-            "n": 3614,
+            "n": 3638,
             "lo_data": "2024-11-28"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 19233
+        "total_fonte": 19257
       }
     },
     "tabelas_em": {
@@ -199,14 +206,14 @@
       "tipos_materia": "2026-11-18T14:30:34.869Z",
       "mandatos": "2026-11-21T13:53:26.620Z",
       "tipos_norma": "2026-11-23T16:26:54.707Z",
-      "tipos_sessao": "2026-11-05T17:09:00.209Z",
+      "tipos_sessao": "2026-11-28T01:06:10.026Z",
       "partidos": "2026-11-05T17:10:01.640Z",
       "filiacoes": "2026-11-05T17:11:02.673Z",
       "parlamentares": "2026-11-05T17:12:05.549Z",
       "status_tramitacao": "2026-11-05T17:13:06.725Z",
       "autores": "2026-11-05T17:14:06.292Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:16.745Z",
+    "ultima_requisicao": "2026-11-28T01:06:07.956Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

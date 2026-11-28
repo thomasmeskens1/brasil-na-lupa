@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:33.184Z",
-  "ultima_execucao": "2026-11-26T15:27:16.121Z",
+  "atualizado_em": "2026-11-28T01:05:12.082Z",
+  "ultima_execucao": "2026-11-28T00:45:39.737Z",
   "uf": "ES",
   "casa": "cm-alegre",
   "orgao": "Câmara Municipal de Alegre",
   "host": "sapl.alegre.es.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Alegre (API REST pública)",
       "url": "https://sapl.alegre.es.leg.br/api/",
       "orgao": "Câmara Municipal de Alegre",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.alegre.es.leg.br": null
+    "sapl.alegre.es.leg.br": {
+      "lido_em": "2026-11-28T00:45:39.737Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,58 +81,58 @@
   "contagens": {
     "parlamentares": 11,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 460,
+    "proposicoes": 467,
     "normas": 331,
-    "sessoes": 207,
-    "itens_pauta": 299,
-    "votacoes": 296,
+    "sessoes": 208,
+    "itens_pauta": 302,
+    "votacoes": 298,
     "votacoes_por_situacao_dos_votos": {
-      "em-coleta": 4,
-      "inexistentes-na-fonte": 140,
-      "coletados": 152
+      "inexistentes-na-fonte": 141,
+      "em-coleta": 3,
+      "coletados": 154
     },
-    "votos_individuais": 1623
+    "votos_individuais": 1645
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 778,
+            "hi": 780,
             "lo": 461,
-            "n": 296,
+            "n": 298,
             "lo_data": "2023-06-28"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 708
+        "total_fonte": 710
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 9358,
+            "hi": 9380,
             "lo": 7583,
-            "n": 1623,
+            "n": 1645,
             "lo_data": "2024-12-17"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 8513
+        "total_fonte": 8535
       },
       "ordemdia": {
         "faixas": [
           {
-            "hi": 803,
+            "hi": 805,
             "lo": 485,
-            "n": 296,
+            "n": 298,
             "lo_data": "2023-07-03"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 716
+        "total_fonte": 718
       },
       "expedientemateria": {
         "faixas": [
@@ -143,15 +150,15 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 453,
+            "hi": 454,
             "lo": 247,
-            "n": 207,
+            "n": 208,
             "lo_data": "2022-10-10"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 444
+        "total_fonte": 445
       },
       "materialegislativa": {
         "faixas": [
@@ -202,11 +209,11 @@
       "tipos_sessao": "2026-11-21T13:53:24.398Z",
       "partidos": "2026-11-23T16:26:53.474Z",
       "filiacoes": "2026-11-25T02:00:28.089Z",
-      "parlamentares": "2026-11-05T17:12:00.289Z",
+      "parlamentares": "2026-11-28T01:05:12.082Z",
       "status_tramitacao": "2026-11-05T17:13:00.547Z",
       "autores": "2026-11-05T17:14:01.528Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:16.121Z",
+    "ultima_requisicao": "2026-11-28T01:05:06.941Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

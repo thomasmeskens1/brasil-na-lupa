@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:33.260Z",
-  "ultima_execucao": "2026-11-26T15:27:16.108Z",
+  "atualizado_em": "2026-11-28T01:00:05.569Z",
+  "ultima_execucao": "2026-11-28T00:45:39.718Z",
   "uf": "RS",
   "casa": "cm-agudo",
   "orgao": "Câmara Municipal de Agudo",
   "host": "sapl.agudo.rs.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Agudo (API REST pública)",
       "url": "https://sapl.agudo.rs.leg.br/api/",
       "orgao": "Câmara Municipal de Agudo",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.agudo.rs.leg.br": null
+    "sapl.agudo.rs.leg.br": {
+      "lido_em": "2026-11-28T00:45:39.718Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 15,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,9 +81,9 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 665,
+    "proposicoes": 668,
     "normas": 586,
-    "sessoes": 311,
+    "sessoes": 313,
     "itens_pauta": 887,
     "votacoes": 488,
     "votacoes_por_situacao_dos_votos": {
@@ -156,15 +163,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 12237,
+            "hi": 12240,
             "lo": 11622,
-            "n": 612,
+            "n": 615,
             "lo_data": "2024-04-22"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 12130
+        "total_fonte": 12133
       },
       "normajuridica": {
         "faixas": [
@@ -182,15 +189,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 23460,
+            "hi": 23524,
             "lo": 17734,
-            "n": 5426,
+            "n": 5490,
             "lo_data": "2024-11-22"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 21875
+        "total_fonte": 21909
       }
     },
     "tabelas_em": {
@@ -202,11 +209,11 @@
       "tipos_sessao": "2026-11-21T13:53:24.586Z",
       "partidos": "2026-11-23T16:26:52.529Z",
       "filiacoes": "2026-11-25T02:01:27.501Z",
-      "parlamentares": "2026-11-05T17:14:01.828Z",
+      "parlamentares": "2026-11-28T01:00:05.568Z",
       "status_tramitacao": "2026-11-05T17:15:02.231Z",
       "autores": "2026-11-05T17:17:04.275Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:16.108Z",
+    "ultima_requisicao": "2026-11-28T01:00:01.939Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

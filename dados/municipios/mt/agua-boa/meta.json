@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:33.388Z",
-  "ultima_execucao": "2026-11-26T15:27:16.094Z",
+  "atualizado_em": "2026-11-28T00:57:05.406Z",
+  "ultima_execucao": "2026-11-28T00:45:39.695Z",
   "uf": "MT",
   "casa": "cm-agua-boa",
   "orgao": "Câmara Municipal de Água Boa",
   "host": "sapl.aguaboa.mt.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Água Boa (API REST pública)",
       "url": "https://sapl.aguaboa.mt.leg.br/api/",
       "orgao": "Câmara Municipal de Água Boa",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.aguaboa.mt.leg.br": null
+    "sapl.aguaboa.mt.leg.br": {
+      "lido_em": "2026-11-28T00:45:39.695Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,10 +81,10 @@
   "contagens": {
     "parlamentares": 17,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 1468,
-    "normas": 509,
+    "proposicoes": 1474,
+    "normas": 510,
     "sessoes": 200,
-    "itens_pauta": 1746,
+    "itens_pauta": 1748,
     "votacoes": 688,
     "votacoes_por_situacao_dos_votos": {
       "inexistentes-na-fonte": 118,
@@ -129,15 +136,15 @@
       "expedientemateria": {
         "faixas": [
           {
-            "hi": 5754,
+            "hi": 5756,
             "lo": 4450,
-            "n": 1165,
+            "n": 1167,
             "lo_data": "2024-07-01"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 5052
+        "total_fonte": 5054
       },
       "sessaoplenaria": {
         "faixas": [
@@ -155,41 +162,41 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 7659,
+            "hi": 7665,
             "lo": 6179,
-            "n": 1427,
+            "n": 1433,
             "lo_data": "2024-08-19"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 7418
+        "total_fonte": 7424
       },
       "normajuridica": {
         "faixas": [
           {
-            "hi": 3721,
+            "hi": 3722,
             "lo": 3214,
-            "n": 497,
+            "n": 498,
             "lo_data": "2024-07-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 3662
+        "total_fonte": 3663
       },
       "tramitacao": {
         "faixas": [
           {
-            "hi": 4931,
+            "hi": 4932,
             "lo": 3518,
-            "n": 1392,
+            "n": 1393,
             "lo_data": "2024-09-02"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 4640
+        "total_fonte": 4641
       }
     },
     "tabelas_em": {
@@ -201,11 +208,11 @@
       "tipos_sessao": "2026-11-21T13:53:23.784Z",
       "partidos": "2026-11-23T16:26:53.587Z",
       "filiacoes": "2026-11-25T01:53:19.965Z",
-      "parlamentares": "2026-11-05T17:12:00.058Z",
+      "parlamentares": "2026-11-28T00:57:05.403Z",
       "status_tramitacao": "2026-11-05T17:13:00.234Z",
       "autores": "2026-11-05T17:14:01.301Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:16.094Z",
+    "ultima_requisicao": "2026-11-28T00:56:58.941Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

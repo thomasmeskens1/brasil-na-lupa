@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:36.815Z",
-  "ultima_execucao": "2026-11-26T15:27:16.965Z",
+  "atualizado_em": "2026-11-28T00:57:09.614Z",
+  "ultima_execucao": "2026-11-28T00:45:41.108Z",
   "uf": "MG",
   "casa": "cm-vargem-bonita",
   "orgao": "Câmara Municipal de Vargem Bonita",
   "host": "sapl.vargembonita.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Vargem Bonita (API REST pública)",
       "url": "https://sapl.vargembonita.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Vargem Bonita",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.vargembonita.mg.leg.br": null
+    "sapl.vargembonita.mg.leg.br": {
+      "lido_em": "2026-11-28T00:45:41.108Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -76,7 +83,7 @@
     "parlamentares_em_exercicio": 9,
     "proposicoes": 309,
     "normas": 198,
-    "sessoes": 192,
+    "sessoes": 193,
     "itens_pauta": 220,
     "votacoes": 200,
     "votacoes_por_situacao_dos_votos": {
@@ -143,15 +150,15 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 193,
+            "hi": 194,
             "lo": 1,
-            "n": 192,
+            "n": 193,
             "lo_data": "2018-11-26"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 192
+        "total_fonte": 193
       },
       "materialegislativa": {
         "faixas": [
@@ -182,15 +189,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 1217,
+            "hi": 1219,
             "lo": 448,
-            "n": 757,
+            "n": 759,
             "lo_data": "2023-09-21"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1201
+        "total_fonte": 1203
       }
     },
     "tabelas_em": {
@@ -199,14 +206,14 @@
       "tipos_materia": "2026-11-18T14:22:26.472Z",
       "mandatos": "2026-11-21T13:45:21.556Z",
       "tipos_norma": "2026-11-23T16:18:49.669Z",
-      "tipos_sessao": "2026-11-07T21:30:39.303Z",
+      "tipos_sessao": "2026-11-28T00:57:09.614Z",
       "partidos": "2026-11-07T21:31:39.929Z",
       "filiacoes": "2026-11-07T21:32:41.415Z",
       "parlamentares": "2026-11-07T21:33:43.538Z",
       "status_tramitacao": "2026-11-07T21:34:43.316Z",
       "autores": "2026-11-07T21:35:44.199Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:16.965Z",
+    "ultima_requisicao": "2026-11-28T00:56:58.954Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:34.267Z",
-  "ultima_execucao": "2026-11-26T15:27:15.946Z",
+  "atualizado_em": "2026-11-28T00:57:03.040Z",
+  "ultima_execucao": "2026-11-28T00:45:39.446Z",
   "uf": "RS",
   "casa": "cm-sao-joao-do-polesine",
   "orgao": "Câmara Municipal de São João do Polêsine",
   "host": "sapl.saojoaodopolesine.rs.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de São João do Polêsine (API REST pública)",
       "url": "https://sapl.saojoaodopolesine.rs.leg.br/api/",
       "orgao": "Câmara Municipal de São João do Polêsine",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.saojoaodopolesine.rs.leg.br": null
+    "sapl.saojoaodopolesine.rs.leg.br": {
+      "lido_em": "2026-11-28T00:45:39.446Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -199,12 +206,12 @@
       "tipos_norma": "2026-11-21T13:45:13.714Z",
       "tipos_sessao": "2026-11-23T16:18:42.069Z",
       "partidos": "2026-11-25T01:52:17.153Z",
-      "filiacoes": "2026-11-07T12:22:15.673Z",
+      "filiacoes": "2026-11-28T00:57:03.040Z",
       "parlamentares": "2026-11-07T12:23:16.632Z",
       "status_tramitacao": "2026-11-07T12:24:17.380Z",
       "autores": "2026-11-07T12:25:17.939Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:15.946Z",
+    "ultima_requisicao": "2026-11-28T00:56:58.936Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

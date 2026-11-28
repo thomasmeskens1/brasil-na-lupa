@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:35.911Z",
-  "ultima_execucao": "2026-11-26T15:27:15.672Z",
+  "atualizado_em": "2026-11-28T00:57:01.425Z",
+  "ultima_execucao": "2026-11-28T00:45:39.031Z",
   "uf": "MG",
   "casa": "cm-sao-francisco-de-sales",
   "orgao": "Câmara Municipal de São Francisco de Sales",
   "host": "sapl.saofranciscodesales.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de São Francisco de Sales (API REST pública)",
       "url": "https://sapl.saofranciscodesales.mg.leg.br/api/",
       "orgao": "Câmara Municipal de São Francisco de Sales",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.saofranciscodesales.mg.leg.br": null
+    "sapl.saofranciscodesales.mg.leg.br": {
+      "lido_em": "2026-11-28T00:45:39.031Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 414,
+    "proposicoes": 421,
     "normas": 5,
     "sessoes": 94,
     "itens_pauta": 395,
@@ -156,15 +163,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 504,
+            "hi": 511,
             "lo": 83,
-            "n": 399,
+            "n": 406,
             "lo_data": "2015-08-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 479
+        "total_fonte": 486
       },
       "normajuridica": {
         "faixas": [
@@ -182,15 +189,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 186,
+            "hi": 211,
             "lo": 10,
-            "n": 146,
+            "n": 168,
             "lo_data": "2026-08-17"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 146
+        "total_fonte": 168
       }
     },
     "tabelas_em": {
@@ -199,14 +206,14 @@
       "tipos_materia": "2026-11-21T13:51:19.121Z",
       "mandatos": "2026-11-23T16:18:40.100Z",
       "tipos_norma": "2026-11-25T01:52:16.717Z",
-      "tipos_sessao": "2026-11-07T12:20:10.658Z",
+      "tipos_sessao": "2026-11-28T00:57:01.425Z",
       "partidos": "2026-11-07T12:21:11.075Z",
       "filiacoes": "2026-11-07T12:22:12.501Z",
       "parlamentares": "2026-11-07T12:23:14.448Z",
       "status_tramitacao": "2026-11-07T12:24:15.223Z",
       "autores": "2026-11-07T12:25:15.953Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:15.672Z",
+    "ultima_requisicao": "2026-11-28T00:56:58.930Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

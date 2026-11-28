@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:32.896Z",
-  "ultima_execucao": "2026-11-26T15:27:16.176Z",
+  "atualizado_em": "2026-11-28T01:44:48.481Z",
+  "ultima_execucao": "2026-11-28T00:45:39.835Z",
   "uf": "MG",
   "casa": "cm-alfenas",
   "orgao": "Câmara Municipal de Alfenas",
   "host": "sapl.alfenas.mg.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Alfenas (API REST pública)",
       "url": "https://sapl.alfenas.mg.leg.br/api/",
       "orgao": "Câmara Municipal de Alfenas",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.alfenas.mg.leg.br": null
+    "sapl.alfenas.mg.leg.br": {
+      "lido_em": "2026-11-28T00:45:39.835Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 59,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -57,7 +64,7 @@
       "concluida": true
     },
     "tramitacao": {
-      "desde": "2025-09-12",
+      "desde": "2025-06-16",
       "concluida": false
     }
   },
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 14,
     "parlamentares_em_exercicio": 12,
-    "proposicoes": 3296,
+    "proposicoes": 3334,
     "normas": 395,
     "sessoes": 161,
     "itens_pauta": 3647,
@@ -156,15 +163,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 6744,
+            "hi": 6774,
             "lo": 3427,
-            "n": 3264,
+            "n": 3294,
             "lo_data": "2024-10-24"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 6648
+        "total_fonte": 6678
       },
       "normajuridica": {
         "faixas": [
@@ -182,15 +189,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 39798,
-            "lo": 23355,
-            "n": 16200,
-            "lo_data": "2025-09-12"
+            "hi": 39995,
+            "lo": 19947,
+            "n": 19740,
+            "lo_data": "2025-06-16"
           }
         ],
         "concluido": false,
         "tamanho_pagina": 100,
-        "total_fonte": 39092
+        "total_fonte": 39289
       }
     },
     "tabelas_em": {
@@ -202,11 +209,11 @@
       "tipos_sessao": "2026-11-21T13:53:24.785Z",
       "partidos": "2026-11-23T16:26:54.597Z",
       "filiacoes": "2026-11-25T02:00:27.672Z",
-      "parlamentares": "2026-11-05T17:12:01.733Z",
+      "parlamentares": "2026-11-28T01:06:09.667Z",
       "status_tramitacao": "2026-11-05T17:13:01.905Z",
       "autores": "2026-11-05T17:14:02.777Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:16.176Z",
+    "ultima_requisicao": "2026-11-28T01:44:46.283Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

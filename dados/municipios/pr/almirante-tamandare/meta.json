@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:32.833Z",
-  "ultima_execucao": "2026-11-26T15:27:16.189Z",
+  "atualizado_em": "2026-11-28T01:05:12.646Z",
+  "ultima_execucao": "2026-11-28T00:45:39.849Z",
   "uf": "PR",
   "casa": "cm-almirante-tamandare",
   "orgao": "Câmara Municipal de Almirante Tamandaré",
   "host": "sapl.almirantetamandare.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Almirante Tamandaré (API REST pública)",
       "url": "https://sapl.almirantetamandare.pr.leg.br/api/",
       "orgao": "Câmara Municipal de Almirante Tamandaré",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.almirantetamandare.pr.leg.br": null
+    "sapl.almirantetamandare.pr.leg.br": {
+      "lido_em": "2026-11-28T00:45:39.849Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,9 +81,9 @@
   "contagens": {
     "parlamentares": 18,
     "parlamentares_em_exercicio": 15,
-    "proposicoes": 908,
+    "proposicoes": 917,
     "normas": 573,
-    "sessoes": 220,
+    "sessoes": 228,
     "itens_pauta": 695,
     "votacoes": 100,
     "votacoes_por_situacao_dos_votos": {
@@ -155,15 +162,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 2989,
+            "hi": 2998,
             "lo": 2124,
-            "n": 848,
+            "n": 857,
             "lo_data": "2024-06-17"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 2897
+        "total_fonte": 2906
       },
       "normajuridica": {
         "faixas": [
@@ -201,11 +208,11 @@
       "tipos_sessao": "2026-11-21T13:53:24.995Z",
       "partidos": "2026-11-23T16:26:53.953Z",
       "filiacoes": "2026-11-25T02:00:28.608Z",
-      "parlamentares": "2026-11-05T17:12:01.831Z",
+      "parlamentares": "2026-11-28T01:05:12.646Z",
       "status_tramitacao": "2026-11-05T17:13:01.495Z",
       "autores": "2026-11-05T17:15:03.215Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:16.189Z",
+    "ultima_requisicao": "2026-11-28T01:05:06.947Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

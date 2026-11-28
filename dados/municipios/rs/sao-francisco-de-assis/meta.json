@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:35.954Z",
-  "ultima_execucao": "2026-11-26T15:27:15.661Z",
+  "atualizado_em": "2026-11-28T00:57:01.107Z",
+  "ultima_execucao": "2026-11-28T00:45:39.019Z",
   "uf": "RS",
   "casa": "cm-sao-francisco-de-assis",
   "orgao": "Câmara Municipal de São Francisco de Assis",
   "host": "sapl.saofranciscodeassis.rs.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de São Francisco de Assis (API REST pública)",
       "url": "https://sapl.saofranciscodeassis.rs.leg.br/api/",
       "orgao": "Câmara Municipal de São Francisco de Assis",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.saofranciscodeassis.rs.leg.br": null
+    "sapl.saofranciscodeassis.rs.leg.br": {
+      "lido_em": "2026-11-28T00:45:39.019Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -198,14 +205,14 @@
       "tipos_materia": "2026-11-21T13:45:12.126Z",
       "mandatos": "2026-11-23T16:18:39.903Z",
       "tipos_norma": "2026-11-25T01:52:15.919Z",
-      "tipos_sessao": "2026-11-07T12:20:08.459Z",
+      "tipos_sessao": "2026-11-28T00:57:01.107Z",
       "partidos": "2026-11-07T12:21:09.668Z",
       "filiacoes": "2026-11-07T12:22:10.381Z",
       "parlamentares": "2026-11-07T12:24:13.432Z",
       "status_tramitacao": "2026-11-07T12:25:13.256Z",
       "autores": "2026-11-07T12:26:14.186Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:15.661Z",
+    "ultima_requisicao": "2026-11-28T00:56:58.929Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

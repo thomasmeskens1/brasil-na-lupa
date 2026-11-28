@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:35.142Z",
-  "ultima_execucao": "2026-11-26T15:27:15.824Z",
+  "atualizado_em": "2026-11-28T01:05:09.049Z",
+  "ultima_execucao": "2026-11-28T00:45:39.267Z",
   "uf": "RS",
   "casa": "cm-sao-jeronimo",
   "orgao": "Câmara Municipal de São Jerônimo",
   "host": "sapl.saojeronimo.rs.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de São Jerônimo (API REST pública)",
       "url": "https://sapl.saojeronimo.rs.leg.br/api/",
       "orgao": "Câmara Municipal de São Jerônimo",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.saojeronimo.rs.leg.br": null
+    "sapl.saojeronimo.rs.leg.br": {
+      "lido_em": "2026-11-28T00:45:39.267Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 12,
     "parlamentares_em_exercicio": 11,
-    "proposicoes": 3454,
+    "proposicoes": 3479,
     "normas": 480,
     "sessoes": 200,
     "itens_pauta": 994,
@@ -156,15 +163,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 11469,
+            "hi": 11471,
             "lo": 7966,
-            "n": 3421,
+            "n": 3423,
             "lo_data": "2024-11-18"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 11172
+        "total_fonte": 11174
       },
       "normajuridica": {
         "faixas": [
@@ -200,13 +207,13 @@
       "mandatos": "2026-11-21T13:53:22.822Z",
       "tipos_norma": "2026-11-23T16:26:51.504Z",
       "tipos_sessao": "2026-11-25T02:00:25.598Z",
-      "partidos": "2026-11-07T12:21:11.887Z",
+      "partidos": "2026-11-28T01:05:09.049Z",
       "filiacoes": "2026-11-07T12:22:13.582Z",
       "parlamentares": "2026-11-07T12:23:15.388Z",
       "status_tramitacao": "2026-11-07T12:24:16.002Z",
       "autores": "2026-11-07T12:25:17.446Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:15.824Z",
+    "ultima_requisicao": "2026-11-28T01:05:06.932Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

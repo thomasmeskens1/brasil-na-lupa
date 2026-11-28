@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:34.088Z",
-  "ultima_execucao": "2026-11-26T15:27:15.978Z",
+  "atualizado_em": "2026-11-28T01:05:09.700Z",
+  "ultima_execucao": "2026-11-28T00:45:39.512Z",
   "uf": "RN",
   "casa": "cm-acari",
   "orgao": "Câmara Municipal de Acari",
   "host": "sapl.acari.rn.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Acari (API REST pública)",
       "url": "https://sapl.acari.rn.leg.br/api/",
       "orgao": "Câmara Municipal de Acari",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.acari.rn.leg.br": null
+    "sapl.acari.rn.leg.br": {
+      "lido_em": "2026-11-28T00:45:39.512Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,7 +81,7 @@
   "contagens": {
     "parlamentares": 10,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 905,
+    "proposicoes": 913,
     "normas": 407,
     "sessoes": 202,
     "itens_pauta": 806,
@@ -201,12 +208,12 @@
       "tipos_norma": "2026-11-21T13:53:23.198Z",
       "tipos_sessao": "2026-11-23T16:26:52.906Z",
       "partidos": "2026-11-25T02:00:26.015Z",
-      "filiacoes": "2026-11-04T23:24:38.879Z",
+      "filiacoes": "2026-11-28T01:05:09.700Z",
       "parlamentares": "2026-11-04T23:25:39.826Z",
       "status_tramitacao": "2026-11-04T23:26:40.592Z",
       "autores": "2026-11-04T23:27:42.310Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:15.978Z",
+    "ultima_requisicao": "2026-11-28T01:05:06.936Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

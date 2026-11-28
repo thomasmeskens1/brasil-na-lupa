@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:31.821Z",
-  "ultima_execucao": "2026-11-26T15:27:16.375Z",
+  "atualizado_em": "2026-11-28T00:57:07.287Z",
+  "ultima_execucao": "2026-11-28T00:45:40.127Z",
   "uf": "MT",
   "casa": "cm-alto-garcas",
   "orgao": "Câmara Municipal de Alto Garças",
   "host": "sapl.altogarcas.mt.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Alto Garças (API REST pública)",
       "url": "https://sapl.altogarcas.mt.leg.br/api/",
       "orgao": "Câmara Municipal de Alto Garças",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.altogarcas.mt.leg.br": null
+    "sapl.altogarcas.mt.leg.br": {
+      "lido_em": "2026-11-28T00:45:40.127Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,10 +81,10 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 463,
+    "proposicoes": 468,
     "normas": 139,
-    "sessoes": 43,
-    "itens_pauta": 538,
+    "sessoes": 44,
+    "itens_pauta": 547,
     "votacoes": 404,
     "votacoes_por_situacao_dos_votos": {
       "inexistentes-na-fonte": 400,
@@ -116,15 +123,15 @@
       "ordemdia": {
         "faixas": [
           {
-            "hi": 602,
+            "hi": 611,
             "lo": 2,
-            "n": 532,
+            "n": 541,
             "lo_data": "2026-01-15"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 535
+        "total_fonte": 544
       },
       "expedientemateria": {
         "faixas": [
@@ -142,28 +149,28 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 47,
+            "hi": 48,
             "lo": 4,
-            "n": 42,
+            "n": 43,
             "lo_data": "2026-01-15"
           }
         ],
         "concluido": true,
         "tamanho_pagina": null,
-        "total_fonte": 43
+        "total_fonte": 44
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 495,
+            "hi": 500,
             "lo": 9,
-            "n": 463,
+            "n": 468,
             "lo_data": "2026-02-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 463
+        "total_fonte": 468
       },
       "normajuridica": {
         "faixas": [
@@ -181,15 +188,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 3592,
+            "hi": 3622,
             "lo": 19,
-            "n": 3413,
+            "n": 3443,
             "lo_data": "2026-02-04"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 3413
+        "total_fonte": 3443
       }
     },
     "tabelas_em": {
@@ -201,11 +208,11 @@
       "tipos_sessao": "2026-11-21T13:45:18.510Z",
       "partidos": "2026-11-23T16:18:45.495Z",
       "filiacoes": "2026-11-25T01:52:22.366Z",
-      "parlamentares": "2026-11-05T17:12:04.001Z",
+      "parlamentares": "2026-11-28T00:57:07.287Z",
       "status_tramitacao": "2026-11-05T17:13:03.295Z",
       "autores": "2026-11-05T17:14:04.311Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:16.375Z",
+    "ultima_requisicao": "2026-11-28T00:56:58.945Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

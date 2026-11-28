@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:33.692Z",
-  "ultima_execucao": "2026-11-26T15:27:16.038Z",
+  "atualizado_em": "2026-11-28T01:05:10.140Z",
+  "ultima_execucao": "2026-11-28T00:45:39.604Z",
   "uf": "MA",
   "casa": "cm-afonso-cunha",
   "orgao": "Câmara Municipal de Afonso Cunha",
   "host": "sapl.afonsocunha.ma.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Afonso Cunha (API REST pública)",
       "url": "https://sapl.afonsocunha.ma.leg.br/api/",
       "orgao": "Câmara Municipal de Afonso Cunha",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.afonsocunha.ma.leg.br": null
+    "sapl.afonsocunha.ma.leg.br": {
+      "lido_em": "2026-11-28T00:45:39.604Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -77,13 +84,13 @@
     "proposicoes": 158,
     "normas": 95,
     "sessoes": 175,
-    "itens_pauta": 211,
+    "itens_pauta": 219,
     "votacoes": 100,
     "votacoes_por_situacao_dos_votos": {
-      "inexistentes-na-fonte": 74,
+      "inexistentes-na-fonte": 82,
       "nao-se-aplica": 2,
       "coletados": 14,
-      "em-coleta": 10
+      "em-coleta": 2
     },
     "votos_individuais": 100
   },
@@ -202,12 +209,12 @@
       "tipos_norma": "2026-11-21T13:53:22.990Z",
       "tipos_sessao": "2026-11-23T16:26:53.797Z",
       "partidos": "2026-11-25T02:00:26.234Z",
-      "filiacoes": "2026-11-04T23:24:39.841Z",
+      "filiacoes": "2026-11-28T01:05:10.140Z",
       "parlamentares": "2026-11-04T23:25:40.822Z",
       "status_tramitacao": "2026-11-04T23:26:41.812Z",
       "autores": "2026-11-04T23:27:44.285Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:16.038Z",
+    "ultima_requisicao": "2026-11-28T01:05:06.940Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

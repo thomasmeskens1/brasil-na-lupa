@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:35.415Z",
-  "ultima_execucao": "2026-11-26T15:27:15.774Z",
+  "atualizado_em": "2026-11-28T01:44:48.875Z",
+  "ultima_execucao": "2026-11-28T00:45:39.187Z",
   "uf": "CE",
   "casa": "cm-sao-goncalo-do-amarante",
   "orgao": "Câmara Municipal de São Gonçalo do Amarante",
   "host": "sapl.saogoncalodoamarante.ce.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,33 +15,40 @@
       "titulo": "SAPL — Câmara Municipal de São Gonçalo do Amarante (API REST pública)",
       "url": "https://sapl.saogoncalodoamarante.ce.leg.br/api/",
       "orgao": "Câmara Municipal de São Gonçalo do Amarante",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.saogoncalodoamarante.ce.leg.br": null
+    "sapl.saogoncalodoamarante.ce.leg.br": {
+      "lido_em": "2026-11-28T00:45:39.187Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 59,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
-      "desde": "2025-03-13",
+      "desde": "2025-01-13",
       "concluida": false
     },
     "votoparlamentar": {
-      "desde": "2025-03-20",
+      "desde": "2025-02-06",
       "concluida": false
     },
     "ordemdia": {
-      "desde": "2025-03-20",
+      "desde": "2024-12-12",
       "concluida": false
     },
     "expedientemateria": {
-      "desde": "2025-03-13",
+      "desde": "2024-08-15",
       "concluida": false
     },
     "sessaoplenaria": {
@@ -49,11 +56,11 @@
       "concluida": false
     },
     "materialegislativa": {
-      "desde": "2025-03-12",
+      "desde": "2025-01-09",
       "concluida": false
     },
     "normajuridica": {
-      "desde": "2025-02-18",
+      "desde": "2023-12-28",
       "concluida": false
     },
     "tramitacao": {
@@ -74,16 +81,16 @@
   "contagens": {
     "parlamentares": 16,
     "parlamentares_em_exercicio": 15,
-    "proposicoes": 1488,
-    "normas": 300,
+    "proposicoes": 1674,
+    "normas": 394,
     "sessoes": 102,
-    "itens_pauta": 1890,
-    "votacoes": 1400,
+    "itens_pauta": 2256,
+    "votacoes": 1584,
     "votacoes_por_situacao_dos_votos": {
-      "em-coleta": 32,
-      "coletados": 1368
+      "coletados": 1557,
+      "em-coleta": 27
     },
-    "votos_individuais": 18988
+    "votos_individuais": 21620
   },
   "cursor": {
     "fluxos": {
@@ -91,9 +98,9 @@
         "faixas": [
           {
             "hi": 4728,
-            "lo": 3237,
-            "n": 1400,
-            "lo_data": "2025-03-13"
+            "lo": 3042,
+            "n": 1584,
+            "lo_data": "2025-01-13"
           }
         ],
         "concluido": false,
@@ -104,9 +111,9 @@
         "faixas": [
           {
             "hi": 40811,
-            "lo": 20661,
-            "n": 18988,
-            "lo_data": "2025-03-20"
+            "lo": 17912,
+            "n": 21620,
+            "lo_data": "2025-02-06"
           }
         ],
         "concluido": false,
@@ -117,9 +124,9 @@
         "faixas": [
           {
             "hi": 5258,
-            "lo": 3554,
-            "n": 1400,
-            "lo_data": "2025-03-20"
+            "lo": 3277,
+            "n": 1674,
+            "lo_data": "2024-12-12"
           }
         ],
         "concluido": false,
@@ -130,9 +137,9 @@
         "faixas": [
           {
             "hi": 1458,
-            "lo": 875,
-            "n": 490,
-            "lo_data": "2025-03-13"
+            "lo": 774,
+            "n": 582,
+            "lo_data": "2024-08-15"
           }
         ],
         "concluido": false,
@@ -156,9 +163,9 @@
         "faixas": [
           {
             "hi": 4740,
-            "lo": 3217,
-            "n": 1488,
-            "lo_data": "2025-03-12"
+            "lo": 3028,
+            "n": 1674,
+            "lo_data": "2025-01-09"
           }
         ],
         "concluido": false,
@@ -169,9 +176,9 @@
         "faixas": [
           {
             "hi": 1846,
-            "lo": 1549,
-            "n": 297,
-            "lo_data": "2025-02-18"
+            "lo": 1454,
+            "n": 392,
+            "lo_data": "2023-12-28"
           }
         ],
         "concluido": false,
@@ -199,13 +206,13 @@
       "mandatos": "2026-11-21T13:53:22.225Z",
       "tipos_norma": "2026-11-23T16:26:51.301Z",
       "tipos_sessao": "2026-11-25T02:00:25.849Z",
-      "partidos": "2026-11-07T12:21:11.477Z",
+      "partidos": "2026-11-28T01:05:09.545Z",
       "filiacoes": "2026-11-07T12:22:12.972Z",
       "parlamentares": "2026-11-07T12:23:14.073Z",
       "status_tramitacao": "2026-11-07T12:24:14.783Z",
       "autores": "2026-11-07T12:25:15.540Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:15.774Z",
+    "ultima_requisicao": "2026-11-28T01:44:46.282Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

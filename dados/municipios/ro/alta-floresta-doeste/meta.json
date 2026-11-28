@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:32.393Z",
-  "ultima_execucao": "2026-11-26T15:27:16.275Z",
+  "atualizado_em": "2026-11-28T01:05:11.952Z",
+  "ultima_execucao": "2026-11-28T00:45:39.980Z",
   "uf": "RO",
   "casa": "cm-alta-floresta-doeste",
   "orgao": "Câmara Municipal de Alta Floresta D'Oeste",
   "host": "sapl.altaflorestadoeste.ro.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Alta Floresta D'Oeste (API REST pública)",
       "url": "https://sapl.altaflorestadoeste.ro.leg.br/api/",
       "orgao": "Câmara Municipal de Alta Floresta D'Oeste",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.altaflorestadoeste.ro.leg.br": null
+    "sapl.altaflorestadoeste.ro.leg.br": {
+      "lido_em": "2026-11-28T00:45:39.980Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 20,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -77,13 +84,13 @@
     "proposicoes": 724,
     "normas": 4,
     "sessoes": 188,
-    "itens_pauta": 879,
+    "itens_pauta": 887,
     "votacoes": 461,
     "votacoes_por_situacao_dos_votos": {
-      "inexistentes-na-fonte": 94,
+      "inexistentes-na-fonte": 102,
       "coletados": 350,
       "nao-se-aplica": 3,
-      "em-coleta": 14
+      "em-coleta": 6
     },
     "votos_individuais": 2744
   },
@@ -203,11 +210,11 @@
       "tipos_sessao": "2026-11-21T13:53:25.594Z",
       "partidos": "2026-11-23T16:26:54.484Z",
       "filiacoes": "2026-11-25T02:00:27.290Z",
-      "parlamentares": "2026-11-05T17:12:01.498Z",
+      "parlamentares": "2026-11-28T01:05:11.952Z",
       "status_tramitacao": "2026-11-05T17:13:01.299Z",
       "autores": "2026-11-05T17:14:02.310Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:16.275Z",
+    "ultima_requisicao": "2026-11-28T01:05:06.947Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

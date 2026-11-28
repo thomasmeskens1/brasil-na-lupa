@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:31.521Z",
-  "ultima_execucao": "2026-11-26T15:27:16.416Z",
+  "atualizado_em": "2026-11-28T00:57:08.566Z",
+  "ultima_execucao": "2026-11-28T00:45:40.191Z",
   "uf": "GO",
   "casa": "cm-alvorada-do-norte",
   "orgao": "Câmara Municipal de Alvorada do Norte",
   "host": "sapl.alvoradadonorte.go.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Alvorada do Norte (API REST pública)",
       "url": "https://sapl.alvoradadonorte.go.leg.br/api/",
       "orgao": "Câmara Municipal de Alvorada do Norte",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.alvoradadonorte.go.leg.br": null
+    "sapl.alvoradadonorte.go.leg.br": {
+      "lido_em": "2026-11-28T00:45:40.191Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,13 +81,13 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 762,
+    "proposicoes": 763,
     "normas": 232,
     "sessoes": 202,
-    "itens_pauta": 890,
-    "votacoes": 493,
+    "itens_pauta": 892,
+    "votacoes": 494,
     "votacoes_por_situacao_dos_votos": {
-      "inexistentes-na-fonte": 236,
+      "inexistentes-na-fonte": 237,
       "coletados": 256,
       "nao-se-aplica": 1
     },
@@ -91,15 +98,15 @@
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 641,
+            "hi": 642,
             "lo": 130,
-            "n": 493,
+            "n": 494,
             "lo_data": "2023-12-15"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 617
+        "total_fonte": 618
       },
       "votoparlamentar": {
         "faixas": [
@@ -117,15 +124,15 @@
       "ordemdia": {
         "faixas": [
           {
-            "hi": 515,
+            "hi": 517,
             "lo": 18,
-            "n": 493,
+            "n": 495,
             "lo_data": "2023-03-07"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 507
+        "total_fonte": 509
       },
       "expedientemateria": {
         "faixas": [
@@ -156,15 +163,15 @@
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 1041,
+            "hi": 1042,
             "lo": 282,
-            "n": 753,
+            "n": 754,
             "lo_data": "2023-11-07"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1034
+        "total_fonte": 1035
       },
       "normajuridica": {
         "faixas": [
@@ -182,15 +189,15 @@
       "tramitacao": {
         "faixas": [
           {
-            "hi": 4751,
+            "hi": 4775,
             "lo": 1619,
-            "n": 2858,
+            "n": 2882,
             "lo_data": "2024-11-06"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 4363
+        "total_fonte": 4387
       }
     },
     "tabelas_em": {
@@ -202,11 +209,11 @@
       "tipos_sessao": "2026-11-21T13:45:18.706Z",
       "partidos": "2026-11-23T16:18:45.837Z",
       "filiacoes": "2026-11-25T01:52:22.565Z",
-      "parlamentares": "2026-11-05T17:12:05.503Z",
+      "parlamentares": "2026-11-28T00:57:08.565Z",
       "status_tramitacao": "2026-11-05T17:13:04.502Z",
       "autores": "2026-11-05T17:14:05.565Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:16.416Z",
+    "ultima_requisicao": "2026-11-28T00:56:58.948Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

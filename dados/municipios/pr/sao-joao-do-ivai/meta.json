@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:34.294Z",
-  "ultima_execucao": "2026-11-26T15:27:15.939Z",
+  "atualizado_em": "2026-11-28T00:57:03.249Z",
+  "ultima_execucao": "2026-11-28T00:45:39.436Z",
   "uf": "PR",
   "casa": "cm-sao-joao-do-ivai",
   "orgao": "Câmara Municipal de São João do Ivaí",
   "host": "sapl.saojoaodoivai.pr.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de São João do Ivaí (API REST pública)",
       "url": "https://sapl.saojoaodoivai.pr.leg.br/api/",
       "orgao": "Câmara Municipal de São João do Ivaí",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.saojoaodoivai.pr.leg.br": null
+    "sapl.saojoaodoivai.pr.leg.br": {
+      "lido_em": "2026-11-28T00:45:39.436Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,9 +81,9 @@
   "contagens": {
     "parlamentares": 9,
     "parlamentares_em_exercicio": 9,
-    "proposicoes": 340,
-    "normas": 309,
-    "sessoes": 200,
+    "proposicoes": 348,
+    "normas": 315,
+    "sessoes": 201,
     "itens_pauta": 197,
     "votacoes": 147,
     "votacoes_por_situacao_dos_votos": {
@@ -142,54 +149,54 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 222,
+            "hi": 223,
             "lo": 2,
-            "n": 200,
+            "n": 201,
             "lo_data": "2024-01-12"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 200
+        "total_fonte": 201
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 363,
+            "hi": 373,
             "lo": 1,
-            "n": 340,
+            "n": 348,
             "lo_data": "2023-12-01"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 339
+        "total_fonte": 347
       },
       "normajuridica": {
         "faixas": [
           {
-            "hi": 324,
+            "hi": 330,
             "lo": 1,
-            "n": 309,
+            "n": 315,
             "lo_data": "1990-04-11"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 309
+        "total_fonte": 315
       },
       "tramitacao": {
         "faixas": [
           {
-            "hi": 1786,
+            "hi": 1790,
             "lo": 211,
-            "n": 1481,
+            "n": 1485,
             "lo_data": "2024-04-15"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1675
+        "total_fonte": 1679
       }
     },
     "tabelas_em": {
@@ -200,12 +207,12 @@
       "tipos_norma": "2026-11-21T13:45:13.111Z",
       "tipos_sessao": "2026-11-23T16:18:40.867Z",
       "partidos": "2026-11-25T01:52:17.551Z",
-      "filiacoes": "2026-11-07T12:22:14.882Z",
+      "filiacoes": "2026-11-28T00:57:03.249Z",
       "parlamentares": "2026-11-07T12:23:16.479Z",
       "status_tramitacao": "2026-11-07T12:24:17.191Z",
       "autores": "2026-11-07T12:25:17.743Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:15.939Z",
+    "ultima_requisicao": "2026-11-28T00:56:58.936Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

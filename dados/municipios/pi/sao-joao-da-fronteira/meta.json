@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:34.346Z",
-  "ultima_execucao": "2026-11-26T15:27:15.931Z",
+  "atualizado_em": "2026-11-28T00:56:02.524Z",
+  "ultima_execucao": "2026-11-28T00:45:39.424Z",
   "uf": "PI",
   "casa": "cm-sao-joao-da-fronteira",
   "orgao": "Câmara Municipal de São João da Fronteira",
   "host": "sapl.saojoaodafronteira.pi.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de São João da Fronteira (API REST pública)",
       "url": "https://sapl.saojoaodafronteira.pi.leg.br/api/",
       "orgao": "Câmara Municipal de São João da Fronteira",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.saojoaodafronteira.pi.leg.br": null
+    "sapl.saojoaodafronteira.pi.leg.br": {
+      "lido_em": "2026-11-28T00:45:39.424Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 11,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -192,12 +199,12 @@
       "tipos_norma": "2026-11-21T13:44:13.532Z",
       "tipos_sessao": "2026-11-23T16:17:40.982Z",
       "partidos": "2026-11-25T01:51:16.153Z",
-      "filiacoes": "2026-11-07T12:22:13.526Z",
+      "filiacoes": "2026-11-28T00:56:02.524Z",
       "parlamentares": "2026-11-07T12:23:14.394Z",
       "status_tramitacao": "2026-11-07T12:24:14.825Z",
       "autores": "2026-11-07T12:25:14.737Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:15.931Z",
+    "ultima_requisicao": "2026-11-28T00:55:57.932Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }

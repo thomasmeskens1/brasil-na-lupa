@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-11-26T15:27:28.649Z",
-  "ultima_execucao": "2026-11-26T15:27:16.852Z",
+  "atualizado_em": "2026-11-28T00:57:10.613Z",
+  "ultima_execucao": "2026-11-28T00:45:40.945Z",
   "uf": "RN",
   "casa": "cm-apodi",
   "orgao": "Câmara Municipal de Apodi",
   "host": "sapl.apodi.rn.leg.br",
   "periodo": {
     "inicio": "2025-01-01",
-    "fim": "2026-11-26"
+    "fim": "2026-11-27"
   },
   "modo": "incremental",
   "fontes": [
@@ -15,17 +15,24 @@
       "titulo": "SAPL — Câmara Municipal de Apodi (API REST pública)",
       "url": "https://sapl.apodi.rn.leg.br/api/",
       "orgao": "Câmara Municipal de Apodi",
-      "acessado_em": "2026-11-26"
+      "acessado_em": "2026-11-27"
     }
   ],
   "robots": {
-    "sapl.apodi.rn.leg.br": null
+    "sapl.apodi.rn.leg.br": {
+      "lido_em": "2026-11-28T00:45:40.945Z",
+      "status": 200,
+      "crawl_delay_s": 60,
+      "intervalo_usado_s": 61,
+      "disallow": [
+        "/materia/docacessorio/pdf/*",
+        "/materia/docacessorio/zip/*"
+      ]
+    }
   },
   "execucao": {
-    "requisicoes": 1,
-    "falhas": [
-      "robots.txt: fetch failed"
-    ]
+    "requisicoes": 12,
+    "falhas": []
   },
   "cobertura": {
     "registrovotacao": {
@@ -74,56 +81,56 @@
   "contagens": {
     "parlamentares": 13,
     "parlamentares_em_exercicio": 13,
-    "proposicoes": 1309,
+    "proposicoes": 1338,
     "normas": 392,
-    "sessoes": 166,
-    "itens_pauta": 602,
-    "votacoes": 130,
+    "sessoes": 167,
+    "itens_pauta": 613,
+    "votacoes": 141,
     "votacoes_por_situacao_dos_votos": {
-      "coletados": 130
+      "coletados": 141
     },
-    "votos_individuais": 1444
+    "votos_individuais": 1565
   },
   "cursor": {
     "fluxos": {
       "registrovotacao": {
         "faixas": [
           {
-            "hi": 131,
+            "hi": 142,
             "lo": 2,
-            "n": 130,
+            "n": 141,
             "lo_data": "2026-04-16"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 130
+        "total_fonte": 141
       },
       "votoparlamentar": {
         "faixas": [
           {
-            "hi": 1467,
+            "hi": 1588,
             "lo": 24,
-            "n": 1444,
+            "n": 1565,
             "lo_data": "2026-04-16"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 1444
+        "total_fonte": 1565
       },
       "ordemdia": {
         "faixas": [
           {
-            "hi": 267,
+            "hi": 278,
             "lo": 1,
-            "n": 252,
+            "n": 263,
             "lo_data": "2023-10-05"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 252
+        "total_fonte": 263
       },
       "expedientemateria": {
         "faixas": [
@@ -141,28 +148,28 @@
       "sessaoplenaria": {
         "faixas": [
           {
-            "hi": 170,
+            "hi": 171,
             "lo": 1,
-            "n": 166,
+            "n": 167,
             "lo_data": "2023-08-01"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 166
+        "total_fonte": 167
       },
       "materialegislativa": {
         "faixas": [
           {
-            "hi": 3467,
+            "hi": 3497,
             "lo": 2153,
-            "n": 1309,
+            "n": 1338,
             "lo_data": "2024-08-27"
           }
         ],
         "concluido": true,
         "tamanho_pagina": 100,
-        "total_fonte": 3460
+        "total_fonte": 3489
       },
       "normajuridica": {
         "faixas": [
@@ -190,14 +197,14 @@
       "tipos_materia": "2026-11-18T14:21:26.284Z",
       "mandatos": "2026-11-21T13:44:21.768Z",
       "tipos_norma": "2026-11-23T16:17:49.384Z",
-      "tipos_sessao": "2026-11-05T17:09:01.021Z",
+      "tipos_sessao": "2026-11-28T00:57:10.613Z",
       "partidos": "2026-11-05T17:10:01.839Z",
       "filiacoes": "2026-11-05T17:11:02.882Z",
       "parlamentares": "2026-11-05T17:13:04.919Z",
       "status_tramitacao": "2026-11-05T17:14:05.443Z",
       "autores": "2026-11-05T17:15:06.493Z"
     },
-    "ultima_requisicao": "2026-11-26T15:27:16.852Z",
+    "ultima_requisicao": "2026-11-28T00:56:58.957Z",
     "pendencias_inexistentes": [],
     "page_size_solicitado": 1000
   }
